@@ -197,6 +197,190 @@ Sultai Aluren, Cradle Control, Dimir Tempo, Izzet Delver, Colorless, Mystic Forg
 
 ---
 
+## Deep Dive: Tier 1 Archetypes
+
+### Dimir Tempo (14.6% — The Deck to Beat)
+**Core**: Orcish Bowmasters, Tamiyo Inquisitive Student, Murktide Regent, Barrowgoyf, Brainstorm, Ponder, Force of Will, Daze, Thoughtseize, Wasteland
+
+**Why it's #1**: The deck combines the best proactive disruption (Thoughtseize) with the best reactive disruption (Force of Will, Daze) and threats that generate value passively (Bowmasters punishes every cantrip the opponent casts). It has no auto-loss matchups and can adapt its role — aggro vs. combo, control vs. aggro.
+
+**Key matchup dynamics**:
+- vs. Ocelot Pride Midrange: Slightly favored. Thoughtseize + Daze disrupts their curve. Bowmasters is excellent against their token-generating creatures. Post-board Hydroblast and Toxic Deluge help.
+- vs. Oops! All Spells: Even to slightly unfavorable game 1 (they're faster). Post-board with Leyline of the Void and Surgical Extraction, the matchup flips to favorable.
+- vs. Sneak and Show: Even. Force of Will and Daze counter Show and Tell, but Sneak Attack is harder to interact with. Thoughtseize helps see what they have.
+- vs. Lands: Unfavorable. Wasteland-proof mana base, Maze of Ith blanks creatures, and Punishing Fire grinds out small threats. Dark Depths combo threatens a sudden 20/20.
+- vs. Storm: Favorable. Thoughtseize + Force of Will + Daze is the exact disruption package Storm hates. Clock them fast before they rebuild.
+
+**Sideboard priorities**: Leyline of the Void (graveyard combo), Hydroblast (red decks, Pyroblast wars), Surgical Extraction (specific combo pieces), Toxic Deluge (go-wide strategies).
+
+### Ocelot Pride Midrange (8.5% — The New Wave)
+**Core**: Ocelot Pride, Ajani Nacatl Pariah, Guide of Souls, Phelia Exuberant Shepherd, Swords to Plowshares, Solitude, Broadside Bombardiers
+
+**Why it's rising**: Energy cards from MH3 created a critical mass of efficient non-blue threats. The deck doesn't need Brainstorm or Force of Will — it wins through raw card quality and board presence. Guide of Souls generates life and energy, Ocelot Pride creates tokens on every non-combat damage trigger, and the deck snowballs quickly.
+
+**Key matchup dynamics**:
+- vs. Dimir Tempo: Slightly unfavorable. Bowmasters and Thoughtseize are effective, but the deck can grind through disruption.
+- vs. Combo: Unfavorable without blue countermagic. Relies on Thalia, Guardian of Thraben effects and fast clocks.
+- vs. Prison/Stompy: Favorable. Goes wide around Chalice of the Void.
+- vs. Lands: Even. Can race the Depths combo with a fast enough board.
+
+### Oops! All Spells (8.2% — The Fastest Combo)
+**Core**: Balustrade Spy, Undercity Informer, Lotus Petal, Dark Ritual, Elvish/Simian Spirit Guide, Pact of Negation, Force of Will, Narcomoeba, Dread Return, Thassa's Oracle
+
+**How it works**: The deck runs zero lands. Cast Balustrade Spy or Undercity Informer targeting yourself — your entire library goes to the graveyard. Narcomoebas trigger, sacrifice them to Dread Return targeting Thassa's Oracle. With zero cards in library, Oracle wins the game. Can win turn 1.
+
+**Why it's tier 1**: Post-Entomb ban, this became the premier "cheat" combo deck. It's faster than Reanimator ever was and has Force of Will + Pact of Negation for protection. The deck is also extremely budget-friendly (~$1,100).
+
+**Key matchup dynamics**:
+- vs. Fair Blue (Dimir, Delver): Unfavorable game 1 against Force + Daze + Thoughtseize. Post-board with Leyline hate, it gets worse.
+- vs. Fair Nonblue (D&T, Stompy): Favorable. They lack free countermagic. Chalice on 0 helps but doesn't stop everything.
+- vs. Lands: Very favorable. Lands can't interact with the combo at instant speed.
+
+**Weaknesses**: Extremely vulnerable to Leyline of the Void (36% of decks play it), Surgical Extraction, and Force of Will. Mulligans aggressively and folds to its own inconsistency.
+
+### Sneak and Show (6.7% — The Classic Big Mana Combo)
+**Core**: Show and Tell, Sneak Attack, Emrakul the Aeons Torn, Atraxa Grand Unifier, Force of Will, Brainstorm, Ponder, Lotus Petal, Ancient Tomb
+
+**How it works**: Show and Tell puts any permanent into play for 3 mana. Sneak Attack gives any creature haste for R. The targets are game-ending: Emrakul (15/15, flying, annihilator 6, extra turn) and Atraxa (7/7, draws 10+ cards on ETB). Either one typically wins the game immediately.
+
+**Why it endures**: The deck has existed since 2011 and consistently posts results because the combo is fast (turn 2-3), hard to interact with (Show and Tell can't be countered by creature removal), and backed by Force of Will + Daze for protection.
+
+---
+
+## Deep Dive: Tier 2 Highlights
+
+### Painter (4.1%)
+Two-card combo: Painter's Servant (names a color) + Grindstone (mills 2 cards at a time, repeating if they share a color — they always do when everything is the named color). Wins by milling the opponent's entire library. Red Elemental Blast becomes unconditional removal/counterspell when everything is "blue." Backed by Goblin Welder and Goblin Engineer for artifact recursion. Ancient Tomb for acceleration.
+
+### Lands (3.8%)
+The most unique deck in Legacy. Wins through land-based strategies: Life from the Loam + Wasteland locks opponents out of mana. Dark Depths + Thespian's Stage creates Marit Lage (a 20/20 indestructible token). Exploration and Mox Diamond enable explosive starts. Maze of Ith neutralizes attackers. Punishing Fire recurs from the graveyard with Grove of the Burnwillows. The deck plays almost entirely at instant speed using land abilities. Paper cost: $8,284 (The Tabernacle at Pendrell Vale alone is $5,000+).
+
+### The EPIC Storm (3.5%)
+Storm combo using Burning Wish (tutors sorceries from sideboard), Lion's Eye Diamond (3 mana at instant speed), Dark Ritual, and Rite of Flame to generate a lethal storm count. Finishes with Tendrils of Agony (each copy drains 2 life, with 10+ storm copies that's 20+ damage) or Empty the Warrens (20+ goblin tokens). More resilient than ANT variants due to Burning Wish's flexibility.
+
+### Eldrazi (3.1%)
+Colorless prison-aggro using Ancient Tomb, City of Traitors, and Eldrazi Temple for fast mana. Deploys Chalice of the Void on 1 (locks out cantrips and most cheap spells), then follows with Thought-Knot Seer, Reality Smasher, and Endbringer. Kozilek's Command provides flexible disruption. Punishes blue cantrip decks hard but folds to combo that doesn't care about Chalice.
+
+### Death and Taxes (2.0%)
+White-based hatebear deck using Aether Vial to cheat creatures into play at instant speed. Thalia, Guardian of Thraben taxes noncreature spells. Flickerwisp and Skyclave Apparition handle problem permanents. Rishadan Port and Wasteland deny mana. Stoneforge Mystic fetches equipment (Batterskull, Kaldra Compleat). Current builds often splash black (Yorion companion) for Orcish Bowmasters and Plague Engineer.
+
+### Doomsday (2.7%)
+The most skill-intensive combo deck in Legacy. Resolving Doomsday (BBB, 3 mana) lets you search your library for 5 cards and stack them as your new library. You then draw through the pile to win with Thassa's Oracle (0 cards in library = win). The puzzle is constructing a pile that works through the opponent's disruption. Requires deep format knowledge to know what to play around.
+
+---
+
+## Matchup Matrix (Simplified)
+
+How the major macro-archetypes perform against each other:
+
+```
+                  Dimir   Ocelot  Oops   SnS    Delver  Lands  Storm  Eldrazi  D&T
+Dimir Tempo        --     +1      -1     0      +1      -1     +2     +1       +1
+Ocelot Pride      -1      --      -2     -1     +1      0      -1     +1       +1
+Oops! All Spells  +1      +2      --     0      +1      +2     0      +1       +2
+Sneak and Show     0      +1      0      --     0       -1     +1     +1       +1
+Izzet Delver      -1      -1      -1     0      --      -1     +1     +1       0
+Lands             +1      0       -2     +1     +1      --     +1     0        +1
+Storm             -2      +1      0      -1     -1      -1     --     -1       +2
+Eldrazi           -1      -1      -1     -1     -1      0      +1     --       0
+D&T               -1      -1      -2     -1     0       -1     -2     0        --
+
+Scale: +2 = very favorable, +1 = favorable, 0 = even, -1 = unfavorable, -2 = very unfavorable
+```
+
+**Key takeaways from the matrix**:
+- Dimir Tempo has no +2 matchups but also no -2 matchups — it's the "safest" choice
+- Oops! All Spells has the most polarized matchups — crushes fair nonblue, folds to blue disruption post-board
+- Lands is strong against fair decks but weak against fast combo (can't interact turn 1)
+- Storm is weak to blue disruption but strong against creature-based strategies
+- Eldrazi has few good matchups against top decks but punishes cantrip-heavy fields with Chalice
+
+---
+
+## Sideboard Hate Matrix
+
+What hate cards target which decks:
+
+| Hate Card | Targets | % Decks Playing |
+|-----------|---------|-----------------|
+| Leyline of the Void | Reanimator, Dredge, Oops, Doomsday, Storm (Past in Flames) | 36% |
+| Surgical Extraction | Combo pieces, Lands (Dark Depths), Reanimator | 25% |
+| Pyroblast / REB | Dimir Tempo, Delver, Show and Tell, Control | 21% + 10% |
+| Force of Vigor | Affinity, 8-Cast, Painter, Urza's Saga, Chalice | 17% |
+| Null Rod / Collector Ouphe | Artifact strategies, Storm (LED), Painter | 15% + 5% |
+| Mindbreak Trap | Storm, Oops (free to cast vs. 3+ spells) | 18% |
+| Flusterstorm | Storm, combo in general | 11% |
+| Deafening Silence | Storm, Oops (limits to 1 noncreature spell/turn) | 9% |
+| Toxic Deluge | Elves, D&T, go-wide, True-Name Nemesis | 13% |
+| Pithing Needle | Specific activated abilities (fetchlands, planeswalkers) | 21% |
+| Grafdigger's Cage | Reanimator, Dredge, Green Sun's Zenith, Collected Company | 21% |
+| Endurance | Graveyard strategies (flashes in, shuffles back) | 8% |
+
+---
+
+## Historical Meta Evolution
+
+### How the Meta Shifted Over Major Eras
+
+**2011-2013: The First Golden Age**
+- Dominated by RUG Delver, Miracles, and BUG Delver
+- Deathrite Shaman enabled 3-4 color fair decks
+- True-Name Nemesis (Nov 2013) shook up creature strategies
+
+**2014-2016: Treasure Cruise and Eldrazi Winter**
+- Treasure Cruise briefly broke the format (banned Jan 2015)
+- Miracles peaked at ~15% meta share with Sensei's Divining Top + Counterbalance
+- Eldrazi (OGW) created a brief period of dominance before settling
+
+**2017-2018: The Great Unbundling**
+- Sensei's Divining Top banned (April 2017) — Miracles gutted, format diversifies
+- Deathrite Shaman and Gitaxian Probe banned (July 2018) — 4-color piles collapse
+- Czech Pile (4c Control) era ends, fair blue becomes 1-2 color decks again
+
+**2019-2020: Modern Horizons 1 and Companion Era**
+- Wrenn and Six dominated RUG Delver (banned Nov 2019)
+- Underworld Breach combo (banned March 2020)
+- Arcum's Astrolabe enabled 4-5 color decks too easily (banned June 2020)
+- Lurrus briefly warped companion rules before errata
+
+**2021-2022: Modern Horizons 2 Revolution**
+- Dragon's Rage Channeler, Murktide Regent, Ragavan, Urza's Saga all entered at once
+- UR Delver became the best deck — Ragavan on turn 1, Murktide on turn 2-3
+- Initiative creatures (Caves of Chaos Adventurer) created White Stompy
+- Most transformative single set for Legacy since original dual lands
+
+**2023-2024: Lord of the Rings and MH3**
+- Orcish Bowmasters (June 2023) — format-warping. Punishes every cantrip, kills small creatures
+- The One Ring — unkillable card advantage engine
+- Grief + Scam strategies emerge (Grief later banned)
+- MH3 (2024): Energy cards create non-blue aggro. Nadu banned quickly. Psychic Frog banned.
+
+**2025-2026: Post-Entomb Era**
+- Entomb banned November 2025 — Reanimator drops from tier 1
+- Dimir Tempo rises to dominance at 14.6%
+- Energy cards mature into established archetypes (Ocelot Pride, Mardu)
+- Format considered healthy — most diverse era in Legacy history with 54+ archetypes
+
+---
+
+## Brewing Opportunities
+
+### Underplayed but High Win-Rate Strategies
+Based on the data, these archetypes have competitive win rates but low meta shares — potential opportunities for brewers:
+
+1. **Aluren (1.2%)**: Won the Legacy Showcase Qualifier on April 5, 2026. Combo-control hybrid that's hard to hate out. Low meta share means opponents aren't prepared.
+2. **Cradle Control (2.3%)**: Growing archetype using Gaea's Cradle for absurd mana generation. Green Sun's Zenith toolbox gives flexibility.
+3. **Cloudpost Ramp (~1%)**: Posts consistent 5-0s. Most opponents don't know the matchup well.
+4. **Esper Vial (~0.2%)**: Appeared in recent Challenge top 8s. Aether Vial + hatebears in 3 colors with Orcish Bowmasters.
+
+### Meta Gaps to Exploit
+- 14.6% Dimir Tempo means decks that consistently beat UB get a free 15% of matchups
+- Lands is favored against most fair decks but underplayed (3.8%) — likely due to cost ($8,284)
+- Artifact hate (Force of Vigor, Null Rod) is at ~20% — artifact strategies thrive when hate drops below 25%
+- Graveyard hate is high (Leyline 36%) but most of it is narrowly targeted — decks that use the graveyard incidentally (not as primary plan) dodge it
+
+---
+
 ## Format Entry Recommendations
 
 ### For New Legacy Players
