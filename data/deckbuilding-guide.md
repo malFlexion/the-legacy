@@ -71,7 +71,7 @@ This is the **first critical decision** in Legacy deckbuilding.
 
 **1. How do you handle mana denial?**
 
-[🃏 Blood Moon](https://scryfall.com/search?q=!%22Blood+Moon%22) | [🃏 Back to Basics](https://scryfall.com/search?q=!%22Back+to+Basics%22)
+![Blood Moon](https://api.scryfall.com/cards/named?exact=Blood+Moon&format=image&version=small) | ![Back to Basics](https://api.scryfall.com/cards/named?exact=Back+to+Basics&format=image&version=small)
 
 Legacy has Wasteland, Daze, Blood Moon, and Back to Basics. You need a plan:
 - **Against Wasteland**: Fetch basic lands. Run 2-4 basics minimum.
@@ -92,7 +92,7 @@ Legacy has Wasteland, Daze, Blood Moon, and Back to Basics. You need a plan:
 
 ### Brainstorm and Ponder
 
-[🃏 Brainstorm](https://scryfall.com/search?q=!%22Brainstorm%22) | [🃏 Ponder](https://scryfall.com/search?q=!%22Ponder%22)
+![Brainstorm](https://api.scryfall.com/cards/named?exact=Brainstorm&format=image&version=small) | ![Ponder](https://api.scryfall.com/cards/named?exact=Ponder&format=image&version=small)
 
 > "Brainstorm and Ponder are awesome, and you should try to play with them. More than that, you should probably have a very good reason if you're going to leave home without them." — Reid Duke
 
@@ -101,13 +101,13 @@ These cards "vastly improve the consistency of your deck, and help you find your
 **If you're playing blue**: 4 Brainstorm + 4 Ponder is nearly automatic.
 
 **If you're not playing blue**: You need a very good reason. Non-blue decks compensate with:
-- Raw power ([🃏 Ancient Tomb](https://scryfall.com/search?q=!%22Ancient+Tomb%22) + [🃏 Chalice of the Void](https://scryfall.com/search?q=!%22Chalice+of+the+Void%22))
+- Raw power (![Ancient Tomb](https://api.scryfall.com/cards/named?exact=Ancient+Tomb&format=image&version=small) + ![Chalice of the Void](https://api.scryfall.com/cards/named?exact=Chalice+of+the+Void&format=image&version=small))
 - Tutors (Green Sun's Zenith, Goblin Matron)
 - Redundancy (lots of similar effects)
 
 ### Force of Will
 
-[🃏 Force of Will](https://scryfall.com/search?q=!%22Force+of+Will%22)
+![Force of Will](https://api.scryfall.com/cards/named?exact=Force+of+Will&format=image&version=small)
 
 > "Force of Will is awesome, and makes you feel much better heading into the unknown. It's particularly great right now, as you need a plan against decks that do powerful things on turn one." — Reid Duke
 
@@ -122,7 +122,7 @@ These cards "vastly improve the consistency of your deck, and help you find your
 
 ### Wasteland and Daze
 
-[🃏 Wasteland](https://scryfall.com/search?q=!%22Wasteland%22) | [🃏 Daze](https://scryfall.com/search?q=!%22Daze%22)
+![Wasteland](https://api.scryfall.com/cards/named?exact=Wasteland&format=image&version=small) | ![Daze](https://api.scryfall.com/cards/named?exact=Daze&format=image&version=small)
 
 Wasteland and Daze reward you if your deck can leverage tempo advantage:
 - **Daze**: "Staple four-of in Delver decks." Also works in small numbers in creature-acceleration decks where you jump ahead on mana.
@@ -136,7 +136,7 @@ Most Legacy decks follow a pattern:
 
 **Tempo / Delver Shell (~56 nonland + ~18 land):**
 
-[🃏 Delver of Secrets](https://scryfall.com/search?q=!%22Delver+of+Secrets%22) | [🃏 Murktide Regent](https://scryfall.com/search?q=!%22Murktide+Regent%22) | [🃏 Stoneforge Mystic](https://scryfall.com/search?q=!%22Stoneforge+Mystic%22)
+![Delver of Secrets](https://api.scryfall.com/cards/named?exact=Delver+of+Secrets&format=image&version=small) | ![Murktide Regent](https://api.scryfall.com/cards/named?exact=Murktide+Regent&format=image&version=small) | ![Stoneforge Mystic](https://api.scryfall.com/cards/named?exact=Stoneforge+Mystic&format=image&version=small)
 
 - 8-12 threats (Delver, Murktide, Bowmasters)
 - 8 cantrips (4 Brainstorm, 4 Ponder)
@@ -240,7 +240,7 @@ For aggressive decks: **"Every turn you wait is a turn they draw an answer."**
 
 Expensive staples vs. their budget replacements:
 
-[🃏 Underground Sea](https://scryfall.com/search?q=!%22Underground+Sea%22) vs. [🃏 Watery Grave](https://scryfall.com/search?q=!%22Watery+Grave%22) | [🃏 Force of Will](https://scryfall.com/search?q=!%22Force+of+Will%22) vs. [🃏 Force of Negation](https://scryfall.com/search?q=!%22Force+of+Negation%22)
+![Underground Sea](https://api.scryfall.com/cards/named?exact=Underground+Sea&format=image&version=small) vs. ![Watery Grave](https://api.scryfall.com/cards/named?exact=Watery+Grave&format=image&version=small) | ![Force of Will](https://api.scryfall.com/cards/named?exact=Force+of+Will&format=image&version=small) vs. ![Force of Negation](https://api.scryfall.com/cards/named?exact=Force+of+Negation&format=image&version=small)
 
 | Expensive Card | Budget Alternative | Trade-off |
 |----------------|-------------------|-----------|
