@@ -82,6 +82,8 @@ Shares the Brainstorm/Ponder/Force of Will/Daze shell with Izzet Delver but trad
 
 ### Key Cards Explained
 
+<img src="https://api.scryfall.com/cards/named?exact=Orcish+Bowmasters&format=image&version=normal" alt="Orcish Bowmasters" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Tamiyo%2C+Inquisitive+Student&format=image&version=normal" alt="Tamiyo, Inquisitive Student" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Murktide+Regent&format=image&version=normal" alt="Murktide Regent" width="217">
+
 - **Orcish Bowmasters:** Premier creature in the format. Punishes Brainstorm, provides removal, and creates a growing threat. Core to why black is the best color in Legacy.
 - **Tamiyo, Inquisitive Student:** Efficient one-drop that flips into a planeswalker generating card advantage. Replaced Delver of Secrets in many UB lists.
 - **Murktide Regent:** Large delve threat that comes down for UU and dominates combat. Fueled by the many instants and sorceries in the deck.
@@ -188,6 +190,8 @@ Shares the green creature toolbox approach of Maverick but eschews the Knight of
 
 ### Key Cards Explained
 
+<img src="https://api.scryfall.com/cards/named?exact=Ocelot+Pride&format=image&version=normal" alt="Ocelot Pride" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Guide+of+Souls&format=image&version=normal" alt="Guide of Souls" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Amped+Raptor&format=image&version=normal" alt="Amped Raptor" width="217">
+
 - **Ocelot Pride:** One-mana 1/1 with lifelink that creates cat tokens whenever you gain life and deal combat damage. Generates massive board presence.
 - **Guide of Souls:** Energy-generating creature that makes tokens fly temporarily, enabling evasive damage for Ocelot Pride triggers.
 - **Amped Raptor:** Energy creature with cascade for MV equal to energy spent, providing card advantage in a creature shell.
@@ -273,6 +277,8 @@ A blazing-fast combo deck that wins by milling its entire library using Balustra
 Shares the all-in graveyard combo approach with LED Dredge but is generally faster and more fragile. Both use free countermagic from the sideboard.
 
 ### Key Cards Explained
+
+<img src="https://api.scryfall.com/cards/named?exact=Balustrade+Spy&format=image&version=normal&set=gtc" alt="Balustrade Spy" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Undercity+Informer&format=image&version=normal" alt="Undercity Informer" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Narcomoeba&format=image&version=normal" alt="Narcomoeba" width="217">
 
 - **Balustrade Spy:** Mills your entire library since you play zero actual lands. This enables the whole combo.
 - **Undercity Informer:** Redundant copy of the Spy effect, ensuring consistency.
@@ -388,6 +394,8 @@ A classic Legacy combo deck that cheats Emrakul, the Aeons Torn or Atraxa, Grand
 Omni-Tell shares Show and Tell but uses Omniscience instead of Sneak Attack. Both are blue combo decks using the same cantrip and counter shell.
 
 ### Key Cards Explained
+
+<img src="https://api.scryfall.com/cards/named?exact=Show+and+Tell&format=image&version=normal&set=usg" alt="Show and Tell" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Sneak+Attack&format=image&version=normal" alt="Sneak Attack" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Emrakul%2C+the+Aeons+Torn&format=image&version=normal&set=roe" alt="Emrakul, the Aeons Torn" width="217">
 
 - **Show and Tell:** Puts Emrakul or Atraxa directly into play for just 2U, bypassing their enormous mana costs.
 - **Sneak Attack:** Gives haste to cheated creatures, enabling immediate attacks with Emrakul's annihilator and extra turn triggers.
@@ -506,6 +514,8 @@ The original Delver tempo shell using Delver of Secrets alongside Lightning Bolt
 The original template from which Dimir Tempo diverged. Shares the core Brainstorm/Ponder/Force/Daze engine but uses red for removal over black for disruption.
 
 ### Key Cards Explained
+
+<img src="https://api.scryfall.com/cards/named?exact=Delver+of+Secrets&format=image&version=normal&set=isd" alt="Delver of Secrets" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Lightning+Bolt&format=image&version=normal&set=lea" alt="Lightning Bolt" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Dragon%27s+Rage+Channeler&format=image&version=normal" alt="Dragon's Rage Channeler" width="217">
 
 - **Delver of Secrets:** The namesake one-drop that flips into a 3/2 flyer. With 30+ instants/sorceries, it flips reliably.
 - **Lightning Bolt:** The key advantage over Dimir: efficient removal that also goes face, providing reach to close games.
@@ -642,6 +652,8 @@ Shares the Ancient Tomb / Blood Moon prison plan with Red Stompy, but adds the P
 
 ### Key Cards Explained
 
+<img src="https://api.scryfall.com/cards/named?exact=Painter%27s+Servant&format=image&version=normal&set=shm" alt="Painter's Servant" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Grindstone&format=image&version=normal&set=tmp" alt="Grindstone" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Goblin+Welder&format=image&version=normal" alt="Goblin Welder" width="217">
+
 - **Painter's Servant:** Names blue, making all cards in the opponent's library blue, which enables Grindstone to mill the entire library at once.
 - **Grindstone:** With Painter's Servant in play, mills the entire library since every pair of cards shares a color.
 - **Goblin Welder:** Recurs Grindstone from the graveyard and enables artifact synergies.
@@ -755,6 +767,8 @@ Selesnya Depths shares the Dark Depths combo but in a creature-based shell. Land
 
 ### Key Cards Explained
 
+<img src="https://api.scryfall.com/cards/named?exact=Dark+Depths&format=image&version=normal&set=csp" alt="Dark Depths" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Thespian%27s+Stage&format=image&version=normal" alt="Thespian's Stage" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Life+from+the+Loam&format=image&version=normal&set=rav" alt="Life from the Loam" width="217">
+
 - **Dark Depths:** Combines with Thespian's Stage to instantly create a 20/20 flying indestructible Marit Lage token.
 - **Thespian's Stage:** Copies Dark Depths, and since it enters with no ice counters, immediately creates Marit Lage.
 - **Life from the Loam:** Engine card that recurs Wasteland, cycling lands, and combo pieces from the graveyard.
@@ -867,6 +881,8 @@ A fast storm combo deck that uses mana acceleration and tutors to generate a let
 Both are UBx storm-adjacent combo decks, but TES wins through traditional storm count while Doomsday uses a specific five-card pile.
 
 ### Key Cards Explained
+
+<img src="https://api.scryfall.com/cards/named?exact=Ad+Nauseam&format=image&version=normal" alt="Ad Nauseam" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Lion%27s+Eye+Diamond&format=image&version=normal&set=mir" alt="Lion's Eye Diamond" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Burning+Wish&format=image&version=normal&set=jud" alt="Burning Wish" width="217">
 
 - **Ad Nauseam:** Draws cards equal to your life total (effectively), providing enough gas to generate lethal storm count in one big turn.
 - **Lion's Eye Diamond:** The deck's Black Lotus equivalent. Discarding your hand is mitigated by LED in response to Burning Wish or Brainstorm.
@@ -982,6 +998,8 @@ Shares the sol land + Chalice prison plan with Red Stompy but uses colorless Eld
 
 ### Key Cards Explained
 
+<img src="https://api.scryfall.com/cards/named?exact=Chalice+of+the+Void&format=image&version=normal&set=mrd" alt="Chalice of the Void" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Thought-Knot+Seer&format=image&version=normal" alt="Thought-Knot Seer" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Eldrazi+Temple&format=image&version=normal" alt="Eldrazi Temple" width="217">
+
 - **Chalice of the Void:** On X=1, shuts down Brainstorm, Ponder, Swords, Bolt, and most other one-mana staples in the format.
 - **Thought-Knot Seer:** Disrupts the opponent's hand while providing a 4/4 body. The exile effect dodges graveyard synergies.
 - **Eldrazi Temple:** Provides 2 mana toward Eldrazi spells, enabling turn-2 Thought-Knot Seer.
@@ -1092,6 +1110,8 @@ Shares the sol land + Chalice shell with Eldrazi but adds a deterministic combo 
 
 ### Key Cards Explained
 
+<img src="https://api.scryfall.com/cards/named?exact=Mystic+Forge&format=image&version=normal" alt="Mystic Forge" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Sensei%27s+Divining+Top&format=image&version=normal" alt="Sensei's Divining Top" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Karn%2C+the+Great+Creator&format=image&version=normal" alt="Karn, the Great Creator" width="217">
+
 - **Mystic Forge:** With Sensei's Divining Top and a cost reducer, creates an infinite draw loop to find Walking Ballista for the kill.
 - **Sensei's Divining Top:** Key combo piece that draws a card and goes to the top of library, looping with Mystic Forge.
 - **Karn, the Great Creator:** Tutors silver bullets from the sideboard and shuts off opponent's artifacts. -2 finds the missing combo piece.
@@ -1185,6 +1205,8 @@ A combo deck that casts Doomsday to stack a five-card pile that wins the game, t
 Shares the UB cantrip + disruption shell with Dimir Tempo but uses it to set up a combo kill rather than tempo pressure. Shares the storm adjacency with TES.
 
 ### Key Cards Explained
+
+<img src="https://api.scryfall.com/cards/named?exact=Doomsday&format=image&version=normal&set=wth" alt="Doomsday" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Thassa%27s+Oracle&format=image&version=normal&set=thb" alt="Thassa's Oracle" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Ideas+Unbound&format=image&version=normal" alt="Ideas Unbound" width="217">
 
 - **Doomsday:** The namesake card. For BBB, you stack your library with exactly five cards that win the game, then draw into the pile.
 - **Thassa's Oracle:** Win condition that wins when it enters the battlefield if your devotion to blue exceeds your library size. After Doomsday, this is trivially achieved.
@@ -1286,6 +1308,8 @@ A mono-red prison deck that uses sol lands to deploy Blood Moon, Chalice of the 
 Shares the sol land + Chalice + Blood Moon shell with Painter but lacks the combo finish, relying on creature damage instead.
 
 ### Key Cards Explained
+
+<img src="https://api.scryfall.com/cards/named?exact=Blood+Moon&format=image&version=normal" alt="Blood Moon" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Chalice+of+the+Void&format=image&version=normal&set=mrd" alt="Chalice of the Void" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Goblin+Rabblemaster&format=image&version=normal" alt="Goblin Rabblemaster" width="217">
 
 - **Blood Moon:** Turns all nonbasic lands into Mountains, devastating multi-color decks that rely on fetchlands and duals.
 - **Chalice of the Void:** On 1, shuts down most of the format's cantrips and interaction. The deck's spells are designed to avoid being hit.
@@ -1393,6 +1417,8 @@ Shares the artifact-heavy strategy with Mystic Forge and Blue Artifacts but is m
 
 ### Key Cards Explained
 
+<img src="https://api.scryfall.com/cards/named?exact=Cranial+Plating&format=image&version=normal" alt="Cranial Plating" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Urza%27s+Saga&format=image&version=normal" alt="Urza's Saga" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Thought+Monitor&format=image&version=normal" alt="Thought Monitor" width="217">
+
 - **Cranial Plating:** Attaches to any creature for lethal damage in a deck full of artifacts. Can be moved at instant speed.
 - **Urza's Saga:** Tutors for Cranial Plating, Mox Opal, or Springleaf Drum while creating Construct tokens that scale with artifact count.
 - **Thought Monitor:** Affinity for artifacts makes this a 1-2 mana 2/2 flyer that draws 2 cards.
@@ -1491,6 +1517,8 @@ Jeskai Control is a leaner three-color version that trades Beanstalk card advant
 
 ### Key Cards Explained
 
+<img src="https://api.scryfall.com/cards/named?exact=Up+the+Beanstalk&format=image&version=normal" alt="Up the Beanstalk" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Leyline+Binding&format=image&version=normal" alt="Leyline Binding" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Solitude&format=image&version=normal" alt="Solitude" width="217">
+
 - **Up the Beanstalk:** Draws a card on ETB and whenever you cast a 5+ MV spell. Free-cast evoke creatures and Force of Will all trigger it.
 - **Leyline Binding:** Six-mana removal spell that costs W with enough domain, triggering Beanstalk while being efficient removal.
 - **Solitude:** Evoke for free exile removal that triggers Beanstalk. Provides a 3/2 lifelink body when hard-cast.
@@ -1588,6 +1616,8 @@ A green-based midrange deck that leverages Gaea's Cradle to generate enormous am
 Shares the Green Sun's Zenith toolbox and Gaea's Cradle engine with Elves but is slower and more controlling. Maverick is a more creature-focused GW approach.
 
 ### Key Cards Explained
+
+<img src="https://api.scryfall.com/cards/named?exact=Gaea%27s+Cradle&format=image&version=normal&set=usg" alt="Gaea's Cradle" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Green+Sun%27s+Zenith&format=image&version=normal&set=mbs" alt="Green Sun's Zenith" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Collector+Ouphe&format=image&version=normal" alt="Collector Ouphe" width="217">
 
 - **Gaea's Cradle:** Taps for one green mana per creature you control. With even 3-4 creatures, provides enormous mana advantage.
 - **Green Sun's Zenith:** Creature toolbox that finds the right answer for any situation, from Dryad Arbor on turn 1 to Craterhoof for the kill.
@@ -1693,6 +1723,8 @@ A white-based creature deck that disrupts opponents with Thalia, Guardian of Thr
 Shares the white creature-based disruption plan with Maverick. Ocelot Pride Midrange is the newer energy-based competitor for the non-blue aggro slot.
 
 ### Key Cards Explained
+
+<img src="https://api.scryfall.com/cards/named?exact=Thalia%2C+Guardian+of+Thraben&format=image&version=normal&set=dka" alt="Thalia, Guardian of Thraben" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Aether+Vial&format=image&version=normal" alt="Aether Vial" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Stoneforge+Mystic&format=image&version=normal&set=wwk" alt="Stoneforge Mystic" width="217">
 
 - **Thalia, Guardian of Thraben:** Taxes noncreature spells by 1, slowing down cantrip and combo decks significantly.
 - **Aether Vial:** Deploys creatures at instant speed without paying mana, circumventing Thalia's own tax and enabling tricks with Flickerwisp.
@@ -1809,6 +1841,8 @@ Both use Show and Tell as the combo enabler but diverge on the payoff: Omniscien
 
 ### Key Cards Explained
 
+<img src="https://api.scryfall.com/cards/named?exact=Omniscience&format=image&version=normal" alt="Omniscience" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Cunning+Wish&format=image&version=normal" alt="Cunning Wish" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Release+the+Ants&format=image&version=normal" alt="Release the Ants" width="217">
+
 - **Omniscience:** Allows casting all spells for free. Once in play, chain Cunning Wish into the winning combo or just cast Emrakul.
 - **Cunning Wish:** With Omniscience in play, tutors for the win condition from the sideboard.
 - **Release the Ants:** Win condition with Omniscience: clash repeatedly, always winning since Emrakul has the highest MV, dealing infinite damage.
@@ -1904,6 +1938,8 @@ A mono-black midrange deck leveraging the power of Orcish Bowmasters, Sheoldred,
 Shares the black disruption core of Dimir Tempo but trades blue cantrips for more raw power and a simpler mana base. A more midrange approach than Dimir Tempo's tempo plan.
 
 ### Key Cards Explained
+
+<img src="https://api.scryfall.com/cards/named?exact=Grief&format=image&version=normal" alt="Grief" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Sheoldred%2C+the+Apocalypse&format=image&version=normal" alt="Sheoldred, the Apocalypse" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Hymn+to+Tourach&format=image&version=normal" alt="Hymn to Tourach" width="217">
 
 - **Grief:** Evoked on turn 1 with Reanimate provides a discard effect plus a 3/2 menace body, recreating the Scam strategy.
 - **Sheoldred, the Apocalypse:** Gains life when you draw and drains opponent when they draw. Punishes blue cantrips mercilessly.
@@ -2002,6 +2038,8 @@ A combo deck built around the enchantment Aluren, which allows creatures with MV
 Shares the BUG shell and some creature overlap with Sultai Tempo. The GSZ package is similar to Cradle Control but aimed at finding combo pieces.
 
 ### Key Cards Explained
+
+<img src="https://api.scryfall.com/cards/named?exact=Aluren&format=image&version=normal&set=tmp" alt="Aluren" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Acererak+the+Archlich&format=image&version=normal" alt="Acererak the Archlich" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Ice-Fang+Coatl&format=image&version=normal" alt="Ice-Fang Coatl" width="217">
 
 - **Aluren:** Enchantment that lets both players cast creatures with MV 3 or less for free. Enables the combo.
 - **Acererak the Archlich:** With Aluren, cast for free, ventures into dungeon, bounces to hand if you haven't completed Tomb of Annihilation. Repeat for infinite drain.
@@ -2108,6 +2146,8 @@ Shares the artifact creature base with Affinity Stompy but adds blue interaction
 
 ### Key Cards Explained
 
+<img src="https://api.scryfall.com/cards/named?exact=Emry%2C+Lurker+of+the+Loch&format=image&version=normal" alt="Emry, Lurker of the Loch" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Thought+Monitor&format=image&version=normal" alt="Thought Monitor" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Mox+Opal&format=image&version=normal" alt="Mox Opal" width="217">
+
 - **Emry, Lurker of the Loch:** Costs as little as U with enough artifacts. Recurs artifacts from the graveyard each turn, providing incredible value.
 - **Thought Monitor:** Draws two cards for as little as U when you have enough artifacts. The deck's premier card advantage.
 - **Mox Opal:** Free mana that enables explosive starts and is recurrable with Emry.
@@ -2198,6 +2238,8 @@ A graveyard combo deck that uses the dredge mechanic to fill its graveyard, then
 Both are graveyard combo decks using Narcomoeba and Dread Return, but Dredge is more resilient and grindy while Oops is faster and more fragile.
 
 ### Key Cards Explained
+
+<img src="https://api.scryfall.com/cards/named?exact=Golgari+Grave-Troll&format=image&version=normal" alt="Golgari Grave-Troll" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Bridge+from+Below&format=image&version=normal" alt="Bridge from Below" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Lion%27s+Eye+Diamond&format=image&version=normal&set=mir" alt="Lion's Eye Diamond" width="217">
 
 - **Golgari Grave-Troll:** Dredge 6 is the highest dredge count, milling six cards each time you would draw. Fills the graveyard rapidly.
 - **Bridge from Below:** Creates zombie tokens whenever a creature you control dies, provided it's in your graveyard. Powers the Dread Return chain.
@@ -2317,6 +2359,8 @@ Beanstalk Control is the four-color evolution of this strategy. Jeskai Control i
 
 ### Key Cards Explained
 
+<img src="https://api.scryfall.com/cards/named?exact=Monastery+Mentor&format=image&version=normal" alt="Monastery Mentor" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Terminus&format=image&version=normal" alt="Terminus" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Snapcaster+Mage&format=image&version=normal" alt="Snapcaster Mage" width="217">
+
 - **Monastery Mentor:** Creates monk tokens on every noncreature spell, turning cantrips into a lethal army.
 - **Terminus:** Miracle for W puts all creatures on the bottom of libraries. Devastating board wipe that can be set up with Brainstorm.
 - **Snapcaster Mage:** Recurs any instant or sorcery from the graveyard, providing flexibility and card advantage.
@@ -2422,6 +2466,8 @@ Shares the Depths combo with Lands but in a more aggressive creature-based shell
 
 ### Key Cards Explained
 
+<img src="https://api.scryfall.com/cards/named?exact=Dark+Depths&format=image&version=normal&set=csp" alt="Dark Depths" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Crop+Rotation&format=image&version=normal" alt="Crop Rotation" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Knight+of+the+Reliquary&format=image&version=normal" alt="Knight of the Reliquary" width="217">
+
 - **Dark Depths:** Combines with Thespian's Stage for a 20/20 flying indestructible token as early as turn 2.
 - **Crop Rotation:** Instant-speed land tutor that finds Dark Depths or Thespian's Stage at the cost of sacrificing a land.
 - **Knight of the Reliquary:** Tutors lands including combo pieces. Grows larger as lands enter the graveyard from fetches and sacrifices.
@@ -2525,6 +2571,8 @@ A three-color tempo deck that adds green to the UB shell for Uro, Titan of Natur
 Essentially Dimir Tempo with a green splash. Trades mana consistency for Uro's grinding power and Endurance as graveyard hate.
 
 ### Key Cards Explained
+
+<img src="https://api.scryfall.com/cards/named?exact=Uro%2C+Titan+of+Nature%27s+Wrath&format=image&version=normal" alt="Uro, Titan of Nature's Wrath" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Endurance&format=image&version=normal" alt="Endurance" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Abrupt+Decay&format=image&version=normal" alt="Abrupt Decay" width="217">
 
 - **Uro, Titan of Nature's Wrath:** The primary reason to splash green. Provides life, card draw, and ramp, then escapes as a 6/6 that does it all again.
 - **Endurance:** Flash creature that shuffles graveyards, providing hate against Dredge, Reanimator, and Doomsday.
@@ -2634,6 +2682,8 @@ Very close to Dimir Tempo but trades some consistency for the explosive power of
 
 ### Key Cards Explained
 
+<img src="https://api.scryfall.com/cards/named?exact=Death%27s+Shadow&format=image&version=normal" alt="Death's Shadow" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Snuff+Out&format=image&version=normal" alt="Snuff Out" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Street+Wraith&format=image&version=normal" alt="Street Wraith" width="217">
+
 - **Death's Shadow:** Gets bigger as your life total gets lower. At 7 life, it's a 1-mana 6/6. Fetchlands and Thoughtseize naturally lower your life.
 - **Snuff Out:** Free removal that costs 4 life, which is actually a benefit since it grows Death's Shadow.
 - **Street Wraith:** Cycles for 2 life, replacing itself while shrinking your life total for Shadow.
@@ -2730,6 +2780,8 @@ An aggressive combo-aggro deck that wins by dealing 10 poison counters using inf
 Both are green creature-based aggro decks that can win quickly. Infect is more combo-oriented while Elves is more synergy-driven.
 
 ### Key Cards Explained
+
+<img src="https://api.scryfall.com/cards/named?exact=Invigorate&format=image&version=normal" alt="Invigorate" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Berserk&format=image&version=normal" alt="Berserk" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Blighted+Agent&format=image&version=normal" alt="Blighted Agent" width="217">
 
 - **Invigorate:** Free +4/+4 that enables turn-2 kills. The life gain to the opponent doesn't matter when you win with poison.
 - **Berserk:** Doubles a creature's power for G. Combined with infect, this creates lethal damage on tiny investments.
@@ -2831,6 +2883,8 @@ The oldest archetype in Magic. Aims to deal 20 damage to the opponent using dire
 Both are mono-red but take very different approaches. Burn goes face while Red Stompy locks the opponent out with prison pieces.
 
 ### Key Cards Explained
+
+<img src="https://api.scryfall.com/cards/named?exact=Price+of+Progress&format=image&version=normal" alt="Price of Progress" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Eidolon+of+the+Great+Revel&format=image&version=normal" alt="Eidolon of the Great Revel" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Fireblast&format=image&version=normal" alt="Fireblast" width="217">
 
 - **Price of Progress:** Deals 2 damage per nonbasic land the opponent controls. In Legacy, most decks play 12+ nonbasics, making this 6-10 damage for 1R.
 - **Eidolon of the Great Revel:** Deals 2 damage to any player who casts a spell with MV 3 or less. In Legacy, nearly every spell triggers this.
@@ -2936,6 +2990,8 @@ A creature-based combo deck that uses elf tribal synergies and Gaea's Cradle to 
 Shares Gaea's Cradle and Green Sun's Zenith with Cradle Control but is faster and more all-in on the creature combo. Many Elves players have moved to Cradle Control.
 
 ### Key Cards Explained
+
+<img src="https://api.scryfall.com/cards/named?exact=Glimpse+of+Nature&format=image&version=normal" alt="Glimpse of Nature" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Heritage+Druid&format=image&version=normal" alt="Heritage Druid" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Natural+Order&format=image&version=normal" alt="Natural Order" width="217">
 
 - **Glimpse of Nature:** Draws a card for each creature cast in a turn. With Heritage Druid mana, chains through the deck to find Craterhoof.
 - **Heritage Druid:** Taps three elves for GGG, even ones with summoning sickness. Enables explosive turns with multiple cheap elves.
@@ -3056,6 +3112,8 @@ Ocelot Pride Midrange has largely replaced Maverick as the non-blue creature dec
 
 ### Key Cards Explained
 
+<img src="https://api.scryfall.com/cards/named?exact=Knight+of+the+Reliquary&format=image&version=normal" alt="Knight of the Reliquary" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Green+Sun%27s+Zenith&format=image&version=normal&set=mbs" alt="Green Sun's Zenith" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Thalia%2C+Guardian+of+Thraben&format=image&version=normal&set=dka" alt="Thalia, Guardian of Thraben" width="217">
+
 - **Knight of the Reliquary:** The deck's signature threat. Grows with each land in the graveyard and tutors key utility lands.
 - **Green Sun's Zenith:** Versatile creature tutor that provides the right answer for any situation.
 - **Thalia, Guardian of Thraben:** Taxes noncreature spells, slowing down combo and control while you attack with creatures.
@@ -3168,6 +3226,8 @@ A fast combo deck that puts massive creatures into the graveyard and reanimates 
 Shares the fast combo role with Oops! All Spells but is more resilient and interactive. Both aim to cheat large creatures into play quickly.
 
 ### Key Cards Explained
+
+<img src="https://api.scryfall.com/cards/named?exact=Reanimate&format=image&version=normal" alt="Reanimate" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Grief&format=image&version=normal" alt="Grief" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Archon+of+Cruelty&format=image&version=normal" alt="Archon of Cruelty" width="217">
 
 - **Reanimate:** One mana to return any creature from any graveyard to play. The life loss is irrelevant when reanimating Griselbrand or Archon of Cruelty.
 - **Grief:** Free discard outlet that also strips the opponent's hand. Can be reanimated for value or evoked and immediately targeted with Reanimate.
@@ -3287,6 +3347,8 @@ Shares the blue-white shell with Jeskai Control but is more proactive with the S
 
 ### Key Cards Explained
 
+<img src="https://api.scryfall.com/cards/named?exact=Stoneforge+Mystic&format=image&version=normal&set=wwk" alt="Stoneforge Mystic" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Batterskull&format=image&version=normal" alt="Batterskull" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Kaldra+Compleat&format=image&version=normal" alt="Kaldra Compleat" width="217">
+
 - **Stoneforge Mystic:** Tutors for any equipment on ETB and can cheat it into play for 1W.
 - **Batterskull:** Living weapon with vigilance and lifelink. Nearly unbeatable for aggro decks when cheated in on turn 3.
 - **Kaldra Compleat:** Indestructible living weapon with first strike and trample.
@@ -3392,6 +3454,8 @@ Shares resource denial with Death and Taxes but uses black disruption instead of
 
 ### Key Cards Explained
 
+<img src="https://api.scryfall.com/cards/named?exact=Smallpox&format=image&version=normal" alt="Smallpox" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Hymn+to+Tourach&format=image&version=normal" alt="Hymn to Tourach" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Liliana+of+the+Veil&format=image&version=normal" alt="Liliana of the Veil" width="217">
+
 - **Smallpox:** Each player discards, sacrifices a creature, sacrifices a land, and loses 1 life. Devastating when you break the symmetry.
 - **Hymn to Tourach:** Random discard of two cards for BB. One of the most powerful disruption spells in Magic.
 - **Liliana of the Veil:** Repeatable edict and discard. Grinds opponents out over multiple turns.
@@ -3496,6 +3560,8 @@ Shares the energy creature core with Ocelot Pride Midrange but adds black for Th
 
 ### Key Cards Explained
 
+<img src="https://api.scryfall.com/cards/named?exact=Broadside+Bombardiers&format=image&version=normal" alt="Broadside Bombardiers" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Ocelot+Pride&format=image&version=normal" alt="Ocelot Pride" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Amped+Raptor&format=image&version=normal" alt="Amped Raptor" width="217">
+
 - **Broadside Bombardiers:** Menace creature that sacrifices on attack to deal 3 damage and give another attacker +1/+0 and trample.
 - **Ocelot Pride:** Generates cat tokens when you gain life and deal combat damage.
 - **Amped Raptor:** Energy creature with cascade equal to energy spent.
@@ -3585,6 +3651,8 @@ A Chalice of the Void stompy deck that uses fast mana to deploy initiative creat
 Shares the Chalice + fast mana shell with Red Stompy and Eldrazi. Initiative provides a unique card advantage engine.
 
 ### Key Cards Explained
+
+<img src="https://api.scryfall.com/cards/named?exact=Caves+of+Chaos+Adventurer&format=image&version=normal" alt="Caves of Chaos Adventurer" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Chalice+of+the+Void&format=image&version=normal&set=mrd" alt="Chalice of the Void" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Archon+of+Emeria&format=image&version=normal" alt="Archon of Emeria" width="217">
 
 - **Caves of Chaos Adventurer:** 4/4 with initiative for 3W. The Undercity dungeon provides treasure, card selection, damage, and a game-winning effect.
 - **Chalice of the Void:** On one, shuts down Brainstorm, Ponder, Swords to Plowshares.
@@ -3689,6 +3757,8 @@ Like Lands, uses nonbasic lands as the engine but goes bigger. Eldrazi shares co
 
 ### Key Cards Explained
 
+<img src="https://api.scryfall.com/cards/named?exact=Cloudpost&format=image&version=normal" alt="Cloudpost" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Glimmerpost&format=image&version=normal" alt="Glimmerpost" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Karn%2C+the+Great+Creator&format=image&version=normal" alt="Karn, the Great Creator" width="217">
+
 - **Cloudpost:** Taps for 1 mana for each Locus in play. With four Loci, each taps for 4.
 - **Glimmerpost:** Second Locus that gains life on ETB.
 - **Karn, the Great Creator:** Provides wishboard and shuts off opposing artifacts.
@@ -3782,6 +3852,8 @@ Shares the graveyard-centric plan with LED Dredge but is creature-based. Both fo
 
 ### Key Cards Explained
 
+<img src="https://api.scryfall.com/cards/named?exact=Hogaak%2C+Arisen+Necropolis&format=image&version=normal" alt="Hogaak, Arisen Necropolis" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Vengevine&format=image&version=normal" alt="Vengevine" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Altar+of+Dementia&format=image&version=normal" alt="Altar of Dementia" width="217">
+
 - **Hogaak, Arisen Necropolis:** Free 8/8 trampler cast by convoking and delving. Recurs from graveyard.
 - **Vengevine:** Returns from graveyard when you cast two creatures in a turn.
 - **Altar of Dementia:** Sacrifice outlet that mills. Enables infinite mill with recurring creatures.
@@ -3874,6 +3946,8 @@ Evolved from Death and Taxes, adding Coveted Jewel combo as a powerful mana engi
 
 ### Key Cards Explained
 
+<img src="https://api.scryfall.com/cards/named?exact=Coveted+Jewel&format=image&version=normal" alt="Coveted Jewel" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Ephemerate&format=image&version=normal" alt="Ephemerate" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Flickerwisp&format=image&version=normal" alt="Flickerwisp" width="217">
+
 - **Coveted Jewel:** Six mana artifact that draws three and adds three on ETB. Flickering resets both.
 - **Ephemerate:** One mana instant flicker with rebound. Flickers Jewel twice for six cards.
 - **Flickerwisp:** 3/1 flyer that exiles something until end of turn. Resets Jewel.
@@ -3963,6 +4037,8 @@ A mono-red storm combo deck using Birgi, God of Storytelling and Ruby Medallion 
 Shares the storm goal with TES but uses red rituals and Birgi instead of black tutors and Ad Nauseam.
 
 ### Key Cards Explained
+
+<img src="https://api.scryfall.com/cards/named?exact=Birgi%2C+God+of+Storytelling&format=image&version=normal" alt="Birgi, God of Storytelling" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Ruby+Medallion&format=image&version=normal" alt="Ruby Medallion" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Bonus+Round&format=image&version=normal" alt="Bonus Round" width="217">
 
 - **Birgi, God of Storytelling:** Adds R whenever you cast a spell. With Ruby Medallion, every ritual nets extra mana.
 - **Ruby Medallion:** Reduces red spells by 1.
@@ -4059,6 +4135,8 @@ Like Oops, wins by milling the entire library. Uses a creature combo and can als
 
 ### Key Cards Explained
 
+<img src="https://api.scryfall.com/cards/named?exact=Cephalid+Illusionist&format=image&version=normal" alt="Cephalid Illusionist" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Nomads+en-Kor&format=image&version=normal" alt="Nomads en-Kor" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Thassa%27s+Oracle&format=image&version=normal&set=thb" alt="Thassa's Oracle" width="217">
+
 - **Cephalid Illusionist:** Mills three whenever it becomes the target of a spell or ability.
 - **Nomads en-Kor:** 0-cost activated ability targets Illusionist unlimited times.
 - **Thassa's Oracle:** Wins on ETB when library is empty.
@@ -4152,6 +4230,8 @@ A tribal aggro deck using Goblin Lackey and Aether Vial to cheat goblins into pl
 Shares the Aether Vial tribal approach with Merfolk. Like Elves, a once-dominant creature deck hurt by Bowmasters.
 
 ### Key Cards Explained
+
+<img src="https://api.scryfall.com/cards/named?exact=Goblin+Lackey&format=image&version=normal&set=usg" alt="Goblin Lackey" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Muxus%2C+Goblin+Grandee&format=image&version=normal" alt="Muxus, Goblin Grandee" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Goblin+Ringleader&format=image&version=normal" alt="Goblin Ringleader" width="217">
 
 - **Goblin Lackey:** Deals combat damage to put any goblin from hand into play free.
 - **Muxus, Goblin Grandee:** Reveals top 6 and puts all goblins MV 5 or less into play.
@@ -4255,6 +4335,8 @@ Shares BG midrange core with Maverick but goes much bigger with Veteran Explorer
 
 ### Key Cards Explained
 
+<img src="https://api.scryfall.com/cards/named?exact=Veteran+Explorer&format=image&version=normal" alt="Veteran Explorer" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Cabal+Therapy&format=image&version=normal" alt="Cabal Therapy" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Pernicious+Deed&format=image&version=normal" alt="Pernicious Deed" width="217">
+
 - **Veteran Explorer:** When it dies, each player searches for two basic lands. Most Legacy decks play 0-2 basics.
 - **Cabal Therapy:** Names a card to strip from opponent's hand. Sac Explorer to flashback.
 - **Pernicious Deed:** Destroys all nonland permanents CMC X or less.
@@ -4352,6 +4434,8 @@ Like Aluren, wins with an enchantment-based creature combo. Aluren is more compe
 
 ### Key Cards Explained
 
+<img src="https://api.scryfall.com/cards/named?exact=Food+Chain&format=image&version=normal" alt="Food Chain" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Misthollow+Griffin&format=image&version=normal" alt="Misthollow Griffin" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Manipulate+Fate&format=image&version=normal" alt="Manipulate Fate" width="217">
+
 - **Food Chain:** Exile a creature for CMC+1 mana, creature spells only. Infinite with exile-cast creatures.
 - **Misthollow Griffin:** Cast from exile. Nets 1 mana each loop with Food Chain.
 - **Manipulate Fate:** Exiles 3 cards from library, draws a card. Sets up exile-cast creatures.
@@ -4445,6 +4529,8 @@ A prison deck using Argothian Enchantress and Enchantress's Presence to draw car
 Like Lands, a non-blue prison deck aiming to lock the opponent out.
 
 ### Key Cards Explained
+
+<img src="https://api.scryfall.com/cards/named?exact=Argothian+Enchantress&format=image&version=normal" alt="Argothian Enchantress" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Solitary+Confinement&format=image&version=normal" alt="Solitary Confinement" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Sterling+Grove&format=image&version=normal" alt="Sterling Grove" width="217">
 
 - **Argothian Enchantress:** Draws a card for each enchantment cast.
 - **Solitary Confinement:** Can't be targeted and take no damage. Enchantress draws fuel the upkeep discard.
@@ -4542,6 +4628,8 @@ Fellow blue combo deck aiming to win in one turn. Requires careful sequencing.
 
 ### Key Cards Explained
 
+<img src="https://api.scryfall.com/cards/named?exact=High+Tide&format=image&version=normal" alt="High Tide" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Time+Spiral&format=image&version=normal" alt="Time Spiral" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Candelabra+of+Tawnos&format=image&version=normal" alt="Candelabra of Tawnos" width="217">
+
 - **High Tide:** Islands produce an additional U until end of turn.
 - **Time Spiral:** Untaps up to six lands, each player draws seven. Nets massive mana with High Tide.
 - **Candelabra of Tawnos:** Taps for X to untap X lands. Doubles mana with High Tide.
@@ -4635,6 +4723,8 @@ An all-in combo deck playing zero or one lands, using fast mana to activate Gobl
 Like Oops, wins with almost no lands. Both fold to Force of Will but are blazing fast.
 
 ### Key Cards Explained
+
+<img src="https://api.scryfall.com/cards/named?exact=Goblin+Charbelcher&format=image&version=normal" alt="Goblin Charbelcher" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Lion%27s+Eye+Diamond&format=image&version=normal&set=mir" alt="Lion's Eye Diamond" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Empty+the+Warrens&format=image&version=normal" alt="Empty the Warrens" width="217">
 
 - **Goblin Charbelcher:** Activate for 3 to reveal until a land, dealing that much damage. With 0-1 lands, lethal.
 - **Lion's Eye Diamond:** Discard hand for 3 mana. With Burning Wish, cast Wish first then crack LED.
@@ -4732,6 +4822,8 @@ Essentially Dimir Tempo with Stifle/Dreadnought instead of Tamiyo and Barrowgoyf
 
 ### Key Cards Explained
 
+<img src="https://api.scryfall.com/cards/named?exact=Phyrexian+Dreadnought&format=image&version=normal" alt="Phyrexian Dreadnought" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Stifle&format=image&version=normal" alt="Stifle" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Dress+Down&format=image&version=normal" alt="Dress Down" width="217">
+
 - **Phyrexian Dreadnought:** 12/12 trampler for 1 with sacrifice trigger. Stifle negates it.
 - **Stifle:** Counters triggered ability for U. Also hits fetchlands.
 - **Dress Down:** Removes all abilities. Dreadnought enters as vanilla 12/12.
@@ -4822,6 +4914,8 @@ A tribal aggro deck using lord effects for unblockable islandwalk damage. Combin
 Tribal Aether Vial deck like Goblins. Uniquely has Force of Will access among tribal decks.
 
 ### Key Cards Explained
+
+<img src="https://api.scryfall.com/cards/named?exact=Lord+of+Atlantis&format=image&version=normal" alt="Lord of Atlantis" width="217"> <img src="https://api.scryfall.com/cards/named?exact=True-Name+Nemesis&format=image&version=normal&set=c13" alt="True-Name Nemesis" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Vodalian+Hexcatcher&format=image&version=normal" alt="Vodalian Hexcatcher" width="217">
 
 - **Lord of Atlantis:** All merfolk get +1/+1 and islandwalk. Unblockable vs blue decks.
 - **True-Name Nemesis:** Protection from a chosen player. Untargetable, unblockable.
@@ -4925,6 +5019,8 @@ Shares Chalice + fast mana shell with Eldrazi and Red Stompy. More artifact-focu
 
 ### Key Cards Explained
 
+<img src="https://api.scryfall.com/cards/named?exact=Metalworker&format=image&version=normal" alt="Metalworker" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Chalice+of+the+Void&format=image&version=normal&set=mrd" alt="Chalice of the Void" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Karn%2C+the+Great+Creator&format=image&version=normal" alt="Karn, the Great Creator" width="217">
+
 - **Metalworker:** Taps to reveal artifacts from hand, adding 2 colorless each.
 - **Chalice of the Void:** On one, counters most of Legacy's best spells.
 - **Karn, the Great Creator:** Shuts off artifacts and wishes for silver bullets.
@@ -5021,6 +5117,8 @@ A tempo deck using evasive creatures to enable ninjutsu, primarily Yuriko. Yurik
 Shares UB tempo shell with Dimir Tempo but replaces threats with ninja package.
 
 ### Key Cards Explained
+
+<img src="https://api.scryfall.com/cards/named?exact=Yuriko%2C+the+Tiger%27s+Shadow&format=image&version=normal" alt="Yuriko, the Tiger's Shadow" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Changeling+Outcast&format=image&version=normal" alt="Changeling Outcast" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Ingenious+Infiltrator&format=image&version=normal" alt="Ingenious Infiltrator" width="217">
 
 - **Yuriko, the Tiger's Shadow:** Commander ninjutsu for UB bypasses command tax. Drains on combat damage.
 - **Changeling Outcast:** Unblockable 1/1 for B. Perfect ninjutsu enabler.
@@ -5121,6 +5219,8 @@ A DnT variant adding blue and black for more interaction. Stoneblade is the spel
 
 ### Key Cards Explained
 
+<img src="https://api.scryfall.com/cards/named?exact=Aether+Vial&format=image&version=normal" alt="Aether Vial" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Recruiter+of+the+Guard&format=image&version=normal" alt="Recruiter of the Guard" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Stoneforge+Mystic&format=image&version=normal&set=wwk" alt="Stoneforge Mystic" width="217">
+
 - **Aether Vial:** Cheats creatures in at instant speed for free.
 - **Recruiter of the Guard:** Tutors for any creature with toughness 2 or less.
 - **Stoneforge Mystic:** Tutors equipment and cheats it into play.
@@ -5214,6 +5314,8 @@ A three-color midrange deck combining the best discard, removal, and threats in 
 Shares BG disruption with Nic Fit but without ramp. Mardu Energy is the preferred non-blue disruption aggro deck.
 
 ### Key Cards Explained
+
+<img src="https://api.scryfall.com/cards/named?exact=Barrowgoyf&format=image&version=normal" alt="Barrowgoyf" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Thoughtseize&format=image&version=normal&set=lrw" alt="Thoughtseize" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Lightning+Bolt&format=image&version=normal&set=lea" alt="Lightning Bolt" width="217">
 
 - **Barrowgoyf:** MH3 Tarmogoyf upgrade. Efficient threat with diverse graveyard types.
 - **Thoughtseize:** Best discard spell in Magic.
@@ -5319,6 +5421,8 @@ Like Painter, an artifact combo in a fair shell. Mystic Forge uses similar artif
 
 ### Key Cards Explained
 
+<img src="https://api.scryfall.com/cards/named?exact=Auriok+Salvagers&format=image&version=normal" alt="Auriok Salvagers" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Lion%27s+Eye+Diamond&format=image&version=normal&set=mir" alt="Lion's Eye Diamond" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Pyrite+Spellbomb&format=image&version=normal" alt="Pyrite Spellbomb" width="217">
+
 - **Auriok Salvagers:** Returns artifact MV 1 or less from graveyard for 1W. Infinite loop with LED.
 - **Lion's Eye Diamond:** Discard hand for 3 mana. With Salvagers, discard is irrelevant.
 - **Pyrite Spellbomb:** 2 damage for R + sac. Recur infinitely for lethal.
@@ -5412,6 +5516,8 @@ A combo deck using Show and Tell for Hive Mind, then casting Pacts that the oppo
 Shares Show and Tell shell with Sneak and Show but uses Hive Mind + Pacts instead of creatures.
 
 ### Key Cards Explained
+
+<img src="https://api.scryfall.com/cards/named?exact=Hive+Mind&format=image&version=normal" alt="Hive Mind" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Summoner%27s+Pact&format=image&version=normal" alt="Summoner's Pact" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Show+and+Tell&format=image&version=normal&set=usg" alt="Show and Tell" width="217">
 
 - **Hive Mind:** Copies every instant/sorcery for all players. Pacts force unplayable upkeep costs.
 - **Summoner's Pact:** Free spell. Opponent's copy requires 2GG next upkeep or lose.
@@ -5509,6 +5615,8 @@ The post-Sensei's Divining Top version of Miracles. Uses Terminus and Entreat th
 Predecessor to Jeskai Control. Jeskai adds red for Pyroblast and Phlage. Beanstalk is more popular currently.
 
 ### Key Cards Explained
+
+<img src="https://api.scryfall.com/cards/named?exact=Terminus&format=image&version=normal" alt="Terminus" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Counterbalance&format=image&version=normal" alt="Counterbalance" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Jace%2C+the+Mind+Sculptor&format=image&version=normal" alt="Jace, the Mind Sculptor" width="217">
 
 - **Terminus:** One-mana miracle that tucks all creatures. Set up with Brainstorm.
 - **Counterbalance:** Reveals top card to counter matching MV spells. Without Top, relies on cantrips.
