@@ -1,0 +1,628 @@
+{
+  "metadata": {
+    "description": "Maps every known Legacy archetype name to a parent archetype with variant notes. Used by the AI to recognize deck names and understand relationships.",
+    "last_updated": "2026-04-06",
+    "total_variants": 420,
+    "parent_archetypes": 65
+  },
+  "archetypes": {
+    "Delver / Tempo": {
+      "parent": "Delver / Tempo",
+      "description": "Cheap threats backed by free countermagic (Force of Will, Daze) and mana denial (Wasteland). The defining Legacy tempo shell.",
+      "variants": {
+        "Dimir Tempo": {"colors": "UB", "status": "tier_1", "meta_pct": 14.6, "notes": "Current dominant build. Bowmasters + Tamiyo + Thoughtseize. The deck to beat."},
+        "Izzet Delver": {"colors": "UR", "status": "tier_2", "meta_pct": 4.3, "notes": "Classic Delver of Secrets + Lightning Bolt + Murktide Regent. Was tier 1 in 2021-2022."},
+        "UR Tempo": {"colors": "UR", "status": "tier_2", "meta_pct": 4.3, "notes": "Same as Izzet Delver. MTGTop8 naming convention."},
+        "Sultai Tempo": {"colors": "UBG", "status": "tier_3", "meta_pct": 0.5, "notes": "BUG Delver variant with Tarmogoyf/Barrowgoyf + Abrupt Decay. Less popular post-DRS ban."},
+        "Sultai Delver": {"colors": "UBG", "status": "tier_3", "meta_pct": 0.5, "notes": "Same as Sultai Tempo."},
+        "BUG": {"colors": "UBG", "status": "tier_3", "meta_pct": 0.5, "notes": "Older name for Sultai Tempo/Delver."},
+        "BUG Midrange": {"colors": "UBG", "status": "tier_3", "meta_pct": 0.5, "notes": "Grindier BUG build with more planeswalkers and fewer Dazes."},
+        "Grixis Tempo": {"colors": "UBR", "status": "fringe", "meta_pct": 0.2, "notes": "UBR shell combining Bowmasters + Lightning Bolt. Less focused than Dimir or Izzet."},
+        "Grixis Aggro": {"colors": "UBR", "status": "fringe", "meta_pct": 0.1, "notes": "More aggressive Grixis variant."},
+        "Temur Tempo": {"colors": "URG", "status": "fringe", "meta_pct": 0.1, "notes": "RUG Delver successor. Tarmogoyf + Bolt + cantrips. Was tier 1 pre-W6 ban."},
+        "Canadian Threshold": {"colors": "URG", "status": "historic", "meta_pct": 0.0, "notes": "Original name for RUG Delver. Nimble Mongoose + Lightning Bolt + Stifle."},
+        "Jeskai Delver": {"colors": "UWR", "status": "fringe", "meta_pct": 0.1, "notes": "Delver + Swords to Plowshares + Stoneforge Mystic."},
+        "Jeskai Tempo": {"colors": "UWR", "status": "fringe", "meta_pct": 0.1, "notes": "Same as Jeskai Delver."},
+        "Jeskai Murktide": {"colors": "UWR", "status": "fringe", "meta_pct": 0.1, "notes": "Murktide Regent in a Jeskai shell with STP and Prismatic Ending."},
+        "Esper Tempo": {"colors": "UWB", "status": "fringe", "meta_pct": 0.1, "notes": "Rare UWB Delver build. Swords + Thoughtseize + Force."},
+        "Dimir Aggro": {"colors": "UB", "status": "tier_2", "meta_pct": 1.0, "notes": "More aggressive Dimir build without Murktide, lower curve."},
+        "Dimir Flash": {"colors": "UB", "status": "fringe", "meta_pct": 0.1, "notes": "Flash-speed threats, all instants. Brazen Borrower + Bowmasters."},
+        "Dimir Rogues": {"colors": "UB", "status": "fringe", "meta_pct": 0.1, "notes": "Rogues tribal with mill synergies."},
+        "Mono Blue Tempo": {"colors": "U", "status": "fringe", "meta_pct": 0.1, "notes": "Delver + all-blue for maximum Force of Will consistency."},
+        "Simic Tempo": {"colors": "UG", "status": "fringe", "meta_pct": 0.1, "notes": "Tarmogoyf/Barrowgoyf + green sideboard cards."},
+        "4 Color Tempo": {"colors": "UBRG", "status": "fringe", "meta_pct": 0.1, "notes": "Greedy 4-color Delver. Rare post-Astrolabe ban."},
+        "Delver (Other)": {"colors": "varies", "status": "fringe", "meta_pct": 0.1, "notes": "Catch-all for unusual Delver builds."},
+        "UW Delver": {"colors": "UW", "status": "fringe", "meta_pct": 0.1, "notes": "Delver + Swords to Plowshares without red."},
+        "UW Murktide": {"colors": "UW", "status": "fringe", "meta_pct": 0.1, "notes": "Murktide in UW shell."},
+        "Stryfo Pile": {"colors": "UBRG", "status": "historic", "meta_pct": 0.0, "notes": "4-color midrange/tempo by Stryfo. Leovold + Kolaghan's Command era."}
+      }
+    },
+    "Control": {
+      "parent": "Control",
+      "description": "Permission-based strategies that win through card advantage and inevitability. Heavy on counterspells, removal, and planeswalkers.",
+      "variants": {
+        "Beanstalk Control": {"colors": "UWRG", "status": "tier_2", "meta_pct": 2.3, "notes": "Up the Beanstalk draws cards off 5+ MV spells (Force of Will, Solitude, Fury). Non-Yorion 60-card build."},
+        "Beanstalk Control (Yorion)": {"colors": "UWRG", "status": "tier_3", "meta_pct": 0.4, "notes": "80-card Yorion companion version. More redundancy, less consistency."},
+        "Jeskai Control": {"colors": "UWR", "status": "tier_3", "meta_pct": 0.9, "notes": "Classic UWR control. Swords + Bolt + Force + planeswalkers."},
+        "UWx Control": {"colors": "UW+", "status": "tier_3", "meta_pct": 1.0, "notes": "Broad category for UW-based control decks. MTGTop8 umbrella."},
+        "UW Miracles": {"colors": "UW", "status": "tier_3", "meta_pct": 0.5, "notes": "Post-Top ban Miracles. Terminus + Counterbalance without Sensei's Divining Top."},
+        "Bant Control": {"colors": "UWG", "status": "fringe", "meta_pct": 0.2, "notes": "UW control + green for Uro, Endurance, Sylvan Library."},
+        "Bant Beanstalk": {"colors": "UWG", "status": "fringe", "meta_pct": 0.1, "notes": "Beanstalk with green instead of red."},
+        "BUG Control": {"colors": "UBG", "status": "fringe", "meta_pct": 0.2, "notes": "Sultai control. Thoughtseize + Abrupt Decay + Jace."},
+        "Sultai Beanstalk": {"colors": "UBG", "status": "fringe", "meta_pct": 0.1, "notes": "Beanstalk in BUG colors."},
+        "Grixis Control": {"colors": "UBR", "status": "fringe", "meta_pct": 0.2, "notes": "UBR control. Kolaghan's Command + Bolt + Thoughtseize."},
+        "4/5c Control": {"colors": "4-5c", "status": "fringe", "meta_pct": 0.2, "notes": "Greedy multi-color control. Uses all the best cards from every color."},
+        "4 Color Control": {"colors": "4c", "status": "fringe", "meta_pct": 0.2, "notes": "Same as 4/5c Control."},
+        "4 Color Beanstalk": {"colors": "4c", "status": "tier_3", "meta_pct": 0.5, "notes": "4-color Beanstalk build. Most common Beanstalk configuration."},
+        "4 Color Czech Pile": {"colors": "UBRG", "status": "historic", "meta_pct": 0.0, "notes": "2017-2018 era 4c midrange-control. Leovold + Kolaghan's Command + DRS. Died with DRS ban."},
+        "4 Color Uro": {"colors": "4c", "status": "fringe", "meta_pct": 0.1, "notes": "Uro, Titan of Nature's Wrath as the value engine."},
+        "4 Color Reclamation": {"colors": "4c", "status": "fringe", "meta_pct": 0.1, "notes": "Wilderness Reclamation untap shenanigans."},
+        "Standstill Control": {"colors": "UW", "status": "fringe", "meta_pct": 0.1, "notes": "Standstill + manlands. Draw 3 when opponent plays a spell."},
+        "Landstill": {"colors": "UW", "status": "historic", "meta_pct": 0.0, "notes": "Classic Standstill + Mishra's Factory. Old-school control."},
+        "UB Control": {"colors": "UB", "status": "fringe", "meta_pct": 0.1, "notes": "UB without tempo elements. More removal, fewer Dazes."},
+        "UB Midrange": {"colors": "UB", "status": "fringe", "meta_pct": 0.2, "notes": "Grindier UB build between tempo and control."},
+        "UR Control": {"colors": "UR", "status": "fringe", "meta_pct": 0.1, "notes": "UR without Delver. More controlling with Blood Moon potential."},
+        "Mono Blue Control": {"colors": "U", "status": "fringe", "meta_pct": 0.1, "notes": "All-blue control. Back to Basics as the lock piece."},
+        "Rosheen Control": {"colors": "varies", "status": "fringe", "meta_pct": 0.0, "notes": "Unusual X-spell control build."},
+        "Brought Back Control": {"colors": "UW", "status": "fringe", "meta_pct": 0.0, "notes": "Brought Back + fetchlands/Wasteland for value."},
+        "Domain Beanstalk": {"colors": "5c", "status": "fringe", "meta_pct": 0.1, "notes": "Domain payoffs with Beanstalk shell."},
+        "Temur Beanstalk": {"colors": "URG", "status": "fringe", "meta_pct": 0.1, "notes": "Beanstalk in Temur colors."},
+        "Cascade Beanstalk": {"colors": "varies", "status": "fringe", "meta_pct": 0.1, "notes": "Beanstalk with cascade spells for extra value."},
+        "Simic Beanstalk": {"colors": "UG", "status": "fringe", "meta_pct": 0.1, "notes": "Beanstalk in Simic colors."},
+        "Sultai Leovold": {"colors": "UBG", "status": "historic", "meta_pct": 0.0, "notes": "Leovold, Emissary of Trest era BUG control. Leovold eventually restricted discussion."},
+        "UWx Mentor": {"colors": "UW+", "status": "fringe", "meta_pct": 0.1, "notes": "Monastery Mentor as win condition in UWx control shell."},
+        "Sharkstill": {"colors": "UW", "status": "fringe", "meta_pct": 0.0, "notes": "Standstill + Shark Typhoon. Draw 3 and make a shark."}
+      }
+    },
+    "Stoneblade": {
+      "parent": "Stoneblade",
+      "description": "Stoneforge Mystic decks that tutor equipment (Batterskull, Kaldra Compleat) in a fair blue shell.",
+      "variants": {
+        "Stoneblade": {"colors": "UW+", "status": "tier_3", "meta_pct": 2.0, "notes": "Generic Stoneblade. UW base with Stoneforge Mystic + equipment."},
+        "UWx Stoneblade": {"colors": "UW+", "status": "tier_3", "meta_pct": 1.0, "notes": "Same as Stoneblade, broader naming."},
+        "Jeskai Stoneblade": {"colors": "UWR", "status": "fringe", "meta_pct": 0.3, "notes": "Adds Lightning Bolt and Pyroblast from red."},
+        "Esper Stoneblade": {"colors": "UWB", "status": "fringe", "meta_pct": 0.2, "notes": "Adds Thoughtseize, Bowmasters, and Vindicate from black."},
+        "Bant Stoneblade": {"colors": "UWG", "status": "fringe", "meta_pct": 0.1, "notes": "Adds Uro, Endurance, Green Sun's Zenith from green."},
+        "4 Color Stoneblade": {"colors": "4c", "status": "fringe", "meta_pct": 0.1, "notes": "Greedy 4-color Stoneforge build."},
+        "Abzan Stoneblade": {"colors": "WBG", "status": "fringe", "meta_pct": 0.1, "notes": "Non-blue Stoneforge with Thoughtseize + green creatures."},
+        "Boros Stoneblade": {"colors": "WR", "status": "fringe", "meta_pct": 0.1, "notes": "Stoneforge in RW shell. Imperial Recruiter + equipment."},
+        "Orzhov Stoneblade": {"colors": "WB", "status": "fringe", "meta_pct": 0.1, "notes": "BW Stoneforge. Thoughtseize + Vindicate + equipment."},
+        "Mono White Stoneblade": {"colors": "W", "status": "fringe", "meta_pct": 0.1, "notes": "Mono-white Stoneforge. Maximum equipment focus."}
+      }
+    },
+    "Death and Taxes": {
+      "parent": "Death and Taxes",
+      "description": "White-based hatebear/disruptive creature deck using Aether Vial, Thalia, Wasteland, and Rishadan Port to tax and deny resources.",
+      "variants": {
+        "Death & Taxes": {"colors": "W", "status": "tier_2", "meta_pct": 2.0, "notes": "Core mono-white or BW Yorion build. Thalia + Stoneforge + Flickerwisp."},
+        "Eldrazi and Taxes": {"colors": "WC", "status": "fringe", "meta_pct": 0.2, "notes": "D&T core + Eldrazi (Thought-Knot Seer, Reality Smasher). Eldrazi Temple for acceleration."},
+        "Steel and Taxes": {"colors": "W", "status": "fringe", "meta_pct": 0.1, "notes": "Artifact-heavy D&T with Steel Overseer or Nettlecyst."},
+        "Esper Vial": {"colors": "UWB", "status": "fringe", "meta_pct": 0.2, "notes": "Aether Vial + Stoneforge + Recruiter in Esper colors. Bowmasters + Brainstorm."},
+        "Azorius Vial": {"colors": "UW", "status": "fringe", "meta_pct": 0.1, "notes": "UW Vial deck. Adds counterspells to the hatebear shell."},
+        "Jeskai Vial": {"colors": "UWR", "status": "fringe", "meta_pct": 0.0, "notes": "Rare 3-color Vial build."},
+        "Azorius Phelia": {"colors": "UW", "status": "fringe", "meta_pct": 0.2, "notes": "Phelia, Exuberant Shepherd blink value in UW hatebears."},
+        "Orzhov Vial": {"colors": "WB", "status": "fringe", "meta_pct": 0.1, "notes": "BW Vial with Plague Engineer and Dark Confidant."},
+        "Mono White Vial": {"colors": "W", "status": "fringe", "meta_pct": 0.1, "notes": "Pure mono-white D&T without splash."},
+        "Weenie White": {"colors": "W", "status": "fringe", "meta_pct": 0.0, "notes": "Aggressive mono-white. More creatures, fewer taxes."},
+        "White Weenie": {"colors": "W", "status": "fringe", "meta_pct": 0.0, "notes": "Same as Weenie White."},
+        "Soldiers": {"colors": "W", "status": "fringe", "meta_pct": 0.0, "notes": "Soldier tribal with Preeminent Captain."},
+        "Mono White Blink": {"colors": "W", "status": "fringe", "meta_pct": 0.1, "notes": "Flickerwisp/Ephemerate value in mono-white."},
+        "Mono White Initiative": {"colors": "W", "status": "fringe", "meta_pct": 0.1, "notes": "White Initiative creatures in a D&T shell."},
+        "Mono White Prison": {"colors": "W", "status": "fringe", "meta_pct": 0.1, "notes": "Lock pieces (Suppression Field, Ghostly Prison) in mono-white."},
+        "Mono White Rabbits": {"colors": "W", "status": "fringe", "meta_pct": 0.0, "notes": "Rabbit tribal aggro. Bloomburrow cards."}
+      }
+    },
+    "Ocelot Pride / Energy": {
+      "parent": "Ocelot Pride / Energy",
+      "description": "MH3 energy card strategies built around Ocelot Pride, Guide of Souls, Ajani Nacatl Pariah, and Amped Raptor.",
+      "variants": {
+        "Ocelot Pride Midrange": {"colors": "WR+", "status": "tier_1", "meta_pct": 8.5, "notes": "The primary energy deck. Boros or Mardu base."},
+        "Mardu Energy": {"colors": "WBR", "status": "tier_2", "meta_pct": 3.0, "notes": "Mardu build with Thoughtseize and Bowmasters from black."},
+        "Mardu Aggro": {"colors": "WBR", "status": "tier_2", "meta_pct": 3.0, "notes": "Same as Mardu Energy. MTGTop8 naming."},
+        "Mardu Ocelot": {"colors": "WBR", "status": "tier_2", "meta_pct": 2.0, "notes": "Mardu build focused specifically on Ocelot Pride synergies."},
+        "Boros Energy": {"colors": "WR", "status": "tier_2", "meta_pct": 2.0, "notes": "Two-color energy. Tighter mana base, less greedy."},
+        "Boros Ocelot": {"colors": "WR", "status": "tier_2", "meta_pct": 1.5, "notes": "Same as Boros Energy with Ocelot focus."},
+        "Boros Aggro": {"colors": "WR", "status": "tier_2", "meta_pct": 1.5, "notes": "Broader Boros aggro, may or may not have energy package."},
+        "Naya Energy": {"colors": "WRG", "status": "fringe", "meta_pct": 0.2, "notes": "Adds green for Collected Company or GSZ."},
+        "Naya Midrange": {"colors": "WRG", "status": "fringe", "meta_pct": 0.2, "notes": "Naya value build."},
+        "Jeskai Ocelot": {"colors": "UWR", "status": "fringe", "meta_pct": 0.1, "notes": "Blue splash for Force of Will and cantrips with energy core."},
+        "Jeskai Kitten": {"colors": "UWR", "status": "fringe", "meta_pct": 0.1, "notes": "Same as Jeskai Ocelot."},
+        "Jeskai Pride": {"colors": "UWR", "status": "fringe", "meta_pct": 0.1, "notes": "Same as Jeskai Ocelot."},
+        "Azorius Ocelot": {"colors": "UW", "status": "fringe", "meta_pct": 0.1, "notes": "UW energy without red."},
+        "Esper Ocelot": {"colors": "UWB", "status": "fringe", "meta_pct": 0.1, "notes": "Esper energy with Thoughtseize and Bowmasters."},
+        "Orzhov Ozelot": {"colors": "WB", "status": "fringe", "meta_pct": 0.1, "notes": "BW energy. Thoughtseize without blue."},
+        "Mardu Channeler": {"colors": "WBR", "status": "fringe", "meta_pct": 0.1, "notes": "Mardu with Dragon's Rage Channeler for graveyard synergies."},
+        "Mardu Inti": {"colors": "WBR", "status": "fringe", "meta_pct": 0.1, "notes": "Mardu build featuring Inti, Seneschal of the Sun."},
+        "Mardu Legends": {"colors": "WBR", "status": "fringe", "meta_pct": 0.1, "notes": "Legendary creature focused Mardu."},
+        "Mardu Tokens": {"colors": "WBR", "status": "fringe", "meta_pct": 0.1, "notes": "Token generation focus in Mardu."},
+        "Mardu Sacrifice": {"colors": "WBR", "status": "fringe", "meta_pct": 0.1, "notes": "Sacrifice synergies (Cauldron Familiar, Witch's Oven)."}
+      }
+    },
+    "Show and Tell": {
+      "parent": "Show and Tell",
+      "description": "Cheat Emrakul, Atraxa, or Omniscience into play via Show and Tell or Sneak Attack.",
+      "variants": {
+        "Sneak and Show": {"colors": "UR", "status": "tier_1", "meta_pct": 6.7, "notes": "Show and Tell + Sneak Attack. Emrakul and Atraxa as threats."},
+        "Show and Tell": {"colors": "UR", "status": "tier_1", "meta_pct": 6.7, "notes": "Same as Sneak and Show. MTGTop8 naming."},
+        "Omni-Tell": {"colors": "UW", "status": "tier_2", "meta_pct": 1.7, "notes": "Show and Tell puts Omniscience into play, then cast everything for free. Wins with Emrakul or Enter the Infinite."},
+        "Show and Copy": {"colors": "UR", "status": "fringe", "meta_pct": 0.1, "notes": "Show and Tell + Clone effects to copy opponent's best permanent."},
+        "Show and Karn": {"colors": "UC", "status": "fringe", "meta_pct": 0.1, "notes": "Show and Tell + Karn, the Great Creator for artifact combo."},
+        "Sneak Attack": {"colors": "UR", "status": "fringe", "meta_pct": 0.3, "notes": "More focused on Sneak Attack than Show and Tell. More creature-heavy."}
+      }
+    },
+    "Storm": {
+      "parent": "Storm",
+      "description": "Cast many spells in one turn, then win with a storm-count payoff (Tendrils of Agony, Empty the Warrens, Grapeshot).",
+      "variants": {
+        "The EPIC Storm": {"colors": "UBR+", "status": "tier_2", "meta_pct": 3.5, "notes": "Burning Wish + LED. Most resilient storm variant due to wishboard flexibility."},
+        "Ad Nauseam Tendrils": {"colors": "UBR", "status": "fringe", "meta_pct": 0.3, "notes": "ANT. Past in Flames + Ad Nauseam. Classic storm."},
+        "Ruby Storm": {"colors": "R", "status": "tier_3", "meta_pct": 0.4, "notes": "Mono-red storm. Birgi + Ruby Medallion + Bonus Round."},
+        "Beseech Storm": {"colors": "UBR", "status": "fringe", "meta_pct": 0.2, "notes": "Beseech the Mirror as tutor + Bargain payoff."},
+        "Izzet Storm": {"colors": "UR", "status": "fringe", "meta_pct": 0.1, "notes": "UR storm without black rituals."},
+        "UR Storm": {"colors": "UR", "status": "fringe", "meta_pct": 0.1, "notes": "Same as Izzet Storm."},
+        "Storm": {"colors": "UBR", "status": "fringe", "meta_pct": 0.3, "notes": "Generic storm. Usually means ANT."},
+        "Necro Storm": {"colors": "UBR", "status": "fringe", "meta_pct": 0.1, "notes": "Necrodominance-fueled storm. Draw many cards, then go off."},
+        "Cascade Storm": {"colors": "varies", "status": "fringe", "meta_pct": 0.1, "notes": "Cascade spells into storm payoffs."},
+        "Saga Storm": {"colors": "UR", "status": "fringe", "meta_pct": 0.1, "notes": "Urza's Saga in a storm shell for artifact tutoring."},
+        "Mind's Desire": {"colors": "UBR", "status": "historic", "meta_pct": 0.0, "notes": "Older storm win condition. Mind's Desire for storm count = that many free spells."},
+        "High Tide": {"colors": "U", "status": "historic", "meta_pct": 0.0, "notes": "Mono-blue combo. High Tide + Time Spiral + Candelabra for infinite mana. Brain Freeze finish."},
+        "TEG": {"colors": "UBR", "status": "fringe", "meta_pct": 0.0, "notes": "The Elegant Gentleman's Storm. Variant storm build."}
+      }
+    },
+    "Reanimator": {
+      "parent": "Reanimator",
+      "description": "Put a huge creature in the graveyard, then bring it back to the battlefield cheaply with Reanimate, Animate Dead, or Exhume.",
+      "variants": {
+        "Reanimator": {"colors": "UB", "status": "tier_2", "meta_pct": 2.0, "notes": "Post-Entomb ban build. Uses Faithful Mending, Careful Study to fill graveyard."},
+        "Dimir Reanimator": {"colors": "UB", "status": "tier_3", "meta_pct": 0.3, "notes": "Same as Reanimator. UB focused."},
+        "Orzhov Reanimator": {"colors": "WB", "status": "fringe", "meta_pct": 0.1, "notes": "WB with Archon of Cruelty and white sideboard."},
+        "Orzhov Rescaminator": {"colors": "WB", "status": "fringe", "meta_pct": 0.1, "notes": "Reanimator + Scam (Grief + Ephemerate) hybrid."},
+        "Buried Phoenix": {"colors": "UBR", "status": "fringe", "meta_pct": 0.1, "notes": "Reanimator with Arclight Phoenix package."},
+        "Worldgorger": {"colors": "UBR", "status": "fringe", "meta_pct": 0.0, "notes": "Worldgorger Dragon + Animate Dead = infinite mana loop. Win with Shivan Hellkite or Walking Ballista."}
+      }
+    },
+    "Doomsday": {
+      "parent": "Doomsday",
+      "description": "Resolve Doomsday to stack 5 cards as your library, then draw through them to win with Thassa's Oracle.",
+      "variants": {
+        "Doomsday": {"colors": "UB", "status": "tier_2", "meta_pct": 2.7, "notes": "DDFT (Doomsday Fetchland Tendrils) evolved into Oracle-based wins. Most skill-intensive combo."},
+        "Dimir Necrodominance": {"colors": "UB", "status": "fringe", "meta_pct": 0.3, "notes": "Necrodominance as card draw engine to fuel Doomsday piles."},
+        "Necro Showdown": {"colors": "UB", "status": "fringe", "meta_pct": 0.1, "notes": "Necrodominance + Showdown of the Skalds variant."},
+        "Tainted Pact": {"colors": "UB", "status": "fringe", "meta_pct": 0.0, "notes": "Tainted Pact (exile library) + Thassa's Oracle. All singletons."},
+        "Thassa's Oracle": {"colors": "UB", "status": "fringe", "meta_pct": 0.1, "notes": "Oracle combo without Doomsday. Other ways to empty library."},
+        "Thassa's Lash": {"colors": "UB", "status": "fringe", "meta_pct": 0.0, "notes": "Oracle + Paradigm Shift for instant-speed library exile."},
+        "Thassa's Paradigm": {"colors": "UB", "status": "fringe", "meta_pct": 0.0, "notes": "Same as Thassa's Lash."}
+      }
+    },
+    "Oops! All Spells": {
+      "parent": "Oops! All Spells",
+      "description": "Zero-land combo deck that mills its entire library with Balustrade Spy or Undercity Informer, wins with Thassa's Oracle via Dread Return.",
+      "variants": {
+        "Oops! All Spells": {"colors": "UBGR", "status": "tier_1", "meta_pct": 8.2, "notes": "The fastest combo in Legacy. Can win turn 1. Zero lands."},
+        "Oops, All Spells!": {"colors": "UBGR", "status": "tier_1", "meta_pct": 8.2, "notes": "Alternate punctuation. Same deck."},
+        "Belcher": {"colors": "RG", "status": "fringe", "meta_pct": 0.1, "notes": "Goblin Charbelcher with 0-1 lands. Reveals library for lethal damage. Similar speed, different win condition."},
+        "Mono Blue Belcher": {"colors": "U", "status": "fringe", "meta_pct": 0.0, "notes": "Blue Belcher with Force of Will backup."}
+      }
+    },
+    "Painter": {
+      "parent": "Painter",
+      "description": "Painter's Servant + Grindstone combo to mill opponent's entire library. Red prison elements with Goblin Welder/Engineer for artifact recursion.",
+      "variants": {
+        "Painter": {"colors": "R", "status": "tier_2", "meta_pct": 4.1, "notes": "Primary build. Mono-red or RW base with Goblin Welder, Engineer, Ancient Tomb."},
+        "Painter Grindstone": {"colors": "R", "status": "tier_2", "meta_pct": 4.1, "notes": "Same deck, explicit combo name."}
+      }
+    },
+    "Lands": {
+      "parent": "Lands",
+      "description": "Land-based control/combo using Exploration, Life from the Loam, Wasteland recursion, and Dark Depths + Thespian's Stage for a 20/20.",
+      "variants": {
+        "Lands": {"colors": "RG", "status": "tier_2", "meta_pct": 3.8, "notes": "The primary build. Punishing Fire + Grove, Maze of Ith, Tabernacle."},
+        "Lands.dec": {"colors": "RG", "status": "tier_2", "meta_pct": 3.8, "notes": "Same deck, community naming."},
+        "Dark Depths": {"colors": "varies", "status": "tier_3", "meta_pct": 0.8, "notes": "Broader category for Dark Depths combo builds."},
+        "Selesnya Depths": {"colors": "GW", "status": "tier_3", "meta_pct": 0.8, "notes": "GW Depths with Knight of the Reliquary and Elvish Reclaimer."},
+        "GWx Depths": {"colors": "GW+", "status": "fringe", "meta_pct": 0.3, "notes": "GW Depths with a splash color."},
+        "Sultai Depths": {"colors": "UBG", "status": "fringe", "meta_pct": 0.1, "notes": "BUG Depths with Thoughtseize and Brainstorm."},
+        "Mono Green Depths": {"colors": "G", "status": "fringe", "meta_pct": 0.1, "notes": "Mono-green Depths. Sylvan Safekeeper + Crop Rotation."},
+        "Aggro Loam": {"colors": "RG", "status": "fringe", "meta_pct": 0.1, "notes": "Life from the Loam + aggressive creatures. More beatdown than Lands."},
+        "Loam": {"colors": "RG+", "status": "fringe", "meta_pct": 0.1, "notes": "Life from the Loam strategies broadly."},
+        "Loam Pox": {"colors": "BG", "status": "fringe", "meta_pct": 0.0, "notes": "Loam + Smallpox. Mana denial + value recursion."},
+        "4 Color Loam": {"colors": "4c", "status": "fringe", "meta_pct": 0.1, "notes": "Greedy multi-color Loam."},
+        "Bant Loam": {"colors": "UWG", "status": "fringe", "meta_pct": 0.0, "notes": "Bant Loam with Knight of the Reliquary."},
+        "Dryad Valakut": {"colors": "RG", "status": "fringe", "meta_pct": 0.0, "notes": "Dryad of the Ilysian Grove + Valakut, the Molten Pinnacle."}
+      }
+    },
+    "Prison / Stompy": {
+      "parent": "Prison / Stompy",
+      "description": "Fast mana (Ancient Tomb, City of Traitors) into lock pieces (Chalice of the Void, Blood Moon, Trinisphere) to prevent opponent from playing Magic.",
+      "variants": {
+        "Red Stompy": {"colors": "R", "status": "tier_2", "meta_pct": 2.7, "notes": "Mono-red prison. Blood Moon + Chalice + Chrome Mox. The One Ring for card advantage."},
+        "Dragon Stompy": {"colors": "R", "status": "tier_2", "meta_pct": 2.7, "notes": "Same as Red Stompy. Older name from when it played Dragon creatures."},
+        "Mono Red Prison": {"colors": "R", "status": "tier_2", "meta_pct": 2.7, "notes": "Same as Red Stompy."},
+        "Mono Red Initiative": {"colors": "R", "status": "fringe", "meta_pct": 0.2, "notes": "Red prison with Initiative creatures."},
+        "Mono Red Artifacts": {"colors": "R", "status": "fringe", "meta_pct": 0.1, "notes": "Artifact-heavy red prison."},
+        "Mono Red Cauldron": {"colors": "R", "status": "fringe", "meta_pct": 0.1, "notes": "Cauldron Familiar + Witch's Oven in red prison."},
+        "Mono Red Midrange": {"colors": "R", "status": "fringe", "meta_pct": 0.1, "notes": "Less prison, more value-oriented red."},
+        "Mono Red Wizards": {"colors": "R", "status": "fringe", "meta_pct": 0.0, "notes": "Wizard tribal in red."},
+        "Eldrazi": {"colors": "C", "status": "tier_2", "meta_pct": 3.1, "notes": "Colorless Eldrazi. Chalice + Thought-Knot + Reality Smasher."},
+        "Eldrazi Aggro": {"colors": "C", "status": "tier_2", "meta_pct": 3.1, "notes": "Same as Eldrazi. MTGTop8 naming."},
+        "Eldrazi Stompy": {"colors": "C", "status": "tier_2", "meta_pct": 3.1, "notes": "Same as Eldrazi."},
+        "Eldrazi Ramp": {"colors": "C", "status": "fringe", "meta_pct": 0.2, "notes": "Bigger Eldrazi with more ramp (Ugin, All Is Dust)."},
+        "Eldrazi Tron": {"colors": "C", "status": "fringe", "meta_pct": 0.1, "notes": "Eldrazi + Tron lands. More Modern-style."},
+        "Affinity Stompy": {"colors": "C/U", "status": "tier_2", "meta_pct": 2.4, "notes": "Artifact aggro-prison. Mox Opal + Chalice + Thought Monitor."},
+        "Artifacts Prison": {"colors": "C", "status": "tier_2", "meta_pct": 2.0, "notes": "Pure prison artifacts. Chalice + Trinisphere + Ensnaring Bridge."},
+        "Artifacts Aggro": {"colors": "C/U", "status": "fringe", "meta_pct": 0.3, "notes": "More aggressive artifact builds."},
+        "Blue Artifacts": {"colors": "U", "status": "tier_2", "meta_pct": 1.1, "notes": "8-Cast style. Thought Monitor + Thoughtcast + artifact creatures."},
+        "Artifacts Blue": {"colors": "U", "status": "tier_2", "meta_pct": 1.1, "notes": "Same as Blue Artifacts."},
+        "Mono Blue Artifacts": {"colors": "U", "status": "fringe", "meta_pct": 0.5, "notes": "Same as Blue Artifacts."},
+        "8 Mulch": {"colors": "varies", "status": "fringe", "meta_pct": 0.1, "notes": "8 copies of mulch effects for self-mill artifact synergy."},
+        "Echo Affinity": {"colors": "C/U", "status": "fringe", "meta_pct": 0.1, "notes": "Echo of Creation in an Affinity shell."},
+        "Echo Control": {"colors": "U", "status": "fringe", "meta_pct": 0.1, "notes": "Echo of Creation in a control shell."},
+        "Emry Affinity": {"colors": "U", "status": "fringe", "meta_pct": 0.1, "notes": "Emry, Lurker of the Loch as artifact recursion engine."},
+        "MUD": {"colors": "C", "status": "tier_3", "meta_pct": 0.5, "notes": "Metalworker + Karn + big colorless threats. Old-school artifact ramp."},
+        "Steel Stompy": {"colors": "C", "status": "fringe", "meta_pct": 0.1, "notes": "Steel Overseer based artifact aggro."},
+        "Mono Blue Karn": {"colors": "U", "status": "fringe", "meta_pct": 0.1, "notes": "Karn, the Great Creator artifact toolbox in mono-blue."},
+        "Mono Blue Prison": {"colors": "U", "status": "fringe", "meta_pct": 0.1, "notes": "Back to Basics + Narset + artifact lock pieces."},
+        "UW Artifacts": {"colors": "UW", "status": "fringe", "meta_pct": 0.1, "notes": "UW artifact prison with Swords to Plowshares."},
+        "Orzhov Artifacts": {"colors": "WB", "status": "fringe", "meta_pct": 0.0, "notes": "BW artifact synergies."},
+        "Boros Prison": {"colors": "WR", "status": "fringe", "meta_pct": 0.1, "notes": "RW prison with Magus of the Moon + white removal."},
+        "Bant Prison": {"colors": "UWG", "status": "fringe", "meta_pct": 0.0, "notes": "Green + white prison. Unusual."},
+        "Mono Green Prison": {"colors": "G", "status": "fringe", "meta_pct": 0.0, "notes": "Green prison with Choke, Root Maze."},
+        "Stax": {"colors": "varies", "status": "historic", "meta_pct": 0.0, "notes": "Smokestacks + Tanglewire resource denial. Classic prison archetype."},
+        "Stasis": {"colors": "U", "status": "historic", "meta_pct": 0.0, "notes": "Stasis + untap effects. Lock opponent out of untap step."},
+        "Initiative Stompy": {"colors": "W+", "status": "tier_3", "meta_pct": 0.5, "notes": "Chalice + Initiative creatures. White/red variants."},
+        "Boros Initiative": {"colors": "WR", "status": "tier_2", "meta_pct": 2.0, "notes": "Caves of Chaos Adventurer + Solitude + Chalice."},
+        "Gruul Initiative": {"colors": "RG", "status": "fringe", "meta_pct": 0.1, "notes": "Green Initiative with mana dorks."},
+        "Naya Initiative": {"colors": "WRG", "status": "fringe", "meta_pct": 0.2, "notes": "Three-color Initiative with best threats from each color."},
+        "Naya Prison": {"colors": "WRG", "status": "fringe", "meta_pct": 0.1, "notes": "Naya-colored prison elements."},
+        "Boros Legends": {"colors": "WR", "status": "fringe", "meta_pct": 0.1, "notes": "Legendary creature synergies in Boros."},
+        "Boros Suspend": {"colors": "WR", "status": "fringe", "meta_pct": 0.0, "notes": "Suspend cards + As Foretold."},
+        "Boros Ephemerate": {"colors": "WR", "status": "fringe", "meta_pct": 0.1, "notes": "Ephemerate blink value in Boros."},
+        "As Foretold": {"colors": "varies", "status": "fringe", "meta_pct": 0.1, "notes": "As Foretold + suspend spells (Living End, Ancestral Vision)."}
+      }
+    },
+    "Mystic Forge Combo": {
+      "parent": "Mystic Forge Combo",
+      "description": "Artifact combo using Mystic Forge + cost reducers to play the entire deck from the top of the library.",
+      "variants": {
+        "Mystic Forge Combo": {"colors": "C", "status": "tier_2", "meta_pct": 3.0, "notes": "Grim Monolith + The One Ring + Mystic Forge engine. Karn as wincon."},
+        "Mystic Forge": {"colors": "C", "status": "tier_2", "meta_pct": 3.0, "notes": "Same deck, shorter name."},
+        "Coveted Jewel Combo": {"colors": "UW", "status": "tier_3", "meta_pct": 0.7, "notes": "Coveted Jewel + flicker effects for infinite mana/cards."},
+        "Coveted Jewel": {"colors": "UW", "status": "tier_3", "meta_pct": 0.7, "notes": "Same deck."},
+        "Mono Blue Jewel": {"colors": "U", "status": "fringe", "meta_pct": 0.1, "notes": "Mono-blue Coveted Jewel build."},
+        "Ironworks Combo": {"colors": "C", "status": "fringe", "meta_pct": 0.0, "notes": "Krark-Clan Ironworks + artifact recursion. More Modern-style."},
+        "Paradox Engine": {"colors": "C", "status": "fringe", "meta_pct": 0.0, "notes": "Paradox Engine untap combos with artifact mana."},
+        "Paradoxical Outcome": {"colors": "U", "status": "fringe", "meta_pct": 0.0, "notes": "Paradoxical Outcome + cheap artifacts for massive card draw."},
+        "Riddlesmith Combo": {"colors": "U", "status": "fringe", "meta_pct": 0.0, "notes": "Riddlesmith + cheap artifacts to dig through deck."},
+        "Salvager Combo": {"colors": "W", "status": "historic", "meta_pct": 0.0, "notes": "Auriok Salvagers + LED = infinite mana. Same as Bomberman."},
+        "Bomberman": {"colors": "W", "status": "historic", "meta_pct": 0.0, "notes": "Auriok Salvagers + Lion's Eye Diamond for infinite mana. Pyrite Spellbomb finish."},
+        "Power Artifact": {"colors": "U", "status": "historic", "meta_pct": 0.0, "notes": "Power Artifact + Grim Monolith = infinite mana. Very old combo."},
+        "Tezzerator": {"colors": "UB", "status": "fringe", "meta_pct": 0.0, "notes": "Tezzeret, Agent of Bolas as win condition in artifact shell."}
+      }
+    },
+    "Cloudpost": {
+      "parent": "Cloudpost",
+      "description": "Cloudpost + Glimmerpost for massive mana generation. Ramp into huge threats (Ugin, Primeval Titan, Emrakul).",
+      "variants": {
+        "Cloudpost Ramp": {"colors": "C/G", "status": "tier_3", "meta_pct": 1.0, "notes": "The standard build. Cloudpost + Glimmerpost + big threats."},
+        "Green Post": {"colors": "G", "status": "fringe", "meta_pct": 0.3, "notes": "Green-based Cloudpost with Primeval Titan and Crop Rotation."},
+        "Blue Cloudpost": {"colors": "U", "status": "fringe", "meta_pct": 0.2, "notes": "Blue Cloudpost with counterspells and card draw."},
+        "Colorless Post": {"colors": "C", "status": "fringe", "meta_pct": 0.2, "notes": "All-colorless Cloudpost. Karn, Ugin, Eldrazi."},
+        "Simic Post": {"colors": "UG", "status": "fringe", "meta_pct": 0.1, "notes": "Blue + green Cloudpost."},
+        "Mono Green Ramp": {"colors": "G", "status": "fringe", "meta_pct": 0.1, "notes": "Green ramp that may or may not use Cloudpost."},
+        "Tron": {"colors": "C", "status": "fringe", "meta_pct": 0.1, "notes": "Urza's Tower/Mine/Power Plant for mana. Less common than Cloudpost in Legacy."},
+        "Mono Blue Tron": {"colors": "U", "status": "fringe", "meta_pct": 0.0, "notes": "Blue Tron with counterspells."},
+        "Amulet Titan": {"colors": "G", "status": "fringe", "meta_pct": 0.0, "notes": "Amulet of Vigor + bounceland combo. Rare in Legacy, more Modern."}
+      }
+    },
+    "Pox / Mono Black": {
+      "parent": "Pox / Mono Black",
+      "description": "Black-based resource denial using Smallpox, Hymn to Tourach, Liliana, and Wasteland to strip the opponent of all resources.",
+      "variants": {
+        "Pox": {"colors": "B", "status": "tier_3", "meta_pct": 2.0, "notes": "Classic Smallpox + Liliana + Hymn. Mana denial + discard."},
+        "Smallpox": {"colors": "B", "status": "tier_3", "meta_pct": 2.0, "notes": "Same as Pox."},
+        "Mono Black Midrange": {"colors": "B", "status": "tier_2", "meta_pct": 1.3, "notes": "Bowmasters + Thoughtseize + Sheoldred's Edict. Grindier than Pox."},
+        "Mono Black Aggro": {"colors": "B", "status": "fringe", "meta_pct": 0.3, "notes": "Aggressive mono-black. Dauthi Voidwalker + shadow creatures."},
+        "Mono Black": {"colors": "B", "status": "fringe", "meta_pct": 0.3, "notes": "Generic mono-black."},
+        "Mono Black Dauthi": {"colors": "B", "status": "fringe", "meta_pct": 0.2, "notes": "Shadow/unblockable theme. Dauthi Voidwalker + Dauthi Horror."},
+        "Mono Black Necro": {"colors": "B", "status": "fringe", "meta_pct": 0.2, "notes": "Necrodominance as card draw engine."},
+        "Mono Black Combo": {"colors": "B", "status": "fringe", "meta_pct": 0.1, "notes": "Combo win conditions in mono-black."},
+        "Mono Black Helm": {"colors": "B", "status": "fringe", "meta_pct": 0.1, "notes": "Helm of Obedience + Leyline of the Void = instant mill."},
+        "Mono Black Death's Shadow": {"colors": "B", "status": "fringe", "meta_pct": 0.1, "notes": "Death's Shadow in mono-black with Thoughtseize + self-damage."},
+        "Mono Black Prison": {"colors": "B", "status": "fringe", "meta_pct": 0.1, "notes": "Black prison with Nether Void, The Abyss, Chains of Mephistopheles."},
+        "Mono Black Demons": {"colors": "B", "status": "fringe", "meta_pct": 0.0, "notes": "Demon tribal. Dark Ritual into Griselbrand/Archfiend."},
+        "Mono Black Initiative": {"colors": "B", "status": "fringe", "meta_pct": 0.1, "notes": "Initiative creatures with black rituals for acceleration."},
+        "Mono Black Slivers": {"colors": "B", "status": "fringe", "meta_pct": 0.0, "notes": "Unusual mono-black Slivers build."},
+        "8-Rack": {"colors": "B", "status": "fringe", "meta_pct": 0.0, "notes": "Shrieking Affliction + The Rack. Win by keeping opponent's hand empty."},
+        "Dark Burn": {"colors": "BR", "status": "fringe", "meta_pct": 0.0, "notes": "Black + red burn with Bump in the Night."},
+        "Eva Green": {"colors": "BG", "status": "historic", "meta_pct": 0.0, "notes": "Classic BG midrange. Hymn + Pernicious Deed + Tarmogoyf. Named after actress."},
+        "Deadguy Ale (BW Aggro)": {"colors": "WB", "status": "fringe", "meta_pct": 0.1, "notes": "BW aggro-midrange. Stoneforge + Thoughtseize + Vindicate. Classic name."},
+        "Death's Shadow": {"colors": "varies", "status": "tier_3", "meta_pct": 0.5, "notes": "Death's Shadow + self-damage. UBR or Mono-B."},
+        "UBx Death's Shadow": {"colors": "UBR", "status": "tier_3", "meta_pct": 0.3, "notes": "Blue-based Death's Shadow with cantrips."},
+        "Rakdos Death's Shadow": {"colors": "BR", "status": "fringe", "meta_pct": 0.1, "notes": "BR Death's Shadow with Thoughtseize + Bolt."},
+        "Curses": {"colors": "B+", "status": "fringe", "meta_pct": 0.0, "notes": "Curse of Misfortunes + enchantment combo."}
+      }
+    },
+    "Helm Combo": {
+      "parent": "Helm Combo",
+      "description": "Helm of Obedience + Rest in Peace or Leyline of the Void = mill entire library for 1 activation.",
+      "variants": {
+        "BW Helm Combo": {"colors": "WB", "status": "fringe", "meta_pct": 0.1, "notes": "BW shell for both combo pieces."},
+        "Dimir Helm": {"colors": "UB", "status": "fringe", "meta_pct": 0.1, "notes": "UB Helm with counterspell backup."},
+        "Orzhov Helm": {"colors": "WB", "status": "fringe", "meta_pct": 0.1, "notes": "Same as BW Helm."},
+        "Rakdos Helm": {"colors": "BR", "status": "fringe", "meta_pct": 0.0, "notes": "Rare BR variant with Leyline of the Void."}
+      }
+    },
+    "Blink / Ephemerate": {
+      "parent": "Blink / Ephemerate",
+      "description": "Flicker/blink effects (Ephemerate, Yorion) to repeatedly trigger enter-the-battlefield abilities.",
+      "variants": {
+        "4 Color Blink": {"colors": "4c", "status": "fringe", "meta_pct": 0.2, "notes": "4-color Ephemerate value. Solitude + Fury + Omnath + Yorion."},
+        "Abzan Blink": {"colors": "WBG", "status": "fringe", "meta_pct": 0.1, "notes": "WBG blink. Siege Rhino + Ephemerate."},
+        "Esper Blink": {"colors": "UWB", "status": "fringe", "meta_pct": 0.1, "notes": "Ephemerate + Snapcaster Mage + Stoneforge."},
+        "Bant Blink": {"colors": "UWG", "status": "fringe", "meta_pct": 0.1, "notes": "Green for Uro and Endurance blink targets."},
+        "Orzhov Blink": {"colors": "WB", "status": "fringe", "meta_pct": 0.1, "notes": "BW blink with Grief and Solitude."},
+        "Bant Yorion": {"colors": "UWG", "status": "fringe", "meta_pct": 0.1, "notes": "80-card Bant with Yorion companion."},
+        "Esper Yorion": {"colors": "UWB", "status": "fringe", "meta_pct": 0.1, "notes": "80-card Esper with Yorion."},
+        "Bridgewalkers": {"colors": "varies", "status": "fringe", "meta_pct": 0.0, "notes": "Bridge from Below + sacrifice/blink synergies."}
+      }
+    },
+    "Natural Order / Green Toolbox": {
+      "parent": "Natural Order / Green Toolbox",
+      "description": "Green Sun's Zenith and/or Natural Order toolbox strategies. Tutor for creatures to match any situation.",
+      "variants": {
+        "Cradle Control": {"colors": "G+", "status": "tier_2", "meta_pct": 2.3, "notes": "Gaea's Cradle + Green Sun's Zenith toolbox. Huge mana generation."},
+        "Maverick": {"colors": "GW", "status": "fringe", "meta_pct": 0.2, "notes": "GW hatebears with Knight of the Reliquary + GSZ. Classic fair green deck."},
+        "Punishing Maverick": {"colors": "RGW", "status": "fringe", "meta_pct": 0.1, "notes": "Maverick + Punishing Fire + Grove of the Burnwillows."},
+        "Abzan Order": {"colors": "WBG", "status": "fringe", "meta_pct": 0.1, "notes": "Natural Order in Abzan colors."},
+        "Abzan Midrange": {"colors": "WBG", "status": "fringe", "meta_pct": 0.1, "notes": "WBG midrange without Natural Order."},
+        "Bant Order": {"colors": "UWG", "status": "fringe", "meta_pct": 0.1, "notes": "Natural Order in Bant. Force of Will protection."},
+        "Bant Ritual": {"colors": "UWG", "status": "fringe", "meta_pct": 0.0, "notes": "Bant with mana rituals for early Natural Order."},
+        "Golgari Order": {"colors": "BG", "status": "fringe", "meta_pct": 0.1, "notes": "BG Natural Order."},
+        "Gruul Order": {"colors": "RG", "status": "fringe", "meta_pct": 0.1, "notes": "RG Natural Order."},
+        "RUG Order": {"colors": "URG", "status": "fringe", "meta_pct": 0.1, "notes": "RUG Natural Order. Reid Duke's GP Providence 2011 deck."},
+        "Simic Order": {"colors": "UG", "status": "fringe", "meta_pct": 0.1, "notes": "UG Natural Order."},
+        "Mono Green Order": {"colors": "G", "status": "fringe", "meta_pct": 0.1, "notes": "Mono-green Natural Order."},
+        "4 Color Order": {"colors": "4c", "status": "fringe", "meta_pct": 0.1, "notes": "4-color Natural Order."},
+        "Nic Fit": {"colors": "BG+", "status": "fringe", "meta_pct": 0.2, "notes": "Veteran Explorer + Cabal Therapy. Ramp into big threats. Anti-meta deck."},
+        "Sultai Ritual": {"colors": "UBG", "status": "fringe", "meta_pct": 0.0, "notes": "BUG ritual-based Natural Order."},
+        "Mono Green Devotion": {"colors": "G", "status": "fringe", "meta_pct": 0.0, "notes": "Nykthos + green devotion creatures."},
+        "Mono Green Aggro": {"colors": "G", "status": "fringe", "meta_pct": 0.0, "notes": "Aggressive mono-green."},
+        "Enigmatic Incarnation": {"colors": "varies", "status": "fringe", "meta_pct": 0.0, "notes": "Enigmatic Incarnation creature toolbox."},
+        "Selesnya Company": {"colors": "GW", "status": "fringe", "meta_pct": 0.0, "notes": "Collected Company in GW."},
+        "Selesnya Counters": {"colors": "GW", "status": "fringe", "meta_pct": 0.0, "notes": "+1/+1 counter synergies."},
+        "Hardened Scales": {"colors": "G", "status": "fringe", "meta_pct": 0.0, "notes": "Hardened Scales + modular artifacts."},
+        "Harvest Combo": {"colors": "G+", "status": "fringe", "meta_pct": 0.0, "notes": "Harvest season / mana creature combo."},
+        "Golgari Midrange": {"colors": "BG", "status": "fringe", "meta_pct": 0.1, "notes": "BG midrange. Thoughtseize + Tarmogoyf/Barrowgoyf."},
+        "Golgari Saga": {"colors": "BG", "status": "fringe", "meta_pct": 0.1, "notes": "BG with Urza's Saga artifact package."},
+        "Golgari Yawgmoth": {"colors": "BG", "status": "fringe", "meta_pct": 0.0, "notes": "Yawgmoth, Thran Physician combo in BG."},
+        "Golgari Landfall": {"colors": "BG", "status": "fringe", "meta_pct": 0.0, "notes": "Landfall triggers in BG."},
+        "Golgari Moonshadow": {"colors": "BG", "status": "fringe", "meta_pct": 0.0, "notes": "Moonshadow creature in BG."},
+        "Golgari Witherbloom": {"colors": "BG", "status": "fringe", "meta_pct": 0.0, "notes": "Witherbloom lifegain/drain in BG."},
+        "Sultai Witherbloom": {"colors": "UBG", "status": "fringe", "meta_pct": 0.0, "notes": "BUG Witherbloom variant."},
+        "Sultai Birds": {"colors": "UBG", "status": "fringe", "meta_pct": 0.0, "notes": "BUG with Birds of Paradise mana acceleration."},
+        "Sultai Nadu": {"colors": "UBG", "status": "fringe", "meta_pct": 0.0, "notes": "Nadu combo in BUG. Nadu banned but may have existed pre-ban."},
+        "Naya Minsc": {"colors": "WRG", "status": "fringe", "meta_pct": 0.1, "notes": "Naya with Minsc & Boo, Timeless Heroes."},
+        "Gruul Minsc": {"colors": "RG", "status": "fringe", "meta_pct": 0.1, "notes": "RG Minsc build."},
+        "Gruul Midrange": {"colors": "RG", "status": "fringe", "meta_pct": 0.1, "notes": "RG midrange. Tarmogoyf + Bolt + Punishing Fire."},
+        "Gruul Aggro": {"colors": "RG", "status": "fringe", "meta_pct": 0.1, "notes": "Aggressive RG."},
+        "Gruul Prowess": {"colors": "RG", "status": "fringe", "meta_pct": 0.0, "notes": "Prowess creatures in RG."},
+        "Gruul Lumberjack": {"colors": "RG", "status": "fringe", "meta_pct": 0.0, "notes": "Lumberjack-themed RG aggro."},
+        "Gruul Rotpriest": {"colors": "RG", "status": "fringe", "meta_pct": 0.0, "notes": "Venerated Rotpriest poison in RG."},
+        "Temur Rotpriest": {"colors": "URG", "status": "fringe", "meta_pct": 0.0, "notes": "Rotpriest in Temur colors."},
+        "Gruul Shoal": {"colors": "RG", "status": "fringe", "meta_pct": 0.0, "notes": "Blazing Shoal combo in RG."},
+        "Selesnya Landfall": {"colors": "GW", "status": "fringe", "meta_pct": 0.0, "notes": "GW landfall triggers."},
+        "Selesnya Gearhulk": {"colors": "GW", "status": "fringe", "meta_pct": 0.0, "notes": "Verdurous Gearhulk in GW."},
+        "Selesnya Initiative": {"colors": "GW", "status": "fringe", "meta_pct": 0.0, "notes": "Initiative creatures in GW."},
+        "Vizier": {"colors": "GW", "status": "fringe", "meta_pct": 0.0, "notes": "Vizier of Remedies + Devoted Druid infinite mana."}
+      }
+    },
+    "Tribal": {
+      "parent": "Tribal",
+      "description": "Creature-type synergy decks that leverage tribal payoffs.",
+      "variants": {
+        "Elves": {"colors": "G+", "status": "fringe", "meta_pct": 0.2, "notes": "Glimpse of Nature + Natural Order + Craterhoof Behemoth. Creature combo."},
+        "Goblins": {"colors": "R+", "status": "fringe", "meta_pct": 0.4, "notes": "Goblin Lackey + Matron + Ringleader + Muxus. Tribal aggro-combo."},
+        "Food Chain Goblins": {"colors": "RG", "status": "fringe", "meta_pct": 0.0, "notes": "Goblins + Food Chain for infinite mana/ETBs."},
+        "Merfolk": {"colors": "U", "status": "fringe", "meta_pct": 0.2, "notes": "Lord of Atlantis + True-Name Nemesis + Aether Vial. Tribal tempo."},
+        "Slivers": {"colors": "5c", "status": "fringe", "meta_pct": 0.0, "notes": "Sliver tribal. Aether Vial + sliver lords."},
+        "Humans": {"colors": "5c", "status": "fringe", "meta_pct": 0.0, "notes": "Five-color humans with Cavern of Souls + Aether Vial."},
+        "Spirits": {"colors": "UW", "status": "fringe", "meta_pct": 0.0, "notes": "Spirit tribal with Rattlechains and Mausoleum Wanderer."},
+        "Zombies": {"colors": "B", "status": "fringe", "meta_pct": 0.0, "notes": "Zombie tribal."},
+        "Minotaurs": {"colors": "BR", "status": "fringe", "meta_pct": 0.0, "notes": "Minotaur tribal. Very fringe."},
+        "Angels": {"colors": "W", "status": "fringe", "meta_pct": 0.0, "notes": "Angel tribal."},
+        "Rebels": {"colors": "W", "status": "fringe", "meta_pct": 0.0, "notes": "Rebel tutor chain. Lin Sivvi, Defiant Hero."},
+        "Kobolds": {"colors": "R", "status": "fringe", "meta_pct": 0.0, "notes": "Zero-mana Kobold creatures + Glimpse of Nature combo."},
+        "Wizards": {"colors": "varies", "status": "fringe", "meta_pct": 0.0, "notes": "Wizard tribal synergies."},
+        "Ninjas": {"colors": "UB", "status": "fringe", "meta_pct": 0.2, "notes": "Yuriko + Changeling Outcast + Ingenious Infiltrator. Ninjutsu tempo."},
+        "Ninja": {"colors": "UB", "status": "fringe", "meta_pct": 0.2, "notes": "Same as Ninjas."}
+      }
+    },
+    "Infect": {
+      "parent": "Infect",
+      "description": "Poison counter aggro-combo. 10 poison = death. Pump spells on infect creatures for one-shot kills.",
+      "variants": {
+        "Infect": {"colors": "UG", "status": "tier_3", "meta_pct": 0.4, "notes": "Glistener Elf, Blighted Agent + Berserk, Invigorate, Force."},
+        "Infect Shoal": {"colors": "UG", "status": "fringe", "meta_pct": 0.1, "notes": "Blazing Shoal version for bigger pump."},
+        "Shoal Infect": {"colors": "UG", "status": "fringe", "meta_pct": 0.1, "notes": "Same as Infect Shoal."},
+        "Gruul Rotpriest": {"colors": "RG", "status": "fringe", "meta_pct": 0.0, "notes": "Venerated Rotpriest targeted-spell poison."},
+        "Temur Song": {"colors": "URG", "status": "fringe", "meta_pct": 0.0, "notes": "Song of Creation + cheap spells. Unusual combo."}
+      }
+    },
+    "Burn": {
+      "parent": "Burn",
+      "description": "Direct damage to the face. Lightning Bolt, Chain Lightning, Eidolon of the Great Revel, Price of Progress.",
+      "variants": {
+        "Burn": {"colors": "R", "status": "fringe", "meta_pct": 0.3, "notes": "Mono-red or RW burn. Budget-friendly. Price of Progress punishes greedy mana bases."},
+        "Dark Burn": {"colors": "BR", "status": "fringe", "meta_pct": 0.0, "notes": "Black splash for Bump in the Night."}
+      }
+    },
+    "Dredge": {
+      "parent": "Dredge",
+      "description": "Graveyard-based strategy using the Dredge mechanic to fill the graveyard, then win with Ichorid, Narcomoeba, and Bridge from Below triggers.",
+      "variants": {
+        "LED Dredge": {"colors": "UBRG", "status": "tier_2", "meta_pct": 1.1, "notes": "Lion's Eye Diamond enables explosive starts. Dread Return + Thassa's Oracle or Flame-Kin Zealot."},
+        "Dredge": {"colors": "UBRG", "status": "tier_2", "meta_pct": 1.1, "notes": "Same as LED Dredge."},
+        "Hogaak": {"colors": "BG", "status": "tier_3", "meta_pct": 0.7, "notes": "Hogaak, Arisen Necropolis + Vengevine. Graveyard aggro."},
+        "Hollow Vine": {"colors": "varies", "status": "fringe", "meta_pct": 0.0, "notes": "Hollow One + Vengevine discard synergies."},
+        "Hollow One Madness": {"colors": "varies", "status": "fringe", "meta_pct": 0.0, "notes": "Hollow One with Madness spells."},
+        "Hollow Red": {"colors": "R", "status": "fringe", "meta_pct": 0.0, "notes": "Red Hollow One aggro."},
+        "Zombi Bombardment": {"colors": "BR", "status": "fringe", "meta_pct": 0.0, "notes": "Goblin Bombardment + Gravecrawler recursion."}
+      }
+    },
+    "Aluren": {
+      "parent": "Aluren",
+      "description": "Aluren enchantment lets you cast creatures with CMC 3 or less for free. Combo with Acererak the Archlich or Cavern Harpy for infinite triggers.",
+      "variants": {
+        "Aluren": {"colors": "UBG", "status": "tier_2", "meta_pct": 1.2, "notes": "Won Legacy Showcase Qualifier April 2026. Combo-control hybrid."},
+        "Sultai Aluren": {"colors": "UBG", "status": "tier_2", "meta_pct": 1.2, "notes": "Same deck. Sultai naming."}
+      }
+    },
+    "Food Chain": {
+      "parent": "Food Chain",
+      "description": "Food Chain + Misthollow Griffin or Eternal Scourge = infinite mana (creatures only). Win with Walking Ballista or cast from exile creatures.",
+      "variants": {
+        "Food Chain": {"colors": "UG+", "status": "fringe", "meta_pct": 0.2, "notes": "Food Chain + Griffin/Scourge combo. Walking Ballista finish."},
+        "Food Chain Goblins": {"colors": "RG", "status": "fringe", "meta_pct": 0.0, "notes": "Food Chain in Goblin shell."}
+      }
+    },
+    "Enchantress": {
+      "parent": "Enchantress",
+      "description": "Enchantment-based strategy using Argothian Enchantress and Enchantress's Presence to draw cards off every enchantment cast.",
+      "variants": {
+        "Enchantress": {"colors": "GW", "status": "fringe", "meta_pct": 0.2, "notes": "Solitary Confinement lock. Elephant Grass. Sterling Grove for protection."},
+        "4 Color Estrid": {"colors": "4c", "status": "fringe", "meta_pct": 0.0, "notes": "Estrid planeswalker in multi-color enchantress."}
+      }
+    },
+    "Cephalid Breakfast": {
+      "parent": "Cephalid Breakfast",
+      "description": "Cephalid Illusionist + Nomads en-Kor = mill entire library. Win with Thassa's Oracle.",
+      "variants": {
+        "Cephalid Breakfast": {"colors": "UW", "status": "tier_3", "meta_pct": 0.4, "notes": "Two-card combo that mills your library. Oracle finish."}
+      }
+    },
+    "Stiflenought": {
+      "parent": "Stiflenought",
+      "description": "Stifle or Dress Down the enter-the-battlefield sacrifice trigger on Phyrexian Dreadnought for a 12/12 on turn 1-2.",
+      "variants": {
+        "Stiflenought": {"colors": "UB", "status": "fringe", "meta_pct": 0.1, "notes": "Stifle + Phyrexian Dreadnought. Also uses Dress Down."},
+        "White Dreadnought": {"colors": "UW", "status": "fringe", "meta_pct": 0.0, "notes": "Dreadnought in white shell with Flickerwisp."},
+        "Vesuvan Duelist": {"colors": "U", "status": "fringe", "meta_pct": 0.0, "notes": "Copy effects for Dreadnought synergy."}
+      }
+    },
+    "Jund": {
+      "parent": "Jund",
+      "description": "BRG midrange. The 'best cards in three colors' strategy. Thoughtseize + Bolt + Barrowgoyf + Punishing Fire.",
+      "variants": {
+        "Jund": {"colors": "BRG", "status": "fringe", "meta_pct": 0.2, "notes": "Fair BRG midrange. Less popular post-DRS ban."},
+        "Jund Aggro": {"colors": "BRG", "status": "fringe", "meta_pct": 0.1, "notes": "Aggressive Jund variant."},
+        "Grixis Goyfs": {"colors": "UBR", "status": "fringe", "meta_pct": 0.1, "notes": "Grixis midrange with Barrowgoyf."},
+        "Grixis Junk": {"colors": "UBR", "status": "fringe", "meta_pct": 0.0, "notes": "Unusual Grixis midrange."},
+        "Rakdos Aggro": {"colors": "BR", "status": "fringe", "meta_pct": 0.2, "notes": "BR aggro without green."},
+        "Rakdos Channeler": {"colors": "BR", "status": "fringe", "meta_pct": 0.1, "notes": "BR with Dragon's Rage Channeler."},
+        "Rakdos Goyfs": {"colors": "BR", "status": "fringe", "meta_pct": 0.1, "notes": "BR midrange with Barrowgoyf."},
+        "Rakdos Discard": {"colors": "BR", "status": "fringe", "meta_pct": 0.0, "notes": "BR discard focus. Hymn + Thoughtseize + Bolt."},
+        "Rakdos Moonshadow": {"colors": "BR", "status": "fringe", "meta_pct": 0.0, "notes": "Moonshadow creature in BR."},
+        "Grixis Basim": {"colors": "UBR", "status": "fringe", "meta_pct": 0.0, "notes": "Basim creature in Grixis."},
+        "Grixis Cauldron": {"colors": "UBR", "status": "fringe", "meta_pct": 0.0, "notes": "Cauldron Familiar + Witch's Oven in Grixis."},
+        "Grixis Frog": {"colors": "UBR", "status": "fringe", "meta_pct": 0.0, "notes": "Psychic Frog era Grixis. Frog now banned."},
+        "Dimir Frog": {"colors": "UB", "status": "fringe", "meta_pct": 0.0, "notes": "Psychic Frog era UB build. Now banned."},
+        "Sultai Frog": {"colors": "UBG", "status": "fringe", "meta_pct": 0.0, "notes": "Frog in BUG. Banned."},
+        "Grixis Lutri": {"colors": "UBR", "status": "fringe", "meta_pct": 0.0, "notes": "Grixis with Lutri companion (all singletons)."},
+        "Grixis Phoenix": {"colors": "UBR", "status": "fringe", "meta_pct": 0.0, "notes": "Arclight Phoenix in Grixis."},
+        "Arclight Phoenix": {"colors": "UR+", "status": "fringe", "meta_pct": 0.0, "notes": "Arclight Phoenix with cheap instants/sorceries."},
+        "Phoenix Red": {"colors": "R", "status": "fringe", "meta_pct": 0.0, "notes": "Mono-red Phoenix variant."}
+      }
+    },
+    "Creativity / Polymorph": {
+      "parent": "Creativity / Polymorph",
+      "description": "Indomitable Creativity or Polymorph effects to turn tokens into specific powerful creatures.",
+      "variants": {
+        "4 Color Creativity": {"colors": "4c", "status": "fringe", "meta_pct": 0.2, "notes": "Indomitable Creativity into Archon of Cruelty or Emrakul."},
+        "Jeskai Creativity": {"colors": "UWR", "status": "fringe", "meta_pct": 0.1, "notes": "Jeskai shell for Creativity."},
+        "Creative Technique": {"colors": "varies", "status": "fringe", "meta_pct": 0.2, "notes": "Creative Technique for Demonstrate copies."},
+        "Polymorph": {"colors": "U", "status": "fringe", "meta_pct": 0.0, "notes": "Classic Polymorph. Turn token into Emrakul."}
+      }
+    },
+    "Cascade": {
+      "parent": "Cascade",
+      "description": "Cascade mechanic to cast free spells. Often paired with suspend cards or specific cascade targets.",
+      "variants": {
+        "4 Color Cascade": {"colors": "4c", "status": "fringe", "meta_pct": 0.1, "notes": "4-color cascade value."},
+        "Cascade Crash": {"colors": "varies", "status": "fringe", "meta_pct": 0.1, "notes": "Crashing Footfalls via cascade."},
+        "Marauder Cascade": {"colors": "varies", "status": "fringe", "meta_pct": 0.0, "notes": "Bloodbraid Marauder cascade."},
+        "Temur Cascade": {"colors": "URG", "status": "fringe", "meta_pct": 0.1, "notes": "Temur cascade with Shardless Agent."},
+        "Valki Cascade": {"colors": "varies", "status": "fringe", "meta_pct": 0.0, "notes": "Cascade into Valki/Tibalt. Rules change nerfed this."},
+        "Hypergenesis": {"colors": "varies", "status": "fringe", "meta_pct": 0.0, "notes": "Cascade into Hypergenesis to cheat everything into play."}
+      }
+    },
+    "Miscellaneous Combo": {
+      "parent": "Miscellaneous Combo",
+      "description": "Various combo decks that don't fit neatly into other categories.",
+      "variants": {
+        "Hive Mind": {"colors": "UR", "status": "historic", "meta_pct": 0.0, "notes": "Hive Mind + Pacts. Opponent can't pay the upkeep cost and loses."},
+        "Splinter Twin": {"colors": "UR", "status": "fringe", "meta_pct": 0.0, "notes": "Splinter Twin + Deceiver Exarch = infinite tokens. Rare in Legacy."},
+        "Neoform": {"colors": "UG", "status": "fringe", "meta_pct": 0.0, "notes": "Neoform combo to tutor specific creatures."},
+        "Arena Rector": {"colors": "W+", "status": "fringe", "meta_pct": 0.0, "notes": "Arena Rector dies, put any planeswalker into play. Omniscience combo."},
+        "Jeskai Ascendancy": {"colors": "UWR", "status": "fringe", "meta_pct": 0.0, "notes": "Jeskai Ascendancy + mana creatures + cantrips = infinite power."},
+        "Winota Forces": {"colors": "WR", "status": "fringe", "meta_pct": 0.0, "notes": "Winota, Joiner of Forces cheating humans into play."},
+        "False Cure": {"colors": "B", "status": "fringe", "meta_pct": 0.0, "notes": "False Cure + Tainted Remedy. Opponent's lifegain kills them."},
+        "Treasure Hunt": {"colors": "U", "status": "fringe", "meta_pct": 0.0, "notes": "Treasure Hunt + Reliquary Tower + Lightning Storm. Meme combo."},
+        "Battle of Wits": {"colors": "5c", "status": "fringe", "meta_pct": 0.0, "notes": "200+ card deck. Win by having 200+ cards in library. Extreme jank."},
+        "Wheel Dream": {"colors": "varies", "status": "fringe", "meta_pct": 0.0, "notes": "Wheel effects + damage from drawing."},
+        "Dragon's Approach": {"colors": "R", "status": "fringe", "meta_pct": 0.0, "notes": "40 copies of Dragon's Approach. Tutor a dragon."},
+        "Sudden Substitution": {"colors": "U", "status": "fringe", "meta_pct": 0.0, "notes": "Sudden Substitution + Pact of the Titan to give opponent a Pact they can't pay."},
+        "Mississippi River": {"colors": "varies", "status": "fringe", "meta_pct": 0.0, "notes": "Unusual combo deck."},
+        "Turbo Necro": {"colors": "UB", "status": "fringe", "meta_pct": 0.1, "notes": "Necrodominance turbo. Draw entire deck, win somehow."},
+        "Mill": {"colors": "UB", "status": "fringe", "meta_pct": 0.0, "notes": "Mill opponent's library as win condition."},
+        "Martyr Life": {"colors": "W", "status": "fringe", "meta_pct": 0.0, "notes": "Martyr of Sands lifegain combo."},
+        "Leylines": {"colors": "varies", "status": "fringe", "meta_pct": 0.0, "notes": "Leyline-based combo deck."},
+        "Wizard's Planisphere": {"colors": "varies", "status": "fringe", "meta_pct": 0.0, "notes": "Unusual artifact combo."},
+        "Nadu": {"colors": "UG", "status": "historic", "meta_pct": 0.0, "notes": "Nadu, Winged Wisdom combo. Banned 2024."},
+        "Breach": {"colors": "UR", "status": "historic", "meta_pct": 0.0, "notes": "Underworld Breach combo. Banned 2020."},
+        "Survival - Aggro": {"colors": "G+", "status": "historic", "meta_pct": 0.0, "notes": "Survival of the Fittest aggro. Survival banned."},
+        "Survival - Control/Combo": {"colors": "G+", "status": "historic", "meta_pct": 0.0, "notes": "Survival of the Fittest combo/control. Banned."},
+        "New horizons": {"colors": "varies", "status": "fringe", "meta_pct": 0.0, "notes": "Unusual brew."},
+        "Rogue": {"colors": "varies", "status": "fringe", "meta_pct": 0.0, "notes": "Unclassifiable rogue deck."},
+        "Rogues": {"colors": "UB", "status": "fringe", "meta_pct": 0.0, "notes": "Rogue tribal with mill synergies."},
+        "Other - Aggro": {"colors": "varies", "status": "fringe", "meta_pct": 0.0, "notes": "Unclassified aggro deck."},
+        "Other - Combo": {"colors": "varies", "status": "fringe", "meta_pct": 0.0, "notes": "Unclassified combo deck."},
+        "Other - Control": {"colors": "varies", "status": "fringe", "meta_pct": 0.0, "notes": "Unclassified control deck."}
+      }
+    },
+    "Esper Midrange": {
+      "parent": "Esper Midrange",
+      "description": "UWB midrange value strategies.",
+      "variants": {
+        "Esper Midrange": {"colors": "UWB", "status": "fringe", "meta_pct": 0.1, "notes": "UWB value. Bowmasters + Stoneforge + Thoughtseize."},
+        "Esper Bowmasters": {"colors": "UWB", "status": "fringe", "meta_pct": 0.1, "notes": "Bowmasters-focused Esper."},
+        "Esper Aggro": {"colors": "UWB", "status": "fringe", "meta_pct": 0.1, "notes": "Aggressive Esper."},
+        "Esper Ketramose": {"colors": "UWB", "status": "fringe", "meta_pct": 0.0, "notes": "Ketramose creature in Esper."},
+        "Dimir Lessons": {"colors": "UB", "status": "fringe", "meta_pct": 0.0, "notes": "Lesson/Learn mechanic in UB."},
+        "Dimir Midrange": {"colors": "UB", "status": "fringe", "meta_pct": 0.2, "notes": "Grindier UB without tempo elements."},
+        "Orzhov Dauthi": {"colors": "WB", "status": "fringe", "meta_pct": 0.1, "notes": "BW with Dauthi Voidwalker."},
+        "Orzhov Evoke": {"colors": "WB", "status": "fringe", "meta_pct": 0.1, "notes": "BW with evoke elementals (Solitude, Grief)."},
+        "Orzhov Convoke": {"colors": "WB", "status": "fringe", "meta_pct": 0.0, "notes": "BW token + convoke synergies."},
+        "Orzhov Sacrifice": {"colors": "WB", "status": "fringe", "meta_pct": 0.0, "notes": "BW sacrifice synergies."},
+        "Orzhov Saga": {"colors": "WB", "status": "fringe", "meta_pct": 0.0, "notes": "BW with Urza's Saga."},
+        "Orzhov Samwise": {"colors": "WB", "status": "fringe", "meta_pct": 0.0, "notes": "Samwise Gamgee value in BW."},
+        "Orzhov Initiative": {"colors": "WB", "status": "fringe", "meta_pct": 0.1, "notes": "BW Initiative creatures."},
+        "Izzet Coin": {"colors": "UR", "status": "fringe", "meta_pct": 0.0, "notes": "Coin-flip themed UR deck."},
+        "Izzet Cutter": {"colors": "UR", "status": "fringe", "meta_pct": 0.0, "notes": "Slickshot Show-Off / cutter build."},
+        "Jeskai Nulldrifter": {"colors": "UWR", "status": "fringe", "meta_pct": 0.1, "notes": "Nulldrifter in Jeskai shell."},
+        "Jeskai Tokens": {"colors": "UWR", "status": "fringe", "meta_pct": 0.0, "notes": "Token generation in Jeskai."},
+        "UR Spells": {"colors": "UR", "status": "fringe", "meta_pct": 0.1, "notes": "Spell-slinger UR."},
+        "Mono Blue Narset": {"colors": "U", "status": "fringe", "meta_pct": 0.0, "notes": "Narset, Parter of Veils + Day's Undoing lock."},
+        "Mono Blue Turns": {"colors": "U", "status": "fringe", "meta_pct": 0.0, "notes": "Extra turn spells in mono-blue."},
+        "Counter Top (no thopter)": {"colors": "UW", "status": "historic", "meta_pct": 0.0, "notes": "Counterbalance + Sensei's Divining Top. Pre-ban era lock."},
+        "Countertop Thopters": {"colors": "UW", "status": "historic", "meta_pct": 0.0, "notes": "Counterbalance + Top + Thopter Foundry + Sword of the Meek."},
+        "Thopter Foundry": {"colors": "UW", "status": "historic", "meta_pct": 0.0, "notes": "Thopter Foundry + Sword of the Meek infinite tokens."},
+        "Faeries": {"colors": "UB", "status": "fringe", "meta_pct": 0.0, "notes": "Faerie tribal with Bitterblossom."},
+        "Faerie Stompy": {"colors": "U", "status": "historic", "meta_pct": 0.0, "notes": "Mono-blue prison with Faerie creatures. Chrome Mox + Trinisphere era."},
+        "Zoo": {"colors": "RGW", "status": "fringe", "meta_pct": 0.0, "notes": "Naya aggro. Efficient creatures + Bolt + removal."},
+        "Martyr Life": {"colors": "W", "status": "fringe", "meta_pct": 0.0, "notes": "Martyr of Sands lifegain."},
+        "Hammer Time": {"colors": "W", "status": "fringe", "meta_pct": 0.0, "notes": "Colossus Hammer + Sigarda's Aid. More Modern, rare in Legacy."},
+        "Goblin Welder": {"colors": "R", "status": "fringe", "meta_pct": 0.0, "notes": "Artifact recursion with Goblin Welder as engine."}
+      }
+    }
+  }
+}
