@@ -20,19 +20,19 @@ Unlike Standard or Pioneer, cards never "rotate out" — once legal, a card stay
 
 ### Free Counterspells
 
-![Force of Will](https://api.scryfall.com/cards/named?exact=Force+of+Will&format=image&version=small) | ![Daze](https://api.scryfall.com/cards/named?exact=Daze&format=image&version=small)
+![Force of Will](https://api.scryfall.com/cards/named?exact=Force+of+Will&format=image&version=normal) | ![Daze](https://api.scryfall.com/cards/named?exact=Daze&format=image&version=normal)
 
 Force of Will and Daze allow players to interact on turn 0-1 without mana. This creates a unique strategic dynamic where tapping out for a threat doesn't mean you're defenseless. Force of Will is in ~45% of all Legacy decks.
 
 ### The Brainstorm Format
 
-![Brainstorm](https://api.scryfall.com/cards/named?exact=Brainstorm&format=image&version=small)
+![Brainstorm](https://api.scryfall.com/cards/named?exact=Brainstorm&format=image&version=normal)
 
 Brainstorm + fetchlands is the defining card selection engine. Brainstorm lets you draw 3 and put 2 back, then a fetchland shuffles away the bad cards. This gives blue decks extraordinary consistency and card quality. Brainstorm is in ~43% of decks.
 
 ### Efficient Threats and Answers
 
-![Delver of Secrets](https://api.scryfall.com/cards/named?exact=Delver+of+Secrets&format=image&version=small) | ![Wasteland](https://api.scryfall.com/cards/named?exact=Wasteland&format=image&version=small)
+![Delver of Secrets](https://api.scryfall.com/cards/named?exact=Delver+of+Secrets&format=image&version=normal) | ![Wasteland](https://api.scryfall.com/cards/named?exact=Wasteland&format=image&version=normal) | ![Swords to Plowshares](https://api.scryfall.com/cards/named?exact=Swords+to+Plowshares&format=image&version=normal)
 
 - One-mana threats: Delver of Secrets, Goblin Lackey, Mother of Runes
 - Zero-mana interaction: Force of Will, Force of Negation, Daze, Solitude
@@ -42,9 +42,14 @@ Brainstorm + fetchlands is the defining card selection engine. Brainstorm lets y
 The format supports the full spectrum:
 - **Tempo**: Dimir Tempo, Izzet Delver — cheap threats + free countermagic + mana denial
 - **Combo**: Oops! All Spells (turn-1 kills), Storm, Sneak and Show, Doomsday
+
+![Show and Tell](https://api.scryfall.com/cards/named?exact=Show+and+Tell&format=image&version=normal) | ![Thassa's Oracle](https://api.scryfall.com/cards/named?exact=Thassa%27s+Oracle&format=image&version=normal)
+
 - **Control**: Beanstalk Control, Jeskai Control, UW Miracles
-- **Prison/Stompy**: Eldrazi, Red Stompy, Affinity — ![Chalice of the Void](https://api.scryfall.com/cards/named?exact=Chalice+of+the+Void&format=image&version=small) + Ancient Tomb locks
+- **Prison/Stompy**: Eldrazi, Red Stompy, Affinity — ![Chalice of the Void](https://api.scryfall.com/cards/named?exact=Chalice+of+the+Void&format=image&version=normal) + Ancient Tomb locks
 - **Midrange**: Ocelot Pride Midrange, Jund — value-oriented and grindy
+
+![Exploration](https://api.scryfall.com/cards/named?exact=Exploration&format=image&version=normal) | ![Life from the Loam](https://api.scryfall.com/cards/named?exact=Life+from+the+Loam&format=image&version=normal)
 - **Land-based**: Lands — unique strategy using Exploration, Life from the Loam, and land-based win conditions
 - **Tribal**: Goblins, Elves, Merfolk — synergy-driven creature strategies
 
@@ -55,7 +60,7 @@ Dual lands (Underground Sea, Volcanic Island, Tundra, etc.) are on the Reserved 
 
 ### Top Spells (by % of decks playing them)
 
-![Force of Will](https://api.scryfall.com/cards/named?exact=Force+of+Will&format=image&version=small) | ![Brainstorm](https://api.scryfall.com/cards/named?exact=Brainstorm&format=image&version=small) | ![Ponder](https://api.scryfall.com/cards/named?exact=Ponder&format=image&version=small)
+![Ponder](https://api.scryfall.com/cards/named?exact=Ponder&format=image&version=normal)
 
 | Card | % Decks | Role |
 |------|---------|------|
@@ -63,6 +68,9 @@ Dual lands (Underground Sea, Volcanic Island, Tundra, etc.) are on the Reserved 
 | Thoughtseize | 43% | 1-mana hand disruption |
 | Brainstorm | 43% | Best cantrip ever printed (with fetchlands) |
 | Lotus Petal | 41% | Free mana for combo and tempo |
+
+![Lotus Petal](https://api.scryfall.com/cards/named?exact=Lotus+Petal&format=image&version=normal) | ![Thoughtseize](https://api.scryfall.com/cards/named?exact=Thoughtseize&format=image&version=normal)
+
 | Ponder | 38% | Powerful cantrip paired with fetchlands |
 | Leyline of the Void | 36% | Graveyard hate (sideboard staple) |
 | Force of Negation | 35% | Second free counterspell |
@@ -71,7 +79,7 @@ Dual lands (Underground Sea, Volcanic Island, Tundra, etc.) are on the Reserved 
 
 ### Top Creatures
 
-![Orcish Bowmasters](https://api.scryfall.com/cards/named?exact=Orcish+Bowmasters&format=image&version=small) | ![Murktide Regent](https://api.scryfall.com/cards/named?exact=Murktide+Regent&format=image&version=small)
+![Orcish Bowmasters](https://api.scryfall.com/cards/named?exact=Orcish+Bowmasters&format=image&version=normal) | ![Murktide Regent](https://api.scryfall.com/cards/named?exact=Murktide+Regent&format=image&version=normal)
 
 | Card | % Decks | Role |
 |------|---------|------|
@@ -81,9 +89,11 @@ Dual lands (Underground Sea, Volcanic Island, Tundra, etc.) are on the Reserved 
 | Barrowgoyf | 22% | Efficient beater that grows with card types in graveyards |
 | Emrakul, the Aeons Torn | 15% | The premier "cheat into play" finisher |
 
+![Emrakul, the Aeons Torn](https://api.scryfall.com/cards/named?exact=Emrakul%2C+the+Aeons+Torn&format=image&version=normal)
+
 ### Top Lands
 
-![Wasteland](https://api.scryfall.com/cards/named?exact=Wasteland&format=image&version=small) | ![Polluted Delta](https://api.scryfall.com/cards/named?exact=Polluted+Delta&format=image&version=small) | ![Ancient Tomb](https://api.scryfall.com/cards/named?exact=Ancient+Tomb&format=image&version=small) | ![Underground Sea](https://api.scryfall.com/cards/named?exact=Underground+Sea&format=image&version=small)
+![Polluted Delta](https://api.scryfall.com/cards/named?exact=Polluted+Delta&format=image&version=normal) | ![Ancient Tomb](https://api.scryfall.com/cards/named?exact=Ancient+Tomb&format=image&version=normal) | ![Underground Sea](https://api.scryfall.com/cards/named?exact=Underground+Sea&format=image&version=normal)
 
 | Card | % Decks | Role |
 |------|---------|------|
@@ -115,6 +125,8 @@ The March 2026 B&R announcement made **no changes**, citing balanced metagame he
 ## Cost and Accessibility
 
 Legacy is one of the most expensive paper formats due to Reserved List cards:
+
+![Mox Diamond](https://api.scryfall.com/cards/named?exact=Mox+Diamond&format=image&version=normal)
 - **Budget option**: Oops! All Spells (~$1,100), Burn (~$1,500)
 - **Mid-range**: Most competitive decks cost $3,000-$5,000
 - **Expensive**: Lands (~$8,300), 4-Color Control (~$6,000+)
@@ -134,6 +146,8 @@ Legacy is one of the most expensive paper formats due to Reserved List cards:
 | 2004-2006 | Legacy created with independent ban list (split from Vintage) |
 | 2005 | First Legacy Grand Prix (GP Philadelphia) |
 | 2011 | Mental Misstep banned. Innistrad gives Delver of Secrets, Snapcaster |
+
+![Treasure Cruise](https://api.scryfall.com/cards/named?exact=Treasure+Cruise&format=image&version=normal) | ![Wrenn and Six](https://api.scryfall.com/cards/named?exact=Wrenn+and+Six&format=image&version=normal)
 | 2012 | Miracles (Terminus + Sensei's Divining Top) becomes dominant |
 | 2013 | True-Name Nemesis and Deathrite Shaman everywhere |
 | 2014 | Treasure Cruise printed (banned January 2015) |
@@ -150,6 +164,7 @@ Legacy is one of the most expensive paper formats due to Reserved List cards:
 ## The Strategic Triangle
 
 Legacy archetypes exist in a rough metagame triangle (from Reid Duke):
+
 
 ```
         Fair Blue (Delver, UWx Control)
@@ -188,7 +203,7 @@ Legacy's power level means turn 1 often defines the game:
 - Combo decks that didn't win turn 1 are trying to go off now
 - Tempo decks deploy their main threats (Murktide Regent, Orcish Bowmasters)
 - Control decks establish card advantage (Jace, Up the Beanstalk)
-- Prison decks add more locks (![Blood Moon](https://api.scryfall.com/cards/named?exact=Blood+Moon&format=image&version=small), Trinisphere)
+- Prison decks add more locks (![Blood Moon](https://api.scryfall.com/cards/named?exact=Blood+Moon&format=image&version=normal), Trinisphere)
 
 **Turns 4+ — The Grind**:
 - If the game goes this long, it usually favors control and midrange strategies
@@ -207,11 +222,18 @@ Legacy's power level means turn 1 often defines the game:
 
 **Free Spells**: Cards that cost 0 mana to cast (by paying an alternative cost). Force of Will (exile a blue card + 1 life), Daze (return an Island), Force of Negation, Solitude, Endurance, Grief, Fury. These break the fundamental rule of MTG that spells require mana, enabling interaction even when tapped out.
 
+![Solitude](https://api.scryfall.com/cards/named?exact=Solitude&format=image&version=normal) | ![Endurance](https://api.scryfall.com/cards/named?exact=Endurance&format=image&version=normal)
+
 **Storm Count**: The number of spells cast in a turn. Tendrils of Agony and Empty the Warrens copy themselves for each prior spell. Storm decks spend their turn casting rituals (Dark Ritual, Rite of Flame, Lion's Eye Diamond) to build a lethal count before casting the finisher.
+
+![Tendrils of Agony](https://api.scryfall.com/cards/named?exact=Tendrils+of+Agony&format=image&version=normal) | ![Dark Ritual](https://api.scryfall.com/cards/named?exact=Dark+Ritual&format=image&version=normal) | ![Lion's Eye Diamond](https://api.scryfall.com/cards/named?exact=Lion%27s+Eye+Diamond&format=image&version=normal)
 
 ## The Complete Ban List
 
 ### Power Nine (All Banned)
+
+![Black Lotus](https://api.scryfall.com/cards/named?exact=Black+Lotus&format=image&version=normal) | ![Ancestral Recall](https://api.scryfall.com/cards/named?exact=Ancestral+Recall&format=image&version=normal)
+
 | Card | Why |
 |------|-----|
 | Black Lotus | 3 mana for free. The most powerful card ever printed. |
@@ -241,6 +263,11 @@ Legacy's power level means turn 1 often defines the game:
 | Wheel of Fortune / Windfall / Memory Jar | Refill-hand effects enable combo. |
 
 ### Legacy-Specific Bans (Cards Legal in Vintage but Banned in Legacy)
+
+![Sensei's Divining Top](https://api.scryfall.com/cards/named?exact=Sensei%27s+Divining+Top&format=image&version=normal) | ![Deathrite Shaman](https://api.scryfall.com/cards/named?exact=Deathrite+Shaman&format=image&version=normal) | ![Ragavan, Nimble Pilferer](https://api.scryfall.com/cards/named?exact=Ragavan%2C+Nimble+Pilferer&format=image&version=normal)
+
+![Entomb](https://api.scryfall.com/cards/named?exact=Entomb&format=image&version=normal)
+
 | Card | Banned | Why |
 |------|--------|-----|
 | Sensei's Divining Top | April 2017 | Miracles at 15%+. Top + Counterbalance too slow to play against (time limit issues). |
@@ -271,6 +298,8 @@ Legacy's power level means turn 1 often defines the game:
 ### The Dual Lands
 The 10 original dual lands are the foundation of Legacy mana bases:
 
+![Volcanic Island](https://api.scryfall.com/cards/named?exact=Volcanic+Island&format=image&version=normal) | ![Tundra](https://api.scryfall.com/cards/named?exact=Tundra&format=image&version=normal) | ![Tropical Island](https://api.scryfall.com/cards/named?exact=Tropical+Island&format=image&version=normal)
+
 | Land | Colors | Primary Decks |
 |------|--------|---------------|
 | Underground Sea | UB | Dimir Tempo, Doomsday, Storm |
@@ -296,6 +325,9 @@ The 10 fetchlands each find two basic land types. Since duals have basic land ty
 This is why fetchlands + duals create such flexible mana bases — one fetchland might access 6+ different dual lands.
 
 ### Mana Denial Tools
+
+![Rishadan Port](https://api.scryfall.com/cards/named?exact=Rishadan+Port&format=image&version=normal) | ![Thalia, Guardian of Thraben](https://api.scryfall.com/cards/named?exact=Thalia%2C+Guardian+of+Thraben&format=image&version=normal)
+
 | Card | What It Does | How to Play Around It |
 |------|-------------|----------------------|
 | Wasteland | Destroy target nonbasic land | Fetch basic lands. Run 2-4 basics. |
@@ -308,6 +340,8 @@ This is why fetchlands + duals create such flexible mana bases — one fetchland
 ## Common Play Patterns
 
 ### The Brainstorm Lock
+
+
 Brainstorm without a fetchland can "lock" you — you put 2 bad cards on top and now have to draw them. Always have a shuffle effect (fetchland, Ponder) available before casting Brainstorm if possible. The best Brainstorm patterns:
 1. Cast Brainstorm, see 3 new cards
 2. Put 2 unwanted cards on top
