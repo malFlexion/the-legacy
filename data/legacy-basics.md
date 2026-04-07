@@ -20,19 +20,19 @@ Unlike Standard or Pioneer, cards never "rotate out" — once legal, a card stay
 
 ### Free Counterspells
 
-[🃏 Force of Will](https://scryfall.com/search?q=!%22Force+of+Will%22) | [🃏 Daze](https://scryfall.com/search?q=!%22Daze%22)
+![Force of Will](https://api.scryfall.com/cards/named?exact=Force+of+Will&format=image&version=small) | ![Daze](https://api.scryfall.com/cards/named?exact=Daze&format=image&version=small)
 
 Force of Will and Daze allow players to interact on turn 0-1 without mana. This creates a unique strategic dynamic where tapping out for a threat doesn't mean you're defenseless. Force of Will is in ~45% of all Legacy decks.
 
 ### The Brainstorm Format
 
-[🃏 Brainstorm](https://scryfall.com/search?q=!%22Brainstorm%22)
+![Brainstorm](https://api.scryfall.com/cards/named?exact=Brainstorm&format=image&version=small)
 
 Brainstorm + fetchlands is the defining card selection engine. Brainstorm lets you draw 3 and put 2 back, then a fetchland shuffles away the bad cards. This gives blue decks extraordinary consistency and card quality. Brainstorm is in ~43% of decks.
 
 ### Efficient Threats and Answers
 
-[🃏 Delver of Secrets](https://scryfall.com/search?q=!%22Delver+of+Secrets%22) | [🃏 Wasteland](https://scryfall.com/search?q=!%22Wasteland%22)
+![Delver of Secrets](https://api.scryfall.com/cards/named?exact=Delver+of+Secrets&format=image&version=small) | ![Wasteland](https://api.scryfall.com/cards/named?exact=Wasteland&format=image&version=small)
 
 - One-mana threats: Delver of Secrets, Goblin Lackey, Mother of Runes
 - Zero-mana interaction: Force of Will, Force of Negation, Daze, Solitude
@@ -43,7 +43,7 @@ The format supports the full spectrum:
 - **Tempo**: Dimir Tempo, Izzet Delver — cheap threats + free countermagic + mana denial
 - **Combo**: Oops! All Spells (turn-1 kills), Storm, Sneak and Show, Doomsday
 - **Control**: Beanstalk Control, Jeskai Control, UW Miracles
-- **Prison/Stompy**: Eldrazi, Red Stompy, Affinity — [🃏 Chalice of the Void](https://scryfall.com/search?q=!%22Chalice+of+the+Void%22) + Ancient Tomb locks
+- **Prison/Stompy**: Eldrazi, Red Stompy, Affinity — ![Chalice of the Void](https://api.scryfall.com/cards/named?exact=Chalice+of+the+Void&format=image&version=small) + Ancient Tomb locks
 - **Midrange**: Ocelot Pride Midrange, Jund — value-oriented and grindy
 - **Land-based**: Lands — unique strategy using Exploration, Life from the Loam, and land-based win conditions
 - **Tribal**: Goblins, Elves, Merfolk — synergy-driven creature strategies
@@ -55,7 +55,7 @@ Dual lands (Underground Sea, Volcanic Island, Tundra, etc.) are on the Reserved 
 
 ### Top Spells (by % of decks playing them)
 
-[🃏 Force of Will](https://scryfall.com/search?q=!%22Force+of+Will%22) | [🃏 Brainstorm](https://scryfall.com/search?q=!%22Brainstorm%22) | [🃏 Ponder](https://scryfall.com/search?q=!%22Ponder%22)
+![Force of Will](https://api.scryfall.com/cards/named?exact=Force+of+Will&format=image&version=small) | ![Brainstorm](https://api.scryfall.com/cards/named?exact=Brainstorm&format=image&version=small) | ![Ponder](https://api.scryfall.com/cards/named?exact=Ponder&format=image&version=small)
 
 | Card | % Decks | Role |
 |------|---------|------|
@@ -71,7 +71,7 @@ Dual lands (Underground Sea, Volcanic Island, Tundra, etc.) are on the Reserved 
 
 ### Top Creatures
 
-[🃏 Orcish Bowmasters](https://scryfall.com/search?q=!%22Orcish+Bowmasters%22) | [🃏 Murktide Regent](https://scryfall.com/search?q=!%22Murktide+Regent%22)
+![Orcish Bowmasters](https://api.scryfall.com/cards/named?exact=Orcish+Bowmasters&format=image&version=small) | ![Murktide Regent](https://api.scryfall.com/cards/named?exact=Murktide+Regent&format=image&version=small)
 
 | Card | % Decks | Role |
 |------|---------|------|
@@ -83,7 +83,7 @@ Dual lands (Underground Sea, Volcanic Island, Tundra, etc.) are on the Reserved 
 
 ### Top Lands
 
-[🃏 Wasteland](https://scryfall.com/search?q=!%22Wasteland%22) | [🃏 Polluted Delta](https://scryfall.com/search?q=!%22Polluted+Delta%22) | [🃏 Ancient Tomb](https://scryfall.com/search?q=!%22Ancient+Tomb%22) | [🃏 Underground Sea](https://scryfall.com/search?q=!%22Underground+Sea%22)
+![Wasteland](https://api.scryfall.com/cards/named?exact=Wasteland&format=image&version=small) | ![Polluted Delta](https://api.scryfall.com/cards/named?exact=Polluted+Delta&format=image&version=small) | ![Ancient Tomb](https://api.scryfall.com/cards/named?exact=Ancient+Tomb&format=image&version=small) | ![Underground Sea](https://api.scryfall.com/cards/named?exact=Underground+Sea&format=image&version=small)
 
 | Card | % Decks | Role |
 |------|---------|------|
@@ -188,7 +188,7 @@ Legacy's power level means turn 1 often defines the game:
 - Combo decks that didn't win turn 1 are trying to go off now
 - Tempo decks deploy their main threats (Murktide Regent, Orcish Bowmasters)
 - Control decks establish card advantage (Jace, Up the Beanstalk)
-- Prison decks add more locks ([🃏 Blood Moon](https://scryfall.com/search?q=!%22Blood+Moon%22), Trinisphere)
+- Prison decks add more locks (![Blood Moon](https://api.scryfall.com/cards/named?exact=Blood+Moon&format=image&version=small), Trinisphere)
 
 **Turns 4+ — The Grind**:
 - If the game goes this long, it usually favors control and midrange strategies

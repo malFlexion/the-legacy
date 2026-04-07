@@ -94,7 +94,7 @@ A healthy format has no deck consistently above 55%. Legacy currently meets this
 
 ### 1. Dimir Tempo Dominance
 
-[🃏 Orcish Bowmasters](https://scryfall.com/search?q=!%22Orcish+Bowmasters%22) | [🃏 Tamiyo, Inquisitive Student](https://scryfall.com/search?q=!%22Tamiyo%2C+Inquisitive+Student%22)
+![Orcish Bowmasters](https://api.scryfall.com/cards/named?exact=Orcish+Bowmasters&format=image&version=small) | ![Tamiyo, Inquisitive Student](https://api.scryfall.com/cards/named?exact=Tamiyo%2C+Inquisitive+Student&format=image&version=small)
 
 At 14.6% meta share, Dimir Tempo is the most played deck by a wide margin. Built around Orcish Bowmasters, Tamiyo Inquisitive Student, Thoughtseize, and the blue cantrip/Force of Will shell. Its 52.7% win rate is strong but not oppressive — the format has answers.
 
@@ -104,7 +104,7 @@ At 14.6% meta share, Dimir Tempo is the most played deck by a wide margin. Built
 
 ### 2. Energy Cards Reshape Aggro
 
-[🃏 Ocelot Pride](https://scryfall.com/search?q=!%22Ocelot+Pride%22)
+![Ocelot Pride](https://api.scryfall.com/cards/named?exact=Ocelot+Pride&format=image&version=small)
 
 MH3 energy cards (Ocelot Pride, Guide of Souls, Amped Raptor, Ajani Nacatl Pariah) created viable non-blue aggressive strategies. Ocelot Pride Midrange at 8.5% and Mardu Energy at ~3% represent a new class of Legacy deck that doesn't rely on Brainstorm.
 
@@ -120,7 +120,7 @@ The November 2025 Entomb ban removed BR Reanimator as a tier 1 strategy. The dec
 
 ### 5. Artifact Strategies Thriving
 
-[🃏 Chalice of the Void](https://scryfall.com/search?q=!%22Chalice+of+the+Void%22) | [🃏 Urza's Saga](https://scryfall.com/search?q=!%22Urza%27s+Saga%22)
+![Chalice of the Void](https://api.scryfall.com/cards/named?exact=Chalice+of+the+Void&format=image&version=small) | ![Urza's Saga](https://api.scryfall.com/cards/named?exact=Urza's+Saga&format=image&version=small)
 
 Mystic Forge Combo (3.0%), Affinity Stompy (2.4%), Blue Artifacts (1.1%), Painter (4.1%), and 8-Cast variants collectively represent ~15% of the field. Urza's Saga is the glue card enabling many of these strategies. Chalice of the Void on 1 remains one of the best cards against the cantrip-heavy metagame.
 
@@ -131,7 +131,7 @@ Mystic Forge Combo (3.0%), Affinity Stompy (2.4%), Blue Artifacts (1.1%), Painte
 ### Most-Played Cards (Cross-Archetype)
 These cards appear in the highest percentage of decks, indicating format-defining status:
 
-[🃏 Wasteland](https://scryfall.com/search?q=!%22Wasteland%22) | [🃏 Force of Will](https://scryfall.com/search?q=!%22Force+of+Will%22) | [🃏 Brainstorm](https://scryfall.com/search?q=!%22Brainstorm%22) | [🃏 Orcish Bowmasters](https://scryfall.com/search?q=!%22Orcish+Bowmasters%22)
+![Wasteland](https://api.scryfall.com/cards/named?exact=Wasteland&format=image&version=small) | ![Force of Will](https://api.scryfall.com/cards/named?exact=Force+of+Will&format=image&version=small) | ![Brainstorm](https://api.scryfall.com/cards/named?exact=Brainstorm&format=image&version=small) | ![Orcish Bowmasters](https://api.scryfall.com/cards/named?exact=Orcish+Bowmasters&format=image&version=small)
 
 | Card | % Decks | Insight |
 |------|---------|---------|
@@ -148,7 +148,7 @@ These cards appear in the highest percentage of decks, indicating format-definin
 
 ### Cards Defining the Current Meta
 
-[🃏 Orcish Bowmasters](https://scryfall.com/search?q=!%22Orcish+Bowmasters%22) | [🃏 Ocelot Pride](https://scryfall.com/search?q=!%22Ocelot+Pride%22) | [🃏 Tamiyo, Inquisitive Student](https://scryfall.com/search?q=!%22Tamiyo%2C+Inquisitive+Student%22)
+![Orcish Bowmasters](https://api.scryfall.com/cards/named?exact=Orcish+Bowmasters&format=image&version=small) | ![Ocelot Pride](https://api.scryfall.com/cards/named?exact=Ocelot+Pride&format=image&version=small) | ![Tamiyo, Inquisitive Student](https://api.scryfall.com/cards/named?exact=Tamiyo%2C+Inquisitive+Student&format=image&version=small)
 
 | Card | Appeared | Impact |
 |------|----------|--------|
@@ -317,7 +317,7 @@ Scale: +2 = very favorable, +1 = favorable, 0 = even, -1 = unfavorable, -2 = ver
 
 What hate cards target which decks:
 
-[🃏 Leyline of the Void](https://scryfall.com/search?q=!%22Leyline+of+the+Void%22) | [🃏 Surgical Extraction](https://scryfall.com/search?q=!%22Surgical+Extraction%22) | [🃏 Force of Vigor](https://scryfall.com/search?q=!%22Force+of+Vigor%22)
+![Leyline of the Void](https://api.scryfall.com/cards/named?exact=Leyline+of+the+Void&format=image&version=small) | ![Surgical Extraction](https://api.scryfall.com/cards/named?exact=Surgical+Extraction&format=image&version=small) | ![Force of Vigor](https://api.scryfall.com/cards/named?exact=Force+of+Vigor&format=image&version=small)
 
 | Hate Card | Targets | % Decks Playing |
 |-----------|---------|-----------------|
