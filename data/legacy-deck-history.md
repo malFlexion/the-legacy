@@ -1,4 +1,6 @@
-# Legacy Deck History
+# Legacy Deck History & Variant Index
+
+> **See also**: [Legacy Basics](legacy-basics.md) | [Meta Analysis](legacy-analysis.md) | [Deckbuilding Guide](deckbuilding-guide.md) | [Archetype Guide](archetype-guide.md) | [MTG Slang](mtg-slang.md)
 
 ## Metadata
 
@@ -5547,3 +5549,624 @@ Tier 3 at 0.5%. Nostalgic but outclassed by Jeskai and Beanstalk Control.
 
 ---
 
+## Variant Index
+
+This section maps every known Legacy archetype name (~420 variants across 65 parent categories) to its parent archetype. Used by the AI to recognize deck names and understand relationships between variants.
+
+### Delver / Tempo
+**Description**: Cheap threats backed by free countermagic (Force of Will, Daze) and mana denial (Wasteland). The defining Legacy tempo shell.
+
+| Variant | Colors | Status | Meta % | Notes |
+|---------|--------|--------|--------|-------|
+| Dimir Tempo | UB | tier_1 | 14.6% | Current dominant build. Bowmasters + Tamiyo + Thoughtseize. The deck to beat. |
+| Izzet Delver | UR | tier_2 | 4.3% | Classic Delver of Secrets + Lightning Bolt + Murktide Regent. Was tier 1 in 2021-2022. |
+| UR Tempo | UR | tier_2 | 4.3% | Same as Izzet Delver. MTGTop8 naming convention. |
+| Sultai Tempo | UBG | tier_3 | 0.5% | BUG Delver variant with Tarmogoyf/Barrowgoyf + Abrupt Decay. Less popular post-DRS ban. |
+| Sultai Delver | UBG | tier_3 | 0.5% | Same as Sultai Tempo. |
+| BUG | UBG | tier_3 | 0.5% | Older name for Sultai Tempo/Delver. |
+| BUG Midrange | UBG | tier_3 | 0.5% | Grindier BUG build with more planeswalkers and fewer Dazes. |
+| Grixis Tempo | UBR | fringe | 0.2% | UBR shell combining Bowmasters + Lightning Bolt. Less focused than Dimir or Izzet. |
+| Grixis Aggro | UBR | fringe | 0.1% | More aggressive Grixis variant. |
+| Temur Tempo | URG | fringe | 0.1% | RUG Delver successor. Tarmogoyf + Bolt + cantrips. Was tier 1 pre-W6 ban. |
+| Canadian Threshold | URG | historic | 0.0% | Original name for RUG Delver. Nimble Mongoose + Lightning Bolt + Stifle. |
+| Jeskai Delver | UWR | fringe | 0.1% | Delver + Swords to Plowshares + Stoneforge Mystic. |
+| Jeskai Tempo | UWR | fringe | 0.1% | Same as Jeskai Delver. |
+| Jeskai Murktide | UWR | fringe | 0.1% | Murktide Regent in a Jeskai shell with STP and Prismatic Ending. |
+| Esper Tempo | UWB | fringe | 0.1% | Rare UWB Delver build. Swords + Thoughtseize + Force. |
+| Dimir Aggro | UB | tier_2 | 1.0% | More aggressive Dimir build without Murktide, lower curve. |
+| Dimir Flash | UB | fringe | 0.1% | Flash-speed threats, all instants. Brazen Borrower + Bowmasters. |
+| Dimir Rogues | UB | fringe | 0.1% | Rogues tribal with mill synergies. |
+| Mono Blue Tempo | U | fringe | 0.1% | Delver + all-blue for maximum Force of Will consistency. |
+| Simic Tempo | UG | fringe | 0.1% | Tarmogoyf/Barrowgoyf + green sideboard cards. |
+| 4 Color Tempo | UBRG | fringe | 0.1% | Greedy 4-color Delver. Rare post-Astrolabe ban. |
+| Delver (Other) | varies | fringe | 0.1% | Catch-all for unusual Delver builds. |
+| UW Delver | UW | fringe | 0.1% | Delver + Swords to Plowshares without red. |
+| UW Murktide | UW | fringe | 0.1% | Murktide in UW shell. |
+| Stryfo Pile | UBRG | historic | 0.0% | 4-color midrange/tempo by Stryfo. Leovold + Kolaghan's Command era. |
+
+### Control
+**Description**: Permission-based strategies that win through card advantage and inevitability. Heavy on counterspells, removal, and planeswalkers.
+
+| Variant | Colors | Status | Meta % | Notes |
+|---------|--------|--------|--------|-------|
+| Beanstalk Control | UWRG | tier_2 | 2.3% | Up the Beanstalk draws cards off 5+ MV spells (Force of Will, Solitude, Fury). Non-Yorion 60-card build. |
+| Beanstalk Control (Yorion) | UWRG | tier_3 | 0.4% | 80-card Yorion companion version. More redundancy, less consistency. |
+| Jeskai Control | UWR | tier_3 | 0.9% | Classic UWR control. Swords + Bolt + Force + planeswalkers. |
+| UWx Control | UW+ | tier_3 | 1.0% | Broad category for UW-based control decks. MTGTop8 umbrella. |
+| UW Miracles | UW | tier_3 | 0.5% | Post-Top ban Miracles. Terminus + Counterbalance without Sensei's Divining Top. |
+| Bant Control | UWG | fringe | 0.2% | UW control + green for Uro, Endurance, Sylvan Library. |
+| Bant Beanstalk | UWG | fringe | 0.1% | Beanstalk with green instead of red. |
+| BUG Control | UBG | fringe | 0.2% | Sultai control. Thoughtseize + Abrupt Decay + Jace. |
+| Sultai Beanstalk | UBG | fringe | 0.1% | Beanstalk in BUG colors. |
+| Grixis Control | UBR | fringe | 0.2% | UBR control. Kolaghan's Command + Bolt + Thoughtseize. |
+| 4/5c Control | 4-5c | fringe | 0.2% | Greedy multi-color control. Uses all the best cards from every color. |
+| 4 Color Control | 4c | fringe | 0.2% | Same as 4/5c Control. |
+| 4 Color Beanstalk | 4c | tier_3 | 0.5% | 4-color Beanstalk build. Most common Beanstalk configuration. |
+| 4 Color Czech Pile | UBRG | historic | 0.0% | 2017-2018 era 4c midrange-control. Leovold + Kolaghan's Command + DRS. Died with DRS ban. |
+| 4 Color Uro | 4c | fringe | 0.1% | Uro, Titan of Nature's Wrath as the value engine. |
+| 4 Color Reclamation | 4c | fringe | 0.1% | Wilderness Reclamation untap shenanigans. |
+| Standstill Control | UW | fringe | 0.1% | Standstill + manlands. Draw 3 when opponent plays a spell. |
+| Landstill | UW | historic | 0.0% | Classic Standstill + Mishra's Factory. Old-school control. |
+| UB Control | UB | fringe | 0.1% | UB without tempo elements. More removal, fewer Dazes. |
+| UB Midrange | UB | fringe | 0.2% | Grindier UB build between tempo and control. |
+| UR Control | UR | fringe | 0.1% | UR without Delver. More controlling with Blood Moon potential. |
+| Mono Blue Control | U | fringe | 0.1% | All-blue control. Back to Basics as the lock piece. |
+| Rosheen Control | varies | fringe | 0.0% | Unusual X-spell control build. |
+| Brought Back Control | UW | fringe | 0.0% | Brought Back + fetchlands/Wasteland for value. |
+| Domain Beanstalk | 5c | fringe | 0.1% | Domain payoffs with Beanstalk shell. |
+| Temur Beanstalk | URG | fringe | 0.1% | Beanstalk in Temur colors. |
+| Cascade Beanstalk | varies | fringe | 0.1% | Beanstalk with cascade spells for extra value. |
+| Simic Beanstalk | UG | fringe | 0.1% | Beanstalk in Simic colors. |
+| Sultai Leovold | UBG | historic | 0.0% | Leovold, Emissary of Trest era BUG control. Leovold eventually restricted discussion. |
+| UWx Mentor | UW+ | fringe | 0.1% | Monastery Mentor as win condition in UWx control shell. |
+| Sharkstill | UW | fringe | 0.0% | Standstill + Shark Typhoon. Draw 3 and make a shark. |
+
+### Stoneblade
+**Description**: Stoneforge Mystic decks that tutor equipment (Batterskull, Kaldra Compleat) in a fair blue shell.
+
+| Variant | Colors | Status | Meta % | Notes |
+|---------|--------|--------|--------|-------|
+| Stoneblade | UW+ | tier_3 | 2.0% | Generic Stoneblade. UW base with Stoneforge Mystic + equipment. |
+| UWx Stoneblade | UW+ | tier_3 | 1.0% | Same as Stoneblade, broader naming. |
+| Jeskai Stoneblade | UWR | fringe | 0.3% | Adds Lightning Bolt and Pyroblast from red. |
+| Esper Stoneblade | UWB | fringe | 0.2% | Adds Thoughtseize, Bowmasters, and Vindicate from black. |
+| Bant Stoneblade | UWG | fringe | 0.1% | Adds Uro, Endurance, Green Sun's Zenith from green. |
+| 4 Color Stoneblade | 4c | fringe | 0.1% | Greedy 4-color Stoneforge build. |
+| Abzan Stoneblade | WBG | fringe | 0.1% | Non-blue Stoneforge with Thoughtseize + green creatures. |
+| Boros Stoneblade | WR | fringe | 0.1% | Stoneforge in RW shell. Imperial Recruiter + equipment. |
+| Orzhov Stoneblade | WB | fringe | 0.1% | BW Stoneforge. Thoughtseize + Vindicate + equipment. |
+| Mono White Stoneblade | W | fringe | 0.1% | Mono-white Stoneforge. Maximum equipment focus. |
+
+### Death and Taxes
+**Description**: White-based hatebear/disruptive creature deck using Aether Vial, Thalia, Wasteland, and Rishadan Port to tax and deny resources.
+
+| Variant | Colors | Status | Meta % | Notes |
+|---------|--------|--------|--------|-------|
+| Death & Taxes | W | tier_2 | 2.0% | Core mono-white or BW Yorion build. Thalia + Stoneforge + Flickerwisp. |
+| Eldrazi and Taxes | WC | fringe | 0.2% | D&T core + Eldrazi (Thought-Knot Seer, Reality Smasher). Eldrazi Temple for acceleration. |
+| Steel and Taxes | W | fringe | 0.1% | Artifact-heavy D&T with Steel Overseer or Nettlecyst. |
+| Esper Vial | UWB | fringe | 0.2% | Aether Vial + Stoneforge + Recruiter in Esper colors. Bowmasters + Brainstorm. |
+| Azorius Vial | UW | fringe | 0.1% | UW Vial deck. Adds counterspells to the hatebear shell. |
+| Jeskai Vial | UWR | fringe | 0.0% | Rare 3-color Vial build. |
+| Azorius Phelia | UW | fringe | 0.2% | Phelia, Exuberant Shepherd blink value in UW hatebears. |
+| Orzhov Vial | WB | fringe | 0.1% | BW Vial with Plague Engineer and Dark Confidant. |
+| Mono White Vial | W | fringe | 0.1% | Pure mono-white D&T without splash. |
+| Weenie White | W | fringe | 0.0% | Aggressive mono-white. More creatures, fewer taxes. |
+| White Weenie | W | fringe | 0.0% | Same as Weenie White. |
+| Soldiers | W | fringe | 0.0% | Soldier tribal with Preeminent Captain. |
+| Mono White Blink | W | fringe | 0.1% | Flickerwisp/Ephemerate value in mono-white. |
+| Mono White Initiative | W | fringe | 0.1% | White Initiative creatures in a D&T shell. |
+| Mono White Prison | W | fringe | 0.1% | Lock pieces (Suppression Field, Ghostly Prison) in mono-white. |
+| Mono White Rabbits | W | fringe | 0.0% | Rabbit tribal aggro. Bloomburrow cards. |
+
+### Ocelot Pride / Energy
+**Description**: MH3 energy card strategies built around Ocelot Pride, Guide of Souls, Ajani Nacatl Pariah, and Amped Raptor.
+
+| Variant | Colors | Status | Meta % | Notes |
+|---------|--------|--------|--------|-------|
+| Ocelot Pride Midrange | WR+ | tier_1 | 8.5% | The primary energy deck. Boros or Mardu base. |
+| Mardu Energy | WBR | tier_2 | 3.0% | Mardu build with Thoughtseize and Bowmasters from black. |
+| Mardu Aggro | WBR | tier_2 | 3.0% | Same as Mardu Energy. MTGTop8 naming. |
+| Mardu Ocelot | WBR | tier_2 | 2.0% | Mardu build focused specifically on Ocelot Pride synergies. |
+| Boros Energy | WR | tier_2 | 2.0% | Two-color energy. Tighter mana base, less greedy. |
+| Boros Ocelot | WR | tier_2 | 1.5% | Same as Boros Energy with Ocelot focus. |
+| Boros Aggro | WR | tier_2 | 1.5% | Broader Boros aggro, may or may not have energy package. |
+| Naya Energy | WRG | fringe | 0.2% | Adds green for Collected Company or GSZ. |
+| Naya Midrange | WRG | fringe | 0.2% | Naya value build. |
+| Jeskai Ocelot | UWR | fringe | 0.1% | Blue splash for Force of Will and cantrips with energy core. |
+| Jeskai Kitten | UWR | fringe | 0.1% | Same as Jeskai Ocelot. |
+| Jeskai Pride | UWR | fringe | 0.1% | Same as Jeskai Ocelot. |
+| Azorius Ocelot | UW | fringe | 0.1% | UW energy without red. |
+| Esper Ocelot | UWB | fringe | 0.1% | Esper energy with Thoughtseize and Bowmasters. |
+| Orzhov Ozelot | WB | fringe | 0.1% | BW energy. Thoughtseize without blue. |
+| Mardu Channeler | WBR | fringe | 0.1% | Mardu with Dragon's Rage Channeler for graveyard synergies. |
+| Mardu Inti | WBR | fringe | 0.1% | Mardu build featuring Inti, Seneschal of the Sun. |
+| Mardu Legends | WBR | fringe | 0.1% | Legendary creature focused Mardu. |
+| Mardu Tokens | WBR | fringe | 0.1% | Token generation focus in Mardu. |
+| Mardu Sacrifice | WBR | fringe | 0.1% | Sacrifice synergies (Cauldron Familiar, Witch's Oven). |
+
+### Show and Tell
+**Description**: Cheat Emrakul, Atraxa, or Omniscience into play via Show and Tell or Sneak Attack.
+
+| Variant | Colors | Status | Meta % | Notes |
+|---------|--------|--------|--------|-------|
+| Sneak and Show | UR | tier_1 | 6.7% | Show and Tell + Sneak Attack. Emrakul and Atraxa as threats. |
+| Show and Tell | UR | tier_1 | 6.7% | Same as Sneak and Show. MTGTop8 naming. |
+| Omni-Tell | UW | tier_2 | 1.7% | Show and Tell puts Omniscience into play, then cast everything for free. Wins with Emrakul or Enter the Infinite. |
+| Show and Copy | UR | fringe | 0.1% | Show and Tell + Clone effects to copy opponent's best permanent. |
+| Show and Karn | UC | fringe | 0.1% | Show and Tell + Karn, the Great Creator for artifact combo. |
+| Sneak Attack | UR | fringe | 0.3% | More focused on Sneak Attack than Show and Tell. More creature-heavy. |
+
+### Storm
+**Description**: Cast many spells in one turn, then win with a storm-count payoff (Tendrils of Agony, Empty the Warrens, Grapeshot).
+
+| Variant | Colors | Status | Meta % | Notes |
+|---------|--------|--------|--------|-------|
+| The EPIC Storm | UBR+ | tier_2 | 3.5% | Burning Wish + LED. Most resilient storm variant due to wishboard flexibility. |
+| Ad Nauseam Tendrils | UBR | fringe | 0.3% | ANT. Past in Flames + Ad Nauseam. Classic storm. |
+| Ruby Storm | R | tier_3 | 0.4% | Mono-red storm. Birgi + Ruby Medallion + Bonus Round. |
+| Beseech Storm | UBR | fringe | 0.2% | Beseech the Mirror as tutor + Bargain payoff. |
+| Izzet Storm | UR | fringe | 0.1% | UR storm without black rituals. |
+| UR Storm | UR | fringe | 0.1% | Same as Izzet Storm. |
+| Storm | UBR | fringe | 0.3% | Generic storm. Usually means ANT. |
+| Necro Storm | UBR | fringe | 0.1% | Necrodominance-fueled storm. Draw many cards, then go off. |
+| Cascade Storm | varies | fringe | 0.1% | Cascade spells into storm payoffs. |
+| Saga Storm | UR | fringe | 0.1% | Urza's Saga in a storm shell for artifact tutoring. |
+| Mind's Desire | UBR | historic | 0.0% | Older storm win condition. Mind's Desire for storm count = that many free spells. |
+| High Tide | U | historic | 0.0% | Mono-blue combo. High Tide + Time Spiral + Candelabra for infinite mana. Brain Freeze finish. |
+| TEG | UBR | fringe | 0.0% | The Elegant Gentleman's Storm. Variant storm build. |
+
+### Reanimator
+**Description**: Put a huge creature in the graveyard, then bring it back to the battlefield cheaply with Reanimate, Animate Dead, or Exhume.
+
+| Variant | Colors | Status | Meta % | Notes |
+|---------|--------|--------|--------|-------|
+| Reanimator | UB | tier_2 | 2.0% | Post-Entomb ban build. Uses Faithful Mending, Careful Study to fill graveyard. |
+| Dimir Reanimator | UB | tier_3 | 0.3% | Same as Reanimator. UB focused. |
+| Orzhov Reanimator | WB | fringe | 0.1% | WB with Archon of Cruelty and white sideboard. |
+| Orzhov Rescaminator | WB | fringe | 0.1% | Reanimator + Scam (Grief + Ephemerate) hybrid. |
+| Buried Phoenix | UBR | fringe | 0.1% | Reanimator with Arclight Phoenix package. |
+| Worldgorger | UBR | fringe | 0.0% | Worldgorger Dragon + Animate Dead = infinite mana loop. Win with Shivan Hellkite or Walking Ballista. |
+
+### Doomsday
+**Description**: Resolve Doomsday to stack 5 cards as your library, then draw through them to win with Thassa's Oracle.
+
+| Variant | Colors | Status | Meta % | Notes |
+|---------|--------|--------|--------|-------|
+| Doomsday | UB | tier_2 | 2.7% | DDFT (Doomsday Fetchland Tendrils) evolved into Oracle-based wins. Most skill-intensive combo. |
+| Dimir Necrodominance | UB | fringe | 0.3% | Necrodominance as card draw engine to fuel Doomsday piles. |
+| Necro Showdown | UB | fringe | 0.1% | Necrodominance + Showdown of the Skalds variant. |
+| Tainted Pact | UB | fringe | 0.0% | Tainted Pact (exile library) + Thassa's Oracle. All singletons. |
+| Thassa's Oracle | UB | fringe | 0.1% | Oracle combo without Doomsday. Other ways to empty library. |
+| Thassa's Lash | UB | fringe | 0.0% | Oracle + Paradigm Shift for instant-speed library exile. |
+| Thassa's Paradigm | UB | fringe | 0.0% | Same as Thassa's Lash. |
+
+### Oops! All Spells
+**Description**: Zero-land combo deck that mills its entire library with Balustrade Spy or Undercity Informer, wins with Thassa's Oracle via Dread Return.
+
+| Variant | Colors | Status | Meta % | Notes |
+|---------|--------|--------|--------|-------|
+| Oops! All Spells | UBGR | tier_1 | 8.2% | The fastest combo in Legacy. Can win turn 1. Zero lands. |
+| Oops, All Spells! | UBGR | tier_1 | 8.2% | Alternate punctuation. Same deck. |
+| Belcher | RG | fringe | 0.1% | Goblin Charbelcher with 0-1 lands. Reveals library for lethal damage. Similar speed, different win condition. |
+| Mono Blue Belcher | U | fringe | 0.0% | Blue Belcher with Force of Will backup. |
+
+### Painter
+**Description**: Painter's Servant + Grindstone combo to mill opponent's entire library. Red prison elements with Goblin Welder/Engineer for artifact recursion.
+
+| Variant | Colors | Status | Meta % | Notes |
+|---------|--------|--------|--------|-------|
+| Painter | R | tier_2 | 4.1% | Primary build. Mono-red or RW base with Goblin Welder, Engineer, Ancient Tomb. |
+| Painter Grindstone | R | tier_2 | 4.1% | Same deck, explicit combo name. |
+
+### Lands
+**Description**: Land-based control/combo using Exploration, Life from the Loam, Wasteland recursion, and Dark Depths + Thespian's Stage for a 20/20.
+
+| Variant | Colors | Status | Meta % | Notes |
+|---------|--------|--------|--------|-------|
+| Lands | RG | tier_2 | 3.8% | The primary build. Punishing Fire + Grove, Maze of Ith, Tabernacle. |
+| Lands.dec | RG | tier_2 | 3.8% | Same deck, community naming. |
+| Dark Depths | varies | tier_3 | 0.8% | Broader category for Dark Depths combo builds. |
+| Selesnya Depths | GW | tier_3 | 0.8% | GW Depths with Knight of the Reliquary and Elvish Reclaimer. |
+| GWx Depths | GW+ | fringe | 0.3% | GW Depths with a splash color. |
+| Sultai Depths | UBG | fringe | 0.1% | BUG Depths with Thoughtseize and Brainstorm. |
+| Mono Green Depths | G | fringe | 0.1% | Mono-green Depths. Sylvan Safekeeper + Crop Rotation. |
+| Aggro Loam | RG | fringe | 0.1% | Life from the Loam + aggressive creatures. More beatdown than Lands. |
+| Loam | RG+ | fringe | 0.1% | Life from the Loam strategies broadly. |
+| Loam Pox | BG | fringe | 0.0% | Loam + Smallpox. Mana denial + value recursion. |
+| 4 Color Loam | 4c | fringe | 0.1% | Greedy multi-color Loam. |
+| Bant Loam | UWG | fringe | 0.0% | Bant Loam with Knight of the Reliquary. |
+| Dryad Valakut | RG | fringe | 0.0% | Dryad of the Ilysian Grove + Valakut, the Molten Pinnacle. |
+
+### Prison / Stompy
+**Description**: Fast mana (Ancient Tomb, City of Traitors) into lock pieces (Chalice of the Void, Blood Moon, Trinisphere) to prevent opponent from playing Magic.
+
+| Variant | Colors | Status | Meta % | Notes |
+|---------|--------|--------|--------|-------|
+| Red Stompy | R | tier_2 | 2.7% | Mono-red prison. Blood Moon + Chalice + Chrome Mox. The One Ring for card advantage. |
+| Dragon Stompy | R | tier_2 | 2.7% | Same as Red Stompy. Older name from when it played Dragon creatures. |
+| Mono Red Prison | R | tier_2 | 2.7% | Same as Red Stompy. |
+| Mono Red Initiative | R | fringe | 0.2% | Red prison with Initiative creatures. |
+| Mono Red Artifacts | R | fringe | 0.1% | Artifact-heavy red prison. |
+| Mono Red Cauldron | R | fringe | 0.1% | Cauldron Familiar + Witch's Oven in red prison. |
+| Mono Red Midrange | R | fringe | 0.1% | Less prison, more value-oriented red. |
+| Mono Red Wizards | R | fringe | 0.0% | Wizard tribal in red. |
+| Eldrazi | C | tier_2 | 3.1% | Colorless Eldrazi. Chalice + Thought-Knot + Reality Smasher. |
+| Eldrazi Aggro | C | tier_2 | 3.1% | Same as Eldrazi. MTGTop8 naming. |
+| Eldrazi Stompy | C | tier_2 | 3.1% | Same as Eldrazi. |
+| Eldrazi Ramp | C | fringe | 0.2% | Bigger Eldrazi with more ramp (Ugin, All Is Dust). |
+| Eldrazi Tron | C | fringe | 0.1% | Eldrazi + Tron lands. More Modern-style. |
+| Affinity Stompy | C/U | tier_2 | 2.4% | Artifact aggro-prison. Mox Opal + Chalice + Thought Monitor. |
+| Artifacts Prison | C | tier_2 | 2.0% | Pure prison artifacts. Chalice + Trinisphere + Ensnaring Bridge. |
+| Artifacts Aggro | C/U | fringe | 0.3% | More aggressive artifact builds. |
+| Blue Artifacts | U | tier_2 | 1.1% | 8-Cast style. Thought Monitor + Thoughtcast + artifact creatures. |
+| Artifacts Blue | U | tier_2 | 1.1% | Same as Blue Artifacts. |
+| Mono Blue Artifacts | U | fringe | 0.5% | Same as Blue Artifacts. |
+| 8 Mulch | varies | fringe | 0.1% | 8 copies of mulch effects for self-mill artifact synergy. |
+| Echo Affinity | C/U | fringe | 0.1% | Echo of Creation in an Affinity shell. |
+| Echo Control | U | fringe | 0.1% | Echo of Creation in a control shell. |
+| Emry Affinity | U | fringe | 0.1% | Emry, Lurker of the Loch as artifact recursion engine. |
+| MUD | C | tier_3 | 0.5% | Metalworker + Karn + big colorless threats. Old-school artifact ramp. |
+| Steel Stompy | C | fringe | 0.1% | Steel Overseer based artifact aggro. |
+| Mono Blue Karn | U | fringe | 0.1% | Karn, the Great Creator artifact toolbox in mono-blue. |
+| Mono Blue Prison | U | fringe | 0.1% | Back to Basics + Narset + artifact lock pieces. |
+| UW Artifacts | UW | fringe | 0.1% | UW artifact prison with Swords to Plowshares. |
+| Orzhov Artifacts | WB | fringe | 0.0% | BW artifact synergies. |
+| Boros Prison | WR | fringe | 0.1% | RW prison with Magus of the Moon + white removal. |
+| Bant Prison | UWG | fringe | 0.0% | Green + white prison. Unusual. |
+| Mono Green Prison | G | fringe | 0.0% | Green prison with Choke, Root Maze. |
+| Stax | varies | historic | 0.0% | Smokestacks + Tanglewire resource denial. Classic prison archetype. |
+| Stasis | U | historic | 0.0% | Stasis + untap effects. Lock opponent out of untap step. |
+| Initiative Stompy | W+ | tier_3 | 0.5% | Chalice + Initiative creatures. White/red variants. |
+| Boros Initiative | WR | tier_2 | 2.0% | Caves of Chaos Adventurer + Solitude + Chalice. |
+| Gruul Initiative | RG | fringe | 0.1% | Green Initiative with mana dorks. |
+| Naya Initiative | WRG | fringe | 0.2% | Three-color Initiative with best threats from each color. |
+| Naya Prison | WRG | fringe | 0.1% | Naya-colored prison elements. |
+| Boros Legends | WR | fringe | 0.1% | Legendary creature synergies in Boros. |
+| Boros Suspend | WR | fringe | 0.0% | Suspend cards + As Foretold. |
+| Boros Ephemerate | WR | fringe | 0.1% | Ephemerate blink value in Boros. |
+| As Foretold | varies | fringe | 0.1% | As Foretold + suspend spells (Living End, Ancestral Vision). |
+
+### Mystic Forge Combo
+**Description**: Artifact combo using Mystic Forge + cost reducers to play the entire deck from the top of the library.
+
+| Variant | Colors | Status | Meta % | Notes |
+|---------|--------|--------|--------|-------|
+| Mystic Forge Combo | C | tier_2 | 3.0% | Grim Monolith + The One Ring + Mystic Forge engine. Karn as wincon. |
+| Mystic Forge | C | tier_2 | 3.0% | Same deck, shorter name. |
+| Coveted Jewel Combo | UW | tier_3 | 0.7% | Coveted Jewel + flicker effects for infinite mana/cards. |
+| Coveted Jewel | UW | tier_3 | 0.7% | Same deck. |
+| Mono Blue Jewel | U | fringe | 0.1% | Mono-blue Coveted Jewel build. |
+| Ironworks Combo | C | fringe | 0.0% | Krark-Clan Ironworks + artifact recursion. More Modern-style. |
+| Paradox Engine | C | fringe | 0.0% | Paradox Engine untap combos with artifact mana. |
+| Paradoxical Outcome | U | fringe | 0.0% | Paradoxical Outcome + cheap artifacts for massive card draw. |
+| Riddlesmith Combo | U | fringe | 0.0% | Riddlesmith + cheap artifacts to dig through deck. |
+| Salvager Combo | W | historic | 0.0% | Auriok Salvagers + LED = infinite mana. Same as Bomberman. |
+| Bomberman | W | historic | 0.0% | Auriok Salvagers + Lion's Eye Diamond for infinite mana. Pyrite Spellbomb finish. |
+| Power Artifact | U | historic | 0.0% | Power Artifact + Grim Monolith = infinite mana. Very old combo. |
+| Tezzerator | UB | fringe | 0.0% | Tezzeret, Agent of Bolas as win condition in artifact shell. |
+
+### Cloudpost
+**Description**: Cloudpost + Glimmerpost for massive mana generation. Ramp into huge threats (Ugin, Primeval Titan, Emrakul).
+
+| Variant | Colors | Status | Meta % | Notes |
+|---------|--------|--------|--------|-------|
+| Cloudpost Ramp | C/G | tier_3 | 1.0% | The standard build. Cloudpost + Glimmerpost + big threats. |
+| Green Post | G | fringe | 0.3% | Green-based Cloudpost with Primeval Titan and Crop Rotation. |
+| Blue Cloudpost | U | fringe | 0.2% | Blue Cloudpost with counterspells and card draw. |
+| Colorless Post | C | fringe | 0.2% | All-colorless Cloudpost. Karn, Ugin, Eldrazi. |
+| Simic Post | UG | fringe | 0.1% | Blue + green Cloudpost. |
+| Mono Green Ramp | G | fringe | 0.1% | Green ramp that may or may not use Cloudpost. |
+| Tron | C | fringe | 0.1% | Urza's Tower/Mine/Power Plant for mana. Less common than Cloudpost in Legacy. |
+| Mono Blue Tron | U | fringe | 0.0% | Blue Tron with counterspells. |
+| Amulet Titan | G | fringe | 0.0% | Amulet of Vigor + bounceland combo. Rare in Legacy, more Modern. |
+
+### Pox / Mono Black
+**Description**: Black-based resource denial using Smallpox, Hymn to Tourach, Liliana, and Wasteland to strip the opponent of all resources.
+
+| Variant | Colors | Status | Meta % | Notes |
+|---------|--------|--------|--------|-------|
+| Pox | B | tier_3 | 2.0% | Classic Smallpox + Liliana + Hymn. Mana denial + discard. |
+| Smallpox | B | tier_3 | 2.0% | Same as Pox. |
+| Mono Black Midrange | B | tier_2 | 1.3% | Bowmasters + Thoughtseize + Sheoldred's Edict. Grindier than Pox. |
+| Mono Black Aggro | B | fringe | 0.3% | Aggressive mono-black. Dauthi Voidwalker + shadow creatures. |
+| Mono Black | B | fringe | 0.3% | Generic mono-black. |
+| Mono Black Dauthi | B | fringe | 0.2% | Shadow/unblockable theme. Dauthi Voidwalker + Dauthi Horror. |
+| Mono Black Necro | B | fringe | 0.2% | Necrodominance as card draw engine. |
+| Mono Black Combo | B | fringe | 0.1% | Combo win conditions in mono-black. |
+| Mono Black Helm | B | fringe | 0.1% | Helm of Obedience + Leyline of the Void = instant mill. |
+| Mono Black Death's Shadow | B | fringe | 0.1% | Death's Shadow in mono-black with Thoughtseize + self-damage. |
+| Mono Black Prison | B | fringe | 0.1% | Black prison with Nether Void, The Abyss, Chains of Mephistopheles. |
+| Mono Black Demons | B | fringe | 0.0% | Demon tribal. Dark Ritual into Griselbrand/Archfiend. |
+| Mono Black Initiative | B | fringe | 0.1% | Initiative creatures with black rituals for acceleration. |
+| Mono Black Slivers | B | fringe | 0.0% | Unusual mono-black Slivers build. |
+| 8-Rack | B | fringe | 0.0% | Shrieking Affliction + The Rack. Win by keeping opponent's hand empty. |
+| Dark Burn | BR | fringe | 0.0% | Black + red burn with Bump in the Night. |
+| Eva Green | BG | historic | 0.0% | Classic BG midrange. Hymn + Pernicious Deed + Tarmogoyf. Named after actress. |
+| Deadguy Ale (BW Aggro) | WB | fringe | 0.1% | BW aggro-midrange. Stoneforge + Thoughtseize + Vindicate. Classic name. |
+| Death's Shadow | varies | tier_3 | 0.5% | Death's Shadow + self-damage. UBR or Mono-B. |
+| UBx Death's Shadow | UBR | tier_3 | 0.3% | Blue-based Death's Shadow with cantrips. |
+| Rakdos Death's Shadow | BR | fringe | 0.1% | BR Death's Shadow with Thoughtseize + Bolt. |
+| Curses | B+ | fringe | 0.0% | Curse of Misfortunes + enchantment combo. |
+
+### Helm Combo
+**Description**: Helm of Obedience + Rest in Peace or Leyline of the Void = mill entire library for 1 activation.
+
+| Variant | Colors | Status | Meta % | Notes |
+|---------|--------|--------|--------|-------|
+| BW Helm Combo | WB | fringe | 0.1% | BW shell for both combo pieces. |
+| Dimir Helm | UB | fringe | 0.1% | UB Helm with counterspell backup. |
+| Orzhov Helm | WB | fringe | 0.1% | Same as BW Helm. |
+| Rakdos Helm | BR | fringe | 0.0% | Rare BR variant with Leyline of the Void. |
+
+### Blink / Ephemerate
+**Description**: Flicker/blink effects (Ephemerate, Yorion) to repeatedly trigger enter-the-battlefield abilities.
+
+| Variant | Colors | Status | Meta % | Notes |
+|---------|--------|--------|--------|-------|
+| 4 Color Blink | 4c | fringe | 0.2% | 4-color Ephemerate value. Solitude + Fury + Omnath + Yorion. |
+| Abzan Blink | WBG | fringe | 0.1% | WBG blink. Siege Rhino + Ephemerate. |
+| Esper Blink | UWB | fringe | 0.1% | Ephemerate + Snapcaster Mage + Stoneforge. |
+| Bant Blink | UWG | fringe | 0.1% | Green for Uro and Endurance blink targets. |
+| Orzhov Blink | WB | fringe | 0.1% | BW blink with Grief and Solitude. |
+| Bant Yorion | UWG | fringe | 0.1% | 80-card Bant with Yorion companion. |
+| Esper Yorion | UWB | fringe | 0.1% | 80-card Esper with Yorion. |
+| Bridgewalkers | varies | fringe | 0.0% | Bridge from Below + sacrifice/blink synergies. |
+
+### Natural Order / Green Toolbox
+**Description**: Green Sun's Zenith and/or Natural Order toolbox strategies. Tutor for creatures to match any situation.
+
+| Variant | Colors | Status | Meta % | Notes |
+|---------|--------|--------|--------|-------|
+| Cradle Control | G+ | tier_2 | 2.3% | Gaea's Cradle + Green Sun's Zenith toolbox. Huge mana generation. |
+| Maverick | GW | fringe | 0.2% | GW hatebears with Knight of the Reliquary + GSZ. Classic fair green deck. |
+| Punishing Maverick | RGW | fringe | 0.1% | Maverick + Punishing Fire + Grove of the Burnwillows. |
+| Abzan Order | WBG | fringe | 0.1% | Natural Order in Abzan colors. |
+| Abzan Midrange | WBG | fringe | 0.1% | WBG midrange without Natural Order. |
+| Bant Order | UWG | fringe | 0.1% | Natural Order in Bant. Force of Will protection. |
+| Bant Ritual | UWG | fringe | 0.0% | Bant with mana rituals for early Natural Order. |
+| Golgari Order | BG | fringe | 0.1% | BG Natural Order. |
+| Gruul Order | RG | fringe | 0.1% | RG Natural Order. |
+| RUG Order | URG | fringe | 0.1% | RUG Natural Order. Reid Duke's GP Providence 2011 deck. |
+| Simic Order | UG | fringe | 0.1% | UG Natural Order. |
+| Mono Green Order | G | fringe | 0.1% | Mono-green Natural Order. |
+| 4 Color Order | 4c | fringe | 0.1% | 4-color Natural Order. |
+| Nic Fit | BG+ | fringe | 0.2% | Veteran Explorer + Cabal Therapy. Ramp into big threats. Anti-meta deck. |
+| Sultai Ritual | UBG | fringe | 0.0% | BUG ritual-based Natural Order. |
+| Mono Green Devotion | G | fringe | 0.0% | Nykthos + green devotion creatures. |
+| Mono Green Aggro | G | fringe | 0.0% | Aggressive mono-green. |
+| Enigmatic Incarnation | varies | fringe | 0.0% | Enigmatic Incarnation creature toolbox. |
+| Selesnya Company | GW | fringe | 0.0% | Collected Company in GW. |
+| Selesnya Counters | GW | fringe | 0.0% | +1/+1 counter synergies. |
+| Hardened Scales | G | fringe | 0.0% | Hardened Scales + modular artifacts. |
+| Harvest Combo | G+ | fringe | 0.0% | Harvest season / mana creature combo. |
+| Golgari Midrange | BG | fringe | 0.1% | BG midrange. Thoughtseize + Tarmogoyf/Barrowgoyf. |
+| Golgari Saga | BG | fringe | 0.1% | BG with Urza's Saga artifact package. |
+| Golgari Yawgmoth | BG | fringe | 0.0% | Yawgmoth, Thran Physician combo in BG. |
+| Golgari Landfall | BG | fringe | 0.0% | Landfall triggers in BG. |
+| Golgari Moonshadow | BG | fringe | 0.0% | Moonshadow creature in BG. |
+| Golgari Witherbloom | BG | fringe | 0.0% | Witherbloom lifegain/drain in BG. |
+| Sultai Witherbloom | UBG | fringe | 0.0% | BUG Witherbloom variant. |
+| Sultai Birds | UBG | fringe | 0.0% | BUG with Birds of Paradise mana acceleration. |
+| Sultai Nadu | UBG | fringe | 0.0% | Nadu combo in BUG. Nadu banned but may have existed pre-ban. |
+| Naya Minsc | WRG | fringe | 0.1% | Naya with Minsc & Boo, Timeless Heroes. |
+| Gruul Minsc | RG | fringe | 0.1% | RG Minsc build. |
+| Gruul Midrange | RG | fringe | 0.1% | RG midrange. Tarmogoyf + Bolt + Punishing Fire. |
+| Gruul Aggro | RG | fringe | 0.1% | Aggressive RG. |
+| Gruul Prowess | RG | fringe | 0.0% | Prowess creatures in RG. |
+| Gruul Lumberjack | RG | fringe | 0.0% | Lumberjack-themed RG aggro. |
+| Gruul Rotpriest | RG | fringe | 0.0% | Venerated Rotpriest poison in RG. |
+| Temur Rotpriest | URG | fringe | 0.0% | Rotpriest in Temur colors. |
+| Gruul Shoal | RG | fringe | 0.0% | Blazing Shoal combo in RG. |
+| Selesnya Landfall | GW | fringe | 0.0% | GW landfall triggers. |
+| Selesnya Gearhulk | GW | fringe | 0.0% | Verdurous Gearhulk in GW. |
+| Selesnya Initiative | GW | fringe | 0.0% | Initiative creatures in GW. |
+| Vizier | GW | fringe | 0.0% | Vizier of Remedies + Devoted Druid infinite mana. |
+
+### Tribal
+**Description**: Creature-type synergy decks that leverage tribal payoffs.
+
+| Variant | Colors | Status | Meta % | Notes |
+|---------|--------|--------|--------|-------|
+| Elves | G+ | fringe | 0.2% | Glimpse of Nature + Natural Order + Craterhoof Behemoth. Creature combo. |
+| Goblins | R+ | fringe | 0.4% | Goblin Lackey + Matron + Ringleader + Muxus. Tribal aggro-combo. |
+| Food Chain Goblins | RG | fringe | 0.0% | Goblins + Food Chain for infinite mana/ETBs. |
+| Merfolk | U | fringe | 0.2% | Lord of Atlantis + True-Name Nemesis + Aether Vial. Tribal tempo. |
+| Slivers | 5c | fringe | 0.0% | Sliver tribal. Aether Vial + sliver lords. |
+| Humans | 5c | fringe | 0.0% | Five-color humans with Cavern of Souls + Aether Vial. |
+| Spirits | UW | fringe | 0.0% | Spirit tribal with Rattlechains and Mausoleum Wanderer. |
+| Zombies | B | fringe | 0.0% | Zombie tribal. |
+| Minotaurs | BR | fringe | 0.0% | Minotaur tribal. Very fringe. |
+| Angels | W | fringe | 0.0% | Angel tribal. |
+| Rebels | W | fringe | 0.0% | Rebel tutor chain. Lin Sivvi, Defiant Hero. |
+| Kobolds | R | fringe | 0.0% | Zero-mana Kobold creatures + Glimpse of Nature combo. |
+| Wizards | varies | fringe | 0.0% | Wizard tribal synergies. |
+| Ninjas | UB | fringe | 0.2% | Yuriko + Changeling Outcast + Ingenious Infiltrator. Ninjutsu tempo. |
+| Ninja | UB | fringe | 0.2% | Same as Ninjas. |
+
+### Infect
+**Description**: Poison counter aggro-combo. 10 poison = death. Pump spells on infect creatures for one-shot kills.
+
+| Variant | Colors | Status | Meta % | Notes |
+|---------|--------|--------|--------|-------|
+| Infect | UG | tier_3 | 0.4% | Glistener Elf, Blighted Agent + Berserk, Invigorate, Force. |
+| Infect Shoal | UG | fringe | 0.1% | Blazing Shoal version for bigger pump. |
+| Shoal Infect | UG | fringe | 0.1% | Same as Infect Shoal. |
+| Gruul Rotpriest | RG | fringe | 0.0% | Venerated Rotpriest targeted-spell poison. |
+| Temur Song | URG | fringe | 0.0% | Song of Creation + cheap spells. Unusual combo. |
+
+### Burn
+**Description**: Direct damage to the face. Lightning Bolt, Chain Lightning, Eidolon of the Great Revel, Price of Progress.
+
+| Variant | Colors | Status | Meta % | Notes |
+|---------|--------|--------|--------|-------|
+| Burn | R | fringe | 0.3% | Mono-red or RW burn. Budget-friendly. Price of Progress punishes greedy mana bases. |
+| Dark Burn | BR | fringe | 0.0% | Black splash for Bump in the Night. |
+
+### Dredge
+**Description**: Graveyard-based strategy using the Dredge mechanic to fill the graveyard, then win with Ichorid, Narcomoeba, and Bridge from Below triggers.
+
+| Variant | Colors | Status | Meta % | Notes |
+|---------|--------|--------|--------|-------|
+| LED Dredge | UBRG | tier_2 | 1.1% | Lion's Eye Diamond enables explosive starts. Dread Return + Thassa's Oracle or Flame-Kin Zealot. |
+| Dredge | UBRG | tier_2 | 1.1% | Same as LED Dredge. |
+| Hogaak | BG | tier_3 | 0.7% | Hogaak, Arisen Necropolis + Vengevine. Graveyard aggro. |
+| Hollow Vine | varies | fringe | 0.0% | Hollow One + Vengevine discard synergies. |
+| Hollow One Madness | varies | fringe | 0.0% | Hollow One with Madness spells. |
+| Hollow Red | R | fringe | 0.0% | Red Hollow One aggro. |
+| Zombi Bombardment | BR | fringe | 0.0% | Goblin Bombardment + Gravecrawler recursion. |
+
+### Aluren
+**Description**: Aluren enchantment lets you cast creatures with CMC 3 or less for free. Combo with Acererak the Archlich or Cavern Harpy for infinite triggers.
+
+| Variant | Colors | Status | Meta % | Notes |
+|---------|--------|--------|--------|-------|
+| Aluren | UBG | tier_2 | 1.2% | Won Legacy Showcase Qualifier April 2026. Combo-control hybrid. |
+| Sultai Aluren | UBG | tier_2 | 1.2% | Same deck. Sultai naming. |
+
+### Food Chain
+**Description**: Food Chain + Misthollow Griffin or Eternal Scourge = infinite mana (creatures only). Win with Walking Ballista or cast from exile creatures.
+
+| Variant | Colors | Status | Meta % | Notes |
+|---------|--------|--------|--------|-------|
+| Food Chain | UG+ | fringe | 0.2% | Food Chain + Griffin/Scourge combo. Walking Ballista finish. |
+| Food Chain Goblins | RG | fringe | 0.0% | Food Chain in Goblin shell. |
+
+### Enchantress
+**Description**: Enchantment-based strategy using Argothian Enchantress and Enchantress's Presence to draw cards off every enchantment cast.
+
+| Variant | Colors | Status | Meta % | Notes |
+|---------|--------|--------|--------|-------|
+| Enchantress | GW | fringe | 0.2% | Solitary Confinement lock. Elephant Grass. Sterling Grove for protection. |
+| 4 Color Estrid | 4c | fringe | 0.0% | Estrid planeswalker in multi-color enchantress. |
+
+### Cephalid Breakfast
+**Description**: Cephalid Illusionist + Nomads en-Kor = mill entire library. Win with Thassa's Oracle.
+
+| Variant | Colors | Status | Meta % | Notes |
+|---------|--------|--------|--------|-------|
+| Cephalid Breakfast | UW | tier_3 | 0.4% | Two-card combo that mills your library. Oracle finish. |
+
+### Stiflenought
+**Description**: Stifle or Dress Down the enter-the-battlefield sacrifice trigger on Phyrexian Dreadnought for a 12/12 on turn 1-2.
+
+| Variant | Colors | Status | Meta % | Notes |
+|---------|--------|--------|--------|-------|
+| Stiflenought | UB | fringe | 0.1% | Stifle + Phyrexian Dreadnought. Also uses Dress Down. |
+| White Dreadnought | UW | fringe | 0.0% | Dreadnought in white shell with Flickerwisp. |
+| Vesuvan Duelist | U | fringe | 0.0% | Copy effects for Dreadnought synergy. |
+
+### Jund
+**Description**: BRG midrange. The 'best cards in three colors' strategy. Thoughtseize + Bolt + Barrowgoyf + Punishing Fire.
+
+| Variant | Colors | Status | Meta % | Notes |
+|---------|--------|--------|--------|-------|
+| Jund | BRG | fringe | 0.2% | Fair BRG midrange. Less popular post-DRS ban. |
+| Jund Aggro | BRG | fringe | 0.1% | Aggressive Jund variant. |
+| Grixis Goyfs | UBR | fringe | 0.1% | Grixis midrange with Barrowgoyf. |
+| Grixis Junk | UBR | fringe | 0.0% | Unusual Grixis midrange. |
+| Rakdos Aggro | BR | fringe | 0.2% | BR aggro without green. |
+| Rakdos Channeler | BR | fringe | 0.1% | BR with Dragon's Rage Channeler. |
+| Rakdos Goyfs | BR | fringe | 0.1% | BR midrange with Barrowgoyf. |
+| Rakdos Discard | BR | fringe | 0.0% | BR discard focus. Hymn + Thoughtseize + Bolt. |
+| Rakdos Moonshadow | BR | fringe | 0.0% | Moonshadow creature in BR. |
+| Grixis Basim | UBR | fringe | 0.0% | Basim creature in Grixis. |
+| Grixis Cauldron | UBR | fringe | 0.0% | Cauldron Familiar + Witch's Oven in Grixis. |
+| Grixis Frog | UBR | fringe | 0.0% | Psychic Frog era Grixis. Frog now banned. |
+| Dimir Frog | UB | fringe | 0.0% | Psychic Frog era UB build. Now banned. |
+| Sultai Frog | UBG | fringe | 0.0% | Frog in BUG. Banned. |
+| Grixis Lutri | UBR | fringe | 0.0% | Grixis with Lutri companion (all singletons). |
+| Grixis Phoenix | UBR | fringe | 0.0% | Arclight Phoenix in Grixis. |
+| Arclight Phoenix | UR+ | fringe | 0.0% | Arclight Phoenix with cheap instants/sorceries. |
+| Phoenix Red | R | fringe | 0.0% | Mono-red Phoenix variant. |
+
+### Creativity / Polymorph
+**Description**: Indomitable Creativity or Polymorph effects to turn tokens into specific powerful creatures.
+
+| Variant | Colors | Status | Meta % | Notes |
+|---------|--------|--------|--------|-------|
+| 4 Color Creativity | 4c | fringe | 0.2% | Indomitable Creativity into Archon of Cruelty or Emrakul. |
+| Jeskai Creativity | UWR | fringe | 0.1% | Jeskai shell for Creativity. |
+| Creative Technique | varies | fringe | 0.2% | Creative Technique for Demonstrate copies. |
+| Polymorph | U | fringe | 0.0% | Classic Polymorph. Turn token into Emrakul. |
+
+### Cascade
+**Description**: Cascade mechanic to cast free spells. Often paired with suspend cards or specific cascade targets.
+
+| Variant | Colors | Status | Meta % | Notes |
+|---------|--------|--------|--------|-------|
+| 4 Color Cascade | 4c | fringe | 0.1% | 4-color cascade value. |
+| Cascade Crash | varies | fringe | 0.1% | Crashing Footfalls via cascade. |
+| Marauder Cascade | varies | fringe | 0.0% | Bloodbraid Marauder cascade. |
+| Temur Cascade | URG | fringe | 0.1% | Temur cascade with Shardless Agent. |
+| Valki Cascade | varies | fringe | 0.0% | Cascade into Valki/Tibalt. Rules change nerfed this. |
+| Hypergenesis | varies | fringe | 0.0% | Cascade into Hypergenesis to cheat everything into play. |
+
+### Miscellaneous Combo
+**Description**: Various combo decks that don't fit neatly into other categories.
+
+| Variant | Colors | Status | Meta % | Notes |
+|---------|--------|--------|--------|-------|
+| Hive Mind | UR | historic | 0.0% | Hive Mind + Pacts. Opponent can't pay the upkeep cost and loses. |
+| Splinter Twin | UR | fringe | 0.0% | Splinter Twin + Deceiver Exarch = infinite tokens. Rare in Legacy. |
+| Neoform | UG | fringe | 0.0% | Neoform combo to tutor specific creatures. |
+| Arena Rector | W+ | fringe | 0.0% | Arena Rector dies, put any planeswalker into play. Omniscience combo. |
+| Jeskai Ascendancy | UWR | fringe | 0.0% | Jeskai Ascendancy + mana creatures + cantrips = infinite power. |
+| Winota Forces | WR | fringe | 0.0% | Winota, Joiner of Forces cheating humans into play. |
+| False Cure | B | fringe | 0.0% | False Cure + Tainted Remedy. Opponent's lifegain kills them. |
+| Treasure Hunt | U | fringe | 0.0% | Treasure Hunt + Reliquary Tower + Lightning Storm. Meme combo. |
+| Battle of Wits | 5c | fringe | 0.0% | 200+ card deck. Win by having 200+ cards in library. Extreme jank. |
+| Wheel Dream | varies | fringe | 0.0% | Wheel effects + damage from drawing. |
+| Dragon's Approach | R | fringe | 0.0% | 40 copies of Dragon's Approach. Tutor a dragon. |
+| Sudden Substitution | U | fringe | 0.0% | Sudden Substitution + Pact of the Titan to give opponent a Pact they can't pay. |
+| Mississippi River | varies | fringe | 0.0% | Unusual combo deck. |
+| Turbo Necro | UB | fringe | 0.1% | Necrodominance turbo. Draw entire deck, win somehow. |
+| Mill | UB | fringe | 0.0% | Mill opponent's library as win condition. |
+| Martyr Life | W | fringe | 0.0% | Martyr of Sands lifegain combo. |
+| Leylines | varies | fringe | 0.0% | Leyline-based combo deck. |
+| Wizard's Planisphere | varies | fringe | 0.0% | Unusual artifact combo. |
+| Nadu | UG | historic | 0.0% | Nadu, Winged Wisdom combo. Banned 2024. |
+| Breach | UR | historic | 0.0% | Underworld Breach combo. Banned 2020. |
+| Survival - Aggro | G+ | historic | 0.0% | Survival of the Fittest aggro. Survival banned. |
+| Survival - Control/Combo | G+ | historic | 0.0% | Survival of the Fittest combo/control. Banned. |
+| New horizons | varies | fringe | 0.0% | Unusual brew. |
+| Rogue | varies | fringe | 0.0% | Unclassifiable rogue deck. |
+| Rogues | UB | fringe | 0.0% | Rogue tribal with mill synergies. |
+| Other - Aggro | varies | fringe | 0.0% | Unclassified aggro deck. |
+| Other - Combo | varies | fringe | 0.0% | Unclassified combo deck. |
+| Other - Control | varies | fringe | 0.0% | Unclassified control deck. |
+
+### Esper Midrange
+**Description**: UWB midrange value strategies.
+
+| Variant | Colors | Status | Meta % | Notes |
+|---------|--------|--------|--------|-------|
+| Esper Midrange | UWB | fringe | 0.1% | UWB value. Bowmasters + Stoneforge + Thoughtseize. |
+| Esper Bowmasters | UWB | fringe | 0.1% | Bowmasters-focused Esper. |
+| Esper Aggro | UWB | fringe | 0.1% | Aggressive Esper. |
+| Esper Ketramose | UWB | fringe | 0.0% | Ketramose creature in Esper. |
+| Dimir Lessons | UB | fringe | 0.0% | Lesson/Learn mechanic in UB. |
+| Dimir Midrange | UB | fringe | 0.2% | Grindier UB without tempo elements. |
+| Orzhov Dauthi | WB | fringe | 0.1% | BW with Dauthi Voidwalker. |
+| Orzhov Evoke | WB | fringe | 0.1% | BW with evoke elementals (Solitude, Grief). |
+| Orzhov Convoke | WB | fringe | 0.0% | BW token + convoke synergies. |
+| Orzhov Sacrifice | WB | fringe | 0.0% | BW sacrifice synergies. |
+| Orzhov Saga | WB | fringe | 0.0% | BW with Urza's Saga. |
+| Orzhov Samwise | WB | fringe | 0.0% | Samwise Gamgee value in BW. |
+| Orzhov Initiative | WB | fringe | 0.1% | BW Initiative creatures. |
+| Izzet Coin | UR | fringe | 0.0% | Coin-flip themed UR deck. |
+| Izzet Cutter | UR | fringe | 0.0% | Slickshot Show-Off / cutter build. |
+| Jeskai Nulldrifter | UWR | fringe | 0.1% | Nulldrifter in Jeskai shell. |
+| Jeskai Tokens | UWR | fringe | 0.0% | Token generation in Jeskai. |
+| UR Spells | UR | fringe | 0.1% | Spell-slinger UR. |
+| Mono Blue Narset | U | fringe | 0.0% | Narset, Parter of Veils + Day's Undoing lock. |
+| Mono Blue Turns | U | fringe | 0.0% | Extra turn spells in mono-blue. |
+| Counter Top (no thopter) | UW | historic | 0.0% | Counterbalance + Sensei's Divining Top. Pre-ban era lock. |
+| Countertop Thopters | UW | historic | 0.0% | Counterbalance + Top + Thopter Foundry + Sword of the Meek. |
+| Thopter Foundry | UW | historic | 0.0% | Thopter Foundry + Sword of the Meek infinite tokens. |
+| Faeries | UB | fringe | 0.0% | Faerie tribal with Bitterblossom. |
+| Faerie Stompy | U | historic | 0.0% | Mono-blue prison with Faerie creatures. Chrome Mox + Trinisphere era. |
+| Zoo | RGW | fringe | 0.0% | Naya aggro. Efficient creatures + Bolt + removal. |
+| Martyr Life | W | fringe | 0.0% | Martyr of Sands lifegain. |
+| Hammer Time | W | fringe | 0.0% | Colossus Hammer + Sigarda's Aid. More Modern, rare in Legacy. |
+| Goblin Welder | R | fringe | 0.0% | Artifact recursion with Goblin Welder as engine. |

@@ -1,5 +1,7 @@
 # Legacy Format — Complete Guide
 
+> **See also**: [Deckbuilding Guide](deckbuilding-guide.md) | [Meta Analysis](legacy-analysis.md) | [Archetype Guide](archetype-guide.md) | [Deck History & Variant Index](legacy-deck-history.md) | [MTG Slang](mtg-slang.md)
+
 ## What Is Legacy?
 
 Legacy is a **non-rotating, eternal constructed format** in Magic: The Gathering that permits cards from **all Magic sets ever printed**, subject only to a curated ban list. It evolved from the format formerly known as **Type 1.5**. The modern Legacy format began in 2004-2006 when the DCI separated Legacy's banned list from Vintage's restricted list. The first Legacy Grand Prix was Grand Prix Philadelphia in 2005.

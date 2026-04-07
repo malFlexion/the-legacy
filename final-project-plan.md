@@ -142,12 +142,13 @@ When new sets are spoiled or released:
 | File | Size | Contents |
 |------|------|----------|
 | `data/comprehensive-rules.txt` | ~943 KB, 9,274 lines | Full MTG Comprehensive Rules (Feb 2026). Will be chunked by rule section for RAG. |
-| `data/scryfall-cards.json` | ~508 MB | Complete Scryfall card database (all default cards). Card names, oracle text, mana costs, types, legality, image URIs. |
-| `data/mtg-slang.json` | 226 entries | MTG slang dictionary across 5 categories: gameplay, card nicknames, archetypes, strategy, Legacy-specific. Each entry has definition, related cards, and cross-references. |
-| `data/legacy-deck-history.json` | 54 decks | Full Legacy archetype database with 75-card decklists, meta shares, win rates, matchups, cost estimates, historical timelines (2004-2026), ban impacts, and similarity analysis. |
-| `data/legacy-basics.md` | Guide | Legacy format overview: rules, card pool, ban list, staples, metagame, history, strategic triangle. |
-| `data/deckbuilding-guide.md` | Guide | Deckbuilding principles from Reid Duke: mana base construction, blue card counts, Force of Will math, sideboarding, card evaluation, budget substitutions. |
-| `data/legacy-analysis.md` | Analysis | Current meta analysis from MTGGoldfish (1564 decks), MTGTop8 (555 decks), win rates, staple usage, cost analysis, tournament results, format trends. |
+| `data/scryfall-cards.json` | ~508 MB (gitignored) | Complete Scryfall card database (all default cards). Card names, oracle text, mana costs, types, legality, image URIs. Download separately via Scryfall bulk data API. |
+| `data/legacy-deck-history.md` | ~6,170 lines | 54 Legacy archetypes with full 75-card decklists, meta shares, win rates, matchups, cost estimates, historical timelines (2004-2026), ban impacts, similarity analysis. Includes a variant index mapping ~420 deck names across 65 parent categories. |
+| `data/archetype-guide.md` | ~2,113 lines | Comprehensive guide to all 32 parent archetypes with 200+ variants. Each archetype has overview, key cards with Scryfall links, detailed variant sections, matchup analysis, and sideboard guide. |
+| `data/mtg-slang.md` | 726 lines, 346 entries | MTG slang dictionary across 5 categories: gameplay, card nicknames, archetypes, strategy, Legacy-specific. Each entry has definition, related cards, and cross-references. |
+| `data/legacy-basics.md` | Guide | Legacy format overview: rules, card pool, complete ban list with reasons, staples, metagame, history, strategic triangle, play patterns, and glossary. Includes Scryfall card reference links. |
+| `data/deckbuilding-guide.md` | Guide | Deckbuilding principles from Reid Duke: mana base construction, blue card counts, Force of Will math, sideboarding, card evaluation, budget substitutions. Includes Scryfall card reference links with side-by-side budget comparisons. |
+| `data/legacy-analysis.md` | Analysis | Current meta analysis from MTGGoldfish (1564 decks), MTGTop8 (555 decks). Win rates, staple usage, cost analysis, tournament results, format trends. Deep dives on tier 1 decks, 9x9 matchup matrix, sideboard hate matrix, historical meta evolution (2011-2026), brewing opportunities. Includes Scryfall card reference links. |
 
 ### Live Data Sources
 
@@ -289,6 +290,9 @@ The rubric specifically calls out "appropriate sampling method" — different ta
 | **Creative brainstorming** | 0.8 (high) | 80 | 0.95 | "What spicy tech could I play?" benefits from creative, less obvious suggestions. |
 | **Rules questions** | 0.1 (very low) | 20 | 0.85 | Rules answers must be deterministic and correct. Near-greedy decoding. |
 | **Board state analysis** | 0.4 (low-medium) | 40 | 0.9 | Needs accurate assessment but should consider multiple lines of play. |
+| **Deck analysis / import** | 0.3 (low) | 40 | 0.9 | Analysis should be factual and precise. Archetype identification must be correct. |
+| **Budget substitutions** | 0.3 (low) | 40 | 0.9 | Substitution recommendations must be real cards with honest trade-off assessments. |
+| **Card evaluation (new sets)** | 0.5 (medium) | 50 | 0.9 | Needs factual comparison but also reasoned speculation about format impact. |
 
 The API exposes these as presets (e.g., `mode=precise` vs `mode=creative`) while also allowing manual override. The documentation will explain *why* each preset exists and how temperature/top-k/top-p interact for MTG-specific generation.
 
@@ -409,16 +413,17 @@ Build a test set covering each capability:
 > **Priority rule**: Phases 1-3 and 6 are **rubric-required** — they cover the LoRA model, eval dataset, API endpoint, inference pipeline, and documentation. Phases 4-5 add polish and innovation. If time gets tight, a working Phase 1-3 with solid docs scores well. Goldfish Tier 1 is quick to build and adds significant demo value, so it's worth doing even under time pressure.
 
 ### Phase 1: Data Foundation ✅ (Mostly Complete)
-1. ~~Download and index the MTG Comprehensive Rules~~ → `data/comprehensive-rules.txt` (9,274 lines, Feb 2026)
-2. ~~Download Scryfall bulk card data~~ → `data/scryfall-cards.json` (508 MB, all default cards)
-3. ~~Build MTG slang dictionary~~ → `data/mtg-slang.json` (226 entries)
-4. ~~Build Legacy deck history~~ → `data/legacy-deck-history.json` (54 archetypes with full decklists, timelines, meta data)
-5. ~~Write Legacy basics guide~~ → `data/legacy-basics.md`
-6. ~~Write deckbuilding guide~~ → `data/deckbuilding-guide.md` (Reid Duke principles)
-7. ~~Write meta analysis~~ → `data/legacy-analysis.md` (MTGGoldfish + MTGTop8 data)
-8. **TODO**: Chunk comprehensive rules by section and embed into vector DB
-9. **TODO**: Build card name index from Scryfall data for fuzzy matching
-10. **TODO**: Index meta data, deck history, and strategy content into vector DB
+1. ~~Download MTG Comprehensive Rules~~ → `data/comprehensive-rules.txt` (9,274 lines, Feb 2026)
+2. ~~Download Scryfall bulk card data~~ → `data/scryfall-cards.json` (508 MB, gitignored)
+3. ~~Build MTG slang dictionary~~ → `data/mtg-slang.md` (346 entries, 5 categories)
+4. ~~Build Legacy deck history + variant index~~ → `data/legacy-deck-history.md` (54 archetypes, 420 variant mappings)
+5. ~~Build archetype guide~~ → `data/archetype-guide.md` (32 parent archetypes, 200+ variants with Scryfall links)
+6. ~~Write Legacy basics guide~~ → `data/legacy-basics.md` (with card images, ban list, play patterns)
+7. ~~Write deckbuilding guide~~ → `data/deckbuilding-guide.md` (Reid Duke principles, budget comparisons)
+8. ~~Write meta analysis~~ → `data/legacy-analysis.md` (matchup matrix, hate matrix, meta evolution)
+9. **TODO**: Chunk comprehensive rules by section and embed into vector DB
+10. **TODO**: Build card name index from Scryfall data for fuzzy matching
+11. **TODO**: Index meta data, deck history, and strategy content into vector DB
 
 ### Phase 2: Model
 11. Build the LoRA training dataset (Q&A pairs from rules, deck-building rationale, card evaluation, deck analysis, budget substitutions)
@@ -453,9 +458,9 @@ Build a test set covering each capability:
 34. Connect all tabs to the API
 
 ### Phase 6: Documentation & Demo
-25. Write technical documentation (architecture, training, API reference, deployment, sampling rationale, eval analysis)
-26. Record/prepare demo presentation (play style → deck → view → goldfish → explain decisions)
-27. Final eval run with polished model
+35. Write technical documentation (architecture, training, API reference, deployment, sampling rationale, eval analysis)
+36. Record/prepare demo presentation (play style → deck → view → goldfish → explain decisions)
+37. Final eval run with polished model
 
 ---
 

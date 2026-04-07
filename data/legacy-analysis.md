@@ -1,5 +1,7 @@
 # Legacy Metagame Analysis (April 2026)
 
+> **See also**: [Legacy Basics](legacy-basics.md) | [Deckbuilding Guide](deckbuilding-guide.md) | [Archetype Guide](archetype-guide.md) | [Deck History & Variant Index](legacy-deck-history.md) | [MTG Slang](mtg-slang.md)
+
 *Data sourced from MTGGoldfish, MTGTop8, mtgdecks.net, and community resources.*
 
 ## Data Sources and What They Provide
