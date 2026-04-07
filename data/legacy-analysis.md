@@ -91,6 +91,9 @@ A healthy format has no deck consistently above 55%. Legacy currently meets this
 ## Key Format Trends
 
 ### 1. Dimir Tempo Dominance
+
+[🃏 Orcish Bowmasters](https://scryfall.com/search?q=!%22Orcish+Bowmasters%22) | [🃏 Tamiyo, Inquisitive Student](https://scryfall.com/search?q=!%22Tamiyo%2C+Inquisitive+Student%22)
+
 At 14.6% meta share, Dimir Tempo is the most played deck by a wide margin. Built around Orcish Bowmasters, Tamiyo Inquisitive Student, Thoughtseize, and the blue cantrip/Force of Will shell. Its 52.7% win rate is strong but not oppressive — the format has answers.
 
 **Why it's good**: Bowmasters punishes opposing cantrips, Thoughtseize proactively strips combo pieces, and Force of Will handles everything else. The deck is flexible and has no truly terrible matchups.
@@ -98,6 +101,9 @@ At 14.6% meta share, Dimir Tempo is the most played deck by a wide margin. Built
 **How to beat it**: Go bigger (Sneak and Show, Lands), go under (Oops, Belcher), or go over (4c Control with more card advantage).
 
 ### 2. Energy Cards Reshape Aggro
+
+[🃏 Ocelot Pride](https://scryfall.com/search?q=!%22Ocelot+Pride%22)
+
 MH3 energy cards (Ocelot Pride, Guide of Souls, Amped Raptor, Ajani Nacatl Pariah) created viable non-blue aggressive strategies. Ocelot Pride Midrange at 8.5% and Mardu Energy at ~3% represent a new class of Legacy deck that doesn't rely on Brainstorm.
 
 **Impact**: The format is less "blue or bust" than any time in recent memory. Non-blue aggro/midrange has real teeth.
@@ -111,6 +117,9 @@ Unlike many Legacy eras where one combo deck dominates (Reanimator in 2024, Stor
 The November 2025 Entomb ban removed BR Reanimator as a tier 1 strategy. The deck still exists using Faithful Mending and other discard outlets, but it's slower and less consistent. The meta share previously occupied by Reanimator has been absorbed primarily by Oops! All Spells and Sneak and Show — other ways to cheat big creatures into play.
 
 ### 5. Artifact Strategies Thriving
+
+[🃏 Chalice of the Void](https://scryfall.com/search?q=!%22Chalice+of+the+Void%22) | [🃏 Urza's Saga](https://scryfall.com/search?q=!%22Urza%27s+Saga%22)
+
 Mystic Forge Combo (3.0%), Affinity Stompy (2.4%), Blue Artifacts (1.1%), Painter (4.1%), and 8-Cast variants collectively represent ~15% of the field. Urza's Saga is the glue card enabling many of these strategies. Chalice of the Void on 1 remains one of the best cards against the cantrip-heavy metagame.
 
 ---
@@ -119,6 +128,8 @@ Mystic Forge Combo (3.0%), Affinity Stompy (2.4%), Blue Artifacts (1.1%), Painte
 
 ### Most-Played Cards (Cross-Archetype)
 These cards appear in the highest percentage of decks, indicating format-defining status:
+
+[🃏 Wasteland](https://scryfall.com/search?q=!%22Wasteland%22) | [🃏 Force of Will](https://scryfall.com/search?q=!%22Force+of+Will%22) | [🃏 Brainstorm](https://scryfall.com/search?q=!%22Brainstorm%22) | [🃏 Orcish Bowmasters](https://scryfall.com/search?q=!%22Orcish+Bowmasters%22)
 
 | Card | % Decks | Insight |
 |------|---------|---------|
@@ -134,6 +145,9 @@ These cards appear in the highest percentage of decks, indicating format-definin
 | Daze | 27% | Free counterspell for tempo decks. Devastating on turn 1-2. |
 
 ### Cards Defining the Current Meta
+
+[🃏 Orcish Bowmasters](https://scryfall.com/search?q=!%22Orcish+Bowmasters%22) | [🃏 Ocelot Pride](https://scryfall.com/search?q=!%22Ocelot+Pride%22) | [🃏 Tamiyo, Inquisitive Student](https://scryfall.com/search?q=!%22Tamiyo%2C+Inquisitive+Student%22)
+
 | Card | Appeared | Impact |
 |------|----------|--------|
 | Orcish Bowmasters | June 2023 (LotR) | Killed Elves, weakened Delver mirrors, enabled Dimir Tempo |
@@ -300,6 +314,8 @@ Scale: +2 = very favorable, +1 = favorable, 0 = even, -1 = unfavorable, -2 = ver
 ## Sideboard Hate Matrix
 
 What hate cards target which decks:
+
+[🃏 Leyline of the Void](https://scryfall.com/search?q=!%22Leyline+of+the+Void%22) | [🃏 Surgical Extraction](https://scryfall.com/search?q=!%22Surgical+Extraction%22) | [🃏 Force of Vigor](https://scryfall.com/search?q=!%22Force+of+Vigor%22)
 
 | Hate Card | Targets | % Decks Playing |
 |-----------|---------|-----------------|

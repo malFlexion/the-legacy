@@ -68,6 +68,9 @@ This is the **first critical decision** in Legacy deckbuilding.
 ### The Three Mana Base Questions
 
 **1. How do you handle mana denial?**
+
+[🃏 Blood Moon](https://scryfall.com/search?q=!%22Blood+Moon%22) | [🃏 Back to Basics](https://scryfall.com/search?q=!%22Back+to+Basics%22)
+
 Legacy has Wasteland, Daze, Blood Moon, and Back to Basics. You need a plan:
 - **Against Wasteland**: Fetch basic lands. Run 2-4 basics minimum.
 - **Against Blood Moon**: Keep fetchlands uncracked. Fetch basics early if Blood Moon is likely.
@@ -86,6 +89,9 @@ Legacy has Wasteland, Daze, Blood Moon, and Back to Basics. You need a plan:
 ## Step 3: The Blue Card Question
 
 ### Brainstorm and Ponder
+
+[🃏 Brainstorm](https://scryfall.com/search?q=!%22Brainstorm%22) | [🃏 Ponder](https://scryfall.com/search?q=!%22Ponder%22)
+
 > "Brainstorm and Ponder are awesome, and you should try to play with them. More than that, you should probably have a very good reason if you're going to leave home without them." — Reid Duke
 
 These cards "vastly improve the consistency of your deck, and help you find your key cards." In Legacy, you face everything from turn-1 combo to prison to fair creature decks — you need different answers for each, and cantrips find the right answer.
@@ -93,11 +99,14 @@ These cards "vastly improve the consistency of your deck, and help you find your
 **If you're playing blue**: 4 Brainstorm + 4 Ponder is nearly automatic.
 
 **If you're not playing blue**: You need a very good reason. Non-blue decks compensate with:
-- Raw power (Ancient Tomb + Chalice of the Void)
+- Raw power ([🃏 Ancient Tomb](https://scryfall.com/search?q=!%22Ancient+Tomb%22) + [🃏 Chalice of the Void](https://scryfall.com/search?q=!%22Chalice+of+the+Void%22))
 - Tutors (Green Sun's Zenith, Goblin Matron)
 - Redundancy (lots of similar effects)
 
 ### Force of Will
+
+[🃏 Force of Will](https://scryfall.com/search?q=!%22Force+of+Will%22)
+
 > "Force of Will is awesome, and makes you feel much better heading into the unknown. It's particularly great right now, as you need a plan against decks that do powerful things on turn one." — Reid Duke
 
 **When to play it**: Almost always if you're in blue. It's the format's safety valve against unfair decks.
@@ -110,6 +119,9 @@ These cards "vastly improve the consistency of your deck, and help you find your
 **When to sideboard it out**: "It can be bad in grindy matchups, or against opponents who have tons of Pyroblasts." Against fair decks where the game goes long, paying 1 life + a card is too costly.
 
 ### Wasteland and Daze
+
+[🃏 Wasteland](https://scryfall.com/search?q=!%22Wasteland%22) | [🃏 Daze](https://scryfall.com/search?q=!%22Daze%22)
+
 Wasteland and Daze reward you if your deck can leverage tempo advantage:
 - **Daze**: "Staple four-of in Delver decks." Also works in small numbers in creature-acceleration decks where you jump ahead on mana.
 - **Wasteland**: Best in decks that can operate on 1-2 lands (Delver, D&T) or that use lands as a win condition (Lands).
@@ -121,6 +133,9 @@ Wasteland and Daze reward you if your deck can leverage tempo advantage:
 Most Legacy decks follow a pattern:
 
 **Tempo / Delver Shell (~56 nonland + ~18 land):**
+
+[🃏 Delver of Secrets](https://scryfall.com/search?q=!%22Delver+of+Secrets%22) | [🃏 Murktide Regent](https://scryfall.com/search?q=!%22Murktide+Regent%22) | [🃏 Stoneforge Mystic](https://scryfall.com/search?q=!%22Stoneforge+Mystic%22)
+
 - 8-12 threats (Delver, Murktide, Bowmasters)
 - 8 cantrips (4 Brainstorm, 4 Ponder)
 - 4 Force of Will
@@ -220,6 +235,11 @@ For aggressive decks: **"Every turn you wait is a turn they draw an answer."**
 | Mox Diamond | $400-500 | Reserved List |
 
 ### Budget Substitutions
+
+Expensive staples vs. their budget replacements:
+
+[🃏 Underground Sea](https://scryfall.com/search?q=!%22Underground+Sea%22) vs. [🃏 Watery Grave](https://scryfall.com/search?q=!%22Watery+Grave%22) | [🃏 Force of Will](https://scryfall.com/search?q=!%22Force+of+Will%22) vs. [🃏 Force of Negation](https://scryfall.com/search?q=!%22Force+of+Negation%22)
+
 | Expensive Card | Budget Alternative | Trade-off |
 |----------------|-------------------|-----------|
 | Dual lands | Shock lands (Watery Grave, etc.) | 2 life per untapped use. Real cost in aggressive matchups. |
