@@ -145,3 +145,185 @@ Legacy archetypes exist in a rough metagame triangle (from Reid Duke):
 - **Combo** beats **Fair Nonblue** (no free countermagic means combo goes off unimpeded)
 
 This is a simplification — individual matchups vary greatly — but it captures the macro-level strategic dynamics that drive Legacy metagame shifts.
+
+## How Legacy Games Play Out
+
+### The Typical Turn Sequence
+
+**Turn 0 (Before the game starts)**:
+- Decide who goes first (play vs. draw)
+- Draw opening hand of 7 cards
+- London Mulligan: put hand back, draw 7 again, put 1 card on bottom. Repeat if needed.
+- Legacy mulligan decisions are critical — knowing whether a hand is keepable requires deep format knowledge
+- Some decks (Leyline of the Void, Chancellor of the Annex) have "turn 0" effects
+
+**Turn 1 — The Most Important Turn**:
+Legacy's power level means turn 1 often defines the game:
+- **Combo**: Oops! All Spells can win. Storm can set up. Reanimator can cheat in a creature.
+- **Tempo**: Delver of Secrets, Thoughtseize + Daze backup, or Wasteland an opponent's land.
+- **Prison**: Ancient Tomb → Chalice of the Void on 1 locks out cantrips.
+- **Fair**: Play a fetchland, pass. Represent Brainstorm or Force of Will.
+
+**Turns 2-3 — The Critical Window**:
+- Combo decks that didn't win turn 1 are trying to go off now
+- Tempo decks deploy their main threats (Murktide Regent, Orcish Bowmasters)
+- Control decks establish card advantage (Jace, Up the Beanstalk)
+- Prison decks add more locks (Blood Moon, Trinisphere)
+
+**Turns 4+ — The Grind**:
+- If the game goes this long, it usually favors control and midrange strategies
+- Combo decks that haven't won yet are likely struggling
+- Resource management becomes critical — who has more cards? More mana? Board presence?
+
+### Key Strategic Concepts
+
+**Tempo**: The concept of "time" as a resource. A tempo play gains you a turn while costing your opponent one. Daze is the purest tempo card — it counters a spell for free, but the opponent can just pay 1 more mana next turn. You win by converting that time advantage into damage.
+
+**Card Advantage**: Having access to more cards than your opponent. Brainstorm + fetchland effectively draws 1 extra card (you keep the best 1, shuffle away 2 bad ones). Ancestral Vision, Sylvan Library, and Uro all generate raw card advantage.
+
+**Virtual Card Advantage**: Making a card in the opponent's hand useless. Chalice of the Void on 1 blanks every 1-mana spell in their hand. Blood Moon turns off every nonbasic land. These effects can be worth multiple cards without actually drawing you anything.
+
+**Mana Denial**: Preventing the opponent from casting spells by destroying or taxing their mana. Wasteland + Daze is the classic combination. Lands takes this to the extreme with Wasteland recursion via Life from the Loam. Rishadan Port taps a land during upkeep so they can never use it.
+
+**Free Spells**: Cards that cost 0 mana to cast (by paying an alternative cost). Force of Will (exile a blue card + 1 life), Daze (return an Island), Force of Negation, Solitude, Endurance, Grief, Fury. These break the fundamental rule of MTG that spells require mana, enabling interaction even when tapped out.
+
+**Storm Count**: The number of spells cast in a turn. Tendrils of Agony and Empty the Warrens copy themselves for each prior spell. Storm decks spend their turn casting rituals (Dark Ritual, Rite of Flame, Lion's Eye Diamond) to build a lethal count before casting the finisher.
+
+## The Complete Ban List
+
+### Power Nine (All Banned)
+| Card | Why |
+|------|-----|
+| Black Lotus | 3 mana for free. The most powerful card ever printed. |
+| Ancestral Recall | Draw 3 cards for U. Absurdly efficient. |
+| Time Walk | Take an extra turn for 1U. Trivially broken. |
+| Mox Sapphire, Mox Jet, Mox Ruby, Mox Pearl, Mox Emerald | Free mana. Each one is a free land drop. |
+| Timetwister | Refill both hands for 3 mana. Combo enabler. |
+
+### Other Vintage-Legal Cards Banned in Legacy
+| Card | Why |
+|------|-----|
+| Sol Ring | 2 mana for 1 mana on turn 1. Too much acceleration. |
+| Mana Crypt | Same as Sol Ring but free. |
+| Mana Vault | 3 mana on turn 1 for 1 mana. |
+| Mana Drain | Counterspell that gives you mana. |
+| Mishra's Workshop | 3 mana for artifacts. Enables turn 1 Trinisphere/Chalice. |
+| Library of Alexandria | Draw extra card every turn when hand is full. |
+| Bazaar of Baghdad | Draw 2 discard 3 for free — enables Dredge. |
+| Tolarian Academy | Taps for mana equal to artifacts you control. |
+| Balance | 2-mana sweeper that equalizes everything. |
+| Channel | Convert life to mana. Turn 1 Emrakul. |
+| Demonic Tutor / Vampiric Tutor / Imperial Seal | Tutors too efficient for the format. |
+| Necropotence / Yawgmoth's Bargain / Yawgmoth's Will | Card advantage engines too powerful. |
+| Tinker | 3 mana, tutor any artifact into play. |
+| Fastbond | Play unlimited lands per turn. |
+| Strip Mine | Wasteland but hits basics too. |
+| Wheel of Fortune / Windfall / Memory Jar | Refill-hand effects enable combo. |
+
+### Legacy-Specific Bans (Cards Legal in Vintage but Banned in Legacy)
+| Card | Banned | Why |
+|------|--------|-----|
+| Sensei's Divining Top | April 2017 | Miracles at 15%+. Top + Counterbalance too slow to play against (time limit issues). |
+| Deathrite Shaman | July 2018 | 1-mana planeswalker. Enabled 4-color piles, no deckbuilding cost. |
+| Gitaxian Probe | July 2018 | Free information + free spell for storm count. |
+| Wrenn and Six | Nov 2019 | Recurring Wasteland every turn. RUG Delver too dominant. |
+| Arcum's Astrolabe | June 2020 | Enabled 4-5 color decks with no mana base cost. |
+| Underworld Breach | March 2020 | Infinite combo too easy to assemble. |
+| Ragavan, Nimble Pilferer | 2022 | Turn 1 threat that generates mana + cards. UR Delver too dominant. |
+| Oko, Thief of Crowns | 2020 | 3-mana planeswalker that handles any permanent. |
+| Expressive Iteration | March 2023 | 2-mana card advantage too efficient in Delver. |
+| Dreadhorde Arcanist | 2020 | Recurring free spells from graveyard. |
+| Grief | 2024 | Turn 0 hand disruption + Scam strategies too oppressive. |
+| Nadu, Winged Wisdom | 2024 | Combo too consistent and fast. |
+| Psychic Frog | 2025 | Too efficient as a threat in UB tempo. |
+| Entomb | Nov 2025 | Reanimator too consistent. Turn 1 Entomb → Reanimate = game over. |
+| White Plume Adventurer | 2023 | Initiative mechanic too powerful when cheated in early. |
+| Lurrus of the Dream-Den | 2020 | Companion mechanic broke deckbuilding constraints. |
+
+### Categorical Bans
+- All **Conspiracy** cards (designed for draft, not constructed)
+- All **ante** cards (gambling, not legal in tournaments)
+- All cards that bring **stickers** or **Attractions** into the game (Un-set mechanics)
+- Cards with **culturally offensive** art, text, or names
+
+## Understanding the Mana Base
+
+### The Dual Lands
+The 10 original dual lands are the foundation of Legacy mana bases:
+
+| Land | Colors | Primary Decks |
+|------|--------|---------------|
+| Underground Sea | UB | Dimir Tempo, Doomsday, Storm |
+| Volcanic Island | UR | Izzet Delver, Sneak and Show |
+| Tropical Island | UG | Infect, Bant, RUG builds |
+| Tundra | UW | Miracles, Stoneblade, D&T splash |
+| Bayou | BG | Nic Fit, Elves, BUG builds |
+| Badlands | BR | Reanimator, Rakdos, Mardu |
+| Plateau | RW | Painter, Boros Initiative |
+| Scrubland | WB | Death and Taxes, Deadguy Ale |
+| Savannah | WG | Maverick, Enchantress |
+| Taiga | RG | Lands, Punishing Fire builds |
+
+**Why they matter**: Dual lands enter untapped and produce two colors with zero drawback. No other land in Magic does this. Fetchlands (Polluted Delta, Scalding Tarn, etc.) can search for them, providing perfect mana fixing.
+
+### Fetchland-Dual Interactions
+The 10 fetchlands each find two basic land types. Since duals have basic land types (Underground Sea is an "Island Swamp"), fetchlands find duals too:
+
+- **Polluted Delta** (Island/Swamp): Finds Underground Sea, Volcanic Island, Tropical Island, Tundra, Bayou, Badlands + basic Island/Swamp
+- **Scalding Tarn** (Mountain/Island): Finds Volcanic Island, Underground Sea, Tropical Island, Tundra, Badlands, Plateau + basics
+- **Misty Rainforest** (Forest/Island): Finds Tropical Island, Underground Sea, Volcanic Island, Tundra, Bayou, Savannah + basics
+
+This is why fetchlands + duals create such flexible mana bases — one fetchland might access 6+ different dual lands.
+
+### Mana Denial Tools
+| Card | What It Does | How to Play Around It |
+|------|-------------|----------------------|
+| Wasteland | Destroy target nonbasic land | Fetch basic lands. Run 2-4 basics. |
+| Blood Moon | All nonbasic lands become Mountains | Fetch basics before it resolves. Keep fetchlands uncracked. |
+| Back to Basics | Nonbasic lands don't untap | Same as Blood Moon. Heavy basic count helps. |
+| Daze | Counter unless they pay 1 (you return an Island) | Play into it with extra mana. Count their Islands. |
+| Rishadan Port | Tap target land during upkeep | Play extra lands. Save critical plays for after upkeep. |
+| Thalia, Guardian of Thraben | Noncreature spells cost 1 more | Removal priority. Adjust sequencing for the tax. |
+
+## Common Play Patterns
+
+### The Brainstorm Lock
+Brainstorm without a fetchland can "lock" you — you put 2 bad cards on top and now have to draw them. Always have a shuffle effect (fetchland, Ponder) available before casting Brainstorm if possible. The best Brainstorm patterns:
+1. Cast Brainstorm, see 3 new cards
+2. Put 2 unwanted cards on top
+3. Crack a fetchland to shuffle them away
+4. You effectively drew the best card of 4 and shuffled 2 bad ones into your deck
+
+### The Daze Check
+When an opponent plays a spell and leaves 1 mana open, they might have Daze. When they tap out? They definitely don't. Experienced players "Daze check" by leading with the less important spell first. If it resolves, the opponent spent their Daze on the wrong thing. If it gets Dazed, your important spell resolves next turn.
+
+### The Force of Will Decision
+Force of Will costs you 2 cards (Force + a blue card). This means you should only Force spells that would otherwise cost you the game. Don't Force a Tarmogoyf if you can just block it. Force the Show and Tell that would put Emrakul into play. Learning when to Force and when to hold is one of the most important Legacy skills.
+
+### Wasteland Sequencing
+With Wasteland in your deck, the question is: when do you use it?
+- **Against greedy mana bases** (3+ colors): Wasteland early to cut them off a color
+- **Against 1-2 color decks**: Save it for their important utility land (Urza's Saga, Dark Depths, Karakas)
+- **With Daze**: Wasteland their land, then Daze their spell — they can't pay the 1 mana because you just destroyed their land
+
+## Glossary of Legacy-Specific Terms
+
+| Term | Meaning |
+|------|---------|
+| **Bolt the Bird** | Kill the mana creature immediately (don't let them accelerate) |
+| **Cantrip** | A spell that draws a card as part of its effect (Brainstorm, Ponder) |
+| **Going off** | When a combo deck executes its winning combo turn |
+| **Goldfish** | Test a deck by playing solitaire (no opponent) |
+| **The Jace test** | "Does this creature die to Jace bouncing it?" (4+ toughness matters) |
+| **Pitch spell** | A spell with an alternative cost of exiling a card (Force of Will, Solitude) |
+| **Surgical** | Target and remove all copies of a card from the game |
+| **Chalice on 1** | Chalice of the Void with 1 counter — counters all 1-mana spells |
+| **Fetchland** | Land that sacrifices to search for a basic land type |
+| **Dual** | Original dual lands from Alpha/Beta/Unlimited/Revised |
+| **EOT** | "End of turn" — when instant-speed plays typically happen |
+| **FoW** | Force of Will |
+| **Mise** | To get lucky, or to luckily win |
+| **Punt** | To make a mistake that costs you the game |
+| **Scoop** | Concede the game |
+| **SB** | Sideboard |
+| **Wasteland lock** | Recurring Wasteland to destroy all opponent's lands |
