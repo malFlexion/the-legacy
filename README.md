@@ -53,11 +53,13 @@ the_legacy/
   data/
     comprehensive-rules.txt    # Full MTG Comprehensive Rules (Feb 2026, ~943KB)
     scryfall-cards.json         # Complete Scryfall card database (~508MB)
-    mtg-slang.json              # 226-entry MTG slang dictionary
-    legacy-deck-history.json    # 54 Legacy archetypes with decklists, history, meta data
-    legacy-basics.md            # Legacy format guide
-    deckbuilding-guide.md       # Deckbuilding principles (Reid Duke)
-    legacy-analysis.md          # Meta analysis from MTGTop8, MTGGoldfish, etc.
+    mtg-slang.md                # 346-entry MTG slang dictionary (5 categories)
+    legacy-deck-history.md      # 54 archetypes + 420 variant index with decklists, history, meta data
+    archetype-guide.md          # 32 parent archetypes, 200+ variants with Scryfall links
+    legacy-basics.md            # Legacy format guide (ban list, play patterns, glossary)
+    deckbuilding-guide.md       # Deckbuilding principles (Reid Duke) with card images
+    legacy-analysis.md          # Meta analysis with matchup/hate matrices, meta evolution
+    scryfall-cards.json         # Scryfall bulk data (508MB, gitignored — download separately)
   notes/
     assignment-00.md ... assignment-11.md   # Course assignment notes
     chapter-01.md ... chapter-12.md         # Book chapter notes

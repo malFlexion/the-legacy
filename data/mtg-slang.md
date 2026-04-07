@@ -1,5 +1,7 @@
 # MTG Legacy Slang and Terminology
 
+> **See also**: [Legacy Basics](legacy-basics.md) | [Meta Analysis](legacy-analysis.md) | [Deckbuilding Guide](deckbuilding-guide.md) | [Archetype Guide](archetype-guide.md) | [Deck History & Variant Index](legacy-deck-history.md)
+
 A comprehensive glossary of Magic: The Gathering terminology, organized by category, with emphasis on Legacy format.
 
 ## Table of Contents

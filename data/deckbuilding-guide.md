@@ -1,5 +1,7 @@
 # Legacy Deckbuilding Guide
 
+> **See also**: [Legacy Basics](legacy-basics.md) | [Meta Analysis](legacy-analysis.md) | [Archetype Guide](archetype-guide.md) | [Deck History & Variant Index](legacy-deck-history.md) | [MTG Slang](mtg-slang.md)
+
 *Based on Reid Duke's articles on TCGPlayer and Ultimate Guard, supplemented with format-specific principles.*
 
 ## Philosophy

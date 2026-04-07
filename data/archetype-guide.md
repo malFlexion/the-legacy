@@ -1,6 +1,8 @@
-# The Legacy Archetype Guide - Part 1
+# The Legacy Archetype Guide
 
-> A comprehensive reference for Legacy's most played archetypes, their variants, matchups, and sideboard strategies. Metagame share data reflects 2025-2026 tournament results.
+> **See also**: [Legacy Basics](legacy-basics.md) | [Meta Analysis](legacy-analysis.md) | [Deckbuilding Guide](deckbuilding-guide.md) | [Deck History & Variant Index](legacy-deck-history.md) | [MTG Slang](mtg-slang.md)
+
+> A comprehensive reference for Legacy's 32 parent archetypes, 200+ variants, matchups, and sideboard strategies. Metagame share data reflects 2025-2026 tournament results.
 
 ---
 
