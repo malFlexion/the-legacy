@@ -20,19 +20,19 @@ Unlike Standard or Pioneer, cards never "rotate out" — once legal, a card stay
 
 ### Free Counterspells
 
-<img src="https://api.scryfall.com/cards/named?exact=Force+of+Will&format=image&version=normal" alt="Force of Will" width="325"> | <img src="https://api.scryfall.com/cards/named?exact=Daze&format=image&version=normal" alt="Daze" width="325">
+<img src="https://api.scryfall.com/cards/named?exact=Force+of+Will&format=image&version=normal&set=all" alt="Force of Will" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Daze&format=image&version=normal&set=nem" alt="Daze" width="217">
 
 Force of Will and Daze allow players to interact on turn 0-1 without mana. This creates a unique strategic dynamic where tapping out for a threat doesn't mean you're defenseless. Force of Will is in ~45% of all Legacy decks.
 
 ### The Brainstorm Format
 
-<img src="https://api.scryfall.com/cards/named?exact=Brainstorm&format=image&version=normal" alt="Brainstorm" width="325">
+<img src="https://api.scryfall.com/cards/named?exact=Brainstorm&format=image&version=normal&set=ice" alt="Brainstorm" width="217">
 
 Brainstorm + fetchlands is the defining card selection engine. Brainstorm lets you draw 3 and put 2 back, then a fetchland shuffles away the bad cards. This gives blue decks extraordinary consistency and card quality. Brainstorm is in ~43% of decks.
 
 ### Efficient Threats and Answers
 
-<img src="https://api.scryfall.com/cards/named?exact=Delver+of+Secrets&format=image&version=normal" alt="Delver of Secrets" width="325"> | <img src="https://api.scryfall.com/cards/named?exact=Wasteland&format=image&version=normal" alt="Wasteland" width="325"> | <img src="https://api.scryfall.com/cards/named?exact=Swords+to+Plowshares&format=image&version=normal" alt="Swords to Plowshares" width="325">
+<img src="https://api.scryfall.com/cards/named?exact=Delver+of+Secrets&format=image&version=normal&set=isd" alt="Delver of Secrets" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Wasteland&format=image&version=normal&set=tmp" alt="Wasteland" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Swords+to+Plowshares&format=image&version=normal&set=lea" alt="Swords to Plowshares" width="217">
 
 - One-mana threats: Delver of Secrets, Goblin Lackey, Mother of Runes
 - Zero-mana interaction: Force of Will, Force of Negation, Daze, Solitude
@@ -43,13 +43,17 @@ The format supports the full spectrum:
 - **Tempo**: Dimir Tempo, Izzet Delver — cheap threats + free countermagic + mana denial
 - **Combo**: Oops! All Spells (turn-1 kills), Storm, Sneak and Show, Doomsday
 
-<img src="https://api.scryfall.com/cards/named?exact=Show+and+Tell&format=image&version=normal" alt="Show and Tell" width="325"> | <img src="https://api.scryfall.com/cards/named?exact=Thassa%27s+Oracle&format=image&version=normal" alt="Thassa's Oracle" width="325">
+<img src="https://api.scryfall.com/cards/named?exact=Show+and+Tell&format=image&version=normal&set=usg" alt="Show and Tell" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Thassa%27s+Oracle&format=image&version=normal&set=thb" alt="Thassa's Oracle" width="217">
 
 - **Control**: Beanstalk Control, Jeskai Control, UW Miracles
-- **Prison/Stompy**: Eldrazi, Red Stompy, Affinity — <img src="https://api.scryfall.com/cards/named?exact=Chalice+of+the+Void&format=image&version=normal" alt="Chalice of the Void" width="325"> + Ancient Tomb locks
+
+<img src="https://api.scryfall.com/cards/named?exact=Chalice+of+the+Void&format=image&version=normal&set=mrd" alt="Chalice of the Void" width="217">
+
+- **Prison/Stompy**: Eldrazi, Red Stompy, Affinity — Chalice of the Void + Ancient Tomb locks
 - **Midrange**: Ocelot Pride Midrange, Jund — value-oriented and grindy
 
-<img src="https://api.scryfall.com/cards/named?exact=Exploration&format=image&version=normal" alt="Exploration" width="325"> | <img src="https://api.scryfall.com/cards/named?exact=Life+from+the+Loam&format=image&version=normal" alt="Life from the Loam" width="325">
+<img src="https://api.scryfall.com/cards/named?exact=Exploration&format=image&version=normal&set=usg" alt="Exploration" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Life+from+the+Loam&format=image&version=normal&set=rav" alt="Life from the Loam" width="217">
+
 - **Land-based**: Lands — unique strategy using Exploration, Life from the Loam, and land-based win conditions
 - **Tribal**: Goblins, Elves, Merfolk — synergy-driven creature strategies
 
@@ -60,7 +64,7 @@ Dual lands (Underground Sea, Volcanic Island, Tundra, etc.) are on the Reserved 
 
 ### Top Spells (by % of decks playing them)
 
-<img src="https://api.scryfall.com/cards/named?exact=Ponder&format=image&version=normal" alt="Ponder" width="325">
+<img src="https://api.scryfall.com/cards/named?exact=Ponder&format=image&version=normal&set=lrw" alt="Ponder" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Lotus+Petal&format=image&version=normal&set=tmp" alt="Lotus Petal" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Thoughtseize&format=image&version=normal&set=lrw" alt="Thoughtseize" width="217">
 
 | Card | % Decks | Role |
 |------|---------|------|
@@ -68,9 +72,6 @@ Dual lands (Underground Sea, Volcanic Island, Tundra, etc.) are on the Reserved 
 | Thoughtseize | 43% | 1-mana hand disruption |
 | Brainstorm | 43% | Best cantrip ever printed (with fetchlands) |
 | Lotus Petal | 41% | Free mana for combo and tempo |
-
-<img src="https://api.scryfall.com/cards/named?exact=Lotus+Petal&format=image&version=normal" alt="Lotus Petal" width="325"> | <img src="https://api.scryfall.com/cards/named?exact=Thoughtseize&format=image&version=normal" alt="Thoughtseize" width="325">
-
 | Ponder | 38% | Powerful cantrip paired with fetchlands |
 | Leyline of the Void | 36% | Graveyard hate (sideboard staple) |
 | Force of Negation | 35% | Second free counterspell |
@@ -79,7 +80,7 @@ Dual lands (Underground Sea, Volcanic Island, Tundra, etc.) are on the Reserved 
 
 ### Top Creatures
 
-<img src="https://api.scryfall.com/cards/named?exact=Orcish+Bowmasters&format=image&version=normal" alt="Orcish Bowmasters" width="325"> | <img src="https://api.scryfall.com/cards/named?exact=Murktide+Regent&format=image&version=normal" alt="Murktide Regent" width="325">
+<img src="https://api.scryfall.com/cards/named?exact=Orcish+Bowmasters&format=image&version=normal" alt="Orcish Bowmasters" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Murktide+Regent&format=image&version=normal" alt="Murktide Regent" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Emrakul%2C+the+Aeons+Torn&format=image&version=normal&set=roe" alt="Emrakul, the Aeons Torn" width="217">
 
 | Card | % Decks | Role |
 |------|---------|------|
@@ -89,11 +90,9 @@ Dual lands (Underground Sea, Volcanic Island, Tundra, etc.) are on the Reserved 
 | Barrowgoyf | 22% | Efficient beater that grows with card types in graveyards |
 | Emrakul, the Aeons Torn | 15% | The premier "cheat into play" finisher |
 
-<img src="https://api.scryfall.com/cards/named?exact=Emrakul%2C+the+Aeons+Torn&format=image&version=normal" alt="Emrakul, the Aeons Torn" width="325">
-
 ### Top Lands
 
-<img src="https://api.scryfall.com/cards/named?exact=Polluted+Delta&format=image&version=normal" alt="Polluted Delta" width="325"> | <img src="https://api.scryfall.com/cards/named?exact=Ancient+Tomb&format=image&version=normal" alt="Ancient Tomb" width="325"> | <img src="https://api.scryfall.com/cards/named?exact=Underground+Sea&format=image&version=normal" alt="Underground Sea" width="325">
+<img src="https://api.scryfall.com/cards/named?exact=Polluted+Delta&format=image&version=normal&set=ons" alt="Polluted Delta" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Ancient+Tomb&format=image&version=normal&set=tmp" alt="Ancient Tomb" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Underground+Sea&format=image&version=normal&set=lea" alt="Underground Sea" width="217">
 
 | Card | % Decks | Role |
 |------|---------|------|
@@ -126,7 +125,8 @@ The March 2026 B&R announcement made **no changes**, citing balanced metagame he
 
 Legacy is one of the most expensive paper formats due to Reserved List cards:
 
-<img src="https://api.scryfall.com/cards/named?exact=Mox+Diamond&format=image&version=normal" alt="Mox Diamond" width="325">
+<img src="https://api.scryfall.com/cards/named?exact=Mox+Diamond&format=image&version=normal&set=sth" alt="Mox Diamond" width="217">
+
 - **Budget option**: Oops! All Spells (~$1,100), Burn (~$1,500)
 - **Mid-range**: Most competitive decks cost $3,000-$5,000
 - **Expensive**: Lands (~$8,300), 4-Color Control (~$6,000+)
@@ -141,13 +141,13 @@ Legacy is one of the most expensive paper formats due to Reserved List cards:
 
 ## History Highlights
 
+<img src="https://api.scryfall.com/cards/named?exact=Delver+of+Secrets&set=isd&format=image&version=normal" alt="Delver of Secrets" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Treasure+Cruise&set=ktk&format=image&version=normal" alt="Treasure Cruise" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Wrenn+and+Six&set=mh1&format=image&version=normal" alt="Wrenn and Six" width="217">
+
 | Year | Event |
 |------|-------|
 | 2004-2006 | Legacy created with independent ban list (split from Vintage) |
 | 2005 | First Legacy Grand Prix (GP Philadelphia) |
 | 2011 | Mental Misstep banned. Innistrad gives Delver of Secrets, Snapcaster |
-
-<img src="https://api.scryfall.com/cards/named?exact=Treasure+Cruise&format=image&version=normal" alt="Treasure Cruise" width="325"> | <img src="https://api.scryfall.com/cards/named?exact=Wrenn+and+Six&format=image&version=normal" alt="Wrenn and Six" width="325">
 | 2012 | Miracles (Terminus + Sensei's Divining Top) becomes dominant |
 | 2013 | True-Name Nemesis and Deathrite Shaman everywhere |
 | 2014 | Treasure Cruise printed (banned January 2015) |
@@ -171,7 +171,7 @@ Legacy archetypes exist in a rough metagame triangle (from Reid Duke):
        /                                \
       / beats                    beats   \
      /                                    \
-  Combo  ←————— beats ————————  Fair Nonblue
+  Combo  <————— beats ————————  Fair Nonblue
   (Storm, S&T, Oops)           (D&T, Stompy, Jund)
 ```
 
@@ -203,7 +203,10 @@ Legacy's power level means turn 1 often defines the game:
 - Combo decks that didn't win turn 1 are trying to go off now
 - Tempo decks deploy their main threats (Murktide Regent, Orcish Bowmasters)
 - Control decks establish card advantage (Jace, Up the Beanstalk)
-- Prison decks add more locks (<img src="https://api.scryfall.com/cards/named?exact=Blood+Moon&format=image&version=normal" alt="Blood Moon" width="325">, Trinisphere)
+
+<img src="https://api.scryfall.com/cards/named?exact=Blood+Moon&format=image&version=normal&set=drk" alt="Blood Moon" width="217">
+
+- Prison decks add more locks (Blood Moon, Trinisphere)
 
 **Turns 4+ — The Grind**:
 - If the game goes this long, it usually favors control and midrange strategies
@@ -222,17 +225,17 @@ Legacy's power level means turn 1 often defines the game:
 
 **Free Spells**: Cards that cost 0 mana to cast (by paying an alternative cost). Force of Will (exile a blue card + 1 life), Daze (return an Island), Force of Negation, Solitude, Endurance, Grief, Fury. These break the fundamental rule of MTG that spells require mana, enabling interaction even when tapped out.
 
-<img src="https://api.scryfall.com/cards/named?exact=Solitude&format=image&version=normal" alt="Solitude" width="325"> | <img src="https://api.scryfall.com/cards/named?exact=Endurance&format=image&version=normal" alt="Endurance" width="325">
+<img src="https://api.scryfall.com/cards/named?exact=Solitude&format=image&version=normal" alt="Solitude" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Endurance&format=image&version=normal" alt="Endurance" width="217">
 
 **Storm Count**: The number of spells cast in a turn. Tendrils of Agony and Empty the Warrens copy themselves for each prior spell. Storm decks spend their turn casting rituals (Dark Ritual, Rite of Flame, Lion's Eye Diamond) to build a lethal count before casting the finisher.
 
-<img src="https://api.scryfall.com/cards/named?exact=Tendrils+of+Agony&format=image&version=normal" alt="Tendrils of Agony" width="325"> | <img src="https://api.scryfall.com/cards/named?exact=Dark+Ritual&format=image&version=normal" alt="Dark Ritual" width="325"> | <img src="https://api.scryfall.com/cards/named?exact=Lion%27s+Eye+Diamond&format=image&version=normal" alt="Lion's Eye Diamond" width="325">
+<img src="https://api.scryfall.com/cards/named?exact=Tendrils+of+Agony&format=image&version=normal&set=scg" alt="Tendrils of Agony" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Dark+Ritual&format=image&version=normal&set=lea" alt="Dark Ritual" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Lion%27s+Eye+Diamond&format=image&version=normal&set=mir" alt="Lion's Eye Diamond" width="217">
 
 ## The Complete Ban List
 
 ### Power Nine (All Banned)
 
-<img src="https://api.scryfall.com/cards/named?exact=Black+Lotus&format=image&version=normal" alt="Black Lotus" width="325"> | <img src="https://api.scryfall.com/cards/named?exact=Ancestral+Recall&format=image&version=normal" alt="Ancestral Recall" width="325">
+<img src="https://api.scryfall.com/cards/named?exact=Black+Lotus&format=image&version=normal&set=lea" alt="Black Lotus" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Ancestral+Recall&format=image&version=normal&set=lea" alt="Ancestral Recall" width="217">
 
 | Card | Why |
 |------|-----|
@@ -264,9 +267,9 @@ Legacy's power level means turn 1 often defines the game:
 
 ### Legacy-Specific Bans (Cards Legal in Vintage but Banned in Legacy)
 
-<img src="https://api.scryfall.com/cards/named?exact=Sensei%27s+Divining+Top&format=image&version=normal" alt="Sensei's Divining Top" width="325"> | <img src="https://api.scryfall.com/cards/named?exact=Deathrite+Shaman&format=image&version=normal" alt="Deathrite Shaman" width="325"> | <img src="https://api.scryfall.com/cards/named?exact=Ragavan%2C+Nimble+Pilferer&format=image&version=normal" alt="Ragavan, Nimble Pilferer" width="325">
+<img src="https://api.scryfall.com/cards/named?exact=Sensei%27s+Divining+Top&format=image&version=normal&set=chk" alt="Sensei's Divining Top" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Deathrite+Shaman&format=image&version=normal&set=rtr" alt="Deathrite Shaman" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Ragavan%2C+Nimble+Pilferer&format=image&version=normal" alt="Ragavan, Nimble Pilferer" width="217">
 
-<img src="https://api.scryfall.com/cards/named?exact=Entomb&format=image&version=normal" alt="Entomb" width="325">
+<img src="https://api.scryfall.com/cards/named?exact=Entomb&format=image&version=normal&set=ody" alt="Entomb" width="217">
 
 | Card | Banned | Why |
 |------|--------|-----|
@@ -298,7 +301,7 @@ Legacy's power level means turn 1 often defines the game:
 ### The Dual Lands
 The 10 original dual lands are the foundation of Legacy mana bases:
 
-<img src="https://api.scryfall.com/cards/named?exact=Volcanic+Island&format=image&version=normal" alt="Volcanic Island" width="325"> | <img src="https://api.scryfall.com/cards/named?exact=Tundra&format=image&version=normal" alt="Tundra" width="325"> | <img src="https://api.scryfall.com/cards/named?exact=Tropical+Island&format=image&version=normal" alt="Tropical Island" width="325">
+<img src="https://api.scryfall.com/cards/named?exact=Volcanic+Island&format=image&version=normal&set=lea" alt="Volcanic Island" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Tundra&format=image&version=normal&set=lea" alt="Tundra" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Tropical+Island&format=image&version=normal&set=lea" alt="Tropical Island" width="217">
 
 | Land | Colors | Primary Decks |
 |------|--------|---------------|
@@ -326,7 +329,7 @@ This is why fetchlands + duals create such flexible mana bases — one fetchland
 
 ### Mana Denial Tools
 
-<img src="https://api.scryfall.com/cards/named?exact=Rishadan+Port&format=image&version=normal" alt="Rishadan Port" width="325"> | <img src="https://api.scryfall.com/cards/named?exact=Thalia%2C+Guardian+of+Thraben&format=image&version=normal" alt="Thalia, Guardian of Thraben" width="325">
+<img src="https://api.scryfall.com/cards/named?exact=Rishadan+Port&format=image&version=normal&set=mmq" alt="Rishadan Port" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Thalia%2C+Guardian+of+Thraben&format=image&version=normal&set=dka" alt="Thalia, Guardian of Thraben" width="217">
 
 | Card | What It Does | How to Play Around It |
 |------|-------------|----------------------|
