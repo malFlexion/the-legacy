@@ -94,11 +94,11 @@ A healthy format has no deck consistently above 55%. Legacy currently meets this
 
 ### 1. Dimir Tempo Dominance
 
-<img src="https://api.scryfall.com/cards/named?exact=Orcish+Bowmasters&format=image&version=normal" alt="Orcish Bowmasters" width="325"> | <img src="https://api.scryfall.com/cards/named?exact=Tamiyo%2C+Inquisitive+Student&format=image&version=normal" alt="Tamiyo, Inquisitive Student" width="325">
+<img src="https://api.scryfall.com/cards/named?exact=Orcish+Bowmasters&format=image&version=normal" alt="Orcish Bowmasters" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Tamiyo%2C+Inquisitive+Student&format=image&version=normal" alt="Tamiyo, Inquisitive Student" width="217">
 
 At 14.6% meta share, Dimir Tempo is the most played deck by a wide margin. Built around Orcish Bowmasters, Tamiyo Inquisitive Student, Thoughtseize, and the blue cantrip/Force of Will shell. Its 52.7% win rate is strong but not oppressive — the format has answers.
 
-<img src="https://api.scryfall.com/cards/named?exact=Thoughtseize&format=image&version=normal" alt="Thoughtseize" width="325"> | <img src="https://api.scryfall.com/cards/named?exact=Force+of+Will&format=image&version=normal" alt="Force of Will" width="325">
+<img src="https://api.scryfall.com/cards/named?exact=Thoughtseize&format=image&version=normal&set=lrw" alt="Thoughtseize" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Force+of+Will&format=image&version=normal&set=all" alt="Force of Will" width="217">
 
 **Why it's good**: Bowmasters punishes opposing cantrips, Thoughtseize proactively strips combo pieces, and Force of Will handles everything else. The deck is flexible and has no truly terrible matchups.
 
@@ -106,9 +106,7 @@ At 14.6% meta share, Dimir Tempo is the most played deck by a wide margin. Built
 
 ### 2. Energy Cards Reshape Aggro
 
-<img src="https://api.scryfall.com/cards/named?exact=Ocelot+Pride&format=image&version=normal" alt="Ocelot Pride" width="325">
-
-<img src="https://api.scryfall.com/cards/named?exact=Guide+of+Souls&format=image&version=normal" alt="Guide of Souls" width="325">
+<img src="https://api.scryfall.com/cards/named?exact=Ocelot+Pride&format=image&version=normal" alt="Ocelot Pride" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Guide+of+Souls&format=image&version=normal" alt="Guide of Souls" width="217">
 
 MH3 energy cards (Ocelot Pride, Guide of Souls, Amped Raptor, Ajani Nacatl Pariah) created viable non-blue aggressive strategies. Ocelot Pride Midrange at 8.5% and Mardu Energy at ~3% represent a new class of Legacy deck that doesn't rely on Brainstorm.
 
@@ -124,7 +122,7 @@ The November 2025 Entomb ban removed BR Reanimator as a tier 1 strategy. The dec
 
 ### 5. Artifact Strategies Thriving
 
-<img src="https://api.scryfall.com/cards/named?exact=Chalice+of+the+Void&format=image&version=normal" alt="Chalice of the Void" width="325"> | <img src="https://api.scryfall.com/cards/named?exact=Urza's+Saga&format=image&version=normal" alt="Urza's Saga" width="325">
+<img src="https://api.scryfall.com/cards/named?exact=Chalice+of+the+Void&format=image&version=normal&set=mrd" alt="Chalice of the Void" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Urza's+Saga&format=image&version=normal" alt="Urza's Saga" width="217">
 
 Mystic Forge Combo (3.0%), Affinity Stompy (2.4%), Blue Artifacts (1.1%), Painter (4.1%), and 8-Cast variants collectively represent ~15% of the field. Urza's Saga is the glue card enabling many of these strategies. Chalice of the Void on 1 remains one of the best cards against the cantrip-heavy metagame.
 
@@ -135,7 +133,7 @@ Mystic Forge Combo (3.0%), Affinity Stompy (2.4%), Blue Artifacts (1.1%), Painte
 ### Most-Played Cards (Cross-Archetype)
 These cards appear in the highest percentage of decks, indicating format-defining status:
 
-<img src="https://api.scryfall.com/cards/named?exact=Wasteland&format=image&version=normal" alt="Wasteland" width="325"> | <img src="https://api.scryfall.com/cards/named?exact=Brainstorm&format=image&version=normal" alt="Brainstorm" width="325">
+<img src="https://api.scryfall.com/cards/named?exact=Wasteland&format=image&version=normal&set=tmp" alt="Wasteland" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Brainstorm&format=image&version=normal&set=ice" alt="Brainstorm" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Lotus+Petal&format=image&version=normal&set=tmp" alt="Lotus Petal" width="217">
 
 | Card | % Decks | Insight |
 |------|---------|---------|
@@ -152,6 +150,7 @@ These cards appear in the highest percentage of decks, indicating format-definin
 
 ### Cards Defining the Current Meta
 
+<img src="https://api.scryfall.com/cards/named?exact=Barrowgoyf&format=image&version=normal" alt="Barrowgoyf" width="217"> <img src="https://api.scryfall.com/cards/named?exact=The+One+Ring&format=image&version=normal" alt="The One Ring" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Murktide+Regent&format=image&version=normal" alt="Murktide Regent" width="217">
 
 | Card | Appeared | Impact |
 |------|----------|--------|
@@ -219,6 +218,9 @@ Sultai Aluren, Cradle Control, Dimir Tempo, Izzet Delver, Colorless, Mystic Forg
 ## Deep Dive: Tier 1 Archetypes
 
 ### Dimir Tempo (14.6% — The Deck to Beat)
+
+<img src="https://api.scryfall.com/cards/named?exact=Murktide+Regent&format=image&version=normal" alt="Murktide Regent" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Barrowgoyf&format=image&version=normal" alt="Barrowgoyf" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Daze&format=image&version=normal&set=nem" alt="Daze" width="217">
+
 **Core**: Orcish Bowmasters, Tamiyo Inquisitive Student, Murktide Regent, Barrowgoyf, Brainstorm, Ponder, Force of Will, Daze, Thoughtseize, Wasteland
 
 **Why it's #1**: The deck combines the best proactive disruption (Thoughtseize) with the best reactive disruption (Force of Will, Daze) and threats that generate value passively (Bowmasters punishes every cantrip the opponent casts). It has no auto-loss matchups and can adapt its role — aggro vs. combo, control vs. aggro.
@@ -233,6 +235,9 @@ Sultai Aluren, Cradle Control, Dimir Tempo, Izzet Delver, Colorless, Mystic Forg
 **Sideboard priorities**: Leyline of the Void (graveyard combo), Hydroblast (red decks, Pyroblast wars), Surgical Extraction (specific combo pieces), Toxic Deluge (go-wide strategies).
 
 ### Ocelot Pride Midrange (8.5% — The New Wave)
+
+<img src="https://api.scryfall.com/cards/named?exact=Ocelot+Pride&format=image&version=normal" alt="Ocelot Pride" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Guide+of+Souls&format=image&version=normal" alt="Guide of Souls" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Solitude&format=image&version=normal" alt="Solitude" width="217">
+
 **Core**: Ocelot Pride, Ajani Nacatl Pariah, Guide of Souls, Phelia Exuberant Shepherd, Swords to Plowshares, Solitude, Broadside Bombardiers
 
 **Why it's rising**: Energy cards from MH3 created a critical mass of efficient non-blue threats. The deck doesn't need Brainstorm or Force of Will — it wins through raw card quality and board presence. Guide of Souls generates life and energy, Ocelot Pride creates tokens on every non-combat damage trigger, and the deck snowballs quickly.
@@ -244,9 +249,10 @@ Sultai Aluren, Cradle Control, Dimir Tempo, Izzet Delver, Colorless, Mystic Forg
 - vs. Lands: Even. Can race the Depths combo with a fast enough board.
 
 ### Oops! All Spells (8.2% — The Fastest Combo)
-**Core**: Balustrade Spy, Undercity Informer, Lotus Petal, Dark Ritual, Elvish/Simian Spirit Guide, Pact of Negation, Force of Will, Narcomoeba, Dread Return, Thassa's Oracle
 
-<img src="https://api.scryfall.com/cards/named?exact=Balustrade+Spy&format=image&version=normal" alt="Balustrade Spy" width="325">
+<img src="https://api.scryfall.com/cards/named?exact=Balustrade+Spy&format=image&version=normal&set=gtc" alt="Balustrade Spy" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Thassa%27s+Oracle&format=image&version=normal&set=thb" alt="Thassa's Oracle" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Dark+Ritual&format=image&version=normal&set=lea" alt="Dark Ritual" width="217">
+
+**Core**: Balustrade Spy, Undercity Informer, Lotus Petal, Dark Ritual, Elvish/Simian Spirit Guide, Pact of Negation, Force of Will, Narcomoeba, Dread Return, Thassa's Oracle
 
 **How it works**: The deck runs zero lands. Cast Balustrade Spy or Undercity Informer targeting yourself — your entire library goes to the graveyard. Narcomoebas trigger, sacrifice them to Dread Return targeting Thassa's Oracle. With zero cards in library, Oracle wins the game. Can win turn 1.
 
@@ -260,9 +266,10 @@ Sultai Aluren, Cradle Control, Dimir Tempo, Izzet Delver, Colorless, Mystic Forg
 **Weaknesses**: Extremely vulnerable to Leyline of the Void (36% of decks play it), Surgical Extraction, and Force of Will. Mulligans aggressively and folds to its own inconsistency.
 
 ### Sneak and Show (6.7% — The Classic Big Mana Combo)
-**Core**: Show and Tell, Sneak Attack, Emrakul the Aeons Torn, Atraxa Grand Unifier, Force of Will, Brainstorm, Ponder, Lotus Petal, Ancient Tomb
 
-<img src="https://api.scryfall.com/cards/named?exact=Show+and+Tell&format=image&version=normal" alt="Show and Tell" width="325"> | <img src="https://api.scryfall.com/cards/named?exact=Emrakul%2C+the+Aeons+Torn&format=image&version=normal" alt="Emrakul, the Aeons Torn" width="325">
+<img src="https://api.scryfall.com/cards/named?exact=Show+and+Tell&format=image&version=normal&set=usg" alt="Show and Tell" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Emrakul%2C+the+Aeons+Torn&format=image&version=normal&set=roe" alt="Emrakul, the Aeons Torn" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Ancient+Tomb&format=image&version=normal&set=tmp" alt="Ancient Tomb" width="217">
+
+**Core**: Show and Tell, Sneak Attack, Emrakul the Aeons Torn, Atraxa Grand Unifier, Force of Will, Brainstorm, Ponder, Lotus Petal, Ancient Tomb
 
 **How it works**: Show and Tell puts any permanent into play for 3 mana. Sneak Attack gives any creature haste for R. The targets are game-ending: Emrakul (15/15, flying, annihilator 6, extra turn) and Atraxa (7/7, draws 10+ cards on ETB). Either one typically wins the game immediately.
 
@@ -274,37 +281,37 @@ Sultai Aluren, Cradle Control, Dimir Tempo, Izzet Delver, Colorless, Mystic Forg
 
 ### Painter (4.1%)
 
-<img src="https://api.scryfall.com/cards/named?exact=Painter%27s+Servant&format=image&version=normal" alt="Painter's Servant" width="325"> | <img src="https://api.scryfall.com/cards/named?exact=Grindstone&format=image&version=normal" alt="Grindstone" width="325">
+<img src="https://api.scryfall.com/cards/named?exact=Painter%27s+Servant&format=image&version=normal&set=shm" alt="Painter's Servant" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Grindstone&format=image&version=normal&set=tmp" alt="Grindstone" width="217">
 
 Two-card combo: Painter's Servant (names a color) + Grindstone (mills 2 cards at a time, repeating if they share a color — they always do when everything is the named color). Wins by milling the opponent's entire library. Red Elemental Blast becomes unconditional removal/counterspell when everything is "blue." Backed by Goblin Welder and Goblin Engineer for artifact recursion. Ancient Tomb for acceleration.
 
 ### Lands (3.8%)
 
-<img src="https://api.scryfall.com/cards/named?exact=Life+from+the+Loam&format=image&version=normal" alt="Life from the Loam" width="325"> | <img src="https://api.scryfall.com/cards/named?exact=Dark+Depths&format=image&version=normal" alt="Dark Depths" width="325">
+<img src="https://api.scryfall.com/cards/named?exact=Life+from+the+Loam&format=image&version=normal&set=rav" alt="Life from the Loam" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Dark+Depths&format=image&version=normal&set=csp" alt="Dark Depths" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Exploration&format=image&version=normal&set=usg" alt="Exploration" width="217">
 
 The most unique deck in Legacy. Wins through land-based strategies: Life from the Loam + Wasteland locks opponents out of mana. Dark Depths + Thespian's Stage creates Marit Lage (a 20/20 indestructible token). Exploration and Mox Diamond enable explosive starts. Maze of Ith neutralizes attackers. Punishing Fire recurs from the graveyard with Grove of the Burnwillows. The deck plays almost entirely at instant speed using land abilities. Paper cost: $8,284 (The Tabernacle at Pendrell Vale alone is $5,000+).
 
 ### The EPIC Storm (3.5%)
 
-<img src="https://api.scryfall.com/cards/named?exact=Burning+Wish&format=image&version=normal" alt="Burning Wish" width="325">
+<img src="https://api.scryfall.com/cards/named?exact=Burning+Wish&format=image&version=normal&set=jud" alt="Burning Wish" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Lion%27s+Eye+Diamond&format=image&version=normal&set=mir" alt="Lion's Eye Diamond" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Tendrils+of+Agony&format=image&version=normal&set=scg" alt="Tendrils of Agony" width="217">
 
 Storm combo using Burning Wish (tutors sorceries from sideboard), Lion's Eye Diamond (3 mana at instant speed), Dark Ritual, and Rite of Flame to generate a lethal storm count. Finishes with Tendrils of Agony (each copy drains 2 life, with 10+ storm copies that's 20+ damage) or Empty the Warrens (20+ goblin tokens). More resilient than ANT variants due to Burning Wish's flexibility.
 
 ### Eldrazi (3.1%)
 
-<img src="https://api.scryfall.com/cards/named?exact=Thought-Knot+Seer&format=image&version=normal" alt="Thought-Knot Seer" width="325">
+<img src="https://api.scryfall.com/cards/named?exact=Thought-Knot+Seer&format=image&version=normal&set=ogw" alt="Thought-Knot Seer" width="217">
 
 Colorless prison-aggro using Ancient Tomb, City of Traitors, and Eldrazi Temple for fast mana. Deploys Chalice of the Void on 1 (locks out cantrips and most cheap spells), then follows with Thought-Knot Seer, Reality Smasher, and Endbringer. Kozilek's Command provides flexible disruption. Punishes blue cantrip decks hard but folds to combo that doesn't care about Chalice.
 
 ### Death and Taxes (2.0%)
 
-<img src="https://api.scryfall.com/cards/named?exact=Thalia%2C+Guardian+of+Thraben&format=image&version=normal" alt="Thalia, Guardian of Thraben" width="325">
+<img src="https://api.scryfall.com/cards/named?exact=Thalia%2C+Guardian+of+Thraben&format=image&version=normal&set=dka" alt="Thalia, Guardian of Thraben" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Stoneforge+Mystic&format=image&version=normal&set=wwk" alt="Stoneforge Mystic" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Rishadan+Port&format=image&version=normal&set=mmq" alt="Rishadan Port" width="217">
 
 White-based hatebear deck using Aether Vial to cheat creatures into play at instant speed. Thalia, Guardian of Thraben taxes noncreature spells. Flickerwisp and Skyclave Apparition handle problem permanents. Rishadan Port and Wasteland deny mana. Stoneforge Mystic fetches equipment (Batterskull, Kaldra Compleat). Current builds often splash black (Yorion companion) for Orcish Bowmasters and Plague Engineer.
 
 ### Doomsday (2.7%)
 
-<img src="https://api.scryfall.com/cards/named?exact=Thassa%27s+Oracle&format=image&version=normal" alt="Thassa's Oracle" width="325">
+<img src="https://api.scryfall.com/cards/named?exact=Doomsday&format=image&version=normal&set=wth" alt="Doomsday" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Ponder&format=image&version=normal&set=lrw" alt="Ponder" width="217">
 
 The most skill-intensive combo deck in Legacy. Resolving Doomsday (BBB, 3 mana) lets you search your library for 5 cards and stack them as your new library. You then draw through the pile to win with Thassa's Oracle (0 cards in library = win). The puzzle is constructing a pile that works through the opponent's disruption. Requires deep format knowledge to know what to play around.
 
@@ -342,7 +349,7 @@ Scale: +2 = very favorable, +1 = favorable, 0 = even, -1 = unfavorable, -2 = ver
 
 What hate cards target which decks:
 
-<img src="https://api.scryfall.com/cards/named?exact=Leyline+of+the+Void&format=image&version=normal" alt="Leyline of the Void" width="325"> | <img src="https://api.scryfall.com/cards/named?exact=Surgical+Extraction&format=image&version=normal" alt="Surgical Extraction" width="325"> | <img src="https://api.scryfall.com/cards/named?exact=Force+of+Vigor&format=image&version=normal" alt="Force of Vigor" width="325">
+<img src="https://api.scryfall.com/cards/named?exact=Leyline+of+the+Void&format=image&version=normal&set=gpt" alt="Leyline of the Void" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Surgical+Extraction&format=image&version=normal&set=nph" alt="Surgical Extraction" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Pyroblast&format=image&version=normal&set=ice" alt="Pyroblast" width="217">
 
 | Hate Card | Targets | % Decks Playing |
 |-----------|---------|-----------------|
@@ -367,7 +374,7 @@ What hate cards target which decks:
 
 **2011-2013: The First Golden Age**
 
-<img src="https://api.scryfall.com/cards/named?exact=Delver+of+Secrets&format=image&version=normal" alt="Delver of Secrets" width="325">
+<img src="https://api.scryfall.com/cards/named?exact=Delver+of+Secrets&format=image&version=normal&set=isd" alt="Delver of Secrets" width="217">
 
 - Dominated by RUG Delver, Miracles, and BUG Delver
 - Deathrite Shaman enabled 3-4 color fair decks
@@ -375,7 +382,7 @@ What hate cards target which decks:
 
 **2014-2016: Treasure Cruise and Eldrazi Winter**
 
-<img src="https://api.scryfall.com/cards/named?exact=Treasure+Cruise&format=image&version=normal" alt="Treasure Cruise" width="325">
+<img src="https://api.scryfall.com/cards/named?exact=Treasure+Cruise&format=image&version=normal" alt="Treasure Cruise" width="217">
 
 - Treasure Cruise briefly broke the format (banned Jan 2015)
 - Miracles peaked at ~15% meta share with Sensei's Divining Top + Counterbalance
@@ -388,7 +395,7 @@ What hate cards target which decks:
 
 **2019-2020: Modern Horizons 1 and Companion Era**
 
-<img src="https://api.scryfall.com/cards/named?exact=Wrenn+and+Six&format=image&version=normal" alt="Wrenn and Six" width="325">
+<img src="https://api.scryfall.com/cards/named?exact=Wrenn+and+Six&format=image&version=normal" alt="Wrenn and Six" width="217">
 
 - Wrenn and Six dominated RUG Delver (banned Nov 2019)
 - Underworld Breach combo (banned March 2020)
@@ -397,7 +404,7 @@ What hate cards target which decks:
 
 **2021-2022: Modern Horizons 2 Revolution**
 
-<img src="https://api.scryfall.com/cards/named?exact=Dragon%27s+Rage+Channeler&format=image&version=normal" alt="Dragon's Rage Channeler" width="325"> | <img src="https://api.scryfall.com/cards/named?exact=The+One+Ring&format=image&version=normal" alt="The One Ring" width="325">
+<img src="https://api.scryfall.com/cards/named?exact=Dragon%27s+Rage+Channeler&format=image&version=normal" alt="Dragon's Rage Channeler" width="217"> <img src="https://api.scryfall.com/cards/named?exact=The+One+Ring&format=image&version=normal" alt="The One Ring" width="217">
 
 - Dragon's Rage Channeler, Murktide Regent, Ragavan, Urza's Saga all entered at once
 - UR Delver became the best deck — Ragavan on turn 1, Murktide on turn 2-3
@@ -423,7 +430,7 @@ What hate cards target which decks:
 ### Underplayed but High Win-Rate Strategies
 Based on the data, these archetypes have competitive win rates but low meta shares — potential opportunities for brewers:
 
-<img src="https://api.scryfall.com/cards/named?exact=Aluren&format=image&version=normal" alt="Aluren" width="325"> | <img src="https://api.scryfall.com/cards/named?exact=Gaea%27s+Cradle&format=image&version=normal" alt="Gaea's Cradle" width="325">
+<img src="https://api.scryfall.com/cards/named?exact=Aluren&format=image&version=normal&set=tmp" alt="Aluren" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Gaea%27s+Cradle&format=image&version=normal&set=usg" alt="Gaea's Cradle" width="217">
 
 1. **Aluren (1.2%)**: Won the Legacy Showcase Qualifier on April 5, 2026. Combo-control hybrid that's hard to hate out. Low meta share means opponents aren't prepared.
 2. **Cradle Control (2.3%)**: Growing archetype using Gaea's Cradle for absurd mana generation. Green Sun's Zenith toolbox gives flexibility.
