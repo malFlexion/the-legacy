@@ -25,9 +25,7 @@ Today, Dimir Tempo (sometimes called "Shadow" or "Dimir Scam" depending on the t
 
 <img src="https://api.scryfall.com/cards/named?exact=Delver+of+Secrets&format=image&version=normal" alt="Delver of Secrets" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Psychic+Frog&format=image&version=normal" alt="Psychic Frog" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Murktide+Regent&format=image&version=normal" alt="Murktide Regent" width="217">
 
-[![Psychic Frog](https://cards.scryfall.io/normal/front/c/1/c15d3766-aad5-4e57-a8b4-fa9cee05e2da.jpg)](https://scryfall.com/search?q=!"Psychic+Frog")
-[![Murktide Regent](https://cards.scryfall.io/normal/front/2/0/20c4aae1-7571-4f69-970a-68c3b49353e7.jpg)](https://scryfall.com/search?q=!"Murktide+Regent")
-[![Force of Will](https://cards.scryfall.io/normal/front/8/9/89f612d6-7c59-4571-a4ff-a4b1233bfa6b.jpg)](https://scryfall.com/search?q=!"Force+of+Will")
+<img src="https://api.scryfall.com/cards/named?exact=Psychic+Frog&format=image&version=normal" alt="Psychic Frog" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Murktide+Regent&format=image&version=normal" alt="Murktide Regent" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Force+of+Will&format=image&version=normal&set=all" alt="Force of Will" width="217">
 
 | Card | Role |
 |------|------|
@@ -171,9 +169,7 @@ The archetype rose rapidly through 2025, with Ocelot Pride Midrange establishing
 
 <img src="https://api.scryfall.com/cards/named?exact=Ocelot+Pride&format=image&version=normal" alt="Ocelot Pride" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Guide+of+Souls&format=image&version=normal" alt="Guide of Souls" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Amped+Raptor&format=image&version=normal" alt="Amped Raptor" width="217">
 
-[![Ocelot Pride](https://cards.scryfall.io/normal/front/2/7/274dc16d-7d22-4564-bdff-32eaf3ffeab2.jpg)](https://scryfall.com/search?q=!"Ocelot+Pride")
-[![Guide of Souls](https://cards.scryfall.io/normal/front/1/4/14239391-d46d-4e62-b617-3d3586335891.jpg)](https://scryfall.com/search?q=!"Guide+of+Souls")
-[![Amped Raptor](https://cards.scryfall.io/normal/front/4/d/4d428891-7a89-4ea6-9153-78fb2a498083.jpg)](https://scryfall.com/search?q=!"Amped+Raptor")
+<img src="https://api.scryfall.com/cards/named?exact=Ocelot+Pride&format=image&version=normal" alt="Ocelot Pride" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Guide+of+Souls&format=image&version=normal" alt="Guide of Souls" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Amped+Raptor&format=image&version=normal" alt="Amped Raptor" width="217">
 
 | Card | Role |
 |------|------|
@@ -299,9 +295,7 @@ Show and Tell has been a Legacy staple since the early 2010s and remains one of 
 
 <img src="https://api.scryfall.com/cards/named?exact=Show+and+Tell&format=image&version=normal" alt="Show and Tell" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Emrakul%2C+the+Aeons+Torn&format=image&version=normal" alt="Emrakul, the Aeons Torn" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Omniscience&format=image&version=normal" alt="Omniscience" width="217">
 
-[![Show and Tell](https://cards.scryfall.io/normal/front/6/3/63993d28-2a40-4c66-8156-19d5f4407485.jpg)](https://scryfall.com/search?q=!"Show+and+Tell")
-[![Emrakul, the Aeons Torn](https://cards.scryfall.io/normal/front/2/4/249db4d4-2542-47ee-a216-e13ffbc2319c.jpg)](https://scryfall.com/search?q=!"Emrakul,+the+Aeons+Torn")
-[![Omniscience](https://cards.scryfall.io/normal/front/d/b/db534b4e-8bff-4924-baea-9988d195fb25.jpg)](https://scryfall.com/search?q=!"Omniscience")
+<img src="https://api.scryfall.com/cards/named?exact=Show+and+Tell&format=image&version=normal&set=usg" alt="Show and Tell" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Emrakul%2C+the+Aeons+Torn&format=image&version=normal" alt="Emrakul, the Aeons Torn" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Omniscience&format=image&version=normal&set=m13" alt="Omniscience" width="217">
 
 | Card | Role |
 |------|------|
@@ -402,9 +396,7 @@ These decks are the ultimate glass cannons: devastatingly fast but highly vulner
 
 <img src="https://api.scryfall.com/cards/named?exact=Balustrade+Spy&format=image&version=normal" alt="Balustrade Spy" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Undercity+Informer&format=image&version=normal" alt="Undercity Informer" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Thassa%27s+Oracle&format=image&version=normal" alt="Thassa's Oracle" width="217">
 
-[![Balustrade Spy](https://cards.scryfall.io/normal/front/d/2/d2ba8e77-24cf-4231-a6a0-40d1e88a12e7.jpg)](https://scryfall.com/search?q=!"Balustrade+Spy")
-[![Goblin Charbelcher](https://cards.scryfall.io/normal/front/2/4/240344ff-404d-4894-a6e9-4401cd68cf50.jpg)](https://scryfall.com/search?q=!"Goblin+Charbelcher")
-[![Thassa's Oracle](https://cards.scryfall.io/normal/front/7/2/726e8b29-13e9-4138-b6a9-d2a0d8188d1c.jpg)](https://scryfall.com/search?q=!"Thassa's+Oracle")
+<img src="https://api.scryfall.com/cards/named?exact=Balustrade+Spy&format=image&version=normal&set=gtc" alt="Balustrade Spy" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Goblin+Charbelcher&format=image&version=normal&set=mrd" alt="Goblin Charbelcher" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Thassa%27s+Oracle&format=image&version=normal" alt="Thassa's Oracle" width="217">
 
 | Card | Role |
 |------|------|
@@ -500,9 +492,7 @@ Storm rewards deep format knowledge -- knowing when to "go for it" versus when t
 
 <img src="https://api.scryfall.com/cards/named?exact=Tendrils+of+Agony&format=image&version=normal" alt="Tendrils of Agony" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Ad+Nauseam&format=image&version=normal" alt="Ad Nauseam" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Lion%27s+Eye+Diamond&format=image&version=normal" alt="Lion's Eye Diamond" width="217">
 
-[![Tendrils of Agony](https://cards.scryfall.io/normal/front/6/8/6886f311-ba21-4bba-b3ff-21f9afa25fba.jpg)](https://scryfall.com/search?q=!"Tendrils+of+Agony")
-[![Ad Nauseam](https://cards.scryfall.io/normal/front/a/9/a9f2c53e-ff99-4c02-9571-2f7b1f57a4f4.jpg)](https://scryfall.com/search?q=!"Ad+Nauseam")
-[![Lion's Eye Diamond](https://cards.scryfall.io/normal/front/2/5/2507b972-2072-45c1-ae9c-7232c3c42d60.jpg)](https://scryfall.com/search?q=!"Lion's+Eye+Diamond")
+<img src="https://api.scryfall.com/cards/named?exact=Tendrils+of+Agony&format=image&version=normal&set=scg" alt="Tendrils of Agony" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Ad+Nauseam&format=image&version=normal" alt="Ad Nauseam" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Lion%27s+Eye+Diamond&format=image&version=normal&set=mir" alt="Lion's Eye Diamond" width="217">
 
 | Card | Role |
 |------|------|
@@ -648,9 +638,7 @@ Beyond Beanstalk, Legacy control takes many forms: UW Miracles uses Counterbalan
 
 <img src="https://api.scryfall.com/cards/named?exact=Up+the+Beanstalk&format=image&version=normal" alt="Up the Beanstalk" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Leyline+Binding&format=image&version=normal" alt="Leyline Binding" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Terminus&format=image&version=normal" alt="Terminus" width="217">
 
-[![Up the Beanstalk](https://cards.scryfall.io/normal/front/2/d/2d5e991f-23b2-4db0-a452-7755571b545b.jpg)](https://scryfall.com/search?q=!"Up+the+Beanstalk")
-[![Leyline Binding](https://cards.scryfall.io/normal/front/3/c/3c3ac3dd-35db-447f-8674-37b4680a1ef7.jpg)](https://scryfall.com/search?q=!"Leyline+Binding")
-[![Terminus](https://cards.scryfall.io/normal/front/c/7/c726193f-e7bf-45b0-8571-b36f42ad65ad.jpg)](https://scryfall.com/search?q=!"Terminus")
+<img src="https://api.scryfall.com/cards/named?exact=Up+the+Beanstalk&format=image&version=normal" alt="Up the Beanstalk" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Leyline+Binding&format=image&version=normal" alt="Leyline Binding" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Terminus&format=image&version=normal" alt="Terminus" width="217">
 
 | Card | Role |
 |------|------|
@@ -838,9 +826,7 @@ Stoneblade's strength is its flexibility: the deck can play a controlling game a
 
 <img src="https://api.scryfall.com/cards/named?exact=Stoneforge+Mystic&format=image&version=normal" alt="Stoneforge Mystic" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Kaldra+Compleat&format=image&version=normal" alt="Kaldra Compleat" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Batterskull&format=image&version=normal" alt="Batterskull" width="217">
 
-[![Stoneforge Mystic](https://cards.scryfall.io/normal/front/4/d/4d3473d0-b507-4f02-bf0b-bb1a4e68e244.jpg)](https://scryfall.com/search?q=!"Stoneforge+Mystic")
-[![Kaldra Compleat](https://cards.scryfall.io/normal/front/8/7/87cc2855-6b14-44dd-a398-7dc2bbae081f.jpg)](https://scryfall.com/search?q=!"Kaldra+Compleat")
-[![Batterskull](https://cards.scryfall.io/normal/front/b/7/b7f16fdf-a3f5-462d-a64a-789571571b12.jpg)](https://scryfall.com/search?q=!"Batterskull")
+<img src="https://api.scryfall.com/cards/named?exact=Stoneforge+Mystic&format=image&version=normal&set=wwk" alt="Stoneforge Mystic" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Kaldra+Compleat&format=image&version=normal" alt="Kaldra Compleat" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Batterskull&format=image&version=normal" alt="Batterskull" width="217">
 
 | Card | Role |
 |------|------|
@@ -967,9 +953,7 @@ D&T has adapted to every metagame shift in Legacy's history, absorbing new hateb
 
 <img src="https://api.scryfall.com/cards/named?exact=Thalia%2C+Guardian+of+Thraben&format=image&version=normal" alt="Thalia, Guardian of Thraben" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Aether+Vial&format=image&version=normal" alt="Aether Vial" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Flickerwisp&format=image&version=normal" alt="Flickerwisp" width="217">
 
-[![Thalia, Guardian of Thraben](https://cards.scryfall.io/normal/front/c/9/c9f8b8fb-1cd8-450e-a1fe-892c65f2f7dc.jpg)](https://scryfall.com/search?q=!"Thalia,+Guardian+of+Thraben")
-[![Aether Vial](https://cards.scryfall.io/normal/front/1/1/11e8d2fd-b132-4807-9410-8edeffa519ed.jpg)](https://scryfall.com/search?q=!"Aether+Vial")
-[![Stoneforge Mystic](https://cards.scryfall.io/normal/front/4/d/4d3473d0-b507-4f02-bf0b-bb1a4e68e244.jpg)](https://scryfall.com/search?q=!"Stoneforge+Mystic")
+<img src="https://api.scryfall.com/cards/named?exact=Thalia%2C+Guardian+of+Thraben&format=image&version=normal" alt="Thalia, Guardian of Thraben" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Aether+Vial&format=image&version=normal&set=dst" alt="Aether Vial" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Stoneforge+Mystic&format=image&version=normal&set=wwk" alt="Stoneforge Mystic" width="217">
 
 | Card | Role |
 |------|------|
@@ -1100,9 +1084,7 @@ The red shell also provides Goblin Welder for artifact recursion, Pyroblast as m
 
 <img src="https://api.scryfall.com/cards/named?exact=Painter%27s+Servant&format=image&version=normal" alt="Painter's Servant" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Grindstone&format=image&version=normal" alt="Grindstone" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Imperial+Recruiter&format=image&version=normal" alt="Imperial Recruiter" width="217">
 
-[![Painter's Servant](https://cards.scryfall.io/normal/front/b/e/be407a81-b25a-4f5d-b0db-f45f03c30399.jpg)](https://scryfall.com/search?q=!"Painter's+Servant")
-[![Grindstone](https://cards.scryfall.io/normal/front/0/f/0f15505d-b32f-4b71-8b99-f27bc964c5a8.jpg)](https://scryfall.com/search?q=!"Grindstone")
-[![Imperial Recruiter](https://cards.scryfall.io/normal/front/0/5/05bd329b-5707-42fc-af1c-084cc604e805.jpg)](https://scryfall.com/search?q=!"Imperial+Recruiter")
+<img src="https://api.scryfall.com/cards/named?exact=Painter%27s+Servant&format=image&version=normal&set=shm" alt="Painter's Servant" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Grindstone&format=image&version=normal&set=tmp" alt="Grindstone" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Imperial+Recruiter&format=image&version=normal" alt="Imperial Recruiter" width="217">
 
 | Card | Role |
 |------|------|
@@ -1149,9 +1131,7 @@ The deck is exceptionally difficult to interact with using traditional means -- 
 
 <img src="https://api.scryfall.com/cards/named?exact=Life+from+the+Loam&format=image&version=normal" alt="Life from the Loam" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Dark+Depths&format=image&version=normal" alt="Dark Depths" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Thespian%27s+Stage&format=image&version=normal" alt="Thespian's Stage" width="217">
 
-[![Life from the Loam](https://cards.scryfall.io/normal/front/d/7/d7447c11-05a1-44e4-831a-0bacf97d447d.jpg)](https://scryfall.com/search?q=!"Life+from+the+Loam")
-[![Dark Depths](https://cards.scryfall.io/normal/front/0/0/00cb17a0-5a13-4f05-abf8-73f0f88f598a.jpg)](https://scryfall.com/search?q=!"Dark+Depths")
-[![Thespian's Stage](https://cards.scryfall.io/normal/front/2/6/269a926d-7788-4668-8bd8-7572dbf5f5eb.jpg)](https://scryfall.com/search?q=!"Thespian's+Stage")
+<img src="https://api.scryfall.com/cards/named?exact=Life+from+the+Loam&format=image&version=normal&set=rav" alt="Life from the Loam" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Dark+Depths&format=image&version=normal&set=csp" alt="Dark Depths" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Thespian%27s+Stage&format=image&version=normal" alt="Thespian's Stage" width="217">
 
 | Card | Role |
 |------|------|
@@ -1211,9 +1191,7 @@ Prison / Stompy decks exploit Legacy's reliance on cheap spells and nonbasic lan
 
 <img src="https://api.scryfall.com/cards/named?exact=Chalice+of+the+Void&format=image&version=normal" alt="Chalice of the Void" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Blood+Moon&format=image&version=normal" alt="Blood Moon" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Trinisphere&format=image&version=normal" alt="Trinisphere" width="217">
 
-[![Chalice of the Void](https://cards.scryfall.io/normal/front/1/f/1f0d2e8e-c8f2-4b31-a6ba-6c8e0064f709.jpg)](https://scryfall.com/search?q=!"Chalice+of+the+Void")
-[![Blood Moon](https://cards.scryfall.io/normal/front/d/0/d072e9ca-aae7-45dc-8025-3ce590bae63f.jpg)](https://scryfall.com/search?q=!"Blood+Moon")
-[![Ancient Tomb](https://cards.scryfall.io/normal/front/b/d/bd3d4b4b-cf31-4f89-8140-9650f6fc6d44.jpg)](https://scryfall.com/search?q=!"Ancient+Tomb")
+<img src="https://api.scryfall.com/cards/named?exact=Chalice+of+the+Void&format=image&version=normal&set=mrd" alt="Chalice of the Void" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Blood+Moon&format=image&version=normal" alt="Blood Moon" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Ancient+Tomb&format=image&version=normal&set=tmp" alt="Ancient Tomb" width="217">
 
 | Card | Role |
 |------|------|
@@ -1278,8 +1256,7 @@ Related artifact combo decks include Bomberman (Auriok Salvagers + Lion's Eye Di
 
 <img src="https://api.scryfall.com/cards/named?exact=Mystic+Forge&format=image&version=normal" alt="Mystic Forge" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Sensei%27s+Divining+Top&format=image&version=normal" alt="Sensei's Divining Top" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Karn%2C+the+Great+Creator&format=image&version=normal" alt="Karn, the Great Creator" width="217">
 
-[![Mystic Forge](https://cards.scryfall.io/normal/front/9/2/924a24e7-91b8-4571-a5b8-8b236553ea1e.jpg)](https://scryfall.com/search?q=!"Mystic+Forge")
-[![Karn, the Great Creator](https://cards.scryfall.io/normal/front/3/e/3ec0c0fb-1a4f-45f4-85b7-346a6d3ce2c5.jpg)](https://scryfall.com/search?q=!"Karn,+the+Great+Creator")
+<img src="https://api.scryfall.com/cards/named?exact=Mystic+Forge&format=image&version=normal" alt="Mystic Forge" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Karn%2C+the+Great+Creator&format=image&version=normal" alt="Karn, the Great Creator" width="217">
 
 | Card | Role |
 |------|------|
@@ -1331,9 +1308,7 @@ Reanimator aims to put a game-ending creature (Griselbrand, Archon of Cruelty, A
 
 <img src="https://api.scryfall.com/cards/named?exact=Griselbrand&format=image&version=normal" alt="Griselbrand" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Archon+of+Cruelty&format=image&version=normal" alt="Archon of Cruelty" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Atraxa%2C+Grand+Unifier&format=image&version=normal" alt="Atraxa, Grand Unifier" width="217">
 
-[![Griselbrand](https://cards.scryfall.io/normal/front/c/f/cf2a5c2e-7fe1-45eb-b01c-891ab961186f.jpg)](https://scryfall.com/search?q=!"Griselbrand")
-[![Entomb](https://cards.scryfall.io/normal/front/d/e/de4b2e07-8bed-47c3-bff2-05f980b3a7fc.jpg)](https://scryfall.com/search?q=!"Entomb")
-[![Reanimate](https://cards.scryfall.io/normal/front/d/2/d27c6aaa-289e-451e-8571-44f14e0bdd5d.jpg)](https://scryfall.com/search?q=!"Reanimate")
+<img src="https://api.scryfall.com/cards/named?exact=Griselbrand&format=image&version=normal" alt="Griselbrand" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Entomb&format=image&version=normal&set=ody" alt="Entomb" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Reanimate&format=image&version=normal&set=tmp" alt="Reanimate" width="217">
 
 | Card | Role |
 |------|------|
@@ -1390,8 +1365,7 @@ Necrodominance variants use the MH3 printing as an alternative card-advantage en
 
 <img src="https://api.scryfall.com/cards/named?exact=Doomsday&format=image&version=normal" alt="Doomsday" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Necrodominance&format=image&version=normal" alt="Necrodominance" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Street+Wraith&format=image&version=normal" alt="Street Wraith" width="217">
 
-[![Doomsday](https://cards.scryfall.io/normal/front/6/8/68c73755-9678-467a-abd5-f8dd1556a1a5.jpg)](https://scryfall.com/search?q=!"Doomsday")
-[![Thassa's Oracle](https://cards.scryfall.io/normal/front/7/2/726e8b29-13e9-4138-b6a9-d2a0d8188d1c.jpg)](https://scryfall.com/search?q=!"Thassa's+Oracle")
+<img src="https://api.scryfall.com/cards/named?exact=Doomsday&format=image&version=normal&set=wth" alt="Doomsday" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Thassa%27s+Oracle&format=image&version=normal" alt="Thassa's Oracle" width="217">
 
 | Card | Role |
 |------|------|
@@ -1445,8 +1419,7 @@ Pox strategies weaponize resource denial through cards like Smallpox (each playe
 
 <img src="https://api.scryfall.com/cards/named?exact=Smallpox&format=image&version=normal" alt="Smallpox" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Hymn+to+Tourach&format=image&version=normal" alt="Hymn to Tourach" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Liliana+of+the+Veil&format=image&version=normal" alt="Liliana of the Veil" width="217">
 
-[![Smallpox](https://cards.scryfall.io/normal/front/c/2/c28db9a4-6696-460b-a9d3-98f4a31abe75.jpg)](https://scryfall.com/search?q=!"Smallpox")
-[![Hymn to Tourach](https://cards.scryfall.io/normal/front/b/d/bd2c2874-cc80-45ee-8979-e8e277faa4fb.jpg)](https://scryfall.com/search?q=!"Hymn+to+Tourach")
+<img src="https://api.scryfall.com/cards/named?exact=Smallpox&format=image&version=normal&set=tsp" alt="Smallpox" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Hymn+to+Tourach&format=image&version=normal&set=fem" alt="Hymn to Tourach" width="217">
 
 | Card | Role |
 |------|------|
@@ -1504,8 +1477,7 @@ This broad category encompasses Legacy's green-based fair and semi-combo strateg
 
 <img src="https://api.scryfall.com/cards/named?exact=Green+Sun%27s+Zenith&format=image&version=normal" alt="Green Sun's Zenith" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Natural+Order&format=image&version=normal" alt="Natural Order" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Craterhoof+Behemoth&format=image&version=normal" alt="Craterhoof Behemoth" width="217">
 
-[![Green Sun's Zenith](https://cards.scryfall.io/normal/front/6/8/68b16228-2c33-4973-97f9-a6d5c2150823.jpg)](https://scryfall.com/search?q=!"Green+Sun's+Zenith")
-[![Natural Order](https://cards.scryfall.io/normal/front/b/f/bfe3329c-7faa-4925-b9d2-075a1ab27571.jpg)](https://scryfall.com/search?q=!"Natural+Order")
+<img src="https://api.scryfall.com/cards/named?exact=Green+Sun%27s+Zenith&format=image&version=normal&set=mbs" alt="Green Sun's Zenith" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Natural+Order&format=image&version=normal&set=vis" alt="Natural Order" width="217">
 
 | Card | Role |
 |------|------|
@@ -1578,8 +1550,7 @@ Cloudpost decks use the Locus lands (Cloudpost taps for mana equal to the number
 
 <img src="https://api.scryfall.com/cards/named?exact=Cloudpost&format=image&version=normal" alt="Cloudpost" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Glimmerpost&format=image&version=normal" alt="Glimmerpost" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Primeval+Titan&format=image&version=normal" alt="Primeval Titan" width="217">
 
-[![Cloudpost](https://cards.scryfall.io/normal/front/2/f/2f28ecdc-a4f0-4571-beba-01b49ef13c34.jpg)](https://scryfall.com/search?q=!"Cloudpost")
-[![Primeval Titan](https://cards.scryfall.io/normal/front/6/d/6d5537da-112e-4679-a113-b5d7ce32a66b.jpg)](https://scryfall.com/search?q=!"Primeval+Titan")
+<img src="https://api.scryfall.com/cards/named?exact=Cloudpost&format=image&version=normal&set=mrd" alt="Cloudpost" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Primeval+Titan&format=image&version=normal" alt="Primeval Titan" width="217">
 
 | Card | Role |
 |------|------|
@@ -1626,8 +1597,7 @@ Legacy supports several tribal strategies thanks to powerful lords and tribal-sp
 
 <img src="https://api.scryfall.com/cards/named?exact=Glimpse+of+Nature&format=image&version=normal" alt="Glimpse of Nature" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Goblin+Lackey&format=image&version=normal" alt="Goblin Lackey" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Cavern+of+Souls&format=image&version=normal" alt="Cavern of Souls" width="217">
 
-[![Glimpse of Nature](https://cards.scryfall.io/normal/front/1/d/1ddcd76b-e36a-4571-b8a7-beb3260dc1c2.jpg)](https://scryfall.com/search?q=!"Glimpse+of+Nature")
-[![Goblin Lackey](https://cards.scryfall.io/normal/front/3/0/30104836-1e9d-4571-be95-f0dc3c1f5f56.jpg)](https://scryfall.com/search?q=!"Goblin+Lackey")
+<img src="https://api.scryfall.com/cards/named?exact=Glimpse+of+Nature&format=image&version=normal&set=chk" alt="Glimpse of Nature" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Goblin+Lackey&format=image&version=normal&set=usg" alt="Goblin Lackey" width="217">
 
 | Card | Role |
 |------|------|
@@ -1683,7 +1653,7 @@ Aluren enables free casting of creatures with CMC 3 or less. Paired with creatur
 
 <img src="https://api.scryfall.com/cards/named?exact=Aluren&format=image&version=normal" alt="Aluren" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Acererak+the+Archlich&format=image&version=normal" alt="Acererak the Archlich" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Cavern+Harpy&format=image&version=normal" alt="Cavern Harpy" width="217">
 
-[![Aluren](https://cards.scryfall.io/normal/front/0/3/03b69c39-52d8-4571-a19f-045e497c77f1.jpg)](https://scryfall.com/search?q=!"Aluren")
+<img src="https://api.scryfall.com/cards/named?exact=Aluren&format=image&version=normal&set=tmp" alt="Aluren" width="217">
 
 | Card | Role |
 |------|------|
@@ -1721,7 +1691,7 @@ Food Chain exiles creatures to produce mana equal to their CMC +1, usable only f
 
 <img src="https://api.scryfall.com/cards/named?exact=Food+Chain&format=image&version=normal" alt="Food Chain" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Misthollow+Griffin&format=image&version=normal" alt="Misthollow Griffin" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Eternal+Scourge&format=image&version=normal" alt="Eternal Scourge" width="217">
 
-[![Food Chain](https://cards.scryfall.io/normal/front/1/8/18a1bb9e-006c-495e-8f99-d451183d2669.jpg)](https://scryfall.com/search?q=!"Food+Chain")
+<img src="https://api.scryfall.com/cards/named?exact=Food+Chain&format=image&version=normal&set=mmq" alt="Food Chain" width="217">
 
 | Card | Role |
 |------|------|
@@ -1753,8 +1723,7 @@ Infect aims to deal 10 poison counters in a single attack using Glistener Elf or
 
 <img src="https://api.scryfall.com/cards/named?exact=Glistener+Elf&format=image&version=normal" alt="Glistener Elf" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Blighted+Agent&format=image&version=normal" alt="Blighted Agent" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Invigorate&format=image&version=normal" alt="Invigorate" width="217">
 
-[![Glistener Elf](https://cards.scryfall.io/normal/front/8/b/8b94f4c6-b518-43b3-be52-e889d1f3ea38.jpg)](https://scryfall.com/search?q=!"Glistener+Elf")
-[![Invigorate](https://cards.scryfall.io/normal/front/e/0/e0899da3-7beb-4161-81a3-e2d694e5b8fd.jpg)](https://scryfall.com/search?q=!"Invigorate")
+<img src="https://api.scryfall.com/cards/named?exact=Glistener+Elf&format=image&version=normal" alt="Glistener Elf" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Invigorate&format=image&version=normal" alt="Invigorate" width="217">
 
 | Card | Role |
 |------|------|
@@ -1794,8 +1763,7 @@ Burn aims to point every spell at the opponent's face: Lightning Bolt, Chain Lig
 
 <img src="https://api.scryfall.com/cards/named?exact=Price+of+Progress&format=image&version=normal" alt="Price of Progress" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Goblin+Guide&format=image&version=normal" alt="Goblin Guide" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Eidolon+of+the+Great+Revel&format=image&version=normal" alt="Eidolon of the Great Revel" width="217">
 
-[![Price of Progress](https://cards.scryfall.io/normal/front/b/1/b1342144-7a15-438b-a848-3196238a79e8.jpg)](https://scryfall.com/search?q=!"Price+of+Progress")
-[![Goblin Guide](https://cards.scryfall.io/normal/front/3/c/3c0f5411-1571-4f56-9b21-1b72903d309d.jpg)](https://scryfall.com/search?q=!"Goblin+Guide")
+<img src="https://api.scryfall.com/cards/named?exact=Price+of+Progress&format=image&version=normal" alt="Price of Progress" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Goblin+Guide&format=image&version=normal" alt="Goblin Guide" width="217">
 
 | Card | Role |
 |------|------|
@@ -1828,8 +1796,7 @@ Dredge exploits the dredge mechanic (replace a draw with milling X cards and ret
 
 <img src="https://api.scryfall.com/cards/named?exact=Golgari+Grave-Troll&format=image&version=normal" alt="Golgari Grave-Troll" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Stinkweed+Imp&format=image&version=normal" alt="Stinkweed Imp" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Narcomoeba&format=image&version=normal" alt="Narcomoeba" width="217">
 
-[![Hogaak, Arisen Necropolis](https://cards.scryfall.io/normal/front/0/0/0049e68d-0caf-474f-9523-dad343f1250a.jpg)](https://scryfall.com/search?q=!"Hogaak,+Arisen+Necropolis")
-[![Bridge from Below](https://cards.scryfall.io/normal/front/3/f/3faaa657-8b02-41a2-8b99-c8c56f5c9cbf.jpg)](https://scryfall.com/search?q=!"Bridge+from+Below")
+<img src="https://api.scryfall.com/cards/named?exact=Hogaak%2C+Arisen+Necropolis&format=image&version=normal" alt="Hogaak, Arisen Necropolis" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Bridge+from+Below&format=image&version=normal" alt="Bridge from Below" width="217">
 
 | Card | Role |
 |------|------|
