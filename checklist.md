@@ -10,9 +10,9 @@
 - [x] Write Legacy basics guide → `data/legacy-basics.md`
 - [x] Write deckbuilding guide → `data/deckbuilding-guide.md`
 - [x] Write meta analysis → `data/legacy-analysis.md`
-- [ ] Chunk comprehensive rules by section and embed into vector DB
-- [ ] Build card name index from Scryfall data for fuzzy matching
-- [ ] Index meta data, deck history, and strategy content into vector DB
+- [x] Chunk comprehensive rules by section and embed into vector DB
+- [x] Build card name index from Scryfall data for fuzzy matching
+- [x] Index meta data, deck history, and strategy content into vector DB
 
 ## Phase 2: Model
 
