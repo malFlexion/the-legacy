@@ -25,8 +25,6 @@ Today, Dimir Tempo (sometimes called "Shadow" or "Dimir Scam" depending on the t
 
 <img src="https://api.scryfall.com/cards/named?exact=Delver+of+Secrets&format=image&version=normal&set=isd" alt="Delver of Secrets" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Psychic+Frog&format=image&version=normal&set=mh3" alt="Psychic Frog" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Murktide+Regent&format=image&version=normal&set=mh2" alt="Murktide Regent" width="217">
 
-<img src="https://api.scryfall.com/cards/named?exact=Force+of+Will&format=image&version=normal&set=all" alt="Force of Will" width="217">
-
 | Card | Role |
 |------|------|
 | Delver of Secrets | The namesake one-drop threat; 3/2 flier for U when it flips |
@@ -397,8 +395,6 @@ These decks are the ultimate glass cannons: devastatingly fast but highly vulner
 ### Key Cards
 
 <img src="https://api.scryfall.com/cards/named?exact=Balustrade+Spy&format=image&version=normal&set=gtc" alt="Balustrade Spy" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Undercity+Informer&format=image&version=normal&set=gtc" alt="Undercity Informer" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Thassa%27s+Oracle&format=image&version=normal&set=thb" alt="Thassa's Oracle" width="217">
-
-<img src="https://api.scryfall.com/cards/named?exact=Goblin+Charbelcher&format=image&version=normal&set=mrd" alt="Goblin Charbelcher" width="217">
 
 | Card | Role |
 |------|------|
@@ -1191,8 +1187,6 @@ Prison / Stompy decks exploit Legacy's reliance on cheap spells and nonbasic lan
 
 <img src="https://api.scryfall.com/cards/named?exact=Chalice+of+the+Void&format=image&version=normal&set=mrd" alt="Chalice of the Void" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Blood+Moon&format=image&version=normal&set=drk" alt="Blood Moon" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Trinisphere&format=image&version=normal&set=dst" alt="Trinisphere" width="217">
 
-<img src="https://api.scryfall.com/cards/named?exact=Ancient+Tomb&format=image&version=normal&set=tmp" alt="Ancient Tomb" width="217">
-
 | Card | Role |
 |------|------|
 | Chalice of the Void | Lock piece; counters all spells of the chosen CMC |
@@ -1305,8 +1299,6 @@ Reanimator aims to put a game-ending creature (Griselbrand, Archon of Cruelty, A
 ### Key Cards
 
 <img src="https://api.scryfall.com/cards/named?exact=Griselbrand&format=image&version=normal&set=avr" alt="Griselbrand" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Archon+of+Cruelty&format=image&version=normal&set=mh2" alt="Archon of Cruelty" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Atraxa%2C+Grand+Unifier&format=image&version=normal&set=one" alt="Atraxa, Grand Unifier" width="217">
-
-<img src="https://api.scryfall.com/cards/named?exact=Entomb&format=image&version=normal&set=ody" alt="Entomb" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Reanimate&format=image&version=normal&set=tmp" alt="Reanimate" width="217">
 
 | Card | Role |
 |------|------|
@@ -1775,8 +1767,6 @@ Dredge exploits the dredge mechanic (replace a draw with milling X cards and ret
 ### Key Cards
 
 <img src="https://api.scryfall.com/cards/named?exact=Golgari+Grave-Troll&format=image&version=normal&set=rav" alt="Golgari Grave-Troll" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Stinkweed+Imp&format=image&version=normal&set=rav" alt="Stinkweed Imp" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Narcomoeba&format=image&version=normal&set=fut" alt="Narcomoeba" width="217">
-
-<img src="https://api.scryfall.com/cards/named?exact=Hogaak%2C+Arisen+Necropolis&format=image&version=normal&set=mh1" alt="Hogaak, Arisen Necropolis" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Bridge+from+Below&format=image&version=normal&set=fut" alt="Bridge from Below" width="217">
 
 | Card | Role |
 |------|------|
