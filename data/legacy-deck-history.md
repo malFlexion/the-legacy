@@ -20,14 +20,14 @@
 
 **Also known as:** UB Tempo, Dimir Shadow, UB Scam
 
-**Archetype:** tempo  
-**Colors:** U, B  
-**Tier:** tier 1  
-**Meta Share:** 14.6%  
-**Win Rate Estimate:** 52-53%  
-**Cost Estimate:** $3,800 (driven by Underground Sea, Force of Will, Wasteland, Polluted Delta)  
-**First Appeared:** 2023  
-**Peak Meta Share:** 2025-2026  
+**Archetype:** tempo
+**Colors:** U, B
+**Tier:** tier 1
+**Meta Share:** 14.6%
+**Win Rate Estimate:** 52-53%
+**Cost Estimate:** $3,800 (driven by Underground Sea, Force of Will, Wasteland, Polluted Delta)
+**First Appeared:** 2023
+**Peak Meta Share:** 2025-2026
 **Deck Count in Sample:** 228
 
 The format's premier tempo deck, leveraging the power of Orcish Bowmasters, efficient black disruption, and blue card selection. Combines Brainstorm/Ponder with Thoughtseize and cheap threats like Tamiyo, Inquisitive Student and Murktide Regent to apply pressure while denying the opponent resources. The most played deck in Legacy by a wide margin.
@@ -77,12 +77,12 @@ The format's premier tempo deck, leveraging the power of Orcish Bowmasters, effi
 - **Unfavorable:** Ocelot Pride Midrange, Lands, Eldrazi
 - **Even:** Izzet Delver, Painter, The EPIC Storm
 
-**Similar Decks:** Izzet Delver, Sultai Tempo, Death's Shadow  
+**Similar Decks:** Izzet Delver, Sultai Tempo, Death's Shadow
 Shares the Brainstorm/Ponder/Force of Will/Daze shell with Izzet Delver but trades red removal for black disruption. Sultai Tempo adds green for Uro. Death's Shadow is a more aggressive variant of the same UB core.
 
 ### Key Cards Explained
 
-<img src="https://api.scryfall.com/cards/named?exact=Orcish+Bowmasters&format=image&version=normal" alt="Orcish Bowmasters" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Tamiyo%2C+Inquisitive+Student&format=image&version=normal" alt="Tamiyo, Inquisitive Student" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Murktide+Regent&format=image&version=normal" alt="Murktide Regent" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Orcish+Bowmasters&format=image&version=normal&set=ltr" alt="Orcish Bowmasters" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Tamiyo%2C+Inquisitive+Student&format=image&version=normal&set=dsk" alt="Tamiyo, Inquisitive Student" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Murktide+Regent&format=image&version=normal&set=mh2" alt="Murktide Regent" width="217">
 
 - **Orcish Bowmasters:** Premier creature in the format. Punishes Brainstorm, provides removal, and creates a growing threat. Core to why black is the best color in Legacy.
 - **Tamiyo, Inquisitive Student:** Efficient one-drop that flips into a planeswalker generating card advantage. Replaced Delver of Secrets in many UB lists.
@@ -92,24 +92,24 @@ Shares the Brainstorm/Ponder/Force of Will/Daze shell with Izzet Delver but trad
 
 ### Historical Timeline
 
-**2023** (tier 2, ~5%)  
+**2023** (tier 2, ~5%)
 Deck emerges after Orcish Bowmasters printed in Lord of the Rings (June). Black overtakes red as the partner color for blue tempo shells. Early UB Scam lists use Grief for free disruption.
 - Orcish Bowmasters as core creature
 - Grief + Reanimate package
 - Thoughtseize main over Lightning Bolt
 
-**2024** (tier 1, ~10%)  
+**2024** (tier 1, ~10%)
 MH3 adds Tamiyo, Inquisitive Student and Barrowgoyf, cementing UB as the best Delver/tempo shell. Tamiyo replaces Delver of Secrets. Deck overtakes Izzet Delver in metagame share.
 - Tamiyo, Inquisitive Student replaces Delver of Secrets
 - Barrowgoyf added as efficient threat
 - Grief potentially banned mid-year
 
-**2025** (tier 1, ~13%)  
+**2025** (tier 1, ~13%)
 Entomb ban removes Reanimator from tier 1, and Dimir Tempo benefits from less combo in the meta. Becomes the most-played deck in Legacy by a wide margin.
 - Refined sideboard for post-Entomb-ban meta
 - Murktide Regent as top-end finisher solidified
 
-**2026** (tier 1, ~14.6%)  
+**2026** (tier 1, ~14.6%)
 Continues as the format's best deck at 14.6% meta share. No changes in March B&R. Lists are highly optimized with small flex slot variations week to week.
 - Stable core
 - Flex between Fatal Push, Snuff Out, Spell Pierce counts
@@ -118,7 +118,7 @@ Continues as the format's best deck at 14.6% meta share. No changes in March B&R
 
 - **Expressive Iteration** (2023-03): Removed the Izzet version's best card advantage engine, helping push players toward Dimir for Bowmasters.
 
-**Frequency of Change:** medium  
+**Frequency of Change:** medium
 **Change Notes:** Card choices flex between Fatal Push, Snuff Out, and Dismember based on metagame. Sideboard heavily tuned week to week. Barrowgoyf from MH3 was a major addition in 2024.
 
 ---
@@ -127,14 +127,14 @@ Continues as the format's best deck at 14.6% meta share. No changes in March B&R
 
 **Also known as:** Energy Midrange, Naya Energy, Cat Midrange
 
-**Archetype:** midrange  
-**Colors:** W, G, R  
-**Tier:** tier 1  
-**Meta Share:** 8.5%  
-**Win Rate Estimate:** 51-53%  
-**Cost Estimate:** $2,200 (driven by Savannah, Plateau, Wasteland, Urza's Saga)  
-**First Appeared:** 2024  
-**Peak Meta Share:** 2025-2026  
+**Archetype:** midrange
+**Colors:** W, G, R
+**Tier:** tier 1
+**Meta Share:** 8.5%
+**Win Rate Estimate:** 51-53%
+**Cost Estimate:** $2,200 (driven by Savannah, Plateau, Wasteland, Urza's Saga)
+**First Appeared:** 2024
+**Peak Meta Share:** 2025-2026
 **Deck Count in Sample:** 133
 
 An energy-based midrange deck built around Ocelot Pride, Guide of Souls, and Amped Raptor. Represents the most successful non-blue aggressive strategy in Legacy, using efficient energy creatures and Swords to Plowshares for interaction. The deck pressures blue combo and control while going over the top of other creature decks with token generation.
@@ -185,12 +185,12 @@ An energy-based midrange deck built around Ocelot Pride, Guide of Souls, and Amp
 - **Unfavorable:** Sneak and Show, Oops! All Spells, Doomsday
 - **Even:** Lands, Painter, Death and Taxes
 
-**Similar Decks:** Maverick, Cradle Control  
+**Similar Decks:** Maverick, Cradle Control
 Shares the green creature toolbox approach of Maverick but eschews the Knight of the Reliquary package for energy threats. Uses a similar Green Sun's Zenith shell.
 
 ### Key Cards Explained
 
-<img src="https://api.scryfall.com/cards/named?exact=Ocelot+Pride&format=image&version=normal" alt="Ocelot Pride" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Guide+of+Souls&format=image&version=normal" alt="Guide of Souls" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Amped+Raptor&format=image&version=normal" alt="Amped Raptor" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Ocelot+Pride&format=image&version=normal&set=mh3" alt="Ocelot Pride" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Guide+of+Souls&format=image&version=normal&set=mh3" alt="Guide of Souls" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Amped+Raptor&format=image&version=normal&set=mh3" alt="Amped Raptor" width="217">
 
 - **Ocelot Pride:** One-mana 1/1 with lifelink that creates cat tokens whenever you gain life and deal combat damage. Generates massive board presence.
 - **Guide of Souls:** Energy-generating creature that makes tokens fly temporarily, enabling evasive damage for Ocelot Pride triggers.
@@ -199,24 +199,24 @@ Shares the green creature toolbox approach of Maverick but eschews the Knight of
 
 ### Historical Timeline
 
-**2024** (tier 2, ~4%)  
+**2024** (tier 2, ~4%)
 Deck created after MH3 prints Ocelot Pride, Guide of Souls, and Amped Raptor. Energy package gives non-blue decks a competitive creature suite. Naya builds with Green Sun's Zenith emerge.
 - Ocelot Pride as token engine
 - Guide of Souls for energy and evasion
 - Amped Raptor for cascade value
 - Galvanic Discharge as scalable removal
 
-**2025** (tier 1, ~7%)  
+**2025** (tier 1, ~7%)
 Deck rises to tier 1 as pilots optimize the mana base and sideboard. Proves it can compete with blue decks through raw board presence and Swords to Plowshares.
 - Urza's Saga added for artifact tutoring
 - Endurance as green pitch answer to graveyards
 
-**2026** (tier 1, ~8.5%)  
+**2026** (tier 1, ~8.5%)
 Second most-played deck at 8.5%. Favorable matchup against Dimir Tempo keeps it popular. The best non-blue deck in Legacy.
 - Stable core
 - Ajani, Nacatl Pariah as additional threat
 
-**Frequency of Change:** medium  
+**Frequency of Change:** medium
 **Change Notes:** Relatively new archetype still being optimized. Naya vs Selesnya builds are both viable. Amped Raptor cascade hits vary by build.
 
 ---
@@ -225,14 +225,14 @@ Second most-played deck at 8.5%. Favorable matchup against Dimir Tempo keeps it 
 
 **Also known as:** Oops, Balustrade Spy Combo, Undercity Informer Combo
 
-**Archetype:** combo  
-**Colors:** B, G, U, W  
-**Tier:** tier 1  
-**Meta Share:** 8.2%  
-**Win Rate Estimate:** 52-54%  
-**Cost Estimate:** $800 (driven by Force of Will, Chrome Mox, Pact of Negation)  
-**First Appeared:** 2013  
-**Peak Meta Share:** 2025-2026  
+**Archetype:** combo
+**Colors:** B, G, U, W
+**Tier:** tier 1
+**Meta Share:** 8.2%
+**Win Rate Estimate:** 52-54%
+**Cost Estimate:** $800 (driven by Force of Will, Chrome Mox, Pact of Negation)
+**First Appeared:** 2013
+**Peak Meta Share:** 2025-2026
 **Deck Count in Sample:** 128
 
 A blazing-fast combo deck that wins by milling its entire library using Balustrade Spy or Undercity Informer (the deck plays zero lands, using only mana-producing artifacts and MDFCs). Once the library is milled, it uses Narcomoeba triggers and Dread Return to reanimate a win condition. Among the fastest combo decks in the format.
@@ -273,12 +273,12 @@ A blazing-fast combo deck that wins by milling its entire library using Balustra
 - **Unfavorable:** Dimir Tempo, Red Stompy, Painter
 - **Even:** Sneak and Show, The EPIC Storm, Doomsday
 
-**Similar Decks:** LED Dredge, Doomsday  
+**Similar Decks:** LED Dredge, Doomsday
 Shares the all-in graveyard combo approach with LED Dredge but is generally faster and more fragile. Both use free countermagic from the sideboard.
 
 ### Key Cards Explained
 
-<img src="https://api.scryfall.com/cards/named?exact=Balustrade+Spy&format=image&version=normal&set=gtc" alt="Balustrade Spy" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Undercity+Informer&format=image&version=normal" alt="Undercity Informer" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Narcomoeba&format=image&version=normal" alt="Narcomoeba" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Balustrade+Spy&format=image&version=normal&set=gtc" alt="Balustrade Spy" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Undercity+Informer&format=image&version=normal&set=gtc" alt="Undercity Informer" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Narcomoeba&format=image&version=normal&set=fut" alt="Narcomoeba" width="217">
 
 - **Balustrade Spy:** Mills your entire library since you play zero actual lands. This enables the whole combo.
 - **Undercity Informer:** Redundant copy of the Spy effect, ensuring consistency.
@@ -288,45 +288,45 @@ Shares the all-in graveyard combo approach with LED Dredge but is generally fast
 
 ### Historical Timeline
 
-**2013** (tier 3, ~1%)  
+**2013** (tier 3, ~1%)
 Deck first appears after Gatecrash prints Balustrade Spy and Undercity Informer. The zero-land combo using Narcomoeba and Dread Return is discovered.
 - Balustrade Spy + Undercity Informer as combo enablers
 - Narcomoeba + Dread Return for win condition
 - Dark Ritual, Chrome Mox, Lotus Petal for fast mana
 
-**2014** (tier 3, ~1%)  
+**2014** (tier 3, ~1%)
 Deck remains a fringe but explosive combo option. Consistency issues keep it from tier 1. Occasionally spikes tournaments.
 - Cabal Therapy added for protection
 - Shield Sphere as free creature for Informer
 
-**2020** (tier 2, ~3%)  
+**2020** (tier 2, ~3%)
 Zendikar Rising MDFCs (Agadeem's Awakening, Sea Gate Restoration, etc.) massively boost consistency. Spell-lands that count as spells for the combo but provide mana. Deck jumps in viability.
 - Agadeem's Awakening as spell-land
 - Sea Gate Restoration as spell-land
 - Turntimber Symbiosis and other MDFCs
 - Consistency dramatically improved
 
-**2021** (tier 2, ~3%)  
+**2021** (tier 2, ~3%)
 Continued refinement with MDFCs. Thassa's Oracle replaces older win conditions as a cleaner finish.
 - Thassa's Oracle as primary win condition
 - Summoner's Pact for consistency
 
-**2023** (tier 2, ~4%)  
+**2023** (tier 2, ~4%)
 LotR set adds Lothlorien Adventurer, another useful spell-creature. Deck continues to perform as a fast combo option.
 - Lothlorien Adventurer added
 - Refined mana base with new MDFCs
 
-**2025** (tier 1, ~7%)  
+**2025** (tier 1, ~7%)
 Entomb ban devastates Reanimator, and combo players migrate to Oops as the premier fast combo deck. Meta share spikes significantly.
 - Absorbs former Reanimator players
 - Becomes top combo deck in the format
 
-**2026** (tier 1, ~8.2%)  
+**2026** (tier 1, ~8.2%)
 Third most-played deck at 8.2% meta share. The fastest goldfish in the format keeps it popular despite vulnerability to graveyard hate.
 - Stable optimized lists
 - Chrome Mox and Mox Opal as acceleration
 
-**Frequency of Change:** low  
+**Frequency of Change:** low
 **Change Notes:** Core combo is static. Flex slots are the protection suite (Pact of Negation vs Force of Will main) and the exact MDFC package. LothlÃ³rien Adventurer from LTR was a significant upgrade.
 
 ---
@@ -335,14 +335,14 @@ Third most-played deck at 8.2% meta share. The fastest goldfish in the format ke
 
 **Also known as:** Sneak & Show, SnS, Sneak Attack
 
-**Archetype:** combo  
-**Colors:** U, R  
-**Tier:** tier 1  
-**Meta Share:** 6.7%  
-**Win Rate Estimate:** 50-52%  
-**Cost Estimate:** $2,800 (driven by Volcanic Island, Force of Will, City of Traitors, Emrakul, the Aeons Torn)  
-**First Appeared:** 2011  
-**Peak Meta Share:** 2013-2015  
+**Archetype:** combo
+**Colors:** U, R
+**Tier:** tier 1
+**Meta Share:** 6.7%
+**Win Rate Estimate:** 50-52%
+**Cost Estimate:** $2,800 (driven by Volcanic Island, Force of Will, City of Traitors, Emrakul, the Aeons Torn)
+**First Appeared:** 2011
+**Peak Meta Share:** 2013-2015
 **Deck Count in Sample:** 105
 
 A classic Legacy combo deck that cheats Emrakul, the Aeons Torn or Atraxa, Grand Unifier into play via Show and Tell or Sneak Attack. Uses blue cantrips and countermagic to find and protect the combo. One of the most enduring archetypes in Legacy history.
@@ -390,12 +390,12 @@ A classic Legacy combo deck that cheats Emrakul, the Aeons Torn or Atraxa, Grand
 - **Unfavorable:** Dimir Tempo, Painter, Death and Taxes
 - **Even:** Oops! All Spells, The EPIC Storm, Izzet Delver
 
-**Similar Decks:** Omni-Tell, Doomsday  
+**Similar Decks:** Omni-Tell, Doomsday
 Omni-Tell shares Show and Tell but uses Omniscience instead of Sneak Attack. Both are blue combo decks using the same cantrip and counter shell.
 
 ### Key Cards Explained
 
-<img src="https://api.scryfall.com/cards/named?exact=Show+and+Tell&format=image&version=normal&set=usg" alt="Show and Tell" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Sneak+Attack&format=image&version=normal" alt="Sneak Attack" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Emrakul%2C+the+Aeons+Torn&format=image&version=normal&set=roe" alt="Emrakul, the Aeons Torn" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Show+and+Tell&format=image&version=normal&set=usg" alt="Show and Tell" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Sneak+Attack&format=image&version=normal&set=usg" alt="Sneak Attack" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Emrakul%2C+the+Aeons+Torn&format=image&version=normal&set=roe" alt="Emrakul, the Aeons Torn" width="217">
 
 - **Show and Tell:** Puts Emrakul or Atraxa directly into play for just 2U, bypassing their enormous mana costs.
 - **Sneak Attack:** Gives haste to cheated creatures, enabling immediate attacks with Emrakul's annihilator and extra turn triggers.
@@ -404,48 +404,48 @@ Omni-Tell shares Show and Tell but uses Omniscience instead of Sneak Attack. Bot
 
 ### Historical Timeline
 
-**2011** (tier 2, ~4%)  
+**2011** (tier 2, ~4%)
 Deck solidifies as a Legacy archetype using Sneak Attack and Show and Tell to cheat Emrakul, the Aeons Torn and Griselbrand into play. Blue shell provides Force of Will protection.
 - Sneak Attack + Show and Tell as cheat engines
 - Emrakul, the Aeons Torn as primary threat
 - Force of Will, Brainstorm, Ponder shell
 
-**2012** (tier 1, ~6%)  
+**2012** (tier 1, ~6%)
 Griselbrand printed in Avacyn Restored gives the deck its best Show and Tell target. Drawing 7 cards makes the combo almost unbeatable when it resolves.
 - Griselbrand added as premier Show and Tell target
 - Omniscience sometimes used as alternative
 
-**2015** (tier 1, ~5%)  
+**2015** (tier 1, ~5%)
 Remains a top combo deck through multiple metagame shifts. Very stable core means bans rarely affect it directly.
 - Core stable
 - Sideboard adapts to Miracles-heavy meta
 
-**2017** (tier 1, ~5%)  
+**2017** (tier 1, ~5%)
 Benefits somewhat from Sensei's Divining Top ban gutting Miracles, as Counterbalance was a strong answer to Show and Tell. Continues as tier 1 combo.
 - Miracles (a tough matchup) weakened by Top ban
 - Cunning Wish for silver bullets
 
-**2021** (tier 2, ~4%)  
+**2021** (tier 2, ~4%)
 MH2 Delver threats make tempo matchups harder. Deck endures but faces more efficient counterplay.
 - Faces tougher Delver matchups with Murktide/Ragavan
 - Veil of Summer in sideboard
 
-**2023** (tier 2, ~4%)  
+**2023** (tier 2, ~4%)
 Orcish Bowmasters doesn't directly affect the deck. Remains a consistent tier 2 combo strategy that punishes slow blue decks.
 - Core unchanged
 - Atraxa, Grand Unifier as alternative fatty
 
-**2025** (tier 1, ~6%)  
+**2025** (tier 1, ~6%)
 Entomb ban removes Reanimator competition. Sneak and Show rises as players want a cheat-into-play strategy.
 - Benefits from Reanimator decline
 - Atraxa, Grand Unifier alongside Griselbrand/Emrakul
 
-**2026** (tier 1, ~6.7%)  
+**2026** (tier 1, ~6.7%)
 Fourth most-played deck at 6.7%. The most stable combo archetype in Legacy's history, with a nearly unchanged core since 2012.
 - Stable core
 - Occasional Show and Tell target updates
 
-**Frequency of Change:** low  
+**Frequency of Change:** low
 **Change Notes:** Extremely stable archetype. Main innovation was adding Atraxa as a Show and Tell target alongside Emrakul. Sol land counts flex based on metagame speed.
 
 ---
@@ -454,14 +454,14 @@ Fourth most-played deck at 6.7%. The most stable combo archetype in Legacy's his
 
 **Also known as:** UR Delver, UR Tempo
 
-**Archetype:** tempo  
-**Colors:** U, R  
-**Tier:** tier 2  
-**Meta Share:** 4.3%  
-**Win Rate Estimate:** 49-51%  
-**Cost Estimate:** $3,200 (driven by Volcanic Island, Force of Will, Wasteland, Scalding Tarn)  
-**First Appeared:** 2012  
-**Peak Meta Share:** 2020-2022  
+**Archetype:** tempo
+**Colors:** U, R
+**Tier:** tier 2
+**Meta Share:** 4.3%
+**Win Rate Estimate:** 49-51%
+**Cost Estimate:** $3,200 (driven by Volcanic Island, Force of Will, Wasteland, Scalding Tarn)
+**First Appeared:** 2012
+**Peak Meta Share:** 2020-2022
 **Deck Count in Sample:** 67
 
 The original Delver tempo shell using Delver of Secrets alongside Lightning Bolt and red sideboard cards. Once the dominant deck in Legacy, it has lost ground to Dimir Tempo since Orcish Bowmasters was printed, but remains competitive with its unique strengths: direct damage reach and superior red removal.
@@ -510,12 +510,12 @@ The original Delver tempo shell using Delver of Secrets alongside Lightning Bolt
 - **Unfavorable:** Ocelot Pride Midrange, Eldrazi, Red Stompy
 - **Even:** Dimir Tempo, Sneak and Show, The EPIC Storm
 
-**Similar Decks:** Dimir Tempo, Sultai Tempo  
+**Similar Decks:** Dimir Tempo, Sultai Tempo
 The original template from which Dimir Tempo diverged. Shares the core Brainstorm/Ponder/Force/Daze engine but uses red for removal over black for disruption.
 
 ### Key Cards Explained
 
-<img src="https://api.scryfall.com/cards/named?exact=Delver+of+Secrets&format=image&version=normal&set=isd" alt="Delver of Secrets" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Lightning+Bolt&format=image&version=normal&set=lea" alt="Lightning Bolt" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Dragon%27s+Rage+Channeler&format=image&version=normal" alt="Dragon's Rage Channeler" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Delver+of+Secrets&format=image&version=normal&set=isd" alt="Delver of Secrets" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Lightning+Bolt&format=image&version=normal&set=lea" alt="Lightning Bolt" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Dragon%27s+Rage+Channeler&format=image&version=normal&set=mh2" alt="Dragon's Rage Channeler" width="217">
 
 - **Delver of Secrets:** The namesake one-drop that flips into a 3/2 flyer. With 30+ instants/sorceries, it flips reliably.
 - **Lightning Bolt:** The key advantage over Dimir: efficient removal that also goes face, providing reach to close games.
@@ -523,56 +523,56 @@ The original template from which Dimir Tempo diverged. Shares the core Brainstor
 
 ### Historical Timeline
 
-**2011** (tier 1, ~10%)  
+**2011** (tier 1, ~10%)
 Delver of Secrets printed in Innistrad. RUG Delver (Canadian Threshold) immediately becomes the best tempo deck, using Delver, Nimble Mongoose, Tarmogoyf with Daze, Force, Wasteland, and Stifle.
 - Delver of Secrets as transformative one-drop
 - Core: Daze, Force of Will, Wasteland, Stifle, Lightning Bolt
 - Nimble Mongoose and Tarmogoyf as threats
 
-**2012** (tier 1, ~10%)  
+**2012** (tier 1, ~10%)
 RUG Delver and Miracles define the format. RUG is the premier tempo strategy. Snapcaster Mage adopted in some builds.
 - Snapcaster Mage in some lists
 - Format revolves around RUG vs Miracles
 
-**2013** (tier 2, ~6%)  
+**2013** (tier 2, ~6%)
 Deathrite Shaman pushes BUG Delver ahead of RUG. True-Name Nemesis (November) gives blue tempo an uncounterable threat. Some RUG pilots switch to BUG.
 - BUG Delver overtakes RUG due to Deathrite Shaman
 - Some players add True-Name Nemesis
 
-**2015** (tier 2, ~4%)  
+**2015** (tier 2, ~4%)
 BUG/Sultai Delver with Deathrite Shaman dominates the tempo slot. RUG Delver still viable but clearly second best.
 - Monastery Swiftspear experimented with
 - Lightning Bolt remains key advantage over BUG
 
-**2018** (tier 1, ~8%)  
+**2018** (tier 1, ~8%)
 Deathrite Shaman BANNED (July). RUG Delver immediately returns to prominence. Gitaxian Probe ban also impacts tempo strategies.
 - DRS ban brings players back to RUG
 - Format diversifies significantly
 
-**2019** (tier 1, ~12%)  
+**2019** (tier 1, ~12%)
 Wrenn and Six from MH1 makes RUG Delver oppressive — recurring Wasteland is devastating. Wrenn and Six BANNED in November.
 - Wrenn and Six added (then banned)
 - Wasteland recursion was format-warping
 
-**2021** (tier 1, ~14%)  
+**2021** (tier 1, ~14%)
 MH2 transforms the deck: Dragon's Rage Channeler, Murktide Regent, and Ragavan, Nimble Pilferer replace the old threats. UR Delver becomes the clear best deck, dropping green entirely.
 - Dragon's Rage Channeler replaces Nimble Mongoose
 - Murktide Regent replaces Tarmogoyf
 - Ragavan, Nimble Pilferer added
 - Deck shifts from RUG to UR
 
-**2022** (tier 1, ~15%)  
+**2022** (tier 1, ~15%)
 UR Delver with Ragavan dominates Legacy. Expressive Iteration provides exceptional card advantage. Deck is ~15% of the meta and the best deck.
 - Expressive Iteration as card advantage engine
 - Ragavan era peaks
 
-**2023** (tier 2, ~6%)  
+**2023** (tier 2, ~6%)
 Orcish Bowmasters punishes cantrips and small creatures, weakening Delver mirrors. Expressive Iteration banned (March). Many players switch to Dimir Tempo for Bowmasters. UR Delver drops.
 - Expressive Iteration BANNED
 - Orcish Bowmasters punishes the strategy
 - Many pilots migrate to Dimir Tempo
 
-**2026** (tier 2, ~4.3%)  
+**2026** (tier 2, ~4.3%)
 Remains a solid tier 2 option at 4.3%. UR shell with Delver, DRC, Murktide, and Lightning Bolt for players who prefer red over black.
 - Stable UR core
 - Plays Delver where Dimir plays Tamiyo
@@ -582,7 +582,7 @@ Remains a solid tier 2 option at 4.3%. UR shell with Delver, DRC, Murktide, and 
 - **Expressive Iteration** (2023-03): Lost the deck's best card advantage engine. Contributed to the shift from UR to UB.
 - **Dreadhorde Arcanist** (2021-02): Removed a key threat that gave the deck recurring card advantage.
 
-**Frequency of Change:** medium  
+**Frequency of Change:** medium
 **Change Notes:** Lost Expressive Iteration to a ban in 2023. Dragon's Rage Channeler and Murktide Regent were major additions from MH2. Still searching for the right threat mix post-Bowmasters.
 
 ---
@@ -591,14 +591,14 @@ Remains a solid tier 2 option at 4.3%. UR shell with Delver, DRC, Murktide, and 
 
 **Also known as:** Painter's Servant Combo, Red Painter, Imperial Painter
 
-**Archetype:** combo  
-**Colors:** R  
-**Tier:** tier 2  
-**Meta Share:** 4.1%  
-**Win Rate Estimate:** 50-52%  
-**Cost Estimate:** $1,500 (driven by City of Traitors, Grindstone, Urza's Saga)  
-**First Appeared:** 2009  
-**Peak Meta Share:** 2024-2026  
+**Archetype:** combo
+**Colors:** R
+**Tier:** tier 2
+**Meta Share:** 4.1%
+**Win Rate Estimate:** 50-52%
+**Cost Estimate:** $1,500 (driven by City of Traitors, Grindstone, Urza's Saga)
+**First Appeared:** 2009
+**Peak Meta Share:** 2024-2026
 **Deck Count in Sample:** 64
 
 A mono-red combo deck that wins by combining Painter's Servant with Grindstone to mill the opponent's entire library in one activation. Backed by blood moon effects and prison elements to slow opponents while assembling the combo. Urza's Saga provides a tutor for Grindstone.
@@ -647,12 +647,12 @@ A mono-red combo deck that wins by combining Painter's Servant with Grindstone t
 - **Unfavorable:** Ocelot Pride Midrange, Affinity Stompy, Cradle Control
 - **Even:** Oops! All Spells, The EPIC Storm, Lands
 
-**Similar Decks:** Red Stompy, Blue Artifacts  
+**Similar Decks:** Red Stompy, Blue Artifacts
 Shares the Ancient Tomb / Blood Moon prison plan with Red Stompy, but adds the Painter-Grindstone combo as an instant-win condition.
 
 ### Key Cards Explained
 
-<img src="https://api.scryfall.com/cards/named?exact=Painter%27s+Servant&format=image&version=normal&set=shm" alt="Painter's Servant" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Grindstone&format=image&version=normal&set=tmp" alt="Grindstone" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Goblin+Welder&format=image&version=normal" alt="Goblin Welder" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Painter%27s+Servant&format=image&version=normal&set=shm" alt="Painter's Servant" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Grindstone&format=image&version=normal&set=tmp" alt="Grindstone" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Goblin+Welder&format=image&version=normal&set=usg" alt="Goblin Welder" width="217">
 
 - **Painter's Servant:** Names blue, making all cards in the opponent's library blue, which enables Grindstone to mill the entire library at once.
 - **Grindstone:** With Painter's Servant in play, mills the entire library since every pair of cards shares a color.
@@ -661,39 +661,39 @@ Shares the Ancient Tomb / Blood Moon prison plan with Red Stompy, but adds the P
 
 ### Historical Timeline
 
-**2009** (tier 3, ~1%)  
+**2009** (tier 3, ~1%)
 Painter's Servant + Grindstone combo deck first appears in Legacy. Uses Imperial Recruiter to find Painter and fast mana from Ancient Tomb.
 - Painter's Servant + Grindstone combo
 - Imperial Recruiter as tutor
 - Ancient Tomb for fast mana
 
-**2012** (tier 3, ~1.5%)  
+**2012** (tier 3, ~1.5%)
 Deck maintains fringe presence. Red Elemental Blast becomes a hard counter against everything with Painter's Servant naming blue.
 - Blood Moon from sideboard
 - Red Elemental Blast as universal counter with Painter
 
-**2017** (tier 3, ~1.5%)  
+**2017** (tier 3, ~1.5%)
 Top ban opens space for non-Miracles combo-control decks. Painter remains a consistent fringe option.
 - Less Counterbalance in the format benefits Painter
 - Goblin Engineer experimented with
 
-**2021** (tier 2, ~3%)  
+**2021** (tier 2, ~3%)
 Urza's Saga from MH2 is transformative — tutors for Grindstone, creates tokens, and provides an alternative win condition. Deck jumps in power level.
 - Urza's Saga tutors Grindstone
 - Saga tokens as backup plan
 - Goblin Engineer for artifact recursion
 
-**2023** (tier 2, ~3%)  
+**2023** (tier 2, ~3%)
 Fable of the Mirror-Breaker experimented with. Deck remains solid tier 2 with Urza's Saga giving it staying power.
 - Various red creature options explored
 - Consistent tier 2 performer
 
-**2026** (tier 2, ~4.1%)  
+**2026** (tier 2, ~4.1%)
 Stable at 4.1% meta share as a tier 2 combo-stompy deck. Urza's Saga and the Painter combo give it redundancy few other decks have.
 - Refined and optimized lists
 - Emrakul as sideboard plan
 
-**Frequency of Change:** medium  
+**Frequency of Change:** medium
 **Change Notes:** Urza's Saga was a major upgrade, providing a tutor for Grindstone. Goblin Engineer replaced some older tutor options. Fable of the Mirror-Breaker added as value/filtering.
 
 ---
@@ -702,14 +702,14 @@ Stable at 4.1% meta share as a tier 2 combo-stompy deck. Urza's Saga and the Pai
 
 **Also known as:** RG Lands, Punishing Lands, Dark Depths Lands
 
-**Archetype:** control  
-**Colors:** R, G  
-**Tier:** tier 2  
-**Meta Share:** 3.8%  
-**Win Rate Estimate:** 50-52%  
-**Cost Estimate:** $5,500 (driven by The Tabernacle at Pendrell Vale, Dark Depths, Wasteland, Grove of the Burnwillows)  
-**First Appeared:** 2012  
-**Peak Meta Share:** 2015-2017  
+**Archetype:** control
+**Colors:** R, G
+**Tier:** tier 2
+**Meta Share:** 3.8%
+**Win Rate Estimate:** 50-52%
+**Cost Estimate:** $5,500 (driven by The Tabernacle at Pendrell Vale, Dark Depths, Wasteland, Grove of the Burnwillows)
+**First Appeared:** 2012
+**Peak Meta Share:** 2015-2017
 **Deck Count in Sample:** 59
 
 A land-based control deck that uses Life from the Loam, Wasteland recursion, and Maze of Ith to control the board while assembling the Dark Depths + Thespian's Stage combo to create a 20/20 Marit Lage token. One of the most unique decks in Legacy, barely playing any spells.
@@ -762,12 +762,12 @@ A land-based control deck that uses Life from the Loam, Wasteland recursion, and
 - **Unfavorable:** Sneak and Show, Oops! All Spells, Doomsday
 - **Even:** Painter, Eldrazi, Ocelot Pride Midrange
 
-**Similar Decks:** Selesnya Depths, Cradle Control  
+**Similar Decks:** Selesnya Depths, Cradle Control
 Selesnya Depths shares the Dark Depths combo but in a creature-based shell. Lands is more controlling and land-focused.
 
 ### Key Cards Explained
 
-<img src="https://api.scryfall.com/cards/named?exact=Dark+Depths&format=image&version=normal&set=csp" alt="Dark Depths" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Thespian%27s+Stage&format=image&version=normal" alt="Thespian's Stage" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Life+from+the+Loam&format=image&version=normal&set=rav" alt="Life from the Loam" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Dark+Depths&format=image&version=normal&set=csp" alt="Dark Depths" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Thespian%27s+Stage&format=image&version=normal&set=gtc" alt="Thespian's Stage" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Life+from+the+Loam&format=image&version=normal&set=rav" alt="Life from the Loam" width="217">
 
 - **Dark Depths:** Combines with Thespian's Stage to instantly create a 20/20 flying indestructible Marit Lage token.
 - **Thespian's Stage:** Copies Dark Depths, and since it enters with no ice counters, immediately creates Marit Lage.
@@ -777,39 +777,39 @@ Selesnya Depths shares the Dark Depths combo but in a creature-based shell. Land
 
 ### Historical Timeline
 
-**2012** (tier 2, ~3%)  
+**2012** (tier 2, ~3%)
 Lands establishes itself as a Legacy archetype using Life from the Loam, Wasteland lock, Maze of Ith, and The Tabernacle at Pendrell Vale to control the board. Punishing Fire + Grove of the Burnwillows provides creature removal.
 - Life from the Loam + Wasteland recursion
 - Maze of Ith and Tabernacle for creature control
 - Punishing Fire + Grove of the Burnwillows
 - Exploration and Manabond for acceleration
 
-**2015** (tier 2, ~3%)  
+**2015** (tier 2, ~3%)
 Dark Depths + Thespian's Stage combo becomes a core part of the deck, giving it a 20/20 indestructible flying win condition alongside the Loam grind plan.
 - Dark Depths + Thespian's Stage as primary win condition
 - Crop Rotation as combo tutor
 
-**2018** (tier 2, ~4%)  
+**2018** (tier 2, ~4%)
 DRS ban helps Lands significantly — Deathrite Shaman was excellent graveyard hate against the Loam engine. Format becomes more favorable.
 - Deathrite Shaman ban removes key hate piece
 - Field of the Dead experimented with later
 
-**2021** (tier 2, ~4%)  
+**2021** (tier 2, ~4%)
 Urza's Saga from MH2 adds a powerful threat and tutor to the deck. Can find Expedition Map or Pithing Needle while making Construct tokens.
 - Urza's Saga as threat and tutor
 - Yavimaya, Cradle of Growth enables easier Depths combo
 
-**2023** (tier 2, ~3%)  
+**2023** (tier 2, ~3%)
 Minsc & Boo or Orcish Bowmasters in some RG or BG Lands builds. Deck continues as a consistent tier 2 option that punishes greedy mana bases.
 - Various splash color experiments
 - Boseiju, Who Endures as uncounterable removal
 
-**2026** (tier 2, ~3.8%)  
+**2026** (tier 2, ~3.8%)
 Steady at 3.8% meta share. Favorable matchup against Dimir Tempo keeps it relevant. The Wasteland + Loam lock remains one of Legacy's most punishing strategies.
 - Stable core
 - Endurance in sideboard for graveyard matchups
 
-**Frequency of Change:** low  
+**Frequency of Change:** low
 **Change Notes:** Very stable core. Elvish Reclaimer was the most significant addition in recent years. Urza's Saga provides additional utility and Construct tokens. Field of the Dead is a newer addition for grindy games.
 
 ---
@@ -818,14 +818,14 @@ Steady at 3.8% meta share. Favorable matchup against Dimir Tempo keeps it releva
 
 **Also known as:** TES, Epic Storm, Storm
 
-**Archetype:** combo  
-**Colors:** U, B, R  
-**Tier:** tier 2  
-**Meta Share:** 3.5%  
-**Win Rate Estimate:** 50-52%  
-**Cost Estimate:** $2,400 (driven by Lion's Eye Diamond, Underground Sea, Volcanic Island, Badlands)  
-**First Appeared:** 2010  
-**Peak Meta Share:** 2018-2020  
+**Archetype:** combo
+**Colors:** U, B, R
+**Tier:** tier 2
+**Meta Share:** 3.5%
+**Win Rate Estimate:** 50-52%
+**Cost Estimate:** $2,400 (driven by Lion's Eye Diamond, Underground Sea, Volcanic Island, Badlands)
+**First Appeared:** 2010
+**Peak Meta Share:** 2018-2020
 **Deck Count in Sample:** 55
 
 A fast storm combo deck that uses mana acceleration and tutors to generate a lethal storm count, typically winning with Tendrils of Agony or burning through the deck with Ad Nauseam. Faster and more aggressive than ANT, trading consistency for speed with Chrome Mox and Rite of Flame.
@@ -877,12 +877,12 @@ A fast storm combo deck that uses mana acceleration and tutors to generate a let
 - **Unfavorable:** Dimir Tempo, Izzet Delver, Red Stompy
 - **Even:** Sneak and Show, Oops! All Spells, Doomsday
 
-**Similar Decks:** Doomsday  
+**Similar Decks:** Doomsday
 Both are UBx storm-adjacent combo decks, but TES wins through traditional storm count while Doomsday uses a specific five-card pile.
 
 ### Key Cards Explained
 
-<img src="https://api.scryfall.com/cards/named?exact=Ad+Nauseam&format=image&version=normal" alt="Ad Nauseam" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Lion%27s+Eye+Diamond&format=image&version=normal&set=mir" alt="Lion's Eye Diamond" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Burning+Wish&format=image&version=normal&set=jud" alt="Burning Wish" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Ad+Nauseam&format=image&version=normal&set=ala" alt="Ad Nauseam" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Lion%27s+Eye+Diamond&format=image&version=normal&set=mir" alt="Lion's Eye Diamond" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Burning+Wish&format=image&version=normal&set=jud" alt="Burning Wish" width="217">
 
 - **Ad Nauseam:** Draws cards equal to your life total (effectively), providing enough gas to generate lethal storm count in one big turn.
 - **Lion's Eye Diamond:** The deck's Black Lotus equivalent. Discarding your hand is mitigated by LED in response to Burning Wish or Brainstorm.
@@ -891,43 +891,43 @@ Both are UBx storm-adjacent combo decks, but TES wins through traditional storm 
 
 ### Historical Timeline
 
-**2010** (tier 2, ~3%)  
+**2010** (tier 2, ~3%)
 TES evolves from older Legacy Storm lists, focusing on speed over resilience compared to Ad Nauseam Tendrils (ANT). Uses Burning Wish, Rite of Flame, and Lion's Eye Diamond.
 - Burning Wish for toolbox access
 - Rite of Flame, Dark Ritual, Lion's Eye Diamond for mana
 - Infernal Tutor, Ad Nauseam as engines
 
-**2011** (tier 2, ~3%)  
+**2011** (tier 2, ~3%)
 Mental Misstep ban is positive for Storm — Misstep was devastating against Dark Ritual and Rite of Flame. Deck improves.
 - Mental Misstep ban removes key hate piece
 - Core storm package stable
 
-**2015** (tier 2, ~2.5%)  
+**2015** (tier 2, ~2.5%)
 Treasure Cruise / Dig Through Time ban is neutral. Storm remains a consistent combo option. Gitaxian Probe used for information.
 - Gitaxian Probe for free information
 - Sideboard adapts to Miracles-heavy meta
 
-**2018** (tier 2, ~2%)  
+**2018** (tier 2, ~2%)
 Gitaxian Probe BANNED (July). Storm loses its best free cantrip and information spell. Deck adapts but takes a hit.
 - Gitaxian Probe banned
 - Adapts with more Ponder/Preordain
 
-**2021** (tier 2, ~2.5%)  
+**2021** (tier 2, ~2.5%)
 Continues adapting. Galvanic Relay from MH2 provides a new engine for grinding through disruption. Deck gets new tools.
 - Galvanic Relay as new engine
 - Deck pivots between speed and resilience builds
 
-**2023** (tier 2, ~3%)  
+**2023** (tier 2, ~3%)
 Orcish Bowmasters is irrelevant to TES since it doesn't play creatures. Storm exists in a meta where creature decks draw the hate.
 - Benefits from creature-focused meta hate
 - Beseech the Mirror experimented with
 
-**2026** (tier 2, ~3.5%)  
+**2026** (tier 2, ~3.5%)
 Stable tier 2 at 3.5% meta share. One of Legacy's most enduring archetypes with a dedicated player base that continuously optimizes.
 - Stable core with ongoing optimization
 - Burning Wish targets updated regularly
 
-**Frequency of Change:** high  
+**Frequency of Change:** high
 **Change Notes:** Constant tuning by its dedicated community. Galvanic Relay and Beseech the Mirror are relatively recent additions that replaced older cards like Infernal Tutor. The deck evolves significantly with each new set.
 
 ---
@@ -936,14 +936,14 @@ Stable tier 2 at 3.5% meta share. One of Legacy's most enduring archetypes with 
 
 **Also known as:** Eldrazi Stompy, Eldrazi Aggro, Colorless Eldrazi
 
-**Archetype:** aggro  
-**Colors:**   
-**Tier:** tier 2  
-**Meta Share:** 3.1%  
-**Win Rate Estimate:** 50-52%  
-**Cost Estimate:** $1,200 (driven by City of Traitors, Chalice of the Void, Ancient Tomb, Cavern of Souls)  
-**First Appeared:** 2016  
-**Peak Meta Share:** 2016-2017  
+**Archetype:** aggro
+**Colors:**
+**Tier:** tier 2
+**Meta Share:** 3.1%
+**Win Rate Estimate:** 50-52%
+**Cost Estimate:** $1,200 (driven by City of Traitors, Chalice of the Void, Ancient Tomb, Cavern of Souls)
+**First Appeared:** 2016
+**Peak Meta Share:** 2016-2017
 **Deck Count in Sample:** 48
 
 A colorless aggro-prison deck using sol lands and Eldrazi creatures to deploy oversized threats ahead of curve while disrupting opponents with Chalice of the Void and Thought-Knot Seer. Preys on cantrip-heavy decks with Chalice on 1.
@@ -993,12 +993,12 @@ A colorless aggro-prison deck using sol lands and Eldrazi creatures to deploy ov
 - **Unfavorable:** Sneak and Show, Lands, The EPIC Storm
 - **Even:** Ocelot Pride Midrange, Painter, Red Stompy
 
-**Similar Decks:** Red Stompy, Affinity Stompy  
+**Similar Decks:** Red Stompy, Affinity Stompy
 Shares the sol land + Chalice prison plan with Red Stompy but uses colorless Eldrazi instead of red threats. Both attack from a similar angle.
 
 ### Key Cards Explained
 
-<img src="https://api.scryfall.com/cards/named?exact=Chalice+of+the+Void&format=image&version=normal&set=mrd" alt="Chalice of the Void" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Thought-Knot+Seer&format=image&version=normal" alt="Thought-Knot Seer" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Eldrazi+Temple&format=image&version=normal" alt="Eldrazi Temple" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Chalice+of+the+Void&format=image&version=normal&set=mrd" alt="Chalice of the Void" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Thought-Knot+Seer&format=image&version=normal&set=ogw" alt="Thought-Knot Seer" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Eldrazi+Temple&format=image&version=normal&set=roe" alt="Eldrazi Temple" width="217">
 
 - **Chalice of the Void:** On X=1, shuts down Brainstorm, Ponder, Swords, Bolt, and most other one-mana staples in the format.
 - **Thought-Knot Seer:** Disrupts the opponent's hand while providing a 4/4 body. The exile effect dodges graveyard synergies.
@@ -1007,28 +1007,28 @@ Shares the sol land + Chalice prison plan with Red Stompy but uses colorless Eld
 
 ### Historical Timeline
 
-**2016** (tier 1, ~8%)  
+**2016** (tier 1, ~8%)
 Eldrazi menace begins after Oath of the Gatewatch prints Thought-Knot Seer and Reality Smasher. Eye of Ugin and Eldrazi Temple provide broken mana. Deck immediately tier 1 across multiple formats.
 - Thought-Knot Seer and Reality Smasher as threats
 - Eye of Ugin and Eldrazi Temple for fast mana
 - Chalice of the Void to lock out cantrips
 
-**2017** (tier 2, ~4%)  
+**2017** (tier 2, ~4%)
 Post-Eldrazi winter. Eye of Ugin not banned in Legacy (unlike Modern). Deck settles into tier 2 as players learn to fight it. Various builds: mono-colorless, WE, BE.
 - Format adapts to fight Eldrazi
 - Various color splash experiments
 
-**2020** (tier 2, ~3%)  
+**2020** (tier 2, ~3%)
 Initiative creatures from Commander Legends: Battle for Baldur's Gate add a new dimension. Caves of Chaos Adventurer and similar cards work well with Eldrazi fast mana.
 - Initiative creatures added (various Baldur's Gate cards)
 - Eldrazi Stompy blends with Initiative strategies
 
-**2023** (tier 2, ~3%)  
+**2023** (tier 2, ~3%)
 Deck continues as a Chalice-based stompy strategy. Not directly affected by Orcish Bowmasters since its creatures are large.
 - Core stable
 - Sideboard evolution for changing meta
 
-**2026** (tier 2, ~3.1%)  
+**2026** (tier 2, ~3.1%)
 Steady at 3.1%. Chalice of the Void on one shuts down cantrip-heavy decks, keeping Eldrazi relevant as a meta foil.
 - Sowing Mycospawn from MH3 as additional threat
 - Stable Chalice stompy strategy
@@ -1037,7 +1037,7 @@ Steady at 3.1%. Chalice of the Void on one shuts down cantrip-heavy decks, keepi
 
 - **Eye of Ugin** (2016-04 (Modern only)): Eye was banned in Modern but remains legal in Legacy as a 1-of tutor. The deck adapted around Eldrazi Temple as the primary accelerant.
 
-**Frequency of Change:** low  
+**Frequency of Change:** low
 **Change Notes:** Very stable core since 2016. Urza's Saga was the biggest recent addition, providing Construct tokens and artifact tutoring.
 
 ---
@@ -1046,14 +1046,14 @@ Steady at 3.1%. Chalice of the Void on one shuts down cantrip-heavy decks, keepi
 
 **Also known as:** Mystic Forge, Karn Forge, Mono Brown Combo
 
-**Archetype:** combo  
-**Colors:**   
-**Tier:** tier 2  
-**Meta Share:** 3%  
-**Win Rate Estimate:** 50-52%  
-**Cost Estimate:** $1,800 (driven by City of Traitors, Grim Monolith, Mox Opal, Chalice of the Void)  
-**First Appeared:** 2023  
-**Peak Meta Share:** 2025-2026  
+**Archetype:** combo
+**Colors:**
+**Tier:** tier 2
+**Meta Share:** 3%
+**Win Rate Estimate:** 50-52%
+**Cost Estimate:** $1,800 (driven by City of Traitors, Grim Monolith, Mox Opal, Chalice of the Void)
+**First Appeared:** 2023
+**Peak Meta Share:** 2025-2026
 **Deck Count in Sample:** 47
 
 A colorless artifact combo deck that uses Mystic Forge with Sensei's Divining Top and cost reducers to draw the entire deck, winning with Walking Ballista or Karn, the Great Creator. Combines the prison elements of Stompy with a deterministic combo kill.
@@ -1105,12 +1105,12 @@ A colorless artifact combo deck that uses Mystic Forge with Sensei's Divining To
 - **Unfavorable:** Ocelot Pride Midrange, Cradle Control, Painter
 - **Even:** Sneak and Show, Eldrazi, Red Stompy
 
-**Similar Decks:** Blue Artifacts, Eldrazi, Painter  
+**Similar Decks:** Blue Artifacts, Eldrazi, Painter
 Shares the sol land + Chalice shell with Eldrazi but adds a deterministic combo finish. Blue Artifacts is a colored variant with Thought Monitor and Emry.
 
 ### Key Cards Explained
 
-<img src="https://api.scryfall.com/cards/named?exact=Mystic+Forge&format=image&version=normal" alt="Mystic Forge" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Sensei%27s+Divining+Top&format=image&version=normal" alt="Sensei's Divining Top" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Karn%2C+the+Great+Creator&format=image&version=normal" alt="Karn, the Great Creator" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Mystic+Forge&format=image&version=normal&set=m20" alt="Mystic Forge" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Sensei%27s+Divining+Top&format=image&version=normal&set=chk" alt="Sensei's Divining Top" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Karn%2C+the+Great+Creator&format=image&version=normal&set=war" alt="Karn, the Great Creator" width="217">
 
 - **Mystic Forge:** With Sensei's Divining Top and a cost reducer, creates an infinite draw loop to find Walking Ballista for the kill.
 - **Sensei's Divining Top:** Key combo piece that draws a card and goes to the top of library, looping with Mystic Forge.
@@ -1119,23 +1119,23 @@ Shares the sol land + Chalice shell with Eldrazi but adds a deterministic combo 
 
 ### Historical Timeline
 
-**2023** (tier 3, ~1%)  
+**2023** (tier 3, ~1%)
 Mystic Forge combo deck emerges using Mystic Forge with artifact cost reducers to draw through the deck and generate lethal artifact synergies.
 - Mystic Forge as engine
 - Artifact cost reducers (Foundry Inspector, Etherium Sculptor)
 - Karn, the Great Creator as tutor/lock
 
-**2024** (tier 2, ~2%)  
+**2024** (tier 2, ~2%)
 Deck refines its combo lines and gains MH3 artifacts. Becomes more consistent and rises in the meta.
 - MH3 artifact support cards
 - Improved combo consistency
 
-**2026** (tier 2, ~3.0%)  
+**2026** (tier 2, ~3.0%)
 Solid tier 2 at 3.0%. A colorless combo deck that punishes fair blue strategies with Chalice of the Void and Trinisphere.
 - Optimized artifact shell
 - Karn wishboard refined
 
-**Frequency of Change:** medium  
+**Frequency of Change:** medium
 **Change Notes:** Relatively new archetype that emerged with Mystic Forge + Top. Karn, the Great Creator acts as both a toolbox and a combo piece. The wishboard is heavily metagame dependent.
 
 ---
@@ -1144,14 +1144,14 @@ Solid tier 2 at 3.0%. A colorless combo deck that punishes fair blue strategies 
 
 **Also known as:** DDFT, Doomsday Fetchland Tendrils
 
-**Archetype:** combo  
-**Colors:** U, B  
-**Tier:** tier 2  
-**Meta Share:** 2.7%  
-**Win Rate Estimate:** 50-52%  
-**Cost Estimate:** $2,600 (driven by Underground Sea, Force of Will, Polluted Delta)  
-**First Appeared:** 2012  
-**Peak Meta Share:** 2021-2022  
+**Archetype:** combo
+**Colors:** U, B
+**Tier:** tier 2
+**Meta Share:** 2.7%
+**Win Rate Estimate:** 50-52%
+**Cost Estimate:** $2,600 (driven by Underground Sea, Force of Will, Polluted Delta)
+**First Appeared:** 2012
+**Peak Meta Share:** 2021-2022
 **Deck Count in Sample:** 42
 
 A combo deck that casts Doomsday to stack a five-card pile that wins the game, typically with Thassa's Oracle. Extremely skill-intensive, requiring knowledge of many different piles for various game states. Thassa's Oracle simplified the win condition significantly from earlier Oracle-less builds.
@@ -1201,12 +1201,12 @@ A combo deck that casts Doomsday to stack a five-card pile that wins the game, t
 - **Unfavorable:** Dimir Tempo, Eldrazi, Red Stompy
 - **Even:** Sneak and Show, The EPIC Storm, Oops! All Spells
 
-**Similar Decks:** The EPIC Storm, Dimir Tempo  
+**Similar Decks:** The EPIC Storm, Dimir Tempo
 Shares the UB cantrip + disruption shell with Dimir Tempo but uses it to set up a combo kill rather than tempo pressure. Shares the storm adjacency with TES.
 
 ### Key Cards Explained
 
-<img src="https://api.scryfall.com/cards/named?exact=Doomsday&format=image&version=normal&set=wth" alt="Doomsday" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Thassa%27s+Oracle&format=image&version=normal&set=thb" alt="Thassa's Oracle" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Ideas+Unbound&format=image&version=normal" alt="Ideas Unbound" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Doomsday&format=image&version=normal&set=wth" alt="Doomsday" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Thassa%27s+Oracle&format=image&version=normal&set=thb" alt="Thassa's Oracle" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Ideas+Unbound&format=image&version=normal&set=sok" alt="Ideas Unbound" width="217">
 
 - **Doomsday:** The namesake card. For BBB, you stack your library with exactly five cards that win the game, then draw into the pile.
 - **Thassa's Oracle:** Win condition that wins when it enters the battlefield if your devotion to blue exceeds your library size. After Doomsday, this is trivially achieved.
@@ -1215,34 +1215,34 @@ Shares the UB cantrip + disruption shell with Dimir Tempo but uses it to set up 
 
 ### Historical Timeline
 
-**2012** (tier 3, ~0.5%)  
+**2012** (tier 3, ~0.5%)
 Doomsday exists as a fringe Legacy combo deck using the namesake card to stack a five-card library and win deterministically. Complex execution keeps it niche.
 - Doomsday as combo engine
 - Laboratory Maniac as win condition
 - Brainstorm, Ponder for setup
 
-**2019** (tier 2, ~2%)  
+**2019** (tier 2, ~2%)
 Thassa's Oracle printed (Theros Beyond Death). Dramatically simplifies Doomsday piles — Oracle is much easier to win with than Laboratory Maniac. Deck viability jumps.
 - Thassa's Oracle replaces Laboratory Maniac
 - Doomsday piles become much simpler
 - Deck accessibility improves significantly
 
-**2021** (tier 2, ~2.5%)  
+**2021** (tier 2, ~2.5%)
 Continues as a strong combo option. Personal Tutor and other cantrips help find Doomsday consistently. Compact combo footprint allows flexible shell.
 - Personal Tutor for consistency
 - Dark Ritual acceleration
 
-**2023** (tier 2, ~2.5%)  
+**2023** (tier 2, ~2.5%)
 Up the Beanstalk and other card draw options explored. Deck remains a skill-testing tier 2 combo option.
 - Various cantrip configurations tested
 - Cavern of Souls for Oracle resolution
 
-**2026** (tier 2, ~2.7%)  
+**2026** (tier 2, ~2.7%)
 Consistent tier 2 at 2.7%. Rewards mastery and punishes opponents who can't interact with the stack.
 - Refined pile construction
 - Stable combo core
 
-**Frequency of Change:** medium  
+**Frequency of Change:** medium
 **Change Notes:** Thassa's Oracle revolutionized the deck by simplifying pile construction. The protection suite and draw spells flex based on metagame.
 
 ---
@@ -1251,14 +1251,14 @@ Consistent tier 2 at 2.7%. Rewards mastery and punishes opponents who can't inte
 
 **Also known as:** Mono Red Prison, Red Prison, Dragon Stompy
 
-**Archetype:** prison  
-**Colors:** R  
-**Tier:** tier 2  
-**Meta Share:** 2.7%  
-**Win Rate Estimate:** 50-52%  
-**Cost Estimate:** $1,300 (driven by City of Traitors, Chalice of the Void, Chrome Mox)  
-**First Appeared:** 2008  
-**Peak Meta Share:** 2019-2020  
+**Archetype:** prison
+**Colors:** R
+**Tier:** tier 2
+**Meta Share:** 2.7%
+**Win Rate Estimate:** 50-52%
+**Cost Estimate:** $1,300 (driven by City of Traitors, Chalice of the Void, Chrome Mox)
+**First Appeared:** 2008
+**Peak Meta Share:** 2019-2020
 **Deck Count in Sample:** 42
 
 A mono-red prison deck that uses sol lands to deploy Blood Moon, Chalice of the Void, and Trinisphere to lock opponents out of the game while attacking with efficient red threats like Goblin Rabblemaster and Fury. Punishes greedy mana bases.
@@ -1304,12 +1304,12 @@ A mono-red prison deck that uses sol lands to deploy Blood Moon, Chalice of the 
 - **Unfavorable:** Sneak and Show, Lands, Ocelot Pride Midrange
 - **Even:** Dimir Tempo, Eldrazi, Painter
 
-**Similar Decks:** Painter, Eldrazi  
+**Similar Decks:** Painter, Eldrazi
 Shares the sol land + Chalice + Blood Moon shell with Painter but lacks the combo finish, relying on creature damage instead.
 
 ### Key Cards Explained
 
-<img src="https://api.scryfall.com/cards/named?exact=Blood+Moon&format=image&version=normal" alt="Blood Moon" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Chalice+of+the+Void&format=image&version=normal&set=mrd" alt="Chalice of the Void" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Goblin+Rabblemaster&format=image&version=normal" alt="Goblin Rabblemaster" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Blood+Moon&format=image&version=normal&set=drk" alt="Blood Moon" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Chalice+of+the+Void&format=image&version=normal&set=mrd" alt="Chalice of the Void" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Goblin+Rabblemaster&format=image&version=normal&set=m15" alt="Goblin Rabblemaster" width="217">
 
 - **Blood Moon:** Turns all nonbasic lands into Mountains, devastating multi-color decks that rely on fetchlands and duals.
 - **Chalice of the Void:** On 1, shuts down most of the format's cantrips and interaction. The deck's spells are designed to avoid being hit.
@@ -1318,38 +1318,38 @@ Shares the sol land + Chalice + Blood Moon shell with Painter but lacks the comb
 
 ### Historical Timeline
 
-**2008** (tier 3, ~1.5%)  
+**2008** (tier 3, ~1.5%)
 Mono-Red Stompy (Dragon Stompy) emerges as a Legacy archetype using Blood Moon, Chalice of the Void, and Chrome Mox to lock opponents out while beating down with aggressive red threats.
 - Blood Moon + Chalice of the Void lock pieces
 - Chrome Mox, Simian Spirit Guide for fast mana
 - Ancient Tomb and City of Traitors
 
-**2014** (tier 3, ~1.5%)  
+**2014** (tier 3, ~1.5%)
 Deck remains a budget-friendly way into Legacy. Various threat suites tried including Goblin Rabblemaster.
 - Goblin Rabblemaster as efficient threat
 - Magus of the Moon as redundancy
 
-**2019** (tier 2, ~2%)  
+**2019** (tier 2, ~2%)
 Modern Horizons adds Seasoned Pyromancer. Chandra, Torch of Defiance provides card advantage and a win condition.
 - Seasoned Pyromancer for card filtering
 - Chandra, Torch of Defiance as planeswalker threat
 
-**2022** (tier 2, ~2.5%)  
+**2022** (tier 2, ~2.5%)
 Fable of the Mirror-Breaker adds powerful three-drop. Initiative creatures (Caves of Chaos Adventurer) give the deck a new powerful angle.
 - Fable of the Mirror-Breaker for value
 - Initiative creatures experimented with
 
-**2024** (tier 2, ~2.5%)  
+**2024** (tier 2, ~2.5%)
 MH3 energy cards not useful for mono-red. Deck continues with prison + threats strategy.
 - Broadside Bombardiers and other new red threats
 - Stable prison shell
 
-**2026** (tier 2, ~2.7%)  
+**2026** (tier 2, ~2.7%)
 Solid at 2.7%. Blood Moon and Chalice remain devastating against greedy mana bases and cantrip-heavy decks.
 - Core lock pieces unchanged
 - Threat suite modernized
 
-**Frequency of Change:** medium  
+**Frequency of Change:** medium
 **Change Notes:** Caves of Chaos Adventurer from Commander Legends was a significant upgrade. Urza's Saga provides additional value. The threat suite rotates frequently.
 
 ---
@@ -1358,14 +1358,14 @@ Solid at 2.7%. Blood Moon and Chalice remain devastating against greedy mana bas
 
 **Also known as:** Affinity, Artifact Aggro, All-In Affinity
 
-**Archetype:** aggro  
-**Colors:**   
-**Tier:** tier 2  
-**Meta Share:** 2.4%  
-**Win Rate Estimate:** 50-52%  
-**Cost Estimate:** $1,100 (driven by Mox Opal, Ancient Tomb, Chalice of the Void)  
-**First Appeared:** 2023  
-**Peak Meta Share:** 2025-2026  
+**Archetype:** aggro
+**Colors:**
+**Tier:** tier 2
+**Meta Share:** 2.4%
+**Win Rate Estimate:** 50-52%
+**Cost Estimate:** $1,100 (driven by Mox Opal, Ancient Tomb, Chalice of the Void)
+**First Appeared:** 2023
+**Peak Meta Share:** 2025-2026
 **Deck Count in Sample:** 38
 
 A colorless artifact aggro deck that leverages affinity creatures, Urza's Saga constructs, and Cranial Plating to deal massive damage quickly. Plays cheap or free artifact creatures alongside Chalice of the Void to combine aggression with disruption.
@@ -1412,12 +1412,12 @@ A colorless artifact aggro deck that leverages affinity creatures, Urza's Saga c
 - **Unfavorable:** Painter, Ocelot Pride Midrange, Cradle Control
 - **Even:** Eldrazi, Red Stompy, Sneak and Show
 
-**Similar Decks:** Mystic Forge Combo, Blue Artifacts, Eldrazi  
+**Similar Decks:** Mystic Forge Combo, Blue Artifacts, Eldrazi
 Shares the artifact-heavy strategy with Mystic Forge and Blue Artifacts but is more aggressive with affinity creatures and Cranial Plating.
 
 ### Key Cards Explained
 
-<img src="https://api.scryfall.com/cards/named?exact=Cranial+Plating&format=image&version=normal" alt="Cranial Plating" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Urza%27s+Saga&format=image&version=normal" alt="Urza's Saga" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Thought+Monitor&format=image&version=normal" alt="Thought Monitor" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Cranial+Plating&format=image&version=normal&set=5dn" alt="Cranial Plating" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Urza%27s+Saga&format=image&version=normal&set=mh2" alt="Urza's Saga" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Thought+Monitor&format=image&version=normal&set=mh2" alt="Thought Monitor" width="217">
 
 - **Cranial Plating:** Attaches to any creature for lethal damage in a deck full of artifacts. Can be moved at instant speed.
 - **Urza's Saga:** Tutors for Cranial Plating, Mox Opal, or Springleaf Drum while creating Construct tokens that scale with artifact count.
@@ -1426,24 +1426,24 @@ Shares the artifact-heavy strategy with Mystic Forge and Blue Artifacts but is m
 
 ### Historical Timeline
 
-**2023** (tier 3, ~1%)  
+**2023** (tier 3, ~1%)
 Modern artifact cards and new printings make an artifact aggro deck viable in Legacy. Thought Monitor, Sojourner's Companion, and Nettlecyst create a critical mass of artifact synergies.
 - Thought Monitor for card draw
 - Nettlecyst as equipment threat
 - Urza's Saga as land/threat/tutor
 
-**2024** (tier 2, ~2%)  
+**2024** (tier 2, ~2%)
 Deck refined with MH3 artifacts. Cranial Ram and other new printings add power. Chalice of the Void gives it disruption.
 - Cranial Ram as efficient equipment
 - Chalice of the Void for disruption
 - Frogmite and Myr Enforcer as cheap threats
 
-**2026** (tier 2, ~2.4%)  
+**2026** (tier 2, ~2.4%)
 Established tier 2 at 2.4%. A fast artifact aggro deck with Chalice disruption that can race combo and go under control.
 - Optimized artifact creature base
 - Stable Urza's Saga + Chalice shell
 
-**Frequency of Change:** medium  
+**Frequency of Change:** medium
 **Change Notes:** Urza's Saga elevated the entire artifact aggro archetype. Modern Horizons printings have steadily improved the creature base.
 
 ---
@@ -1452,14 +1452,14 @@ Established tier 2 at 2.4%. A fast artifact aggro deck with Chalice disruption t
 
 **Also known as:** 4C Control, Beanstalk Midrange, Jeskai Beanstalk
 
-**Archetype:** control  
-**Colors:** W, U, R, G  
-**Tier:** tier 2  
-**Meta Share:** 2.3%  
-**Win Rate Estimate:** 49-51%  
-**Cost Estimate:** $4,200 (driven by Underground Sea, Volcanic Island, Tundra, Tropical Island, Force of Will)  
-**First Appeared:** 2023  
-**Peak Meta Share:** 2024  
+**Archetype:** control
+**Colors:** W, U, R, G
+**Tier:** tier 2
+**Meta Share:** 2.3%
+**Win Rate Estimate:** 49-51%
+**Cost Estimate:** $4,200 (driven by Underground Sea, Volcanic Island, Tundra, Tropical Island, Force of Will)
+**First Appeared:** 2023
+**Peak Meta Share:** 2024
 **Deck Count in Sample:** 36
 
 A four-color control deck built around Up the Beanstalk as a card advantage engine. Playing 5+ mana value cards like Force of Will, Leyline Binding, and Solitude for free triggers Beanstalk's draw ability. Grinds opponents out with removal and card advantage.
@@ -1512,12 +1512,12 @@ A four-color control deck built around Up the Beanstalk as a card advantage engi
 - **Unfavorable:** Dimir Tempo, Painter, Mystic Forge Combo, Affinity Stompy
 - **Even:** Sneak and Show, Ocelot Pride Midrange, Izzet Delver
 
-**Similar Decks:** Jeskai Control  
+**Similar Decks:** Jeskai Control
 Jeskai Control is a leaner three-color version that trades Beanstalk card advantage for more countermagic. Both are blue control decks with white removal.
 
 ### Key Cards Explained
 
-<img src="https://api.scryfall.com/cards/named?exact=Up+the+Beanstalk&format=image&version=normal" alt="Up the Beanstalk" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Leyline+Binding&format=image&version=normal" alt="Leyline Binding" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Solitude&format=image&version=normal" alt="Solitude" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Up+the+Beanstalk&format=image&version=normal&set=woe" alt="Up the Beanstalk" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Leyline+Binding&format=image&version=normal&set=dmu" alt="Leyline Binding" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Solitude&format=image&version=normal&set=mh2" alt="Solitude" width="217">
 
 - **Up the Beanstalk:** Draws a card on ETB and whenever you cast a 5+ MV spell. Free-cast evoke creatures and Force of Will all trigger it.
 - **Leyline Binding:** Six-mana removal spell that costs W with enough domain, triggering Beanstalk while being efficient removal.
@@ -1526,24 +1526,24 @@ Jeskai Control is a leaner three-color version that trades Beanstalk card advant
 
 ### Historical Timeline
 
-**2023** (tier 2, ~3%)  
+**2023** (tier 2, ~3%)
 Up the Beanstalk from Wilds of Eldraine enables 4-color control piles. Drawing a card whenever you cast a 5+ MV spell (including Force of Will, Solitude, etc.) provides incredible card advantage.
 - Up the Beanstalk as card engine
 - Leyline Binding as efficient removal
 - 4-color mana base with Triomes
 - Free pitch spells trigger Beanstalk
 
-**2024** (tier 2, ~3%)  
+**2024** (tier 2, ~3%)
 Deck establishes itself as the premier control strategy. Various builds from Jeskai to 4-color. Competes with Miracles-style UW as the control deck of choice.
 - Refined mana bases
 - Uro, Titan of Nature's Wrath in some builds
 
-**2026** (tier 2, ~2.3%)  
+**2026** (tier 2, ~2.3%)
 Steady at 2.3%. The format's primary multicolor control strategy, though vulnerable to Wasteland-heavy decks and fast combo.
 - Stable 4c control shell
 - Sideboard heavily tuned to meta
 
-**Frequency of Change:** high  
+**Frequency of Change:** high
 **Change Notes:** The exact color combination and threat/removal suite shifts frequently. Some builds lean Jeskai, others splash black or green more heavily. Up the Beanstalk from Wilds of Eldraine was the catalyst for the archetype.
 
 ---
@@ -1552,14 +1552,14 @@ Steady at 2.3%. The format's primary multicolor control strategy, though vulnera
 
 **Also known as:** GW Elves Control, Gaea's Cradle Control, Green Stompy
 
-**Archetype:** midrange  
-**Colors:** G  
-**Tier:** tier 2  
-**Meta Share:** 2.3%  
-**Win Rate Estimate:** 50-52%  
-**Cost Estimate:** $3,800 (driven by Gaea's Cradle, Savannah, Force of Vigor)  
-**First Appeared:** 2022  
-**Peak Meta Share:** 2025-2026  
+**Archetype:** midrange
+**Colors:** G
+**Tier:** tier 2
+**Meta Share:** 2.3%
+**Win Rate Estimate:** 50-52%
+**Cost Estimate:** $3,800 (driven by Gaea's Cradle, Savannah, Force of Vigor)
+**First Appeared:** 2022
+**Peak Meta Share:** 2025-2026
 **Deck Count in Sample:** 36
 
 A green-based midrange deck that leverages Gaea's Cradle to generate enormous amounts of mana, deploying powerful creatures and planeswalkers. Uses Green Sun's Zenith as a creature toolbox. Combines mana acceleration with disruptive elements like Collector Ouphe.
@@ -1612,12 +1612,12 @@ A green-based midrange deck that leverages Gaea's Cradle to generate enormous am
 - **Unfavorable:** Sneak and Show, Oops! All Spells, The EPIC Storm
 - **Even:** Dimir Tempo, Ocelot Pride Midrange, Lands
 
-**Similar Decks:** Elves, Maverick, Ocelot Pride Midrange  
+**Similar Decks:** Elves, Maverick, Ocelot Pride Midrange
 Shares the Green Sun's Zenith toolbox and Gaea's Cradle engine with Elves but is slower and more controlling. Maverick is a more creature-focused GW approach.
 
 ### Key Cards Explained
 
-<img src="https://api.scryfall.com/cards/named?exact=Gaea%27s+Cradle&format=image&version=normal&set=usg" alt="Gaea's Cradle" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Green+Sun%27s+Zenith&format=image&version=normal&set=mbs" alt="Green Sun's Zenith" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Collector+Ouphe&format=image&version=normal" alt="Collector Ouphe" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Gaea%27s+Cradle&format=image&version=normal&set=usg" alt="Gaea's Cradle" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Green+Sun%27s+Zenith&format=image&version=normal&set=mbs" alt="Green Sun's Zenith" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Collector+Ouphe&format=image&version=normal&set=mh1" alt="Collector Ouphe" width="217">
 
 - **Gaea's Cradle:** Taps for one green mana per creature you control. With even 3-4 creatures, provides enormous mana advantage.
 - **Green Sun's Zenith:** Creature toolbox that finds the right answer for any situation, from Dryad Arbor on turn 1 to Craterhoof for the kill.
@@ -1626,24 +1626,24 @@ Shares the Green Sun's Zenith toolbox and Gaea's Cradle engine with Elves but is
 
 ### Historical Timeline
 
-**2022** (tier 3, ~1%)  
+**2022** (tier 3, ~1%)
 Green stompy/toolbox deck built around Gaea's Cradle and Green Sun's Zenith emerges. Uses Elvish Reclaimer, Collector Ouphe, and other green creatures with Cradle for explosive mana.
 - Gaea's Cradle as mana engine
 - Green Sun's Zenith toolbox
 - Elvish Reclaimer for land tutoring
 - Collector Ouphe as artifact hate
 
-**2024** (tier 2, ~2%)  
+**2024** (tier 2, ~2%)
 MH3 energy creatures (Ocelot Pride, etc.) can splash into Cradle builds. Some overlap with Ocelot Pride Midrange but Cradle Control focuses on the mana engine.
 - MH3 creature options
 - Boseiju, Who Endures for interaction
 
-**2026** (tier 2, ~2.3%)  
+**2026** (tier 2, ~2.3%)
 Tier 2 at 2.3%. A Gaea's Cradle-powered creature deck that goes over the top with mana advantage.
 - Refined creature toolbox
 - Stable Cradle + GSZ shell
 
-**Frequency of Change:** medium  
+**Frequency of Change:** medium
 **Change Notes:** Once Upon a Time provided significant consistency. The Depths combo package is a flex slot some builds omit for more controlling options.
 
 ---
@@ -1652,14 +1652,14 @@ Tier 2 at 2.3%. A Gaea's Cradle-powered creature deck that goes over the top wit
 
 **Also known as:** D&T, DnT, Yorion Death and Taxes, BW Taxes
 
-**Archetype:** aggro  
-**Colors:** W, B  
-**Tier:** tier 2  
-**Meta Share:** 2%  
-**Win Rate Estimate:** 49-51%  
-**Cost Estimate:** $2,500 (driven by Scrubland, Rishadan Port, Wasteland, Solitude, Stoneforge Mystic)  
-**First Appeared:** 2012  
-**Peak Meta Share:** 2017-2019  
+**Archetype:** aggro
+**Colors:** W, B
+**Tier:** tier 2
+**Meta Share:** 2%
+**Win Rate Estimate:** 49-51%
+**Cost Estimate:** $2,500 (driven by Scrubland, Rishadan Port, Wasteland, Solitude, Stoneforge Mystic)
+**First Appeared:** 2012
+**Peak Meta Share:** 2017-2019
 **Deck Count in Sample:** 32
 
 A white-based creature deck that disrupts opponents with Thalia, Guardian of Thraben, Wasteland + Rishadan Port mana denial, and Aether Vial to deploy threats at instant speed. The Yorion 80-card version with a black splash has become standard, providing more consistency in grindy matchups.
@@ -1719,12 +1719,12 @@ A white-based creature deck that disrupts opponents with Thalia, Guardian of Thr
 - **Unfavorable:** Lands, Beanstalk Control, Ocelot Pride Midrange
 - **Even:** Dimir Tempo, Izzet Delver, Painter
 
-**Similar Decks:** Ocelot Pride Midrange, Maverick  
+**Similar Decks:** Ocelot Pride Midrange, Maverick
 Shares the white creature-based disruption plan with Maverick. Ocelot Pride Midrange is the newer energy-based competitor for the non-blue aggro slot.
 
 ### Key Cards Explained
 
-<img src="https://api.scryfall.com/cards/named?exact=Thalia%2C+Guardian+of+Thraben&format=image&version=normal&set=dka" alt="Thalia, Guardian of Thraben" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Aether+Vial&format=image&version=normal" alt="Aether Vial" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Stoneforge+Mystic&format=image&version=normal&set=wwk" alt="Stoneforge Mystic" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Thalia%2C+Guardian+of+Thraben&format=image&version=normal&set=dka" alt="Thalia, Guardian of Thraben" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Aether+Vial&format=image&version=normal&set=dst" alt="Aether Vial" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Stoneforge+Mystic&format=image&version=normal&set=wwk" alt="Stoneforge Mystic" width="217">
 
 - **Thalia, Guardian of Thraben:** Taxes noncreature spells by 1, slowing down cantrip and combo decks significantly.
 - **Aether Vial:** Deploys creatures at instant speed without paying mana, circumventing Thalia's own tax and enabling tricks with Flickerwisp.
@@ -1734,45 +1734,45 @@ Shares the white creature-based disruption plan with Maverick. Ocelot Pride Midr
 
 ### Historical Timeline
 
-**2012** (tier 2, ~4%)  
+**2012** (tier 2, ~4%)
 Death and Taxes becomes a Legacy staple as a mono-white hatebear deck. Thalia, Guardian of Thraben from Dark Ascension is the signature card, taxing the cantrip-heavy format. Aether Vial provides tempo.
 - Thalia, Guardian of Thraben as format-defining hatebear
 - Aether Vial for tempo
 - Rishadan Port + Wasteland mana denial
 - Stoneforge Mystic + Batterskull/Jitte
 
-**2014** (tier 2, ~4%)  
+**2014** (tier 2, ~4%)
 Consistent tier 2 presence. Spirit of the Labyrinth from Born of the Gods added as Brainstorm hoser.
 - Spirit of the Labyrinth added
 - Recruiter of the Guard for toolbox access
 
-**2017** (tier 1, ~6%)  
+**2017** (tier 1, ~6%)
 Top ban guts Miracles, and D&T benefits from less Terminus in the format. Rises in meta share as one of the best fair decks.
 - Benefits from Miracles decline
 - Less Terminus means creatures survive better
 
-**2019** (tier 2, ~3%)  
+**2019** (tier 2, ~3%)
 Once Upon a Time briefly legal. Palace Jailer provides card advantage. Steady performer through multiple metagame shifts.
 - Palace Jailer for card advantage
 - Gideon, Ally of Zendikar in some builds
 
-**2020** (tier 2, ~3%)  
+**2020** (tier 2, ~3%)
 Yorion, Sky Nomad companion explored in 80-card builds. Skyclave Apparition adds flexible removal.
 - Yorion companion 80-card builds experimented with
 - Skyclave Apparition as removal creature
 
-**2023** (tier 2, ~2.5%)  
+**2023** (tier 2, ~2.5%)
 Orcish Bowmasters pushes some builds toward BW (Orzhov). Bowmasters is excellent in the shell, and Plague Engineer was already played. Grief adds disruption.
 - BW/Orzhov builds with Orcish Bowmasters
 - Grief for hand disruption
 - Mono-white and BW builds coexist
 
-**2026** (tier 2, ~2.0%)  
+**2026** (tier 2, ~2.0%)
 Tier 2 at 2.0%. Adapts to every meta but never dominates. One of Legacy's most beloved and enduring fair decks.
 - Both mono-W and BW builds viable
 - Stable Thalia + Vial + Stoneforge core
 
-**Frequency of Change:** high  
+**Frequency of Change:** high
 **Change Notes:** The shift to 80-card Yorion with black splash for Orcish Bowmasters and Thoughtseize was the biggest change. The deck constantly adapts its creature suite to the metagame.
 
 ---
@@ -1781,14 +1781,14 @@ Tier 2 at 2.0%. Adapts to every meta but never dominates. One of Legacy's most b
 
 **Also known as:** OmniTell, Omniscience Show, Show and Omni
 
-**Archetype:** combo  
-**Colors:** U  
-**Tier:** tier 2  
-**Meta Share:** 1.7%  
-**Win Rate Estimate:** 49-51%  
-**Cost Estimate:** $1,800 (driven by Force of Will, Ancient Tomb, Omniscience)  
-**First Appeared:** 2013  
-**Peak Meta Share:** 2015-2016  
+**Archetype:** combo
+**Colors:** U
+**Tier:** tier 2
+**Meta Share:** 1.7%
+**Win Rate Estimate:** 49-51%
+**Cost Estimate:** $1,800 (driven by Force of Will, Ancient Tomb, Omniscience)
+**First Appeared:** 2013
+**Peak Meta Share:** 2015-2016
 **Deck Count in Sample:** 27
 
 A combo deck that uses Show and Tell to put Omniscience into play, then casts free spells to win the game with Cunning Wish into Release the Ants or simply casting Emrakul. More resilient than Sneak and Show against creature removal but more vulnerable to enchantment removal.
@@ -1836,12 +1836,12 @@ A combo deck that uses Show and Tell to put Omniscience into play, then casts fr
 - **Unfavorable:** Dimir Tempo, Death and Taxes, Painter
 - **Even:** Sneak and Show, The EPIC Storm, Izzet Delver
 
-**Similar Decks:** Sneak and Show  
+**Similar Decks:** Sneak and Show
 Both use Show and Tell as the combo enabler but diverge on the payoff: Omniscience vs Sneak Attack. Omni-Tell is more all-in on the enchantment plan.
 
 ### Key Cards Explained
 
-<img src="https://api.scryfall.com/cards/named?exact=Omniscience&format=image&version=normal" alt="Omniscience" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Cunning+Wish&format=image&version=normal" alt="Cunning Wish" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Release+the+Ants&format=image&version=normal" alt="Release the Ants" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Omniscience&format=image&version=normal&set=m13" alt="Omniscience" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Cunning+Wish&format=image&version=normal&set=jud" alt="Cunning Wish" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Release+the+Ants&format=image&version=normal&set=mor" alt="Release the Ants" width="217">
 
 - **Omniscience:** Allows casting all spells for free. Once in play, chain Cunning Wish into the winning combo or just cast Emrakul.
 - **Cunning Wish:** With Omniscience in play, tutors for the win condition from the sideboard.
@@ -1849,28 +1849,28 @@ Both use Show and Tell as the combo enabler but diverge on the payoff: Omniscien
 
 ### Historical Timeline
 
-**2013** (tier 2, ~2%)  
+**2013** (tier 2, ~2%)
 Omni-Tell splits from Sneak and Show, focusing on Show and Tell into Omniscience rather than Sneak Attack. Casts Emrakul for free or uses Cunning Wish to chain spells.
 - Omniscience as primary Show and Tell target
 - Cunning Wish for silver bullets
 - Release the Ants / Emrakul as win conditions
 
-**2015** (tier 2, ~2.5%)  
+**2015** (tier 2, ~2.5%)
 Dig Through Time briefly makes Omni-Tell insane before being banned. The deck could consistently find combo pieces. Remains viable after the ban.
 - Dig Through Time briefly incredible (then banned)
 - Deck adjusts post-ban
 
-**2019** (tier 2, ~1.5%)  
+**2019** (tier 2, ~1.5%)
 Thassa's Oracle win condition simplifies some builds. Omniscience + Oracle + cantrips is cleaner than older wins.
 - Thassa's Oracle as cleaner win condition
 - Cantrip-heavy build for Oracle
 
-**2026** (tier 2, ~1.7%)  
+**2026** (tier 2, ~1.7%)
 Tier 2 at 1.7%. Exists alongside Sneak and Show as the slower but more resilient Show and Tell variant.
 - Stable combo core
 - Competes with Sneak and Show for players
 
-**Frequency of Change:** low  
+**Frequency of Change:** low
 **Change Notes:** Very stable combo. The Cunning Wish targets in the sideboard rotate based on metagame. Veil of Summer is a key recent addition for protection.
 
 ---
@@ -1879,14 +1879,14 @@ Tier 2 at 1.7%. Exists alongside Sneak and Show as the slower but more resilient
 
 **Also known as:** Mono Black Control, MBC, The Gate
 
-**Archetype:** midrange  
-**Colors:** B  
-**Tier:** tier 2  
-**Meta Share:** 1.3%  
-**Win Rate Estimate:** 49-51%  
-**Cost Estimate:** $1,500 (driven by Wasteland, Chrome Mox, Grief, Urza's Saga)  
-**First Appeared:** 2023  
-**Peak Meta Share:** 2025-2026  
+**Archetype:** midrange
+**Colors:** B
+**Tier:** tier 2
+**Meta Share:** 1.3%
+**Win Rate Estimate:** 49-51%
+**Cost Estimate:** $1,500 (driven by Wasteland, Chrome Mox, Grief, Urza's Saga)
+**First Appeared:** 2023
+**Peak Meta Share:** 2025-2026
 **Deck Count in Sample:** 20
 
 A mono-black midrange deck leveraging the power of Orcish Bowmasters, Sheoldred, the Apocalypse, and discard-based disruption. Eschews blue cantrips for a more consistent mana base and powerful black staples. Uses Urza's Saga and Dark Ritual for acceleration.
@@ -1934,12 +1934,12 @@ A mono-black midrange deck leveraging the power of Orcish Bowmasters, Sheoldred,
 - **Unfavorable:** Sneak and Show, Oops! All Spells, Lands
 - **Even:** Dimir Tempo, Ocelot Pride Midrange, Painter
 
-**Similar Decks:** Dimir Tempo, Death's Shadow  
+**Similar Decks:** Dimir Tempo, Death's Shadow
 Shares the black disruption core of Dimir Tempo but trades blue cantrips for more raw power and a simpler mana base. A more midrange approach than Dimir Tempo's tempo plan.
 
 ### Key Cards Explained
 
-<img src="https://api.scryfall.com/cards/named?exact=Grief&format=image&version=normal" alt="Grief" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Sheoldred%2C+the+Apocalypse&format=image&version=normal" alt="Sheoldred, the Apocalypse" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Hymn+to+Tourach&format=image&version=normal" alt="Hymn to Tourach" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Grief&format=image&version=normal&set=mh2" alt="Grief" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Sheoldred%2C+the+Apocalypse&format=image&version=normal&set=dmu" alt="Sheoldred, the Apocalypse" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Hymn+to+Tourach&format=image&version=normal&set=fem" alt="Hymn to Tourach" width="217">
 
 - **Grief:** Evoked on turn 1 with Reanimate provides a discard effect plus a 3/2 menace body, recreating the Scam strategy.
 - **Sheoldred, the Apocalypse:** Gains life when you draw and drains opponent when they draw. Punishes blue cantrips mercilessly.
@@ -1948,24 +1948,24 @@ Shares the black disruption core of Dimir Tempo but trades blue cantrips for mor
 
 ### Historical Timeline
 
-**2023** (tier 2, ~1.5%)  
+**2023** (tier 2, ~1.5%)
 Mono-Black Midrange / Scam decks emerge using Grief + Reanimate for turn-1 disruption alongside Orcish Bowmasters and Sheoldred, the Apocalypse.
 - Grief + Reanimate package
 - Orcish Bowmasters
 - Sheoldred, the Apocalypse
 - Dark Ritual for explosive starts
 
-**2024** (tier 2, ~1.5%)  
+**2024** (tier 2, ~1.5%)
 Necrodominance from MH3 provides a Necropotence-like card advantage engine. Some builds incorporate it.
 - Necrodominance as card advantage engine
 - Refined threat suite
 
-**2026** (tier 2, ~1.3%)  
+**2026** (tier 2, ~1.3%)
 Tier 2 at 1.3%. A pure black disruption deck that leverages the best black cards in the format.
 - Stable mono-B shell
 - Tourach, Dread Cantor and other black threats
 
-**Frequency of Change:** medium  
+**Frequency of Change:** medium
 **Change Notes:** Bowmasters and Sheoldred made mono-black viable. The reanimation package (Grief + Reanimate) gives explosive starts. Still a relatively new archetype being refined.
 
 ---
@@ -1974,14 +1974,14 @@ Tier 2 at 1.3%. A pure black disruption deck that leverages the best black cards
 
 **Also known as:** Aluren Combo, BUG Aluren
 
-**Archetype:** combo  
-**Colors:** B, U, G  
-**Tier:** tier 2  
-**Meta Share:** 1.2%  
-**Win Rate Estimate:** 49-51%  
-**Cost Estimate:** $3,200 (driven by Underground Sea, Tropical Island, Bayou, Force of Will)  
-**First Appeared:** 2004  
-**Peak Meta Share:** 2013-2014  
+**Archetype:** combo
+**Colors:** B, U, G
+**Tier:** tier 2
+**Meta Share:** 1.2%
+**Win Rate Estimate:** 49-51%
+**Cost Estimate:** $3,200 (driven by Underground Sea, Tropical Island, Bayou, Force of Will)
+**First Appeared:** 2004
+**Peak Meta Share:** 2013-2014
 **Deck Count in Sample:** 19
 
 A combo deck built around the enchantment Aluren, which allows creatures with MV 3 or less to be cast for free at instant speed. Combines with Acererak the Archlich to repeatedly venture into the dungeon, draining the opponent's life to zero with Tomb of Annihilation.
@@ -2034,12 +2034,12 @@ A combo deck built around the enchantment Aluren, which allows creatures with MV
 - **Unfavorable:** Dimir Tempo, Red Stompy, Painter
 - **Even:** Sneak and Show, Ocelot Pride Midrange, The EPIC Storm
 
-**Similar Decks:** Cradle Control, Sultai Tempo  
+**Similar Decks:** Cradle Control, Sultai Tempo
 Shares the BUG shell and some creature overlap with Sultai Tempo. The GSZ package is similar to Cradle Control but aimed at finding combo pieces.
 
 ### Key Cards Explained
 
-<img src="https://api.scryfall.com/cards/named?exact=Aluren&format=image&version=normal&set=tmp" alt="Aluren" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Acererak+the+Archlich&format=image&version=normal" alt="Acererak the Archlich" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Ice-Fang+Coatl&format=image&version=normal" alt="Ice-Fang Coatl" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Aluren&format=image&version=normal&set=tmp" alt="Aluren" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Acererak+the+Archlich&format=image&version=normal&set=afr" alt="Acererak the Archlich" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Ice-Fang+Coatl&format=image&version=normal&set=mh1" alt="Ice-Fang Coatl" width="217">
 
 - **Aluren:** Enchantment that lets both players cast creatures with MV 3 or less for free. Enables the combo.
 - **Acererak the Archlich:** With Aluren, cast for free, ventures into dungeon, bounces to hand if you haven't completed Tomb of Annihilation. Repeat for infinite drain.
@@ -2048,33 +2048,33 @@ Shares the BUG shell and some creature overlap with Sultai Tempo. The GSZ packag
 
 ### Historical Timeline
 
-**2004** (tier 3, ~1%)  
+**2004** (tier 3, ~1%)
 Aluren combo deck exists in early Legacy, using the enchantment Aluren to cast creatures for free and generate infinite loops with Cavern Harpy.
 - Aluren as combo engine
 - Cavern Harpy + Imperial Recruiter loop
 - Parasitic Strix / Dream Stalker for win
 
-**2013** (tier 2, ~1.5%)  
+**2013** (tier 2, ~1.5%)
 Deathrite Shaman era. BUG Aluren lists use DRS and other value creatures alongside the combo. True-Name Nemesis gives a fair plan B.
 - Deathrite Shaman in BUG shell
 - True-Name Nemesis as backup plan
 
-**2018** (tier 3, ~0.5%)  
+**2018** (tier 3, ~0.5%)
 DRS ban hurts the deck's fair game plan. Aluren adapts but loses a key mana creature.
 - Deathrite Shaman banned
 - Rebuilds around other value creatures
 
-**2023** (tier 2, ~1%)  
+**2023** (tier 2, ~1%)
 Orcish Bowmasters can be cast for free off Aluren, adding removal to the creature combo shell. Deck gets a resurgence.
 - Orcish Bowmasters free off Aluren
 - Renewed interest from combo-control players
 
-**2026** (tier 2, ~1.2%)  
+**2026** (tier 2, ~1.2%)
 Tier 2 at 1.2%. A unique creature combo deck with a loyal player base and the ability to play a fair game.
 - Stable combo shell
 - Bowmasters enhances interaction
 
-**Frequency of Change:** low  
+**Frequency of Change:** low
 **Change Notes:** Acererak the Archlich from AFR was a transformative addition, providing a compact infinite combo with Aluren. Previous versions used more complex loops with Cavern Harpy.
 
 ---
@@ -2083,14 +2083,14 @@ Tier 2 at 1.2%. A unique creature combo deck with a loyal player base and the ab
 
 **Also known as:** Urza Artifacts, UB Artifacts, Emry Artifacts
 
-**Archetype:** midrange  
-**Colors:** U, B  
-**Tier:** tier 2  
-**Meta Share:** 1.1%  
-**Win Rate Estimate:** 49-51%  
-**Cost Estimate:** $2,800 (driven by Underground Sea, Force of Will, Mox Opal)  
-**First Appeared:** 2023  
-**Peak Meta Share:** 2024-2025  
+**Archetype:** midrange
+**Colors:** U, B
+**Tier:** tier 2
+**Meta Share:** 1.1%
+**Win Rate Estimate:** 49-51%
+**Cost Estimate:** $2,800 (driven by Underground Sea, Force of Will, Mox Opal)
+**First Appeared:** 2023
+**Peak Meta Share:** 2024-2025
 **Deck Count in Sample:** 17
 
 A blue-black artifact deck that combines Thought Monitor, Emry, Lurker of the Loch, and Urza's Saga to create an artifact-synergy midrange strategy backed by blue countermagic. More interactive than pure Affinity builds.
@@ -2141,12 +2141,12 @@ A blue-black artifact deck that combines Thought Monitor, Emry, Lurker of the Lo
 - **Unfavorable:** Ocelot Pride Midrange, Cradle Control, Painter
 - **Even:** Dimir Tempo, Sneak and Show, Eldrazi
 
-**Similar Decks:** Affinity Stompy, Mystic Forge Combo  
+**Similar Decks:** Affinity Stompy, Mystic Forge Combo
 Shares the artifact creature base with Affinity Stompy but adds blue interaction. Less combo-focused than Mystic Forge but more resilient.
 
 ### Key Cards Explained
 
-<img src="https://api.scryfall.com/cards/named?exact=Emry%2C+Lurker+of+the+Loch&format=image&version=normal" alt="Emry, Lurker of the Loch" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Thought+Monitor&format=image&version=normal" alt="Thought Monitor" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Mox+Opal&format=image&version=normal" alt="Mox Opal" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Emry%2C+Lurker+of+the+Loch&format=image&version=normal&set=eld" alt="Emry, Lurker of the Loch" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Thought+Monitor&format=image&version=normal&set=mh2" alt="Thought Monitor" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Mox+Opal&format=image&version=normal&set=som" alt="Mox Opal" width="217">
 
 - **Emry, Lurker of the Loch:** Costs as little as U with enough artifacts. Recurs artifacts from the graveyard each turn, providing incredible value.
 - **Thought Monitor:** Draws two cards for as little as U when you have enough artifacts. The deck's premier card advantage.
@@ -2154,24 +2154,24 @@ Shares the artifact creature base with Affinity Stompy but adds blue interaction
 
 ### Historical Timeline
 
-**2023** (tier 3, ~0.5%)  
+**2023** (tier 3, ~0.5%)
 Blue-based artifact combo-control deck emerges using Emry, Lurker of the Loch, Urza's Saga, and various artifact synergies. Blue provides Force of Will backup.
 - Emry, Lurker of the Loch as engine
 - Urza's Saga for tutoring and threats
 - Force of Will for protection
 - Mishra's Bauble and artifact cantrips
 
-**2024** (tier 2, ~1%)  
+**2024** (tier 2, ~1%)
 MH3 artifact support helps the deck. Refines into a more consistent strategy.
 - MH3 artifact additions
 - Improved combo consistency
 
-**2026** (tier 2, ~1.1%)  
+**2026** (tier 2, ~1.1%)
 Tier 2 at 1.1%. A niche artifact strategy that leverages blue permission alongside artifact synergies.
 - Optimized artifact shell
 - Stable blue + artifacts core
 
-**Frequency of Change:** medium  
+**Frequency of Change:** medium
 **Change Notes:** Relatively new archetype combining the best of artifact aggro with blue interaction. Emry provides recursion that pure Affinity lacks.
 
 ---
@@ -2180,14 +2180,14 @@ Tier 2 at 1.1%. A niche artifact strategy that leverages blue permission alongsi
 
 **Also known as:** Dredge, Manaless Dredge, Lion's Eye Diamond Dredge
 
-**Archetype:** combo  
-**Colors:** B, R, G  
-**Tier:** tier 2  
-**Meta Share:** 1.1%  
-**Win Rate Estimate:** 49-51%  
-**Cost Estimate:** $1,200 (driven by Lion's Eye Diamond, Force of Will, Cephalid Coliseum)  
-**First Appeared:** 2009  
-**Peak Meta Share:** 2016-2017  
+**Archetype:** combo
+**Colors:** B, R, G
+**Tier:** tier 2
+**Meta Share:** 1.1%
+**Win Rate Estimate:** 49-51%
+**Cost Estimate:** $1,200 (driven by Lion's Eye Diamond, Force of Will, Cephalid Coliseum)
+**First Appeared:** 2009
+**Peak Meta Share:** 2016-2017
 **Deck Count in Sample:** 17
 
 A graveyard combo deck that uses the dredge mechanic to fill its graveyard, then wins with Narcomoeba, Bridge from Below, and Dread Return into a win condition. Lion's Eye Diamond enables explosive starts by providing mana while filling the graveyard.
@@ -2234,12 +2234,12 @@ A graveyard combo deck that uses the dredge mechanic to fill its graveyard, then
 - **Unfavorable:** Dimir Tempo, Red Stompy, Ocelot Pride Midrange
 - **Even:** Sneak and Show, Oops! All Spells, Eldrazi
 
-**Similar Decks:** Oops! All Spells  
+**Similar Decks:** Oops! All Spells
 Both are graveyard combo decks using Narcomoeba and Dread Return, but Dredge is more resilient and grindy while Oops is faster and more fragile.
 
 ### Key Cards Explained
 
-<img src="https://api.scryfall.com/cards/named?exact=Golgari+Grave-Troll&format=image&version=normal" alt="Golgari Grave-Troll" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Bridge+from+Below&format=image&version=normal" alt="Bridge from Below" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Lion%27s+Eye+Diamond&format=image&version=normal&set=mir" alt="Lion's Eye Diamond" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Golgari+Grave-Troll&format=image&version=normal&set=rav" alt="Golgari Grave-Troll" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Bridge+from+Below&format=image&version=normal&set=fut" alt="Bridge from Below" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Lion%27s+Eye+Diamond&format=image&version=normal&set=mir" alt="Lion's Eye Diamond" width="217">
 
 - **Golgari Grave-Troll:** Dredge 6 is the highest dredge count, milling six cards each time you would draw. Fills the graveyard rapidly.
 - **Bridge from Below:** Creates zombie tokens whenever a creature you control dies, provided it's in your graveyard. Powers the Dread Return chain.
@@ -2248,34 +2248,34 @@ Both are graveyard combo decks using Narcomoeba and Dread Return, but Dredge is 
 
 ### Historical Timeline
 
-**2009** (tier 2, ~3%)  
+**2009** (tier 2, ~3%)
 LED Dredge establishes itself as Legacy's premier graveyard deck. Uses Lion's Eye Diamond to enable dredge cards, Narcomoeba, Ichorid, and Bridge from Below for an army of zombies.
 - Lion's Eye Diamond enables Dredge
 - Golgari Grave-Troll, Stinkweed Imp as dredgers
 - Narcomoeba, Ichorid, Bridge from Below as payoffs
 - Cabal Therapy for disruption
 
-**2013** (tier 3, ~1%)  
+**2013** (tier 3, ~1%)
 Deathrite Shaman everywhere is devastating for Dredge. Incidental graveyard hate on a maindeckable creature crushes the strategy.
 - Deathrite Shaman makes graveyard strategies much worse
 - Deck struggles in DRS meta
 
-**2018** (tier 2, ~3%)  
+**2018** (tier 2, ~3%)
 DRS ban is hugely positive for Dredge. Creeping Chill from Guilds of Ravnica adds free damage from the graveyard. Deck surges.
 - DRS ban removes mainboard hate
 - Creeping Chill adds free damage
 
-**2021** (tier 2, ~2%)  
+**2021** (tier 2, ~2%)
 Endurance from MH2 is a devastating hate card — instant-speed graveyard shuffle. Deck takes a hit.
 - Endurance as major new hate card
 - Deck adapts with more resilience
 
-**2023** (tier 2, ~1.5%)  
+**2023** (tier 2, ~1.5%)
 Orcish Bowmasters incidentally punishes some Dredge plays. Surgical Extraction and other hate remain widespread.
 - Adapts to Bowmasters meta
 - Consistent but not dominant
 
-**2026** (tier 2, ~1.1%)  
+**2026** (tier 2, ~1.1%)
 Tier 2 at 1.1%. Graveyard hate keeps it in check, but the raw power of dredging remains formidable against unprepared opponents.
 - Stable dredge core
 - Adapts threat suite to current hate
@@ -2284,7 +2284,7 @@ Tier 2 at 1.1%. Graveyard hate keeps it in check, but the raw power of dredging 
 
 - **Gitaxian Probe** (2018-07): Lost a free cantrip that helped enable turn-1 kills. Reduced consistency slightly.
 
-**Frequency of Change:** low  
+**Frequency of Change:** low
 **Change Notes:** Very stable core. Silversmote Ghoul was a meaningful addition. Thassa's Oracle provides a backup win condition. The deck adapts primarily through its sideboard.
 
 ---
@@ -2293,14 +2293,14 @@ Tier 2 at 1.1%. Graveyard hate keeps it in check, but the raw power of dredging 
 
 **Also known as:** UWR Control, Jeskai Miracles
 
-**Archetype:** control  
-**Colors:** U, W, R  
-**Tier:** tier 3  
-**Meta Share:** 0.9%  
-**Win Rate Estimate:** 49-51%  
-**Cost Estimate:** $3,800 (driven by Volcanic Island, Tundra, Underground Sea, Force of Will)  
-**First Appeared:** 2017  
-**Peak Meta Share:** 2018-2019  
+**Archetype:** control
+**Colors:** U, W, R
+**Tier:** tier 3
+**Meta Share:** 0.9%
+**Win Rate Estimate:** 49-51%
+**Cost Estimate:** $3,800 (driven by Volcanic Island, Tundra, Underground Sea, Force of Will)
+**First Appeared:** 2017
+**Peak Meta Share:** 2018-2019
 **Deck Count in Sample:** 14
 
 A traditional three-color control deck using countermagic, removal, and card advantage to grind opponents out. The spiritual successor to Miracles after the Sensei's Divining Top ban, now using Monastery Mentor or Entreat the Angels as win conditions alongside efficient Jeskai interaction.
@@ -2354,12 +2354,12 @@ A traditional three-color control deck using countermagic, removal, and card adv
 - **Unfavorable:** Dimir Tempo, Painter, Mono Black Midrange
 - **Even:** Sneak and Show, Ocelot Pride Midrange, Izzet Delver
 
-**Similar Decks:** Beanstalk Control  
+**Similar Decks:** Beanstalk Control
 Beanstalk Control is the four-color evolution of this strategy. Jeskai Control is leaner and more focused on countermagic over Beanstalk card advantage.
 
 ### Key Cards Explained
 
-<img src="https://api.scryfall.com/cards/named?exact=Monastery+Mentor&format=image&version=normal" alt="Monastery Mentor" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Terminus&format=image&version=normal" alt="Terminus" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Snapcaster+Mage&format=image&version=normal" alt="Snapcaster Mage" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Monastery+Mentor&format=image&version=normal&set=frf" alt="Monastery Mentor" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Terminus&format=image&version=normal&set=avr" alt="Terminus" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Snapcaster+Mage&format=image&version=normal&set=isd" alt="Snapcaster Mage" width="217">
 
 - **Monastery Mentor:** Creates monk tokens on every noncreature spell, turning cantrips into a lethal army.
 - **Terminus:** Miracle for W puts all creatures on the bottom of libraries. Devastating board wipe that can be set up with Brainstorm.
@@ -2367,25 +2367,25 @@ Beanstalk Control is the four-color evolution of this strategy. Jeskai Control i
 
 ### Historical Timeline
 
-**2017** (tier 2, ~3%)  
+**2017** (tier 2, ~3%)
 After Sensei's Divining Top ban guts Miracles, UW/Jeskai Control rebuilds without the Counterbalance-Top lock. Slower but more traditional control approach with Snapcaster Mage, Jace, and Supreme Verdict.
 - Rebuilds from Miracles shell post-Top ban
 - Snapcaster Mage + Jace, the Mind Sculptor
 - Terminus still playable via Brainstorm
 - Search for Azcanta as card advantage
 
-**2020** (tier 2, ~2%)  
+**2020** (tier 2, ~2%)
 Shark Typhoon provides a flexible win condition. Uro, Titan of Nature's Wrath in Bant or 4c versions. Jeskai with Pyroblast preferred by some.
 - Shark Typhoon as uncounterable win condition
 - Pyroblast for blue mirrors
 
-**2023** (tier 2, ~1.5%)  
+**2023** (tier 2, ~1.5%)
 Competes with Beanstalk Control for the control slot. Jeskai offers Pyroblast and Lightning Bolt but Beanstalk offers more raw card advantage.
 - Competes with Beanstalk Control
 - Day's Undoing experimented with
 - Monastery Mentor as threat
 
-**2026** (tier 3, ~0.9%)  
+**2026** (tier 3, ~0.9%)
 Tier 3 at 0.9%. Still viable but overshadowed by Beanstalk Control as the control deck of choice.
 - Stable UWR control shell
 - Niche pick for Pyroblast access
@@ -2394,7 +2394,7 @@ Tier 3 at 0.9%. Still viable but overshadowed by Beanstalk Control as the contro
 
 - **Sensei's Divining Top** (2017-04): Ended the Miracles era. The deck evolved from Counterbalance/Top lock to a more traditional control build.
 
-**Frequency of Change:** medium  
+**Frequency of Change:** medium
 **Change Notes:** Has been somewhat eclipsed by Beanstalk Control as the control deck of choice. Remains viable for players who prefer a tighter mana base.
 
 ---
@@ -2403,14 +2403,14 @@ Tier 3 at 0.9%. Still viable but overshadowed by Beanstalk Control as the contro
 
 **Also known as:** GW Depths, Turbo Depths, Depths Combo
 
-**Archetype:** combo  
-**Colors:** G, W  
-**Tier:** tier 3  
-**Meta Share:** 0.8%  
-**Win Rate Estimate:** 49-51%  
-**Cost Estimate:** $2,400 (driven by Mox Diamond, Savannah, Dark Depths)  
-**First Appeared:** 2015  
-**Peak Meta Share:** 2019-2020  
+**Archetype:** combo
+**Colors:** G, W
+**Tier:** tier 3
+**Meta Share:** 0.8%
+**Win Rate Estimate:** 49-51%
+**Cost Estimate:** $2,400 (driven by Mox Diamond, Savannah, Dark Depths)
+**First Appeared:** 2015
+**Peak Meta Share:** 2019-2020
 **Deck Count in Sample:** 13
 
 A combo deck focused on assembling Dark Depths + Thespian's Stage as quickly as possible using Crop Rotation, Elvish Reclaimer, and Knight of the Reliquary. The GW version adds Swords to Plowshares and Knight toolbox over the older BG version.
@@ -2461,12 +2461,12 @@ A combo deck focused on assembling Dark Depths + Thespian's Stage as quickly as 
 - **Unfavorable:** Sneak and Show, Oops! All Spells, Painter
 - **Even:** Ocelot Pride Midrange, Lands, Death and Taxes
 
-**Similar Decks:** Lands, Maverick, Cradle Control  
+**Similar Decks:** Lands, Maverick, Cradle Control
 Shares the Depths combo with Lands but in a more aggressive creature-based shell. Shares the GW creature toolbox with Maverick.
 
 ### Key Cards Explained
 
-<img src="https://api.scryfall.com/cards/named?exact=Dark+Depths&format=image&version=normal&set=csp" alt="Dark Depths" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Crop+Rotation&format=image&version=normal" alt="Crop Rotation" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Knight+of+the+Reliquary&format=image&version=normal" alt="Knight of the Reliquary" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Dark+Depths&format=image&version=normal&set=csp" alt="Dark Depths" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Crop+Rotation&format=image&version=normal&set=usg" alt="Crop Rotation" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Knight+of+the+Reliquary&format=image&version=normal&set=con" alt="Knight of the Reliquary" width="217">
 
 - **Dark Depths:** Combines with Thespian's Stage for a 20/20 flying indestructible token as early as turn 2.
 - **Crop Rotation:** Instant-speed land tutor that finds Dark Depths or Thespian's Stage at the cost of sacrificing a land.
@@ -2475,34 +2475,34 @@ Shares the Depths combo with Lands but in a more aggressive creature-based shell
 
 ### Historical Timeline
 
-**2015** (tier 2, ~2%)  
+**2015** (tier 2, ~2%)
 GW Depths focuses on the Dark Depths + Thespian's Stage combo with Knight of the Reliquary as a land tutor and backup threat. Green Sun's Zenith toolbox.
 - Dark Depths + Thespian's Stage combo
 - Knight of the Reliquary as tutor/threat
 - Green Sun's Zenith toolbox
 - Crop Rotation for speed
 
-**2018** (tier 2, ~2%)  
+**2018** (tier 2, ~2%)
 DRS ban helps the deck. Ramunap Excavator provides additional land recursion and Wasteland synergy.
 - DRS ban removes hate and competition
 - Ramunap Excavator for Wasteland recursion
 
-**2021** (tier 2, ~1.5%)  
+**2021** (tier 2, ~1.5%)
 Yavimaya, Cradle of Growth from MH2 makes the Depths combo easier to assemble — all lands become Forests for Crop Rotation.
 - Yavimaya, Cradle of Growth enables easier combo
 - Endurance as pitch card
 
-**2023** (tier 3, ~1%)  
+**2023** (tier 3, ~1%)
 Competes with Lands for the land-combo slot. GW Depths is faster but less grindy.
 - Competes with Lands archetype
 - Boseiju, Who Endures for interaction
 
-**2026** (tier 3, ~0.8%)  
+**2026** (tier 3, ~0.8%)
 Tier 3 at 0.8%. A focused Dark Depths combo deck that rewards knowledge of the format's mana bases.
 - Stable combo shell
 - Occasional Abrupt Decay splash for BG Depths
 
-**Frequency of Change:** low  
+**Frequency of Change:** low
 **Change Notes:** The shift from BG to GW happened gradually as Swords to Plowshares and Knight of the Reliquary proved more impactful. Once Upon a Time added consistency.
 
 ---
@@ -2511,14 +2511,14 @@ Tier 3 at 0.8%. A focused Dark Depths combo deck that rewards knowledge of the f
 
 **Also known as:** BUG Tempo, Sultai Delver, BUG Delver
 
-**Archetype:** tempo  
-**Colors:** B, U, G  
-**Tier:** tier 3  
-**Meta Share:** 0.5%  
-**Win Rate Estimate:** 49-51%  
-**Cost Estimate:** $4,200 (driven by Underground Sea, Tropical Island, Bayou, Force of Will)  
-**First Appeared:** 2013  
-**Peak Meta Share:** 2019-2020  
+**Archetype:** tempo
+**Colors:** B, U, G
+**Tier:** tier 3
+**Meta Share:** 0.5%
+**Win Rate Estimate:** 49-51%
+**Cost Estimate:** $4,200 (driven by Underground Sea, Tropical Island, Bayou, Force of Will)
+**First Appeared:** 2013
+**Peak Meta Share:** 2019-2020
 **Deck Count in Sample:** 8
 
 A three-color tempo deck that adds green to the UB shell for Uro, Titan of Nature's Wrath and Endurance. Slightly grindier than Dimir Tempo with better long-game potential but a less consistent mana base.
@@ -2567,12 +2567,12 @@ A three-color tempo deck that adds green to the UB shell for Uro, Titan of Natur
 - **Unfavorable:** Ocelot Pride Midrange, Red Stompy, Eldrazi
 - **Even:** Dimir Tempo, Sneak and Show, Painter
 
-**Similar Decks:** Dimir Tempo, Aluren  
+**Similar Decks:** Dimir Tempo, Aluren
 Essentially Dimir Tempo with a green splash. Trades mana consistency for Uro's grinding power and Endurance as graveyard hate.
 
 ### Key Cards Explained
 
-<img src="https://api.scryfall.com/cards/named?exact=Uro%2C+Titan+of+Nature%27s+Wrath&format=image&version=normal" alt="Uro, Titan of Nature's Wrath" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Endurance&format=image&version=normal" alt="Endurance" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Abrupt+Decay&format=image&version=normal" alt="Abrupt Decay" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Uro%2C+Titan+of+Nature%27s+Wrath&format=image&version=normal&set=thb" alt="Uro, Titan of Nature's Wrath" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Endurance&format=image&version=normal&set=mh2" alt="Endurance" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Abrupt+Decay&format=image&version=normal&set=rtr" alt="Abrupt Decay" width="217">
 
 - **Uro, Titan of Nature's Wrath:** The primary reason to splash green. Provides life, card draw, and ramp, then escapes as a 6/6 that does it all again.
 - **Endurance:** Flash creature that shuffles graveyards, providing hate against Dredge, Reanimator, and Doomsday.
@@ -2580,29 +2580,29 @@ Essentially Dimir Tempo with a green splash. Trades mana consistency for Uro's g
 
 ### Historical Timeline
 
-**2013** (tier 1, ~10%)  
+**2013** (tier 1, ~10%)
 BUG Delver rises to tier 1 with Deathrite Shaman. Combines Delver, DRS, Tarmogoyf, True-Name Nemesis with Abrupt Decay, Force of Will, and Hymn to Tourach. The best deck in Legacy for several years.
 - Deathrite Shaman as mana creature + graveyard hate + win condition
 - True-Name Nemesis from Commander 2013
 - Abrupt Decay for uncounterable removal
 - Hymn to Tourach for disruption
 
-**2016** (tier 1, ~8%)  
+**2016** (tier 1, ~8%)
 BUG Delver remains one of the two best decks alongside Miracles. DRS + Wasteland + Daze is the defining tempo shell.
 - Core stable
 - Leovold, Emissary of Trest added (then banned 2017)
 
-**2018** (tier 3, ~1%)  
+**2018** (tier 3, ~1%)
 Deathrite Shaman BANNED (July). BUG Delver completely collapses without its best card. Players scatter to RUG Delver and other shells.
 - DRS ban devastates the archetype
 - Most players switch to other Delver variants
 
-**2023** (tier 3, ~0.5%)  
+**2023** (tier 3, ~0.5%)
 Orcish Bowmasters gives black a reason to exist in tempo again, but Dimir Tempo (UB) is preferred over BUG (adding green for Uro).
 - UB Dimir Tempo preferred over BUG
 - Some BUG lists with Uro, Titan of Nature's Wrath
 
-**2026** (tier 3, ~0.5%)  
+**2026** (tier 3, ~0.5%)
 Tier 3 at 0.5%. Niche option for players who want Uro alongside the UB tempo shell.
 - Uro as key green reason
 - Otherwise similar to Dimir Tempo
@@ -2611,7 +2611,7 @@ Tier 3 at 0.5%. Niche option for players who want Uro alongside the UB tempo she
 
 - **Oko, Thief of Crowns** (2020-03): Lost one of the best reasons to play green in a tempo shell. Contributed to the decline of Sultai builds.
 
-**Frequency of Change:** medium  
+**Frequency of Change:** medium
 **Change Notes:** Has been largely supplanted by straight Dimir Tempo, which has a cleaner mana base. Green splash is only worthwhile if Uro and Endurance are particularly well positioned.
 
 ---
@@ -2620,14 +2620,14 @@ Tier 3 at 0.5%. Niche option for players who want Uro alongside the UB tempo she
 
 **Also known as:** Shadow, Grixis Shadow, Dimir Shadow
 
-**Archetype:** tempo  
-**Colors:** U, B, R  
-**Tier:** tier 3  
-**Meta Share:** 0.5%  
-**Win Rate Estimate:** 49-51%  
-**Cost Estimate:** $3,200 (driven by Underground Sea, Force of Will, Wasteland, Polluted Delta)  
-**First Appeared:** 2020  
-**Peak Meta Share:** 2021-2022  
+**Archetype:** tempo
+**Colors:** U, B, R
+**Tier:** tier 3
+**Meta Share:** 0.5%
+**Win Rate Estimate:** 49-51%
+**Cost Estimate:** $3,200 (driven by Underground Sea, Force of Will, Wasteland, Polluted Delta)
+**First Appeared:** 2020
+**Peak Meta Share:** 2021-2022
 **Deck Count in Sample:** 8
 
 An aggressive tempo deck built around Death's Shadow as a massive undercosted threat. Uses fetchlands, Watery Grave, and other life-payment cards to reduce its own life total, making Shadow a 1-mana 8/8 or larger. Combines with the standard blue-black disruption package.
@@ -2677,12 +2677,12 @@ An aggressive tempo deck built around Death's Shadow as a massive undercosted th
 - **Unfavorable:** Ocelot Pride Midrange, Red Stompy, Lands
 - **Even:** Dimir Tempo, Izzet Delver, The EPIC Storm
 
-**Similar Decks:** Dimir Tempo  
+**Similar Decks:** Dimir Tempo
 Very close to Dimir Tempo but trades some consistency for the explosive power of Death's Shadow. The life-payment theme makes the deck more aggressive but riskier.
 
 ### Key Cards Explained
 
-<img src="https://api.scryfall.com/cards/named?exact=Death%27s+Shadow&format=image&version=normal" alt="Death's Shadow" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Snuff+Out&format=image&version=normal" alt="Snuff Out" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Street+Wraith&format=image&version=normal" alt="Street Wraith" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Death%27s+Shadow&format=image&version=normal&set=wwk" alt="Death's Shadow" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Snuff+Out&format=image&version=normal&set=mmq" alt="Snuff Out" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Street+Wraith&format=image&version=normal&set=fut" alt="Street Wraith" width="217">
 
 - **Death's Shadow:** Gets bigger as your life total gets lower. At 7 life, it's a 1-mana 6/6. Fetchlands and Thoughtseize naturally lower your life.
 - **Snuff Out:** Free removal that costs 4 life, which is actually a benefit since it grows Death's Shadow.
@@ -2691,28 +2691,28 @@ Very close to Dimir Tempo but trades some consistency for the explosive power of
 
 ### Historical Timeline
 
-**2020** (tier 3, ~0.5%)  
+**2020** (tier 3, ~0.5%)
 Death's Shadow decks appear in Legacy, translating from Modern. Uses the format's free spells, fetchlands, and Thoughtseize to fuel a cheap, massive threat.
 - Death's Shadow as undercosted threat
 - Thoughtseize + fetchlands + Force for life payment
 - Dimir or Grixis builds
 
-**2021** (tier 3, ~1%)  
+**2021** (tier 3, ~1%)
 MH2 gives Dragon's Rage Channeler and Murktide Regent, which fit perfectly in the same shell. Grixis Death's Shadow gains power.
 - DRC and Murktide alongside Shadow
 - Grixis builds become standard
 
-**2023** (tier 3, ~0.5%)  
+**2023** (tier 3, ~0.5%)
 Bowmasters in Dimir Shadow is excellent. The UB shell is essentially Dimir Tempo with Death's Shadow as the payoff threat.
 - Orcish Bowmasters in UB Shadow
 - Overlaps heavily with Dimir Tempo
 
-**2026** (tier 3, ~0.5%)  
+**2026** (tier 3, ~0.5%)
 Tier 3 at 0.5%. A more aggressive variant of the Dimir Tempo shell for players who like the Shadow playstyle.
 - Dimir Shadow shell
 - More aggressive than standard Dimir Tempo
 
-**Frequency of Change:** medium  
+**Frequency of Change:** medium
 **Change Notes:** Has been largely absorbed into the broader Dimir Tempo category. Players who run Shadow tend to be specialists. Reanimate adds a secondary plan of rebuying large threats.
 
 ---
@@ -2721,14 +2721,14 @@ Tier 3 at 0.5%. A more aggressive variant of the Dimir Tempo shell for players w
 
 **Also known as:** UG Infect, Simic Infect
 
-**Archetype:** aggro  
-**Colors:** U, G  
-**Tier:** tier 3  
-**Meta Share:** 0.4%  
-**Win Rate Estimate:** 49-51%  
-**Cost Estimate:** $2,200 (driven by Tropical Island, Force of Will, Berserk)  
-**First Appeared:** 2011  
-**Peak Meta Share:** 2015-2016  
+**Archetype:** aggro
+**Colors:** U, G
+**Tier:** tier 3
+**Meta Share:** 0.4%
+**Win Rate Estimate:** 49-51%
+**Cost Estimate:** $2,200 (driven by Tropical Island, Force of Will, Berserk)
+**First Appeared:** 2011
+**Peak Meta Share:** 2015-2016
 **Deck Count in Sample:** 6
 
 An aggressive combo-aggro deck that wins by dealing 10 poison counters using infect creatures pumped with free spells like Invigorate and Berserk. Can win as early as turn 2 and rarely later than turn 4 if uninterrupted.
@@ -2776,12 +2776,12 @@ An aggressive combo-aggro deck that wins by dealing 10 poison counters using inf
 - **Unfavorable:** Dimir Tempo, Ocelot Pride Midrange, Izzet Delver
 - **Even:** Lands, Painter, Red Stompy
 
-**Similar Decks:** Elves  
+**Similar Decks:** Elves
 Both are green creature-based aggro decks that can win quickly. Infect is more combo-oriented while Elves is more synergy-driven.
 
 ### Key Cards Explained
 
-<img src="https://api.scryfall.com/cards/named?exact=Invigorate&format=image&version=normal" alt="Invigorate" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Berserk&format=image&version=normal" alt="Berserk" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Blighted+Agent&format=image&version=normal" alt="Blighted Agent" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Invigorate&format=image&version=normal&set=mmq" alt="Invigorate" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Berserk&format=image&version=normal&set=lea" alt="Berserk" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Blighted+Agent&format=image&version=normal&set=nph" alt="Blighted Agent" width="217">
 
 - **Invigorate:** Free +4/+4 that enables turn-2 kills. The life gain to the opponent doesn't matter when you win with poison.
 - **Berserk:** Doubles a creature's power for G. Combined with infect, this creates lethal damage on tiny investments.
@@ -2790,30 +2790,30 @@ Both are green creature-based aggro decks that can win quickly. Infect is more c
 
 ### Historical Timeline
 
-**2011** (tier 2, ~3%)  
+**2011** (tier 2, ~3%)
 Infect emerges in Legacy with Glistener Elf, Blighted Agent, and Invigorate (free pump spell). Can kill on turn 2. Uses Brainstorm, Force of Will, and Daze for protection.
 - Glistener Elf and Blighted Agent as infect threats
 - Invigorate as free pump
 - Berserk for massive damage
 - Noble Hierarch for exalted
 
-**2013** (tier 2, ~2%)  
+**2013** (tier 2, ~2%)
 DRS era is tough for Infect as the format has more incidental interaction. Deck remains viable but not dominant.
 - Deathrite Shaman adds blockers everywhere
 - Deck remains fast enough to compete
 
-**2018** (tier 2, ~1.5%)  
+**2018** (tier 2, ~1.5%)
 DRS ban removes a common roadblock. Gitaxian Probe ban hurts information gathering. Mixed impact.
 - DRS ban positive
 - Gitaxian Probe ban negative
 - Net neutral impact
 
-**2021** (tier 3, ~0.5%)  
+**2021** (tier 3, ~0.5%)
 MH2 threats make other decks more efficient. Infect struggles against Murktide Regent and Dragon's Rage Channeler.
 - Faces more efficient threats
 - Deck speed still relevant vs combo
 
-**2026** (tier 3, ~0.4%)  
+**2026** (tier 3, ~0.4%)
 Tier 3 at 0.4%. A glass cannon that can steal games but struggles in the Bowmasters era.
 - Bowmasters punishes small creatures
 - Still capable of turn-2 kills
@@ -2822,7 +2822,7 @@ Tier 3 at 0.4%. A glass cannon that can steal games but struggles in the Bowmast
 
 - **Gitaxian Probe** (2018-07): Lost perfect information before going all-in on the combo turn. Reduced the deck's ability to play around removal.
 
-**Frequency of Change:** low  
+**Frequency of Change:** low
 **Change Notes:** Scale Up from MH1 was the last major addition. The deck is extremely stable but struggles against the prevalence of Orcish Bowmasters.
 
 ---
@@ -2831,14 +2831,14 @@ Tier 3 at 0.4%. A glass cannon that can steal games but struggles in the Bowmast
 
 **Also known as:** Mono Red Burn, Red Burn, Mountain Go
 
-**Archetype:** aggro  
-**Colors:** R  
-**Tier:** fringe  
-**Meta Share:** 0.3%  
-**Win Rate Estimate:** 48-50%  
-**Cost Estimate:** $400 (driven by Fiery Islet, Sunbaked Canyon, Eidolon of the Great Revel)  
-**First Appeared:** 1993  
-**Peak Meta Share:** 2014-2015  
+**Archetype:** aggro
+**Colors:** R
+**Tier:** fringe
+**Meta Share:** 0.3%
+**Win Rate Estimate:** 48-50%
+**Cost Estimate:** $400 (driven by Fiery Islet, Sunbaked Canyon, Eidolon of the Great Revel)
+**First Appeared:** 1993
+**Peak Meta Share:** 2014-2015
 **Deck Count in Sample:** 4
 
 The oldest archetype in Magic. Aims to deal 20 damage to the opponent using direct damage spells as quickly as possible. Budget-friendly and straightforward but struggles against the format's efficient answers and life gain.
@@ -2879,12 +2879,12 @@ The oldest archetype in Magic. Aims to deal 20 damage to the opponent using dire
 - **Unfavorable:** Death and Taxes, Ocelot Pride Midrange, Beanstalk Control
 - **Even:** Izzet Delver, Dimir Tempo, Eldrazi
 
-**Similar Decks:** Red Stompy  
+**Similar Decks:** Red Stompy
 Both are mono-red but take very different approaches. Burn goes face while Red Stompy locks the opponent out with prison pieces.
 
 ### Key Cards Explained
 
-<img src="https://api.scryfall.com/cards/named?exact=Price+of+Progress&format=image&version=normal" alt="Price of Progress" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Eidolon+of+the+Great+Revel&format=image&version=normal" alt="Eidolon of the Great Revel" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Fireblast&format=image&version=normal" alt="Fireblast" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Price+of+Progress&format=image&version=normal&set=exo" alt="Price of Progress" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Eidolon+of+the+Great+Revel&format=image&version=normal&set=jou" alt="Eidolon of the Great Revel" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Fireblast&format=image&version=normal&set=vis" alt="Fireblast" width="217">
 
 - **Price of Progress:** Deals 2 damage per nonbasic land the opponent controls. In Legacy, most decks play 12+ nonbasics, making this 6-10 damage for 1R.
 - **Eidolon of the Great Revel:** Deals 2 damage to any player who casts a spell with MV 3 or less. In Legacy, nearly every spell triggers this.
@@ -2892,37 +2892,37 @@ Both are mono-red but take very different approaches. Burn goes face while Red S
 
 ### Historical Timeline
 
-**1993** (tier 3, ~2%)  
+**1993** (tier 3, ~2%)
 Burn has existed since Magic's earliest days. Mountains and Lightning Bolts. The simplest and most direct strategy in the game.
 - Lightning Bolt, Chain Lightning, Fireblast
 - Price of Progress punishes nonbasic lands
 
-**2009** (tier 3, ~2%)  
+**2009** (tier 3, ~2%)
 Modern Legacy format. Burn is a budget-friendly entry point. Goblin Guide from Zendikar is a major addition.
 - Goblin Guide as efficient one-drop
 - Eidolon of the Great Revel added later (2014)
 
-**2014** (tier 2, ~2.5%)  
+**2014** (tier 2, ~2.5%)
 Eidolon of the Great Revel from Journey into Nyx is perfect for Legacy where most spells cost 1-2 mana. Punishes cantrip-heavy format.
 - Eidolon of the Great Revel as format punisher
 - Monastery Swiftspear from Khans
 
-**2021** (tier 3, ~0.5%)  
+**2021** (tier 3, ~0.5%)
 MH2 power creep makes Burn less competitive. Ragavan and Murktide decks are too efficient.
 - Power creep hurts linear aggro
 - Still cheap entry point to Legacy
 
-**2023** (fringe, ~0.3%)  
+**2023** (fringe, ~0.3%)
 Orcish Bowmasters kills Goblin Guide and Eidolon. Burn takes a significant hit from the most-played creature in the format.
 - Bowmasters devastating against Burn's creatures
 - Deck drops in viability
 
-**2026** (fringe, ~0.3%)  
+**2026** (fringe, ~0.3%)
 Fringe at 0.3%. Still exists as an ultra-budget entry to Legacy but not competitively viable against modern threats.
 - Budget option only
 - Fundamentally outclassed by format power level
 
-**Frequency of Change:** low  
+**Frequency of Change:** low
 **Change Notes:** Extremely stable. Horizon lands (Fiery Islet, Sunbaked Canyon) were the last meaningful additions. The deck's power level hasn't kept pace with format upgrades.
 
 ---
@@ -2931,14 +2931,14 @@ Fringe at 0.3%. Still exists as an ultra-budget entry to Legacy but not competit
 
 **Also known as:** Elf Combo, GW Elves, Natural Order Elves
 
-**Archetype:** combo  
-**Colors:** G  
-**Tier:** fringe  
-**Meta Share:** 0.2%  
-**Win Rate Estimate:** 47-49%  
-**Cost Estimate:** $2,800 (driven by Gaea's Cradle, Cavern of Souls)  
-**First Appeared:** 2008  
-**Peak Meta Share:** 2012-2014  
+**Archetype:** combo
+**Colors:** G
+**Tier:** fringe
+**Meta Share:** 0.2%
+**Win Rate Estimate:** 47-49%
+**Cost Estimate:** $2,800 (driven by Gaea's Cradle, Cavern of Souls)
+**First Appeared:** 2008
+**Peak Meta Share:** 2012-2014
 **Deck Count in Sample:** 3
 
 A creature-based combo deck that uses elf tribal synergies and Gaea's Cradle to generate massive amounts of mana, then wins with Craterhoof Behemoth or Natural Order. Once a format staple, now pushed to the fringes by Orcish Bowmasters which devastates the small creature strategy.
@@ -2986,12 +2986,12 @@ A creature-based combo deck that uses elf tribal synergies and Gaea's Cradle to 
 - **Unfavorable:** Dimir Tempo, Izzet Delver, Ocelot Pride Midrange
 - **Even:** Sneak and Show, The EPIC Storm, Burn
 
-**Similar Decks:** Cradle Control, Maverick  
+**Similar Decks:** Cradle Control, Maverick
 Shares Gaea's Cradle and Green Sun's Zenith with Cradle Control but is faster and more all-in on the creature combo. Many Elves players have moved to Cradle Control.
 
 ### Key Cards Explained
 
-<img src="https://api.scryfall.com/cards/named?exact=Glimpse+of+Nature&format=image&version=normal" alt="Glimpse of Nature" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Heritage+Druid&format=image&version=normal" alt="Heritage Druid" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Natural+Order&format=image&version=normal" alt="Natural Order" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Glimpse+of+Nature&format=image&version=normal&set=chk" alt="Glimpse of Nature" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Heritage+Druid&format=image&version=normal&set=mor" alt="Heritage Druid" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Natural+Order&format=image&version=normal&set=vis" alt="Natural Order" width="217">
 
 - **Glimpse of Nature:** Draws a card for each creature cast in a turn. With Heritage Druid mana, chains through the deck to find Craterhoof.
 - **Heritage Druid:** Taps three elves for GGG, even ones with summoning sickness. Enables explosive turns with multiple cheap elves.
@@ -3000,35 +3000,35 @@ Shares Gaea's Cradle and Green Sun's Zenith with Cradle Control but is faster an
 
 ### Historical Timeline
 
-**2008** (tier 1, ~5%)  
+**2008** (tier 1, ~5%)
 Elves combo deck emerges using Glimpse of Nature, Heritage Druid, and Nettle Sentinel to generate massive mana and cards, finishing with Craterhoof Behemoth or Natural Order.
 - Glimpse of Nature as draw engine
 - Heritage Druid + Nettle Sentinel for mana
 - Natural Order into Craterhoof Behemoth
 - Green Sun's Zenith toolbox
 
-**2012** (tier 2, ~3%)  
+**2012** (tier 2, ~3%)
 Elves remains competitive but Miracles and Terminus are devastating — sweeping the board of small creatures repeatedly.
 - Terminus from Miracles is a nightmare
 - Deathrite Shaman added to BG builds
 
-**2017** (tier 2, ~2%)  
+**2017** (tier 2, ~2%)
 Top ban weakens Miracles, which is great for creature decks like Elves. Brief resurgence.
 - Less Terminus in the format
 - Brief uptick in viability
 
-**2018** (tier 2, ~1.5%)  
+**2018** (tier 2, ~1.5%)
 DRS ban removes a key creature from Elves builds that splashed black. Deck refocuses on mono-green.
 - DRS banned from BG Elves
 - Returns to mono-green builds
 
-**2023** (fringe, ~0.3%)  
+**2023** (fringe, ~0.3%)
 Orcish Bowmasters is catastrophic for Elves. Kills mana dorks and punishes Glimpse of Nature draws. Deck drops to fringe.
 - Bowmasters kills every creature in the deck
 - Glimpse draws trigger Bowmasters
 - Deck nearly unplayable in Bowmasters meta
 
-**2026** (fringe, ~0.2%)  
+**2026** (fringe, ~0.2%)
 Fringe at 0.2%. Bowmasters has essentially killed the archetype. Elves players have largely migrated to Cradle Control or Ocelot Pride Midrange.
 - Nearly extinct due to Bowmasters
 - Players migrated to other green decks
@@ -3037,7 +3037,7 @@ Fringe at 0.2%. Bowmasters has essentially killed the archetype. Elves players h
 
 - **Deathrite Shaman** (2018-07): Lost a key one-drop that provided mana fixing and utility. Significantly weakened the deck.
 
-**Frequency of Change:** low  
+**Frequency of Change:** low
 **Change Notes:** Orcish Bowmasters has been devastating for this archetype. A single Bowmasters trigger off Glimpse of Nature can wipe the board. The deck persists through dedicated pilots but is far from its former glory.
 
 ---
@@ -3046,14 +3046,14 @@ Fringe at 0.2%. Bowmasters has essentially killed the archetype. Elves players h
 
 **Also known as:** GW Maverick, Abzan Maverick, Punishing Maverick
 
-**Archetype:** midrange  
-**Colors:** G, W  
-**Tier:** fringe  
-**Meta Share:** 0.2%  
-**Win Rate Estimate:** 47-49%  
-**Cost Estimate:** $2,800 (driven by Gaea's Cradle, Savannah, Wasteland, Kaldra Compleat)  
-**First Appeared:** 2011  
-**Peak Meta Share:** 2012-2013  
+**Archetype:** midrange
+**Colors:** G, W
+**Tier:** fringe
+**Meta Share:** 0.2%
+**Win Rate Estimate:** 47-49%
+**Cost Estimate:** $2,800 (driven by Gaea's Cradle, Savannah, Wasteland, Kaldra Compleat)
+**First Appeared:** 2011
+**Peak Meta Share:** 2012-2013
 **Deck Count in Sample:** 3
 
 A GW creature toolbox deck using Green Sun's Zenith, Knight of the Reliquary, and mana denial via Wasteland and Thalia. Once a premier fair deck, now largely supplanted by Ocelot Pride Midrange and Death and Taxes as the non-blue creature strategy of choice.
@@ -3107,12 +3107,12 @@ A GW creature toolbox deck using Green Sun's Zenith, Knight of the Reliquary, an
 - **Unfavorable:** Sneak and Show, Dimir Tempo, Oops! All Spells
 - **Even:** Death and Taxes, Ocelot Pride Midrange, Izzet Delver
 
-**Similar Decks:** Ocelot Pride Midrange, Selesnya Depths, Death and Taxes  
+**Similar Decks:** Ocelot Pride Midrange, Selesnya Depths, Death and Taxes
 Ocelot Pride Midrange has largely replaced Maverick as the non-blue creature deck of choice. Both use Green Sun's Zenith and Swords to Plowshares in a GW shell.
 
 ### Key Cards Explained
 
-<img src="https://api.scryfall.com/cards/named?exact=Knight+of+the+Reliquary&format=image&version=normal" alt="Knight of the Reliquary" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Green+Sun%27s+Zenith&format=image&version=normal&set=mbs" alt="Green Sun's Zenith" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Thalia%2C+Guardian+of+Thraben&format=image&version=normal&set=dka" alt="Thalia, Guardian of Thraben" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Knight+of+the+Reliquary&format=image&version=normal&set=con" alt="Knight of the Reliquary" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Green+Sun%27s+Zenith&format=image&version=normal&set=mbs" alt="Green Sun's Zenith" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Thalia%2C+Guardian+of+Thraben&format=image&version=normal&set=dka" alt="Thalia, Guardian of Thraben" width="217">
 
 - **Knight of the Reliquary:** The deck's signature threat. Grows with each land in the graveyard and tutors key utility lands.
 - **Green Sun's Zenith:** Versatile creature tutor that provides the right answer for any situation.
@@ -3120,34 +3120,34 @@ Ocelot Pride Midrange has largely replaced Maverick as the non-blue creature dec
 
 ### Historical Timeline
 
-**2011** (tier 2, ~4%)  
+**2011** (tier 2, ~4%)
 Maverick emerges as a GW(b) creature-based midrange deck using Knight of the Reliquary, Green Sun's Zenith, and Stoneforge Mystic. A non-blue fair deck that attacks mana with Wasteland and Thalia.
 - Knight of the Reliquary as cornerstone threat
 - Green Sun's Zenith toolbox
 - Stoneforge Mystic + equipment
 - Thalia, Guardian of Thraben (2012)
 
-**2013** (tier 2, ~3%)  
+**2013** (tier 2, ~3%)
 Deathrite Shaman gives Abzan/Junk Maverick a powerful mana creature. Deck competes with BUG Delver for the green fair deck slot.
 - Deathrite Shaman in GWB builds
 - Competes with BUG Delver
 
-**2018** (tier 2, ~2%)  
+**2018** (tier 2, ~2%)
 DRS ban hurts Maverick but less than BUG Delver. Knight of the Reliquary remains powerful. Deck continues as a solid tier 2 option.
 - DRS ban is a mild negative
 - Ramunap Excavator for Wasteland recursion
 
-**2021** (tier 3, ~1%)  
+**2021** (tier 3, ~1%)
 MH2 power creep pushes creature decks down. Ragavan and Murktide outclass Maverick's threats.
 - Outclassed by MH2 threats
 - Endurance as green pitch card
 
-**2024** (fringe, ~0.3%)  
+**2024** (fringe, ~0.3%)
 Many Maverick players migrate to Ocelot Pride Midrange, which uses a similar GSZ + creatures shell but with more powerful energy threats.
 - Players migrate to Ocelot Pride Midrange
 - Energy creatures outclass old Maverick threats
 
-**2026** (fringe, ~0.2%)  
+**2026** (fringe, ~0.2%)
 Fringe at 0.2%. Mostly replaced by Ocelot Pride Midrange, which does the GW creature strategy better.
 - Functionally replaced by Ocelot Pride Midrange
 - Loyal pilots remain
@@ -3157,7 +3157,7 @@ Fringe at 0.2%. Mostly replaced by Ocelot Pride Midrange, which does the GW crea
 - **Deathrite Shaman** (2018-07): Lost the best one-drop in the format that provided mana fixing, life gain, and graveyard hate. Major blow to the archetype.
 - **Wrenn and Six** (2019-11 (later unbanned)): Wrenn and Six initially made the Punishing Fire version stronger but was banned due to its impact on the broader format.
 
-**Frequency of Change:** low  
+**Frequency of Change:** low
 **Change Notes:** The archetype has been in decline as newer creature strategies (Energy, Death and Taxes with Yorion) have emerged. Dedicated pilots keep it alive but it lacks a unique edge.
 
 ---
@@ -3166,14 +3166,14 @@ Fringe at 0.2%. Mostly replaced by Ocelot Pride Midrange, which does the GW crea
 
 **Also known as:** BR Reanimator, Reanimate, Dark Ritual Reanimator
 
-**Archetype:** combo  
-**Colors:** B, R  
-**Tier:** tier 2  
-**Meta Share:** 2%  
-**Win Rate Estimate:** 50-52%  
-**Cost Estimate:** $1,800 (driven by Badlands, Grief, Griselbrand)  
-**First Appeared:** 1997  
-**Peak Meta Share:** 2022-2024  
+**Archetype:** combo
+**Colors:** B, R
+**Tier:** tier 2
+**Meta Share:** 2%
+**Win Rate Estimate:** 50-52%
+**Cost Estimate:** $1,800 (driven by Badlands, Grief, Griselbrand)
+**First Appeared:** 1997
+**Peak Meta Share:** 2022-2024
 **Deck Count in Sample:** 31
 
 A fast combo deck that puts massive creatures into the graveyard and reanimates them with spells like Reanimate and Animate Dead. Post-Entomb ban in November 2025, the deck has adapted to use Faithless Looting and Grief as discard outlets but lost significant consistency. Still capable of turn-one kills via Dark Ritual into Reanimate.
@@ -3222,12 +3222,12 @@ A fast combo deck that puts massive creatures into the graveyard and reanimates 
 - **Unfavorable:** Dimir Tempo, Death and Taxes, Ocelot Pride Midrange
 - **Even:** Sneak and Show, The EPIC Storm, Painter
 
-**Similar Decks:** Oops! All Spells, Doomsday  
+**Similar Decks:** Oops! All Spells, Doomsday
 Shares the fast combo role with Oops! All Spells but is more resilient and interactive. Both aim to cheat large creatures into play quickly.
 
 ### Key Cards Explained
 
-<img src="https://api.scryfall.com/cards/named?exact=Reanimate&format=image&version=normal" alt="Reanimate" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Grief&format=image&version=normal" alt="Grief" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Archon+of+Cruelty&format=image&version=normal" alt="Archon of Cruelty" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Reanimate&format=image&version=normal&set=tmp" alt="Reanimate" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Grief&format=image&version=normal&set=mh2" alt="Grief" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Archon+of+Cruelty&format=image&version=normal&set=mh2" alt="Archon of Cruelty" width="217">
 
 - **Reanimate:** One mana to return any creature from any graveyard to play. The life loss is irrelevant when reanimating Griselbrand or Archon of Cruelty.
 - **Grief:** Free discard outlet that also strips the opponent's hand. Can be reanimated for value or evoked and immediately targeted with Reanimate.
@@ -3236,33 +3236,33 @@ Shares the fast combo role with Oops! All Spells but is more resilient and inter
 
 ### Historical Timeline
 
-**1997** (tier 2, ~2%)  
+**1997** (tier 2, ~2%)
 Early reanimator strategies appear using Reanimate and Buried Alive.
 - Reanimate as core card
 - Buried Alive for setup
 
-**2009** (tier 2, ~3%)  
+**2009** (tier 2, ~3%)
 Modern Legacy format. Reanimator uses Entomb and Careful Study for consistent fast kills.
 - Entomb as primary enabler
 - Careful Study for discard
 
-**2019** (tier 2, ~3%)  
+**2019** (tier 2, ~3%)
 Archon of Cruelty and later printings improve the reanimation targets.
 - Improved targets
 - Unmask for protection
 
-**2023** (tier 1, ~5%)  
+**2023** (tier 1, ~5%)
 Grief from MH2 becomes key. Grief + Reanimate is a powerful turn-one play.
 - Grief + Reanimate package
 - Atraxa as premium target
 
-**2025** (tier 2, ~2%)  
+**2025** (tier 2, ~2%)
 Entomb banned November 2025. Deck drops from tier 1 to tier 2. Adapts with Faithless Looting.
 - Entomb banned
 - Faithless Looting as replacement
 - Show and Tell sideboard plan
 
-**2026** (tier 2, ~2%)  
+**2026** (tier 2, ~2%)
 Stabilized at 2% meta share post-ban. Still capable of explosive starts but less consistent.
 - Post-ban optimization
 - Faithless Looting builds refined
@@ -3271,7 +3271,7 @@ Stabilized at 2% meta share post-ban. Still capable of explosive starts but less
 
 - **Entomb** (2025-11): Removed the deck's primary enabler. Entomb was a one-mana instant-speed tutor to graveyard, enabling consistent turn-one kills. Deck dropped from tier 1 to tier 2.
 
-**Frequency of Change:** high  
+**Frequency of Change:** high
 **Change Notes:** The Entomb ban in November 2025 was devastating, removing the deck's best enabler. Lists have shifted to Faithless Looting and increased Grief counts. The Show and Tell sideboard plan has become more important.
 
 ---
@@ -3280,14 +3280,14 @@ Stabilized at 2% meta share post-ban. Still capable of explosive starts but less
 
 **Also known as:** UW Stoneblade, Esper Stoneblade, UWx Blade
 
-**Archetype:** midrange  
-**Colors:** U, W  
-**Tier:** tier 3  
-**Meta Share:** 2%  
-**Win Rate Estimate:** 49-51%  
-**Cost Estimate:** $3,200 (driven by Tundra, Force of Will, Flooded Strand, Wasteland)  
-**First Appeared:** 2010  
-**Peak Meta Share:** 2011-2013  
+**Archetype:** midrange
+**Colors:** U, W
+**Tier:** tier 3
+**Meta Share:** 2%
+**Win Rate Estimate:** 49-51%
+**Cost Estimate:** $3,200 (driven by Tundra, Force of Will, Flooded Strand, Wasteland)
+**First Appeared:** 2010
+**Peak Meta Share:** 2011-2013
 **Deck Count in Sample:** 31
 
 A fair blue-white midrange deck built around Stoneforge Mystic fetching Batterskull and Kaldra Compleat. Combines blue card selection and countermagic with efficient white threats and equipment.
@@ -3342,12 +3342,12 @@ A fair blue-white midrange deck built around Stoneforge Mystic fetching Battersk
 - **Unfavorable:** Dimir Tempo, Sneak and Show, Lands
 - **Even:** Death and Taxes, Izzet Delver, Painter
 
-**Similar Decks:** Beanstalk Control, Jeskai Control, Esper Vial  
+**Similar Decks:** Beanstalk Control, Jeskai Control, Esper Vial
 Shares the blue-white shell with Jeskai Control but is more proactive with the Stoneforge Mystic package.
 
 ### Key Cards Explained
 
-<img src="https://api.scryfall.com/cards/named?exact=Stoneforge+Mystic&format=image&version=normal&set=wwk" alt="Stoneforge Mystic" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Batterskull&format=image&version=normal" alt="Batterskull" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Kaldra+Compleat&format=image&version=normal" alt="Kaldra Compleat" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Stoneforge+Mystic&format=image&version=normal&set=wwk" alt="Stoneforge Mystic" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Batterskull&format=image&version=normal&set=nph" alt="Batterskull" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Kaldra+Compleat&format=image&version=normal&set=mh2" alt="Kaldra Compleat" width="217">
 
 - **Stoneforge Mystic:** Tutors for any equipment on ETB and can cheat it into play for 1W.
 - **Batterskull:** Living weapon with vigilance and lifelink. Nearly unbeatable for aggro decks when cheated in on turn 3.
@@ -3356,27 +3356,27 @@ Shares the blue-white shell with Jeskai Control but is more proactive with the S
 
 ### Historical Timeline
 
-**2010** (tier 1, ~8%)  
+**2010** (tier 1, ~8%)
 Stoneforge Mystic printed in Worldwake. UW Stoneblade emerges as a premier fair deck.
 - Stoneforge Mystic + Batterskull core
 - Umezawa's Jitte as equipment option
 
-**2013** (tier 1, ~7%)  
+**2013** (tier 1, ~7%)
 True-Name Nemesis from Commander 2013 makes Stoneblade even better.
 - True-Name Nemesis added
 - Dominant fair deck
 
-**2018** (tier 2, ~3%)  
+**2018** (tier 2, ~3%)
 DRS ban reshuffles the fair deck hierarchy.
 - DRS ban impacts mana bases
 - More variety in fair decks
 
-**2023** (tier 3, ~1.5%)  
+**2023** (tier 3, ~1.5%)
 Bowmasters and new printings push Stoneblade down.
 - Bowmasters kills SFM
 - Dimir Tempo supplants fair midrange role
 
-**2026** (tier 3, ~2%)  
+**2026** (tier 3, ~2%)
 Tier 3 at 2%. Loyal pilots keep the deck alive.
 - Kaldra Compleat as primary equipment
 - Teferi standard
@@ -3385,7 +3385,7 @@ Tier 3 at 2%. Loyal pilots keep the deck alive.
 
 - **Stoneforge Mystic** (2011-06): Banned in Standard but has always been legal in Legacy. The card is the deck's entire identity.
 
-**Frequency of Change:** medium  
+**Frequency of Change:** medium
 **Change Notes:** Equipment targets rotate. Kaldra Compleat replaced Umezawa's Jitte. Teferi, Time Raveler is a recent addition. Splash colors (Esper, Jeskai) are common.
 
 ---
@@ -3394,14 +3394,14 @@ Tier 3 at 2%. Loyal pilots keep the deck alive.
 
 **Also known as:** Mono Black Pox, Smallpox, The Rack
 
-**Archetype:** control  
-**Colors:** B  
-**Tier:** tier 3  
-**Meta Share:** 2%  
-**Win Rate Estimate:** 47-49%  
-**Cost Estimate:** $1,200 (driven by Liliana of the Veil, Wasteland, Orcish Bowmasters)  
-**First Appeared:** 1996  
-**Peak Meta Share:** 2010-2012  
+**Archetype:** control
+**Colors:** B
+**Tier:** tier 3
+**Meta Share:** 2%
+**Win Rate Estimate:** 47-49%
+**Cost Estimate:** $1,200 (driven by Liliana of the Veil, Wasteland, Orcish Bowmasters)
+**First Appeared:** 1996
+**Peak Meta Share:** 2010-2012
 **Deck Count in Sample:** 31
 
 A symmetrical resource denial deck that uses Smallpox, Hymn to Tourach, and Liliana of the Veil to strip the opponent of lands, cards, and creatures. Wins by breaking the symmetry through Mishra's Factory and planeswalkers.
@@ -3449,12 +3449,12 @@ A symmetrical resource denial deck that uses Smallpox, Hymn to Tourach, and Lili
 - **Unfavorable:** Sneak and Show, Oops! All Spells, Lands
 - **Even:** Death and Taxes, Eldrazi, Red Stompy
 
-**Similar Decks:** Mono Black Midrange, Death and Taxes  
+**Similar Decks:** Mono Black Midrange, Death and Taxes
 Shares resource denial with Death and Taxes but uses black disruption instead of white hate bears.
 
 ### Key Cards Explained
 
-<img src="https://api.scryfall.com/cards/named?exact=Smallpox&format=image&version=normal" alt="Smallpox" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Hymn+to+Tourach&format=image&version=normal" alt="Hymn to Tourach" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Liliana+of+the+Veil&format=image&version=normal" alt="Liliana of the Veil" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Smallpox&format=image&version=normal&set=tsp" alt="Smallpox" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Hymn+to+Tourach&format=image&version=normal&set=fem" alt="Hymn to Tourach" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Liliana+of+the+Veil&format=image&version=normal&set=isd" alt="Liliana of the Veil" width="217">
 
 - **Smallpox:** Each player discards, sacrifices a creature, sacrifices a land, and loses 1 life. Devastating when you break the symmetry.
 - **Hymn to Tourach:** Random discard of two cards for BB. One of the most powerful disruption spells in Magic.
@@ -3463,32 +3463,32 @@ Shares resource denial with Death and Taxes but uses black disruption instead of
 
 ### Historical Timeline
 
-**1996** (tier 3, ~1%)  
+**1996** (tier 3, ~1%)
 Pox (the card) printed in Ice Age. Resource denial viable from Magic's earliest days.
 - Pox as namesake card
 - Sinkhole and Hymn to Tourach
 
-**2009** (tier 3, ~1.5%)  
+**2009** (tier 3, ~1.5%)
 Smallpox from Time Spiral provides a more efficient version of the strategy.
 - Smallpox as four-of
 - Bloodghast and Nether Spirit for symmetry breaking
 
-**2012** (tier 2, ~2.5%)  
+**2012** (tier 2, ~2.5%)
 Liliana of the Veil from Innistrad is perfect. Deck reaches peak viability.
 - Liliana of the Veil as key planeswalker
 - Peak competitive viability
 
-**2023** (tier 3, ~1.5%)  
+**2023** (tier 3, ~1.5%)
 Bowmasters gives mono-black a powerful new card.
 - Orcish Bowmasters added
 - Improved creature base
 
-**2026** (tier 3, ~2%)  
+**2026** (tier 3, ~2%)
 Tier 3 at 2%. Loyal following and Bowmasters has improved creature matchups.
 - Stable with Bowmasters
 - Karn wishboard in some builds
 
-**Frequency of Change:** low  
+**Frequency of Change:** low
 **Change Notes:** Very stable core. Bowmasters was a significant addition in 2023. Karn wishboard in some builds.
 
 ---
@@ -3497,14 +3497,14 @@ Tier 3 at 2%. Loyal following and Bowmasters has improved creature matchups.
 
 **Also known as:** Mardu Aggro, RBW Energy, Mardu Scam
 
-**Archetype:** aggro  
-**Colors:** R, B, W  
-**Tier:** tier 2  
-**Meta Share:** 3%  
-**Win Rate Estimate:** 51-53%  
-**Cost Estimate:** $2,600 (driven by Badlands, Scrubland, Plateau, Wasteland)  
-**First Appeared:** 2024  
-**Peak Meta Share:** 2025-2026  
+**Archetype:** aggro
+**Colors:** R, B, W
+**Tier:** tier 2
+**Meta Share:** 3%
+**Win Rate Estimate:** 51-53%
+**Cost Estimate:** $2,600 (driven by Badlands, Scrubland, Plateau, Wasteland)
+**First Appeared:** 2024
+**Peak Meta Share:** 2025-2026
 **Deck Count in Sample:** 47
 
 An aggressive energy-based deck combining Ocelot Pride and Amped Raptor with black disruption and Broadside Bombardiers. Leverages MH3 energy creatures alongside Thoughtseize and efficient removal.
@@ -3555,12 +3555,12 @@ An aggressive energy-based deck combining Ocelot Pride and Amped Raptor with bla
 - **Unfavorable:** Sneak and Show, Oops! All Spells, Lands
 - **Even:** Ocelot Pride Midrange, Izzet Delver, Painter
 
-**Similar Decks:** Ocelot Pride Midrange, Dimir Tempo  
+**Similar Decks:** Ocelot Pride Midrange, Dimir Tempo
 Shares the energy creature core with Ocelot Pride Midrange but adds black for Thoughtseize, Bowmasters, and Broadside Bombardiers.
 
 ### Key Cards Explained
 
-<img src="https://api.scryfall.com/cards/named?exact=Broadside+Bombardiers&format=image&version=normal" alt="Broadside Bombardiers" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Ocelot+Pride&format=image&version=normal" alt="Ocelot Pride" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Amped+Raptor&format=image&version=normal" alt="Amped Raptor" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Broadside+Bombardiers&format=image&version=normal&set=lci" alt="Broadside Bombardiers" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Ocelot+Pride&format=image&version=normal&set=mh3" alt="Ocelot Pride" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Amped+Raptor&format=image&version=normal&set=mh3" alt="Amped Raptor" width="217">
 
 - **Broadside Bombardiers:** Menace creature that sacrifices on attack to deal 3 damage and give another attacker +1/+0 and trample.
 - **Ocelot Pride:** Generates cat tokens when you gain life and deal combat damage.
@@ -3569,22 +3569,22 @@ Shares the energy creature core with Ocelot Pride Midrange but adds black for Th
 
 ### Historical Timeline
 
-**2024** (tier 3, ~1%)  
+**2024** (tier 3, ~1%)
 MH3 energy cards spark Mardu experimentation. Broadside Bombardiers and Ocelot Pride alongside black disruption.
 - MH3 energy cards as foundation
 - Broadside Bombardiers adds reach
 
-**2025** (tier 2, ~2.5%)  
+**2025** (tier 2, ~2.5%)
 Deck solidifies as a real contender. Energy aggro with black disruption proves potent against blue.
 - Lists refined
 - Grief package explored
 
-**2026** (tier 2, ~3%)  
+**2026** (tier 2, ~3%)
 Tier 2 at 3%. Premier aggressive disruption strategy.
 - Stable core established
 - Flex between aggression and disruption
 
-**Frequency of Change:** high  
+**Frequency of Change:** high
 **Change Notes:** New archetype still evolving rapidly. Some builds lean into the Grief package, others focus on pure energy aggro.
 
 ---
@@ -3593,14 +3593,14 @@ Tier 2 at 3%. Premier aggressive disruption strategy.
 
 **Also known as:** White Stompy Initiative, Mono White Initiative, RW Initiative
 
-**Archetype:** stompy  
-**Colors:** W, R  
-**Tier:** tier 2  
-**Meta Share:** 2%  
-**Win Rate Estimate:** 50-52%  
-**Cost Estimate:** $2,400 (driven by City of Traitors, Ancient Tomb, Solitude, Chalice of the Void)  
-**First Appeared:** 2022  
-**Peak Meta Share:** 2022-2023  
+**Archetype:** stompy
+**Colors:** W, R
+**Tier:** tier 2
+**Meta Share:** 2%
+**Win Rate Estimate:** 50-52%
+**Cost Estimate:** $2,400 (driven by City of Traitors, Ancient Tomb, Solitude, Chalice of the Void)
+**First Appeared:** 2022
+**Peak Meta Share:** 2022-2023
 **Deck Count in Sample:** 31
 
 A Chalice of the Void stompy deck that uses fast mana to deploy initiative creatures like Caves of Chaos Adventurer and hate bears like Archon of Emeria.
@@ -3647,12 +3647,12 @@ A Chalice of the Void stompy deck that uses fast mana to deploy initiative creat
 - **Unfavorable:** Painter, Ocelot Pride Midrange, Lands
 - **Even:** Sneak and Show, Eldrazi, Death and Taxes
 
-**Similar Decks:** Red Stompy, Death and Taxes, Eldrazi  
+**Similar Decks:** Red Stompy, Death and Taxes, Eldrazi
 Shares the Chalice + fast mana shell with Red Stompy and Eldrazi. Initiative provides a unique card advantage engine.
 
 ### Key Cards Explained
 
-<img src="https://api.scryfall.com/cards/named?exact=Caves+of+Chaos+Adventurer&format=image&version=normal" alt="Caves of Chaos Adventurer" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Chalice+of+the+Void&format=image&version=normal&set=mrd" alt="Chalice of the Void" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Archon+of+Emeria&format=image&version=normal" alt="Archon of Emeria" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Caves+of+Chaos+Adventurer&format=image&version=normal&set=clb" alt="Caves of Chaos Adventurer" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Chalice+of+the+Void&format=image&version=normal&set=mrd" alt="Chalice of the Void" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Archon+of+Emeria&format=image&version=normal&set=znr" alt="Archon of Emeria" width="217">
 
 - **Caves of Chaos Adventurer:** 4/4 with initiative for 3W. The Undercity dungeon provides treasure, card selection, damage, and a game-winning effect.
 - **Chalice of the Void:** On one, shuts down Brainstorm, Ponder, Swords to Plowshares.
@@ -3661,22 +3661,22 @@ Shares the Chalice + fast mana shell with Red Stompy and Eldrazi. Initiative pro
 
 ### Historical Timeline
 
-**2022** (tier 1, ~7%)  
+**2022** (tier 1, ~7%)
 Initiative mechanic from Baldur's Gate arrives. Mono White Stompy immediately adopts the enormously powerful initiative creatures.
 - White Plume Adventurer at 3 mana
 - Chalice + fast mana shell
 
-**2023** (tier 2, ~4%)  
+**2023** (tier 2, ~4%)
 White Plume Adventurer banned March. Deck adapts to 4-mana initiative creatures.
 - White Plume banned
 - Caves of Chaos at 4 mana
 
-**2025** (tier 2, ~2.5%)  
+**2025** (tier 2, ~2.5%)
 Competes with other stompy decks. Boros splash provides Pyroblast access.
 - Boros splash
 - Competes with Eldrazi and Red Stompy
 
-**2026** (tier 2, ~2%)  
+**2026** (tier 2, ~2%)
 Tier 2 at 2%. Initiative remains powerful but faces stiff competition.
 - Stable shell
 - Competes for stompy slot
@@ -3685,7 +3685,7 @@ Tier 2 at 2%. Initiative remains powerful but faces stiff competition.
 
 - **White Plume Adventurer** (2023-03): Banned for being too efficient at 3 mana. Deck adapted with Caves of Chaos Adventurer and Seasoned Dungeoneer.
 
-**Frequency of Change:** medium  
+**Frequency of Change:** medium
 **Change Notes:** Initiative creatures are the core. Some builds splash red for Pyroblast and Fable of the Mirror-Breaker.
 
 ---
@@ -3694,14 +3694,14 @@ Tier 2 at 2%. Initiative remains powerful but faces stiff competition.
 
 **Also known as:** 12-Post, Cloudpost, Post
 
-**Archetype:** ramp  
-**Colors:** C  
-**Tier:** tier 3  
-**Meta Share:** 1%  
-**Win Rate Estimate:** 48-50%  
-**Cost Estimate:** $3,500 (driven by Candelabra of Tawnos, Karn Liberated, Ugin, the Spirit Dragon)  
-**First Appeared:** 2003  
-**Peak Meta Share:** 2011-2012  
+**Archetype:** ramp
+**Colors:** C
+**Tier:** tier 3
+**Meta Share:** 1%
+**Win Rate Estimate:** 48-50%
+**Cost Estimate:** $3,500 (driven by Candelabra of Tawnos, Karn Liberated, Ugin, the Spirit Dragon)
+**First Appeared:** 2003
+**Peak Meta Share:** 2011-2012
 **Deck Count in Sample:** 16
 
 A big mana deck using Cloudpost and Glimmerpost to generate enormous colorless mana, deploying massive threats like Ugin and Karn Liberated.
@@ -3752,12 +3752,12 @@ A big mana deck using Cloudpost and Glimmerpost to generate enormous colorless m
 - **Unfavorable:** Dimir Tempo, Izzet Delver, Oops! All Spells
 - **Even:** Lands, Eldrazi, Beanstalk Control
 
-**Similar Decks:** Lands, Eldrazi  
+**Similar Decks:** Lands, Eldrazi
 Like Lands, uses nonbasic lands as the engine but goes bigger. Eldrazi shares colorless threats but different mana base.
 
 ### Key Cards Explained
 
-<img src="https://api.scryfall.com/cards/named?exact=Cloudpost&format=image&version=normal" alt="Cloudpost" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Glimmerpost&format=image&version=normal" alt="Glimmerpost" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Karn%2C+the+Great+Creator&format=image&version=normal" alt="Karn, the Great Creator" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Cloudpost&format=image&version=normal&set=mrd" alt="Cloudpost" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Glimmerpost&format=image&version=normal&set=som" alt="Glimmerpost" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Karn%2C+the+Great+Creator&format=image&version=normal&set=war" alt="Karn, the Great Creator" width="217">
 
 - **Cloudpost:** Taps for 1 mana for each Locus in play. With four Loci, each taps for 4.
 - **Glimmerpost:** Second Locus that gains life on ETB.
@@ -3766,26 +3766,26 @@ Like Lands, uses nonbasic lands as the engine but goes bigger. Eldrazi shares co
 
 ### Historical Timeline
 
-**2003** (tier 3, ~1%)  
+**2003** (tier 3, ~1%)
 Cloudpost printed in Mirrodin. Locus ramp becomes viable.
 - Cloudpost + Glimmerpost engine
 
-**2011** (tier 2, ~3%)  
+**2011** (tier 2, ~3%)
 Peak popularity with Eldrazi finishers.
 - Eldrazi titans as finishers
 - Primeval Titan for land tutoring
 
-**2019** (tier 3, ~1.5%)  
+**2019** (tier 3, ~1.5%)
 Karn, the Great Creator adds wishboard dimension.
 - Karn wishboard
 - Mycosynth Lattice combo
 
-**2026** (tier 3, ~1%)  
+**2026** (tier 3, ~1%)
 Tier 3 at 1%. Niche but powerful when assembling multiple Loci.
 - Stable list
 - Niche metagame player
 
-**Frequency of Change:** low  
+**Frequency of Change:** low
 **Change Notes:** Very stable core. Karn wishboard is the main recent innovation.
 
 ---
@@ -3794,14 +3794,14 @@ Tier 3 at 1%. Niche but powerful when assembling multiple Loci.
 
 **Also known as:** BG Hogaak, Hogaak Depths, Hogaak Combo
 
-**Archetype:** combo  
-**Colors:** B, G  
-**Tier:** tier 3  
-**Meta Share:** 0.7%  
-**Win Rate Estimate:** 48-50%  
-**Cost Estimate:** $1,500 (driven by Bayou, Verdant Catacombs, Hogaak, Arisen Necropolis)  
-**First Appeared:** 2019  
-**Peak Meta Share:** 2019-2020  
+**Archetype:** combo
+**Colors:** B, G
+**Tier:** tier 3
+**Meta Share:** 0.7%
+**Win Rate Estimate:** 48-50%
+**Cost Estimate:** $1,500 (driven by Bayou, Verdant Catacombs, Hogaak, Arisen Necropolis)
+**First Appeared:** 2019
+**Peak Meta Share:** 2019-2020
 **Deck Count in Sample:** 11
 
 A graveyard-based combo deck using Hogaak, Arisen Necropolis as a free 8/8 trampler, combined with Vengevine and Altar of Dementia for a self-mill win condition.
@@ -3847,12 +3847,12 @@ A graveyard-based combo deck using Hogaak, Arisen Necropolis as a free 8/8 tramp
 - **Unfavorable:** Dimir Tempo, Izzet Delver, Death and Taxes
 - **Even:** Lands, LED Dredge, Ocelot Pride Midrange
 
-**Similar Decks:** LED Dredge, Reanimator  
+**Similar Decks:** LED Dredge, Reanimator
 Shares the graveyard-centric plan with LED Dredge but is creature-based. Both fold to graveyard hate.
 
 ### Key Cards Explained
 
-<img src="https://api.scryfall.com/cards/named?exact=Hogaak%2C+Arisen+Necropolis&format=image&version=normal" alt="Hogaak, Arisen Necropolis" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Vengevine&format=image&version=normal" alt="Vengevine" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Altar+of+Dementia&format=image&version=normal" alt="Altar of Dementia" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Hogaak%2C+Arisen+Necropolis&format=image&version=normal&set=mh1" alt="Hogaak, Arisen Necropolis" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Vengevine&format=image&version=normal&set=roe" alt="Vengevine" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Altar+of+Dementia&format=image&version=normal&set=tmp" alt="Altar of Dementia" width="217">
 
 - **Hogaak, Arisen Necropolis:** Free 8/8 trampler cast by convoking and delving. Recurs from graveyard.
 - **Vengevine:** Returns from graveyard when you cast two creatures in a turn.
@@ -3861,16 +3861,16 @@ Shares the graveyard-centric plan with LED Dredge but is creature-based. Both fo
 
 ### Historical Timeline
 
-**2019** (tier 2, ~2%)  
+**2019** (tier 2, ~2%)
 Hogaak from MH1 warps Modern. In Legacy, creates a powerful but fair graveyard deck.
 - Hogaak as free 8/8
 - Vengevine synergies
 
-**2021** (tier 3, ~1%)  
+**2021** (tier 3, ~1%)
 Settles into a niche role. Powerful against fair decks but weak to graveyard hate.
 - Altar of Dementia as win condition
 
-**2026** (tier 3, ~0.7%)  
+**2026** (tier 3, ~0.7%)
 Tier 3 at 0.7%. Niche graveyard strategy.
 - Stable niche deck
 
@@ -3878,7 +3878,7 @@ Tier 3 at 0.7%. Niche graveyard strategy.
 
 - **Hogaak, Arisen Necropolis** (2019-08): Banned in Modern but legal in Legacy where Force of Will keeps it in check.
 
-**Frequency of Change:** low  
+**Frequency of Change:** low
 **Change Notes:** Core is very stable. Once Upon a Time was a big addition.
 
 ---
@@ -3887,14 +3887,14 @@ Tier 3 at 0.7%. Niche graveyard strategy.
 
 **Also known as:** Jewel Combo, Flicker Jewel, Coveted Jewel
 
-**Archetype:** combo  
-**Colors:** U, W  
-**Tier:** tier 3  
-**Meta Share:** 0.7%  
-**Win Rate Estimate:** 48-50%  
-**Cost Estimate:** $2,100 (driven by City of Traitors, Ancient Tomb, Solitude, Tundra)  
-**First Appeared:** 2023  
-**Peak Meta Share:** 2024-2025  
+**Archetype:** combo
+**Colors:** U, W
+**Tier:** tier 3
+**Meta Share:** 0.7%
+**Win Rate Estimate:** 48-50%
+**Cost Estimate:** $2,100 (driven by City of Traitors, Ancient Tomb, Solitude, Tundra)
+**First Appeared:** 2023
+**Peak Meta Share:** 2024-2025
 **Deck Count in Sample:** 11
 
 A combo deck using Coveted Jewel with flicker effects like Flickerwisp and Ephemerate to generate enormous mana and card advantage. The Jewel draws three and adds three on ETB.
@@ -3941,12 +3941,12 @@ A combo deck using Coveted Jewel with flicker effects like Flickerwisp and Ephem
 - **Unfavorable:** Sneak and Show, Oops! All Spells, Painter
 - **Even:** Ocelot Pride Midrange, Death and Taxes, Eldrazi
 
-**Similar Decks:** Death and Taxes, Esper Vial  
+**Similar Decks:** Death and Taxes, Esper Vial
 Evolved from Death and Taxes, adding Coveted Jewel combo as a powerful mana engine.
 
 ### Key Cards Explained
 
-<img src="https://api.scryfall.com/cards/named?exact=Coveted+Jewel&format=image&version=normal" alt="Coveted Jewel" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Ephemerate&format=image&version=normal" alt="Ephemerate" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Flickerwisp&format=image&version=normal" alt="Flickerwisp" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Coveted+Jewel&format=image&version=normal&set=c18" alt="Coveted Jewel" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Ephemerate&format=image&version=normal&set=mh1" alt="Ephemerate" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Flickerwisp&format=image&version=normal&set=eve" alt="Flickerwisp" width="217">
 
 - **Coveted Jewel:** Six mana artifact that draws three and adds three on ETB. Flickering resets both.
 - **Ephemerate:** One mana instant flicker with rebound. Flickers Jewel twice for six cards.
@@ -3955,21 +3955,21 @@ Evolved from Death and Taxes, adding Coveted Jewel combo as a powerful mana engi
 
 ### Historical Timeline
 
-**2023** (fringe, ~0.3%)  
+**2023** (fringe, ~0.3%)
 Coveted Jewel + flicker interaction discovered. Early builds from DnT shells.
 - Combo discovered
 - DnT shell
 
-**2024** (tier 3, ~0.8%)  
+**2024** (tier 3, ~0.8%)
 Deck refined, puts up tournament results.
 - Refined lists
 - Tournament results
 
-**2026** (tier 3, ~0.7%)  
+**2026** (tier 3, ~0.7%)
 Tier 3 at 0.7%. Niche combo-creature hybrid.
 - Stable hybrid strategy
 
-**Frequency of Change:** medium  
+**Frequency of Change:** medium
 **Change Notes:** Still being optimized. Balance between combo pieces and fair creatures is the key tension.
 
 ---
@@ -3978,14 +3978,14 @@ Tier 3 at 0.7%. Niche combo-creature hybrid.
 
 **Also known as:** Mono Red Storm, Birgi Storm, Ruby Medallion Storm
 
-**Archetype:** combo  
-**Colors:** R  
-**Tier:** tier 3  
-**Meta Share:** 0.4%  
-**Win Rate Estimate:** 47-49%  
-**Cost Estimate:** $600 (driven by City of Traitors, Fiery Islet)  
-**First Appeared:** 2021  
-**Peak Meta Share:** 2022-2023  
+**Archetype:** combo
+**Colors:** R
+**Tier:** tier 3
+**Meta Share:** 0.4%
+**Win Rate Estimate:** 47-49%
+**Cost Estimate:** $600 (driven by City of Traitors, Fiery Islet)
+**First Appeared:** 2021
+**Peak Meta Share:** 2022-2023
 **Deck Count in Sample:** 6
 
 A mono-red storm combo deck using Birgi, God of Storytelling and Ruby Medallion to reduce costs, chaining rituals until casting lethal Grapeshot or Empty the Warrens.
@@ -4033,12 +4033,12 @@ A mono-red storm combo deck using Birgi, God of Storytelling and Ruby Medallion 
 - **Unfavorable:** Dimir Tempo, Ocelot Pride Midrange, Red Stompy
 - **Even:** Izzet Delver, The EPIC Storm, Burn
 
-**Similar Decks:** The EPIC Storm, Oops! All Spells  
+**Similar Decks:** The EPIC Storm, Oops! All Spells
 Shares the storm goal with TES but uses red rituals and Birgi instead of black tutors and Ad Nauseam.
 
 ### Key Cards Explained
 
-<img src="https://api.scryfall.com/cards/named?exact=Birgi%2C+God+of+Storytelling&format=image&version=normal" alt="Birgi, God of Storytelling" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Ruby+Medallion&format=image&version=normal" alt="Ruby Medallion" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Bonus+Round&format=image&version=normal" alt="Bonus Round" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Birgi%2C+God+of+Storytelling&format=image&version=normal&set=khm" alt="Birgi, God of Storytelling" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Ruby+Medallion&format=image&version=normal&set=tmp" alt="Ruby Medallion" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Bonus+Round&format=image&version=normal&set=bbd" alt="Bonus Round" width="217">
 
 - **Birgi, God of Storytelling:** Adds R whenever you cast a spell. With Ruby Medallion, every ritual nets extra mana.
 - **Ruby Medallion:** Reduces red spells by 1.
@@ -4047,22 +4047,22 @@ Shares the storm goal with TES but uses red rituals and Birgi instead of black t
 
 ### Historical Timeline
 
-**2021** (tier 3, ~0.5%)  
+**2021** (tier 3, ~0.5%)
 Birgi from Kaldheim enables mono-red storm.
 - Birgi as enabler
 - Ruby Medallion synergy
 
-**2022** (tier 3, ~0.7%)  
+**2022** (tier 3, ~0.7%)
 Refined with Bonus Round. Occasional tournament results.
 - Bonus Round added
 - Burning Wish toolbox
 
-**2026** (tier 3, ~0.4%)  
+**2026** (tier 3, ~0.4%)
 Tier 3 at 0.4%. Budget storm option, less consistent than TES.
 - Budget storm option
 - Stable but niche
 
-**Frequency of Change:** low  
+**Frequency of Change:** low
 **Change Notes:** Stable core around Birgi and Ruby Medallion. Bonus Round was a key addition.
 
 ---
@@ -4071,14 +4071,14 @@ Tier 3 at 0.4%. Budget storm option, less consistent than TES.
 
 **Also known as:** Breakfast Combo, Cephalid Combo, Nomads Combo
 
-**Archetype:** combo  
-**Colors:** U, W  
-**Tier:** tier 3  
-**Meta Share:** 0.4%  
-**Win Rate Estimate:** 48-50%  
-**Cost Estimate:** $2,800 (driven by Tundra, Force of Will, Flooded Strand)  
-**First Appeared:** 2003  
-**Peak Meta Share:** 2005-2007  
+**Archetype:** combo
+**Colors:** U, W
+**Tier:** tier 3
+**Meta Share:** 0.4%
+**Win Rate Estimate:** 48-50%
+**Cost Estimate:** $2,800 (driven by Tundra, Force of Will, Flooded Strand)
+**First Appeared:** 2003
+**Peak Meta Share:** 2005-2007
 **Deck Count in Sample:** 6
 
 A creature-based combo deck using Cephalid Illusionist with Nomads en-Kor to mill the entire library, winning with Narcomoeba and Dread Return into Thassa's Oracle.
@@ -4130,12 +4130,12 @@ A creature-based combo deck using Cephalid Illusionist with Nomads en-Kor to mil
 - **Unfavorable:** Dimir Tempo, Izzet Delver, Ocelot Pride Midrange
 - **Even:** Death and Taxes, Painter, Sneak and Show
 
-**Similar Decks:** Oops! All Spells, Doomsday  
+**Similar Decks:** Oops! All Spells, Doomsday
 Like Oops, wins by milling the entire library. Uses a creature combo and can also play a fair Stoneforge Mystic game.
 
 ### Key Cards Explained
 
-<img src="https://api.scryfall.com/cards/named?exact=Cephalid+Illusionist&format=image&version=normal" alt="Cephalid Illusionist" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Nomads+en-Kor&format=image&version=normal" alt="Nomads en-Kor" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Thassa%27s+Oracle&format=image&version=normal&set=thb" alt="Thassa's Oracle" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Cephalid+Illusionist&format=image&version=normal&set=tor" alt="Cephalid Illusionist" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Nomads+en-Kor&format=image&version=normal&set=sth" alt="Nomads en-Kor" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Thassa%27s+Oracle&format=image&version=normal&set=thb" alt="Thassa's Oracle" width="217">
 
 - **Cephalid Illusionist:** Mills three whenever it becomes the target of a spell or ability.
 - **Nomads en-Kor:** 0-cost activated ability targets Illusionist unlimited times.
@@ -4144,25 +4144,25 @@ Like Oops, wins by milling the entire library. Uses a creature combo and can als
 
 ### Historical Timeline
 
-**2003** (tier 3, ~1%)  
+**2003** (tier 3, ~1%)
 Cephalid Illusionist + Nomads en-Kor combo discovered.
 - Core combo established
 
-**2007** (tier 3, ~1.5%)  
+**2007** (tier 3, ~1.5%)
 Known quantity. Aether Vial builds provide fair backup.
 - Aether Vial builds
 - Stoneforge backup plan
 
-**2020** (tier 3, ~0.5%)  
+**2020** (tier 3, ~0.5%)
 Thassa's Oracle from Theros Beyond Death is a massive upgrade.
 - Thassa's Oracle as win condition
 
-**2026** (tier 3, ~0.4%)  
+**2026** (tier 3, ~0.4%)
 Tier 3 at 0.4%. Niche combo with fair backup plan.
 - Recruiter as tutor
 - Stable niche deck
 
-**Frequency of Change:** low  
+**Frequency of Change:** low
 **Change Notes:** Thassa's Oracle replaced Laboratory Maniac. Core combo unchanged since 2003.
 
 ---
@@ -4171,14 +4171,14 @@ Tier 3 at 0.4%. Niche combo with fair backup plan.
 
 **Also known as:** Goblin Tribal, Mono Red Goblins, Vial Goblins
 
-**Archetype:** aggro  
-**Colors:** R  
-**Tier:** fringe  
-**Meta Share:** 0.4%  
-**Win Rate Estimate:** 46-48%  
-**Cost Estimate:** $1,100 (driven by Cavern of Souls, Wasteland, Rishadan Port)  
-**First Appeared:** 2003  
-**Peak Meta Share:** 2003-2005  
+**Archetype:** aggro
+**Colors:** R
+**Tier:** fringe
+**Meta Share:** 0.4%
+**Win Rate Estimate:** 46-48%
+**Cost Estimate:** $1,100 (driven by Cavern of Souls, Wasteland, Rishadan Port)
+**First Appeared:** 2003
+**Peak Meta Share:** 2003-2005
 **Deck Count in Sample:** 6
 
 A tribal aggro deck using Goblin Lackey and Aether Vial to cheat goblins into play. Muxus, Goblin Grandee is the ultimate top-end.
@@ -4226,12 +4226,12 @@ A tribal aggro deck using Goblin Lackey and Aether Vial to cheat goblins into pl
 - **Unfavorable:** Dimir Tempo, Ocelot Pride Midrange, Izzet Delver
 - **Even:** Death and Taxes, Eldrazi, Painter
 
-**Similar Decks:** Elves, Merfolk  
+**Similar Decks:** Elves, Merfolk
 Shares the Aether Vial tribal approach with Merfolk. Like Elves, a once-dominant creature deck hurt by Bowmasters.
 
 ### Key Cards Explained
 
-<img src="https://api.scryfall.com/cards/named?exact=Goblin+Lackey&format=image&version=normal&set=usg" alt="Goblin Lackey" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Muxus%2C+Goblin+Grandee&format=image&version=normal" alt="Muxus, Goblin Grandee" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Goblin+Ringleader&format=image&version=normal" alt="Goblin Ringleader" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Goblin+Lackey&format=image&version=normal&set=usg" alt="Goblin Lackey" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Muxus%2C+Goblin+Grandee&format=image&version=normal&set=jmp" alt="Muxus, Goblin Grandee" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Goblin+Ringleader&format=image&version=normal&set=apc" alt="Goblin Ringleader" width="217">
 
 - **Goblin Lackey:** Deals combat damage to put any goblin from hand into play free.
 - **Muxus, Goblin Grandee:** Reveals top 6 and puts all goblins MV 5 or less into play.
@@ -4240,28 +4240,28 @@ Shares the Aether Vial tribal approach with Merfolk. Like Elves, a once-dominant
 
 ### Historical Timeline
 
-**2003** (tier 1, ~8%)  
+**2003** (tier 1, ~8%)
 Goblins is tier 1. Lackey and Warchief enable incredibly fast starts.
 - Goblin Lackey as enabler
 - Ringleader for card advantage
 
-**2010** (tier 2, ~3%)  
+**2010** (tier 2, ~3%)
 Still competitive but losing ground to blue tempo.
 - Format evolution hurts linear aggro
 
-**2020** (tier 3, ~1%)  
+**2020** (tier 3, ~1%)
 Muxus from Jumpstart is a massive addition.
 - Muxus as top-end
 
-**2023** (fringe, ~0.5%)  
+**2023** (fringe, ~0.5%)
 Bowmasters kills most goblins and devastates the strategy.
 - Bowmasters devastating
 
-**2026** (fringe, ~0.4%)  
+**2026** (fringe, ~0.4%)
 Fringe at 0.4%. Loyal pilots only.
 - Outclassed by modern threats
 
-**Frequency of Change:** low  
+**Frequency of Change:** low
 **Change Notes:** Muxus from Jumpstart was the last major addition. Struggles against Bowmasters.
 
 ---
@@ -4270,14 +4270,14 @@ Fringe at 0.4%. Loyal pilots only.
 
 **Also known as:** BG Nic Fit, Junk Nic Fit, Veteran Explorer
 
-**Archetype:** midrange  
-**Colors:** B, G  
-**Tier:** fringe  
-**Meta Share:** 0.2%  
-**Win Rate Estimate:** 45-48%  
-**Cost Estimate:** $1,500 (driven by Bayou, Savannah, Verdant Catacombs)  
-**First Appeared:** 2011  
-**Peak Meta Share:** 2013-2015  
+**Archetype:** midrange
+**Colors:** B, G
+**Tier:** fringe
+**Meta Share:** 0.2%
+**Win Rate Estimate:** 45-48%
+**Cost Estimate:** $1,500 (driven by Bayou, Savannah, Verdant Catacombs)
+**First Appeared:** 2011
+**Peak Meta Share:** 2013-2015
 **Deck Count in Sample:** 3
 
 A ramp midrange deck using Veteran Explorer sacrificed to Cabal Therapy to ramp, then plays expensive threats opponents can't match.
@@ -4330,12 +4330,12 @@ A ramp midrange deck using Veteran Explorer sacrificed to Cabal Therapy to ramp,
 - **Unfavorable:** Sneak and Show, Oops! All Spells, Doomsday
 - **Even:** Lands, Death and Taxes, Ocelot Pride Midrange
 
-**Similar Decks:** Maverick, Jund  
+**Similar Decks:** Maverick, Jund
 Shares BG midrange core with Maverick but goes much bigger with Veteran Explorer ramp.
 
 ### Key Cards Explained
 
-<img src="https://api.scryfall.com/cards/named?exact=Veteran+Explorer&format=image&version=normal" alt="Veteran Explorer" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Cabal+Therapy&format=image&version=normal" alt="Cabal Therapy" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Pernicious+Deed&format=image&version=normal" alt="Pernicious Deed" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Veteran+Explorer&format=image&version=normal&set=wth" alt="Veteran Explorer" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Cabal+Therapy&format=image&version=normal&set=jud" alt="Cabal Therapy" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Pernicious+Deed&format=image&version=normal&set=apc" alt="Pernicious Deed" width="217">
 
 - **Veteran Explorer:** When it dies, each player searches for two basic lands. Most Legacy decks play 0-2 basics.
 - **Cabal Therapy:** Names a card to strip from opponent's hand. Sac Explorer to flashback.
@@ -4344,24 +4344,24 @@ Shares BG midrange core with Maverick but goes much bigger with Veteran Explorer
 
 ### Historical Timeline
 
-**2011** (tier 3, ~1%)  
+**2011** (tier 3, ~1%)
 Nic Fit emerges exploiting Legacy's low basic land counts.
 - Veteran Explorer + Cabal Therapy engine
 
-**2014** (tier 3, ~1.5%)  
+**2014** (tier 3, ~1.5%)
 Peak popularity. Siege Rhino makes Abzan preferred.
 - Siege Rhino added
 - Abzan builds popular
 
-**2023** (fringe, ~0.3%)  
+**2023** (fringe, ~0.3%)
 Bowmasters and power creep push to fringes.
 - Power creep outpaces the strategy
 
-**2026** (fringe, ~0.2%)  
+**2026** (fringe, ~0.2%)
 Fringe at 0.2%. Beloved pet deck.
 - Loyal pilots only
 
-**Frequency of Change:** low  
+**Frequency of Change:** low
 **Change Notes:** Veteran Explorer + Cabal Therapy is the unchanging core. Splash colors vary.
 
 ---
@@ -4370,14 +4370,14 @@ Fringe at 0.2%. Beloved pet deck.
 
 **Also known as:** Food Chain Combo, Eternal Scourge Combo, FC Griffin
 
-**Archetype:** combo  
-**Colors:** U, G  
-**Tier:** fringe  
-**Meta Share:** 0.2%  
-**Win Rate Estimate:** 47-49%  
-**Cost Estimate:** $2,800 (driven by Tropical Island, Underground Sea, Force of Will)  
-**First Appeared:** 2015  
-**Peak Meta Share:** 2017-2019  
+**Archetype:** combo
+**Colors:** U, G
+**Tier:** fringe
+**Meta Share:** 0.2%
+**Win Rate Estimate:** 47-49%
+**Cost Estimate:** $2,800 (driven by Tropical Island, Underground Sea, Force of Will)
+**First Appeared:** 2015
+**Peak Meta Share:** 2017-2019
 **Deck Count in Sample:** 3
 
 A combo deck using Food Chain with Misthollow Griffin or Eternal Scourge to generate infinite creature mana for Walking Ballista.
@@ -4429,12 +4429,12 @@ A combo deck using Food Chain with Misthollow Griffin or Eternal Scourge to gene
 - **Unfavorable:** Dimir Tempo, Oops! All Spells, Izzet Delver
 - **Even:** Sneak and Show, Painter, Beanstalk Control
 
-**Similar Decks:** Aluren, Sneak and Show  
+**Similar Decks:** Aluren, Sneak and Show
 Like Aluren, wins with an enchantment-based creature combo. Aluren is more competitive currently.
 
 ### Key Cards Explained
 
-<img src="https://api.scryfall.com/cards/named?exact=Food+Chain&format=image&version=normal" alt="Food Chain" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Misthollow+Griffin&format=image&version=normal" alt="Misthollow Griffin" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Manipulate+Fate&format=image&version=normal" alt="Manipulate Fate" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Food+Chain&format=image&version=normal&set=mmq" alt="Food Chain" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Misthollow+Griffin&format=image&version=normal&set=avr" alt="Misthollow Griffin" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Manipulate+Fate&format=image&version=normal&set=inv" alt="Manipulate Fate" width="217">
 
 - **Food Chain:** Exile a creature for CMC+1 mana, creature spells only. Infinite with exile-cast creatures.
 - **Misthollow Griffin:** Cast from exile. Nets 1 mana each loop with Food Chain.
@@ -4443,24 +4443,24 @@ Like Aluren, wins with an enchantment-based creature combo. Aluren is more compe
 
 ### Historical Timeline
 
-**2015** (tier 3, ~1%)  
+**2015** (tier 3, ~1%)
 Food Chain + Misthollow Griffin combo refined for Legacy.
 - Core combo
 - Eternal Scourge as backup
 
-**2018** (tier 2, ~2%)  
+**2018** (tier 2, ~2%)
 Peak popularity. Walking Ballista as clean win condition.
 - Walking Ballista added
 
-**2023** (fringe, ~0.3%)  
+**2023** (fringe, ~0.3%)
 Power creep pushes deck down. Combo too slow.
 - Outpaced by faster combos
 
-**2026** (fringe, ~0.2%)  
+**2026** (fringe, ~0.2%)
 Fringe at 0.2%. Pet deck for combo enthusiasts.
 - Unique but underpowered
 
-**Frequency of Change:** low  
+**Frequency of Change:** low
 **Change Notes:** Core combo is fixed. Manipulate Fate exiles Griffins/Scourges for the combo.
 
 ---
@@ -4469,14 +4469,14 @@ Fringe at 0.2%. Pet deck for combo enthusiasts.
 
 **Also known as:** GW Enchantress, Enchantress Prison, Enchantress Control
 
-**Archetype:** prison  
-**Colors:** G, W  
-**Tier:** fringe  
-**Meta Share:** 0.2%  
-**Win Rate Estimate:** 46-48%  
-**Cost Estimate:** $1,400 (driven by Serra's Sanctum, Savannah, Windswept Heath)  
-**First Appeared:** 1998  
-**Peak Meta Share:** 2009-2012  
+**Archetype:** prison
+**Colors:** G, W
+**Tier:** fringe
+**Meta Share:** 0.2%
+**Win Rate Estimate:** 46-48%
+**Cost Estimate:** $1,400 (driven by Serra's Sanctum, Savannah, Windswept Heath)
+**First Appeared:** 1998
+**Peak Meta Share:** 2009-2012
 **Deck Count in Sample:** 3
 
 A prison deck using Argothian Enchantress and Enchantress's Presence to draw cards off enchantments, locking opponents out with Solitary Confinement and Elephant Grass.
@@ -4525,12 +4525,12 @@ A prison deck using Argothian Enchantress and Enchantress's Presence to draw car
 - **Unfavorable:** Sneak and Show, Oops! All Spells, Painter
 - **Even:** Lands, Death and Taxes, Ocelot Pride Midrange
 
-**Similar Decks:** Lands, Cloudpost Ramp  
+**Similar Decks:** Lands, Cloudpost Ramp
 Like Lands, a non-blue prison deck aiming to lock the opponent out.
 
 ### Key Cards Explained
 
-<img src="https://api.scryfall.com/cards/named?exact=Argothian+Enchantress&format=image&version=normal" alt="Argothian Enchantress" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Solitary+Confinement&format=image&version=normal" alt="Solitary Confinement" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Sterling+Grove&format=image&version=normal" alt="Sterling Grove" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Argothian+Enchantress&format=image&version=normal&set=usg" alt="Argothian Enchantress" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Solitary+Confinement&format=image&version=normal&set=jud" alt="Solitary Confinement" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Sterling+Grove&format=image&version=normal&set=inv" alt="Sterling Grove" width="217">
 
 - **Argothian Enchantress:** Draws a card for each enchantment cast.
 - **Solitary Confinement:** Can't be targeted and take no damage. Enchantress draws fuel the upkeep discard.
@@ -4539,24 +4539,24 @@ Like Lands, a non-blue prison deck aiming to lock the opponent out.
 
 ### Historical Timeline
 
-**1998** (tier 3, ~1%)  
+**1998** (tier 3, ~1%)
 Argothian Enchantress from Urza's Saga enables enchantment strategies.
 - Enchantress as engine
 
-**2009** (tier 3, ~1.5%)  
+**2009** (tier 3, ~1.5%)
 Viable Legacy deck with Solitary Confinement lock.
 - Enchantress's Presence
 - Solitary Confinement lock
 
-**2021** (tier 3, ~0.5%)  
+**2021** (tier 3, ~0.5%)
 Sythis from MH2 adds a third efficient enchantress.
 - Sythis added
 
-**2026** (fringe, ~0.2%)  
+**2026** (fringe, ~0.2%)
 Fringe at 0.2%. Niche prison deck beloved by loyal pilots.
 - Niche prison role
 
-**Frequency of Change:** low  
+**Frequency of Change:** low
 **Change Notes:** Sythis from MH2 was a huge upgrade. Otherwise very stable.
 
 ---
@@ -4565,14 +4565,14 @@ Fringe at 0.2%. Niche prison deck beloved by loyal pilots.
 
 **Also known as:** Mono Blue Tide, Spiral Tide, Time Spiral Tide
 
-**Archetype:** combo  
-**Colors:** U  
-**Tier:** historic  
-**Meta Share:** 0%  
-**Win Rate Estimate:** N/A (historic)  
-**Cost Estimate:** $4,000 (driven by Candelabra of Tawnos, Time Spiral, Force of Will)  
-**First Appeared:** 1995  
-**Peak Meta Share:** 2005-2010  
+**Archetype:** combo
+**Colors:** U
+**Tier:** historic
+**Meta Share:** 0%
+**Win Rate Estimate:** N/A (historic)
+**Cost Estimate:** $4,000 (driven by Candelabra of Tawnos, Time Spiral, Force of Will)
+**First Appeared:** 1995
+**Peak Meta Share:** 2005-2010
 **Deck Count in Sample:** 0
 
 A mono-blue combo deck using High Tide to double Island mana, then untapping with Time Spiral and Turnabout to generate massive mana and win with Blue Sun's Zenith or Brain Freeze.
@@ -4623,12 +4623,12 @@ A mono-blue combo deck using High Tide to double Island mana, then untapping wit
 - **Unfavorable:** Dimir Tempo, Izzet Delver, Red Stompy
 - **Even:** Sneak and Show, The EPIC Storm, Doomsday
 
-**Similar Decks:** Doomsday, Omni-Tell  
+**Similar Decks:** Doomsday, Omni-Tell
 Fellow blue combo deck aiming to win in one turn. Requires careful sequencing.
 
 ### Key Cards Explained
 
-<img src="https://api.scryfall.com/cards/named?exact=High+Tide&format=image&version=normal" alt="High Tide" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Time+Spiral&format=image&version=normal" alt="Time Spiral" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Candelabra+of+Tawnos&format=image&version=normal" alt="Candelabra of Tawnos" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=High+Tide&format=image&version=normal&set=fem" alt="High Tide" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Time+Spiral&format=image&version=normal&set=usg" alt="Time Spiral" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Candelabra+of+Tawnos&format=image&version=normal&set=atq" alt="Candelabra of Tawnos" width="217">
 
 - **High Tide:** Islands produce an additional U until end of turn.
 - **Time Spiral:** Untaps up to six lands, each player draws seven. Nets massive mana with High Tide.
@@ -4637,20 +4637,20 @@ Fellow blue combo deck aiming to win in one turn. Requires careful sequencing.
 
 ### Historical Timeline
 
-**1995** (tier 2, ~2%)  
+**1995** (tier 2, ~2%)
 High Tide from Fallen Empires combined with untap effects creates early combo.
 - High Tide as mana engine
 
-**2005** (tier 2, ~3%)  
+**2005** (tier 2, ~3%)
 Peak viability. Specialists like Feline Longmore put up results.
 - Time Spiral as combo piece
 - Candelabra for mana multiplication
 
-**2015** (tier 3, ~0.5%)  
+**2015** (tier 3, ~0.5%)
 Format too fast. High Tide too slow and fragile.
 - Format too fast
 
-**2023** (historic, ~0%)  
+**2023** (historic, ~0%)
 Effectively unplayable in Bowmasters era.
 - No longer viable
 
@@ -4658,7 +4658,7 @@ Effectively unplayable in Bowmasters era.
 
 - **Frantic Search** (2003-06): Banned early in Legacy. Would have been another untap effect.
 
-**Frequency of Change:** N/A  
+**Frequency of Change:** N/A
 **Change Notes:** Historic deck. Last competitively relevant around 2015. Format too hostile for slow mono-blue combo.
 
 ---
@@ -4667,14 +4667,14 @@ Effectively unplayable in Bowmasters era.
 
 **Also known as:** Goblin Charbelcher, All-In Belcher, Land-Light Belcher
 
-**Archetype:** combo  
-**Colors:** R, G  
-**Tier:** fringe  
-**Meta Share:** 0.1%  
-**Win Rate Estimate:** 45-48%  
-**Cost Estimate:** $800 (driven by Lion's Eye Diamond, Chrome Mox)  
-**First Appeared:** 2004  
-**Peak Meta Share:** 2008-2010  
+**Archetype:** combo
+**Colors:** R, G
+**Tier:** fringe
+**Meta Share:** 0.1%
+**Win Rate Estimate:** 45-48%
+**Cost Estimate:** $800 (driven by Lion's Eye Diamond, Chrome Mox)
+**First Appeared:** 2004
+**Peak Meta Share:** 2008-2010
 **Deck Count in Sample:** 2
 
 An all-in combo deck playing zero or one lands, using fast mana to activate Goblin Charbelcher for lethal damage when no lands remain in library.
@@ -4719,12 +4719,12 @@ An all-in combo deck playing zero or one lands, using fast mana to activate Gobl
 - **Unfavorable:** Dimir Tempo, Izzet Delver, The EPIC Storm
 - **Even:** Red Stompy, Burn, Eldrazi
 
-**Similar Decks:** Oops! All Spells, The EPIC Storm, Ruby Storm  
+**Similar Decks:** Oops! All Spells, The EPIC Storm, Ruby Storm
 Like Oops, wins with almost no lands. Both fold to Force of Will but are blazing fast.
 
 ### Key Cards Explained
 
-<img src="https://api.scryfall.com/cards/named?exact=Goblin+Charbelcher&format=image&version=normal" alt="Goblin Charbelcher" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Lion%27s+Eye+Diamond&format=image&version=normal&set=mir" alt="Lion's Eye Diamond" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Empty+the+Warrens&format=image&version=normal" alt="Empty the Warrens" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Goblin+Charbelcher&format=image&version=normal&set=mrd" alt="Goblin Charbelcher" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Lion%27s+Eye+Diamond&format=image&version=normal&set=mir" alt="Lion's Eye Diamond" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Empty+the+Warrens&format=image&version=normal&set=tsp" alt="Empty the Warrens" width="217">
 
 - **Goblin Charbelcher:** Activate for 3 to reveal until a land, dealing that much damage. With 0-1 lands, lethal.
 - **Lion's Eye Diamond:** Discard hand for 3 mana. With Burning Wish, cast Wish first then crack LED.
@@ -4733,24 +4733,24 @@ Like Oops, wins with almost no lands. Both fold to Force of Will but are blazing
 
 ### Historical Timeline
 
-**2004** (tier 3, ~1%)  
+**2004** (tier 3, ~1%)
 Charbelcher combo discovered for Legacy.
 - Charbelcher as win condition
 - Zero-land mana base
 
-**2009** (tier 3, ~1%)  
+**2009** (tier 3, ~1%)
 Consistent fringe combo. Folds to Force of Will.
 - Budget-friendly combo
 
-**2020** (fringe, ~0.3%)  
+**2020** (fringe, ~0.3%)
 Chancellor of the Tangle provides free mana.
 - Chancellor added
 
-**2026** (fringe, ~0.1%)  
+**2026** (fringe, ~0.1%)
 Fringe at 0.1%. Ultra-budget combo.
 - Not competitively viable
 
-**Frequency of Change:** low  
+**Frequency of Change:** low
 **Change Notes:** Very stable. Chancellor of the Tangle and Irencrag Feat were recent additions.
 
 ---
@@ -4759,14 +4759,14 @@ Fringe at 0.1%. Ultra-budget combo.
 
 **Also known as:** UB Stiflenought, Stifle Dreadnought, Phyrexian Nought
 
-**Archetype:** tempo  
-**Colors:** U, B  
-**Tier:** fringe  
-**Meta Share:** 0.1%  
-**Win Rate Estimate:** 46-48%  
-**Cost Estimate:** $2,800 (driven by Underground Sea, Force of Will, Wasteland)  
-**First Appeared:** 2006  
-**Peak Meta Share:** 2008-2010  
+**Archetype:** tempo
+**Colors:** U, B
+**Tier:** fringe
+**Meta Share:** 0.1%
+**Win Rate Estimate:** 46-48%
+**Cost Estimate:** $2,800 (driven by Underground Sea, Force of Will, Wasteland)
+**First Appeared:** 2006
+**Peak Meta Share:** 2008-2010
 **Deck Count in Sample:** 2
 
 A tempo deck using Stifle to counter Phyrexian Dreadnought's sacrifice trigger, creating a 12/12 trampler for two mana total.
@@ -4817,12 +4817,12 @@ A tempo deck using Stifle to counter Phyrexian Dreadnought's sacrifice trigger, 
 - **Unfavorable:** Ocelot Pride Midrange, Death and Taxes, Painter
 - **Even:** Dimir Tempo, Izzet Delver, Sneak and Show
 
-**Similar Decks:** Dimir Tempo, Death's Shadow  
+**Similar Decks:** Dimir Tempo, Death's Shadow
 Essentially Dimir Tempo with Stifle/Dreadnought instead of Tamiyo and Barrowgoyf. Trades consistency for explosive potential.
 
 ### Key Cards Explained
 
-<img src="https://api.scryfall.com/cards/named?exact=Phyrexian+Dreadnought&format=image&version=normal" alt="Phyrexian Dreadnought" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Stifle&format=image&version=normal" alt="Stifle" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Dress+Down&format=image&version=normal" alt="Dress Down" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Phyrexian+Dreadnought&format=image&version=normal&set=mir" alt="Phyrexian Dreadnought" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Stifle&format=image&version=normal&set=scg" alt="Stifle" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Dress+Down&format=image&version=normal&set=mh2" alt="Dress Down" width="217">
 
 - **Phyrexian Dreadnought:** 12/12 trampler for 1 with sacrifice trigger. Stifle negates it.
 - **Stifle:** Counters triggered ability for U. Also hits fetchlands.
@@ -4831,24 +4831,24 @@ Essentially Dimir Tempo with Stifle/Dreadnought instead of Tamiyo and Barrowgoyf
 
 ### Historical Timeline
 
-**2006** (tier 2, ~2%)  
+**2006** (tier 2, ~2%)
 Stifle + Dreadnought becomes a Legacy staple interaction.
 - Combo discovered
 - Tempo shell
 
-**2010** (tier 2, ~2%)  
+**2010** (tier 2, ~2%)
 Peak popularity in various tempo shells.
 - Multiple shell variants
 
-**2021** (tier 3, ~0.5%)  
+**2021** (tier 3, ~0.5%)
 Dress Down from MH2 as backup enabler. Brief renewed interest.
 - Dress Down added
 
-**2026** (fringe, ~0.1%)  
+**2026** (fringe, ~0.1%)
 Fringe at 0.1%. Dimir Tempo is strictly better.
 - Outclassed by Dimir Tempo
 
-**Frequency of Change:** low  
+**Frequency of Change:** low
 **Change Notes:** Dress Down from MH2 provides an additional way to negate the trigger.
 
 ---
@@ -4857,14 +4857,14 @@ Fringe at 0.1%. Dimir Tempo is strictly better.
 
 **Also known as:** Fish, Mono Blue Merfolk, UW Merfolk
 
-**Archetype:** aggro  
-**Colors:** U  
-**Tier:** fringe  
-**Meta Share:** 0.2%  
-**Win Rate Estimate:** 46-48%  
-**Cost Estimate:** $1,400 (driven by Force of Will, Cavern of Souls, True-Name Nemesis)  
-**First Appeared:** 2008  
-**Peak Meta Share:** 2010-2013  
+**Archetype:** aggro
+**Colors:** U
+**Tier:** fringe
+**Meta Share:** 0.2%
+**Win Rate Estimate:** 46-48%
+**Cost Estimate:** $1,400 (driven by Force of Will, Cavern of Souls, True-Name Nemesis)
+**First Appeared:** 2008
+**Peak Meta Share:** 2010-2013
 **Deck Count in Sample:** 3
 
 A tribal aggro deck using lord effects for unblockable islandwalk damage. Combines Aether Vial with Force of Will for aggro-control.
@@ -4910,12 +4910,12 @@ A tribal aggro deck using lord effects for unblockable islandwalk damage. Combin
 - **Unfavorable:** Ocelot Pride Midrange, Eldrazi, Painter
 - **Even:** Dimir Tempo, Izzet Delver, Death and Taxes
 
-**Similar Decks:** Goblins, Death and Taxes  
+**Similar Decks:** Goblins, Death and Taxes
 Tribal Aether Vial deck like Goblins. Uniquely has Force of Will access among tribal decks.
 
 ### Key Cards Explained
 
-<img src="https://api.scryfall.com/cards/named?exact=Lord+of+Atlantis&format=image&version=normal" alt="Lord of Atlantis" width="217"> <img src="https://api.scryfall.com/cards/named?exact=True-Name+Nemesis&format=image&version=normal&set=c13" alt="True-Name Nemesis" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Vodalian+Hexcatcher&format=image&version=normal" alt="Vodalian Hexcatcher" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Lord+of+Atlantis&format=image&version=normal&set=lea" alt="Lord of Atlantis" width="217"> <img src="https://api.scryfall.com/cards/named?exact=True-Name+Nemesis&format=image&version=normal&set=c13" alt="True-Name Nemesis" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Vodalian+Hexcatcher&format=image&version=normal&set=dmu" alt="Vodalian Hexcatcher" width="217">
 
 - **Lord of Atlantis:** All merfolk get +1/+1 and islandwalk. Unblockable vs blue decks.
 - **True-Name Nemesis:** Protection from a chosen player. Untargetable, unblockable.
@@ -4924,28 +4924,28 @@ Tribal Aether Vial deck like Goblins. Uniquely has Force of Will access among tr
 
 ### Historical Timeline
 
-**2008** (tier 2, ~3%)  
+**2008** (tier 2, ~3%)
 Merfolk tribal becomes competitive with critical mass of lords.
 - Lord tribal core
 - Aether Vial for tempo
 
-**2013** (tier 2, ~3%)  
+**2013** (tier 2, ~3%)
 True-Name Nemesis is a massive upgrade.
 - True-Name Nemesis added
 
-**2022** (tier 3, ~0.5%)  
+**2022** (tier 3, ~0.5%)
 Vodalian Hexcatcher adds a counterspell lord.
 - Hexcatcher added
 
-**2023** (fringe, ~0.3%)  
+**2023** (fringe, ~0.3%)
 Bowmasters rough for small creatures.
 - Bowmasters hurts small creatures
 
-**2026** (fringe, ~0.2%)  
+**2026** (fringe, ~0.2%)
 Fringe at 0.2%. Loyal tribe with FoW edge.
 - Force of Will gives unique edge
 
-**Frequency of Change:** low  
+**Frequency of Change:** low
 **Change Notes:** Vodalian Hexcatcher from Dominaria United was a major addition. Svyelun from MH2 added card advantage.
 
 ---
@@ -4954,14 +4954,14 @@ Fringe at 0.2%. Loyal tribe with FoW edge.
 
 **Also known as:** Colorless Stompy, Metalworker Stompy, Steel Stompy
 
-**Archetype:** stompy  
-**Colors:** C  
-**Tier:** tier 3  
-**Meta Share:** 0.5%  
-**Win Rate Estimate:** 48-50%  
-**Cost Estimate:** $2,000 (driven by City of Traitors, Ancient Tomb, Metalworker, Grim Monolith)  
-**First Appeared:** 2009  
-**Peak Meta Share:** 2015-2017  
+**Archetype:** stompy
+**Colors:** C
+**Tier:** tier 3
+**Meta Share:** 0.5%
+**Win Rate Estimate:** 48-50%
+**Cost Estimate:** $2,000 (driven by City of Traitors, Ancient Tomb, Metalworker, Grim Monolith)
+**First Appeared:** 2009
+**Peak Meta Share:** 2015-2017
 **Deck Count in Sample:** 8
 
 A colorless artifact stompy deck using Metalworker and Ancient Tomb to power out threats, backed by Chalice and Trinisphere.
@@ -5014,12 +5014,12 @@ A colorless artifact stompy deck using Metalworker and Ancient Tomb to power out
 - **Unfavorable:** Ocelot Pride Midrange, Lands, Painter
 - **Even:** Sneak and Show, Eldrazi, Red Stompy
 
-**Similar Decks:** Eldrazi, Red Stompy, Mystic Forge Combo  
+**Similar Decks:** Eldrazi, Red Stompy, Mystic Forge Combo
 Shares Chalice + fast mana shell with Eldrazi and Red Stompy. More artifact-focused with Metalworker.
 
 ### Key Cards Explained
 
-<img src="https://api.scryfall.com/cards/named?exact=Metalworker&format=image&version=normal" alt="Metalworker" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Chalice+of+the+Void&format=image&version=normal&set=mrd" alt="Chalice of the Void" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Karn%2C+the+Great+Creator&format=image&version=normal" alt="Karn, the Great Creator" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Metalworker&format=image&version=normal&set=usg" alt="Metalworker" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Chalice+of+the+Void&format=image&version=normal&set=mrd" alt="Chalice of the Void" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Karn%2C+the+Great+Creator&format=image&version=normal&set=war" alt="Karn, the Great Creator" width="217">
 
 - **Metalworker:** Taps to reveal artifacts from hand, adding 2 colorless each.
 - **Chalice of the Void:** On one, counters most of Legacy's best spells.
@@ -5028,25 +5028,25 @@ Shares Chalice + fast mana shell with Eldrazi and Red Stompy. More artifact-focu
 
 ### Historical Timeline
 
-**2009** (tier 3, ~1%)  
+**2009** (tier 3, ~1%)
 MUD emerges using Metalworker and artifact mana.
 - Metalworker as mana engine
 - Chalice + Trinisphere lock
 
-**2016** (tier 2, ~2%)  
+**2016** (tier 2, ~2%)
 Peak popularity. Walking Ballista as great mana sink.
 - Walking Ballista added
 
-**2019** (tier 3, ~1%)  
+**2019** (tier 3, ~1%)
 Karn wishboard transforms the deck.
 - Karn wishboard
 - Mystic Forge added
 
-**2026** (tier 3, ~0.5%)  
+**2026** (tier 3, ~0.5%)
 Tier 3 at 0.5%. Competes with other stompy variants.
 - Unique Metalworker angle
 
-**Frequency of Change:** low  
+**Frequency of Change:** low
 **Change Notes:** Karn wishboard and Urza's Saga are the main recent innovations.
 
 ---
@@ -5055,14 +5055,14 @@ Tier 3 at 0.5%. Competes with other stompy variants.
 
 **Also known as:** UB Ninjas, Ninja Tempo, Yuriko Ninjas
 
-**Archetype:** tempo  
-**Colors:** U, B  
-**Tier:** fringe  
-**Meta Share:** 0.2%  
-**Win Rate Estimate:** 46-48%  
-**Cost Estimate:** $2,400 (driven by Underground Sea, Force of Will, Wasteland)  
-**First Appeared:** 2018  
-**Peak Meta Share:** 2019-2020  
+**Archetype:** tempo
+**Colors:** U, B
+**Tier:** fringe
+**Meta Share:** 0.2%
+**Win Rate Estimate:** 46-48%
+**Cost Estimate:** $2,400 (driven by Underground Sea, Force of Will, Wasteland)
+**First Appeared:** 2018
+**Peak Meta Share:** 2019-2020
 **Deck Count in Sample:** 3
 
 A tempo deck using evasive creatures to enable ninjutsu, primarily Yuriko. Yuriko's trigger drains based on revealed card's mana value.
@@ -5113,12 +5113,12 @@ A tempo deck using evasive creatures to enable ninjutsu, primarily Yuriko. Yurik
 - **Unfavorable:** Ocelot Pride Midrange, Eldrazi, Red Stompy
 - **Even:** Dimir Tempo, Izzet Delver, Painter
 
-**Similar Decks:** Dimir Tempo, Stiflenought  
+**Similar Decks:** Dimir Tempo, Stiflenought
 Shares UB tempo shell with Dimir Tempo but replaces threats with ninja package.
 
 ### Key Cards Explained
 
-<img src="https://api.scryfall.com/cards/named?exact=Yuriko%2C+the+Tiger%27s+Shadow&format=image&version=normal" alt="Yuriko, the Tiger's Shadow" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Changeling+Outcast&format=image&version=normal" alt="Changeling Outcast" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Ingenious+Infiltrator&format=image&version=normal" alt="Ingenious Infiltrator" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Yuriko%2C+the+Tiger%27s+Shadow&format=image&version=normal&set=c18" alt="Yuriko, the Tiger's Shadow" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Changeling+Outcast&format=image&version=normal&set=mh1" alt="Changeling Outcast" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Ingenious+Infiltrator&format=image&version=normal&set=mh1" alt="Ingenious Infiltrator" width="217">
 
 - **Yuriko, the Tiger's Shadow:** Commander ninjutsu for UB bypasses command tax. Drains on combat damage.
 - **Changeling Outcast:** Unblockable 1/1 for B. Perfect ninjutsu enabler.
@@ -5127,23 +5127,23 @@ Shares UB tempo shell with Dimir Tempo but replaces threats with ninja package.
 
 ### Historical Timeline
 
-**2018** (tier 3, ~1%)  
+**2018** (tier 3, ~1%)
 Yuriko from Commander 2018 creates a new archetype.
 - Yuriko as build-around
 
-**2020** (tier 3, ~1.5%)  
+**2020** (tier 3, ~1.5%)
 Peak popularity with Ingenious Infiltrator.
 - Infiltrator added
 
-**2023** (fringe, ~0.3%)  
+**2023** (fringe, ~0.3%)
 Bowmasters kills enabler creatures.
 - Bowmasters hurts enablers
 
-**2026** (fringe, ~0.2%)  
+**2026** (fringe, ~0.2%)
 Fringe at 0.2%. Fun alternative to Dimir Tempo.
 - Pet deck for ninja fans
 
-**Frequency of Change:** low  
+**Frequency of Change:** low
 **Change Notes:** Moon-Circuit Hacker from Kamigawa was a solid addition. Core ninja package stable.
 
 ---
@@ -5152,14 +5152,14 @@ Fringe at 0.2%. Fun alternative to Dimir Tempo.
 
 **Also known as:** Esper Blade, WUB Vial, Esper Recruiter
 
-**Archetype:** midrange  
-**Colors:** W, U, B  
-**Tier:** fringe  
-**Meta Share:** 0.2%  
-**Win Rate Estimate:** 46-48%  
-**Cost Estimate:** $3,000 (driven by Tundra, Underground Sea, Scrubland, Force of Will)  
-**First Appeared:** 2015  
-**Peak Meta Share:** 2018-2019  
+**Archetype:** midrange
+**Colors:** W, U, B
+**Tier:** fringe
+**Meta Share:** 0.2%
+**Win Rate Estimate:** 46-48%
+**Cost Estimate:** $3,000 (driven by Tundra, Underground Sea, Scrubland, Force of Will)
+**First Appeared:** 2015
+**Peak Meta Share:** 2018-2019
 **Deck Count in Sample:** 3
 
 A creature toolbox deck using Aether Vial, Stoneforge Mystic, and Recruiter of the Guard to assemble the right creatures for each matchup.
@@ -5214,12 +5214,12 @@ A creature toolbox deck using Aether Vial, Stoneforge Mystic, and Recruiter of t
 - **Unfavorable:** Sneak and Show, Oops! All Spells, Lands
 - **Even:** Dimir Tempo, Death and Taxes, Ocelot Pride Midrange
 
-**Similar Decks:** Death and Taxes, Stoneblade, Coveted Jewel Combo  
+**Similar Decks:** Death and Taxes, Stoneblade, Coveted Jewel Combo
 A DnT variant adding blue and black for more interaction. Stoneblade is the spell-oriented version.
 
 ### Key Cards Explained
 
-<img src="https://api.scryfall.com/cards/named?exact=Aether+Vial&format=image&version=normal" alt="Aether Vial" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Recruiter+of+the+Guard&format=image&version=normal" alt="Recruiter of the Guard" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Stoneforge+Mystic&format=image&version=normal&set=wwk" alt="Stoneforge Mystic" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Aether+Vial&format=image&version=normal&set=dst" alt="Aether Vial" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Recruiter+of+the+Guard&format=image&version=normal&set=cn2" alt="Recruiter of the Guard" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Stoneforge+Mystic&format=image&version=normal&set=wwk" alt="Stoneforge Mystic" width="217">
 
 - **Aether Vial:** Cheats creatures in at instant speed for free.
 - **Recruiter of the Guard:** Tutors for any creature with toughness 2 or less.
@@ -5228,23 +5228,23 @@ A DnT variant adding blue and black for more interaction. Stoneblade is the spel
 
 ### Historical Timeline
 
-**2015** (tier 3, ~0.5%)  
+**2015** (tier 3, ~0.5%)
 Recruiter of the Guard from Conspiracy 2 enables Esper toolbox.
 - Recruiter as engine
 
-**2019** (tier 3, ~1%)  
+**2019** (tier 3, ~1%)
 Peak popularity with diverse toolbox.
 - Peak results
 
-**2023** (fringe, ~0.3%)  
+**2023** (fringe, ~0.3%)
 Bowmasters joins but also punishes small creatures.
 - Bowmasters mixed blessing
 
-**2026** (fringe, ~0.2%)  
+**2026** (fringe, ~0.2%)
 Fringe at 0.2%. DnT generally preferred.
 - Niche toolbox option
 
-**Frequency of Change:** medium  
+**Frequency of Change:** medium
 **Change Notes:** Bowmasters was a huge addition. Recruiter chains for specific answers.
 
 ---
@@ -5253,14 +5253,14 @@ Fringe at 0.2%. DnT generally preferred.
 
 **Also known as:** BRG Midrange, Jund Midrange, RGB Good Stuff
 
-**Archetype:** midrange  
-**Colors:** B, R, G  
-**Tier:** fringe  
-**Meta Share:** 0.2%  
-**Win Rate Estimate:** 46-48%  
-**Cost Estimate:** $2,200 (driven by Badlands, Bayou, Ragavan, Nimble Pilferer, Liliana of the Veil)  
-**First Appeared:** 2009  
-**Peak Meta Share:** 2013-2015  
+**Archetype:** midrange
+**Colors:** B, R, G
+**Tier:** fringe
+**Meta Share:** 0.2%
+**Win Rate Estimate:** 46-48%
+**Cost Estimate:** $2,200 (driven by Badlands, Bayou, Ragavan, Nimble Pilferer, Liliana of the Veil)
+**First Appeared:** 2009
+**Peak Meta Share:** 2013-2015
 **Deck Count in Sample:** 3
 
 A three-color midrange deck combining the best discard, removal, and threats in BRG. Barrowgoyf, Thoughtseize, Lightning Bolt alongside green utility.
@@ -5310,12 +5310,12 @@ A three-color midrange deck combining the best discard, removal, and threats in 
 - **Unfavorable:** Sneak and Show, Oops! All Spells, Lands
 - **Even:** Ocelot Pride Midrange, Death and Taxes, Painter
 
-**Similar Decks:** Nic Fit, Mardu Energy  
+**Similar Decks:** Nic Fit, Mardu Energy
 Shares BG disruption with Nic Fit but without ramp. Mardu Energy is the preferred non-blue disruption aggro deck.
 
 ### Key Cards Explained
 
-<img src="https://api.scryfall.com/cards/named?exact=Barrowgoyf&format=image&version=normal" alt="Barrowgoyf" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Thoughtseize&format=image&version=normal&set=lrw" alt="Thoughtseize" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Lightning+Bolt&format=image&version=normal&set=lea" alt="Lightning Bolt" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Barrowgoyf&format=image&version=normal&set=mh3" alt="Barrowgoyf" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Thoughtseize&format=image&version=normal&set=lrw" alt="Thoughtseize" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Lightning+Bolt&format=image&version=normal&set=lea" alt="Lightning Bolt" width="217">
 
 - **Barrowgoyf:** MH3 Tarmogoyf upgrade. Efficient threat with diverse graveyard types.
 - **Thoughtseize:** Best discard spell in Magic.
@@ -5324,24 +5324,24 @@ Shares BG disruption with Nic Fit but without ramp. Mardu Energy is the preferre
 
 ### Historical Timeline
 
-**2009** (tier 3, ~1%)  
+**2009** (tier 3, ~1%)
 Jund midrange appears in Legacy.
 - Three-color midrange shell
 
-**2013** (tier 2, ~2%)  
+**2013** (tier 2, ~2%)
 DRS makes three-color mana consistent.
 - Deathrite Shaman as fixer
 
-**2018** (tier 3, ~0.5%)  
+**2018** (tier 3, ~0.5%)
 DRS ban devastates the mana base.
 - DRS banned
 - Mana struggles
 
-**2024** (fringe, ~0.3%)  
+**2024** (fringe, ~0.3%)
 Barrowgoyf from MH3 and Bowmasters bring some interest.
 - Barrowgoyf replaces Tarmogoyf
 
-**2026** (fringe, ~0.2%)  
+**2026** (fringe, ~0.2%)
 Fringe at 0.2%. Outclassed by blue decks.
 - Mardu Energy preferred
 
@@ -5349,7 +5349,7 @@ Fringe at 0.2%. Outclassed by blue decks.
 
 - **Deathrite Shaman** (2018-07): Lost its best one-drop mana fixer. DRS held three-color bases together.
 
-**Frequency of Change:** low  
+**Frequency of Change:** low
 **Change Notes:** Barrowgoyf from MH3 replaced Tarmogoyf. Without Brainstorm, lacks card selection.
 
 ---
@@ -5358,14 +5358,14 @@ Fringe at 0.2%. Outclassed by blue decks.
 
 **Also known as:** Auriok Salvagers Combo, LED Salvagers, Salvager Combo
 
-**Archetype:** combo  
-**Colors:** W  
-**Tier:** historic  
-**Meta Share:** 0%  
-**Win Rate Estimate:** N/A (historic)  
-**Cost Estimate:** $3,500 (driven by Lion's Eye Diamond, Tundra, Force of Will, Mox Opal)  
-**First Appeared:** 2005  
-**Peak Meta Share:** 2006-2008  
+**Archetype:** combo
+**Colors:** W
+**Tier:** historic
+**Meta Share:** 0%
+**Win Rate Estimate:** N/A (historic)
+**Cost Estimate:** $3,500 (driven by Lion's Eye Diamond, Tundra, Force of Will, Mox Opal)
+**First Appeared:** 2005
+**Peak Meta Share:** 2006-2008
 **Deck Count in Sample:** 0
 
 A combo deck using Auriok Salvagers with Lion's Eye Diamond to generate infinite mana, fueling lethal Pyrite Spellbomb or Walking Ballista.
@@ -5416,12 +5416,12 @@ A combo deck using Auriok Salvagers with Lion's Eye Diamond to generate infinite
 - **Unfavorable:** Dimir Tempo, Izzet Delver, Red Stompy
 - **Even:** Sneak and Show, Painter, Beanstalk Control
 
-**Similar Decks:** Painter, Mystic Forge Combo  
+**Similar Decks:** Painter, Mystic Forge Combo
 Like Painter, an artifact combo in a fair shell. Mystic Forge uses similar artifact mana.
 
 ### Key Cards Explained
 
-<img src="https://api.scryfall.com/cards/named?exact=Auriok+Salvagers&format=image&version=normal" alt="Auriok Salvagers" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Lion%27s+Eye+Diamond&format=image&version=normal&set=mir" alt="Lion's Eye Diamond" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Pyrite+Spellbomb&format=image&version=normal" alt="Pyrite Spellbomb" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Auriok+Salvagers&format=image&version=normal&set=5dn" alt="Auriok Salvagers" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Lion%27s+Eye+Diamond&format=image&version=normal&set=mir" alt="Lion's Eye Diamond" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Pyrite+Spellbomb&format=image&version=normal&set=mrd" alt="Pyrite Spellbomb" width="217">
 
 - **Auriok Salvagers:** Returns artifact MV 1 or less from graveyard for 1W. Infinite loop with LED.
 - **Lion's Eye Diamond:** Discard hand for 3 mana. With Salvagers, discard is irrelevant.
@@ -5430,25 +5430,25 @@ Like Painter, an artifact combo in a fair shell. Mystic Forge uses similar artif
 
 ### Historical Timeline
 
-**2005** (tier 3, ~1%)  
+**2005** (tier 3, ~1%)
 Salvagers + LED combo discovered.
 - Infinite mana combo
 - Pyrite Spellbomb kill
 
-**2007** (tier 2, ~2%)  
+**2007** (tier 2, ~2%)
 Peak viability with Stoneforge fair backup.
 - Stoneforge backup
 - Enlightened Tutor toolbox
 
-**2015** (fringe, ~0.2%)  
+**2015** (fringe, ~0.2%)
 Power creep makes combo too slow.
 - Four-mana combo creature too slow
 
-**2020** (historic, ~0%)  
+**2020** (historic, ~0%)
 Effectively historic. Painter is better in every way.
 - Replaced by Painter
 
-**Frequency of Change:** N/A  
+**Frequency of Change:** N/A
 **Change Notes:** Historic deck last seen competitively around 2015. Combo too slow for modern Legacy.
 
 ---
@@ -5457,14 +5457,14 @@ Effectively historic. Painter is better in every way.
 
 **Also known as:** Hive Mind Pacts, Show and Hive, Pact Combo
 
-**Archetype:** combo  
-**Colors:** U, R  
-**Tier:** historic  
-**Meta Share:** 0%  
-**Win Rate Estimate:** N/A (historic)  
-**Cost Estimate:** $2,600 (driven by Volcanic Island, Force of Will, City of Traitors, Ancient Tomb)  
-**First Appeared:** 2010  
-**Peak Meta Share:** 2011-2013  
+**Archetype:** combo
+**Colors:** U, R
+**Tier:** historic
+**Meta Share:** 0%
+**Win Rate Estimate:** N/A (historic)
+**Cost Estimate:** $2,600 (driven by Volcanic Island, Force of Will, City of Traitors, Ancient Tomb)
+**First Appeared:** 2010
+**Peak Meta Share:** 2011-2013
 **Deck Count in Sample:** 0
 
 A combo deck using Show and Tell for Hive Mind, then casting Pacts that the opponent copies but cannot pay for on their upkeep.
@@ -5512,12 +5512,12 @@ A combo deck using Show and Tell for Hive Mind, then casting Pacts that the oppo
 - **Unfavorable:** Dimir Tempo, Izzet Delver, Red Stompy
 - **Even:** Sneak and Show, Doomsday, The EPIC Storm
 
-**Similar Decks:** Sneak and Show, Omni-Tell  
+**Similar Decks:** Sneak and Show, Omni-Tell
 Shares Show and Tell shell with Sneak and Show but uses Hive Mind + Pacts instead of creatures.
 
 ### Key Cards Explained
 
-<img src="https://api.scryfall.com/cards/named?exact=Hive+Mind&format=image&version=normal" alt="Hive Mind" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Summoner%27s+Pact&format=image&version=normal" alt="Summoner's Pact" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Show+and+Tell&format=image&version=normal&set=usg" alt="Show and Tell" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Hive+Mind&format=image&version=normal&set=m10" alt="Hive Mind" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Summoner%27s+Pact&format=image&version=normal&set=fut" alt="Summoner's Pact" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Show+and+Tell&format=image&version=normal&set=usg" alt="Show and Tell" width="217">
 
 - **Hive Mind:** Copies every instant/sorcery for all players. Pacts force unplayable upkeep costs.
 - **Summoner's Pact:** Free spell. Opponent's copy requires 2GG next upkeep or lose.
@@ -5526,23 +5526,23 @@ Shares Show and Tell shell with Sneak and Show but uses Hive Mind + Pacts instea
 
 ### Historical Timeline
 
-**2010** (tier 2, ~2%)  
+**2010** (tier 2, ~2%)
 Hive Mind combo discovered using Show and Tell and Pacts.
 - Hive Mind + Pacts combo
 
-**2012** (tier 2, ~2.5%)  
+**2012** (tier 2, ~2.5%)
 Peak popularity as alternative to Sneak and Show.
 - Wins through creature hosers
 
-**2016** (tier 3, ~0.5%)  
+**2016** (tier 3, ~0.5%)
 Sneak and Show proves more resilient. Hive Mind fades.
 - SnS preferred
 
-**2020** (historic, ~0%)  
+**2020** (historic, ~0%)
 Effectively historic. Omni-Tell is better.
 - Replaced by Omni-Tell
 
-**Frequency of Change:** N/A  
+**Frequency of Change:** N/A
 **Change Notes:** Historic deck. Alternative to Sneak and Show that won through creature-hosing effects. Format outgrew it.
 
 ---
@@ -5551,14 +5551,14 @@ Effectively historic. Omni-Tell is better.
 
 **Also known as:** Miracles, Post-Top Miracles, UW Control
 
-**Archetype:** control  
-**Colors:** U, W  
-**Tier:** tier 3  
-**Meta Share:** 0.5%  
-**Win Rate Estimate:** 48-50%  
-**Cost Estimate:** $3,200 (driven by Tundra, Jace, the Mind Sculptor, Force of Will, Flooded Strand)  
-**First Appeared:** 2017  
-**Peak Meta Share:** 2018-2019  
+**Archetype:** control
+**Colors:** U, W
+**Tier:** tier 3
+**Meta Share:** 0.5%
+**Win Rate Estimate:** 48-50%
+**Cost Estimate:** $3,200 (driven by Tundra, Jace, the Mind Sculptor, Force of Will, Flooded Strand)
+**First Appeared:** 2017
+**Peak Meta Share:** 2018-2019
 **Deck Count in Sample:** 8
 
 The post-Sensei's Divining Top version of Miracles. Uses Terminus and Entreat the Angels set up with Brainstorm and Jace rather than the banned Top.
@@ -5611,12 +5611,12 @@ The post-Sensei's Divining Top version of Miracles. Uses Terminus and Entreat th
 - **Unfavorable:** Dimir Tempo, Sneak and Show, Oops! All Spells
 - **Even:** Ocelot Pride Midrange, Death and Taxes, Lands
 
-**Similar Decks:** Jeskai Control, Beanstalk Control, Stoneblade  
+**Similar Decks:** Jeskai Control, Beanstalk Control, Stoneblade
 Predecessor to Jeskai Control. Jeskai adds red for Pyroblast and Phlage. Beanstalk is more popular currently.
 
 ### Key Cards Explained
 
-<img src="https://api.scryfall.com/cards/named?exact=Terminus&format=image&version=normal" alt="Terminus" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Counterbalance&format=image&version=normal" alt="Counterbalance" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Jace%2C+the+Mind+Sculptor&format=image&version=normal" alt="Jace, the Mind Sculptor" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Terminus&format=image&version=normal&set=avr" alt="Terminus" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Counterbalance&format=image&version=normal&set=csp" alt="Counterbalance" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Jace%2C+the+Mind+Sculptor&format=image&version=normal&set=wwk" alt="Jace, the Mind Sculptor" width="217">
 
 - **Terminus:** One-mana miracle that tucks all creatures. Set up with Brainstorm.
 - **Counterbalance:** Reveals top card to counter matching MV spells. Without Top, relies on cantrips.
@@ -5625,26 +5625,26 @@ Predecessor to Jeskai Control. Jeskai adds red for Pyroblast and Phlage. Beansta
 
 ### Historical Timeline
 
-**2012** (tier 1, ~15%)  
+**2012** (tier 1, ~15%)
 Original Miracles with Top dominates. Counterbalance + Top is near-unbreakable.
 - Counterbalance + Top lock
 - Terminus as sweeper
 
-**2017** (tier 2, ~4%)  
+**2017** (tier 2, ~4%)
 Top banned April 2017. Players rebuild with Brainstorm as miracle enabler.
 - Top banned
 - Rebuilt with Brainstorm
 
-**2019** (tier 2, ~3%)  
+**2019** (tier 2, ~3%)
 Post-Top Miracles competitive but not dominant. Narset and planeswalkers strengthen shell.
 - Narset added
 - Planeswalker-heavy
 
-**2023** (tier 3, ~0.5%)  
+**2023** (tier 3, ~0.5%)
 Bowmasters weakens Jace and Brainstorm setup. Jeskai Control preferred.
 - Bowmasters punishes Brainstorm/Jace
 
-**2026** (tier 3, ~0.5%)  
+**2026** (tier 3, ~0.5%)
 Tier 3 at 0.5%. Nostalgic but outclassed by Jeskai and Beanstalk Control.
 - Outclassed by newer control decks
 
@@ -5652,7 +5652,7 @@ Tier 3 at 0.5%. Nostalgic but outclassed by Jeskai and Beanstalk Control.
 
 - **Sensei's Divining Top** (2017-04): Original Miracles with Top was the best deck for years. Top ban forced complete rebuild.
 
-**Frequency of Change:** medium  
+**Frequency of Change:** medium
 **Change Notes:** After Top ban in 2017, rebuilt around Brainstorm. Counterbalance without Top is less consistent. Predict helps set up miracles.
 
 ---

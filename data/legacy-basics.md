@@ -40,7 +40,8 @@ Brainstorm + fetchlands is the defining card selection engine. Brainstorm lets y
 
 ### All Strategies Are Viable
 
-<img src="https://api.scryfall.com/cards/named?exact=Show+and+Tell&format=image&version=normal&set=usg" alt="Show and Tell" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Thassa%27s+Oracle&format=image&version=normal&set=thb" alt="Thassa's Oracle" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Chalice+of+the+Void&format=image&version=normal&set=mrd" alt="Chalice of the Void" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Exploration&format=image&version=normal&set=usg" alt="Exploration" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Life+from+the+Loam&format=image&version=normal&set=rav" alt="Life from the Loam" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Show+and+Tell&format=image&version=normal&set=usg" alt="Show and Tell" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Thassa%27s+Oracle&format=image&version=normal&set=thb" alt="Thassa's Oracle" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Chalice+of+the+Void&format=image&version=normal&set=mrd" alt="Chalice of the Void" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Exploration&format=image&version=normal&set=usg" alt="Exploration" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Life+from+the+Loam&format=image&version=normal&set=rav" alt="Life from the Loam" width="217">
 
 The format supports the full spectrum:
 - **Tempo**: Dimir Tempo, Izzet Delver — cheap threats + free countermagic + mana denial
@@ -74,7 +75,7 @@ Dual lands (Underground Sea, Volcanic Island, Tundra, etc.) are on the Reserved 
 
 ### Top Creatures
 
-<img src="https://api.scryfall.com/cards/named?exact=Orcish+Bowmasters&format=image&version=normal" alt="Orcish Bowmasters" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Murktide+Regent&format=image&version=normal" alt="Murktide Regent" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Emrakul%2C+the+Aeons+Torn&format=image&version=normal&set=roe" alt="Emrakul, the Aeons Torn" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Orcish+Bowmasters&format=image&version=normal&set=ltr" alt="Orcish Bowmasters" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Murktide+Regent&format=image&version=normal&set=mh2" alt="Murktide Regent" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Emrakul%2C+the+Aeons+Torn&format=image&version=normal&set=roe" alt="Emrakul, the Aeons Torn" width="217">
 
 | Card | % Decks | Role |
 |------|---------|------|
@@ -133,7 +134,7 @@ Legacy is one of the most expensive paper formats due to Reserved List cards:
 
 ## History Highlights
 
-<img src="https://api.scryfall.com/cards/named?exact=Treasure+Cruise&set=ktk&format=image&version=normal" alt="Treasure Cruise" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Wrenn+and+Six&set=mh1&format=image&version=normal" alt="Wrenn and Six" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Treasure+Cruise&format=image&version=normal&set=ktk" alt="Treasure Cruise" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Wrenn+and+Six&format=image&version=normal&set=mh1" alt="Wrenn and Six" width="217">
 
 | Year | Event |
 |------|-------|
@@ -216,7 +217,7 @@ Legacy's power level means turn 1 often defines the game:
 
 **Free Spells**: Cards that cost 0 mana to cast (by paying an alternative cost). Force of Will (exile a blue card + 1 life), Daze (return an Island), Force of Negation, Solitude, Endurance, Grief, Fury. These break the fundamental rule of MTG that spells require mana, enabling interaction even when tapped out.
 
-<img src="https://api.scryfall.com/cards/named?exact=Solitude&format=image&version=normal" alt="Solitude" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Endurance&format=image&version=normal" alt="Endurance" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Solitude&format=image&version=normal&set=mh2" alt="Solitude" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Endurance&format=image&version=normal&set=mh2" alt="Endurance" width="217">
 
 **Storm Count**: The number of spells cast in a turn. Tendrils of Agony and Empty the Warrens copy themselves for each prior spell. Storm decks spend their turn casting rituals (Dark Ritual, Rite of Flame, Lion's Eye Diamond) to build a lethal count before casting the finisher.
 
@@ -258,7 +259,8 @@ Legacy's power level means turn 1 often defines the game:
 
 ### Legacy-Specific Bans (Cards Legal in Vintage but Banned in Legacy)
 
-<img src="https://api.scryfall.com/cards/named?exact=Sensei%27s+Divining+Top&format=image&version=normal&set=chk" alt="Sensei's Divining Top" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Deathrite+Shaman&format=image&version=normal&set=rtr" alt="Deathrite Shaman" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Ragavan%2C+Nimble+Pilferer&format=image&version=normal" alt="Ragavan, Nimble Pilferer" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Entomb&format=image&version=normal&set=ody" alt="Entomb" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Sensei%27s+Divining+Top&format=image&version=normal&set=chk" alt="Sensei's Divining Top" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Deathrite+Shaman&format=image&version=normal&set=rtr" alt="Deathrite Shaman" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Ragavan%2C+Nimble+Pilferer&format=image&version=normal&set=mh2" alt="Ragavan, Nimble Pilferer" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Entomb&format=image&version=normal&set=ody" alt="Entomb" width="217">
 
 | Card | Banned | Why |
 |------|--------|-----|

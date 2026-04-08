@@ -149,7 +149,7 @@ Most Legacy decks follow a pattern:
 
 **Tempo / Delver Shell (~56 nonland + ~18 land):**
 
-<img src="https://api.scryfall.com/cards/named?exact=Delver+of+Secrets&format=image&version=normal&set=isd" alt="Delver of Secrets" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Murktide+Regent&format=image&version=normal" alt="Murktide Regent" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Delver+of+Secrets&format=image&version=normal&set=isd" alt="Delver of Secrets" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Murktide+Regent&format=image&version=normal&set=mh2" alt="Murktide Regent" width="217">
 
 - 8-12 threats (Delver, Murktide, Bowmasters)
 - 8 cantrips (4 Brainstorm, 4 Ponder)
