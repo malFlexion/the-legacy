@@ -1,5 +1,9 @@
 # Large data files (download separately)
 data/scryfall-cards.json
+data/card_index.pkl
+
+# Generated databases (rebuild with src/build_vectordb.py)
+vectordb/
 
 # Python
 __pycache__/
