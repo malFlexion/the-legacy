@@ -23,9 +23,9 @@ Today, Dimir Tempo (sometimes called "Shadow" or "Dimir Scam" depending on the t
 
 ### Key Cards
 
-<img src="https://api.scryfall.com/cards/named?exact=Delver+of+Secrets&format=image&version=normal" alt="Delver of Secrets" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Psychic+Frog&format=image&version=normal" alt="Psychic Frog" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Murktide+Regent&format=image&version=normal" alt="Murktide Regent" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Delver+of+Secrets&format=image&version=normal&set=isd" alt="Delver of Secrets" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Psychic+Frog&format=image&version=normal" alt="Psychic Frog" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Murktide+Regent&format=image&version=normal" alt="Murktide Regent" width="217">
 
-<img src="https://api.scryfall.com/cards/named?exact=Psychic+Frog&format=image&version=normal" alt="Psychic Frog" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Murktide+Regent&format=image&version=normal" alt="Murktide Regent" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Force+of+Will&format=image&version=normal&set=all" alt="Force of Will" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Force+of+Will&format=image&version=normal&set=all" alt="Force of Will" width="217">
 
 | Card | Role |
 |------|------|
@@ -133,6 +133,8 @@ Choose 4C Tempo when: You want a specific hate card that requires a fourth color
 - **Unfavorable**: 4C Control / Beanstalk (grinds harder; card advantage eventually overwhelms your threats), Mono Red Prison (Blood Moon + Chalice of the Void shuts down your entire strategy), Death and Taxes (Thalia taxes your spells; Aether Vial dodges counters; equipment outclasses your creatures), Eldrazi (Chalice on 1 is game over; Thought-Knot Seer strips key cards)
 - **Even**: Other Delver variants (tempo mirrors are highly play/draw dependent), Reanimator (depends on disruption drawn; strong but not dominant), Show and Tell (Force + Daze is good but they can power through), Ocelot Pride Midrange (close matchup that depends on builds and sideboard plans)
 
+<img src="https://api.scryfall.com/cards/named?exact=Pyroblast&format=image&version=normal&set=ice" alt="Pyroblast" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Red+Elemental+Blast&format=image&version=normal&set=lea" alt="Red Elemental Blast" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Surgical+Extraction&format=image&version=normal&set=nph" alt="Surgical Extraction" width="217">
+
 ### Sideboard Guide
 
 | Card | Target Matchups |
@@ -166,8 +168,6 @@ The energy mechanic provides both card selection (via Amped Raptor's cascade-lik
 The archetype rose rapidly through 2025, with Ocelot Pride Midrange establishing itself as the second-most-played archetype behind Dimir Tempo. Mardu builds incorporating Bowmasters and black disruption compete with leaner Boros and Naya configurations. The deck's ability to pivot between aggressive starts (turn 1 Ocelot Pride into turn 2 Guide of Souls) and grindy midrange games makes it versatile across metagames.
 
 ### Key Cards
-
-<img src="https://api.scryfall.com/cards/named?exact=Ocelot+Pride&format=image&version=normal" alt="Ocelot Pride" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Guide+of+Souls&format=image&version=normal" alt="Guide of Souls" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Amped+Raptor&format=image&version=normal" alt="Amped Raptor" width="217">
 
 <img src="https://api.scryfall.com/cards/named?exact=Ocelot+Pride&format=image&version=normal" alt="Ocelot Pride" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Guide+of+Souls&format=image&version=normal" alt="Guide of Souls" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Amped+Raptor&format=image&version=normal" alt="Amped Raptor" width="217">
 
@@ -259,6 +259,8 @@ Choose these when: You have a specific metagame read that rewards a less convent
 - **Unfavorable**: 4C Control / Beanstalk (Leyline Binding and sweepers handle tokens; card advantage grinds you out), Mono Red Prison (Chalice on 1 shuts off Ocelot Pride and Guide; Blood Moon strands colored mana), Eldrazi (bigger creatures; All Is Dust wipes your board; Chalice on 1 is devastating)
 - **Even**: Delver / Tempo (close and play/draw dependent; their Wastelands matter, but your board snowballs), Show and Tell (you're fast but lack blue counters unless Jeskai), Death and Taxes (similar creature strategies; comes down to specific card matchups)
 
+<img src="https://api.scryfall.com/cards/named?exact=Mindbreak+Trap&format=image&version=normal" alt="Mindbreak Trap" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Meltdown&format=image&version=normal" alt="Meltdown" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Containment+Priest&format=image&version=normal" alt="Containment Priest" width="217">
+
 ### Sideboard Guide
 
 | Card | Target Matchups |
@@ -293,9 +295,7 @@ Show and Tell has been a Legacy staple since the early 2010s and remains one of 
 
 ### Key Cards
 
-<img src="https://api.scryfall.com/cards/named?exact=Show+and+Tell&format=image&version=normal" alt="Show and Tell" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Emrakul%2C+the+Aeons+Torn&format=image&version=normal" alt="Emrakul, the Aeons Torn" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Omniscience&format=image&version=normal" alt="Omniscience" width="217">
-
-<img src="https://api.scryfall.com/cards/named?exact=Show+and+Tell&format=image&version=normal&set=usg" alt="Show and Tell" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Emrakul%2C+the+Aeons+Torn&format=image&version=normal" alt="Emrakul, the Aeons Torn" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Omniscience&format=image&version=normal&set=m13" alt="Omniscience" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Show+and+Tell&format=image&version=normal&set=usg" alt="Show and Tell" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Emrakul%2C+the+Aeons+Torn&format=image&version=normal&set=roe" alt="Emrakul, the Aeons Torn" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Omniscience&format=image&version=normal&set=m13" alt="Omniscience" width="217">
 
 | Card | Role |
 |------|------|
@@ -358,6 +358,8 @@ Choose Sneak Attack when: You want to dodge all blue hate cards and don't mind l
 - **Unfavorable**: Dimir Tempo (Thoughtseize + Force of Will + Daze + fast clock is the nightmare), Delver variants (free counters + pressure is the best way to beat combo), Beanstalk Control (Force of Will + Endurance + their own Show and Tell targets like Atraxa), Reanimator (faster, and they can reanimate your own Griselbrand if it dies)
 - **Even**: Storm (both are fast combo; comes down to interaction and who's on the play), Other combo (Oops, Doomsday -- racing matchups), 8-Cast (Chalice is annoying but not backbreaking; Force of Will fights work)
 
+<img src="https://api.scryfall.com/cards/named?exact=Defense+Grid&format=image&version=normal" alt="Defense Grid" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Flusterstorm&format=image&version=normal&set=cmd" alt="Flusterstorm" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Boseiju%2C+Who+Endures&format=image&version=normal" alt="Boseiju, Who Endures" width="217">
+
 ### Sideboard Guide
 
 | Card | Target Matchups |
@@ -394,9 +396,9 @@ These decks are the ultimate glass cannons: devastatingly fast but highly vulner
 
 ### Key Cards
 
-<img src="https://api.scryfall.com/cards/named?exact=Balustrade+Spy&format=image&version=normal" alt="Balustrade Spy" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Undercity+Informer&format=image&version=normal" alt="Undercity Informer" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Thassa%27s+Oracle&format=image&version=normal" alt="Thassa's Oracle" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Balustrade+Spy&format=image&version=normal&set=gtc" alt="Balustrade Spy" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Undercity+Informer&format=image&version=normal" alt="Undercity Informer" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Thassa%27s+Oracle&format=image&version=normal&set=thb" alt="Thassa's Oracle" width="217">
 
-<img src="https://api.scryfall.com/cards/named?exact=Balustrade+Spy&format=image&version=normal&set=gtc" alt="Balustrade Spy" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Goblin+Charbelcher&format=image&version=normal&set=mrd" alt="Goblin Charbelcher" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Thassa%27s+Oracle&format=image&version=normal" alt="Thassa's Oracle" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Goblin+Charbelcher&format=image&version=normal&set=mrd" alt="Goblin Charbelcher" width="217">
 
 | Card | Role |
 |------|------|
@@ -454,6 +456,8 @@ Choose Mono Blue Belcher when: You want a Charbelcher deck that can interact wit
 - **Unfavorable**: Dimir Tempo (Force of Will + Daze + Thoughtseize is 8-12 pieces of interaction), Izzet Delver (Force + Daze; they're fast enough to punish a stumble), 4C Control (Force + Flusterstorm + multiple layers of interaction), Any blue deck with a reasonable clock (the fundamental weakness of all-in combo)
 - **Even**: Show and Tell (racing combo matchup; whoever has Force wins), Storm (similar speed; interaction quality determines the winner), Reanimator (both are fast combo; Force of Will checks decide games)
 
+<img src="https://api.scryfall.com/cards/named?exact=Pact+of+Negation&format=image&version=normal" alt="Pact of Negation" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Grief&format=image&version=normal" alt="Grief" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Cabal+Therapy&format=image&version=normal&set=jud" alt="Cabal Therapy" width="217">
+
 ### Sideboard Guide
 
 | Card | Target Matchups |
@@ -489,8 +493,6 @@ The Storm family has branched into multiple distinct engines. The EPIC Storm (TE
 Storm rewards deep format knowledge -- knowing when to "go for it" versus when to wait is the defining skill. The archetype consistently punishes unprepared metagames and remains one of Legacy's most feared game-one strategies.
 
 ### Key Cards
-
-<img src="https://api.scryfall.com/cards/named?exact=Tendrils+of+Agony&format=image&version=normal" alt="Tendrils of Agony" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Ad+Nauseam&format=image&version=normal" alt="Ad Nauseam" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Lion%27s+Eye+Diamond&format=image&version=normal" alt="Lion's Eye Diamond" width="217">
 
 <img src="https://api.scryfall.com/cards/named?exact=Tendrils+of+Agony&format=image&version=normal&set=scg" alt="Tendrils of Agony" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Ad+Nauseam&format=image&version=normal" alt="Ad Nauseam" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Lion%27s+Eye+Diamond&format=image&version=normal&set=mir" alt="Lion's Eye Diamond" width="217">
 
@@ -600,6 +602,8 @@ Choose TEG when: You want a storm-adjacent strategy with a strong grindy backup 
 - **Unfavorable**: Dimir Tempo (Thoughtseize + Force of Will + Daze + fast clock is devastating), Delver variants (free counters plus pressure is storm's worst nightmare), Beanstalk Control (Force of Will + Flusterstorm + Endurance; multiple layers of interaction)
 - **Even**: Show and Tell (both are combo; whoever has Force wins), Oops / Belcher (racing matchup; interaction quality decides), Reanimator (similar speed; disruption quality matters)
 
+<img src="https://api.scryfall.com/cards/named?exact=Veil+of+Summer&format=image&version=normal&set=m20" alt="Veil of Summer" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Galvanic+Relay&format=image&version=normal" alt="Galvanic Relay" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Empty+the+Warrens&format=image&version=normal" alt="Empty the Warrens" width="217">
+
 ### Sideboard Guide
 
 | Card | Target Matchups |
@@ -635,8 +639,6 @@ The printing of Beanstalk Giant // Fertile Footsteps (and its companion Up the B
 Beyond Beanstalk, Legacy control takes many forms: UW Miracles uses Counterbalance and Terminus for a lock-based approach, Jeskai Control leverages Monastery Mentor or planeswalkers as win conditions, and various multicolor piles use the best answers from each color. The common thread is prioritizing answers over threats, card advantage over tempo, and late-game inevitability over early-game pressure.
 
 ### Key Cards
-
-<img src="https://api.scryfall.com/cards/named?exact=Up+the+Beanstalk&format=image&version=normal" alt="Up the Beanstalk" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Leyline+Binding&format=image&version=normal" alt="Leyline Binding" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Terminus&format=image&version=normal" alt="Terminus" width="217">
 
 <img src="https://api.scryfall.com/cards/named?exact=Up+the+Beanstalk&format=image&version=normal" alt="Up the Beanstalk" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Leyline+Binding&format=image&version=normal" alt="Leyline Binding" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Terminus&format=image&version=normal" alt="Terminus" width="217">
 
@@ -788,6 +790,8 @@ Choose Rosheen when: You want to surprise opponents with an unconventional contr
 - **Unfavorable**: Fast combo (Storm, Oops, Belcher -- too fast before control stabilizes unless you have Force), Lands (hard to interact with their combo; Wasteland + Life from the Loam grinds control out), Show and Tell (putting Omniscience or Emrakul into play through counters is their specialty)
 - **Even**: Ocelot Pride (depends on sweeper timing; can go either way), Other control (mirror matches determined by card advantage engines), Reanimator (Force of Will is good but they can grind with Reanimate effects)
 
+<img src="https://api.scryfall.com/cards/named?exact=Back+to+Basics&format=image&version=normal&set=usg" alt="Back to Basics" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Force+of+Negation&format=image&version=normal" alt="Force of Negation" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Endurance&format=image&version=normal" alt="Endurance" width="217">
+
 ### Sideboard Guide
 
 | Card | Target Matchups |
@@ -824,9 +828,7 @@ Stoneblade's strength is its flexibility: the deck can play a controlling game a
 
 ### Key Cards
 
-<img src="https://api.scryfall.com/cards/named?exact=Stoneforge+Mystic&format=image&version=normal" alt="Stoneforge Mystic" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Kaldra+Compleat&format=image&version=normal" alt="Kaldra Compleat" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Batterskull&format=image&version=normal" alt="Batterskull" width="217">
-
-<img src="https://api.scryfall.com/cards/named?exact=Stoneforge+Mystic&format=image&version=normal&set=wwk" alt="Stoneforge Mystic" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Kaldra+Compleat&format=image&version=normal" alt="Kaldra Compleat" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Batterskull&format=image&version=normal" alt="Batterskull" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Stoneforge+Mystic&format=image&version=normal&set=wwk" alt="Stoneforge Mystic" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Kaldra+Compleat&format=image&version=normal" alt="Kaldra Compleat" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Batterskull&format=image&version=normal&set=nph" alt="Batterskull" width="217">
 
 | Card | Role |
 |------|------|
@@ -913,6 +915,8 @@ Choose UWx when: You want mostly UW but need a specific splash card for your met
 - **Unfavorable**: Combo (Storm, Oops, Show and Tell -- too slow to pressure, not enough disruption), Lands (Marit Lage flies over equipment; Wasteland + Loam grinds you out), 4C Control / Beanstalk (out-grinds you with superior card advantage)
 - **Even**: Ocelot Pride (equipment dominates combat but their go-wide plan can overwhelm), Other midrange (depends on specific card matchups and builds), Eldrazi (Chalice is annoying but equipment matches their big creatures)
 
+<img src="https://api.scryfall.com/cards/named?exact=Null+Rod&format=image&version=normal" alt="Null Rod" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Collector+Ouphe&format=image&version=normal" alt="Collector Ouphe" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Council%27s+Judgment&format=image&version=normal" alt="Council's Judgment" width="217">
+
 ### Sideboard Guide
 
 | Card | Target Matchups |
@@ -951,9 +955,7 @@ D&T has adapted to every metagame shift in Legacy's history, absorbing new hateb
 
 ### Key Cards
 
-<img src="https://api.scryfall.com/cards/named?exact=Thalia%2C+Guardian+of+Thraben&format=image&version=normal" alt="Thalia, Guardian of Thraben" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Aether+Vial&format=image&version=normal" alt="Aether Vial" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Flickerwisp&format=image&version=normal" alt="Flickerwisp" width="217">
-
-<img src="https://api.scryfall.com/cards/named?exact=Thalia%2C+Guardian+of+Thraben&format=image&version=normal" alt="Thalia, Guardian of Thraben" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Aether+Vial&format=image&version=normal&set=dst" alt="Aether Vial" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Stoneforge+Mystic&format=image&version=normal&set=wwk" alt="Stoneforge Mystic" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Thalia%2C+Guardian+of+Thraben&format=image&version=normal&set=dka" alt="Thalia, Guardian of Thraben" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Aether+Vial&format=image&version=normal&set=dst" alt="Aether Vial" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Flickerwisp&format=image&version=normal&set=eve" alt="Flickerwisp" width="217">
 
 | Card | Role |
 |------|------|
@@ -1048,6 +1050,8 @@ Choose Soldiers when: You want a tribal synergy deck with D&T's disruption backb
 - **Unfavorable**: Ocelot Pride / Energy (they go wider; Galvanic Discharge handles your creatures; token generation overwhelms), Elves (too many creatures to handle; they combo faster than you can disrupt), 4C Control / Beanstalk (card advantage grinds through your disruption; sweepers handle your board)
 - **Even**: Show and Tell (no hard counters but Thalia + fast clock can race; Containment Priest from sideboard), Reanimator (Karakas handles legends; Containment Priest is devastating; but they can be too fast), Stoneblade (similar creature quality; comes down to Vial vs countermagic advantage)
 
+<img src="https://api.scryfall.com/cards/named?exact=Deafening+Silence&format=image&version=normal" alt="Deafening Silence" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Ethersworn+Canonist&format=image&version=normal" alt="Ethersworn Canonist" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Cataclysm&format=image&version=normal" alt="Cataclysm" width="217">
+
 ### Sideboard Guide
 
 | Card | Target Matchups |
@@ -1081,8 +1085,6 @@ Painter is a compact artifact combo deck that wins by combining Painter's Servan
 The red shell also provides Goblin Welder for artifact recursion, Pyroblast as mainboard interaction (devastating against blue decks), and Blood Moon / Magus of the Moon as a prison backup plan. The deck can pivot between combo and prison depending on the matchup, making it more resilient than a pure combo strategy.
 
 ### Key Cards
-
-<img src="https://api.scryfall.com/cards/named?exact=Painter%27s+Servant&format=image&version=normal" alt="Painter's Servant" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Grindstone&format=image&version=normal" alt="Grindstone" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Imperial+Recruiter&format=image&version=normal" alt="Imperial Recruiter" width="217">
 
 <img src="https://api.scryfall.com/cards/named?exact=Painter%27s+Servant&format=image&version=normal&set=shm" alt="Painter's Servant" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Grindstone&format=image&version=normal&set=tmp" alt="Grindstone" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Imperial+Recruiter&format=image&version=normal" alt="Imperial Recruiter" width="217">
 
@@ -1128,8 +1130,6 @@ Lands is one of Legacy's most unique archetypes, operating almost entirely throu
 The deck is exceptionally difficult to interact with using traditional means -- countermagic doesn't stop land abilities, creature removal doesn't hit lands, and Wasteland can be recurred infinitely with Loam. The deck's weakness is its speed: assembling the engine takes time, and fast combo or aggressive tempo decks can close the game before Lands establishes its lock.
 
 ### Key Cards
-
-<img src="https://api.scryfall.com/cards/named?exact=Life+from+the+Loam&format=image&version=normal" alt="Life from the Loam" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Dark+Depths&format=image&version=normal" alt="Dark Depths" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Thespian%27s+Stage&format=image&version=normal" alt="Thespian's Stage" width="217">
 
 <img src="https://api.scryfall.com/cards/named?exact=Life+from+the+Loam&format=image&version=normal&set=rav" alt="Life from the Loam" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Dark+Depths&format=image&version=normal&set=csp" alt="Dark Depths" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Thespian%27s+Stage&format=image&version=normal" alt="Thespian's Stage" width="217">
 
@@ -1189,9 +1189,9 @@ Prison / Stompy decks exploit Legacy's reliance on cheap spells and nonbasic lan
 
 ### Key Cards
 
-<img src="https://api.scryfall.com/cards/named?exact=Chalice+of+the+Void&format=image&version=normal" alt="Chalice of the Void" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Blood+Moon&format=image&version=normal" alt="Blood Moon" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Trinisphere&format=image&version=normal" alt="Trinisphere" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Chalice+of+the+Void&format=image&version=normal&set=mrd" alt="Chalice of the Void" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Blood+Moon&format=image&version=normal&set=drk" alt="Blood Moon" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Trinisphere&format=image&version=normal&set=dst" alt="Trinisphere" width="217">
 
-<img src="https://api.scryfall.com/cards/named?exact=Chalice+of+the+Void&format=image&version=normal&set=mrd" alt="Chalice of the Void" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Blood+Moon&format=image&version=normal" alt="Blood Moon" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Ancient+Tomb&format=image&version=normal&set=tmp" alt="Ancient Tomb" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Ancient+Tomb&format=image&version=normal&set=tmp" alt="Ancient Tomb" width="217">
 
 | Card | Role |
 |------|------|
@@ -1254,9 +1254,7 @@ Related artifact combo decks include Bomberman (Auriok Salvagers + Lion's Eye Di
 
 ### Key Cards
 
-<img src="https://api.scryfall.com/cards/named?exact=Mystic+Forge&format=image&version=normal" alt="Mystic Forge" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Sensei%27s+Divining+Top&format=image&version=normal" alt="Sensei's Divining Top" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Karn%2C+the+Great+Creator&format=image&version=normal" alt="Karn, the Great Creator" width="217">
-
-<img src="https://api.scryfall.com/cards/named?exact=Mystic+Forge&format=image&version=normal" alt="Mystic Forge" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Karn%2C+the+Great+Creator&format=image&version=normal" alt="Karn, the Great Creator" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Mystic+Forge&format=image&version=normal" alt="Mystic Forge" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Sensei%27s+Divining+Top&format=image&version=normal&set=chk" alt="Sensei's Divining Top" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Karn%2C+the+Great+Creator&format=image&version=normal&set=war" alt="Karn, the Great Creator" width="217">
 
 | Card | Role |
 |------|------|
@@ -1308,7 +1306,7 @@ Reanimator aims to put a game-ending creature (Griselbrand, Archon of Cruelty, A
 
 <img src="https://api.scryfall.com/cards/named?exact=Griselbrand&format=image&version=normal" alt="Griselbrand" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Archon+of+Cruelty&format=image&version=normal" alt="Archon of Cruelty" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Atraxa%2C+Grand+Unifier&format=image&version=normal" alt="Atraxa, Grand Unifier" width="217">
 
-<img src="https://api.scryfall.com/cards/named?exact=Griselbrand&format=image&version=normal" alt="Griselbrand" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Entomb&format=image&version=normal&set=ody" alt="Entomb" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Reanimate&format=image&version=normal&set=tmp" alt="Reanimate" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Entomb&format=image&version=normal&set=ody" alt="Entomb" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Reanimate&format=image&version=normal&set=tmp" alt="Reanimate" width="217">
 
 | Card | Role |
 |------|------|
@@ -1363,9 +1361,7 @@ Necrodominance variants use the MH3 printing as an alternative card-advantage en
 
 ### Key Cards
 
-<img src="https://api.scryfall.com/cards/named?exact=Doomsday&format=image&version=normal" alt="Doomsday" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Necrodominance&format=image&version=normal" alt="Necrodominance" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Street+Wraith&format=image&version=normal" alt="Street Wraith" width="217">
-
-<img src="https://api.scryfall.com/cards/named?exact=Doomsday&format=image&version=normal&set=wth" alt="Doomsday" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Thassa%27s+Oracle&format=image&version=normal" alt="Thassa's Oracle" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Doomsday&format=image&version=normal&set=wth" alt="Doomsday" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Necrodominance&format=image&version=normal" alt="Necrodominance" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Street+Wraith&format=image&version=normal" alt="Street Wraith" width="217">
 
 | Card | Role |
 |------|------|
@@ -1417,9 +1413,7 @@ Pox strategies weaponize resource denial through cards like Smallpox (each playe
 
 ### Key Cards
 
-<img src="https://api.scryfall.com/cards/named?exact=Smallpox&format=image&version=normal" alt="Smallpox" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Hymn+to+Tourach&format=image&version=normal" alt="Hymn to Tourach" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Liliana+of+the+Veil&format=image&version=normal" alt="Liliana of the Veil" width="217">
-
-<img src="https://api.scryfall.com/cards/named?exact=Smallpox&format=image&version=normal&set=tsp" alt="Smallpox" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Hymn+to+Tourach&format=image&version=normal&set=fem" alt="Hymn to Tourach" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Smallpox&format=image&version=normal&set=tsp" alt="Smallpox" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Hymn+to+Tourach&format=image&version=normal&set=fem" alt="Hymn to Tourach" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Liliana+of+the+Veil&format=image&version=normal" alt="Liliana of the Veil" width="217">
 
 | Card | Role |
 |------|------|
@@ -1475,9 +1469,7 @@ This broad category encompasses Legacy's green-based fair and semi-combo strateg
 
 ### Key Cards
 
-<img src="https://api.scryfall.com/cards/named?exact=Green+Sun%27s+Zenith&format=image&version=normal" alt="Green Sun's Zenith" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Natural+Order&format=image&version=normal" alt="Natural Order" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Craterhoof+Behemoth&format=image&version=normal" alt="Craterhoof Behemoth" width="217">
-
-<img src="https://api.scryfall.com/cards/named?exact=Green+Sun%27s+Zenith&format=image&version=normal&set=mbs" alt="Green Sun's Zenith" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Natural+Order&format=image&version=normal&set=vis" alt="Natural Order" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Green+Sun%27s+Zenith&format=image&version=normal&set=mbs" alt="Green Sun's Zenith" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Natural+Order&format=image&version=normal&set=vis" alt="Natural Order" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Craterhoof+Behemoth&format=image&version=normal&set=avr" alt="Craterhoof Behemoth" width="217">
 
 | Card | Role |
 |------|------|
@@ -1548,9 +1540,7 @@ Cloudpost decks use the Locus lands (Cloudpost taps for mana equal to the number
 
 ### Key Cards
 
-<img src="https://api.scryfall.com/cards/named?exact=Cloudpost&format=image&version=normal" alt="Cloudpost" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Glimmerpost&format=image&version=normal" alt="Glimmerpost" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Primeval+Titan&format=image&version=normal" alt="Primeval Titan" width="217">
-
-<img src="https://api.scryfall.com/cards/named?exact=Cloudpost&format=image&version=normal&set=mrd" alt="Cloudpost" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Primeval+Titan&format=image&version=normal" alt="Primeval Titan" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Cloudpost&format=image&version=normal&set=mrd" alt="Cloudpost" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Glimmerpost&format=image&version=normal" alt="Glimmerpost" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Primeval+Titan&format=image&version=normal" alt="Primeval Titan" width="217">
 
 | Card | Role |
 |------|------|
@@ -1595,9 +1585,7 @@ Legacy supports several tribal strategies thanks to powerful lords and tribal-sp
 
 ### Key Cards
 
-<img src="https://api.scryfall.com/cards/named?exact=Glimpse+of+Nature&format=image&version=normal" alt="Glimpse of Nature" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Goblin+Lackey&format=image&version=normal" alt="Goblin Lackey" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Cavern+of+Souls&format=image&version=normal" alt="Cavern of Souls" width="217">
-
-<img src="https://api.scryfall.com/cards/named?exact=Glimpse+of+Nature&format=image&version=normal&set=chk" alt="Glimpse of Nature" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Goblin+Lackey&format=image&version=normal&set=usg" alt="Goblin Lackey" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Glimpse+of+Nature&format=image&version=normal&set=chk" alt="Glimpse of Nature" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Goblin+Lackey&format=image&version=normal&set=usg" alt="Goblin Lackey" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Cavern+of+Souls&format=image&version=normal&set=avr" alt="Cavern of Souls" width="217">
 
 | Card | Role |
 |------|------|
@@ -1651,9 +1639,7 @@ Aluren enables free casting of creatures with CMC 3 or less. Paired with creatur
 
 ### Key Cards
 
-<img src="https://api.scryfall.com/cards/named?exact=Aluren&format=image&version=normal" alt="Aluren" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Acererak+the+Archlich&format=image&version=normal" alt="Acererak the Archlich" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Cavern+Harpy&format=image&version=normal" alt="Cavern Harpy" width="217">
-
-<img src="https://api.scryfall.com/cards/named?exact=Aluren&format=image&version=normal&set=tmp" alt="Aluren" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Aluren&format=image&version=normal&set=tmp" alt="Aluren" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Acererak+the+Archlich&format=image&version=normal" alt="Acererak the Archlich" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Cavern+Harpy&format=image&version=normal" alt="Cavern Harpy" width="217">
 
 | Card | Role |
 |------|------|
@@ -1689,9 +1675,7 @@ Food Chain exiles creatures to produce mana equal to their CMC +1, usable only f
 
 ### Key Cards
 
-<img src="https://api.scryfall.com/cards/named?exact=Food+Chain&format=image&version=normal" alt="Food Chain" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Misthollow+Griffin&format=image&version=normal" alt="Misthollow Griffin" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Eternal+Scourge&format=image&version=normal" alt="Eternal Scourge" width="217">
-
-<img src="https://api.scryfall.com/cards/named?exact=Food+Chain&format=image&version=normal&set=mmq" alt="Food Chain" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Food+Chain&format=image&version=normal&set=mmq" alt="Food Chain" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Misthollow+Griffin&format=image&version=normal" alt="Misthollow Griffin" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Eternal+Scourge&format=image&version=normal" alt="Eternal Scourge" width="217">
 
 | Card | Role |
 |------|------|
@@ -1722,8 +1706,6 @@ Infect aims to deal 10 poison counters in a single attack using Glistener Elf or
 ### Key Cards
 
 <img src="https://api.scryfall.com/cards/named?exact=Glistener+Elf&format=image&version=normal" alt="Glistener Elf" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Blighted+Agent&format=image&version=normal" alt="Blighted Agent" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Invigorate&format=image&version=normal" alt="Invigorate" width="217">
-
-<img src="https://api.scryfall.com/cards/named?exact=Glistener+Elf&format=image&version=normal" alt="Glistener Elf" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Invigorate&format=image&version=normal" alt="Invigorate" width="217">
 
 | Card | Role |
 |------|------|
@@ -1762,8 +1744,6 @@ Burn aims to point every spell at the opponent's face: Lightning Bolt, Chain Lig
 ### Key Cards
 
 <img src="https://api.scryfall.com/cards/named?exact=Price+of+Progress&format=image&version=normal" alt="Price of Progress" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Goblin+Guide&format=image&version=normal" alt="Goblin Guide" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Eidolon+of+the+Great+Revel&format=image&version=normal" alt="Eidolon of the Great Revel" width="217">
-
-<img src="https://api.scryfall.com/cards/named?exact=Price+of+Progress&format=image&version=normal" alt="Price of Progress" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Goblin+Guide&format=image&version=normal" alt="Goblin Guide" width="217">
 
 | Card | Role |
 |------|------|
@@ -1842,7 +1822,7 @@ Uses mass discard effects (Burning Inquiry, Goblin Lore) to deploy Hollow One an
 
 Helm of Obedience mills until a card is put into the graveyard -- but with Rest in Peace or Leyline of the Void in play, milled cards are exiled instead, so no card ever reaches the graveyard. The ability never stops, exiling the entire library. The combo requires only two pieces and both halves are independently useful (graveyard hate is valuable on its own; Helm can be a slow win condition). The deck typically operates as a prison/control shell with the combo as the finisher.
 
-<img src="https://api.scryfall.com/cards/named?exact=Helm+of+Obedience&format=image&version=normal" alt="Helm of Obedience" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Rest+in+Peace&format=image&version=normal" alt="Rest in Peace" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Enlightened+Tutor&format=image&version=normal" alt="Enlightened Tutor" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Helm+of+Obedience&format=image&version=normal&set=all" alt="Helm of Obedience" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Rest+in+Peace&format=image&version=normal&set=rtr" alt="Rest in Peace" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Enlightened+Tutor&format=image&version=normal" alt="Enlightened Tutor" width="217">
 
 | Card | Role |
 |------|------|
@@ -1934,7 +1914,7 @@ Cephalid Illusionist mills 3 cards whenever it becomes the target of a spell or 
 
 Phyrexian Dreadnought is a 1-mana 12/12 with a drawback: sacrifice it unless you sacrifice 12 power of creatures. Stifle counters the triggered ability, keeping the Dreadnought in play. The deck also uses Dress Down (removes all abilities, so Dreadnought enters with no trigger) and Torpor Orb for redundancy. White Dreadnought variants use Solitude and Flickerwisp alongside the combo. Vesuvan Duelist copies opponents' creatures while the Dreadnought applies pressure.
 
-<img src="https://api.scryfall.com/cards/named?exact=Phyrexian+Dreadnought&format=image&version=normal" alt="Phyrexian Dreadnought" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Stifle&format=image&version=normal" alt="Stifle" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Dress+Down&format=image&version=normal" alt="Dress Down" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Phyrexian+Dreadnought&format=image&version=normal&set=mir" alt="Phyrexian Dreadnought" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Stifle&format=image&version=normal&set=scg" alt="Stifle" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Dress+Down&format=image&version=normal" alt="Dress Down" width="217">
 
 | Card | Role |
 |------|------|
@@ -1994,7 +1974,7 @@ Jund, Jund Aggro, Rakdos variants (Aggro, Channeler, Death's Shadow, Discard, Go
 
 Creativity decks run token generators (Fable of the Mirror-Breaker, Dwarven Mine, hard-cast Prismari Command) alongside Indomitable Creativity or Polymorph with a single creature in the deck (typically Emrakul or Archon of Cruelty). Since there's only one creature, Creativity always finds it. Creative Technique uses the demonstrate mechanic for a similar effect. The Jeskai shell provides countermagic and cantrips to protect the combo.
 
-<img src="https://api.scryfall.com/cards/named?exact=Indomitable+Creativity&format=image&version=normal" alt="Indomitable Creativity" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Fable+of+the+Mirror-Breaker&format=image&version=normal" alt="Fable of the Mirror-Breaker" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Polymorph&format=image&version=normal" alt="Polymorph" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Indomitable+Creativity&format=image&version=normal&set=aer" alt="Indomitable Creativity" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Fable+of+the+Mirror-Breaker&format=image&version=normal" alt="Fable of the Mirror-Breaker" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Polymorph&format=image&version=normal" alt="Polymorph" width="217">
 
 | Card | Role |
 |------|------|
@@ -2047,7 +2027,7 @@ Cascade decks ensure that cascade always hits a specific devastating spell by ru
 
 Legacy's card pool is vast enough to support dozens of fringe but functional archetypes. These range from competitive-fringe (Hive Mind, Splinter Twin, Neoform) to pure jank (Battle of Wits, Dragon's Approach). Some have been banned out of relevance (Nadu, Breach, Survival of the Fittest).
 
-<img src="https://api.scryfall.com/cards/named?exact=Hive+Mind&format=image&version=normal" alt="Hive Mind" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Splinter+Twin&format=image&version=normal" alt="Splinter Twin" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Neoform&format=image&version=normal" alt="Neoform" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Hive+Mind&format=image&version=normal&set=m10" alt="Hive Mind" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Splinter+Twin&format=image&version=normal&set=roe" alt="Splinter Twin" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Neoform&format=image&version=normal" alt="Neoform" width="217">
 
 ### Notable Archetypes
 

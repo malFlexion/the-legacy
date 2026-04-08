@@ -28,7 +28,7 @@ Legacy decks fall along a spectrum from "fair" to "unfair":
 
 ### Unfair Strategies
 
-<img src="https://api.scryfall.com/cards/named?exact=Show+and+Tell&format=image&version=normal&set=usg" alt="Show and Tell" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Goblin+Lackey&format=image&version=normal&set=usg" alt="Goblin Lackey" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Exploration&format=image&version=normal&set=usg" alt="Exploration" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Show+and+Tell&format=image&version=normal&set=usg" alt="Show and Tell" width="217">
 
 | Type | Description | Examples |
 |------|-------------|----------|
@@ -37,11 +37,11 @@ Legacy decks fall along a spectrum from "fair" to "unfair":
 | **Prison** | Lock the opponent out of playing Magic | Red Stompy, Eldrazi, Lands |
 
 ### Choosing What's Right for You
+
+<img src="https://api.scryfall.com/cards/named?exact=Doomsday&format=image&version=normal&set=wth" alt="Doomsday" width="217">
+
 - Do you like making decisions every turn? → **Tempo or Control**
 - Do you like puzzles and deterministic wins? → **Combo (Storm, Doomsday)**
-
-<img src="https://api.scryfall.com/cards/named?exact=Tendrils+of+Agony&format=image&version=normal&set=scg" alt="Tendrils of Agony" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Doomsday&format=image&version=normal&set=wth" alt="Doomsday" width="217">
-
 - Do you like turning creatures sideways? → **Midrange or Tribal**
 - Do you like tilting your opponents? → **Prison or Taxes**
 - Do you like winning on turn 1? → **Belcher, Oops**
@@ -97,7 +97,7 @@ Legacy has Wasteland, Daze, Blood Moon, and Back to Basics. You need a plan:
 - Fetchlands that find your duals are critical (Polluted Delta finds Underground Sea AND Island)
 - Budget alternative: Shock lands (Watery Grave) work but cost 2 life per use
 
-<img src="https://api.scryfall.com/cards/named?exact=Volcanic+Island&format=image&version=normal&set=lea" alt="Volcanic Island" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Scalding+Tarn&format=image&version=normal&set=zen" alt="Scalding Tarn" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Volcanic+Island&format=image&version=normal&set=lea" alt="Volcanic Island" width="217">
 
 ## Step 3: The Blue Card Question
 
@@ -108,8 +108,6 @@ Legacy has Wasteland, Daze, Blood Moon, and Back to Basics. You need a plan:
 > "Brainstorm and Ponder are awesome, and you should try to play with them. More than that, you should probably have a very good reason if you're going to leave home without them." — Reid Duke
 
 These cards "vastly improve the consistency of your deck, and help you find your key cards." In Legacy, you face everything from turn-1 combo to prison to fair creature decks — you need different answers for each, and cantrips find the right answer.
-
-<img src="https://api.scryfall.com/cards/named?exact=Preordain&format=image&version=normal&set=m11" alt="Preordain" width="217">
 
 **If you're playing blue**: 4 Brainstorm + 4 Ponder is nearly automatic.
 
@@ -135,8 +133,6 @@ These cards "vastly improve the consistency of your deck, and help you find your
 
 **When to sideboard it out**: "It can be bad in grindy matchups, or against opponents who have tons of Pyroblasts." Against fair decks where the game goes long, paying 1 life + a card is too costly.
 
-<img src="https://api.scryfall.com/cards/named?exact=Force+of+Negation&format=image&version=normal" alt="Force of Negation" width="217">
-
 ### Wasteland and Daze
 
 <img src="https://api.scryfall.com/cards/named?exact=Wasteland&format=image&version=normal&set=tmp" alt="Wasteland" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Daze&format=image&version=normal&set=nem" alt="Daze" width="217">
@@ -153,7 +149,7 @@ Most Legacy decks follow a pattern:
 
 **Tempo / Delver Shell (~56 nonland + ~18 land):**
 
-<img src="https://api.scryfall.com/cards/named?exact=Delver+of+Secrets&format=image&version=normal&set=isd" alt="Delver of Secrets" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Murktide+Regent&format=image&version=normal" alt="Murktide Regent" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Stoneforge+Mystic&format=image&version=normal&set=wwk" alt="Stoneforge Mystic" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Delver+of+Secrets&format=image&version=normal&set=isd" alt="Delver of Secrets" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Murktide+Regent&format=image&version=normal" alt="Murktide Regent" width="217">
 
 - 8-12 threats (Delver, Murktide, Bowmasters)
 - 8 cantrips (4 Brainstorm, 4 Ponder)
@@ -186,8 +182,6 @@ Most Legacy decks follow a pattern:
 ### Tutors: Power vs. Consistency
 > "You also need to show restraint, as playing too many situational one-ofs can wind up weakening your draws." — Reid Duke
 
-<img src="https://api.scryfall.com/cards/named?exact=Green+Sun%27s+Zenith&format=image&version=normal&set=mbs" alt="Green Sun's Zenith" width="217">
-
 Ask: "Is a target winning you games that you'd be losing otherwise?" Don't add silver bullets just because you can tutor for them — your average draw quality matters more than your best-case scenario.
 
 ### Card Evaluation for Legacy
@@ -200,7 +194,7 @@ A card is Legacy-playable if it does at least one of:
 
 Cards that cost 3+ mana need to be game-changing to justify their spot (Murktide Regent, True-Name Nemesis, Uro).
 
-<img src="https://api.scryfall.com/cards/named?exact=True-Name+Nemesis&format=image&version=normal&set=c13" alt="True-Name Nemesis" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Uro%2C+Titan+of+Nature%27s+Wrath&format=image&version=normal" alt="Uro, Titan of Nature's Wrath" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=True-Name+Nemesis&format=image&version=normal&set=c13" alt="True-Name Nemesis" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Uro%2C+Titan+of+Nature%27s+Wrath&format=image&version=normal&set=thb" alt="Uro, Titan of Nature's Wrath" width="217">
 
 ## Step 5: Build the Sideboard
 
@@ -233,8 +227,6 @@ At GP Providence 2011, Duke's **Ancient Grudge** was his best card: "I faced Sto
 
 ### Goldfishing
 
-<img src="https://api.scryfall.com/cards/named?exact=Thoughtseize&format=image&version=normal&set=lrw" alt="Thoughtseize" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Orcish+Bowmasters&format=image&version=normal" alt="Orcish Bowmasters" width="217">
-
 Test your deck in solitaire to understand:
 - How often do you have a turn-1 play?
 - What does your average opening hand look like?
@@ -242,8 +234,6 @@ Test your deck in solitaire to understand:
 - When does your deck "turn the corner" and start winning?
 
 ### Matchup Testing
-
-<img src="https://api.scryfall.com/cards/named?exact=Swords+to+Plowshares&format=image&version=normal&set=lea" alt="Swords to Plowshares" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Lightning+Bolt&format=image&version=normal&set=lea" alt="Lightning Bolt" width="217">
 
 Play against the top 5 meta decks. For each matchup, know:
 - What's your game plan pre-sideboard?
@@ -291,7 +281,7 @@ Expensive staples vs. their budget replacements:
 
 ### Budget-Friendly Archetypes
 
-<img src="https://api.scryfall.com/cards/named?exact=Goblin+Charbelcher&format=image&version=normal" alt="Goblin Charbelcher" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Balustrade+Spy&format=image&version=normal&set=gtc" alt="Balustrade Spy" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Goblin+Charbelcher&format=image&version=normal&set=mrd" alt="Goblin Charbelcher" width="217">
 
 - **Oops! All Spells** (~$1,100): No dual lands needed
 - **Burn** (~$1,500): Mostly commons/uncommons + a few fetchlands
