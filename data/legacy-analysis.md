@@ -122,7 +122,7 @@ The November 2025 Entomb ban removed BR Reanimator as a tier 1 strategy. The dec
 
 ### 5. Artifact Strategies Thriving
 
-<img src="https://api.scryfall.com/cards/named?exact=Chalice+of+the+Void&format=image&version=normal&set=mrd" alt="Chalice of the Void" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Urza's+Saga&format=image&version=normal" alt="Urza's Saga" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Chalice+of+the+Void&format=image&version=normal&set=mrd" alt="Chalice of the Void" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Urza%27s+Saga&format=image&version=normal" alt="Urza's Saga" width="217">
 
 Mystic Forge Combo (3.0%), Affinity Stompy (2.4%), Blue Artifacts (1.1%), Painter (4.1%), and 8-Cast variants collectively represent ~15% of the field. Urza's Saga is the glue card enabling many of these strategies. Chalice of the Void on 1 remains one of the best cards against the cantrip-heavy metagame.
 
