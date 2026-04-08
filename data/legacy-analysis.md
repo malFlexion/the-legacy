@@ -94,7 +94,7 @@ A healthy format has no deck consistently above 55%. Legacy currently meets this
 
 ### 1. Dimir Tempo Dominance
 
-<img src="https://api.scryfall.com/cards/named?exact=Orcish+Bowmasters&format=image&version=normal" alt="Orcish Bowmasters" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Tamiyo%2C+Inquisitive+Student&format=image&version=normal" alt="Tamiyo, Inquisitive Student" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Orcish+Bowmasters&format=image&version=normal&set=ltr" alt="Orcish Bowmasters" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Tamiyo%2C+Inquisitive+Student&format=image&version=normal&set=dsk" alt="Tamiyo, Inquisitive Student" width="217">
 
 At 14.6% meta share, Dimir Tempo is the most played deck by a wide margin. Built around Orcish Bowmasters, Tamiyo Inquisitive Student, Thoughtseize, and the blue cantrip/Force of Will shell. Its 52.7% win rate is strong but not oppressive — the format has answers.
 
@@ -106,7 +106,7 @@ At 14.6% meta share, Dimir Tempo is the most played deck by a wide margin. Built
 
 ### 2. Energy Cards Reshape Aggro
 
-<img src="https://api.scryfall.com/cards/named?exact=Ocelot+Pride&format=image&version=normal" alt="Ocelot Pride" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Guide+of+Souls&format=image&version=normal" alt="Guide of Souls" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Ocelot+Pride&format=image&version=normal&set=mh3" alt="Ocelot Pride" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Guide+of+Souls&format=image&version=normal&set=mh3" alt="Guide of Souls" width="217">
 
 MH3 energy cards (Ocelot Pride, Guide of Souls, Amped Raptor, Ajani Nacatl Pariah) created viable non-blue aggressive strategies. Ocelot Pride Midrange at 8.5% and Mardu Energy at ~3% represent a new class of Legacy deck that doesn't rely on Brainstorm.
 
@@ -122,7 +122,7 @@ The November 2025 Entomb ban removed BR Reanimator as a tier 1 strategy. The dec
 
 ### 5. Artifact Strategies Thriving
 
-<img src="https://api.scryfall.com/cards/named?exact=Chalice+of+the+Void&format=image&version=normal&set=mrd" alt="Chalice of the Void" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Urza%27s+Saga&format=image&version=normal" alt="Urza's Saga" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Chalice+of+the+Void&format=image&version=normal&set=mrd" alt="Chalice of the Void" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Urza%27s+Saga&format=image&version=normal&set=mh2" alt="Urza's Saga" width="217">
 
 Mystic Forge Combo (3.0%), Affinity Stompy (2.4%), Blue Artifacts (1.1%), Painter (4.1%), and 8-Cast variants collectively represent ~15% of the field. Urza's Saga is the glue card enabling many of these strategies. Chalice of the Void on 1 remains one of the best cards against the cantrip-heavy metagame.
 
@@ -150,7 +150,7 @@ These cards appear in the highest percentage of decks, indicating format-definin
 
 ### Cards Defining the Current Meta
 
-<img src="https://api.scryfall.com/cards/named?exact=Barrowgoyf&format=image&version=normal" alt="Barrowgoyf" width="217"> <img src="https://api.scryfall.com/cards/named?exact=The+One+Ring&format=image&version=normal" alt="The One Ring" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Murktide+Regent&format=image&version=normal" alt="Murktide Regent" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Barrowgoyf&format=image&version=normal&set=mh3" alt="Barrowgoyf" width="217"> <img src="https://api.scryfall.com/cards/named?exact=The+One+Ring&format=image&version=normal&set=ltr" alt="The One Ring" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Murktide+Regent&format=image&version=normal&set=mh2" alt="Murktide Regent" width="217">
 
 | Card | Appeared | Impact |
 |------|----------|--------|
@@ -219,7 +219,7 @@ Sultai Aluren, Cradle Control, Dimir Tempo, Izzet Delver, Colorless, Mystic Forg
 
 ### Dimir Tempo (14.6% — The Deck to Beat)
 
-<img src="https://api.scryfall.com/cards/named?exact=Murktide+Regent&format=image&version=normal" alt="Murktide Regent" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Barrowgoyf&format=image&version=normal" alt="Barrowgoyf" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Daze&format=image&version=normal&set=nem" alt="Daze" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Murktide+Regent&format=image&version=normal&set=mh2" alt="Murktide Regent" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Barrowgoyf&format=image&version=normal&set=mh3" alt="Barrowgoyf" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Daze&format=image&version=normal&set=nem" alt="Daze" width="217">
 
 **Core**: Orcish Bowmasters, Tamiyo Inquisitive Student, Murktide Regent, Barrowgoyf, Brainstorm, Ponder, Force of Will, Daze, Thoughtseize, Wasteland
 
@@ -236,7 +236,7 @@ Sultai Aluren, Cradle Control, Dimir Tempo, Izzet Delver, Colorless, Mystic Forg
 
 ### Ocelot Pride Midrange (8.5% — The New Wave)
 
-<img src="https://api.scryfall.com/cards/named?exact=Ocelot+Pride&format=image&version=normal" alt="Ocelot Pride" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Guide+of+Souls&format=image&version=normal" alt="Guide of Souls" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Solitude&format=image&version=normal" alt="Solitude" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Ocelot+Pride&format=image&version=normal&set=mh3" alt="Ocelot Pride" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Guide+of+Souls&format=image&version=normal&set=mh3" alt="Guide of Souls" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Solitude&format=image&version=normal&set=mh2" alt="Solitude" width="217">
 
 **Core**: Ocelot Pride, Ajani Nacatl Pariah, Guide of Souls, Phelia Exuberant Shepherd, Swords to Plowshares, Solitude, Broadside Bombardiers
 
@@ -382,7 +382,7 @@ What hate cards target which decks:
 
 **2014-2016: Treasure Cruise and Eldrazi Winter**
 
-<img src="https://api.scryfall.com/cards/named?exact=Treasure+Cruise&format=image&version=normal" alt="Treasure Cruise" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Treasure+Cruise&format=image&version=normal&set=ktk" alt="Treasure Cruise" width="217">
 
 - Treasure Cruise briefly broke the format (banned Jan 2015)
 - Miracles peaked at ~15% meta share with Sensei's Divining Top + Counterbalance
@@ -395,7 +395,7 @@ What hate cards target which decks:
 
 **2019-2020: Modern Horizons 1 and Companion Era**
 
-<img src="https://api.scryfall.com/cards/named?exact=Wrenn+and+Six&format=image&version=normal" alt="Wrenn and Six" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Wrenn+and+Six&format=image&version=normal&set=mh1" alt="Wrenn and Six" width="217">
 
 - Wrenn and Six dominated RUG Delver (banned Nov 2019)
 - Underworld Breach combo (banned March 2020)
@@ -404,7 +404,7 @@ What hate cards target which decks:
 
 **2021-2022: Modern Horizons 2 Revolution**
 
-<img src="https://api.scryfall.com/cards/named?exact=Dragon%27s+Rage+Channeler&format=image&version=normal" alt="Dragon's Rage Channeler" width="217"> <img src="https://api.scryfall.com/cards/named?exact=The+One+Ring&format=image&version=normal" alt="The One Ring" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Dragon%27s+Rage+Channeler&format=image&version=normal&set=mh2" alt="Dragon's Rage Channeler" width="217"> <img src="https://api.scryfall.com/cards/named?exact=The+One+Ring&format=image&version=normal&set=ltr" alt="The One Ring" width="217">
 
 - Dragon's Rage Channeler, Murktide Regent, Ragavan, Urza's Saga all entered at once
 - UR Delver became the best deck — Ragavan on turn 1, Murktide on turn 2-3
