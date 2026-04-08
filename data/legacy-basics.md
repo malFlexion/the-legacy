@@ -39,21 +39,15 @@ Brainstorm + fetchlands is the defining card selection engine. Brainstorm lets y
 - Mana denial: Wasteland (48% of decks), Daze, Rishadan Port, Blood Moon
 
 ### All Strategies Are Viable
+
+<img src="https://api.scryfall.com/cards/named?exact=Show+and+Tell&format=image&version=normal&set=usg" alt="Show and Tell" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Thassa%27s+Oracle&format=image&version=normal&set=thb" alt="Thassa's Oracle" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Chalice+of+the+Void&format=image&version=normal&set=mrd" alt="Chalice of the Void" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Exploration&format=image&version=normal&set=usg" alt="Exploration" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Life+from+the+Loam&format=image&version=normal&set=rav" alt="Life from the Loam" width="217">
+
 The format supports the full spectrum:
 - **Tempo**: Dimir Tempo, Izzet Delver — cheap threats + free countermagic + mana denial
 - **Combo**: Oops! All Spells (turn-1 kills), Storm, Sneak and Show, Doomsday
-
-<img src="https://api.scryfall.com/cards/named?exact=Show+and+Tell&format=image&version=normal&set=usg" alt="Show and Tell" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Thassa%27s+Oracle&format=image&version=normal&set=thb" alt="Thassa's Oracle" width="217">
-
 - **Control**: Beanstalk Control, Jeskai Control, UW Miracles
-
-<img src="https://api.scryfall.com/cards/named?exact=Chalice+of+the+Void&format=image&version=normal&set=mrd" alt="Chalice of the Void" width="217">
-
 - **Prison/Stompy**: Eldrazi, Red Stompy, Affinity — Chalice of the Void + Ancient Tomb locks
 - **Midrange**: Ocelot Pride Midrange, Jund — value-oriented and grindy
-
-<img src="https://api.scryfall.com/cards/named?exact=Exploration&format=image&version=normal&set=usg" alt="Exploration" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Life+from+the+Loam&format=image&version=normal&set=rav" alt="Life from the Loam" width="217">
-
 - **Land-based**: Lands — unique strategy using Exploration, Life from the Loam, and land-based win conditions
 - **Tribal**: Goblins, Elves, Merfolk — synergy-driven creature strategies
 
@@ -125,8 +119,6 @@ The March 2026 B&R announcement made **no changes**, citing balanced metagame he
 
 Legacy is one of the most expensive paper formats due to Reserved List cards:
 
-<img src="https://api.scryfall.com/cards/named?exact=Mox+Diamond&format=image&version=normal&set=sth" alt="Mox Diamond" width="217">
-
 - **Budget option**: Oops! All Spells (~$1,100), Burn (~$1,500)
 - **Mid-range**: Most competitive decks cost $3,000-$5,000
 - **Expensive**: Lands (~$8,300), 4-Color Control (~$6,000+)
@@ -141,7 +133,7 @@ Legacy is one of the most expensive paper formats due to Reserved List cards:
 
 ## History Highlights
 
-<img src="https://api.scryfall.com/cards/named?exact=Delver+of+Secrets&set=isd&format=image&version=normal" alt="Delver of Secrets" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Treasure+Cruise&set=ktk&format=image&version=normal" alt="Treasure Cruise" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Wrenn+and+Six&set=mh1&format=image&version=normal" alt="Wrenn and Six" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Treasure+Cruise&set=ktk&format=image&version=normal" alt="Treasure Cruise" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Wrenn+and+Six&set=mh1&format=image&version=normal" alt="Wrenn and Six" width="217">
 
 | Year | Event |
 |------|-------|
@@ -164,7 +156,6 @@ Legacy is one of the most expensive paper formats due to Reserved List cards:
 ## The Strategic Triangle
 
 Legacy archetypes exist in a rough metagame triangle (from Reid Duke):
-
 
 ```
         Fair Blue (Delver, UWx Control)
@@ -200,12 +191,12 @@ Legacy's power level means turn 1 often defines the game:
 - **Fair**: Play a fetchland, pass. Represent Brainstorm or Force of Will.
 
 **Turns 2-3 — The Critical Window**:
-- Combo decks that didn't win turn 1 are trying to go off now
-- Tempo decks deploy their main threats (Murktide Regent, Orcish Bowmasters)
-- Control decks establish card advantage (Jace, Up the Beanstalk)
 
 <img src="https://api.scryfall.com/cards/named?exact=Blood+Moon&format=image&version=normal&set=drk" alt="Blood Moon" width="217">
 
+- Combo decks that didn't win turn 1 are trying to go off now
+- Tempo decks deploy their main threats (Murktide Regent, Orcish Bowmasters)
+- Control decks establish card advantage (Jace, Up the Beanstalk)
 - Prison decks add more locks (Blood Moon, Trinisphere)
 
 **Turns 4+ — The Grind**:
@@ -267,9 +258,7 @@ Legacy's power level means turn 1 often defines the game:
 
 ### Legacy-Specific Bans (Cards Legal in Vintage but Banned in Legacy)
 
-<img src="https://api.scryfall.com/cards/named?exact=Sensei%27s+Divining+Top&format=image&version=normal&set=chk" alt="Sensei's Divining Top" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Deathrite+Shaman&format=image&version=normal&set=rtr" alt="Deathrite Shaman" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Ragavan%2C+Nimble+Pilferer&format=image&version=normal" alt="Ragavan, Nimble Pilferer" width="217">
-
-<img src="https://api.scryfall.com/cards/named?exact=Entomb&format=image&version=normal&set=ody" alt="Entomb" width="217">
+<img src="https://api.scryfall.com/cards/named?exact=Sensei%27s+Divining+Top&format=image&version=normal&set=chk" alt="Sensei's Divining Top" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Deathrite+Shaman&format=image&version=normal&set=rtr" alt="Deathrite Shaman" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Ragavan%2C+Nimble+Pilferer&format=image&version=normal" alt="Ragavan, Nimble Pilferer" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Entomb&format=image&version=normal&set=ody" alt="Entomb" width="217">
 
 | Card | Banned | Why |
 |------|--------|-----|
@@ -343,7 +332,6 @@ This is why fetchlands + duals create such flexible mana bases — one fetchland
 ## Common Play Patterns
 
 ### The Brainstorm Lock
-
 
 Brainstorm without a fetchland can "lock" you — you put 2 bad cards on top and now have to draw them. Always have a shuffle effect (fetchland, Ponder) available before casting Brainstorm if possible. The best Brainstorm patterns:
 1. Cast Brainstorm, see 3 new cards

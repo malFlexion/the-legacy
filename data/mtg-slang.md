@@ -24,17 +24,25 @@ A comprehensive glossary of Magic: The Gathering terminology, organized by categ
 
 **blow out**: A play that devastates the opponent, usually catching them off guard. 'Surgical Extraction on their Reanimator target was a total blowout.' The opponent overcommits to a line that gets punished. *(See also: punish, gotcha.)*
 
+<img src="https://api.scryfall.com/cards/named?exact=Terminus&format=image&version=normal&set=avr" alt="Terminus" width="217">
+
 **board wipe**: Synonym for sweeper and wrath. A spell that destroys all creatures. In Legacy, Terminus is the most efficient due to its miracle cost of W. *(Related cards: Terminus, Toxic Deluge. See also: wrath, sweeper.)*
+
+<img src="https://api.scryfall.com/cards/named?exact=Lightning+Bolt&format=image&version=normal&set=lea" alt="Lightning Bolt" width="217">
 
 **bolt**: Lightning Bolt, or any 3-damage instant-speed removal spell. Used as a verb: 'bolt the bird' means kill the opponent's mana creature with a burn spell. The gold standard for efficient removal in Legacy. *(Related cards: Lightning Bolt. See also: burn, removal, bolt the bird.)*
 
 **bomb**: A powerful card that can win the game on its own if unanswered. More commonly used in Limited, but in Legacy, cards like Jace the Mind Sculptor or Uro can be bombs. 'That Murktide is a bomb.' *(See also: threat, finisher.)*
+
+<img src="https://api.scryfall.com/cards/named?exact=Karakas&format=image&version=normal&set=leg" alt="Karakas" width="217">
 
 **bounce**: To return a permanent to its owner's hand. Karakas bounces legendary creatures. Jace's -1 bounces any creature. Teferi bounces any permanent. In Legacy, bounce is removal that doesn't give card advantage. *(Related cards: Karakas, Jace, the Mind Sculptor, Teferi, Time Raveler. See also: Karakas bounce, removal.)*
 
 **brew**: To create an original deck design rather than copying an established list. A 'brewer' is someone who enjoys building new decks. 'I'm brewing a new Aluren list.' Can be a noun: 'that's an interesting brew.' *(See also: netdeck, spice, jank.)*
 
 **brick**: To draw a card that is useless in the current game state. 'I bricked on my Brainstorm, drew three lands.' The opposite of drawing gas. *(See also: whiff, flood, gas.)*
+
+<img src="https://api.scryfall.com/cards/named?exact=Brainstorm&format=image&version=normal&set=ice" alt="Brainstorm" width="217">
 
 **cantrip**: A spell that draws a card as part of its effect, essentially replacing itself. Legacy is defined by its powerful cantrips (Brainstorm, Ponder, Preordain) which provide unmatched consistency and card selection. *(Related cards: Brainstorm, Ponder, Preordain, Consider. See also: card advantage, card selection, brainstorm.)*
 
@@ -156,6 +164,8 @@ A comprehensive glossary of Magic: The Gathering terminology, organized by categ
 
 **rip**: To draw a card, especially one you needed. 'Rip the Force off the top.' Synonym for topdeck. Used colloquially when peeling cards dramatically. *(See also: topdeck, mise, peel.)*
 
+<img src="https://api.scryfall.com/cards/named?exact=Dark+Ritual&format=image&version=normal&set=lea" alt="Dark Ritual" width="217">
+
 **ritual**: A spell that generates more mana than it costs, enabling explosive turns. Named after Dark Ritual (B for BBB). Legacy rituals include Dark Ritual, Cabal Ritual, Rite of Flame, and Lion's Eye Diamond. Essential for Storm decks. *(Related cards: Dark Ritual, Cabal Ritual, Rite of Flame, Lion's Eye Diamond. See also: Storm, ramp, go off.)*
 
 **rock**: A mana-producing artifact (mana rock). In Legacy, examples include Mox Diamond, Chrome Mox, Lotus Petal, and Lion's Eye Diamond. Can also refer to 'The Rock' archetype (BG midrange). *(Related cards: Mox Diamond, Chrome Mox, Lotus Petal, Lion's Eye Diamond, Sol Ring. See also: dork, ramp, artifact mana.)*
@@ -200,229 +210,451 @@ A comprehensive glossary of Magic: The Gathering terminology, organized by categ
 
 **whiff**: To fail to find what you need with a search or selection effect. 'I whiffed on the Collected Company' or 'My Goblin Charbelcher whiffed on a land.' In Legacy, whiffing on a Brainstorm means not finding useful cards. *(See also: brick, fizzle.)*
 
+<img src="https://api.scryfall.com/cards/named?exact=Terminus&format=image&version=normal&set=avr" alt="Terminus" width="217">
+
 **wrath**: Any board-clearing spell that destroys all creatures, named after Wrath of God. Used as a verb: 'I wrathed the board.' In Legacy, Terminus is the most common wrath effect due to its miracle cost. *(Related cards: Wrath of God, Terminus, Supreme Verdict, Toxic Deluge. See also: sweeper, board wipe.)*
 
 ---
 
 ## Card Nicknames
 
+<img src="https://api.scryfall.com/cards/named?exact=Abrupt+Decay&format=image&version=normal&set=rtr" alt="Abrupt Decay" width="217">
+
 **Abrupt Decay**: A 2-mana BG instant that destroys any nonland permanent with mana value 3 or less and cannot be countered. Premium removal in Legacy BG(x) decks because it gets around countermagic. *(Related cards: Abrupt Decay. See also: removal, uncounterable.)*
+
+<img src="https://api.scryfall.com/cards/named?exact=Ad+Nauseam&format=image&version=normal&set=ala" alt="Ad Nauseam" width="217">
 
 **Ad Nauseam**: A 5-mana instant that lets you reveal cards and put them in hand, losing life equal to each card's mana value. You choose when to stop. In ANT, you use this to draw your entire deck at low cost (most spells cost 0-2). *(Related cards: Ad Nauseam. See also: ANT, Storm.)*
 
+<img src="https://api.scryfall.com/cards/named?exact=Archon+of+Cruelty&format=image&version=normal" alt="Archon of Cruelty" width="217">
+
 **Archon**: Archon of Cruelty. A 7-mana creature with a devastating ETB: opponent discards, sacrifices, loses 3 life; you draw, gain 3 life. A Reanimator target that provides immediate value even if removed. *(Related cards: Archon of Cruelty. See also: Reanimator.)*
+
+<img src="https://api.scryfall.com/cards/named?exact=Atraxa%2C+Grand+Unifier&format=image&version=normal" alt="Atraxa, Grand Unifier" width="217">
 
 **Atraxa**: Atraxa, Grand Unifier. A 7-mana legendary creature that draws a large number of cards on ETB (revealing top 10, keeping one of each card type). A premier reanimation target in recent Legacy Reanimator builds alongside Griselbrand. *(Related cards: Atraxa, Grand Unifier. See also: Reanimator.)*
 
+<img src="https://api.scryfall.com/cards/named?exact=Batterskull&format=image&version=normal&set=nph" alt="Batterskull" width="217">
+
 **Batterskull**: A 5-mana living weapon Equipment that creates a 4/4 vigilance lifelink token. Typically cheated into play with Stoneforge Mystic on turn 3. Can bounce itself to hand and be redeployed. *(Related cards: Batterskull, Stoneforge Mystic. See also: SFM, Stoneblade, equipment.)*
+
+<img src="https://api.scryfall.com/cards/named?exact=Beseech+the+Mirror&format=image&version=normal" alt="Beseech the Mirror" width="217">
 
 **Beans**: Beseech the Mirror. A 4-mana sorcery with bargain that can tutor any card and cast it for free if you sacrifice a permanent. Used as a combo enabler in Legacy Storm variants and other combo strategies. *(Related cards: Beseech the Mirror. See also: tutor, storm.)*
 
+<img src="https://api.scryfall.com/cards/named?exact=Berserk&format=image&version=normal&set=lea" alt="Berserk" width="217">
+
 **Berserk**: A 1-mana green instant that doubles a creature's power but destroys it at end of turn. In Legacy Infect, this is lethal with even a small infect creature: a 1/1 with Berserk and any pump is often 10+ poison. *(Related cards: Berserk. See also: Infect, pump.)*
+
+<img src="https://api.scryfall.com/cards/named?exact=Dark+Confidant&format=image&version=normal&set=rav" alt="Dark Confidant" width="217">
 
 **bob**: Dark Confidant, nicknamed after Bob Maher who designed the card as an Invitational winner. Bob's ability reveals the top card of your library each upkeep, losing life equal to its mana cost but gaining card advantage. *(Related cards: Dark Confidant. See also: card advantage.)*
 
+<img src="https://api.scryfall.com/cards/named?exact=Orcish+Bowmasters&format=image&version=normal" alt="Orcish Bowmasters" width="217">
+
 **Bowmasters**: Orcish Bowmasters. A 2-mana flash creature from Lord of the Rings that deals damage whenever an opponent draws a card beyond their first each turn. Devastates cantrip-heavy Legacy strategies and creates amass tokens. Format-warping card. *(Related cards: Orcish Bowmasters. See also: cantrip, flash.)*
+
+<img src="https://api.scryfall.com/cards/named?exact=Brainstorm&format=image&version=normal&set=ice" alt="Brainstorm" width="217">
 
 **brainstorm**: The most-played card in Legacy. Draw 3, put 2 back. Used as a verb: 'brainstorm in response.' The power of Brainstorm comes from combining it with fetch lands to shuffle away the unwanted cards. 'Brainstorm lock' occurs when you're stuck with bad cards on top without a shuffle effect. *(Related cards: Brainstorm. See also: cantrip, fetch land, brainstorm lock.)*
 
+<img src="https://api.scryfall.com/cards/named?exact=Carpet+of+Flowers&format=image&version=normal&set=usg" alt="Carpet of Flowers" width="217">
+
 **Carpet of Flowers**: A 1-mana green enchantment that adds mana during your main phase based on the number of Islands the opponent controls. A Legacy sideboard all-star against blue decks, which always control Islands (fetch for dual). *(Related cards: Carpet of Flowers. See also: sideboard, ramp.)*
+
+<img src="https://api.scryfall.com/cards/named?exact=Cavern+of+Souls&format=image&version=normal&set=avr" alt="Cavern of Souls" width="217">
 
 **Cavern of Souls**: A land that names a creature type and produces mana that makes creatures of that type uncounterable. Used in tribal decks (Elves, Goblins, Merfolk) and Reanimator (naming Demon for Griselbrand). *(Related cards: Cavern of Souls. See also: uncounterable, tribal.)*
 
+<img src="https://api.scryfall.com/cards/named?exact=Chalice+of+the+Void&format=image&version=normal&set=mrd" alt="Chalice of the Void" width="217">
+
 **Chalice**: Chalice of the Void. A XX-cost artifact that counters all spells with mana value equal to X. 'Chalice on 1' shuts down Brainstorm, Ponder, Swords to Plowshares, Delver, and most of Legacy's cantrips. *(Related cards: Chalice of the Void. See also: Chalice on 1, prison, stompy.)*
+
+<img src="https://api.scryfall.com/cards/named?exact=Collector+Ouphe&format=image&version=normal" alt="Collector Ouphe" width="217">
 
 **Collector Ouphe**: A 2-mana green creature that prevents activated abilities of artifacts. Shuts down Aether Vial, Batterskull, Lion's Eye Diamond, and equipment. Searchable via Green Sun's Zenith. A key hatebear in Legacy. *(Related cards: Collector Ouphe. See also: hatebear, GSZ, silver bullet.)*
 
+<img src="https://api.scryfall.com/cards/named?exact=Counterbalance&format=image&version=normal&set=csp" alt="Counterbalance" width="217">
+
 **Counterbalance**: A 2-mana enchantment that reveals the top card of your library to counter spells with the same mana value. Was a dominant Legacy strategy paired with Sensei's Divining Top (now banned). Still sometimes played with Brainstorm. *(Related cards: Counterbalance, Sensei's Divining Top. See also: Top, soft lock.)*
+
+<img src="https://api.scryfall.com/cards/named?exact=Gaea%27s+Cradle&format=image&version=normal&set=usg" alt="Gaea's Cradle" width="217">
 
 **Cradle**: Gaea's Cradle. A legendary land that taps for green mana equal to the number of creatures you control. The engine of Legacy Elves, producing explosive amounts of mana. On the Reserved List and extremely expensive. *(Related cards: Gaea's Cradle. See also: Elves, reserved list.)*
 
+<img src="https://api.scryfall.com/cards/named?exact=Crop+Rotation&format=image&version=normal&set=usg" alt="Crop Rotation" width="217">
+
 **Crop Rotation**: A 1-mana green instant that sacrifices a land to search for any land. At instant speed in Legacy, it finds Dark Depths, Thespian's Stage, Bojuka Bog, Karakas, or any utility land needed. A key card in Lands and Turbo Depths. *(Related cards: Crop Rotation. See also: Lands, Turbo Depths, toolbox.)*
+
+<img src="https://api.scryfall.com/cards/named?exact=Dark+Ritual&format=image&version=normal&set=lea" alt="Dark Ritual" width="217">
 
 **Dark Ritual**: A 1-mana black instant that adds BBB. The original and most iconic ritual spell. Enables turn-1 Hymn to Tourach, turn-1 Necropotence, or massive Storm turns. A Legacy black staple since 1993. *(Related cards: Dark Ritual. See also: ritual, Storm.)*
 
+<img src="https://api.scryfall.com/cards/named?exact=Day%27s+Undoing&format=image&version=normal&set=ori" alt="Day's Undoing" width="217">
+
 **Day's Undoing**: A 3-mana sorcery that shuffles all hands and graveyards into libraries and each player draws 7. Then the turn ends. Used in 8-Cast and Echo of Eons strategies to refuel while resetting the opponent's graveyard. *(Related cards: Day's Undoing. See also: wheel, 8-Cast.)*
+
+<img src="https://api.scryfall.com/cards/named?exact=Daze&format=image&version=normal&set=nem" alt="Daze" width="217">
 
 **Daze**: A free counterspell that costs returning an Island to your hand. The quintessential Legacy tempo card. 'Daze math' refers to calculating whether your opponent can pay 1 extra mana. Best on the play when the opponent taps out. *(Related cards: Daze. See also: Daze math, tempo, free spell.)*
 
+<img src="https://api.scryfall.com/cards/named?exact=Delver+of+Secrets&format=image&version=normal&set=isd" alt="Delver of Secrets" width="217">
+
 **delver**: Delver of Secrets, a 1-mana 1/1 that transforms into a 3/2 flyer when you reveal an instant or sorcery on top of your library. Also refers to the entire Delver archetype family (UR, RUG, Grixis, etc.). The most iconic Legacy creature. *(Related cards: Delver of Secrets. See also: Delver archetype, tempo, flip.)*
+
+<img src="https://api.scryfall.com/cards/named?exact=Dark+Depths&format=image&version=normal&set=csp" alt="Dark Depths" width="217">
 
 **Depths**: Dark Depths. A legendary land that enters with 10 ice counters. When the last counter is removed, it transforms into Marit Lage, a 20/20 flying indestructible token. Combined with Thespian's Stage to skip the counters entirely. *(Related cards: Dark Depths, Thespian's Stage, Marit Lage. See also: Turbo Depths, Dark Depths combo.)*
 
+<img src="https://api.scryfall.com/cards/named?exact=Deathrite+Shaman&format=image&version=normal&set=rtr" alt="Deathrite Shaman" width="217">
+
 **DRS**: Deathrite Shaman. A 1-mana creature that could tap for mana, drain life, or gain life by exiling cards from graveyards. Was banned in Legacy in 2018 for being too versatile and ubiquitous. Still referenced frequently. *(Related cards: Deathrite Shaman. See also: dork, banned.)*
+
+<img src="https://api.scryfall.com/cards/named?exact=Dryad+Arbor&format=image&version=normal&set=fut" alt="Dryad Arbor" width="217">
 
 **Dryad Arbor**: A 0-mana green creature that is also a Forest land. Famously searchable by Green Sun's Zenith for X=0 as a turn-1 mana dork, or fetchable with a green fetch land. Has summoning sickness. *(Related cards: Dryad Arbor, Green Sun's Zenith. See also: GSZ, dork.)*
 
+<img src="https://api.scryfall.com/cards/named?exact=Expressive+Iteration&format=image&version=normal&set=stx" alt="Expressive Iteration" width="217">
+
 **EI**: Expressive Iteration. A 2-mana UR sorcery that lets you look at 3 cards, put one in hand and one into exile to play this turn. Was banned in Legacy for providing too-efficient card advantage to Delver decks. Now often referenced historically. *(Related cards: Expressive Iteration. See also: card advantage, banned.)*
+
+<img src="https://api.scryfall.com/cards/named?exact=Elvish+Reclaimer&format=image&version=normal&set=m20" alt="Elvish Reclaimer" width="217">
 
 **Elvish Reclaimer**: A 1-mana green creature that can sacrifice a land to search for any land. In Turbo Depths, finds Dark Depths or Thespian's Stage. In Lands, finds utility lands. Also grows to 3/4 with 3+ card types in graveyard. *(Related cards: Elvish Reclaimer. See also: Turbo Depths, Lands.)*
 
+<img src="https://api.scryfall.com/cards/named?exact=Emrakul%2C+the+Aeons+Torn&format=image&version=normal&set=roe" alt="Emrakul, the Aeons Torn" width="217">
+
 **Emmy**: Emrakul, the Aeons Torn. A 15-mana legendary Eldrazi with annihilator 6, flying, protection from colored spells, and an extra turn on cast. The ultimate cheat-into-play target for Show and Tell and Sneak Attack. *(Related cards: Emrakul, the Aeons Torn. See also: Sneak and Show, SnT.)*
+
+<img src="https://api.scryfall.com/cards/named?exact=Endurance&format=image&version=normal" alt="Endurance" width="217">
 
 **Endurance**: A 3-mana green Incarnation with flash and reach. Can be pitched (exile a green card) to put a graveyard back into its owner's library. Versatile graveyard hate that also serves as a decent body. *(Related cards: Endurance. See also: pitch, graveyard hate, Elemental Incarnation.)*
 
+<img src="https://api.scryfall.com/cards/named?exact=Ensnaring+Bridge&format=image&version=normal&set=sth" alt="Ensnaring Bridge" width="217">
+
 **Ensnaring Bridge**: A 3-mana artifact that prevents creatures with power greater than the number of cards in your hand from attacking. A prison piece that locks out creature-based strategies when you empty your hand. *(Related cards: Ensnaring Bridge. See also: prison.)*
+
+<img src="https://api.scryfall.com/cards/named?exact=Entomb&format=image&version=normal&set=ody" alt="Entomb" width="217">
 
 **Entomb**: A 1-mana instant that searches your library for a card and puts it into your graveyard. The key enabler for Reanimator decks. 'Turn 1 Entomb for Griselbrand, turn 2 Reanimate' is the classic Legacy Reanimator line. *(Related cards: Entomb, Griselbrand, Reanimate. See also: Reanimator, graveyard.)*
 
+<img src="https://api.scryfall.com/cards/named?exact=Ephemerate&format=image&version=normal" alt="Ephemerate" width="217">
+
 **Ephemerate**: A 1-mana white instant that exiles a creature you control then returns it. Has rebound (free recast next upkeep). In Legacy, flickers Grief for 4 discards total, or Stoneforge Mystic for equipment value. *(Related cards: Ephemerate. See also: flicker, Scam, ETB.)*
+
+<img src="https://api.scryfall.com/cards/named?exact=Exploration&format=image&version=normal&set=usg" alt="Exploration" width="217">
 
 **Exploration**: A 1-mana green enchantment that lets you play an additional land each turn. Key accelerant in the Lands archetype, enabling faster Wasteland locks and Dark Depths combos. *(Related cards: Exploration. See also: Lands, ramp.)*
 
+<img src="https://api.scryfall.com/cards/named?exact=Flusterstorm&format=image&version=normal&set=cmd" alt="Flusterstorm" width="217">
+
 **Flusterstorm**: A 1-mana counterspell with storm that targets instants or sorceries. Ideal for counter wars because each copy must be countered individually. The best anti-storm card and counter-war finisher in Legacy. *(Related cards: Flusterstorm. See also: counter war, storm, permission.)*
+
+<img src="https://api.scryfall.com/cards/named?exact=Force+of+Negation&format=image&version=normal" alt="Force of Negation" width="217">
 
 **FoN**: Abbreviation for Force of Negation. A pitch counterspell from Modern Horizons that counters noncreature spells for free on opponents' turns. Supplements Force of Will in Legacy as additional free interaction. *(Related cards: Force of Negation. See also: force, FoW, pitch.)*
 
+<img src="https://api.scryfall.com/cards/named?exact=Force+of+Will&format=image&version=normal&set=all" alt="Force of Will" width="217">
+
 **force**: Force of Will, the defining card of Legacy. A free counterspell that can be cast by exiling a blue card from hand and paying 1 life. Keeps combo decks in check and is the reason Legacy can support powerful strategies without being degenerate. *(Related cards: Force of Will. See also: FoW, pitch, free spell, counter war.)*
+
+<img src="https://api.scryfall.com/cards/named?exact=Force+of+Will&format=image&version=normal&set=all" alt="Force of Will" width="217">
 
 **FoW**: Abbreviation for Force of Will. The card that defines Legacy, allowing you to counter any spell for free by pitching a blue card. 'Do you have FoW?' is the eternal Legacy question. *(Related cards: Force of Will. See also: force, pitch, free spell.)*
 
+<img src="https://api.scryfall.com/cards/named?exact=Fury&format=image&version=normal" alt="Fury" width="217">
+
 **Fury**: A 5-mana red Incarnation with double strike. Can be pitched (exile a red card) to deal 4 damage divided among creatures/planeswalkers. Free board control that punishes creature strategies. *(Related cards: Fury. See also: pitch, removal.)*
+
+<img src="https://api.scryfall.com/cards/named?exact=Tarmogoyf&format=image&version=normal&set=fut" alt="Tarmogoyf" width="217">
 
 **goyf**: Tarmogoyf, one of the most iconic creatures in Magic history. A 2-mana creature whose power and toughness equal the number of card types in all graveyards plus one. Was the dominant Legacy threat for years. *(Related cards: Tarmogoyf. See also: threat, beater.)*
 
+<img src="https://api.scryfall.com/cards/named?exact=Grief&format=image&version=normal" alt="Grief" width="217">
+
 **Grief**: A 4-mana black Incarnation with menace. Can be pitched (exile a black card) for a free Thoughtseize effect. Was combined with Reanimate/Ephemerate for oppressive turn-1 double-discard plays ('Scam'). *(Related cards: Grief. See also: pitch, hand attack, Scam.)*
+
+<img src="https://api.scryfall.com/cards/named?exact=Griselbrand&format=image&version=normal&set=avr" alt="Griselbrand" width="217">
 
 **Griselbrand**: An 8-mana 7/7 flying lifelink demon that lets you draw 7 cards for 7 life. The premier reanimation target in Legacy because drawing 7-14 cards usually wins the game immediately. Also called 'Griseldaddy' or 'Grizzy B.' *(Related cards: Griselbrand. See also: Reanimator, Entomb.)*
 
+<img src="https://api.scryfall.com/cards/named?exact=Green+Sun%27s+Zenith&format=image&version=normal&set=mbs" alt="Green Sun's Zenith" width="217">
+
 **GSZ**: Green Sun's Zenith. A sorcery that searches for a green creature with mana value X or less and puts it onto the battlefield. A key toolbox card in Legacy that can find Dryad Arbor on turn 1 for acceleration or silver bullets later. *(Related cards: Green Sun's Zenith, Dryad Arbor. See also: toolbox, Maverick, Elves.)*
+
+<img src="https://api.scryfall.com/cards/named?exact=Craterhoof+Behemoth&format=image&version=normal&set=avr" alt="Craterhoof Behemoth" width="217">
 
 **Hoof**: Craterhoof Behemoth. The finisher of choice for Elves decks, typically found via Natural Order or Green Sun's Zenith. 'NO for Hoof' means cast Natural Order to find Craterhoof. *(Related cards: Craterhoof Behemoth. See also: Elves, NO.)*
 
+<img src="https://api.scryfall.com/cards/named?exact=Hydroblast&format=image&version=normal&set=ice" alt="Hydroblast" width="217">
+
 **Hydroblast**: A 1-mana blue instant that can counter a red spell or destroy a red permanent. Also Blue Elemental Blast (functionally similar). Sideboard card against red decks. 'Hydro' for short. *(Related cards: Hydroblast, Blue Elemental Blast. See also: Pyroblast, sideboard.)*
+
+<img src="https://api.scryfall.com/cards/named?exact=Hymn+to+Tourach&format=image&version=normal&set=fem" alt="Hymn to Tourach" width="217">
 
 **Hymn**: Hymn to Tourach. A 2-mana sorcery that forces the opponent to discard 2 cards at random. The randomness makes it devastating because the opponent can't choose what to keep. A Legacy staple in black decks. *(Related cards: Hymn to Tourach. See also: hand attack, disruption.)*
 
+<img src="https://api.scryfall.com/cards/named?exact=Invigorate&format=image&version=normal&set=mmq" alt="Invigorate" width="217">
+
 **Invigorate**: A pump spell that can be cast for free (opponent gains 3 life) by revealing a green card. Key free pump spell in Legacy Infect, often providing the critical +4/+4 needed for a lethal poison attack. *(Related cards: Invigorate. See also: Infect, pump, free spell.)*
+
+<img src="https://api.scryfall.com/cards/named?exact=Jace%2C+the+Mind+Sculptor&format=image&version=normal&set=wwk" alt="Jace, the Mind Sculptor" width="217">
 
 **jace**: Almost always refers to Jace, the Mind Sculptor (JTMS), the most powerful planeswalker ever printed. A Legacy staple that provides card selection (Brainstorm ability), bounce, and an ultimate that exiles the opponent's library. *(Related cards: Jace, the Mind Sculptor. See also: planeswalker, brainstorm, finisher.)*
 
+<img src="https://api.scryfall.com/cards/named?exact=Umezawa%27s+Jitte&format=image&version=normal&set=bok" alt="Umezawa's Jitte" width="217">
+
 **Jitte**: Umezawa's Jitte. A 2-mana equipment that gains charge counters when equipped creature deals combat damage. Counters can be used for +2/+2, -1/-1 to a creature, or 2 life gain. Historically one of the best equipment in Legacy. *(Related cards: Umezawa's Jitte. See also: equipment, SFM.)*
+
+<img src="https://api.scryfall.com/cards/named?exact=Kaldra+Compleat&format=image&version=normal" alt="Kaldra Compleat" width="217">
 
 **Kaldra**: Kaldra Compleat. A living weapon Equipment that creates an indestructible 4/4 token with trample, haste, and first strike. Replaced Batterskull in many Stoneforge Mystic strategies for its haste and indestructibility. *(Related cards: Kaldra Compleat, Stoneforge Mystic. See also: SFM, Batterskull, Stoneblade.)*
 
+<img src="https://api.scryfall.com/cards/named?exact=Karakas&format=image&version=normal&set=leg" alt="Karakas" width="217">
+
 **Karakas**: A legendary land that taps for white and can return any legendary creature to its owner's hand. Used defensively to bounce attacking Emrakul or Marit Lage, and offensively to replay your own ETB legendary creatures. *(Related cards: Karakas. See also: Karakas bounce, Death and Taxes.)*
+
+<img src="https://api.scryfall.com/cards/named?exact=Knight+of+the+Reliquary&format=image&version=normal&set=con" alt="Knight of the Reliquary" width="217">
 
 **Knight of the Reliquary**: A creature that grows by exiling lands from your graveyard and can sacrifice a land to search for any land. A powerful toolbox creature in Maverick that finds utility lands and grows to enormous size. *(Related cards: Knight of the Reliquary. See also: Maverick, toolbox.)*
 
+<img src="https://api.scryfall.com/cards/named?exact=Lion%27s+Eye+Diamond&format=image&version=normal&set=mir" alt="Lion's Eye Diamond" width="217">
+
 **LED**: Lion's Eye Diamond. A 0-mana artifact that sacrifices to discard your hand and add 3 mana of any color. A key combo piece in ANT (Storm), Dredge, and other graveyard strategies. On the Reserved List. *(Related cards: Lion's Eye Diamond. See also: storm, ANT, reserved list.)*
+
+<img src="https://api.scryfall.com/cards/named?exact=Leyline+of+the+Void&format=image&version=normal&set=gpt" alt="Leyline of the Void" width="217">
 
 **Leyline of the Void**: A 4-mana black enchantment that exiles cards going to the opponent's graveyard. Can start the game on the battlefield if in your opening hand. Premium graveyard hate in Legacy sideboards. *(Related cards: Leyline of the Void. See also: graveyard hate, sideboard.)*
 
+<img src="https://api.scryfall.com/cards/named?exact=Liliana+of+the+Veil&format=image&version=normal&set=isd" alt="Liliana of the Veil" width="217">
+
 **Liliana**: Usually refers to Liliana of the Veil in Legacy. A 3-mana planeswalker that forces both players to discard and forces opponents to sacrifice creatures. Can also refer to Liliana, the Last Hope. *(Related cards: Liliana of the Veil, Liliana, the Last Hope. See also: edict, planeswalker.)*
+
+<img src="https://api.scryfall.com/cards/named?exact=Life+from+the+Loam&format=image&version=normal&set=rav" alt="Life from the Loam" width="217">
 
 **Loam**: Life from the Loam. A 2-mana sorcery with dredge 3 that returns up to 3 lands from graveyard to hand. The engine of the Lands archetype and Loam strategies. Enables recurring Wasteland locks. *(Related cards: Life from the Loam. See also: Lands, dredge, Wasteland lock.)*
 
+<img src="https://api.scryfall.com/cards/named?exact=Dark+Depths&format=image&version=normal&set=csp" alt="Dark Depths" width="217">
+
 **Marit Lage**: A legendary 20/20 flying indestructible black Avatar token created by Dark Depths. Wins the game in 1 attack. Can be stopped by Karakas (bounces legendary), Swords to Plowshares (exiles), or edict effects. *(Related cards: Dark Depths, Thespian's Stage. See also: Depths, Karakas bounce.)*
+
+<img src="https://api.scryfall.com/cards/named?exact=Maze+of+Ith&format=image&version=normal&set=drk" alt="Maze of Ith" width="217">
 
 **Maze**: Maze of Ith. A land that taps to untap an attacking creature and prevent all combat damage it deals. Used in Lands and various control strategies to neutralize attackers. Can also be used on your own creatures for untap tricks. *(Related cards: Maze of Ith. See also: Lands.)*
 
+<img src="https://api.scryfall.com/cards/named?exact=Minsc+%26+Boo%2C+Timeless+Heroes&format=image&version=normal" alt="Minsc & Boo, Timeless Heroes" width="217">
+
 **Minsc and Boo**: Minsc & Boo, Timeless Heroes. A 4-mana RG planeswalker that creates Boo (a hamster token) and can fling it at opponents. Provides a threat, removal, and card advantage. Sees play in Legacy RUG and Temur builds. *(Related cards: Minsc & Boo, Timeless Heroes. See also: planeswalker.)*
+
+<img src="https://api.scryfall.com/cards/named?exact=Mother+of+Runes&format=image&version=normal&set=usg" alt="Mother of Runes" width="217">
 
 **Mom**: Mother of Runes. A 1-mana white creature that taps to give another creature protection from a chosen color. A cornerstone of Death and Taxes, protecting threats from removal. Also called 'Mother.' *(Related cards: Mother of Runes, Giver of Runes. See also: Death and Taxes, protection.)*
 
+<img src="https://api.scryfall.com/cards/named?exact=Monastery+Mentor&format=image&version=normal&set=frf" alt="Monastery Mentor" width="217">
+
 **Monastery Mentor**: A 3-mana white creature that creates 1/1 prowess monk tokens whenever you cast noncreature spells. A powerful finisher in Legacy control decks that can quickly build an army using cheap cantrips. *(Related cards: Monastery Mentor. See also: finisher, token.)*
+
+<img src="https://api.scryfall.com/cards/named?exact=Murktide+Regent&format=image&version=normal" alt="Murktide Regent" width="217">
 
 **Murktide**: Murktide Regent. A large flying threat that costs less for each instant/sorcery exiled from your graveyard. Often a 2-mana 6/6+ flyer in Legacy Delver decks. Also shorthand for UR Murktide Delver. *(Related cards: Murktide Regent. See also: Delver, threat, clock.)*
 
+<img src="https://api.scryfall.com/cards/named?exact=Narset%2C+Parter+of+Veils&format=image&version=normal&set=war" alt="Narset, Parter of Veils" width="217">
+
 **Narset**: Narset, Parter of Veils. A 3-mana planeswalker that prevents opponents from drawing more than one card per turn and digs for noncreature, nonland cards. Shuts down Brainstorm's draw-3 and other card advantage. *(Related cards: Narset, Parter of Veils. See also: planeswalker, hate.)*
+
+<img src="https://api.scryfall.com/cards/named?exact=Natural+Order&format=image&version=normal&set=vis" alt="Natural Order" width="217">
 
 **NO**: Natural Order. A 4-mana sorcery that sacrifices a green creature to search for any green creature and put it onto the battlefield. Used in Elves and Maverick to find Craterhoof Behemoth or Progenitus. *(Related cards: Natural Order, Craterhoof Behemoth, Progenitus. See also: Elves, Maverick, tutor.)*
 
+<img src="https://api.scryfall.com/cards/named?exact=Omniscience&format=image&version=normal&set=m13" alt="Omniscience" width="217">
+
 **Omniscience**: A 10-mana enchantment that lets you cast spells from hand for free. Cheated into play via Show and Tell in Legacy. Once resolved, cast Emrakul and any other threat for free. Also called 'Omni.' *(Related cards: Omniscience, Show and Tell. See also: Sneak and Show, SnT.)*
+
+<img src="https://api.scryfall.com/cards/named?exact=Painter%27s+Servant&format=image&version=normal&set=shm" alt="Painter's Servant" width="217">
 
 **Painter**: Painter's Servant, or the Painter archetype. The combo involves Painter's Servant (naming a color) + Grindstone to mill the opponent's entire library since every card becomes that color. A fast Legacy combo deck. *(Related cards: Painter's Servant, Grindstone. See also: Painter archetype, combo.)*
 
+<img src="https://api.scryfall.com/cards/named?exact=Past+in+Flames&format=image&version=normal&set=isd" alt="Past in Flames" width="217">
+
 **Past in Flames**: A 4-mana sorcery that gives all instants and sorceries in your graveyard flashback. A key Storm card that lets you replay all your rituals and tutors for a second time to build storm count. *(Related cards: Past in Flames. See also: Storm, ANT.)*
+
+<img src="https://api.scryfall.com/cards/named?exact=Path+to+Exile&format=image&version=normal&set=con" alt="Path to Exile" width="217">
 
 **path**: Path to Exile. A 1-mana white instant that exiles a creature. Less common in Legacy than Swords to Plowshares because giving the opponent a land is a bigger downside than giving them life in a format with Wasteland. *(Related cards: Path to Exile. See also: swords, removal.)*
 
+<img src="https://api.scryfall.com/cards/named?exact=Pithing+Needle&format=image&version=normal&set=rav" alt="Pithing Needle" width="217">
+
 **Pithing Needle**: A 1-mana artifact that names a card and prevents its activated abilities from being used. Searchable by Urza's Saga. Names common targets include Wasteland, Thespian's Stage, Aether Vial, and planeswalkers. *(Related cards: Pithing Needle. See also: silver bullet, Urza's Saga.)*
+
+<img src="https://api.scryfall.com/cards/named?exact=Swords+to+Plowshares&format=image&version=normal&set=lea" alt="Swords to Plowshares" width="217">
 
 **plow**: Swords to Plowshares. 'Plow your Murktide' means exile it with Swords to Plowshares. *(Related cards: Swords to Plowshares. See also: swords.)*
 
+<img src="https://api.scryfall.com/cards/named?exact=Ponder&format=image&version=normal&set=lrw" alt="Ponder" width="217">
+
 **Ponder**: A 1-mana sorcery that lets you look at the top 3 cards, rearrange or shuffle them, then draw. One of Legacy's premier cantrips alongside Brainstorm. Provides card selection and fuels Delver flips. *(Related cards: Ponder. See also: cantrip, brainstorm, card selection.)*
+
+<img src="https://api.scryfall.com/cards/named?exact=Preordain&format=image&version=normal&set=m11" alt="Preordain" width="217">
 
 **Preordain**: A 1-mana sorcery that scries 2 then draws a card. The third-best cantrip in Legacy after Brainstorm and Ponder. Better at digging deep (can bottom both cards) but sees fewer total cards. *(Related cards: Preordain. See also: cantrip, brainstorm, Ponder.)*
 
+<img src="https://api.scryfall.com/cards/named?exact=Price+of+Progress&format=image&version=normal&set=exo" alt="Price of Progress" width="217">
+
 **Price of Progress**: A 2-mana red instant that deals 2 damage per nonbasic land the opponent controls. Devastating in Legacy where most players control 3-4 nonbasics by mid-game. A Burn staple that can deal 6-10 damage. *(Related cards: Price of Progress. See also: Burn, greedy manabase.)*
+
+<img src="https://api.scryfall.com/cards/named?exact=Prismatic+Ending&format=image&version=normal" alt="Prismatic Ending" width="217">
 
 **Prismatic Ending**: A sorcery that exiles a nonland permanent with mana value X or less, where X is the number of colors spent. Flexible removal in Legacy multicolor decks. Handles problematic permanents that dodge other removal. *(Related cards: Prismatic Ending. See also: removal.)*
 
+<img src="https://api.scryfall.com/cards/named?exact=Pyroblast&format=image&version=normal&set=ice" alt="Pyroblast" width="217">
+
 **Pyroblast**: A 1-mana red instant that can counter a blue spell or destroy a blue permanent. One of the most important Legacy sideboard cards. Also Red Elemental Blast (functionally similar). 'Pyro' for short. *(Related cards: Pyroblast, Red Elemental Blast. See also: Hydroblast, sideboard.)*
+
+<img src="https://api.scryfall.com/cards/named?exact=Rest+in+Peace&format=image&version=normal&set=rtr" alt="Rest in Peace" width="217">
 
 **Rest in Peace**: A 2-mana white enchantment that exiles all cards in graveyards and exiles any card that would go to a graveyard. The most thorough graveyard hate in Legacy. Combines with Helm of Obedience for an instant kill. *(Related cards: Rest in Peace. See also: graveyard hate, Helm combo.)*
 
+<img src="https://api.scryfall.com/cards/named?exact=Retrofitter+Foundry&format=image&version=normal&set=c18" alt="Retrofitter Foundry" width="217">
+
 **Retrofitter Foundry**: A 1-mana artifact that creates tokens and upgrades them. Searchable by Urza's Saga. Provides a recursive threat that dodges most removal. A key card in 8-Cast and Death and Taxes with Saga. *(Related cards: Retrofitter Foundry, Urza's Saga. See also: Urza's Saga, 8-Cast.)*
+
+<img src="https://api.scryfall.com/cards/named?exact=Show+and+Tell&format=image&version=normal&set=usg" alt="Show and Tell" width="217">
 
 **S&T**: Show and Tell. Alternative abbreviation. See SnT. *(Related cards: Show and Tell. See also: SnT, Sneak and Show.)*
 
+<img src="https://api.scryfall.com/cards/named?exact=Stoneforge+Mystic&format=image&version=normal&set=wwk" alt="Stoneforge Mystic" width="217">
+
 **SFM**: Stoneforge Mystic. A 2-mana creature that searches for an Equipment card and can cheat it onto the battlefield. Typically fetches Batterskull or Kaldra Compleat. Defines the Stoneblade archetype in Legacy. *(Related cards: Stoneforge Mystic, Batterskull, Kaldra Compleat. See also: Stoneblade, equipment.)*
+
+<img src="https://api.scryfall.com/cards/named?exact=Snapcaster+Mage&format=image&version=normal&set=isd" alt="Snapcaster Mage" width="217">
 
 **Snapcaster**: Snapcaster Mage. A 2-mana flash creature that gives an instant or sorcery in your graveyard flashback. Provides value by reusing cantrips, removal, or countermagic. Less dominant in Legacy than Modern due to Daze antisynergy. *(Related cards: Snapcaster Mage. See also: value, flashback.)*
 
+<img src="https://api.scryfall.com/cards/named?exact=Sneak+Attack&format=image&version=normal&set=usg" alt="Sneak Attack" width="217">
+
 **Sneak Attack**: A 4-mana red enchantment that lets you put any creature from hand onto the battlefield with haste for R. The creature is sacrificed at end of turn. Paired with Emrakul (gets an extra turn trigger on attack) for devastating effect. *(Related cards: Sneak Attack, Emrakul, the Aeons Torn. See also: Sneak and Show.)*
+
+<img src="https://api.scryfall.com/cards/named?exact=Show+and+Tell&format=image&version=normal&set=usg" alt="Show and Tell" width="217">
 
 **SnT**: Show and Tell. A 3-mana sorcery that lets each player put any permanent from hand onto the battlefield. Legacy combo decks use it to cheat in Emrakul, the Aeons Torn or Omniscience. Also abbreviated S&T. *(Related cards: Show and Tell, Emrakul, the Aeons Torn, Omniscience. See also: Sneak and Show, combo.)*
 
+<img src="https://api.scryfall.com/cards/named?exact=Solitude&format=image&version=normal" alt="Solitude" width="217">
+
 **Solitude**: A 5-mana white Incarnation with flash and lifelink. Can be pitched (exile a white card) for a free Swords to Plowshares effect. Premium free removal in Legacy white decks. *(Related cards: Solitude. See also: pitch, swords, removal.)*
+
+<img src="https://api.scryfall.com/cards/named?exact=Spell+Pierce&format=image&version=normal&set=zen" alt="Spell Pierce" width="217">
 
 **Spell Pierce**: A 1-mana counterspell that counters noncreature spells unless the opponent pays 2. Effective in the early game when opponents are tapped out. Loses effectiveness as the game goes long. *(Related cards: Spell Pierce. See also: permission, tempo.)*
 
+<img src="https://api.scryfall.com/cards/named?exact=Stifle&format=image&version=normal&set=scg" alt="Stifle" width="217">
+
 **Stifle**: A 1-mana instant that counters a triggered or activated ability. In Legacy, used to counter fetch land activations (denying mana), Storm triggers, and various combo abilities. A tempo play that can be backbreaking. *(Related cards: Stifle. See also: tempo, mana denial.)*
+
+<img src="https://api.scryfall.com/cards/named?exact=Subtlety&format=image&version=normal" alt="Subtlety" width="217">
 
 **Subtlety**: A 4-mana blue Incarnation with flash and flying. Can be pitched (exile a blue card) to put a creature or planeswalker spell on top of its owner's library. A tempo-oriented free counterspell for creatures. *(Related cards: Subtlety. See also: pitch, permission.)*
 
+<img src="https://api.scryfall.com/cards/named?exact=Surgical+Extraction&format=image&version=normal&set=nph" alt="Surgical Extraction" width="217">
+
 **Surgical**: Surgical Extraction. A Phyrexian mana spell (free at the cost of 2 life) that exiles all copies of a card from the opponent's graveyard, hand, and library. Key Legacy sideboard card against combo and Reanimator. *(Related cards: Surgical Extraction. See also: graveyard hate, free spell.)*
+
+<img src="https://api.scryfall.com/cards/named?exact=Swords+to+Plowshares&format=image&version=normal&set=lea" alt="Swords to Plowshares" width="217">
 
 **swords**: Swords to Plowshares. The best single-target creature removal in Magic. 1 white mana, exile target creature, its controller gains life. A Legacy staple since the format's inception. Also called 'StP' or 'plow.' *(Related cards: Swords to Plowshares. See also: path, removal, plow.)*
 
+<img src="https://api.scryfall.com/cards/named?exact=The+Tabernacle+at+Pendrell+Vale&format=image&version=normal&set=leg" alt="The Tabernacle at Pendrell Vale" width="217">
+
 **Tabernacle**: The Tabernacle at Pendrell Vale. A legendary land that forces all creatures to be paid for (1 mana each upkeep) or be destroyed. One of the most expensive cards in Legacy, used in Lands. On the Reserved List. *(Related cards: The Tabernacle at Pendrell Vale. See also: Lands, reserved list.)*
+
+<img src="https://api.scryfall.com/cards/named?exact=Teferi%2C+Time+Raveler&format=image&version=normal&set=war" alt="Teferi, Time Raveler" width="217">
 
 **Teferi**: In Legacy, usually refers to Teferi, Time Raveler: a 3-mana planeswalker that prevents opponents from casting at instant speed and bounces permanents. Shuts down countermagic and flash. Also called 'T3feri' or 'Teferi3.' *(Related cards: Teferi, Time Raveler. See also: planeswalker, control.)*
 
+<img src="https://api.scryfall.com/cards/named?exact=Tendrils+of+Agony&format=image&version=normal&set=scg" alt="Tendrils of Agony" width="217">
+
 **Tendrils**: Tendrils of Agony. The primary Storm win condition: drain 2 life per copy (1 base + storm copies). With storm count 9, that's 10 copies for 20 damage. 'Going to Tendrils' means executing the Storm kill. *(Related cards: Tendrils of Agony. See also: Storm, ANT, storm count.)*
+
+<img src="https://api.scryfall.com/cards/named?exact=Terminus&format=image&version=normal&set=avr" alt="Terminus" width="217">
 
 **Terminus**: A 6-mana (or miracle cost W) sorcery that puts all creatures on the bottom of their owners' libraries. The premier board wipe in Legacy because it gets around indestructible and graveyard recursion. Miracling it at instant speed via Brainstorm is a defining Legacy play. *(Related cards: Terminus. See also: miracle, wrath, brainstorm.)*
 
+<img src="https://api.scryfall.com/cards/named?exact=Thalia%2C+Guardian+of+Thraben&format=image&version=normal&set=dka" alt="Thalia, Guardian of Thraben" width="217">
+
 **Thalia**: Thalia, Guardian of Thraben. A 2-mana 2/1 first strike creature that makes noncreature spells cost 1 more. The defining hatebear of Legacy. 'Thalia tax' refers to the additional mana cost she imposes on cantrips, Force of Will, etc. *(Related cards: Thalia, Guardian of Thraben. See also: Death and Taxes, hatebear, Thalia tax.)*
+
+<img src="https://api.scryfall.com/cards/named?exact=Thassa%27s+Oracle&format=image&version=normal&set=thb" alt="Thassa's Oracle" width="217">
 
 **Thassa's Oracle**: A 2-mana blue creature with an ETB that wins the game if your devotion to blue is >= cards in library. The modern win condition for Doomsday (stack a pile with 0-2 cards left in library). Also wins in Oops All Spells. *(Related cards: Thassa's Oracle. See also: Doomsday, Oops All Spells, win condition.)*
 
+<img src="https://api.scryfall.com/cards/named?exact=Thoughtseize&format=image&version=normal&set=lrw" alt="Thoughtseize" width="217">
+
 **Thoughtseize**: A 1-mana sorcery that lets you look at the opponent's hand and take any nonland card for 2 life. The premier targeted discard spell in Legacy. Also used as a verb: 'Thoughtseize them on turn 1.' *(Related cards: Thoughtseize. See also: hand attack, disruption.)*
+
+<img src="https://api.scryfall.com/cards/named?exact=True-Name+Nemesis&format=image&version=normal&set=c13" alt="True-Name Nemesis" width="217">
 
 **TNN**: True-Name Nemesis. A 3-mana 3/1 Merfolk with protection from a chosen player, making it nearly impossible to interact with in combat or with targeted removal. A Legacy staple in blue tempo and Stoneblade decks. *(Related cards: True-Name Nemesis. See also: evasion, Stoneblade.)*
 
+<img src="https://api.scryfall.com/cards/named?exact=Sensei%27s+Divining+Top&format=image&version=normal&set=chk" alt="Sensei's Divining Top" width="217">
+
 **Top**: Sensei's Divining Top. A 1-mana artifact that lets you look at and rearrange the top 3 cards of your library. Was banned in Legacy due to slow play concerns but was once paired with Counterbalance for a powerful soft lock. *(Related cards: Sensei's Divining Top. See also: Counterbalance, banned.)*
+
+<img src="https://api.scryfall.com/cards/named?exact=Toxic+Deluge&format=image&version=normal&set=c13" alt="Toxic Deluge" width="217">
 
 **Toxic Deluge**: A 3-mana black sorcery that gives all creatures -X/-X where X is life you pay. Scales perfectly to the board state and gets around indestructible. A premier black sweeper in Legacy. *(Related cards: Toxic Deluge. See also: wrath, sweeper.)*
 
+<img src="https://api.scryfall.com/cards/named?exact=Treasure+Cruise&format=image&version=normal&set=ktk" alt="Treasure Cruise" width="217">
+
 **Treasure Cruise**: A sorcery that costs 8 but with delve often costs just U. Draw 3 cards. Banned in Legacy for being an absurdly efficient Ancestral Recall analog. One of the most powerful delve spells ever printed. *(Related cards: Treasure Cruise. See also: delve, banned.)*
+
+<img src="https://api.scryfall.com/cards/named?exact=Trinisphere&format=image&version=normal&set=dst" alt="Trinisphere" width="217">
 
 **Trinisphere**: A 3-mana artifact that makes all spells cost at least 3 mana. Devastating against Legacy's low-cost spells. Turns Brainstorm into a 3-mana cantrip and makes free spells (Daze, Force of Will's alternate cost) cost 3. *(Related cards: Trinisphere. See also: prison, Sphere effects.)*
 
+<img src="https://api.scryfall.com/cards/named?exact=Tropical+Island&format=image&version=normal&set=lea" alt="Tropical Island" width="217">
+
 **Tropical Island**: The blue-green dual land. Used in RUG Delver, BUG strategies, Infect, and other UG decks. Often abbreviated 'Trop.' *(Related cards: Tropical Island. See also: dual lands.)*
+
+<img src="https://api.scryfall.com/cards/named?exact=Tundra&format=image&version=normal&set=lea" alt="Tundra" width="217">
 
 **Tundra**: The white-blue dual land. Used in Stoneblade, Death and Taxes splashes, Miracles, and UW control decks. *(Related cards: Tundra. See also: dual lands.)*
 
+<img src="https://api.scryfall.com/cards/named?exact=Underground+Sea&format=image&version=normal&set=lea" alt="Underground Sea" width="217">
+
 **Underground Sea**: The blue-black dual land. One of the most played and expensive duals in Legacy, used in Delver, Storm, Reanimator, Doomsday, and virtually every UB deck. Often abbreviated 'USea.' *(Related cards: Underground Sea. See also: dual lands.)*
+
+<img src="https://api.scryfall.com/cards/named?exact=Uro%2C+Titan+of+Nature%27s+Wrath&format=image&version=normal&set=thb" alt="Uro, Titan of Nature's Wrath" width="217">
 
 **Uro**: Uro, Titan of Nature's Wrath. A 3-mana creature with escape that gains 3 life, draws a card, and puts a land into play. A value engine that defined Legacy for a period. Provides life gain, card advantage, and ramp in one card. *(Related cards: Uro, Titan of Nature's Wrath. See also: value, midrange.)*
 
+<img src="https://api.scryfall.com/cards/named?exact=Urza%27s+Saga&format=image&version=normal" alt="Urza's Saga" width="217">
+
 **Urza's Saga**: An enchantment land from MH2 that creates artifact tokens and tutors for 0-1 mana artifacts. A Legacy powerhouse in 8-Cast, Death and Taxes, and other artifact strategies. Finds silver bullets like Pithing Needle or Retrofitter Foundry. *(Related cards: Urza's Saga. See also: 8-Cast, toolbox.)*
+
+<img src="https://api.scryfall.com/cards/named?exact=Veil+of+Summer&format=image&version=normal&set=m20" alt="Veil of Summer" width="217">
 
 **Veil**: Short for Veil of Summer. 'I Veiled their Thoughtseize' means countering the discard spell and drawing a card with Veil of Summer. *(Related cards: Veil of Summer. See also: Veil of Summer.)*
 
+<img src="https://api.scryfall.com/cards/named?exact=Veil+of+Summer&format=image&version=normal&set=m20" alt="Veil of Summer" width="217">
+
 **Veil of Summer**: A 1-mana green instant that gives your spells hexproof from blue/black and draws a card if the opponent cast a blue/black spell this turn. Called 'green Cryptic Command' for its efficiency. A Legacy sideboard staple. *(Related cards: Veil of Summer. See also: protection, sideboard.)*
+
+<img src="https://api.scryfall.com/cards/named?exact=Aether+Vial&format=image&version=normal&set=dst" alt="Aether Vial" width="217">
 
 **Vial**: Aether Vial. A 1-mana artifact that gains charge counters and can tap to put a creature with that mana value from hand onto the battlefield. The backbone of Death and Taxes, Goblins, and Merfolk. Uncounterable creature deployment. *(Related cards: Aether Vial. See also: Death and Taxes, Goblins.)*
 
+<img src="https://api.scryfall.com/cards/named?exact=Volcanic+Island&format=image&version=normal&set=lea" alt="Volcanic Island" width="217">
+
 **Volcanic Island**: The blue-red dual land. Essential for UR Delver, Sneak and Show, and any UR-based deck. One of the most played duals. Often abbreviated 'Volc.' *(Related cards: Volcanic Island. See also: dual lands.)*
+
+<img src="https://api.scryfall.com/cards/named?exact=Wrenn+and+Six&format=image&version=normal" alt="Wrenn and Six" width="217">
 
 **W6**: Wrenn and Six. A 2-mana RG planeswalker that returns lands from graveyard to hand each turn. Enables recursive Wasteland, fixes mana with fetch lands, and pings small creatures. A format-defining Legacy card. *(Related cards: Wrenn and Six. See also: Wasteland lock, planeswalker, mana denial.)*
 
+<img src="https://api.scryfall.com/cards/named?exact=Wasteland&format=image&version=normal&set=tmp" alt="Wasteland" width="217">
+
 **wasteland**: Wasteland the card, or used as a verb: 'wasteland their dual' means destroy their nonbasic land. A defining Legacy card that punishes greedy manabases and enables tempo strategies. Pairs with Stifle to deny fetch lands. *(Related cards: Wasteland. See also: mana denial, Wasteland lock, tempo.)*
+
+<img src="https://api.scryfall.com/cards/named?exact=Young+Pyromancer&format=image&version=normal&set=m14" alt="Young Pyromancer" width="217">
 
 **Young Pyromancer**: A 2-mana red creature that creates 1/1 Elemental tokens whenever you cast an instant or sorcery. A Legacy staple in Delver and midrange decks. Called 'Young Peezy' or 'YP.' *(Related cards: Young Pyromancer. See also: token, tempo.)*
 
@@ -662,9 +894,13 @@ A comprehensive glossary of Magic: The Gathering terminology, organized by categ
 
 **8-Moon**: Running both Blood Moon and Magus of the Moon (a creature with Blood Moon's effect) in a deck, totaling 8 copies of the Moon effect. Maximizes the chances of shutting down nonbasic lands. Common in Mono Red Prison. *(Related cards: Blood Moon, Magus of the Moon. See also: Blood Moon, Mono Red Prison.)*
 
+<img src="https://api.scryfall.com/cards/named?exact=Back+to+Basics&format=image&version=normal&set=usg" alt="Back to Basics" width="217">
+
 **Back to Basics**: A 3-mana blue enchantment that prevents nonbasic lands from untapping. The blue equivalent of Blood Moon. Used in mono-blue or light-splash control decks to punish greedy Legacy manabases. *(Related cards: Back to Basics. See also: Blood Moon, prison.)*
 
 **banned**: A card that is not legal to play in a given format. Legacy has a significant banned list including Deathrite Shaman, Treasure Cruise, Dig Through Time, Sensei's Divining Top, and others. The DCI/Wizards manages the ban list. *(See also: restricted, the reserved list.)*
+
+<img src="https://api.scryfall.com/cards/named?exact=Blood+Moon&format=image&version=normal&set=drk" alt="Blood Moon" width="217">
 
 **Blood Moon**: A 3-mana red enchantment that turns all nonbasic lands into Mountains. Devastating in Legacy where most decks rely heavily on nonbasic lands (duals, fetches, utility lands). Can completely lock out multicolor decks. *(Related cards: Blood Moon. See also: Mono Red Prison, Moon Stompy, Back to Basics, 8-Moon.)*
 
@@ -672,15 +908,21 @@ A comprehensive glossary of Magic: The Gathering terminology, organized by categ
 
 **Chalice check**: Evaluating whether your deck can function through a resolved Chalice of the Void on 1 (or 2). Decks that rely heavily on 1-mana spells fail the Chalice check. This affects deck construction and card choices. *(Related cards: Chalice of the Void. See also: Chalice on 1, Chalice.)*
 
+<img src="https://api.scryfall.com/cards/named?exact=Chalice+of+the+Void&format=image&version=normal&set=mrd" alt="Chalice of the Void" width="217">
+
 **Chalice on 1**: Casting Chalice of the Void with X=1, countering all 1-mana spells. Devastates Legacy because the format's most important cards cost 1: Brainstorm, Ponder, Swords to Plowshares, Lightning Bolt, Delver of Secrets, Dark Ritual, Thoughtseize. *(Related cards: Chalice of the Void. See also: Chalice, prison, stompy.)*
 
 **Cradle of the Hoof**: The combination of Gaea's Cradle powering out Craterhoof Behemoth in Elves. Craterhoof gives all your creatures +X/+X and trample where X is the number of creatures you control. Usually lethal with even a modest board. *(Related cards: Gaea's Cradle, Craterhoof Behemoth. See also: Elves, NO.)*
+
+<img src="https://api.scryfall.com/cards/named?exact=Daze&format=image&version=normal&set=nem" alt="Daze" width="217">
 
 **Daze math**: The mental calculation of whether your opponent can pay the extra 1 mana from Daze. If they tapped all their lands, Daze is live. If they left a land up, it might not be. Also affects your own sequencing: do you play a land to play around Daze, or cast your spell into it? *(Related cards: Daze. See also: Daze, tempo, mana denial.)*
 
 **Doomsday pile**: The specific 5-card stack created by Doomsday. Constructing the right pile for the game state (considering life total, cards in hand, mana available) is one of the most skill-intensive things in Legacy. Common piles involve cantrips leading to Thassa's Oracle. *(Related cards: Doomsday, Thassa's Oracle. See also: Doomsday.)*
 
 **dual lands**: The original 10 dual lands from Alpha/Beta/Unlimited/Revised that have two basic land types and no drawback. (e.g., Underground Sea is Island Swamp). The backbone of Legacy manabases. All on the Reserved List. *(Related cards: Underground Sea, Volcanic Island, Tropical Island, Tundra, Bayou, Savannah, Scrubland, Badlands, Plateau, Taiga. See also: reserved list, fetch land, manabase.)*
+
+<img src="https://api.scryfall.com/cards/named?exact=Polluted+Delta&format=image&version=normal&set=ons" alt="Polluted Delta" width="217">
 
 **fetch land**: Lands that sacrifice to search for a land with a specific basic land type. In Legacy, they find dual lands (e.g., Polluted Delta finds Underground Sea). Enable Brainstorm shuffles, thin the deck, and fix mana perfectly. All 10 Zendikar/Onslaught fetches see play. *(Related cards: Polluted Delta, Flooded Strand, Scalding Tarn, Misty Rainforest, Verdant Catacombs, Windswept Heath, Wooded Foothills, Bloodstained Mire, Marsh Flats, Arid Mesa. See also: dual lands, brainstorm, crack.)*
 
@@ -719,6 +961,8 @@ A comprehensive glossary of Magic: The Gathering terminology, organized by categ
 **the reserved list**: Wizards of the Coast's promise never to reprint certain cards, mostly from early Magic sets. Includes Legacy staples like dual lands, Gaea's Cradle, Lion's Eye Diamond, City of Traitors, and The Tabernacle at Pendrell Vale. The primary barrier to Legacy accessibility. *(Related cards: Underground Sea, Volcanic Island, Gaea's Cradle, Lion's Eye Diamond, The Tabernacle at Pendrell Vale, City of Traitors. See also: dual lands.)*
 
 **turn 1 kill**: Winning the game on the very first turn. Possible in Legacy through Storm (ritual into ritual into Tendrils), Reanimator (Entomb + Reanimate Griselbrand), or Oops All Spells. Force of Will exists specifically to prevent this. *(See also: goldfish, go off, combo, Force of Will.)*
+
+<img src="https://api.scryfall.com/cards/named?exact=Wasteland&format=image&version=normal&set=tmp" alt="Wasteland" width="217">
 
 **Wasteland lock**: Recurring Wasteland every turn (via Life from the Loam, Crucible of Worlds, or Wrenn and Six) to destroy every land the opponent plays. Prevents them from ever having enough mana to cast spells. A primary win condition of the Lands deck. *(Related cards: Wasteland, Life from the Loam, Crucible of Worlds, Wrenn and Six. See also: Lands, mana denial, Wasteland, W6.)*
 
