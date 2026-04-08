@@ -97,9 +97,10 @@ Legacy has Wasteland, Daze, Blood Moon, and Back to Basics. You need a plan:
 - Fetchlands that find your duals are critical (Polluted Delta finds Underground Sea AND Island)
 - Budget alternative: Shock lands (Watery Grave) work but cost 2 life per use
 
+## Step 3: The Blue Card Question
+
 <img src="https://api.scryfall.com/cards/named?exact=Volcanic+Island&format=image&version=normal&set=lea" alt="Volcanic Island" width="217">
 
-## Step 3: The Blue Card Question
 
 ### Brainstorm and Ponder
 
@@ -194,9 +195,10 @@ A card is Legacy-playable if it does at least one of:
 
 Cards that cost 3+ mana need to be game-changing to justify their spot (Murktide Regent, True-Name Nemesis, Uro).
 
+## Step 5: Build the Sideboard
+
 <img src="https://api.scryfall.com/cards/named?exact=True-Name+Nemesis&format=image&version=normal&set=c13" alt="True-Name Nemesis" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Uro%2C+Titan+of+Nature%27s+Wrath&format=image&version=normal&set=thb" alt="Uro, Titan of Nature's Wrath" width="217">
 
-## Step 5: Build the Sideboard
 
 ### Sideboard Principles
 - **Have a plan for each major matchup** — don't just jam 15 "good cards"

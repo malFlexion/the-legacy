@@ -221,9 +221,10 @@ Legacy's power level means turn 1 often defines the game:
 
 **Storm Count**: The number of spells cast in a turn. Tendrils of Agony and Empty the Warrens copy themselves for each prior spell. Storm decks spend their turn casting rituals (Dark Ritual, Rite of Flame, Lion's Eye Diamond) to build a lethal count before casting the finisher.
 
+## The Complete Ban List
+
 <img src="https://api.scryfall.com/cards/named?exact=Tendrils+of+Agony&format=image&version=normal&set=scg" alt="Tendrils of Agony" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Dark+Ritual&format=image&version=normal&set=lea" alt="Dark Ritual" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Lion%27s+Eye+Diamond&format=image&version=normal&set=mir" alt="Lion's Eye Diamond" width="217">
 
-## The Complete Ban List
 
 ### Power Nine (All Banned)
 

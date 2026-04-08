@@ -131,9 +131,10 @@ Choose 4C Tempo when: You want a specific hate card that requires a fourth color
 - **Unfavorable**: 4C Control / Beanstalk (grinds harder; card advantage eventually overwhelms your threats), Mono Red Prison (Blood Moon + Chalice of the Void shuts down your entire strategy), Death and Taxes (Thalia taxes your spells; Aether Vial dodges counters; equipment outclasses your creatures), Eldrazi (Chalice on 1 is game over; Thought-Knot Seer strips key cards)
 - **Even**: Other Delver variants (tempo mirrors are highly play/draw dependent), Reanimator (depends on disruption drawn; strong but not dominant), Show and Tell (Force + Daze is good but they can power through), Ocelot Pride Midrange (close matchup that depends on builds and sideboard plans)
 
+### Sideboard Guide
+
 <img src="https://api.scryfall.com/cards/named?exact=Pyroblast&format=image&version=normal&set=ice" alt="Pyroblast" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Red+Elemental+Blast&format=image&version=normal&set=lea" alt="Red Elemental Blast" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Surgical+Extraction&format=image&version=normal&set=nph" alt="Surgical Extraction" width="217">
 
-### Sideboard Guide
 
 | Card | Target Matchups |
 |------|----------------|
@@ -257,9 +258,10 @@ Choose these when: You have a specific metagame read that rewards a less convent
 - **Unfavorable**: 4C Control / Beanstalk (Leyline Binding and sweepers handle tokens; card advantage grinds you out), Mono Red Prison (Chalice on 1 shuts off Ocelot Pride and Guide; Blood Moon strands colored mana), Eldrazi (bigger creatures; All Is Dust wipes your board; Chalice on 1 is devastating)
 - **Even**: Delver / Tempo (close and play/draw dependent; their Wastelands matter, but your board snowballs), Show and Tell (you're fast but lack blue counters unless Jeskai), Death and Taxes (similar creature strategies; comes down to specific card matchups)
 
+### Sideboard Guide
+
 <img src="https://api.scryfall.com/cards/named?exact=Mindbreak+Trap&format=image&version=normal&set=zen" alt="Mindbreak Trap" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Meltdown&format=image&version=normal&set=usg" alt="Meltdown" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Containment+Priest&format=image&version=normal&set=c14" alt="Containment Priest" width="217">
 
-### Sideboard Guide
 
 | Card | Target Matchups |
 |------|----------------|
@@ -356,9 +358,10 @@ Choose Sneak Attack when: You want to dodge all blue hate cards and don't mind l
 - **Unfavorable**: Dimir Tempo (Thoughtseize + Force of Will + Daze + fast clock is the nightmare), Delver variants (free counters + pressure is the best way to beat combo), Beanstalk Control (Force of Will + Endurance + their own Show and Tell targets like Atraxa), Reanimator (faster, and they can reanimate your own Griselbrand if it dies)
 - **Even**: Storm (both are fast combo; comes down to interaction and who's on the play), Other combo (Oops, Doomsday -- racing matchups), 8-Cast (Chalice is annoying but not backbreaking; Force of Will fights work)
 
+### Sideboard Guide
+
 <img src="https://api.scryfall.com/cards/named?exact=Defense+Grid&format=image&version=normal&set=usg" alt="Defense Grid" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Flusterstorm&format=image&version=normal&set=cmd" alt="Flusterstorm" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Boseiju%2C+Who+Endures&format=image&version=normal&set=neo" alt="Boseiju, Who Endures" width="217">
 
-### Sideboard Guide
 
 | Card | Target Matchups |
 |------|----------------|
@@ -452,9 +455,10 @@ Choose Mono Blue Belcher when: You want a Charbelcher deck that can interact wit
 - **Unfavorable**: Dimir Tempo (Force of Will + Daze + Thoughtseize is 8-12 pieces of interaction), Izzet Delver (Force + Daze; they're fast enough to punish a stumble), 4C Control (Force + Flusterstorm + multiple layers of interaction), Any blue deck with a reasonable clock (the fundamental weakness of all-in combo)
 - **Even**: Show and Tell (racing combo matchup; whoever has Force wins), Storm (similar speed; interaction quality determines the winner), Reanimator (both are fast combo; Force of Will checks decide games)
 
+### Sideboard Guide
+
 <img src="https://api.scryfall.com/cards/named?exact=Pact+of+Negation&format=image&version=normal&set=fut" alt="Pact of Negation" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Grief&format=image&version=normal&set=mh2" alt="Grief" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Cabal+Therapy&format=image&version=normal&set=jud" alt="Cabal Therapy" width="217">
 
-### Sideboard Guide
 
 | Card | Target Matchups |
 |------|----------------|
@@ -598,9 +602,10 @@ Choose TEG when: You want a storm-adjacent strategy with a strong grindy backup 
 - **Unfavorable**: Dimir Tempo (Thoughtseize + Force of Will + Daze + fast clock is devastating), Delver variants (free counters plus pressure is storm's worst nightmare), Beanstalk Control (Force of Will + Flusterstorm + Endurance; multiple layers of interaction)
 - **Even**: Show and Tell (both are combo; whoever has Force wins), Oops / Belcher (racing matchup; interaction quality decides), Reanimator (similar speed; disruption quality matters)
 
+### Sideboard Guide
+
 <img src="https://api.scryfall.com/cards/named?exact=Veil+of+Summer&format=image&version=normal&set=m20" alt="Veil of Summer" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Galvanic+Relay&format=image&version=normal&set=mh2" alt="Galvanic Relay" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Empty+the+Warrens&format=image&version=normal&set=tsp" alt="Empty the Warrens" width="217">
 
-### Sideboard Guide
 
 | Card | Target Matchups |
 |------|----------------|
@@ -786,9 +791,10 @@ Choose Rosheen when: You want to surprise opponents with an unconventional contr
 - **Unfavorable**: Fast combo (Storm, Oops, Belcher -- too fast before control stabilizes unless you have Force), Lands (hard to interact with their combo; Wasteland + Life from the Loam grinds control out), Show and Tell (putting Omniscience or Emrakul into play through counters is their specialty)
 - **Even**: Ocelot Pride (depends on sweeper timing; can go either way), Other control (mirror matches determined by card advantage engines), Reanimator (Force of Will is good but they can grind with Reanimate effects)
 
+### Sideboard Guide
+
 <img src="https://api.scryfall.com/cards/named?exact=Back+to+Basics&format=image&version=normal&set=usg" alt="Back to Basics" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Force+of+Negation&format=image&version=normal&set=mh1" alt="Force of Negation" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Endurance&format=image&version=normal&set=mh2" alt="Endurance" width="217">
 
-### Sideboard Guide
 
 | Card | Target Matchups |
 |------|----------------|
@@ -911,9 +917,10 @@ Choose UWx when: You want mostly UW but need a specific splash card for your met
 - **Unfavorable**: Combo (Storm, Oops, Show and Tell -- too slow to pressure, not enough disruption), Lands (Marit Lage flies over equipment; Wasteland + Loam grinds you out), 4C Control / Beanstalk (out-grinds you with superior card advantage)
 - **Even**: Ocelot Pride (equipment dominates combat but their go-wide plan can overwhelm), Other midrange (depends on specific card matchups and builds), Eldrazi (Chalice is annoying but equipment matches their big creatures)
 
+### Sideboard Guide
+
 <img src="https://api.scryfall.com/cards/named?exact=Null+Rod&format=image&version=normal&set=wth" alt="Null Rod" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Collector+Ouphe&format=image&version=normal&set=mh1" alt="Collector Ouphe" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Council%27s+Judgment&format=image&version=normal&set=cns" alt="Council's Judgment" width="217">
 
-### Sideboard Guide
 
 | Card | Target Matchups |
 |------|----------------|
@@ -1046,9 +1053,10 @@ Choose Soldiers when: You want a tribal synergy deck with D&T's disruption backb
 - **Unfavorable**: Ocelot Pride / Energy (they go wider; Galvanic Discharge handles your creatures; token generation overwhelms), Elves (too many creatures to handle; they combo faster than you can disrupt), 4C Control / Beanstalk (card advantage grinds through your disruption; sweepers handle your board)
 - **Even**: Show and Tell (no hard counters but Thalia + fast clock can race; Containment Priest from sideboard), Reanimator (Karakas handles legends; Containment Priest is devastating; but they can be too fast), Stoneblade (similar creature quality; comes down to Vial vs countermagic advantage)
 
+### Sideboard Guide
+
 <img src="https://api.scryfall.com/cards/named?exact=Deafening+Silence&format=image&version=normal&set=eld" alt="Deafening Silence" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Ethersworn+Canonist&format=image&version=normal&set=ala" alt="Ethersworn Canonist" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Cataclysm&format=image&version=normal&set=exo" alt="Cataclysm" width="217">
 
-### Sideboard Guide
 
 | Card | Target Matchups |
 |------|----------------|
@@ -2017,9 +2025,10 @@ Cascade decks ensure that cascade always hits a specific devastating spell by ru
 
 Legacy's card pool is vast enough to support dozens of fringe but functional archetypes. These range from competitive-fringe (Hive Mind, Splinter Twin, Neoform) to pure jank (Battle of Wits, Dragon's Approach). Some have been banned out of relevance (Nadu, Breach, Survival of the Fittest).
 
+### Notable Archetypes
+
 <img src="https://api.scryfall.com/cards/named?exact=Hive+Mind&format=image&version=normal&set=m10" alt="Hive Mind" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Splinter+Twin&format=image&version=normal&set=roe" alt="Splinter Twin" width="217"> <img src="https://api.scryfall.com/cards/named?exact=Neoform&format=image&version=normal&set=war" alt="Neoform" width="217">
 
-### Notable Archetypes
 
 | Archetype | Strategy |
 |-----------|----------|
