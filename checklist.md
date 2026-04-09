@@ -16,12 +16,12 @@
 
 ## Phase 2: Model
 
-- [ ] Build LoRA training dataset
-  - [ ] Q&A pairs from comprehensive rules
-  - [ ] Deck-building rationale (why cards are in decks, matchup reasoning)
-  - [ ] Card evaluation in Legacy context
-  - [ ] Deck analysis examples (archetype identification, strengths/weaknesses)
-  - [ ] Budget substitution examples (card-to-card with trade-offs)
+- [x] Build LoRA training dataset
+  - [x] Q&A pairs from comprehensive rules (205 pairs)
+  - [x] Deck-building rationale (47 pairs)
+  - [x] Card evaluation in Legacy context (135 pairs)
+  - [x] Deck analysis examples (24 pairs)
+  - [x] Budget substitution examples (21 pairs)
 - [ ] Hand-review curated subset (~200-300 examples) for accuracy
 - [ ] Build evaluation dataset
   - [ ] Deck legality (60 main + 15 side, all Legacy-legal)
