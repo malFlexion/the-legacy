@@ -52,20 +52,36 @@ Format health: Considered healthy per March 2026 B&R announcement (no changes). 
 the_legacy/
   data/
     comprehensive-rules.txt    # Full MTG Comprehensive Rules (Feb 2026, ~943KB)
-    scryfall-cards.json         # Complete Scryfall card database (~508MB)
+    scryfall-cards.json         # Scryfall bulk data (508MB, gitignored — download separately)
     mtg-slang.md                # 346-entry MTG slang dictionary (5 categories)
     legacy-deck-history.md      # 54 archetypes + 420 variant index with decklists, history, meta data
     archetype-guide.md          # 32 parent archetypes, 200+ variants with Scryfall links
     legacy-basics.md            # Legacy format guide (ban list, play patterns, glossary)
     deckbuilding-guide.md       # Deckbuilding principles (Reid Duke) with card images
     legacy-analysis.md          # Meta analysis with matchup/hate matrices, meta evolution
-    scryfall-cards.json         # Scryfall bulk data (508MB, gitignored — download separately)
+    training/                   # LoRA training dataset (1,449 pairs across 7 categories)
+      rules_qa.jsonl            #   Rules Q&A (422 pairs)
+      card_evaluation.jsonl     #   Card playability assessment (294 pairs)
+      deckbuilding_rationale.jsonl  # Deck-building rationale (217 pairs)
+      deck_analysis.jsonl       #   Archetype ID, meta positioning (146 pairs)
+      board_state_analysis.jsonl #  Opening hands, board states, sequencing (130 pairs)
+      conversation_flow.jsonl   #   Deck consultation dialogues (119 pairs)
+      budget_substitutions.jsonl #  Budget alternatives, upgrade paths (121 pairs)
+  src/
+    build_vectordb.py           # Builds ChromaDB vector database (719 chunks)
+    card_index.py               # Card name index for fuzzy matching (36,670 cards)
+  tests/
+    test_card_index.py          # 32 tests for card index
+    test_build_vectordb.py      # 47 tests for vector DB builder
+  scripts/                      # Training data generator scripts
   notes/
     assignment-00.md ... assignment-11.md   # Course assignment notes
     chapter-01.md ... chapter-12.md         # Book chapter notes
     final-project.md                        # Rubric breakdown
-  final-project-plan.md        # Detailed implementation plan
-  README.md                    # This file
+  vectordb/                     # ChromaDB vector database (gitignored, rebuild with src/build_vectordb.py)
+  checklist.md                  # Project progress checklist
+  final-project-plan.md         # Detailed implementation plan
+  README.md                     # This file
 ```
 
 ## Technology Stack
