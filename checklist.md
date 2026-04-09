@@ -16,12 +16,14 @@
 
 ## Phase 2: Model
 
-- [x] Build LoRA training dataset
-  - [x] Q&A pairs from comprehensive rules (205 pairs)
-  - [x] Deck-building rationale (47 pairs)
-  - [x] Card evaluation in Legacy context (135 pairs)
-  - [x] Deck analysis examples (24 pairs)
-  - [x] Budget substitution examples (21 pairs)
+- [x] Build LoRA training dataset (1,449 pairs across 7 categories)
+  - [x] Q&A pairs from comprehensive rules (422 pairs)
+  - [x] Deck-building rationale (217 pairs)
+  - [x] Card evaluation in Legacy context (294 pairs)
+  - [x] Deck analysis examples (146 pairs)
+  - [x] Budget substitution examples (121 pairs)
+  - [x] Conversation flow examples (119 pairs)
+  - [x] Board state analysis examples (130 pairs)
 - [ ] Hand-review curated subset (~200-300 examples) for accuracy
 - [ ] Build evaluation dataset
   - [ ] Deck legality (60 main + 15 side, all Legacy-legal)
