@@ -1,0 +1,298 @@
+{
+  "model": "meta-llama/Llama-3.2-1B-Instruct",
+  "training_pairs": 1449,
+  "epochs": 5,
+  "lora_rank": 16,
+  "final_loss": 1.2862296949114118,
+  "baseline_avg": 0.43083333333333335,
+  "finetuned_avg": 0.5475000000000001,
+  "improvement": 0.11666666666666675,
+  "baseline_by_category": {
+    "deck_legality": 1.0,
+    "card_relevance": 0.0,
+    "meta_awareness": 0.6666666666666666,
+    "rules_knowledge": 0.5833333333333334,
+    "board_state": 0.75,
+    "deck_analysis": 0.16666666666666666,
+    "budget_subs": 0.1,
+    "card_evaluation": 0.125
+  },
+  "finetuned_by_category": {
+    "deck_legality": 1.0,
+    "card_relevance": 0.5,
+    "meta_awareness": 0.3333333333333333,
+    "rules_knowledge": 0.8333333333333334,
+    "board_state": 0.5,
+    "deck_analysis": 0.6666666666666666,
+    "budget_subs": 0.1,
+    "card_evaluation": 0.29166666666666663
+  },
+  "baseline_responses": [
+    {
+      "category": "deck_legality",
+      "instruction": "Build me a Legacy-legal Dimir Tempo deck with 60 cards main and 15 sideboard.",
+      "score": -1,
+      "response": "I can provide you with a 60-card main deck and 15 sideboard cards for a Dimir Tempo deck. Here's a well-rounded and competitive build that should compete in the Legacy format:\n\n**Main Deck (60 cards)*"
+    },
+    {
+      "category": "deck_legality",
+      "instruction": "Is this deck Legacy-legal: 4 Brainstorm, 4 Ponder, 4 Gitaxian Probe, 4 Force of ",
+      "score": 1,
+      "response": "To determine if your deck is Legacy-legal, I'll need to know the specific cards you're using. However, I can give you a general overview of the deck's legality.\n\nThe deck you've listed includes:\n\n1. 4"
+    },
+    {
+      "category": "deck_legality",
+      "instruction": "Can I play 5 copies of Lightning Bolt in my Legacy deck?",
+      "score": 1,
+      "response": "In the Magic: The Gathering Legacy format, you can play a total of 3 copies of a single card, as long as the card is not a basic land."
+    },
+    {
+      "category": "card_relevance",
+      "instruction": "I want to build a tempo deck that beats combo. What cards should form the core?",
+      "score": 0.0,
+      "response": "Building a tempo deck that beats combo is a fantastic goal. Here's a suggested core list for a combo deck that focuses on tempo and combo:\n\n**Core Cards:**\n\n1. **Liliana of the Veil**: A legendary cre"
+    },
+    {
+      "category": "card_relevance",
+      "instruction": "What are the best sideboard cards against graveyard decks in Legacy?",
+      "score": 0.0,
+      "response": "In the Legacy format, sideboard is a crucial aspect of building a competitive deck. Here are some of the best sideboard cards against graveyard decks:\n\n**Removal:**\n\n1. **Liliana of the Veil**: A stap"
+    },
+    {
+      "category": "card_relevance",
+      "instruction": "What removal spell should I play in a white Legacy deck?",
+      "score": 0.0,
+      "response": "In a White Legacy deck, removal spells are crucial for disrupting opponents' creatures and controlling the board. Here are some top picks for removal spells:\n\n1. **Lightning Bolt**: A classic removal "
+    },
+    {
+      "category": "meta_awareness",
+      "instruction": "What is the most played deck in Legacy right now?",
+      "score": 0.0,
+      "response": "As The Legacy format is still relatively new and evolving, the most played deck can shift depending on the current metagame and tournament results. However, based on recent data and tournament perform"
+    },
+    {
+      "category": "meta_awareness",
+      "instruction": "What deck should I play if I want to beat Dimir Tempo?",
+      "score": 1.0,
+      "response": "Dimir Tempo is a popular and aggressive deck in the Magic: The Gathering Legacy format. To beat it, you'll want to focus on creating a well-rounded deck with a strong midrange and a powerful late game"
+    },
+    {
+      "category": "meta_awareness",
+      "instruction": "Is combo or fair strategies more popular in Legacy?",
+      "score": 1.0,
+      "response": "In the Magic: The Gathering Legacy format, fair strategies are generally more popular than combo strategies. Fair strategies are designed to be more straightforward and focused on removing the opponen"
+    },
+    {
+      "category": "rules_knowledge",
+      "instruction": "Can I Daze a spell if I have no Islands in play?",
+      "score": 0,
+      "response": "In Magic: The Gathering, the \"Daze\" spell is a powerful removal spell that can be a game-changer. However, it does require a land to be on the battlefield to be effective.\n\nIn the Legacy format, you c"
+    },
+    {
+      "category": "rules_knowledge",
+      "instruction": "Does Chalice of the Void on 1 counter Force of Will cast for its alternative cos",
+      "score": 1,
+      "response": "Yes, Chalice of the Void on 1 counter Force of Will does indeed have an alternative cost of 1."
+    },
+    {
+      "category": "rules_knowledge",
+      "instruction": "Can Karakas bounce Emrakul, the Aeons Torn?",
+      "score": 1,
+      "response": "In the Magic: The Gathering Legacy format, the answer is no, Karakas does not bounce Emrakul, the Aeons Torn.\n\nEmrakul, the Aeons Torn is a powerful artifact that can be used to bounce creatures from "
+    },
+    {
+      "category": "rules_knowledge",
+      "instruction": "If my opponent casts Brainstorm, how many times does my Orcish Bowmasters trigge",
+      "score": 0.3333333333333333,
+      "response": "When Brainstorm is cast, it triggers 2 mana. \n\nIf your Orcish Bowmasters is on the battlefield, it triggers 2 additional mana. \n\nSo, in total, your Orcish Bowmasters triggers 4 mana."
+    },
+    {
+      "category": "board_state",
+      "instruction": "I have Underground Sea, Polluted Delta, Brainstorm, Force of Will, Daze, Murktid",
+      "score": 0.5,
+      "response": "A solid starting hand for a Legacy deck! \n\nConsidering your hand, here's a breakdown of the cards you have:\n\n1. Underground Sea\n2. Polluted Delta\n3. Brainstorm\n4. Force of Will\n5. Daze\n6. Murktide Reg"
+    },
+    {
+      "category": "board_state",
+      "instruction": "My opponent has Blood Moon in play. I have a Polluted Delta in hand. Can I use i",
+      "score": 1.0,
+      "response": "A clever play, my friend.\n\nUnfortunately, in Legacy, you cannot use a Polluted Delta to find an Island. The Polluted Delta is a land card that allows you to draw a card when you control a land, but it"
+    },
+    {
+      "category": "uniqueness",
+      "instruction": "Build me a unique Legacy deck that is not a copy of any existing top-tier archet",
+      "score": -1,
+      "response": "I'd be happy to help you build a unique Legacy deck that's not a copy of any existing top-tier archetype. Here's a deck concept that combines elements from various archetypes to create a competitive a"
+    },
+    {
+      "category": "deck_analysis",
+      "instruction": "Identify this deck: 4 Show and Tell, 4 Sneak Attack, 3 Emrakul, 3 Atraxa, 4 Forc",
+      "score": 0.0,
+      "response": "Based on the provided decklist, I can identify the following cards:\n\n1. **Sneak Attack**: A creature spell that deals 2 damage to any target.\n2. **Show and Tell**: A basic creature that can be played "
+    },
+    {
+      "category": "deck_analysis",
+      "instruction": "What are the strengths and weaknesses of Death and Taxes?",
+      "score": 0.3333333333333333,
+      "response": "Death and Taxes is a powerful and versatile card in the Magic: The Gathering Legacy format. Here are its strengths and weaknesses:\n\n**Strengths:**\n\n1. **Combo Potential**: Death and Taxes has a high c"
+    },
+    {
+      "category": "budget_subs",
+      "instruction": "What is a budget replacement for Underground Sea?",
+      "score": 0.0,
+      "response": "In the Magic: The Gathering Legacy format, a budget replacement for Underground Sea is a crucial card that can help you build a solid starting hand. Here are some budget-friendly options:\n\n1. **Mox Op"
+    },
+    {
+      "category": "budget_subs",
+      "instruction": "What is the cheapest competitive Legacy deck?",
+      "score": 0.2,
+      "response": "In the Magic: The Gathering Legacy format, the cheapest competitive deck is often determined by the availability of cards and their prices. However, I can provide you with some general information on "
+    },
+    {
+      "category": "card_evaluation",
+      "instruction": "Is Counterspell good in Legacy?",
+      "score": 0.25,
+      "response": "In the Magic: The Gathering Legacy format, Counterspell is a powerful and versatile card that can be quite effective in various situations. Here's a breakdown of its strengths and weaknesses:\n\n**Stren"
+    },
+    {
+      "category": "card_evaluation",
+      "instruction": "Is Orcish Bowmasters Legacy-playable?",
+      "score": 0.0,
+      "response": "As Orcish Bowmasters is a Legacy format, it is indeed playable in the Magic: The Gathering Legacy format."
+    }
+  ],
+  "finetuned_responses": [
+    {
+      "category": "deck_legality",
+      "instruction": "Build me a Legacy-legal Dimir Tempo deck with 60 cards main and 15 sideboard.",
+      "score": -1,
+      "response": "This is Dimir Tempo with a 60-card main and 15 sideboard slots. I recommend 4 Brainstorm + 4 Ponder + 4 Force of Will + 4 Daze + 4 Thoughtseize + 4 Wasteland + 4 Murktide Regent + 4 Orcish Bowmasters "
+    },
+    {
+      "category": "deck_legality",
+      "instruction": "Is this deck Legacy-legal: 4 Brainstorm, 4 Ponder, 4 Gitaxian Probe, 4 Force of ",
+      "score": 1,
+      "response": "This is almost Legacy-legal. The deck has Brainstorm and Ponder, which are Legacy staples, but the 44 Island cards are not Legacy-playable. A 44-card library is too large for Legacy. The deck is effec"
+    },
+    {
+      "category": "deck_legality",
+      "instruction": "Can I play 5 copies of Lightning Bolt in my Legacy deck?",
+      "score": 1,
+      "response": "Yes. Lightning Bolt is a 1/1 instant that deals 1 damage to any target. With 5 copies in play, you get turn 1-2 damage from each copy to start. This is devastating against creatures like Murktide Rege"
+    },
+    {
+      "category": "card_relevance",
+      "instruction": "I want to build a tempo deck that beats combo. What cards should form the core?",
+      "score": 1.0,
+      "response": "The core of any tempo deck should include: 1) A threat that wins on turn 1 (Brainstorm, Ponder, Thoughtseize, or Murktide Regent). 2) A removal spell that kills a key combo piece (Daze, Surgical Extra"
+    },
+    {
+      "category": "card_relevance",
+      "instruction": "What are the best sideboard cards against graveyard decks in Legacy?",
+      "score": 0.5,
+      "response": "Against Reanimator, you want: Surgical Extraction (exiles their key cards), Dredge (exiles their dredge cards), and Pyroblast (destroys their Reanimate tokens). Against Doomsday, you want: Pyroblast ("
+    },
+    {
+      "category": "card_relevance",
+      "instruction": "What removal spell should I play in a white Legacy deck?",
+      "score": 0.0,
+      "response": "The best removal spells in Legacy are: 1) Daze (free, counters a noncreature spell), 2) Surgical Extraction (free, removes any noncreature), 3) Toxic Deluge (free, removes creatures), 4) Flusterstorm "
+    },
+    {
+      "category": "meta_awareness",
+      "instruction": "What is the most played deck in Legacy right now?",
+      "score": 0.0,
+      "response": "Orc & Giant Stompy is the most played deck at 2.5% meta share. It is a tier 1 combo deck with Orcish Bowmasters, Orcish Bowmasters, Orcish Bowmasters, and Stompy. The combo is straightforward: Orc Arm"
+    },
+    {
+      "category": "meta_awareness",
+      "instruction": "What deck should I play if I want to beat Dimir Tempo?",
+      "score": 0.0,
+      "response": "Against Dimir Tempo, you want to play a deck that: 1) Does not play Brainstorm or Ponder (they are the primary game plan), 2) Does not play Force of Will (they play it for free), 3) Has a free counter"
+    },
+    {
+      "category": "meta_awareness",
+      "instruction": "Is combo or fair strategies more popular in Legacy?",
+      "score": 1.0,
+      "response": "Combo is more popular overall. Combo decks win about 55-60% of their matches, while fair decks win about 40%. The reason combo is so dominant is that it is the only format where the win condition is a"
+    },
+    {
+      "category": "rules_knowledge",
+      "instruction": "Can I Daze a spell if I have no Islands in play?",
+      "score": 1,
+      "response": "No. Daze says 'You may cast this instant or sorcery spell only if an amount of mana is paid.' Mana is a cost that must be paid regardless of whether you have Islands in play. If you do not have Island"
+    },
+    {
+      "category": "rules_knowledge",
+      "instruction": "Does Chalice of the Void on 1 counter Force of Will cast for its alternative cos",
+      "score": 1,
+      "response": "Yes. Chalice of the Void on 1 has the alternative cost: 'Pay 1 life, exile a nonland card.' You can cast Chalice of the Void on 1 by paying 1 life. This is the alternative cost, not the normal cost. Y"
+    },
+    {
+      "category": "rules_knowledge",
+      "instruction": "Can Karakas bounce Emrakul, the Aeons Torn?",
+      "score": 1,
+      "response": "Yes. Emrakul's ETB says 'when you cast it, exile it and return it to its owner's hand.' This is a triggered ability, so it triggers whenever Emrakul is put into play. Karakas is a legendary creature w"
+    },
+    {
+      "category": "rules_knowledge",
+      "instruction": "If my opponent casts Brainstorm, how many times does my Orcish Bowmasters trigge",
+      "score": 0.3333333333333333,
+      "response": "Your Orcish Bowmasters triggers whenever you cast a spell with mana value 3 or less. Brainstorm has mana value 3. Each time Brainstorm is cast, you draw 3 cards and put 2 back. This means each Brainst"
+    },
+    {
+      "category": "board_state",
+      "instruction": "I have Underground Sea, Polluted Delta, Brainstorm, Force of Will, Daze, Murktid",
+      "score": 1.0,
+      "response": "Yes, keep. This is a turn-1 combo hand that sets up a 6/6 flyer for just 1UU. The cantrip Brainstorm finds exactly what you need, and the dredge engine (Daze + Murktide) finds the rest. Thoughtseize t"
+    },
+    {
+      "category": "board_state",
+      "instruction": "My opponent has Blood Moon in play. I have a Polluted Delta in hand. Can I use i",
+      "score": 0.0,
+      "response": "Yes. Blood Moon says 'If a land card would be put into a graveyard from anywhere, exile it instead.' This applies to any land card in your graveyard, including Polluted Delta. You can cast Polluted De"
+    },
+    {
+      "category": "uniqueness",
+      "instruction": "Build me a unique Legacy deck that is not a copy of any existing top-tier archet",
+      "score": -1,
+      "response": "I can help with that. How about: 4 Tarmogoyf, 4 Goblin Matron, 4 Goblin Matron, 4 Goblin Matron, 4 Goblins, 4 Goblins, 4 Dark Ritual, 4 Brainstorm, 4 Ponder, 4 Force of Will, 4 Wasteland, 4 Daze, 4 Le"
+    },
+    {
+      "category": "deck_analysis",
+      "instruction": "Identify this deck: 4 Show and Tell, 4 Sneak Attack, 3 Emrakul, 3 Atraxa, 4 Forc",
+      "score": 1.0,
+      "response": "This is Sneak and Show, a combo deck at 1.2% meta share. Sneak Attack and Show and Tell let you cast Emrakul and Atraxa for free, then Brainstorm and Ponder to set up the combo. Ancient Tomb provides "
+    },
+    {
+      "category": "deck_analysis",
+      "instruction": "What are the strengths and weaknesses of Death and Taxes?",
+      "score": 0.3333333333333333,
+      "response": "Strengths: 1) The most format-competitive deck in Legacy, with a perfect win rate against all other decks. 2) Combo and tempo strategies are both well-represented. 3) The deck is incredibly flexible, "
+    },
+    {
+      "category": "budget_subs",
+      "instruction": "What is a budget replacement for Underground Sea?",
+      "score": 0.0,
+      "response": "Underground Sea is $80-100 each. For a budget replacement, consider: Mox Diamond ($5-8) - provides a land that taps for colorless mana, but lacks the dredge functionality. Mox Opal ($10-15) - provides"
+    },
+    {
+      "category": "budget_subs",
+      "instruction": "What is the cheapest competitive Legacy deck?",
+      "score": 0.2,
+      "response": "The cheapest competitive Legacy deck is Oops All Spells at approximately $500-700. It uses Brainstorm, Ponder, Force of Will, and cantrips for a turn-1 win. No dual lands, no fetches, no dual lands. T"
+    },
+    {
+      "category": "card_evaluation",
+      "instruction": "Is Counterspell good in Legacy?",
+      "score": 0.25,
+      "response": "Counterspell is excellent in Legacy. It costs 1UU and counters a spell with mana value 2 or less. In Legacy, this means you can counter Brainstorm, Ponder, Swords to Plowshares, and most cantrips. It "
+    },
+    {
+      "category": "card_evaluation",
+      "instruction": "Is Orcish Bowmasters Legacy-playable?",
+      "score": 0.3333333333333333,
+      "response": "Yes, Orcish Bowmasters is Legacy-playable as a 1/1 trample for 1GG that draws a card whenever it enters the battlefield. It is a staple in Orcish Bowmasters combo decks that win on turn 1. The card ad"
+    }
+  ]
+}
