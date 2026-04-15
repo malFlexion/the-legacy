@@ -25,20 +25,28 @@
   - [x] Conversation flow examples (119 pairs)
   - [x] Board state analysis examples (130 pairs)
 - [ ] Hand-review curated subset (~200-300 examples) for accuracy
-- [ ] Build evaluation dataset
-  - [ ] Deck legality (60 main + 15 side, all Legacy-legal)
-  - [ ] Card relevance (recommended cards match stated strategy)
-  - [ ] Meta awareness (correctly identifies top decks and weaknesses)
-  - [ ] Rules knowledge (correct rulings on card interactions)
-  - [ ] Board state analysis (identifies correct play given a board)
-  - [ ] Uniqueness (deck is meaningfully different from known lists)
-  - [ ] Deck analysis (correctly classifies archetype, strengths, weaknesses)
-  - [ ] Budget substitutions (functional replacements with honest trade-offs)
-  - [ ] Card evaluation (correctly assesses Legacy playability)
-- [ ] Run baseline eval against un-finetuned model
-- [ ] LoRA finetune on training set
-- [ ] Run eval against finetuned model, compare results
+- [x] Build evaluation dataset (22 test cases across 9 categories)
+  - [x] Deck legality (60 main + 15 side, all Legacy-legal)
+  - [x] Card relevance (recommended cards match stated strategy)
+  - [x] Meta awareness (correctly identifies top decks and weaknesses)
+  - [x] Rules knowledge (correct rulings on card interactions)
+  - [x] Board state analysis (identifies correct play given a board)
+  - [x] Uniqueness (deck is meaningfully different from known lists)
+  - [x] Deck analysis (correctly classifies archetype, strengths, weaknesses)
+  - [x] Budget substitutions (functional replacements with honest trade-offs)
+  - [x] Card evaluation (correctly assesses Legacy playability)
+- [x] Run baseline eval against un-finetuned model (43.1%)
+- [x] LoRA finetune on training set (1,449 pairs, 5 epochs, loss 1.29)
+- [x] Run eval against finetuned model, compare results (54.8%, +11.7%)
 - [ ] Document honest analysis of improvements and remaining weaknesses
+- [ ] Round 2: Fix regressions and weak categories
+  - [ ] Add meta_awareness pairs (regressed 67% → 33%, model hallucinating deck names)
+  - [ ] Add board_state pairs (regressed 75% → 50%, Blood Moon ruling wrong)
+  - [ ] Add budget_subs pairs (stuck at 10%, recommending Mox Diamond instead of Watery Grave)
+  - [ ] Add card_evaluation pairs (13% → 29%, still fabricating card stats)
+  - [ ] Add negative examples — teach model to say "I'm not sure" instead of hallucinating
+  - [ ] Fix factual errors in existing training data (e.g. Counterspell description, Bowmasters stats)
+  - [ ] Re-run finetune and eval
 
 ## Phase 3: Infrastructure
 
