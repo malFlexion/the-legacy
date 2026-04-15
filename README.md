@@ -73,6 +73,9 @@ the_legacy/
   tests/
     test_card_index.py          # 32 tests for card index
     test_build_vectordb.py      # 47 tests for vector DB builder
+  notebooks/
+    finetune_legacy.ipynb       # LoRA finetuning notebook (SageMaker)
+    eval_report.json            # Evaluation results (Round 1)
   scripts/                      # Training data generator scripts
   notes/
     assignment-00.md ... assignment-11.md   # Course assignment notes
@@ -84,14 +87,32 @@ the_legacy/
   README.md                     # This file
 ```
 
+## Training Results (Round 1)
+
+LoRA finetune of Llama 3.2 1B on 1,449 training pairs (5 epochs, rank 16, loss 1.29).
+
+| Category | Baseline | Finetuned | Change |
+|---|---|---|---|
+| deck_legality | 100% | 100% | — |
+| rules_knowledge | 58% | 83% | **+25%** |
+| deck_analysis | 17% | 67% | **+50%** |
+| card_relevance | 0% | 50% | **+50%** |
+| card_evaluation | 13% | 29% | +17% |
+| board_state | 75% | 50% | -25% |
+| meta_awareness | 67% | 33% | -33% |
+| budget_subs | 10% | 10% | — |
+| **Overall** | **43.1%** | **54.8%** | **+11.7%** |
+
+**Key findings**: Strong gains in deck analysis and card relevance. Regressions in meta awareness and board state — the model hallucates confidently rather than hedging. Round 2 will focus on fixing regressions, expanding weak categories, and adding negative examples.
+
 ## Technology Stack
 
-- **Model**: Llama 3.2 (1B or 3B) + LoRA adapter finetuned on MTG domain data
+- **Model**: Llama 3.2 1B + LoRA adapter finetuned on 1,449 MTG domain pairs (SageMaker, Tesla T4)
 - **RAG**: Vector DB (Chroma/FAISS) over comprehensive rules, meta data, and strategy content
 - **Inference**: Ollama (local) with FastAPI wrapper
 - **Frontend**: Gradio with chat, decklist display, and goldfish simulator tabs
 - **Card Data**: Live Scryfall API integration with local caching
-- **Evaluation**: Custom eval dataset covering deck legality, card relevance, rules knowledge, meta awareness, and board state analysis
+- **Evaluation**: Custom 22-case eval dataset across 9 categories (deck legality, card relevance, rules knowledge, meta awareness, board state, uniqueness, deck analysis, budget subs, card evaluation)
 
 ## Data Sources
 
