@@ -35,9 +35,9 @@
   - [x] Deck analysis (correctly classifies archetype, strengths, weaknesses)
   - [x] Budget substitutions (functional replacements with honest trade-offs)
   - [x] Card evaluation (correctly assesses Legacy playability)
-- [x] Run baseline eval against un-finetuned model (43.1%)
-- [x] LoRA finetune on training set (1,449 pairs, 5 epochs, loss 1.29)
-- [x] Run eval against finetuned model, compare results (54.8%, +11.7%)
+- [x] Run baseline eval against un-finetuned model (28.9%)
+- [x] LoRA finetune on training set (1,546 pairs, 5 epochs, loss 1.30)
+- [x] Run eval against finetuned model, compare results (61.6%, +32.7%)
 - [x] Document honest analysis of improvements and remaining weaknesses
 - [ ] Round 2: Fix regressions and weak categories
   - [x] Add meta_awareness pairs (26 pairs from real meta data)

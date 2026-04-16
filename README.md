@@ -69,6 +69,7 @@ the_legacy/
       budget_substitutions.jsonl #  Budget alternatives, upgrade paths (121 pairs)
   src/
     server.py                   # FastAPI server (chat, card lookup, RAG, streaming, Ollama/SageMaker)
+    deck_parser.py              # Deck import parser (plain text, Moxfield, MTGGoldfish)
     build_vectordb.py           # Builds ChromaDB vector database (719 chunks)
     card_index.py               # Card name index for fuzzy matching (36,670 cards)
   scripts/
@@ -79,7 +80,7 @@ the_legacy/
   notebooks/
     finetune_legacy.ipynb       # LoRA finetuning notebook (SageMaker)
     eval_report.json            # Evaluation results (Round 1)
-  scripts/                      # Training data generator scripts
+  Modelfile                     # Ollama model config for local serving
   notes/
     assignment-00.md ... assignment-11.md   # Course assignment notes
     chapter-01.md ... chapter-12.md         # Book chapter notes
@@ -90,27 +91,27 @@ the_legacy/
   README.md                     # This file
 ```
 
-## Training Results (Round 1)
+## Training Results (Round 2)
 
-LoRA finetune of Llama 3.2 1B on 1,449 training pairs (5 epochs, rank 16, loss 1.29).
+LoRA finetune of Llama 3.2 1B on 1,546 training pairs (5 epochs, rank 16, loss 1.30).
 
 | Category | Baseline | Finetuned | Change |
 |---|---|---|---|
 | deck_legality | 100% | 100% | — |
-| rules_knowledge | 58% | 83% | **+25%** |
-| deck_analysis | 17% | 67% | **+50%** |
+| rules_knowledge | 50% | 83% | **+33%** |
+| card_evaluation | 13% | 71% | **+58%** |
+| deck_analysis | 0% | 67% | **+67%** |
 | card_relevance | 0% | 50% | **+50%** |
-| card_evaluation | 13% | 29% | +17% |
-| board_state | 75% | 50% | -25% |
-| meta_awareness | 67% | 33% | -33% |
-| budget_subs | 10% | 10% | — |
-| **Overall** | **43.1%** | **54.8%** | **+11.7%** |
+| meta_awareness | 17% | 50% | **+33%** |
+| board_state | 42% | 42% | — |
+| budget_subs | 10% | 20% | +10% |
+| **Overall** | **28.9%** | **61.6%** | **+32.7%** |
 
-**Key findings**: Strong gains in deck analysis and card relevance. Regressions in meta awareness and board state — the model hallucates confidently rather than hedging. Round 2 will focus on fixing regressions, expanding weak categories, and adding negative examples.
+**Key findings**: Major gains across most categories, especially card evaluation (+58%) and deck analysis (+67%). Board state and budget subs remain weak — RAG and Scryfall card resolution in the inference pipeline are expected to compensate for factual accuracy gaps.
 
 ## Technology Stack
 
-- **Model**: Llama 3.2 1B + LoRA adapter finetuned on 1,449 MTG domain pairs (SageMaker, Tesla T4)
+- **Model**: Llama 3.2 1B + LoRA adapter finetuned on 1,546 MTG domain pairs (SageMaker, Tesla T4)
 - **RAG**: Vector DB (Chroma/FAISS) over comprehensive rules, meta data, and strategy content
 - **Inference**: Ollama (local) with FastAPI wrapper
 - **Frontend**: Gradio with chat, decklist display, and goldfish simulator tabs
