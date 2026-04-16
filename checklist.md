@@ -38,14 +38,18 @@
 - [x] Run baseline eval against un-finetuned model (43.1%)
 - [x] LoRA finetune on training set (1,449 pairs, 5 epochs, loss 1.29)
 - [x] Run eval against finetuned model, compare results (54.8%, +11.7%)
-- [ ] Document honest analysis of improvements and remaining weaknesses
+- [x] Document honest analysis of improvements and remaining weaknesses
 - [ ] Round 2: Fix regressions and weak categories
-  - [ ] Add meta_awareness pairs (regressed 67% → 33%, model hallucinating deck names)
-  - [ ] Add board_state pairs (regressed 75% → 50%, Blood Moon ruling wrong)
-  - [ ] Add budget_subs pairs (stuck at 10%, recommending Mox Diamond instead of Watery Grave)
-  - [ ] Add card_evaluation pairs (13% → 29%, still fabricating card stats)
-  - [ ] Add negative examples — teach model to say "I'm not sure" instead of hallucinating
-  - [ ] Fix factual errors in existing training data (e.g. Counterspell description, Bowmasters stats)
+  - [x] Add meta_awareness pairs (26 pairs from real meta data)
+  - [x] Add board_state pairs (16 pairs with correct rulings incl. Blood Moon, Chalice, Karakas)
+  - [x] Add budget_subs pairs (8 pairs with real prices and honest trade-offs)
+  - [x] Add card_evaluation pairs (10 pairs with correct Scryfall stats)
+  - [x] Add negative examples (12 pairs teaching uncertainty and "I don't know")
+  - [x] Add card_relevance pairs with color/strategy constraints (9 pairs, color-locked)
+  - [x] Add structured deck construction examples (6 complete 60+15 decklists)
+  - [x] Add disambiguation pairs (9 pairs — card vs mechanic vs archetype)
+  - [x] Add uniqueness/brew pairs (4 novel deck concepts)
+  - [x] Fix factual errors in existing training data (audit + fix: Grief/Psychic Frog ban updates, Counterspell MV fix, Blood Moon fix, Containment Priest fix, Entomb ban notes, removed 3 duplicates)
   - [ ] Re-run finetune and eval
 
 ## Phase 3: Infrastructure
