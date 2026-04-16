@@ -55,18 +55,21 @@
 ## Phase 3: Infrastructure
 
 - [ ] Set up Ollama locally serving finetuned model (GGUF quantized)
+  - [ ] Merge LoRA into base model (uncomment notebook merge cell)
+  - [ ] Convert to GGUF: `python llama.cpp/convert_hf_to_gguf.py merged-model --outtype q4_0`
+  - [ ] Create Ollama model: `ollama create the-legacy -f Modelfile`
 - [ ] Deploy SageMaker endpoint for remote demo
   - [ ] Merge LoRA adapter into base model and push to HF
   - [ ] Run `scripts/deploy_sagemaker.py --create`
   - [ ] Verify with `scripts/deploy_sagemaker.py --test`
 - [x] Build FastAPI layer (`src/server.py`)
   - [x] `POST /chat` — main conversation, streaming + non-streaming
-  - [ ] `POST /build-deck` — generate 75-card decklist
-  - [ ] `POST /analyze-deck` — import + analyze a decklist
-  - [ ] `POST /evaluate-board` — board state analysis
-  - [ ] `POST /goldfish` — run N goldfish hands
-  - [ ] `POST /budget-sub` — budget substitutions
-  - [ ] `POST /evaluate-card` — card Legacy playability
+  - [x] `POST /build-deck` — generate 75-card decklist
+  - [x] `POST /analyze-deck` — import + analyze a decklist
+  - [x] `POST /evaluate-board` — board state analysis
+  - [x] `POST /goldfish` — run N goldfish hands
+  - [x] `POST /budget-sub` — budget substitutions
+  - [x] `POST /evaluate-card` — card Legacy playability
   - [x] `GET /card/{name}` — Scryfall proxy with fuzzy match
   - [x] `GET /card/{name}/search` — fuzzy card search
   - [x] `GET /health` — health check (model, card index, vector DB status)

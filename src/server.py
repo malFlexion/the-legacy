@@ -444,6 +444,183 @@ async def chat(req: ChatRequest):
     return ChatResponse(content=content, cards=cards)
 
 
+@app.post("/build-deck", response_model=ChatResponse)
+async def build_deck(req: ChatRequest):
+    """Generate a 75-card Legacy decklist from a description."""
+    deck_prompt = (
+        "Build a complete Legacy-legal decklist with exactly 60 cards in the "
+        "main deck and 15 cards in the sideboard. List every card with its "
+        "quantity. Explain your key card choices and the deck's game plan."
+    )
+
+    user_msg = ""
+    for msg in reversed(req.messages):
+        if msg.role == "user":
+            user_msg = msg.content
+            break
+
+    rag_context = retrieve_context(user_msg)
+    enriched = list(req.messages) + [
+        ChatMessage(role="system", content=deck_prompt)
+    ]
+    messages = build_messages(enriched, rag_context)
+
+    content = await generate(
+        messages, temperature=0.2, top_p=0.9, max_tokens=req.max_tokens,
+    )
+    return ChatResponse(content=content, cards=resolve_cards(content))
+
+
+@app.post("/analyze-deck", response_model=ChatResponse)
+async def analyze_deck(req: ChatRequest):
+    """Import and analyze a decklist."""
+    analysis_prompt = (
+        "Analyze this decklist. Identify the archetype, explain its game plan, "
+        "assess the mana base, evaluate sideboard choices, identify strengths "
+        "and weaknesses in the current metagame, and suggest improvements."
+    )
+
+    user_msg = ""
+    for msg in reversed(req.messages):
+        if msg.role == "user":
+            user_msg = msg.content
+            break
+
+    rag_context = retrieve_context(user_msg)
+    enriched = list(req.messages) + [
+        ChatMessage(role="system", content=analysis_prompt)
+    ]
+    messages = build_messages(enriched, rag_context)
+
+    content = await generate(
+        messages, temperature=0.2, top_p=0.9, max_tokens=req.max_tokens,
+    )
+    return ChatResponse(content=content, cards=resolve_cards(content))
+
+
+@app.post("/evaluate-board", response_model=ChatResponse)
+async def evaluate_board(req: ChatRequest):
+    """Analyze a board state and recommend plays."""
+    board_prompt = (
+        "Analyze this board state. Identify the correct play, explain threat "
+        "assessment, spell sequencing, and resource management. Consider what "
+        "the opponent might have and how to play around it."
+    )
+
+    user_msg = ""
+    for msg in reversed(req.messages):
+        if msg.role == "user":
+            user_msg = msg.content
+            break
+
+    rag_context = retrieve_context(user_msg)
+    enriched = list(req.messages) + [
+        ChatMessage(role="system", content=board_prompt)
+    ]
+    messages = build_messages(enriched, rag_context)
+
+    content = await generate(
+        messages, temperature=0.4, top_p=0.9, max_tokens=req.max_tokens,
+    )
+    return ChatResponse(content=content, cards=resolve_cards(content))
+
+
+@app.post("/goldfish", response_model=ChatResponse)
+async def goldfish(req: ChatRequest):
+    """Run goldfish hands — draw and evaluate opening hands."""
+    goldfish_prompt = (
+        "Simulate drawing an opening hand of 7 cards from this decklist. "
+        "Show the hand, evaluate whether to keep or mulligan, and explain "
+        "the ideal first few turns of play. Consider mana development, "
+        "threat deployment, and interaction timing."
+    )
+
+    user_msg = ""
+    for msg in reversed(req.messages):
+        if msg.role == "user":
+            user_msg = msg.content
+            break
+
+    rag_context = retrieve_context(user_msg)
+    enriched = list(req.messages) + [
+        ChatMessage(role="system", content=goldfish_prompt)
+    ]
+    messages = build_messages(enriched, rag_context)
+
+    content = await generate(
+        messages, temperature=0.5, top_p=0.9, max_tokens=req.max_tokens,
+    )
+    return ChatResponse(content=content, cards=resolve_cards(content))
+
+
+@app.post("/budget-sub", response_model=ChatResponse)
+async def budget_sub(req: ChatRequest):
+    """Suggest budget substitutions for expensive cards."""
+    budget_prompt = (
+        "Suggest budget-friendly replacements for the specified cards. For "
+        "each substitution, explain what the budget card does similarly, what "
+        "you lose compared to the original, and approximate price savings. "
+        "Be honest about trade-offs."
+    )
+
+    user_msg = ""
+    for msg in reversed(req.messages):
+        if msg.role == "user":
+            user_msg = msg.content
+            break
+
+    rag_context = retrieve_context(user_msg)
+    enriched = list(req.messages) + [
+        ChatMessage(role="system", content=budget_prompt)
+    ]
+    messages = build_messages(enriched, rag_context)
+
+    content = await generate(
+        messages, temperature=0.3, top_p=0.9, max_tokens=req.max_tokens,
+    )
+    return ChatResponse(content=content, cards=resolve_cards(content))
+
+
+@app.post("/evaluate-card", response_model=ChatResponse)
+async def evaluate_card(req: ChatRequest):
+    """Evaluate a card's Legacy playability."""
+    eval_prompt = (
+        "Evaluate this card for Legacy playability. Cover: mana efficiency, "
+        "what decks would play it, how it compares to existing options in "
+        "the format, relevant interactions, and an overall verdict on whether "
+        "it is Legacy-playable."
+    )
+
+    user_msg = ""
+    for msg in reversed(req.messages):
+        if msg.role == "user":
+            user_msg = msg.content
+            break
+
+    # Enrich with card data if available
+    card_context = ""
+    if card_index:
+        results = card_index.search(user_msg, limit=1, legacy_only=False)
+        if results:
+            card = card_index.get(results[0][0])
+            if card:
+                card_context = (
+                    f"\nCard data: {card['name']} {card.get('mana_cost', '')} "
+                    f"— {card.get('type_line', '')} — {card.get('oracle_text', '')}"
+                )
+
+    rag_context = retrieve_context(user_msg) + card_context
+    enriched = list(req.messages) + [
+        ChatMessage(role="system", content=eval_prompt)
+    ]
+    messages = build_messages(enriched, rag_context)
+
+    content = await generate(
+        messages, temperature=0.3, top_p=0.9, max_tokens=req.max_tokens,
+    )
+    return ChatResponse(content=content, cards=resolve_cards(content))
+
+
 @app.get("/card/{name}")
 async def get_card(name: str):
     """Look up a card by name (fuzzy matched)."""
