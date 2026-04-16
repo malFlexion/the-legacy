@@ -1,15 +1,23 @@
 """
 The Legacy — FastAPI server.
 
-Serves the finetuned Llama model via Ollama with RAG retrieval
-and Scryfall card resolution. Every card name in model output is
-resolved to full card data (oracle text, mana cost, legality, image).
+Serves the finetuned Llama model with RAG retrieval and Scryfall card
+resolution. Supports two inference backends:
+  - Ollama (local): set INFERENCE_BACKEND=ollama (default)
+  - SageMaker endpoint: set INFERENCE_BACKEND=sagemaker
+
+Every card name in model output is resolved to full card data
+(oracle text, mana cost, legality, image).
 
 Usage:
+    # Local with Ollama
     uvicorn src.server:app --reload --port 8000
 
+    # With SageMaker endpoint
+    INFERENCE_BACKEND=sagemaker SAGEMAKER_ENDPOINT=the-legacy-llm \
+        uvicorn src.server:app --reload --port 8000
+
 Requires:
-    - Ollama running with the-legacy model loaded
     - data/card_index.pkl (built from Scryfall bulk data)
     - vectordb/ (built by build_vectordb.py)
 """
@@ -19,6 +27,7 @@ import json
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse
 from pydantic import BaseModel, Field
 
@@ -32,8 +41,16 @@ from .card_index import CardIndex
 # Config
 # ---------------------------------------------------------------------------
 
+INFERENCE_BACKEND = os.environ.get("INFERENCE_BACKEND", "ollama")  # "ollama" or "sagemaker"
+
+# Ollama config
 OLLAMA_BASE = os.environ.get("OLLAMA_BASE", "http://localhost:11434")
 MODEL_NAME = os.environ.get("MODEL_NAME", "the-legacy")
+
+# SageMaker config
+SAGEMAKER_ENDPOINT = os.environ.get("SAGEMAKER_ENDPOINT", "the-legacy-llm")
+AWS_REGION = os.environ.get("AWS_REGION", "us-east-1")
+
 DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "data")
 VECTORDB_DIR = os.path.join(os.path.dirname(__file__), "..", "vectordb")
 
@@ -51,12 +68,13 @@ SYSTEM_PROMPT = (
 
 card_index: CardIndex | None = None
 chroma_collection = None
+sagemaker_runtime = None
 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    """Load card index and vector DB once at startup."""
-    global card_index, chroma_collection
+    """Load card index, vector DB, and inference backend at startup."""
+    global card_index, chroma_collection, sagemaker_runtime
 
     # Card index
     card_index = CardIndex()
@@ -84,6 +102,16 @@ async def lifespan(app: FastAPI):
         print(f"WARNING: Vector DB not available ({e}). RAG disabled.")
         chroma_collection = None
 
+    # SageMaker client
+    if INFERENCE_BACKEND == "sagemaker":
+        import boto3
+        sagemaker_runtime = boto3.client(
+            "sagemaker-runtime", region_name=AWS_REGION
+        )
+        print(f"Using SageMaker endpoint: {SAGEMAKER_ENDPOINT} ({AWS_REGION})")
+    else:
+        print(f"Using Ollama: {OLLAMA_BASE} (model: {MODEL_NAME})")
+
     yield
 
 
@@ -91,6 +119,14 @@ app = FastAPI(
     title="The Legacy",
     description="AI-powered MTG Legacy deck builder",
     lifespan=lifespan,
+)
+
+# Allow CORS for frontend access
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 # ---------------------------------------------------------------------------
@@ -204,14 +240,14 @@ def resolve_cards(text: str) -> list[CardData]:
 
 
 # ---------------------------------------------------------------------------
-# Ollama interaction
+# Message formatting
 # ---------------------------------------------------------------------------
 
 
 def build_messages(
     messages: list[ChatMessage], rag_context: str = ""
 ) -> list[dict]:
-    """Build the message list for Ollama, injecting system prompt and RAG."""
+    """Build the message list, injecting system prompt and RAG context."""
     system_content = SYSTEM_PROMPT
     if rag_context:
         system_content += (
@@ -225,6 +261,87 @@ def build_messages(
         result.append({"role": msg.role, "content": msg.content})
 
     return result
+
+
+def format_llama_prompt(messages: list[dict]) -> str:
+    """Format messages as a Llama 3 chat prompt string (for SageMaker TGI)."""
+    parts = []
+    for msg in messages:
+        role = msg["role"]
+        content = msg["content"]
+        parts.append(
+            f"<|start_header_id|>{role}<|end_header_id|>\n\n{content}<|eot_id|>"
+        )
+    parts.append("<|start_header_id|>assistant<|end_header_id|>\n\n")
+    return "<|begin_of_text|>" + "".join(parts)
+
+
+# ---------------------------------------------------------------------------
+# Inference backends
+# ---------------------------------------------------------------------------
+
+
+async def generate(
+    messages: list[dict],
+    stream: bool = False,
+    temperature: float = 0.3,
+    top_p: float = 0.9,
+    max_tokens: int = 1024,
+) -> str | StreamingResponse:
+    """Route to the configured inference backend."""
+    if INFERENCE_BACKEND == "sagemaker":
+        return await sagemaker_generate(
+            messages, temperature=temperature, top_p=top_p, max_tokens=max_tokens
+        )
+    return await ollama_generate(
+        messages, stream=stream, temperature=temperature,
+        top_p=top_p, max_tokens=max_tokens,
+    )
+
+
+async def sagemaker_generate(
+    messages: list[dict],
+    temperature: float = 0.3,
+    top_p: float = 0.9,
+    max_tokens: int = 1024,
+) -> str:
+    """Call SageMaker endpoint for inference."""
+    if sagemaker_runtime is None:
+        raise HTTPException(status_code=503, detail="SageMaker not configured")
+
+    prompt = format_llama_prompt(messages)
+
+    payload = {
+        "inputs": prompt,
+        "parameters": {
+            "max_new_tokens": max_tokens,
+            "temperature": temperature,
+            "top_p": top_p,
+            "do_sample": True,
+        },
+    }
+
+    response = sagemaker_runtime.invoke_endpoint(
+        EndpointName=SAGEMAKER_ENDPOINT,
+        ContentType="application/json",
+        Body=json.dumps(payload),
+    )
+
+    result = json.loads(response["Body"].read().decode())
+    if isinstance(result, list):
+        result = result[0]
+
+    generated = result.get("generated_text", "")
+
+    # TGI returns the full prompt + response — strip the prompt
+    if generated.startswith(prompt):
+        generated = generated[len(prompt):]
+
+    # Strip any trailing special tokens
+    for token in ["<|eot_id|>", "<|end_of_text|>"]:
+        generated = generated.split(token)[0]
+
+    return generated.strip()
 
 
 async def ollama_generate(
@@ -266,7 +383,7 @@ async def ollama_generate(
 async def _stream_response(client: httpx.AsyncClient, payload: dict):
     """Stream Ollama response as SSE."""
 
-    async def generate():
+    async def event_generator():
         async with client.stream(
             "POST", f"{OLLAMA_BASE}/api/chat", json=payload
         ) as resp:
@@ -279,7 +396,7 @@ async def _stream_response(client: httpx.AsyncClient, payload: dict):
                     if chunk.get("done"):
                         yield "data: [DONE]\n\n"
 
-    return StreamingResponse(generate(), media_type="text/event-stream")
+    return StreamingResponse(event_generator(), media_type="text/event-stream")
 
 
 # ---------------------------------------------------------------------------
@@ -303,9 +420,9 @@ async def chat(req: ChatRequest):
     # Build messages with system prompt + RAG
     messages = build_messages(req.messages, rag_context)
 
-    # Stream mode
-    if req.stream:
-        return await ollama_generate(
+    # Stream mode (Ollama only)
+    if req.stream and INFERENCE_BACKEND == "ollama":
+        return await generate(
             messages,
             stream=True,
             temperature=req.temperature,
@@ -314,7 +431,7 @@ async def chat(req: ChatRequest):
         )
 
     # Non-stream: generate, resolve cards, return
-    content = await ollama_generate(
+    content = await generate(
         messages,
         stream=False,
         temperature=req.temperature,
@@ -335,29 +452,16 @@ async def get_card(name: str):
 
     # Try exact match first
     card = card_index.get(name)
-    if card:
-        return CardData(
-            name=card["name"],
-            mana_cost=card.get("mana_cost", ""),
-            cmc=card.get("cmc", 0),
-            type_line=card.get("type_line", ""),
-            oracle_text=card.get("oracle_text", ""),
-            colors=card.get("colors", []),
-            power=card.get("power"),
-            toughness=card.get("toughness"),
-            legacy_legal=card_index.is_legacy_legal(card["name"]),
-            image_url=card_index.scryfall_image_url(card["name"]),
-            scryfall_uri=card.get("scryfall_uri", ""),
-            prices=card.get("prices", {}),
-        )
+    if not card:
+        # Fuzzy search
+        results = card_index.search(name, limit=1, legacy_only=False)
+        if not results:
+            raise HTTPException(
+                status_code=404, detail=f"Card not found: {name}"
+            )
+        matched_name, score = results[0]
+        card = card_index.get(matched_name)
 
-    # Fuzzy search
-    results = card_index.search(name, limit=1, legacy_only=False)
-    if not results:
-        raise HTTPException(status_code=404, detail=f"Card not found: {name}")
-
-    matched_name, score = results[0]
-    card = card_index.get(matched_name)
     return CardData(
         name=card["name"],
         mana_cost=card.get("mana_cost", ""),
@@ -389,7 +493,8 @@ async def health():
     """Health check."""
     return {
         "status": "ok",
-        "model": MODEL_NAME,
+        "backend": INFERENCE_BACKEND,
+        "model": MODEL_NAME if INFERENCE_BACKEND == "ollama" else SAGEMAKER_ENDPOINT,
         "card_index": card_index is not None,
         "card_count": len(card_index.cards) if card_index else 0,
         "vector_db": chroma_collection is not None,

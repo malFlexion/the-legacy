@@ -68,9 +68,11 @@ the_legacy/
       conversation_flow.jsonl   #   Deck consultation dialogues (119 pairs)
       budget_substitutions.jsonl #  Budget alternatives, upgrade paths (121 pairs)
   src/
-    server.py                   # FastAPI server (chat, card lookup, RAG, streaming)
+    server.py                   # FastAPI server (chat, card lookup, RAG, streaming, Ollama/SageMaker)
     build_vectordb.py           # Builds ChromaDB vector database (719 chunks)
     card_index.py               # Card name index for fuzzy matching (36,670 cards)
+  scripts/
+    deploy_sagemaker.py         # Deploy/manage SageMaker endpoint for remote demo
   tests/
     test_card_index.py          # 32 tests for card index
     test_build_vectordb.py      # 47 tests for vector DB builder

@@ -55,6 +55,10 @@
 ## Phase 3: Infrastructure
 
 - [ ] Set up Ollama locally serving finetuned model (GGUF quantized)
+- [ ] Deploy SageMaker endpoint for remote demo
+  - [ ] Merge LoRA adapter into base model and push to HF
+  - [ ] Run `scripts/deploy_sagemaker.py --create`
+  - [ ] Verify with `scripts/deploy_sagemaker.py --test`
 - [x] Build FastAPI layer (`src/server.py`)
   - [x] `POST /chat` — main conversation, streaming + non-streaming
   - [ ] `POST /build-deck` — generate 75-card decklist
