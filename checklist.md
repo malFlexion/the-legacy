@@ -88,12 +88,12 @@
   - [ ] Trade-off scoring (what you lose with each sub)
   - [ ] Budget tier generation (full, mid, budget)
   - [ ] Price data from Scryfall
-- [ ] Implement streaming on /chat
-- [ ] Implement sampling presets
-  - [ ] Precise (temp 0.1-0.3) — rules, deck generation, analysis
-  - [ ] Balanced (temp 0.4-0.5) — card reasoning, board state
-  - [ ] Creative (temp 0.8) — brainstorming, spicy tech suggestions
-  - [ ] Manual override option
+- [x] Implement streaming on /chat (SSE via Ollama backend)
+- [x] Implement sampling presets (per-endpoint temperature tuning)
+  - [x] Precise (temp 0.2) — /build-deck, /analyze-deck
+  - [x] Balanced (temp 0.3-0.4) — /chat, /budget-sub, /evaluate-card, /evaluate-board
+  - [x] Creative (temp 0.5) — /goldfish
+  - [x] Manual override via `temperature` field on all requests
 
 ## Phase 4: Goldfish Engine
 
