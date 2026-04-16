@@ -68,6 +68,7 @@ the_legacy/
       conversation_flow.jsonl   #   Deck consultation dialogues (119 pairs)
       budget_substitutions.jsonl #  Budget alternatives, upgrade paths (121 pairs)
   src/
+    server.py                   # FastAPI server (chat, card lookup, RAG, streaming)
     build_vectordb.py           # Builds ChromaDB vector database (719 chunks)
     card_index.py               # Card name index for fuzzy matching (36,670 cards)
   tests/

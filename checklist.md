@@ -55,21 +55,23 @@
 ## Phase 3: Infrastructure
 
 - [ ] Set up Ollama locally serving finetuned model (GGUF quantized)
-- [ ] Build FastAPI layer
-  - [ ] `POST /chat` — main conversation, streaming
+- [x] Build FastAPI layer (`src/server.py`)
+  - [x] `POST /chat` — main conversation, streaming + non-streaming
   - [ ] `POST /build-deck` — generate 75-card decklist
   - [ ] `POST /analyze-deck` — import + analyze a decklist
   - [ ] `POST /evaluate-board` — board state analysis
   - [ ] `POST /goldfish` — run N goldfish hands
   - [ ] `POST /budget-sub` — budget substitutions
   - [ ] `POST /evaluate-card` — card Legacy playability
-  - [ ] `GET /card/{name}` — Scryfall proxy
-- [ ] Integrate RAG retrieval into chat pipeline
-- [ ] Integrate deterministic Scryfall card resolution
-  - [ ] Parse card names from model output (regex + fuzzy match)
-  - [ ] Resolve to Scryfall data (oracle text, mana cost, type, legality, image)
-  - [ ] Attach as structured metadata to response
-  - [ ] Flag invalid/non-Legacy-legal cards for re-prompt
+  - [x] `GET /card/{name}` — Scryfall proxy with fuzzy match
+  - [x] `GET /card/{name}/search` — fuzzy card search
+  - [x] `GET /health` — health check (model, card index, vector DB status)
+- [x] Integrate RAG retrieval into chat pipeline
+- [x] Integrate deterministic Scryfall card resolution
+  - [x] Parse card names from model output (exact match via card_index.resolve)
+  - [x] Resolve to Scryfall data (oracle text, mana cost, type, legality, image)
+  - [x] Attach as structured metadata to response
+  - [x] Flag invalid/non-Legacy-legal cards (legacy_legal field on each card)
 - [ ] Build deck import parser
   - [ ] Plain text decklist
   - [ ] Moxfield URL
