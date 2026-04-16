@@ -79,10 +79,10 @@
   - [x] Resolve to Scryfall data (oracle text, mana cost, type, legality, image)
   - [x] Attach as structured metadata to response
   - [x] Flag invalid/non-Legacy-legal cards (legacy_legal field on each card)
-- [ ] Build deck import parser
-  - [ ] Plain text decklist
-  - [ ] Moxfield URL
-  - [ ] MTGGoldfish URL
+- [x] Build deck import parser (`src/deck_parser.py` + `POST /import-deck`)
+  - [x] Plain text decklist (one-per-line, comma-separated, markdown bullets)
+  - [x] Moxfield URL (via API: `api2.moxfield.com/v3/decks/all/{id}`)
+  - [x] MTGGoldfish URL (via download endpoint)
 - [ ] Build budget substitution engine
   - [ ] Card-to-card replacement mappings
   - [ ] Trade-off scoring (what you lose with each sub)

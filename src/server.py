@@ -36,6 +36,7 @@ import chromadb
 from chromadb.utils.embedding_functions import SentenceTransformerEmbeddingFunction
 
 from .card_index import CardIndex
+from .deck_parser import parse_decklist, import_from_url, Decklist
 
 # ---------------------------------------------------------------------------
 # Config
@@ -619,6 +620,99 @@ async def evaluate_card(req: ChatRequest):
         messages, temperature=0.3, top_p=0.9, max_tokens=req.max_tokens,
     )
     return ChatResponse(content=content, cards=resolve_cards(content))
+
+
+class ImportRequest(BaseModel):
+    text: str | None = None
+    url: str | None = None
+
+
+@app.post("/import-deck")
+async def import_deck(req: ImportRequest):
+    """Import a decklist from plain text, Moxfield URL, or MTGGoldfish URL."""
+    if req.url:
+        try:
+            deck = await import_from_url(req.url)
+        except ValueError as e:
+            raise HTTPException(status_code=400, detail=str(e))
+    elif req.text:
+        deck = parse_decklist(req.text)
+    else:
+        raise HTTPException(
+            status_code=400, detail="Provide either 'text' or 'url'"
+        )
+
+    if deck.main_count == 0:
+        raise HTTPException(
+            status_code=400, detail="No cards found in decklist"
+        )
+
+    # Resolve card data for each entry
+    resolved_main = []
+    resolved_side = []
+
+    for entry in deck.main:
+        card_data = None
+        if card_index:
+            card_data = card_index.get(entry.name)
+            if not card_data:
+                results = card_index.search(entry.name, limit=1, legacy_only=False)
+                if results:
+                    card_data = card_index.get(results[0][0])
+
+        resolved_main.append({
+            "quantity": entry.quantity,
+            "name": card_data["name"] if card_data else entry.name,
+            "card": CardData(
+                name=card_data["name"],
+                mana_cost=card_data.get("mana_cost", ""),
+                cmc=card_data.get("cmc", 0),
+                type_line=card_data.get("type_line", ""),
+                oracle_text=card_data.get("oracle_text", ""),
+                colors=card_data.get("colors", []),
+                power=card_data.get("power"),
+                toughness=card_data.get("toughness"),
+                legacy_legal=card_index.is_legacy_legal(card_data["name"]),
+                image_url=card_index.scryfall_image_url(card_data["name"]),
+                scryfall_uri=card_data.get("scryfall_uri", ""),
+                prices=card_data.get("prices", {}),
+            ) if card_data and card_index else None,
+        })
+
+    for entry in deck.sideboard:
+        card_data = None
+        if card_index:
+            card_data = card_index.get(entry.name)
+            if not card_data:
+                results = card_index.search(entry.name, limit=1, legacy_only=False)
+                if results:
+                    card_data = card_index.get(results[0][0])
+
+        resolved_side.append({
+            "quantity": entry.quantity,
+            "name": card_data["name"] if card_data else entry.name,
+            "card": CardData(
+                name=card_data["name"],
+                mana_cost=card_data.get("mana_cost", ""),
+                cmc=card_data.get("cmc", 0),
+                type_line=card_data.get("type_line", ""),
+                oracle_text=card_data.get("oracle_text", ""),
+                colors=card_data.get("colors", []),
+                power=card_data.get("power"),
+                toughness=card_data.get("toughness"),
+                legacy_legal=card_index.is_legacy_legal(card_data["name"]),
+                image_url=card_index.scryfall_image_url(card_data["name"]),
+                scryfall_uri=card_data.get("scryfall_uri", ""),
+                prices=card_data.get("prices", {}),
+            ) if card_data and card_index else None,
+        })
+
+    return {
+        "main": resolved_main,
+        "sideboard": resolved_side,
+        "main_count": deck.main_count,
+        "side_count": deck.side_count,
+    }
 
 
 @app.get("/card/{name}")
