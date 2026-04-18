@@ -38,6 +38,7 @@ from chromadb.utils.embedding_functions import SentenceTransformerEmbeddingFunct
 from .card_index import CardIndex
 from .deck_parser import parse_decklist, import_from_url, Decklist
 from .budget_engine import BudgetEngine
+from .goldfish_engine import Deck, aggregate_stats, london_mulligan, sample_hands
 
 # ---------------------------------------------------------------------------
 # Config
@@ -558,6 +559,134 @@ async def goldfish(req: ChatRequest):
         messages, temperature=0.5, top_p=0.9, max_tokens=req.max_tokens,
     )
     return ChatResponse(content=content, cards=resolve_cards(content))
+
+
+class GoldfishDrawRequest(BaseModel):
+    decklist: dict[str, int]  # card_name -> count
+    keep_count: int = 7  # London Mulligan: 7 = no mull, 6 = mull to 6, etc.
+    seed: int | None = None
+
+
+class GoldfishHandResponse(BaseModel):
+    cards: list[CardData]
+    land_count: int
+    spell_count: int
+    mana_curve: dict[int, int]
+    colors_by_turn: dict[int, list[str]]
+
+
+@app.post("/goldfish/draw", response_model=GoldfishHandResponse)
+async def goldfish_draw(req: GoldfishDrawRequest):
+    """Deterministic opening hand draw with London Mulligan support.
+
+    Returns the drawn cards (with full Scryfall data), land/spell counts,
+    mana curve, and which colors are available on turns 1-4.
+    """
+    if card_index is None:
+        raise HTTPException(status_code=503, detail="Card index not loaded")
+
+    try:
+        deck = Deck.from_decklist(req.decklist, card_index)
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+
+    try:
+        hand = london_mulligan(deck, keep_count=req.keep_count, seed=req.seed)
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+
+    # Resolve full card data for each drawn card
+    card_data_list: list[CardData] = []
+    for card in hand.cards:
+        data = card_index.cards.get(card.name) if card_index else None
+        if data:
+            card_data_list.append(CardData(
+                name=data.get("name", card.name),
+                mana_cost=data.get("mana_cost", ""),
+                cmc=data.get("cmc", 0) or 0,
+                type_line=data.get("type_line", ""),
+                oracle_text=data.get("oracle_text", ""),
+                colors=data.get("colors") or [],
+                power=data.get("power"),
+                toughness=data.get("toughness"),
+                legacy_legal=(data.get("legalities", {}).get("legacy") in ("legal", "restricted")),
+                image_url=(data.get("image_uris") or {}).get("normal"),
+                scryfall_uri=data.get("scryfall_uri", ""),
+                prices=data.get("prices") or {},
+            ))
+        else:
+            card_data_list.append(CardData(name=card.name))
+
+    colors_by_turn = hand.colors_available_by_turn(max_turn=4)
+
+    return GoldfishHandResponse(
+        cards=card_data_list,
+        land_count=hand.land_count,
+        spell_count=hand.spell_count,
+        mana_curve=dict(hand.mana_curve),
+        colors_by_turn={t: sorted(colors) for t, colors in colors_by_turn.items()},
+    )
+
+
+class GoldfishStatsRequest(BaseModel):
+    decklist: dict[str, int]
+    n_samples: int = 10_000
+    mulligan_to: int = 7
+    seed: int | None = None
+
+
+class GoldfishStatsResponse(BaseModel):
+    n_samples: int
+    avg_land_count: float
+    land_count_distribution: dict[int, int]
+    mana_curve_avg: dict[int, float]
+    color_by_turn: dict[int, dict[str, float]]
+    keepable_rate: float
+
+
+@app.post("/goldfish/stats", response_model=GoldfishStatsResponse)
+async def goldfish_stats(req: GoldfishStatsRequest):
+    """Run N goldfish samples and return aggregate statistics.
+
+    Stats:
+      - land_count_distribution: histogram of land count in opening hands
+      - avg_land_count: mean lands in a 7-card hand
+      - mana_curve_avg: avg # of cards at each CMC in an opening hand
+      - color_by_turn: P(color X available by turn Y) for each WUBRG and turns 1-4
+      - keepable_rate: P(2 <= lands <= 5) — rough heuristic for "keepable"
+    """
+    if card_index is None:
+        raise HTTPException(status_code=503, detail="Card index not loaded")
+    if req.n_samples < 1 or req.n_samples > 100_000:
+        raise HTTPException(
+            status_code=400,
+            detail="n_samples must be between 1 and 100000",
+        )
+
+    try:
+        deck = Deck.from_decklist(req.decklist, card_index)
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+
+    hands = sample_hands(
+        deck,
+        n=req.n_samples,
+        mulligan_to=req.mulligan_to,
+        seed=req.seed,
+    )
+    stats = aggregate_stats(hands)
+
+    return GoldfishStatsResponse(
+        n_samples=stats.n_samples,
+        avg_land_count=round(stats.avg_land_count, 3),
+        land_count_distribution=stats.land_count_distribution,
+        mana_curve_avg={k: round(v, 3) for k, v in stats.mana_curve_avg.items()},
+        color_by_turn={
+            t: {c: round(p, 4) for c, p in colors.items()}
+            for t, colors in stats.color_by_turn.items()
+        },
+        keepable_rate=round(stats.keepable_rate(), 3),
+    )
 
 
 @app.post("/budget-sub", response_model=ChatResponse)

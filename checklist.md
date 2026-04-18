@@ -98,14 +98,14 @@
 ## Phase 4: Goldfish Engine
 
 ### Tier 1 (MVP — must ship)
-- [ ] Deck representation (shuffled list of card objects from Scryfall)
-- [ ] Draw opening hand (7 cards) with card images
-- [ ] London Mulligan (put N back, draw 7-N)
-- [ ] Basic stats over N sample hands
-  - [ ] Land count distribution
-  - [ ] Mana curve of opening hand
-  - [ ] Color availability by turn (assuming one land drop/turn)
-- [ ] LLM commentary on hand ("this is keepable because...")
+- [x] Deck representation (`src/goldfish_engine.Deck` from decklist via card_index)
+- [x] Draw opening hand (`POST /goldfish/draw` returns full card data + stats)
+- [x] London Mulligan (`keep_count` param, 7=no mull, draw 7 put back 7-keep_count)
+- [x] Basic stats over N sample hands (`POST /goldfish/stats`, 32 tests)
+  - [x] Land count distribution
+  - [x] Mana curve of opening hand
+  - [x] Color availability by turn (handles fetchlands via FETCH_LAND_COLORS map)
+- [x] LLM commentary on hand (existing `POST /goldfish` endpoint)
 
 ### Tier 2 (Target — if time allows)
 - [ ] Simplified turn engine (untap, draw, play land, cast spells by CMC)
