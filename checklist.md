@@ -55,9 +55,12 @@
 ## Phase 3: Infrastructure
 
 - [ ] Set up Ollama locally serving finetuned model (GGUF quantized)
-  - [ ] Merge LoRA into base model (uncomment notebook merge cell)
-  - [ ] Convert to GGUF: `python llama.cpp/convert_hf_to_gguf.py merged-model --outtype q4_0`
-  - [ ] Create Ollama model: `ollama create the-legacy -f Modelfile`
+  - [x] `scripts/merge_and_convert.py` — end-to-end merge + GGUF + Modelfile generation
+  - [x] Modelfile with correct Llama 3.2 chat template and stop tokens
+  - [x] Deployment walkthrough at `notes/development/ollama-deployment.md`
+  - [ ] External install: Ollama (ollama.com), llama.cpp clone
+  - [ ] Run `python scripts/merge_and_convert.py --llama-cpp-path /path/to/llama.cpp`
+  - [ ] `ollama create the-legacy -f Modelfile` and verify with `ollama run`
 - [ ] Deploy SageMaker endpoint for remote demo
   - [ ] Merge LoRA adapter into base model and push to HF
   - [ ] Run `scripts/deploy_sagemaker.py --create`
