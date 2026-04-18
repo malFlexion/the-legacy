@@ -59,6 +59,8 @@
   - [x] `scripts/merge_and_convert.py` — end-to-end merge + GGUF + Modelfile generation
   - [x] Modelfile with correct Llama 3.2 chat template and stop tokens
   - [x] Deployment walkthrough at `notes/development/ollama-deployment.md`
+  - [x] Condensed setup checklist at `notes/development/ollama-checklist.md`
+  - [x] Smoke-test script `scripts/test_deployment.py --ollama` (5 prompts with expect/reject patterns)
   - [ ] External install: Ollama (ollama.com), llama.cpp clone
   - [ ] Run `python scripts/merge_and_convert.py --llama-cpp-path /path/to/llama.cpp`
   - [ ] `ollama create the-legacy -f Modelfile` and verify with `ollama run`
@@ -67,6 +69,8 @@
   - [x] `scripts/deploy_sagemaker.py` with --create/--delete/--status/--test actions
   - [x] Cost warning in --create, ongoing cost estimate in --status
   - [x] Walkthrough at `notes/development/sagemaker-deployment.md`
+  - [x] Interactive deployment notebook at `notebooks/deploy_sagemaker.ipynb`
+  - [x] Smoke-test script `scripts/test_deployment.py --sagemaker` (5 prompts with expect/reject patterns)
   - [ ] External: AWS account, `aws configure`, SageMaker execution role
   - [ ] Run merge + push to HF, then `scripts/deploy_sagemaker.py --create`
   - [ ] Verify with `scripts/deploy_sagemaker.py --test`

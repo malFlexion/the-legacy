@@ -83,6 +83,7 @@ the_legacy/
   scripts/
     deploy_sagemaker.py         # Deploy/manage SageMaker endpoint (--create/--delete/--status/--test)
     merge_and_convert.py        # Merge LoRA + GGUF convert (Ollama) or push to HF (SageMaker)
+    test_deployment.py          # Smoke-test Ollama/SageMaker with expect/reject prompt patterns
     audit_training_data.py      # Cross-reference training pairs against Scryfall for factual errors
     fix_training_data.py        # Apply audit fixes (duplicates, banned cards, factual errors)
     gen_round2_data.py          # Generate Round 2 training pairs from project data files
@@ -93,6 +94,7 @@ the_legacy/
     test_goldfish_engine.py     # 32 tests for goldfish engine (133 tests total)
   notebooks/
     finetune_legacy.ipynb       # LoRA finetuning notebook (SageMaker)
+    deploy_sagemaker.ipynb      # Interactive SageMaker endpoint deployment walkthrough
     eval_report.json            # Evaluation results (Round 2, 61.6% finetuned)
     lora-legacy/                # Checkpoint outputs (gitignored)
   Modelfile                     # Ollama model config with Llama 3.2 chat template
@@ -104,11 +106,29 @@ the_legacy/
       progress.md                           # Running dev notes (dataset, training)
       round1-analysis.md                    # Honest analysis of Round 1 results
       ollama-deployment.md                  # Walkthrough: merge → GGUF → ollama serve
+      ollama-checklist.md                   # Condensed checkbox list for the Ollama path
       sagemaker-deployment.md               # Walkthrough: merge+push → SageMaker endpoint
   vectordb/                     # ChromaDB vector database (gitignored, rebuild with src/build_vectordb.py)
   checklist.md                  # Project progress checklist
   final-project-plan.md         # Detailed implementation plan
   README.md                     # This file
+```
+
+## Deployment
+
+The finetuned model can be served two ways. Both paths share the same merge step (`scripts/merge_and_convert.py`) and can be verified with the same smoke-test (`scripts/test_deployment.py`).
+
+| Path | Cost | Setup time | Use when |
+|---|---|---|---|
+| **Ollama** (local GGUF) | Free | ~15 min | Dev, demo on your own machine |
+| **SageMaker** (TGI endpoint) | ~$1.41/hr | ~20 min | Remote demo, shared access |
+
+- **Ollama:** [`notes/development/ollama-checklist.md`](notes/development/ollama-checklist.md) (condensed) or [`ollama-deployment.md`](notes/development/ollama-deployment.md) (full walkthrough)
+- **SageMaker:** [`notebooks/deploy_sagemaker.ipynb`](notebooks/deploy_sagemaker.ipynb) (interactive) or [`sagemaker-deployment.md`](notes/development/sagemaker-deployment.md) (full walkthrough)
+
+Verify either deployment with:
+```
+python scripts/test_deployment.py --ollama      # or --sagemaker or --all
 ```
 
 ## Training Results (Round 2)
