@@ -50,7 +50,7 @@
   - [x] Add disambiguation pairs (9 pairs — card vs mechanic vs archetype)
   - [x] Add uniqueness/brew pairs (4 novel deck concepts)
   - [x] Fix factual errors in existing training data (audit + fix: Grief/Psychic Frog ban updates, Counterspell MV fix, Blood Moon fix, Containment Priest fix, Entomb ban notes, removed 3 duplicates)
-  - [ ] Re-run finetune and eval
+  - [x] Re-run finetune and eval (54.8% → 61.6%, +6.8%)
 
 ## Phase 3: Infrastructure
 
@@ -83,11 +83,11 @@
   - [x] Plain text decklist (one-per-line, comma-separated, markdown bullets)
   - [x] Moxfield URL (via API: `api2.moxfield.com/v3/decks/all/{id}`)
   - [x] MTGGoldfish URL (via download endpoint)
-- [ ] Build budget substitution engine
-  - [ ] Card-to-card replacement mappings
-  - [ ] Trade-off scoring (what you lose with each sub)
-  - [ ] Budget tier generation (full, mid, budget)
-  - [ ] Price data from Scryfall
+- [x] Build budget substitution engine (`src/budget_engine.py` + 22 tests)
+  - [x] Card-to-card replacement mappings (curated, 20+ expensive Legacy staples)
+  - [x] Trade-off scoring (power_loss 0-10 + explicit tradeoff strings + notes)
+  - [x] Budget tier generation (full / mid / budget via `/budget-tiers` endpoint)
+  - [x] Price data from Scryfall (via card_index, supports USD + EUR fallback)
 - [x] Implement streaming on /chat (SSE via Ollama backend)
 - [x] Implement sampling presets (per-endpoint temperature tuning)
   - [x] Precise (temp 0.2) — /build-deck, /analyze-deck

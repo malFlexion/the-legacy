@@ -37,6 +37,7 @@ from chromadb.utils.embedding_functions import SentenceTransformerEmbeddingFunct
 
 from .card_index import CardIndex
 from .deck_parser import parse_decklist, import_from_url, Decklist
+from .budget_engine import BudgetEngine
 
 # ---------------------------------------------------------------------------
 # Config
@@ -70,12 +71,13 @@ SYSTEM_PROMPT = (
 card_index: CardIndex | None = None
 chroma_collection = None
 sagemaker_runtime = None
+budget_engine: BudgetEngine | None = None
 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     """Load card index, vector DB, and inference backend at startup."""
-    global card_index, chroma_collection, sagemaker_runtime
+    global card_index, chroma_collection, sagemaker_runtime, budget_engine
 
     # Card index
     card_index = CardIndex()
@@ -87,6 +89,10 @@ async def lifespan(app: FastAPI):
             "Card resolution disabled. Run: python src/card_index.py"
         )
         card_index = None
+
+    # Budget engine (depends on card index for prices)
+    if card_index is not None:
+        budget_engine = BudgetEngine(card_index)
 
     # Vector DB
     try:
@@ -580,6 +586,111 @@ async def budget_sub(req: ChatRequest):
         messages, temperature=0.3, top_p=0.9, max_tokens=req.max_tokens,
     )
     return ChatResponse(content=content, cards=resolve_cards(content))
+
+
+class SubstitutionRequest(BaseModel):
+    card: str
+
+
+class SubstitutionEntry(BaseModel):
+    replacement: str
+    tradeoffs: list[str]
+    power_loss: int
+    notes: str
+    original_price_usd: float | None
+    replacement_price_usd: float | None
+    savings_usd: float | None
+
+
+class SubstitutionResponse(BaseModel):
+    card: str
+    price_usd: float | None
+    irreplaceable: bool
+    substitutions: list[SubstitutionEntry]
+
+
+@app.post("/budget-sub/lookup", response_model=SubstitutionResponse)
+async def budget_sub_lookup(req: SubstitutionRequest):
+    """Deterministic budget substitution lookup (no LLM).
+
+    Returns curated substitutions with real prices and honest trade-offs.
+    For the conversational version with LLM narration, use POST /budget-sub.
+    """
+    if budget_engine is None:
+        raise HTTPException(status_code=503, detail="Budget engine unavailable (card index not loaded)")
+
+    price = budget_engine.get_price(req.card)
+    subs = budget_engine.get_substitutions(req.card)
+
+    entries = []
+    for sub in subs:
+        repl_price = budget_engine.get_price(sub.replacement)
+        savings = (price - repl_price) if (price is not None and repl_price is not None) else None
+        entries.append(SubstitutionEntry(
+            replacement=sub.replacement,
+            tradeoffs=sub.tradeoffs,
+            power_loss=sub.power_loss,
+            notes=sub.notes,
+            original_price_usd=price,
+            replacement_price_usd=repl_price,
+            savings_usd=savings,
+        ))
+
+    return SubstitutionResponse(
+        card=req.card,
+        price_usd=price,
+        irreplaceable=budget_engine.is_irreplaceable(req.card),
+        substitutions=entries,
+    )
+
+
+class BudgetTiersRequest(BaseModel):
+    decklist: dict[str, int]  # card_name -> count
+
+
+class TierSummary(BaseModel):
+    decklist: dict[str, int]
+    estimated_price_usd: float
+    substitutions_applied: list[list[str]]  # list of [original, replacement] pairs
+    irreplaceable: list[str]
+
+
+class BudgetTiersResponse(BaseModel):
+    full: TierSummary
+    mid: TierSummary
+    budget: TierSummary
+
+
+@app.post("/budget-tiers", response_model=BudgetTiersResponse)
+async def budget_tiers(req: BudgetTiersRequest):
+    """Generate full/mid/budget tiers of a decklist.
+
+    - full: original list
+    - mid: Reserved-List-and-above cards swapped for shocks/fast lands
+    - budget: every card above $30 swapped for its best budget alternative
+
+    Each tier reports its estimated paper price, which substitutions were
+    applied, and which cards are irreplaceable (you'll need to buy them
+    or play a different deck).
+    """
+    if budget_engine is None:
+        raise HTTPException(status_code=503, detail="Budget engine unavailable (card index not loaded)")
+
+    tiers = budget_engine.generate_tiers(req.decklist)
+
+    def summarize(tier):
+        return TierSummary(
+            decklist=tier.decklist,
+            estimated_price_usd=round(tier.estimated_price_usd, 2),
+            substitutions_applied=[list(s) for s in tier.substitutions_applied],
+            irreplaceable=tier.irreplaceable,
+        )
+
+    return BudgetTiersResponse(
+        full=summarize(tiers["full"]),
+        mid=summarize(tiers["mid"]),
+        budget=summarize(tiers["budget"]),
+    )
 
 
 @app.post("/evaluate-card", response_model=ChatResponse)
