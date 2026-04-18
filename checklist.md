@@ -16,14 +16,15 @@
 
 ## Phase 2: Model
 
-- [x] Build LoRA training dataset (1,449 pairs across 7 categories)
+- [x] Build LoRA training dataset (1,546 pairs across 13 files after Round 2)
   - [x] Q&A pairs from comprehensive rules (422 pairs)
   - [x] Deck-building rationale (217 pairs)
-  - [x] Card evaluation in Legacy context (294 pairs)
+  - [x] Card evaluation in Legacy context (301 pairs after Round 2 additions)
   - [x] Deck analysis examples (146 pairs)
-  - [x] Budget substitution examples (121 pairs)
+  - [x] Budget substitution examples (129 pairs after Round 2 additions)
   - [x] Conversation flow examples (119 pairs)
-  - [x] Board state analysis examples (130 pairs)
+  - [x] Board state analysis examples (146 pairs after Round 2 additions)
+  - [x] Round 2 new categories: meta_awareness (26), negative_examples (12), card_relevance (9), disambiguation (9), deck_construction (6), uniqueness (4)
 - [ ] Hand-review curated subset (~200-300 examples) for accuracy
 - [x] Build evaluation dataset (22 test cases across 9 categories)
   - [x] Deck legality (60 main + 15 side, all Legacy-legal)
@@ -156,12 +157,14 @@
 
 - [ ] Technical documentation
   - [ ] Architecture overview with diagram
-  - [ ] Training data sources and preparation process
-  - [ ] LoRA training process and hyperparameters
-  - [ ] API reference (all endpoints, parameters, response formats)
-  - [ ] Deployment instructions (how to reproduce)
-  - [ ] Sampling method explanation (why each preset exists)
-  - [ ] Evaluation results and analysis
+  - [x] Training data sources and preparation process (`notes/development/progress.md`, `round1-analysis.md`)
+  - [x] LoRA training process and hyperparameters (documented in `finetune_legacy.ipynb`)
+  - [x] API reference (in README: 14 endpoints, LLM-backed vs deterministic)
+  - [x] Deployment instructions — reproducible
+    - [x] Ollama walkthrough (`notes/development/ollama-deployment.md`)
+    - [x] SageMaker walkthrough (`notes/development/sagemaker-deployment.md`)
+  - [x] Sampling method explanation (temperature presets documented inline in `src/server.py`)
+  - [x] Evaluation results and analysis (`round1-analysis.md` covers Round 1; Round 2 numbers in README + `eval_report.json`)
 - [ ] Demo presentation
   - [ ] Live walkthrough: play style → deck → view → goldfish
   - [ ] Show meta awareness and rules knowledge
