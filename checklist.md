@@ -62,9 +62,14 @@
   - [ ] Run `python scripts/merge_and_convert.py --llama-cpp-path /path/to/llama.cpp`
   - [ ] `ollama create the-legacy -f Modelfile` and verify with `ollama run`
 - [ ] Deploy SageMaker endpoint for remote demo
-  - [ ] Merge LoRA adapter into base model and push to HF
-  - [ ] Run `scripts/deploy_sagemaker.py --create`
+  - [x] `scripts/merge_and_convert.py --push-hf-repo ...` pushes merged model to HF
+  - [x] `scripts/deploy_sagemaker.py` with --create/--delete/--status/--test actions
+  - [x] Cost warning in --create, ongoing cost estimate in --status
+  - [x] Walkthrough at `notes/development/sagemaker-deployment.md`
+  - [ ] External: AWS account, `aws configure`, SageMaker execution role
+  - [ ] Run merge + push to HF, then `scripts/deploy_sagemaker.py --create`
   - [ ] Verify with `scripts/deploy_sagemaker.py --test`
+  - [ ] `scripts/deploy_sagemaker.py --delete` when done (stops billing!)
 - [x] Build FastAPI layer (`src/server.py`)
   - [x] `POST /chat` — main conversation, streaming + non-streaming
   - [x] `POST /build-deck` — generate 75-card decklist

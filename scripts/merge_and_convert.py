@@ -1,32 +1,39 @@
 """
-Merge LoRA adapter into base model and convert to GGUF for Ollama deployment.
+Merge LoRA adapter into base model, then optionally convert to GGUF for Ollama
+or push to HuggingFace for SageMaker.
 
-End-to-end pipeline:
+Two deployment targets share the merge step, so this script handles both:
+
+  Ollama (local):
+    python scripts/merge_and_convert.py --llama-cpp-path /path/to/llama.cpp
+
+  SageMaker (remote):
+    python scripts/merge_and_convert.py --push-hf-repo malhl/the-legacy-lora-merged --skip-gguf
+
+  Both at once:
+    python scripts/merge_and_convert.py --llama-cpp-path /path/to/llama.cpp \\
+        --push-hf-repo malhl/the-legacy-lora-merged
+
+Pipeline steps (each can be skipped with a flag):
   1. Download LoRA adapter from HuggingFace Hub (or use a local path)
   2. Load Llama 3.2 1B Instruct base model
   3. Merge adapter weights into the base via peft.merge_and_unload()
   4. Save merged model as HF format (safetensors)
-  5. Convert to GGUF using llama.cpp's convert_hf_to_gguf.py
-  6. Rewrite the repo Modelfile to point at the new .gguf file
-
-After this finishes, run from the repo root:
-    ollama create the-legacy -f Modelfile
-    ollama run the-legacy "What's the best deck in Legacy right now?"
+  5. (optional) Push merged model to HuggingFace Hub
+  6. (optional) Convert to GGUF using llama.cpp's convert_hf_to_gguf.py
+  7. (optional) Rewrite the repo Modelfile to point at the new .gguf file
 
 Prerequisites:
-  - Ollama installed (https://ollama.com)
-  - llama.cpp cloned somewhere locally — pass its path via --llama-cpp-path
   - pip install transformers peft torch huggingface_hub accelerate
   - HF login: `huggingface-cli login` (or --hf-token)
-
-Usage:
-    python scripts/merge_and_convert.py \\
-        --llama-cpp-path /path/to/llama.cpp \\
-        --adapter-repo malhl/the-legacy-lora \\
-        --quant q4_k_m
+  For Ollama path:
+  - Ollama installed (https://ollama.com)
+  - llama.cpp cloned somewhere locally — pass its path via --llama-cpp-path
+  For SageMaker path:
+  - HF token with write access (for pushing merged model)
 
 This script runs on CPU. Merging a 1B model takes ~30s and ~4GB of RAM.
-The resulting GGUF is about 800MB at q4_k_m quantization.
+GGUF at q4_k_m is about 800MB; the full HF merged model is ~2.5GB.
 """
 
 import argparse
@@ -122,6 +129,35 @@ def merge_adapter(
     print(f"  {size_mb:.1f} MB")
 
 
+def push_merged_to_hf(
+    merged_dir: Path,
+    repo_id: str,
+    private: bool,
+    hf_token: str | None,
+) -> None:
+    """Push the merged HF model to HuggingFace Hub."""
+    print(f"\n=== Step 2a: Push merged model to HuggingFace ===")
+    print(f"Repo: {repo_id} (private={private})")
+
+    from huggingface_hub import HfApi, login
+    from transformers import AutoModelForCausalLM, AutoTokenizer
+
+    if hf_token:
+        login(token=hf_token)
+
+    # Use the Transformers push_to_hub method — handles model card generation
+    # and LFS tracking for large safetensors automatically.
+    model = AutoModelForCausalLM.from_pretrained(merged_dir)
+    tokenizer = AutoTokenizer.from_pretrained(merged_dir)
+
+    print(f"Uploading model...")
+    model.push_to_hub(repo_id, private=private, commit_message="Merged LoRA model")
+    print(f"Uploading tokenizer...")
+    tokenizer.push_to_hub(repo_id, private=private, commit_message="Merged LoRA tokenizer")
+
+    print(f"Pushed to https://huggingface.co/{repo_id}")
+
+
 def convert_to_gguf(
     merged_dir: Path,
     gguf_out: Path,
@@ -178,8 +214,7 @@ def main():
     parser.add_argument(
         "--llama-cpp-path",
         type=Path,
-        required=True,
-        help="Path to your local llama.cpp clone (must contain convert_hf_to_gguf.py)",
+        help="Path to your local llama.cpp clone (required unless --skip-gguf)",
     )
     parser.add_argument(
         "--base-model",
@@ -215,9 +250,24 @@ def main():
         help="HuggingFace token (also reads from HF_TOKEN env var)",
     )
     parser.add_argument(
+        "--push-hf-repo",
+        default=None,
+        help="If set, push the merged HF model to this repo (e.g. malhl/the-legacy-lora-merged)",
+    )
+    parser.add_argument(
+        "--hf-private",
+        action="store_true",
+        help="When pushing to HF, create the repo as private (default: public)",
+    )
+    parser.add_argument(
         "--skip-merge",
         action="store_true",
-        help="Skip the merge step and use an existing merged-dir (useful for re-running GGUF conversion)",
+        help="Skip the merge step and use an existing merged-dir (useful for re-running conversion)",
+    )
+    parser.add_argument(
+        "--skip-gguf",
+        action="store_true",
+        help="Skip the GGUF conversion step (use with --push-hf-repo for SageMaker deployment only)",
     )
     parser.add_argument(
         "--skip-modelfile",
@@ -231,6 +281,10 @@ def main():
     )
     args = parser.parse_args()
 
+    if not args.skip_gguf and args.llama_cpp_path is None:
+        parser.error("--llama-cpp-path is required unless --skip-gguf is set")
+
+    # Step 1: merge (or skip if reusing existing merged-dir)
     if not args.skip_merge:
         merge_adapter(
             base_model_id=args.base_model,
@@ -243,24 +297,40 @@ def main():
             sys.exit(f"--skip-merge set but {args.merged_dir} does not exist")
         print(f"Skipping merge; using existing {args.merged_dir}")
 
-    convert_to_gguf(
-        merged_dir=args.merged_dir,
-        gguf_out=args.gguf_out,
-        llama_cpp_path=args.llama_cpp_path,
-        quant=args.quant,
-    )
+    # Step 2a: optionally push merged model to HF (for SageMaker)
+    if args.push_hf_repo:
+        push_merged_to_hf(
+            merged_dir=args.merged_dir,
+            repo_id=args.push_hf_repo,
+            private=args.hf_private,
+            hf_token=args.hf_token,
+        )
 
-    if not args.skip_modelfile:
-        write_modelfile(gguf_path=args.gguf_out)
+    # Step 2b: GGUF conversion (for Ollama)
+    if not args.skip_gguf:
+        convert_to_gguf(
+            merged_dir=args.merged_dir,
+            gguf_out=args.gguf_out,
+            llama_cpp_path=args.llama_cpp_path,
+            quant=args.quant,
+        )
 
+        if not args.skip_modelfile:
+            write_modelfile(gguf_path=args.gguf_out)
+
+    # Cleanup
     if not args.keep_merged and args.merged_dir.exists():
         print(f"\nCleaning up {args.merged_dir} (use --keep-merged to preserve)")
         shutil.rmtree(args.merged_dir)
 
     print("\n=== Done ===")
-    print("Next steps:")
-    print(f"  ollama create the-legacy -f {MODELFILE_PATH.name}")
-    print(f"  ollama run the-legacy \"What's the best deck in Legacy?\"")
+    if args.push_hf_repo:
+        print(f"Merged model pushed: https://huggingface.co/{args.push_hf_repo}")
+        print(f"  Deploy to SageMaker: python scripts/deploy_sagemaker.py --create")
+    if not args.skip_gguf:
+        print(f"GGUF written to: {args.gguf_out}")
+        print(f"  Register with Ollama: ollama create the-legacy -f {MODELFILE_PATH.name}")
+        print(f"  Test: ollama run the-legacy \"What's the best deck in Legacy?\"")
 
 
 if __name__ == "__main__":
