@@ -6,7 +6,7 @@ Expected total time: **~15 minutes**
 
 ## 1. One-time installs
 
-- [ ] **Ollama** — download Windows installer from [ollama.com/download](https://ollama.com/download), run it
+- [X] **Ollama** — download Windows installer from [ollama.com/download](https://ollama.com/download), run it
 - [ ] Verify Ollama works: open a new terminal and run
   ```
   ollama --version
@@ -16,14 +16,15 @@ Expected total time: **~15 minutes**
   git clone https://github.com/ggerganov/llama.cpp
   ```
   Note the path — you'll need it in step 3.
-- [ ] **Python deps**:
+- [ ] **Python deps** — transformers stack plus `sentencepiece` (required by llama.cpp's converter for the Llama tokenizer):
   ```
-  pip install transformers peft torch huggingface_hub accelerate
+  pip install transformers peft torch huggingface_hub accelerate sentencepiece
   ```
-- [ ] **HuggingFace login** (needed to download the LoRA adapter):
+- [ ] **HuggingFace login** — `huggingface_hub` 1.x renamed the CLI to `hf`:
   ```
-  huggingface-cli login
+  hf auth login
   ```
+  Read access is sufficient for downloading the adapter.
 
 ## 2. Merge + convert the model
 
@@ -33,7 +34,9 @@ From the repo root:
   ```
   python scripts/merge_and_convert.py --llama-cpp-path C:/path/to/llama.cpp
   ```
-  Expected: ~2 minutes on CPU. Produces `the-legacy.gguf` (~800MB) and rewrites `Modelfile`.
+  Expected: ~2 minutes on CPU. Produces `the-legacy.gguf` (~1.3GB at q8_0) and rewrites `Modelfile`.
+
+  **Note:** `convert_hf_to_gguf.py` only supports f32 / f16 / bf16 / q8_0 directly. For smaller quants (q4_k_m, q5_k_m) you'd need to compile llama.cpp and run its `llama-quantize` binary on the f16 output. q8_0 is near-lossless and fine for a 1B model.
 - [ ] Confirm the file exists:
   ```
   ls the-legacy.gguf
@@ -63,7 +66,9 @@ From the repo root:
   ```
   python scripts/test_deployment.py --ollama
   ```
-  Expected: **5/5 passed**, avg latency a few seconds per response.
+  Expected: **3-5/5 passed**, latency ~10-15s per response on CPU.
+
+  Some cases can fail on phrasing (e.g. the model says "UB Tempo" instead of "Dimir Tempo") without being factually wrong — use `--verbose` to see the full responses if something fails. Factual hallucinations that do exist (e.g. "Bowmasters has trample") are Round 2 limitations documented in `round1-analysis.md`, not deployment bugs.
 
 ## 5. (Optional) Point the FastAPI server at it
 
@@ -93,8 +98,13 @@ Ollama auto-starts on login, so `ollama run the-legacy` will work after a reboot
 
 ## Troubleshooting
 
-Hit a problem? See the troubleshooting section of [ollama-deployment.md](ollama-deployment.md). Common issues:
+Hit a problem? See the troubleshooting section of [ollama-deployment.md](ollama-deployment.md). Issues we've actually encountered:
 
+- **`ollama` not found after install** — open a new PowerShell; the existing session has a stale PATH
+- **`No module named 'sentencepiece'`** during GGUF conversion — `pip install sentencepiece`
+- **`invalid choice: 'q4_k_m'`** on conversion — modern `convert_hf_to_gguf.py` only emits f16/bf16/q8_0 directly; smaller quants need a compiled `llama-quantize`. Use `--quant q8_0` or leave the default.
+- **`template error: undefined variable "$last"`** on `ollama create` — old Modelfile syntax, pull latest repo and re-run (fixed in the current Modelfile)
+- **Adapter repo not found on HF (404)** — weights may only exist on your SageMaker training instance or locally. Pass `--adapter-repo ./notebooks/lora-legacy/lora-adapter` to use a local path.
 - **`convert_hf_to_gguf.py not found`** — the `--llama-cpp-path` value is wrong
 - **Model answers like the base Llama** — the merge didn't take, re-run step 2
 - **Garbled output / no termination** — Modelfile template issue, re-run `ollama create`

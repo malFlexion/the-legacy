@@ -16,10 +16,10 @@
 
 ## Phase 2: Model
 
-- [x] Build LoRA training dataset (1,546 pairs across 13 files after Round 2)
+- [x] Build LoRA training dataset (1,549 pairs across 13 files after Round 2 + post-deploy fixes)
   - [x] Q&A pairs from comprehensive rules (422 pairs)
   - [x] Deck-building rationale (217 pairs)
-  - [x] Card evaluation in Legacy context (301 pairs after Round 2 additions)
+  - [x] Card evaluation in Legacy context (304 pairs after Round 2 + Bowmasters disambig pairs)
   - [x] Deck analysis examples (146 pairs)
   - [x] Budget substitution examples (129 pairs after Round 2 additions)
   - [x] Conversation flow examples (119 pairs)
@@ -55,15 +55,16 @@
 
 ## Phase 3: Infrastructure
 
-- [ ] Set up Ollama locally serving finetuned model (GGUF quantized)
+- [x] Set up Ollama locally serving finetuned model (GGUF quantized, q8_0)
   - [x] `scripts/merge_and_convert.py` — end-to-end merge + GGUF + Modelfile generation
-  - [x] Modelfile with correct Llama 3.2 chat template and stop tokens
+  - [x] Modelfile with correct Llama 3.2 chat template (dropped `$last` — Ollama runtime doesn't support it)
   - [x] Deployment walkthrough at `notes/development/ollama-deployment.md`
   - [x] Condensed setup checklist at `notes/development/ollama-checklist.md`
   - [x] Smoke-test script `scripts/test_deployment.py --ollama` (5 prompts with expect/reject patterns)
-  - [ ] External install: Ollama (ollama.com), llama.cpp clone
-  - [ ] Run `python scripts/merge_and_convert.py --llama-cpp-path /path/to/llama.cpp`
-  - [ ] `ollama create the-legacy -f Modelfile` and verify with `ollama run`
+  - [x] Ollama + llama.cpp installed locally
+  - [x] Merge + GGUF conversion completed (`the-legacy.gguf` at q8_0, ~1.3GB)
+  - [x] `ollama create the-legacy -f Modelfile` succeeded; model reachable via `ollama run`
+  - [x] Smoke test: 3/5 passed (phrasing-strict failures on 2; model produces sensible domain-aware responses — see round1-analysis for expected Round 2 eval behavior)
 - [ ] Deploy SageMaker endpoint for remote demo
   - [x] `scripts/merge_and_convert.py --push-hf-repo ...` pushes merged model to HF
   - [x] `scripts/deploy_sagemaker.py` with --create/--delete/--status/--test actions

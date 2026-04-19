@@ -59,9 +59,9 @@ the_legacy/
     legacy-basics.md            # Legacy format guide (ban list, play patterns, glossary)
     deckbuilding-guide.md       # Deckbuilding principles (Reid Duke) with card images
     legacy-analysis.md          # Meta analysis with matchup/hate matrices, meta evolution
-    training/                   # LoRA training dataset (1,546 pairs, Round 2)
+    training/                   # LoRA training dataset (1,549 pairs after Bowmasters disambig adds)
       rules_qa.jsonl            #   Rules Q&A (422 pairs)
-      card_evaluation.jsonl     #   Card playability assessment (301 pairs)
+      card_evaluation.jsonl     #   Card playability assessment (304 pairs)
       deckbuilding_rationale.jsonl  # Deck-building rationale (217 pairs)
       deck_analysis.jsonl       #   Archetype ID, meta positioning (146 pairs)
       board_state_analysis.jsonl #  Opening hands, board states, sequencing (146 pairs)
@@ -118,10 +118,10 @@ the_legacy/
 
 The finetuned model can be served two ways. Both paths share the same merge step (`scripts/merge_and_convert.py`) and can be verified with the same smoke-test (`scripts/test_deployment.py`).
 
-| Path | Cost | Setup time | Use when |
+| Path | Cost | Setup time | Status |
 |---|---|---|---|
-| **Ollama** (local GGUF) | Free | ~15 min | Dev, demo on your own machine |
-| **SageMaker** (TGI endpoint) | ~$1.41/hr | ~20 min | Remote demo, shared access |
+| **Ollama** (local GGUF) | Free | ~15 min | ✅ Deployed — `the-legacy` at q8_0 (~1.3GB), ~11s/response on CPU |
+| **SageMaker** (TGI endpoint) | ~$1.41/hr | ~20 min | Pipeline built — not currently deployed |
 
 - **Ollama:** [`notes/development/ollama-checklist.md`](notes/development/ollama-checklist.md) (condensed) or [`ollama-deployment.md`](notes/development/ollama-deployment.md) (full walkthrough)
 - **SageMaker:** [`notebooks/deploy_sagemaker.ipynb`](notebooks/deploy_sagemaker.ipynb) (interactive) or [`sagemaker-deployment.md`](notes/development/sagemaker-deployment.md) (full walkthrough)
@@ -130,6 +130,8 @@ Verify either deployment with:
 ```
 python scripts/test_deployment.py --ollama      # or --sagemaker or --all
 ```
+
+Note on quantization: `convert_hf_to_gguf.py` emits f16/bf16/q8_0 directly. Smaller quantizations (q4_k_m, q5_k_m) require compiling llama.cpp and running its `llama-quantize` binary on the f16 output. At 1B size, q8_0 is near-lossless and the size difference doesn't matter.
 
 ## Training Results (Round 2)
 
