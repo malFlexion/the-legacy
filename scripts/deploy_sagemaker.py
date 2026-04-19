@@ -25,6 +25,7 @@ continuously until deleted — don't forget to run --delete when done.
 
 import argparse
 import json
+import os
 import sys
 
 # boto3 is imported lazily inside each command so --help works without it installed.
@@ -36,7 +37,7 @@ import sys
 
 ENDPOINT_NAME = "the-legacy-llm"
 INSTANCE_TYPE = "ml.g5.xlarge"  # 1x A10G, 24GB VRAM — plenty for 1B model
-HF_MODEL_ID = "malhl/the-legacy-lora-merged"  # Merged model on HF Hub
+DEFAULT_HF_MODEL_ID = "malFlexion/the-legacy-lora-merged"  # override with --hf-model-id or HF_MODEL_ID env var
 INSTANCE_HOURLY_COST_USD = 1.41  # ml.g5.xlarge on-demand, us-east-1
 
 
@@ -45,11 +46,13 @@ INSTANCE_HOURLY_COST_USD = 1.41  # ml.g5.xlarge on-demand, us-east-1
 # ---------------------------------------------------------------------------
 
 
-def create_endpoint(role: str | None = None, region: str | None = None):
+def create_endpoint(role: str | None = None, region: str | None = None, hf_model_id: str | None = None):
     """Create a SageMaker real-time endpoint."""
     import boto3
     import sagemaker
     from sagemaker.huggingface import HuggingFaceModel, get_huggingface_llm_image_uri
+
+    hf_model_id = hf_model_id or os.environ.get("HF_MODEL_ID") or DEFAULT_HF_MODEL_ID
 
     boto_sess = boto3.Session(region_name=region) if region else boto3.Session()
     sess = sagemaker.Session(boto_session=boto_sess)
@@ -64,7 +67,7 @@ def create_endpoint(role: str | None = None, region: str | None = None):
             )
 
     print("About to deploy:")
-    print(f"  Model:         {HF_MODEL_ID}")
+    print(f"  Model:         {hf_model_id}")
     print(f"  Endpoint name: {ENDPOINT_NAME}")
     print(f"  Instance:      {INSTANCE_TYPE} (~${INSTANCE_HOURLY_COST_USD:.2f}/hr)")
     print(f"  Region:        {sess.boto_region_name}")
@@ -82,7 +85,7 @@ def create_endpoint(role: str | None = None, region: str | None = None):
         image_uri=image_uri,
         role=role,
         env={
-            "HF_MODEL_ID": HF_MODEL_ID,
+            "HF_MODEL_ID": hf_model_id,
             "HF_TASK": "text-generation",
             "MAX_INPUT_LENGTH": "1024",
             "MAX_TOTAL_TOKENS": "2048",
@@ -250,11 +253,16 @@ if __name__ == "__main__":
 
     parser.add_argument("--role", type=str, help="SageMaker execution role ARN (auto-detected if omitted)")
     parser.add_argument("--region", type=str, help="AWS region (default: from AWS config)")
+    parser.add_argument(
+        "--hf-model-id",
+        type=str,
+        help=f"HuggingFace merged model repo ID (default: {DEFAULT_HF_MODEL_ID}; env: HF_MODEL_ID)",
+    )
 
     args = parser.parse_args()
 
     if args.create:
-        create_endpoint(role=args.role, region=args.region)
+        create_endpoint(role=args.role, region=args.region, hf_model_id=args.hf_model_id)
     elif args.delete:
         delete_endpoint(region=args.region)
     elif args.status:
