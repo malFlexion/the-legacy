@@ -52,29 +52,20 @@ DEFAULT_GGUF_OUT = REPO_ROOT / "the-legacy.gguf"
 MODELFILE_PATH = REPO_ROOT / "Modelfile"
 
 
-# Llama 3.2 Instruct chat template, as Ollama Go-template syntax.
-# Mirrors the tokenizer's chat_template.jinja but rewritten for Ollama.
+# Llama 3.2 Instruct chat template in Ollama's Go-template syntax.
+# Ollama's template runtime doesn't provide $last, so we emit an unconditional
+# trailing <|start_header_id|>assistant<|end_header_id|> and let the stop
+# tokens (declared via PARAMETER) terminate generation correctly.
 LLAMA32_TEMPLATE = """{{- if or .System .Tools }}<|start_header_id|>system<|end_header_id|>
 
-{{ if .System }}{{ .System }}
+{{ if .System }}{{ .System }}{{ end }}<|eot_id|>
 {{- end }}
-{{- if .Tools }}You have access to the following tools:
-{{ range .Tools }}{{ . }}
-{{ end }}
-{{- end }}<|eot_id|>
-{{- end }}
-{{- range .Messages }}
-{{- if eq .Role "user" }}<|start_header_id|>user<|end_header_id|>
+{{- range .Messages }}<|start_header_id|>{{ .Role }}<|end_header_id|>
 
 {{ .Content }}<|eot_id|>
-{{- else if eq .Role "assistant" }}<|start_header_id|>assistant<|end_header_id|>
+{{- end }}<|start_header_id|>assistant<|end_header_id|>
 
-{{ .Content }}{{ if not $last }}<|eot_id|>{{ end }}
-{{- end }}
-{{- end }}
-{{- if not $last }}<|start_header_id|>assistant<|end_header_id|>
-
-{{ end }}"""
+"""
 
 
 SYSTEM_PROMPT = (
@@ -240,9 +231,15 @@ def main():
     )
     parser.add_argument(
         "--quant",
-        default="q4_k_m",
-        choices=["f16", "q8_0", "q5_k_m", "q4_k_m", "q4_0", "q3_k_m"],
-        help="GGUF quantization level (default: q4_k_m — good quality/size tradeoff)",
+        default="q8_0",
+        choices=["f32", "f16", "bf16", "q8_0"],
+        help=(
+            "GGUF quantization level (default: q8_0 — near-lossless, ~1.3GB). "
+            "Only formats that convert_hf_to_gguf.py supports directly are "
+            "listed here. For smaller quantizations (q4_k_m, q5_k_m, etc.) "
+            "you need to compile llama.cpp and run llama-quantize on the "
+            "f16 output separately — see ollama-deployment.md."
+        ),
     )
     parser.add_argument(
         "--hf-token",

@@ -2,25 +2,14 @@ FROM ./the-legacy.gguf
 
 TEMPLATE """{{- if or .System .Tools }}<|start_header_id|>system<|end_header_id|>
 
-{{ if .System }}{{ .System }}
+{{ if .System }}{{ .System }}{{ end }}<|eot_id|>
 {{- end }}
-{{- if .Tools }}You have access to the following tools:
-{{ range .Tools }}{{ . }}
-{{ end }}
-{{- end }}<|eot_id|>
-{{- end }}
-{{- range .Messages }}
-{{- if eq .Role "user" }}<|start_header_id|>user<|end_header_id|>
+{{- range .Messages }}<|start_header_id|>{{ .Role }}<|end_header_id|>
 
 {{ .Content }}<|eot_id|>
-{{- else if eq .Role "assistant" }}<|start_header_id|>assistant<|end_header_id|>
+{{- end }}<|start_header_id|>assistant<|end_header_id|>
 
-{{ .Content }}{{ if not $last }}<|eot_id|>{{ end }}
-{{- end }}
-{{- end }}
-{{- if not $last }}<|start_header_id|>assistant<|end_header_id|>
-
-{{ end }}"""
+"""
 
 PARAMETER temperature 0.3
 PARAMETER top_p 0.9
