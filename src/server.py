@@ -39,6 +39,7 @@ from .card_index import CardIndex
 from .deck_parser import parse_decklist, import_from_url, Decklist
 from .budget_engine import BudgetEngine
 from .goldfish_engine import Deck, aggregate_stats, london_mulligan, sample_hands
+from .turn_engine import aggregate_game_stats, simulate_game
 
 # ---------------------------------------------------------------------------
 # Config
@@ -686,6 +687,107 @@ async def goldfish_stats(req: GoldfishStatsRequest):
             for t, colors in stats.color_by_turn.items()
         },
         keepable_rate=round(stats.keepable_rate(), 3),
+    )
+
+
+class GoldfishSimulateRequest(BaseModel):
+    decklist: dict[str, int]
+    turns: int = 6  # how many turns to play out
+    seed: int | None = None
+
+
+class GoldfishSimulateResponse(BaseModel):
+    turns_played: int
+    life_final: int
+    turns: list[dict]  # per-turn snapshots
+    assembled_combos: dict[str, int]
+    threats_deployed: dict[str, int]
+
+
+@app.post("/goldfish/simulate", response_model=GoldfishSimulateResponse)
+async def goldfish_simulate(req: GoldfishSimulateRequest):
+    """Play out a single goldfish game turn-by-turn.
+
+    Returns a per-turn log (lands played, spells cast, mana used vs. available,
+    combos assembled) plus aggregate end-of-game info (final life, threat
+    deployment turns). See notes on what the turn engine does and doesn't
+    model in src/turn_engine.py.
+    """
+    if card_index is None:
+        raise HTTPException(status_code=503, detail="Card index not loaded")
+    if req.turns < 1 or req.turns > 15:
+        raise HTTPException(status_code=400, detail="turns must be between 1 and 15")
+
+    try:
+        deck = Deck.from_decklist(req.decklist, card_index)
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+
+    game = simulate_game(deck, turns=req.turns, seed=req.seed)
+    summary = game.to_summary()
+
+    return GoldfishSimulateResponse(
+        turns_played=summary["turns_played"],
+        life_final=summary["life_final"],
+        turns=summary["turns"],
+        assembled_combos=summary["assembled_combos"],
+        threats_deployed=summary["threats_deployed"],
+    )
+
+
+class GoldfishSimulateManyRequest(BaseModel):
+    decklist: dict[str, int]
+    n_games: int = 1000
+    turns: int = 6
+    seed: int | None = None
+
+
+class GoldfishGameStatsResponse(BaseModel):
+    n_games: int
+    avg_life_final: float
+    avg_mana_efficiency: float
+    combo_assembly: dict[str, dict]
+    avg_turn_first_cast: dict[str, float]
+    cast_rate: dict[str, float]
+
+
+@app.post("/goldfish/simulate-many", response_model=GoldfishGameStatsResponse)
+async def goldfish_simulate_many(req: GoldfishSimulateManyRequest):
+    """Run N goldfish games and return aggregate stats:
+      - avg_mana_efficiency: fraction of available mana actually spent each turn
+      - combo_assembly: rate and average turn for each known combo
+      - avg_turn_first_cast / cast_rate: for each card, when/how often it's cast
+
+    Useful for comparing two deck variants, measuring consistency, or picking
+    a good mulligan floor.
+    """
+    if card_index is None:
+        raise HTTPException(status_code=503, detail="Card index not loaded")
+    if req.n_games < 1 or req.n_games > 10_000:
+        raise HTTPException(status_code=400, detail="n_games must be between 1 and 10000")
+    if req.turns < 1 or req.turns > 15:
+        raise HTTPException(status_code=400, detail="turns must be between 1 and 15")
+
+    try:
+        deck = Deck.from_decklist(req.decklist, card_index)
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+
+    import random as _random
+    rng = _random.Random(req.seed)
+    results = []
+    for _ in range(req.n_games):
+        results.append(simulate_game(deck, turns=req.turns, seed=rng.randint(0, 2**31 - 1)))
+    stats = aggregate_game_stats(results)
+    summary = stats.to_summary()
+
+    return GoldfishGameStatsResponse(
+        n_games=summary["n_games"],
+        avg_life_final=summary["avg_life_final"],
+        avg_mana_efficiency=summary["avg_mana_efficiency"],
+        combo_assembly=summary["combo_assembly"],
+        avg_turn_first_cast=summary["avg_turn_first_cast"],
+        cast_rate=summary["cast_rate"],
     )
 
 

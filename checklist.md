@@ -122,16 +122,24 @@
 - [x] LLM commentary on hand (existing `POST /goldfish` endpoint)
 
 ### Tier 2 (Target — if time allows)
-- [ ] Simplified turn engine (untap, draw, play land, cast spells by CMC)
-- [ ] Track mana available, cards in hand, permanents on board
-- [ ] Play out 5-7 turns
-- [ ] Stats: average turn to deploy key threats, mana efficiency/turn
+- [x] Simplified turn engine (untap, draw, play land, cast spells) — `src/turn_engine.py`
+- [x] Track mana available, cards in hand, permanents on board, graveyard, exile, life
+- [x] Play out N turns (default 6; configurable up to 15)
+- [x] Stats: avg turn first cast per card, cast rate, mana efficiency per turn
 
 ### Tier 3 (Stretch — nice to have)
-- [ ] Mana ability resolution (fetchlands, dual lands, mana rocks)
-- [ ] Spell sequencing heuristics (cantrips before committing)
-- [ ] Combo detection ("assembled Marit Lage on turn 3")
-- [ ] Full statistical summary over N simulated games
+- [x] Mana ability resolution
+  - [x] Fetchlands (sacrifice, search library for preferred dual/basic, shuffle)
+  - [x] Dual lands, shocklands, basics via `color_identity`
+  - [x] Colorless utility lands (Wasteland, Ancient Tomb with 2 life cost)
+  - [x] Fast mana (Lotus Petal, Chrome Mox, Mox Diamond, LED, City of Traitors)
+- [x] Spell sequencing heuristics
+  - [x] Cantrips / rituals / tutors cast before committing threats
+  - [x] Reactive cards (Force of Will, Daze, removal) skipped — they sit in hand
+- [x] Combo detection: `COMBOS` map with Marit Lage (Dark Depths + Thespian's Stage), Painter + Grindstone, Helm + Leyline, Thopter+Sword, Food Chain, Ideal+Dovescape
+- [x] Full statistical summary over N games: `POST /goldfish/simulate-many` (up to 10,000 games) with combo assembly rates, per-card cast rates, and avg mana efficiency
+- [x] Two new endpoints: `POST /goldfish/simulate` (single game log), `POST /goldfish/simulate-many` (aggregate)
+- [x] 21 tests in `tests/test_turn_engine.py` (154 total now passing)
 
 ## Phase 5: Frontend (Gradio)
 
