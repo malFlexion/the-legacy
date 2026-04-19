@@ -4,7 +4,7 @@ Deploy the finetuned Legacy model to a SageMaker real-time endpoint.
 Prerequisites:
     1. Merge the LoRA adapter and push to HuggingFace:
        python scripts/merge_and_convert.py \\
-           --push-hf-repo malhl/the-legacy-lora-merged --skip-gguf
+           --push-hf-repo malFlexion/the-legacy-lora-merged --skip-gguf
     2. AWS credentials configured: `aws configure`
     3. SageMaker execution role with these permissions:
        - AmazonSageMakerFullAccess
