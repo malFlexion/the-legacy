@@ -23,13 +23,16 @@ venv/
 .DS_Store
 Thumbs.db
 
-# Model weights
+# Model weights (large files — download or rebuild)
 *.bin
 *.gguf
 *.safetensors
 *.pt
 *.pth
 merged-model/
+
+# Exception: include the LoRA adapter (small, ~43MB)
+!notebooks/lora-legacy/lora-adapter/adapter_model.safetensors
 
 # Environment
 .env
