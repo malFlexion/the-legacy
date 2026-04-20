@@ -153,7 +153,44 @@ Verify any deployment with:
 python scripts/test_deployment.py --ollama      # or --sagemaker or --all
 ```
 
-**CI/CD:** `.github/workflows/fly-deploy.yml` auto-deploys to Fly on every push to `master` that touches code, `vectordb/`, `docs/`, `Dockerfile`, or `fly.toml`. Doc-only commits skip the build.
+**CI/CD:** `.github/workflows/fly-deploy.yml` is manual-only right now (`workflow_dispatch`) — trigger from the Actions tab → Fly Deploy → Run workflow. Push-triggered auto-deploy is commented out at the top of the file; uncomment the `push:` block to re-enable.
+
+### Prerequisites check — before deploying
+
+Before `fly deploy` (or hitting Run workflow) will succeed, you need:
+
+**Fly.io** — `flyctl` installed and authenticated, secrets set:
+```
+flyctl version                                    # install: https://fly.io/docs/hands-on/install-flyctl/
+fly auth whoami                                   # confirms you're logged in
+fly status -a the-legacy-api                      # confirms the app exists
+fly secrets list -a the-legacy-api                # confirms AWS creds + config are set
+```
+`fly secrets list` should show `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `AWS_REGION`, `SAGEMAKER_ENDPOINT`, and `INFERENCE_BACKEND`. If any are missing, set them with `fly secrets set NAME=value -a the-legacy-api`.
+
+**AWS / SageMaker** — credentials valid and endpoint InService:
+```
+aws sts get-caller-identity                       # confirms CLI is configured
+aws sagemaker describe-endpoint \
+    --endpoint-name the-legacy-llm                # confirms endpoint exists and is InService
+```
+The `EndpointStatus` field should be `InService`. If it's `Creating`, wait. If it's missing or `Failed`, recreate it:
+```
+python scripts/deploy_sagemaker.py --create --role arn:aws:iam::ACCOUNT:role/ROLE
+```
+The IAM user whose access keys are in Fly secrets needs `sagemaker:InvokeEndpoint` AND `sagemaker:DescribeEndpoint` (both covered by `AmazonSageMakerFullAccess`). The `/health` endpoint uses DescribeEndpoint to confirm LLM reachability on page load.
+
+**GitHub Actions (only if using push-triggered CD)** — the `FLY_API_TOKEN` secret:
+```
+fly tokens create deploy -a the-legacy-api
+```
+Paste into repo Settings → Secrets and variables → Actions → new secret named `FLY_API_TOKEN`.
+
+**End-to-end sanity check after deploying:**
+```
+curl https://the-legacy-api.fly.dev/health
+```
+Expected `"status": "ok"` and `"llm": {"reachable": true, "detail": "InService"}`. If `reachable: false`, the detail field tells you what's wrong (bad credentials, endpoint OutOfService, wrong region, etc.).
 
 Note on GGUF quantization: `convert_hf_to_gguf.py` emits f16/bf16/q8_0 directly. Smaller quantizations (q4_k_m, q5_k_m) require compiling llama.cpp and running its `llama-quantize` binary on the f16 output. At 1B size, q8_0 is near-lossless and the size difference doesn't matter.
 
