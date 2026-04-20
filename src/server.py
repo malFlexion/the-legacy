@@ -453,6 +453,124 @@ import re as _re
 
 _BRACKET_CARD_RE = _re.compile(r"\[\[([^\[\]]+?)\]\]")
 
+
+def extract_query_cards(query: str, max_cards: int = 3) -> list[dict]:
+    """Pre-extract cards explicitly mentioned in a user's question.
+
+    Used to inject ground-truth card data directly into the system prompt
+    *before* the LLM sees the query, addressing two failure modes of pure
+    semantic RAG:
+
+      1. Short card names ("Akroma") don't match full names ("Akroma,
+         Angel of Wrath") via word-boundary resolve. Fuzzy search catches
+         them.
+      2. The MiniLM-L6-v2 embedding model is generic — it doesn't know
+         MTG semantics, so queries like "Is Akroma playable?" retrieve
+         cards that happen to share keywords (Nahiri, Kardur's Vicious
+         Return) rather than cards actually named in the query. Injecting
+         the named card's real data bypasses that.
+
+    Returns at most `max_cards` cards, combining exact word-boundary
+    matches with fuzzy matches on the whole query string.
+    """
+    if card_index is None or not query.strip():
+        return []
+
+    result: list[dict] = []
+    seen: set[str] = set()
+
+    # Exact word-boundary matches first
+    for card in card_index.resolve(query, legacy_only=False):
+        if card["name"] not in seen:
+            result.append(card)
+            seen.add(card["name"])
+            if len(result) >= max_cards:
+                return result
+
+    # Fuzzy match the whole query — catches short forms like "Akroma"
+    # or typos like "Emrakull".
+    for name, _score in card_index.search(query, limit=max_cards * 2, legacy_only=False, threshold=80):
+        card = card_index.get(name)
+        if card and card["name"] not in seen:
+            result.append(card)
+            seen.add(card["name"])
+            if len(result) >= max_cards:
+                break
+
+    return result
+
+
+def format_card_context(cards: list[dict]) -> str:
+    """Format card data as a context block for the system prompt."""
+    if not cards:
+        return ""
+
+    parts = ["Cards mentioned in the user's question (use this data verbatim; do NOT invent alternative stats):"]
+    for c in cards:
+        lines = [f"\n### {c['name']}"]
+        if c.get("mana_cost"):
+            lines.append(f"Mana cost: {c['mana_cost']}")
+        if c.get("type_line"):
+            lines.append(f"Type: {c['type_line']}")
+        if c.get("power") is not None and c.get("toughness") is not None:
+            lines.append(f"P/T: {c['power']}/{c['toughness']}")
+        if c.get("oracle_text"):
+            lines.append(c["oracle_text"])
+        legalities = c.get("legalities", {}) or {}
+        legacy = legalities.get("legacy", "unknown")
+        lines.append(f"Legacy legality: {legacy}")
+        parts.append("\n".join(lines))
+
+    return "\n".join(parts)
+
+
+def auto_bracket_cards(text: str) -> str:
+    """Wrap plain-text card name mentions in [[Name]] markup.
+
+    The Modelfile prompt instructs the model to use brackets, but a 1B
+    model doesn't reliably follow formatting instructions. Rather than
+    hope, we post-process: find all card names with word-boundary
+    matches (longest-first so 'Chalice of the Void' consumes 'Void'),
+    wrap each match with [[...]], leave existing [[...]] alone, and skip
+    cards inside URLs / code blocks. Applied to every /chat response so
+    the frontend can always render gold inline refs + side-panel cards
+    regardless of what the model produced.
+    """
+    if card_index is None or not text:
+        return text
+
+    # Protect existing [[...]] regions and code spans from re-wrapping.
+    placeholders: list[str] = []
+
+    def _stash(m):
+        placeholders.append(m.group(0))
+        return f"\x00PLACEHOLDER{len(placeholders) - 1}\x00"
+
+    # Stash existing brackets and inline code first
+    working = _re.sub(r"\[\[[^\[\]]+?\]\]", _stash, text)
+    working = _re.sub(r"`[^`\n]+`", _stash, working)
+
+    # Word-boundary card name match, longest-first so substrings don't
+    # eat the enclosing name. Only Legacy-legal cards considered to
+    # avoid wrapping every incidental word that happens to match an
+    # obscure card name from the 36k-card pool.
+    search_pool = sorted(card_index.legacy_legal, key=len, reverse=True)
+    wrapped_names: set[str] = set()
+
+    for name in search_pool:
+        if name in wrapped_names:
+            continue
+        pattern = r"(?<!\w)" + _re.escape(name) + r"(?!\w)"
+        if _re.search(pattern, working):
+            working = _re.sub(pattern, f"[[{name}]]", working)
+            wrapped_names.add(name)
+
+    # Restore stashed content
+    for i, original in enumerate(placeholders):
+        working = working.replace(f"\x00PLACEHOLDER{i}\x00", original, 1)
+
+    return working
+
 # Keywords that indicate the conversation is explicitly discussing a card's
 # ban status — when present alongside a banned card reference, we allow
 # the panel to display it. Otherwise banned cards are filtered out to
@@ -540,9 +658,22 @@ def resolve_cards(text: str) -> list[CardData]:
             raw_cards.append(card)
             seen_names.add(card["name"])
 
-    # Fallback: no brackets in the response, scan full text
+    # Fallback: no brackets in the response, scan full text. Results from
+    # card_index.resolve() are longest-first (internal implementation
+    # detail); we re-sort by the position of their first occurrence in
+    # the text so the panel matches the reading order users see.
     if not raw_cards:
-        for card in card_index.resolve(text, legacy_only=False):
+        found = card_index.resolve(text, legacy_only=False)
+        # Annotate with first-mention position, sort, drop the position.
+        def _first_pos(card):
+            name = card["name"]
+            m = _re.search(
+                r"(?<!\w)" + _re.escape(name) + r"(?!\w)",
+                text,
+            )
+            return m.start() if m else len(text)
+        found.sort(key=_first_pos)
+        for card in found:
             if card["name"] not in seen_names:
                 raw_cards.append(card)
                 seen_names.add(card["name"])
@@ -828,12 +959,37 @@ async def chat(req: ChatRequest):
             user_msg = msg.content
             break
 
-    # Retrieve context — rag_sources lets the response tell the frontend
-    # which rules/meta chunks grounded the answer.
+    # Pre-fetch ground-truth data for any card explicitly named in the
+    # question. The generic MiniLM embedding is weak on MTG semantics, so
+    # RAG alone often retrieves wrong cards (e.g. "Akroma" returns cards
+    # with overlapping keywords, not Akroma herself). Injecting the named
+    # card's real oracle text + mana cost directly fixes that.
+    query_cards = extract_query_cards(user_msg)
+    if query_cards:
+        log.info(
+            "Query cards extracted from user message: %s",
+            [c["name"] for c in query_cards],
+        )
+    card_block = format_card_context(query_cards)
+
+    # Retrieve RAG context — rag_sources lets the response tell the frontend
+    # which chunks grounded the answer.
     rag_context, rag_sources = retrieve_context(user_msg)
 
-    # Build messages with system prompt + RAG
-    messages = build_messages(req.messages, rag_context)
+    # Combine: ground-truth card data first (highest priority for the model),
+    # then RAG chunks (general context).
+    combined_context = card_block
+    if rag_context:
+        combined_context = (combined_context + "\n\n" + rag_context) if card_block else rag_context
+
+    # Track that query cards contributed to the grounding so the frontend
+    # badge reflects all sources, not just RAG.
+    all_sources = list(rag_sources)
+    for c in query_cards:
+        all_sources.insert(0, f"card-lookup: {c['name']}")
+
+    # Build messages with system prompt + combined context
+    messages = build_messages(req.messages, combined_context)
 
     # Stream mode (Ollama only) — streaming skips the response-model path
     if req.stream and INFERENCE_BACKEND == "ollama":
@@ -854,13 +1010,23 @@ async def chat(req: ChatRequest):
         max_tokens=req.max_tokens,
     )
 
+    # Post-process: wrap plain-text card mentions with [[Name]] markup so
+    # the frontend renders them as gold inline refs and the side panel
+    # picks them up in the order they appear in the response. The 1B
+    # model often ignores the Modelfile's bracket instruction; this makes
+    # the rendering reliable regardless.
+    content = auto_bracket_cards(content)
+
+    # resolve_cards() iterates [[Name]] matches with re.finditer, which
+    # visits matches in text order — so the `cards` list mirrors the
+    # order they're mentioned in the response.
     cards = resolve_cards(content)
 
     return ChatResponse(
         content=content,
         cards=cards,
-        rag_chunks=len(rag_sources),
-        rag_sources=rag_sources,
+        rag_chunks=len(all_sources),
+        rag_sources=all_sources,
     )
 
 
