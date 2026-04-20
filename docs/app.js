@@ -294,13 +294,18 @@ function renderContentWithCardRefs(parent, content, cards) {
         }
         const rawName = match[1].trim();
         const resolved = cardByName.get(rawName.toLowerCase());
-        const span = el("span", {
+        const href = (resolved && resolved.scryfall_uri)
+            || `https://scryfall.com/search?q=${encodeURIComponent(resolved ? resolved.name : rawName)}`;
+        const anchor = el("a", {
             class: "card-ref",
+            href,
+            target: "_blank",
+            rel: "noopener",
             title: resolved
                 ? `${resolved.name} — ${resolved.mana_cost || ""} ${resolved.type_line || ""}`.trim()
                 : rawName,
         }, rawName);
-        parent.appendChild(span);
+        parent.appendChild(anchor);
         lastIdx = match.index + match[0].length;
     }
     if (lastIdx < content.length) {

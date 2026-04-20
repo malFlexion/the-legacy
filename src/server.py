@@ -494,7 +494,7 @@ def extract_query_cards(query: str, max_cards: int = 3) -> list[dict]:
     result: list[dict] = []
     seen: set[str] = set()
 
-    # Exact word-boundary matches first
+    # Exact word-boundary matches first (full names mentioned in the query).
     for card in card_index.resolve(query, legacy_only=False):
         if card["name"] not in seen:
             result.append(card)
@@ -502,15 +502,101 @@ def extract_query_cards(query: str, max_cards: int = 3) -> list[dict]:
             if len(result) >= max_cards:
                 return result
 
-    # Fuzzy match the whole query — catches short forms like "Akroma"
-    # or typos like "Emrakull".
-    for name, _score in card_index.search(query, limit=max_cards * 2, legacy_only=False, threshold=80):
-        card = card_index.get(name)
-        if card and card["name"] not in seen:
+    # Token-level fuzzy match: for each substantive token in the query,
+    # search the card index. Catches partial names ("Akroma" → "Akroma,
+    # Angel of Wrath") that WRatio on the whole sentence misses.
+    import re as _re
+    _stop = {
+        "is", "a", "an", "the", "in", "on", "of", "to", "for", "and",
+        "or", "but", "any", "all", "some", "what", "how", "why", "who",
+        "when", "where", "which", "that", "this", "these", "those",
+        "do", "does", "did", "can", "will", "would", "should", "could",
+        "be", "are", "was", "were", "been", "being", "have", "has",
+        "had", "playable", "good", "bad", "deck", "decks", "card",
+        "cards", "play", "against", "legacy", "format", "tier", "tiered",
+        "meta", "with", "without", "from",
+    }
+    tokens = [t for t in _re.findall(r"[A-Za-z][A-Za-z'-]{2,}", query) if t.lower() not in _stop]
+
+    # For each token, find all card names that contain it at a word
+    # boundary, then rank so the "iconic" card wins:
+    #   3 = name starts with "Token," (legendary pattern: "Akroma,
+    #       Angel of Wrath" beats "Akroma's Blessing")
+    #   2 = name starts with "Token " or equals the token
+    #   1 = token appears as its own word somewhere in the name
+    # Ties broken by shorter card name (base card > derivative printings).
+    from rapidfuzz import fuzz as _fuzz, process as _proc
+
+    def _rank(tok_lower: str, name: str) -> int:
+        n = name.lower()
+        if n.startswith(tok_lower + ","):
+            return 3
+        if n == tok_lower or n.startswith(tok_lower + " "):
+            return 2
+        return 1
+
+    for tok in tokens:
+        if len(result) >= max_cards:
+            break
+        tok_lower = tok.lower()
+        # partial_ratio catches "Akroma" inside "Akroma, Angel of Wrath".
+        matches = _proc.extract(
+            tok,
+            card_index.names,
+            scorer=_fuzz.partial_ratio,
+            limit=25,
+            score_cutoff=90,
+        )
+        candidates: list[tuple[int, int, dict]] = []
+        for name, _score, _idx in matches:
+            card = card_index.get(name)
+            if not card or card["name"] in seen:
+                continue
+            # Require whole-word match so partial_ratio doesn't pair
+            # "Akroma" with "Akron Relocation Program".
+            if not _re.search(r"(?<!\w)" + _re.escape(tok) + r"(?!\w)", card["name"], _re.IGNORECASE):
+                continue
+            rank = _rank(tok_lower, card["name"])
+            # Require the token to actually START the card name. A token
+            # that appears mid-name ("How" inside "Sim Han How Bio") is
+            # almost always noise, and promoting it crowds out real hits.
+            if rank < 2:
+                continue
+            candidates.append((rank, -len(card["name"]), card))
+        # Highest rank first, then shortest name.
+        candidates.sort(key=lambda x: (x[0], x[1]), reverse=True)
+        # Prefer Legacy-legal cards of equal rank.
+        candidates.sort(key=lambda x: (x[0], card_index.is_legacy_legal(x[2]["name"]), x[1]), reverse=True)
+        for _r, _ln, card in candidates:
+            if card["name"] in seen:
+                continue
+            # Skip digital-only "Card // Card" split variants when the
+            # base card is already captured — they're near-duplicates
+            # that clutter the injected context.
+            if " // " in card["name"]:
+                base = card["name"].split(" // ")[0]
+                if base in seen:
+                    continue
             result.append(card)
             seen.add(card["name"])
             if len(result) >= max_cards:
                 break
+            # Only take one card per token — prevents "Akroma" from
+            # pulling three Akroma variants.
+            break
+
+    # Whole-query fuzzy fallback for typos ("Emrakull" → "Emrakul, the
+    # Aeons Torn") — only run when nothing else hit, because a loose
+    # threshold on the whole sentence matches random cards that share
+    # any keyword and would crowd out cleaner results.
+    if not result:
+        for name, _score in card_index.search(query, limit=max_cards, legacy_only=False, threshold=85):
+            card = card_index.get(name)
+            if card and card["name"] not in seen:
+                result.append(card)
+                seen.add(card["name"])
+                if len(result) >= max_cards:
+                    break
 
     return result
 
