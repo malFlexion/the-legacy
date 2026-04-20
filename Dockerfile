@@ -23,10 +23,12 @@ WORKDIR /app
 #  - libgomp1: used by rapidfuzz / sentence-transformers (OpenMP)
 #  - curl: fetches the Ollama install script and health-checks Ollama at boot
 #  - ca-certificates: HTTPS trust store (Ollama install + pip occasionally need it)
+#  - zstd: Ollama's installer uses zstd-compressed tarballs
 RUN apt-get update && apt-get install -y --no-install-recommends \
     libgomp1 \
     curl \
     ca-certificates \
+    zstd \
     && rm -rf /var/lib/apt/lists/*
 
 # Install Ollama. The install script detects linux-amd64 and drops
