@@ -391,13 +391,24 @@ class CardSearchRequest(BaseModel):
 # ---------------------------------------------------------------------------
 
 
-def retrieve_context(query: str, n_results: int = 5) -> tuple[str, list[str]]:
+def retrieve_context(
+    query: str,
+    n_results: int = 10,
+    exclude_cards: bool = False,
+) -> tuple[str, list[str]]:
     """Query the vector DB for relevant context chunks.
 
     Returns (joined_context_string, list_of_source_labels).
     The source labels are short human-readable tags like
     "comprehensive-rules: 702" or "legacy-analysis: Dimir Tempo" — used
     by the frontend to show users where each answer is grounded.
+
+    `exclude_cards`: when the caller has already injected ground-truth
+    card data via the card_lookup path, pass True to filter out
+    `source='scryfall-card'` chunks from RAG. RAG's job then is strategy
+    + rules + meta context, which plays to the generic-embedding's
+    strengths. Bumped n_results from 5 to 10 so strategy docs don't get
+    crowded out by near-duplicate card chunks on mixed queries.
 
     Logs loudly on every call so the operator can see per-request whether
     RAG is active, how many chunks came back, and what sources they came
@@ -411,10 +422,14 @@ def retrieve_context(query: str, n_results: int = 5) -> tuple[str, list[str]]:
         return "", []
 
     try:
-        results = chroma_collection.query(
-            query_texts=[query],
-            n_results=n_results,
-        )
+        query_args = {
+            "query_texts": [query],
+            "n_results": n_results,
+        }
+        if exclude_cards:
+            # chromadb 'where' filter — only retrieve non-card sources
+            query_args["where"] = {"source": {"$ne": "scryfall-card"}}
+        results = chroma_collection.query(**query_args)
     except Exception as e:
         log.error("RAG retrieve_context: chromadb query failed (%s: %s)",
                   type(e).__name__, str(e)[:200])
@@ -972,9 +987,14 @@ async def chat(req: ChatRequest):
         )
     card_block = format_card_context(query_cards)
 
-    # Retrieve RAG context — rag_sources lets the response tell the frontend
-    # which chunks grounded the answer.
-    rag_context, rag_sources = retrieve_context(user_msg)
+    # Retrieve RAG context. When we already have explicit card data injected,
+    # filter RAG to non-card sources so it returns strategy / rules / meta
+    # chunks instead of near-duplicate card matches that the generic
+    # embedding model ranks on keyword overlap.
+    rag_context, rag_sources = retrieve_context(
+        user_msg,
+        exclude_cards=bool(query_cards),
+    )
 
     # Combine: ground-truth card data first (highest priority for the model),
     # then RAG chunks (general context).
