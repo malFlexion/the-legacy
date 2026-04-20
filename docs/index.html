@@ -3,103 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Legacy — AI-Powered MTG Legacy Deck Builder</title>
+    <title>The Legacy</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>The Legacy</h1>
-        <p class="subtitle">AI-powered Magic: The Gathering Legacy deck builder, card evaluator, and goldfish simulator</p>
+        <div class="header-row">
+            <h1>The Legacy</h1>
+            <div class="api-status">
+                <span id="api-health" class="health-unknown">checking…</span>
+            </div>
+        </div>
         <nav class="tabs">
             <button class="tab-btn active" data-tab="chat">Chat</button>
-            <button class="tab-btn" data-tab="import">Import &amp; Analyze</button>
+            <button class="tab-btn" data-tab="import">Import</button>
             <button class="tab-btn" data-tab="goldfish">Goldfish</button>
-            <button class="tab-btn" data-tab="budget">Budget Tiers</button>
+            <button class="tab-btn" data-tab="budget">Budget</button>
         </nav>
-        <div class="api-status">
-            API: <span id="api-url"></span> —
-            <span id="api-health" class="health-unknown">checking…</span>
-        </div>
     </header>
 
     <main>
-        <!-- Chat tab -->
         <section id="tab-chat" class="tab-panel active">
-            <h2>Ask anything about Legacy</h2>
-            <p class="hint">The finetuned model knows the current meta (Dimir Tempo, Sneak and Show, Oops! All Spells, etc.), card evaluations, budget substitutions, and rules. Card names in responses are resolved against Scryfall and shown below each message.</p>
             <div id="chat-messages" class="chat-messages"></div>
             <form id="chat-form" class="chat-form">
-                <textarea id="chat-input" placeholder="What's the best deck to beat Dimir Tempo?" rows="2" required></textarea>
+                <textarea id="chat-input" placeholder="Ask anything about Legacy — meta, cards, rules, deck ideas…" rows="2" required></textarea>
                 <button type="submit" id="chat-submit">Send</button>
             </form>
         </section>
 
-        <!-- Deck import tab -->
         <section id="tab-import" class="tab-panel">
-            <h2>Import &amp; analyze a decklist</h2>
-            <p class="hint">Paste a decklist (plain text, one card per line) or a Moxfield / MTGGoldfish URL. Get archetype classification, card images, mana curve, and LLM-generated analysis.</p>
             <div class="split">
                 <div>
                     <label>Decklist or URL</label>
-                    <textarea id="import-input" rows="14" placeholder="4 Brainstorm&#10;4 Ponder&#10;4 Force of Will&#10;4 Daze&#10;4 Orcish Bowmasters&#10;3 Murktide Regent&#10;4 Polluted Delta&#10;4 Underground Sea&#10;..."></textarea>
+                    <textarea id="import-input" rows="14" placeholder="4 Brainstorm&#10;4 Ponder&#10;4 Force of Will&#10;4 Underground Sea&#10;…"></textarea>
                     <div class="button-row">
-                        <button id="import-parse-btn">Parse deck</button>
-                        <button id="import-analyze-btn" disabled>Analyze with AI</button>
+                        <button id="import-parse-btn">Parse</button>
+                        <button id="import-analyze-btn" disabled>Analyze</button>
                     </div>
                 </div>
-                <div id="import-output" class="import-output">
-                    <p class="placeholder">Parsed decklist, mana curve, and card grid will appear here.</p>
-                </div>
+                <div id="import-output" class="import-output"></div>
             </div>
         </section>
 
-        <!-- Goldfish tab -->
         <section id="tab-goldfish" class="tab-panel">
-            <h2>Goldfish the deck</h2>
-            <p class="hint">Draw opening hands with London Mulligan, or run statistical simulations. The turn engine plays cantrips before threats and tracks mana efficiency, combo assembly, and cast rates.</p>
             <div class="split">
                 <div>
                     <label>Decklist</label>
-                    <textarea id="goldfish-input" rows="14" placeholder="Paste decklist here (will carry over from Import tab if you parse one)"></textarea>
+                    <textarea id="goldfish-input" rows="14" placeholder="Paste decklist"></textarea>
                     <div class="button-row">
-                        <button id="goldfish-draw-btn">Draw opening hand</button>
+                        <button id="goldfish-draw-btn">Draw hand</button>
                         <button id="goldfish-mull-btn" disabled>Mulligan</button>
-                        <button id="goldfish-sim-btn">Simulate 1 game</button>
-                        <button id="goldfish-stats-btn">Run 1000 games</button>
+                        <button id="goldfish-sim-btn">Simulate</button>
+                        <button id="goldfish-stats-btn">1000 games</button>
                     </div>
                     <div class="goldfish-status" id="goldfish-status"></div>
                 </div>
-                <div id="goldfish-output" class="goldfish-output">
-                    <p class="placeholder">Opening hand, turn-by-turn log, or aggregate stats will appear here.</p>
-                </div>
+                <div id="goldfish-output" class="goldfish-output"></div>
             </div>
         </section>
 
-        <!-- Budget tab -->
         <section id="tab-budget" class="tab-panel">
-            <h2>Budget tier generator</h2>
-            <p class="hint">Deterministic — no LLM involved. Takes a decklist and produces Full / Mid / Budget versions using curated substitutions (e.g., Underground Sea → Watery Grave). Prices from Scryfall, trade-offs included.</p>
             <div class="split">
                 <div>
                     <label>Decklist</label>
-                    <textarea id="budget-input" rows="14" placeholder="Paste decklist here"></textarea>
+                    <textarea id="budget-input" rows="14" placeholder="Paste decklist"></textarea>
                     <div class="button-row">
                         <button id="budget-tiers-btn">Generate tiers</button>
                     </div>
                 </div>
-                <div id="budget-output" class="budget-output">
-                    <p class="placeholder">Full / Mid / Budget tiers with prices and substitutions will appear here.</p>
-                </div>
+                <div id="budget-output" class="budget-output"></div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>
-            <a href="https://github.com/malFlexion/the-legacy" target="_blank">Source on GitHub</a>
-            · Llama 3.2 1B + LoRA on 1,549 MTG Legacy training pairs
-            · FastAPI on Fly.io → SageMaker
-        </p>
+        <a href="https://github.com/malFlexion/the-legacy" target="_blank">Source</a>
+        · Llama 3.2 1B + LoRA · Fly.io → SageMaker
     </footer>
 
     <script src="config.js"></script>

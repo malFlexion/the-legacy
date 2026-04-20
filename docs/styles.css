@@ -1,21 +1,27 @@
-/* The Legacy frontend — palette inspired by Terese Nielsen's Legacy Weapon
-   art (Tenth Edition): dark cosmic ground with a gold ceremonial weapon
-   radiating five-color energy. Gold is the primary accent; the status
-   colors (good/warn/bad) pull from the weapon's prismatic swirls. */
+/* The Legacy frontend — palette derived from the whole Legacy Weapon card
+   (Tenth Edition, Terese Nielsen art). Colors come from every part of the
+   card as printed:
+     - outer black card border
+     - silver/steel artifact frame (legendary artifact styling)
+     - cream parchment rules box
+     - gold set symbol + the weapon's metal in the art
+     - the art's dark cosmic teal/purple ground
+     - prismatic energy swirls in five colors */
 
 :root {
-    --bg: #0c1016;           /* near-black with a cool purple undertone */
-    --panel: #161b26;        /* panel ground — slight teal/violet tint */
-    --panel-alt: #1f2532;
-    --border: #2e3545;
-    --text: #ecebe5;         /* parchment / radiant cream */
-    --text-dim: #9aa3b7;
-    --accent: #d4af5c;       /* gold — Legacy Weapon's metal */
-    --accent-hover: #eac878; /* brighter gold on hover */
-    --good: #5db98a;         /* leaf green from the weapon's green energy */
-    --warn: #d88f6a;         /* warm copper — the red/orange swirl */
-    --bad: #c16384;          /* rose/magenta — the purple-pink plasma */
+    --bg: #0a0f1a;           /* card's outer black border, slight cosmic tint */
+    --panel: #1e2838;         /* art background — dark cosmic teal/navy */
+    --panel-alt: #2a3547;     /* slightly lighter art-ground variant */
+    --border: #8a8d92;        /* silver artifact frame — the card's own border */
+    --text: #f0e8d0;          /* cream parchment from the rules text box */
+    --text-dim: #a89e84;      /* muted parchment */
+    --accent: #d4af5c;        /* gold — the weapon's metal and the set symbol */
+    --accent-hover: #eac878;  /* brighter gold on hover */
+    --good: #5db98a;          /* leaf green from the weapon's green energy */
+    --warn: #c88f4f;          /* warm copper — the red/orange plasma swirl */
+    --bad: #c16384;           /* rose/magenta — the purple-pink plasma swirl */
     --card-w: 140px;
+
 }
 
 * {
@@ -31,27 +37,29 @@ body {
 }
 
 header {
-    padding: 24px 32px 0;
+    padding: 20px 32px 0;
     border-bottom: 1px solid var(--border);
     background: var(--panel);
 }
 
-header h1 {
-    margin: 0 0 4px;
-    font-size: 28px;
-    font-weight: 700;
+.header-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 14px;
 }
 
-.subtitle {
-    margin: 0 0 16px;
-    color: var(--text-dim);
-    font-size: 14px;
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
 }
 
 .tabs {
     display: flex;
     gap: 4px;
-    margin-top: 16px;
 }
 
 .tab-btn {
@@ -76,10 +84,10 @@ header h1 {
 }
 
 .api-status {
-    padding: 8px 0 12px;
-    font-size: 12px;
+    font-size: 11px;
     color: var(--text-dim);
     font-family: "SF Mono", Menlo, monospace;
+    text-align: right;
 }
 
 .health-ok {
@@ -108,16 +116,6 @@ main {
     display: block;
 }
 
-.tab-panel h2 {
-    margin: 0 0 4px;
-    font-size: 20px;
-}
-
-.hint {
-    color: var(--text-dim);
-    font-size: 14px;
-    margin: 0 0 20px;
-}
 
 .split {
     display: grid;
@@ -450,11 +448,11 @@ button:disabled {
 }
 
 footer {
-    margin-top: 48px;
-    padding: 24px 32px;
+    margin-top: 40px;
+    padding: 16px 32px;
     border-top: 1px solid var(--border);
     color: var(--text-dim);
-    font-size: 12px;
+    font-size: 11px;
     text-align: center;
 }
 
