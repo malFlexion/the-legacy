@@ -74,7 +74,13 @@ LLAMACPP_N_THREADS = int(os.environ.get("LLAMACPP_N_THREADS", "2"))
 LLAMACPP_N_CTX = int(os.environ.get("LLAMACPP_N_CTX", "2048"))
 
 DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "data")
-VECTORDB_DIR = os.path.join(os.path.dirname(__file__), "..", "vectordb")
+# VECTORDB_DIR defaults to repo-relative ./vectordb; the Fly entrypoint
+# overrides to /root/.ollama/vectordb so the rebuilt DB persists on the
+# mounted Fly Volume alongside the Ollama model cache.
+VECTORDB_DIR = os.environ.get(
+    "VECTORDB_DIR",
+    os.path.join(os.path.dirname(__file__), "..", "vectordb"),
+)
 
 SYSTEM_PROMPT = (
     "You are The Legacy, an expert AI assistant for Magic: The Gathering "

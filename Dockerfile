@@ -59,7 +59,17 @@ RUN python -c "from sentence_transformers import SentenceTransformer; SentenceTr
 # App code + deterministic runtime assets.
 COPY src/ /app/src/
 COPY data/card_index.pkl /app/data/card_index.pkl
-COPY vectordb/ /app/vectordb/
+# Source docs for RAG vector DB rebuild on first boot. The committed
+# vectordb/ is skipped because it was built with a chromadb version that
+# differs from the one in this image — reading it raises KeyError('_type').
+# Rebuilding at startup from the source docs guarantees version match.
+COPY data/comprehensive-rules.txt /app/data/comprehensive-rules.txt
+COPY data/legacy-basics.md /app/data/legacy-basics.md
+COPY data/deckbuilding-guide.md /app/data/deckbuilding-guide.md
+COPY data/legacy-analysis.md /app/data/legacy-analysis.md
+COPY data/archetype-guide.md /app/data/archetype-guide.md
+COPY data/legacy-deck-history.md /app/data/legacy-deck-history.md
+COPY data/mtg-slang.md /app/data/mtg-slang.md
 COPY docs/ /app/docs/
 
 # The 1.3GB GGUF is NOT baked into the image — it would push us past

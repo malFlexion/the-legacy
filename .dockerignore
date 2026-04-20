@@ -8,7 +8,8 @@ __pycache__/
 
 # Large data files — only card_index.pkl is explicitly copied by the Dockerfile
 data/scryfall-cards.json
-data/*.txt
+# data/*.txt previously blanket-excluded; the RAG rebuild needs
+# comprehensive-rules.txt so we let the Dockerfile's COPY pull it in.
 
 # Training + notebooks not needed at inference time
 data/training/

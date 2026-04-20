@@ -50,5 +50,28 @@ else
     rm -f "${GGUF_TMP}" /tmp/Modelfile
 fi
 
+# --- RAG vector DB ---
+# The committed vectordb/ was built with a different chromadb version and
+# raises KeyError('_type') when read. Rebuild in the container so the
+# chromadb version that wrote it matches the version that reads it.
+# Persisted to /root/.ollama/vectordb alongside the model — survives
+# restarts thanks to the Fly Volume mount.
+VECTORDB_PATH="/root/.ollama/vectordb"
+export VECTORDB_DIR="${VECTORDB_PATH}"
+
+if [ -f "${VECTORDB_PATH}/chroma.sqlite3" ]; then
+    echo "Vector DB already built at ${VECTORDB_PATH} — skipping rebuild."
+else
+    echo "Building RAG vector DB from source docs (~30-60s)..."
+    # build_vectordb.py reads DB_DIR from its module-level constant; override
+    # via env and a quick Python invocation rather than editing the file.
+    python -c "
+import os, src.build_vectordb as bv
+bv.DB_DIR = '${VECTORDB_PATH}'
+bv.build_database()
+"
+    echo "Vector DB built at ${VECTORDB_PATH}."
+fi
+
 echo "Starting FastAPI server..."
 exec uvicorn src.server:app --host 0.0.0.0 --port "${PORT:-8000}"

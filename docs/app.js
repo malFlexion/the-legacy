@@ -133,7 +133,13 @@ async function checkHealth() {
             healthSpan.className = "health-fail";
         }
 
-        if (h.vector_db) parts.push(`RAG ${h.vector_chunks}`);
+        // Explicit RAG status so users know whether responses are grounded in
+        // the rules/meta corpus or coming purely from the model's weights.
+        if (h.vector_db) {
+            parts.push(`RAG ${h.vector_chunks}`);
+        } else {
+            parts.push(`RAG off`);
+        }
 
         healthSpan.textContent = parts.join(" · ");
     } catch (err) {
