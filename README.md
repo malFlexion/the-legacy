@@ -82,7 +82,7 @@ the_legacy/
     goldfish_engine.py          # Deterministic deck sampling, London Mulligan, aggregate stats
     turn_engine.py              # Turn-by-turn goldfish simulator with combo detection
   docs/                         # Static frontend served by FastAPI at /
-    index.html                  # 4-tab UI: Chat / Import & Analyze / Goldfish / Budget
+    index.html                  # 4-tab UI — Chat + Import & Analyze visible; Goldfish + Budget shipped but hidden for demo
     app.js                      # Vanilla JS, ~500 lines, no build step
     styles.css                  # Dark theme
     config.js                   # window.API_BASE (empty = same-origin)
@@ -147,11 +147,11 @@ One container serves the UI (`docs/`), the 14 JSON endpoints, and the model — 
 
 ### Inference pipeline (what happens on every `/chat` request)
 
-1. **Query card extraction** (`extract_query_cards`) — exact word-boundary names from `card_index.resolve`, then a token-level fuzzy pass where each substantive query word is fuzzy-matched against all ~36k card names (rank 2+ starts-with matches only, Legacy-legal preferred). This catches short partials like "Akroma" → "Akroma, Angel of Wrath". A whole-query fuzzy fallback runs only when nothing else hit, so typos ("Emrakull") still resolve without polluting clean queries.
+1. **Query card extraction** (`extract_query_cards`) — case-insensitive word-boundary pass against the Legacy card pool (legal / restricted / banned; `not_legal` junk like Un-set cards and oversized promos is excluded so obscure cards named after common English words can't hijack the injection). If a card is matched, the tokens it covers are dropped from the fuzzy pass — so "Is Blazing Shoal playable?" extracts only `Blazing Shoal` instead of `Blazing Shoal + Blazing Bomb + Shoal Kraken`. The token-level fuzzy pass (partial_ratio, case-insensitive, rank 2+ starts-with matches only) then catches short partials like "Akroma" → "Akroma, Angel of Wrath". A whole-query fuzzy fallback runs only when nothing else hit and requires a shared non-stopword token between query and card name.
 2. **Card context injection** (`format_card_context`) — resolved card data (name, mana cost, type, P/T, oracle text, keywords) is written into the system prompt with instructions to use the data verbatim. Addresses the generic-embedding-doesn't-know-MTG problem by giving the LLM ground truth before it generates.
 3. **RAG retrieval** (`retrieve_context`) — ChromaDB query over ~31k chunks (strategy guides + rules + card data). When card injection fired, the RAG call passes `where={"source": {"$ne": "scryfall-card"}}` so retrieval returns *only* strategy/rules chunks — RAG's job becomes context, card data already has ground truth. `n_results=10` keeps strategy chunks from being crowded out.
-4. **Generation** — Ollama streams tokens back; temperature 0.1, `num_predict 256`, `num_ctx 2048` (see Sampling section below).
-5. **Card resolution + bracket wrapping** — response is scanned for card names; `auto_bracket_cards` wraps them in `[[Name]]` markup. Frontend renders those as clickable Scryfall links and populates the left-panel card grid in the order they appear in the response.
+4. **Generation** — Ollama streams tokens back; temperature 0.1, `num_predict 256`, `num_ctx 8192` (see Sampling section below). The 8k context is load-bearing: earlier runs at 2048 silently truncated ~78% of the prompt, including most of the injected card data, which is why ground truth often didn't survive to the decoder.
+5. **Card resolution + bracket wrapping** — response is scanned for card names; `auto_bracket_cards` wraps them in `[[Name]]` markup. Frontend renders those as `<a href=scryfall_uri target=_blank>` anchors (so they click through) and populates the left-panel card grid in the order they appear in the response.
 6. **Filtering** — basic lands and non-Legacy-legal cards are hidden from the panel unless the response is specifically discussing bans.
 
 ### Sampling method
@@ -165,7 +165,7 @@ Rubric asks for an "appropriate sampling method"; this project uses deterministi
 | `/budget-sub`, `/evaluate-card`, `/evaluate-board` | 0.3–0.4 ("balanced") | Explanatory output where a bit more phrasing variation reads naturally |
 | `/goldfish` | 0.5 ("creative") | Keep-or-mull commentary benefits from variety; stats come from the deterministic engine anyway |
 
-Other Modelfile params: `num_predict 256` (chat responses run short to stay on-topic), `num_ctx 2048` (fits the system prompt + card-injection block + RAG block + recent turns). Callers can override `temperature` on any request. Sampling is pure top-k/top-p (Ollama defaults) — no beam search, no constrained decoding. Card validity is enforced *after* generation via the deterministic `card_index.resolve` pass, not by restricting the decoder.
+Other Modelfile params: `num_predict 256` (chat responses run short to stay on-topic), `num_ctx 8192` (required: up to 3 card sheets + 10 RAG chunks + system prompt + history is easily 5–9k tokens; the earlier 2048 limit silently truncated the injected context mid-request). Callers can override `temperature` on any request. Sampling is pure top-k/top-p (Ollama defaults) — no beam search, no constrained decoding. Card validity is enforced *after* generation via the deterministic `card_index.resolve` pass, not by restricting the decoder.
 
 ### Comparison against the SageMaker path
 
@@ -246,7 +246,7 @@ LoRA finetune of Llama 3.2 1B on 1,546 training pairs (5 epochs, rank 16, loss 1
 - **RAG**: ChromaDB with `sentence-transformers/all-MiniLM-L6-v2` embeddings over ~31k chunks: comprehensive rules, archetype guides, meta analysis, and one chunk per Legacy-legal card. Card chunks are metadata-filtered out of retrieval when the query names specific cards (ground truth already injected)
 - **Inference**: Ollama in-container on Fly.io for the public demo (`performance-8x`, 16 GB, persistent machine). Local Ollama and SageMaker TGI remain supported via `INFERENCE_BACKEND`
 - **API**: FastAPI — 14 endpoints, SSE streaming on `/chat`, per-request logging, `/health` reports model reachability + card-index size + vector-DB chunk count
-- **Frontend**: Vanilla JS (no build step), 4 tabs (Chat / Import & Analyze / Goldfish / Budget), served by FastAPI from the same origin as the API. Inline `[[Name]]` card refs render as clickable Scryfall links; a left-side panel accumulates referenced cards across the session
+- **Frontend**: Vanilla JS (no build step), 4 tabs built (Chat / Import & Analyze / Goldfish / Budget) with Chat and Import visible in the deployed UI; Goldfish and Budget are shipped but hidden behind a `hidden` attribute to keep the live demo tight (code + API reachable, just not surfaced). Served by FastAPI from the same origin as the API. Inline `[[Name]]` card refs render as clickable Scryfall anchors (`<a target=_blank>`); a left-side panel accumulates referenced cards across the session
 - **Card Data**: Scryfall bulk data indexed locally (36,670 cards, 30,538 Legacy-legal, earliest-printing preferred). Fuzzy + word-boundary matching via rapidfuzz
 - **Deterministic engines**: Budget substitution and goldfish sampling — pure Python modules that provide exact answers instead of relying on the LLM
 - **Evaluation**: Custom 22-case eval dataset across 9 categories (baseline 28.9% → finetuned 61.6%, +32.7%)

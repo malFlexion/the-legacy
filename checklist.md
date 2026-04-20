@@ -25,7 +25,7 @@
   - [x] Conversation flow examples (119 pairs)
   - [x] Board state analysis examples (146 pairs after Round 2 additions)
   - [x] Round 2 new categories: meta_awareness (26), negative_examples (12), card_relevance (9), disambiguation (9), deck_construction (6), uniqueness (4)
-- [ ] Hand-review curated subset (~200-300 examples) for accuracy
+- [x] Hand-review curated subset (~200-300 examples) for accuracy
 - [x] Build evaluation dataset (22 test cases across 9 categories)
   - [x] Deck legality (60 main + 15 side, all Legacy-legal)
   - [x] Card relevance (recommended cards match stated strategy)
@@ -106,10 +106,14 @@
   - [x] Balanced (temp 0.3-0.4) — /budget-sub, /evaluate-card, /evaluate-board
   - [x] Creative (temp 0.5) — /goldfish commentary
   - [x] Manual override via `temperature` field on all requests
-  - [x] `num_predict 256`, `num_ctx 2048` tuned for card-injection + RAG block + recent turns
+  - [x] `num_predict 256`, `num_ctx 8192` — bumped from 2048 after Ollama logs showed `truncating input prompt limit=2048 prompt=9038`, dropping ~78% of the injected card context mid-request
   - [x] Sampling method documented in README with rationale per endpoint
 - [x] Ground-truth card injection pipeline (anti-hallucination for named cards)
-  - [x] `extract_query_cards` — word-boundary + token-level fuzzy match (partial_ratio, rank-ordered so "Akroma" resolves "Akroma, Angel of Wrath" over "Akroma's Blessing")
+  - [x] `extract_query_cards` — case-insensitive word-boundary pass + token-level fuzzy match (partial_ratio, rank-ordered so "Akroma" resolves "Akroma, Angel of Wrath" over "Akroma's Blessing")
+  - [x] Over-injection guard: tokens already covered by a full-name match are dropped from the fuzzy pass — "Blazing Shoal" no longer pulls "Blazing Bomb" + "Shoal Kraken" on the side
+  - [x] Legacy-card-pool filter: resolve/fuzzy accept `legal`/`restricted`/`banned` but NOT `not_legal` — keeps ban-status queries (`Is Mox Pearl legal?`, `Why is Psychic Frog banned?`) working while blocking Un-set junk cards named after common English words (`Lands`, `Spells`)
+  - [x] Stopword list covers grammar words, contractions (`what's`, `doesn't`, `can't`), MTG meta vocab (`matchup`, `staple`, `archetype`), and deck/prefix words (`reanimator`, `painter`, `storm`, `death`)
+  - [x] Whole-query fuzzy fallback is gated: only runs when there's at least one substantive token AND requires the matched card name to share a non-stopword token with the query — "Reanimator vs Painter matchup?" correctly returns nothing instead of random noise
   - [x] `format_card_context` — injects resolved card sheets into the system prompt with "use verbatim" instructions
   - [x] RAG filter: when card injection fired, retrieval excludes `source: scryfall-card` chunks (strategy/rules only — avoids redundant context and crowding)
   - [x] `n_results=10` retrieval default so strategy chunks aren't crowded out
@@ -154,26 +158,26 @@
 
 Architecture: single Fly.io deployment serves the UI, JSON API, and the LLM. The Docker image ships FastAPI + Ollama + ChromaDB; the entrypoint boots Ollama, downloads the GGUF from HuggingFace on first start (persisted to a Fly Volume), rebuilds the vector DB, then execs uvicorn. FastAPI mounts `docs/` at `/` via `StaticFiles(html=True)` after all API routes. One URL, one process group, no CORS. No Gradio — vanilla JS, no build step. SageMaker is still supported as an `INFERENCE_BACKEND` option but the deployed demo is all-in-one Fly + Ollama (no AWS).
 
-- [x] Chat tab
+- [x] Chat tab (primary demo surface)
   - [x] Conversation with deck-building bot (POST /chat)
   - [x] Card images rendered in a left-side panel (cards accumulate across the session)
-  - [x] Inline `[[Name]]` refs in responses render as clickable Scryfall links
+  - [x] Inline `[[Name]]` refs in responses render as `<a href=scryfall_uri target=_blank>` — clicking opens the card's Scryfall page
   - [x] Chat history maintained in-session
   - [x] Per-message RAG badge shows whether retrieval + card injection fired
-  - [x] Ground-truth card injection: query cards resolved via token-level fuzzy match are injected into the system prompt before the LLM sees the query
+  - [x] Ground-truth card injection: query cards resolved via case-insensitive word-boundary + token-level fuzzy match are injected into the system prompt before the LLM sees the query
   - [x] RAG filters out card chunks when card injection fired (strategy/rules context only — plays to the generic embedding's strengths)
-- [x] Import & Analyze tab (supersedes separate Decklist tab)
+- [x] Import & Analyze tab (secondary demo surface — shows structured parsing + LLM on structured input)
   - [x] Paste decklist text or Moxfield/MTGGoldfish URL (POST /import-deck)
   - [x] Visual card grid with counts, Scryfall hover links
   - [x] Mana curve bar chart
   - [x] Archetype classification + full analysis via POST /analyze-deck
   - [x] Card click/hover opens full Scryfall page
-- [x] Goldfish tab
+- [x] Goldfish tab — **hidden in the deployed UI** (`hidden` attribute on the tab button) to keep the demo tight. Code ships, tested, reachable via API.
   - [x] Opening hand display with card images (POST /goldfish/draw)
   - [x] London Mulligan button (keep_count -= 1)
   - [x] Single-game simulation (POST /goldfish/simulate) with turn log
   - [x] 1000-game aggregate stats (POST /goldfish/simulate-many)
-- [x] Budget Tiers tab
+- [x] Budget Tiers tab — **hidden in the deployed UI** (same reason). Curated substitution engine + tier-pricing endpoint still reachable via API.
   - [x] Full/Mid/Budget three-column view (POST /budget-tiers)
   - [x] Per-tier price + applied substitutions list + irreplaceables
   - [x] Total savings shown
@@ -184,9 +188,9 @@ Deployment infrastructure:
 - [x] `Dockerfile` for Fly.io build — installs Ollama, FastAPI stack, chromadb, sentence-transformers; pre-downloads `all-MiniLM-L6-v2` so cold starts don't re-fetch it
 - [x] `scripts/docker_entrypoint.sh` orchestrates Ollama serve → GGUF download (if not cached) → `ollama create` → vectordb rebuild → uvicorn
 - [x] GGUF hosted on HuggingFace (`malFlexion/the-legacy-gguf`), downloaded at runtime into a Fly Volume so it survives restarts but doesn't bloat the image past Fly's 8 GB uncompressed limit
-- [x] Modelfile version marker (`v3-bracket-refs`) triggers `ollama rm` + re-register when params change, so volume-cached models don't drift
+- [x] Modelfile version marker (`v4-ctx8k`) triggers `ollama rm` + re-register when params change, so volume-cached models don't drift. Current bump is for the `num_ctx` 2048 → 8192 lift.
 - [x] Vector DB version marker (`v3-card-chunks-force`) triggers rebuild when schema or source docs change — avoids `KeyError('_type')` from chromadb version mismatch on the committed index
-- [x] Post-build sanity check: entrypoint asserts the rebuilt vectordb has >5000 chunks before writing the version marker (catches the v2 case where card chunks silently failed to embed and the volume was left stuck at 719 rules-only chunks)
+- [x] Post-build sanity check: entrypoint asserts the rebuilt vectordb has >5000 chunks before writing the version marker. Catches the v2 regression where card chunks silently failed to embed and the volume was left stuck at 719 rules-only chunks (observable in the footer as "RAG over 719 chunks" rather than ~31k).
 - [x] `.dockerignore` uses `scripts/*` + explicit `!scripts/docker_entrypoint.sh` so the entrypoint ships without pulling in dev scripts
 - [x] `fly.toml` with `performance-8x` (16 GB RAM minimum), `auto_stop_machines = off`, single persistent machine + Fly Volume for `/root/.ollama`
 - [x] Ollama env in `fly.toml`: `OLLAMA_NUM_PARALLEL=1`, `OLLAMA_MAX_LOADED_MODELS=1`, `OLLAMA_KEEP_ALIVE=24h` — tuned for single-tenant demo

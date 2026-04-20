@@ -716,7 +716,12 @@ def auto_bracket_cards(text: str) -> str:
     # Word-boundary card name match, longest-first so substrings don't
     # eat the enclosing name. Only Legacy-legal cards considered to
     # avoid wrapping every incidental word that happens to match an
-    # obscure card name from the 36k-card pool.
+    # obscure card name from the 36k-card pool. After wrapping a name,
+    # we immediately stash the newly-created [[...]] so shorter names
+    # ("Angel of Fury" inside "Akroma, Angel of Fury", "Void" inside
+    # "Chalice of the Void") can't match inside the wrap we just made.
+    # Without this re-stash, the regex word-boundary check passes at
+    # `[` / `]` and we end up with nested [[Akroma, [[Angel of Fury]]]].
     search_pool = sorted(card_index.legacy_legal, key=len, reverse=True)
     wrapped_names: set[str] = set()
 
@@ -725,7 +730,10 @@ def auto_bracket_cards(text: str) -> str:
             continue
         pattern = r"(?<!\w)" + _re.escape(name) + r"(?!\w)"
         if _re.search(pattern, working):
-            working = _re.sub(pattern, f"[[{name}]]", working)
+            wrapped = f"[[{name}]]"
+            placeholders.append(wrapped)
+            token = f"\x00PLACEHOLDER{len(placeholders) - 1}\x00"
+            working = _re.sub(pattern, token, working)
             wrapped_names.add(name)
 
     # Restore stashed content

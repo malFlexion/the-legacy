@@ -41,7 +41,7 @@ GGUF_TMP="/tmp/the-legacy.gguf"
 # Bump this when Modelfile params change so Ollama re-registers with the
 # new temperature / system prompt / num_predict. Otherwise the volume-
 # cached model keeps its old params forever.
-MODELFILE_VERSION="v4-ctx8k"
+MODELFILE_VERSION="v5-strict-grounding"
 VERSION_MARKER="/root/.ollama/.modelfile-version"
 CACHED_VERSION="$(cat "${VERSION_MARKER}" 2>/dev/null || echo "none")"
 
