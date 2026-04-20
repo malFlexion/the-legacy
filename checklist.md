@@ -168,14 +168,16 @@ Architecture: single Fly.io deployment serves both the JSON API and the static f
 - [x] API health check in header (calls /health on load)
 
 Deployment infrastructure:
-- [x] `Dockerfile` + `.dockerignore` for Fly.io build (copies `src/`, `data/card_index.pkl`, `docs/`)
-- [x] `fly.toml` with scale-to-zero and us-east-1 region (co-located with SageMaker)
+- [x] `Dockerfile` + `.dockerignore` for Fly.io build (copies `src/`, `data/card_index.pkl`, `docs/`, `vectordb/`)
+- [x] Docker warm-up: pre-downloads `all-MiniLM-L6-v2` during build so cold starts don't re-fetch it (~80MB)
+- [x] `fly.toml` with scale-to-zero, us-east-1 region, 1GB RAM (512MB OOM-killed once chromadb + embeddings loaded)
+- [x] Fly `[env] PORT` matches `[http_service] internal_port` (both 8000) — earlier mismatch caused "refused connection" errors
 - [x] Static mount at `/` in `src/server.py` via `StaticFiles(html=True)` — same process serves UI + API
 - [x] `config.js` set to empty `API_BASE` for same-origin fetches (no CORS needed)
 - [x] Walkthrough at `notes/development/frontend-deployment.md`
-- [ ] Run `fly launch` + `fly secrets set` + `fly deploy` (external)
-- [x] `.github/workflows/fly-deploy.yml` — auto-deploys on push to master (requires FLY_API_TOKEN secret)
-- [x] `vectordb/` committed to repo so CD builds have RAG data available (13MB)
+- [x] `vectordb/` committed to repo (13MB) so CD builds have RAG data available
+- [x] `.github/workflows/fly-deploy.yml` — auto-deploys on push to master, triggers scoped to code paths that affect the image (skips doc-only commits)
+- [ ] Generate Fly deploy token (`fly tokens create deploy`) and add as `FLY_API_TOKEN` GitHub secret to activate CD
 
 ## Phase 6: Documentation & Demo
 

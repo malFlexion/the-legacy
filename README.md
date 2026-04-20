@@ -74,12 +74,18 @@ the_legacy/
       deck_construction.jsonl   #   Complete 60+15 verified decklists (6 pairs, Round 2)
       uniqueness.jsonl          #   Novel brew concepts (4 pairs, Round 2)
   src/
-    server.py                   # FastAPI server (chat, card lookup, RAG, streaming, Ollama/SageMaker)
+    server.py                   # FastAPI server (chat, card lookup, RAG, streaming, Ollama/SageMaker, static mount)
     deck_parser.py              # Deck import parser (plain text, Moxfield, MTGGoldfish)
     build_vectordb.py           # Builds ChromaDB vector database (719 chunks)
     card_index.py               # Card name index for fuzzy matching (36,670 cards)
     budget_engine.py            # Curated budget substitution engine with Scryfall prices
     goldfish_engine.py          # Deterministic deck sampling, London Mulligan, aggregate stats
+    turn_engine.py              # Turn-by-turn goldfish simulator with combo detection
+  docs/                         # Static frontend served by FastAPI at /
+    index.html                  # 4-tab UI: Chat / Import & Analyze / Goldfish / Budget
+    app.js                      # Vanilla JS, ~500 lines, no build step
+    styles.css                  # Dark theme
+    config.js                   # window.API_BASE (empty = same-origin)
   scripts/
     deploy_sagemaker.py         # Deploy/manage SageMaker endpoint (--create/--delete/--status/--test)
     merge_and_convert.py        # Merge LoRA + GGUF convert (Ollama) or push to HF (SageMaker)
@@ -91,12 +97,18 @@ the_legacy/
     test_card_index.py          # 32 tests for card index
     test_build_vectordb.py      # 47 tests for vector DB builder
     test_budget_engine.py       # 22 tests for budget substitution engine
-    test_goldfish_engine.py     # 32 tests for goldfish engine (133 tests total)
+    test_goldfish_engine.py     # 32 tests for goldfish engine
+    test_turn_engine.py         # 21 tests for turn engine (154 total)
   notebooks/
     finetune_legacy.ipynb       # LoRA finetuning notebook (SageMaker)
     deploy_sagemaker.ipynb      # Interactive SageMaker endpoint deployment walkthrough
     eval_report.json            # Evaluation results (Round 2, 61.6% finetuned)
     lora-legacy/                # Checkpoint outputs (gitignored)
+  vectordb/                     # ChromaDB vector database (committed, 13MB) — rebuild with src/build_vectordb.py
+  Dockerfile                    # Fly.io image (Python 3.11-slim + FastAPI + chromadb + pre-cached embedding model)
+  fly.toml                      # Fly.io app config (us-east-1, scale-to-zero, 1GB RAM)
+  .github/workflows/
+    fly-deploy.yml              # CI: auto-deploy to Fly on push to master
   Modelfile                     # Ollama model config with Llama 3.2 chat template
   notes/
     assignment-00.md ... assignment-11.md   # Course assignment notes
@@ -108,7 +120,7 @@ the_legacy/
       ollama-deployment.md                  # Walkthrough: merge → GGUF → ollama serve
       ollama-checklist.md                   # Condensed checkbox list for the Ollama path
       sagemaker-deployment.md               # Walkthrough: merge+push → SageMaker endpoint
-  vectordb/                     # ChromaDB vector database (gitignored, rebuild with src/build_vectordb.py)
+      frontend-deployment.md                # Walkthrough: Docker → Fly → continuous deploy on push
   checklist.md                  # Project progress checklist
   final-project-plan.md         # Detailed implementation plan
   README.md                     # This file
@@ -116,22 +128,34 @@ the_legacy/
 
 ## Deployment
 
-The finetuned model can be served two ways. Both paths share the same merge step (`scripts/merge_and_convert.py`) and can be verified with the same smoke-test (`scripts/test_deployment.py`).
+Three deployment paths, all sharing the same merge step (`scripts/merge_and_convert.py`) and verified with the same smoke test (`scripts/test_deployment.py`).
 
-| Path | Cost | Setup time | Status |
+| Path | What | Cost | Use when |
 |---|---|---|---|
-| **Ollama** (local GGUF) | Free | ~15 min | ✅ Deployed — `the-legacy` at q8_0 (~1.3GB), ~11s/response on CPU |
-| **SageMaker** (TGI endpoint) | ~$1.41/hr | ~20 min | Pipeline built — not currently deployed |
+| **Ollama** (local GGUF) | Model runs on your laptop | Free | Dev, local demo |
+| **SageMaker** (TGI endpoint) | Model runs on A10G GPU in AWS | ~$1.41/hr | The public demo backend |
+| **Fly.io** (Docker FastAPI) | UI + API proxy, calls SageMaker | ~free (scale-to-zero) | Demo UI for anyone with a browser |
 
-- **Ollama:** [`notes/development/ollama-checklist.md`](notes/development/ollama-checklist.md) (condensed) or [`ollama-deployment.md`](notes/development/ollama-deployment.md) (full walkthrough)
-- **SageMaker:** [`notebooks/deploy_sagemaker.ipynb`](notebooks/deploy_sagemaker.ipynb) (interactive) or [`sagemaker-deployment.md`](notes/development/sagemaker-deployment.md) (full walkthrough)
+**Architecture for the public demo:**
+```
+Browser ─HTTPS─> Fly.io (FastAPI + static docs/) ─IAM─> SageMaker endpoint
+```
 
-Verify either deployment with:
+The Fly container serves both the static UI (`docs/`) and the JSON API (14 endpoints) from the same origin, holding AWS credentials so the browser doesn't need them.
+
+Walkthroughs:
+- **Ollama:** [`notes/development/ollama-checklist.md`](notes/development/ollama-checklist.md) (condensed) or [`ollama-deployment.md`](notes/development/ollama-deployment.md)
+- **SageMaker:** [`notebooks/deploy_sagemaker.ipynb`](notebooks/deploy_sagemaker.ipynb) (interactive) or [`sagemaker-deployment.md`](notes/development/sagemaker-deployment.md)
+- **Fly.io + frontend:** [`notes/development/frontend-deployment.md`](notes/development/frontend-deployment.md)
+
+Verify any deployment with:
 ```
 python scripts/test_deployment.py --ollama      # or --sagemaker or --all
 ```
 
-Note on quantization: `convert_hf_to_gguf.py` emits f16/bf16/q8_0 directly. Smaller quantizations (q4_k_m, q5_k_m) require compiling llama.cpp and running its `llama-quantize` binary on the f16 output. At 1B size, q8_0 is near-lossless and the size difference doesn't matter.
+**CI/CD:** `.github/workflows/fly-deploy.yml` auto-deploys to Fly on every push to `master` that touches code, `vectordb/`, `docs/`, `Dockerfile`, or `fly.toml`. Doc-only commits skip the build.
+
+Note on GGUF quantization: `convert_hf_to_gguf.py` emits f16/bf16/q8_0 directly. Smaller quantizations (q4_k_m, q5_k_m) require compiling llama.cpp and running its `llama-quantize` binary on the f16 output. At 1B size, q8_0 is near-lossless and the size difference doesn't matter.
 
 ## Training Results (Round 2)
 
