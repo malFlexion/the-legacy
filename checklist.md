@@ -73,6 +73,10 @@
   - [x] Interactive deployment notebook at `notebooks/deploy_sagemaker.ipynb`
   - [x] Smoke-test script `scripts/test_deployment.py --sagemaker` (5 prompts with expect/reject patterns)
   - [ ] External: AWS account, `aws configure`, SageMaker execution role
+  - [ ] Getting AWS access key + secret (needed for Fly secrets and local `$env:AWS_*`):
+    - **If already configured**: `Get-Content $env:USERPROFILE\.aws\credentials` — both values live under `[default]` as `aws_access_key_id` and `aws_secret_access_key`
+    - **If new user / fresh pair**: AWS Console → IAM → Users → your user → Security credentials → Create access key → "Application running outside AWS". Secret is shown **only once** — copy it immediately. Attach `AmazonSageMakerFullAccess` policy to the user if missing.
+    - **Shortcut**: if `aws sts get-caller-identity` already works, boto3 picks up creds from `~/.aws/credentials` automatically — no `$env:AWS_*` needed locally. Only Fly.io (`fly secrets set`) needs them explicitly since the container has no `~/.aws`.
   - [ ] Run merge + push to HF, then `scripts/deploy_sagemaker.py --create`
   - [ ] Verify with `scripts/deploy_sagemaker.py --test`
   - [ ] `scripts/deploy_sagemaker.py --delete` when done (stops billing!)
