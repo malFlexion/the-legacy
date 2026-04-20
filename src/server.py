@@ -349,6 +349,10 @@ class CardData(BaseModel):
 class ChatResponse(BaseModel):
     content: str
     cards: list[CardData] = []
+    # Per-response RAG metadata — lets the frontend show "grounded in N
+    # rules chunks" so the user can tell when an answer is RAG-backed.
+    rag_chunks: int = 0
+    rag_sources: list[str] = []
 
 
 class CardSearchRequest(BaseModel):
@@ -362,21 +366,48 @@ class CardSearchRequest(BaseModel):
 # ---------------------------------------------------------------------------
 
 
-def retrieve_context(query: str, n_results: int = 5) -> str:
-    """Query the vector DB for relevant context chunks."""
-    if chroma_collection is None:
-        return ""
+def retrieve_context(query: str, n_results: int = 5) -> tuple[str, list[str]]:
+    """Query the vector DB for relevant context chunks.
 
-    results = chroma_collection.query(
-        query_texts=[query],
-        n_results=n_results,
-    )
+    Returns (joined_context_string, list_of_source_labels).
+    The source labels are short human-readable tags like
+    "comprehensive-rules: 702" or "legacy-analysis: Dimir Tempo" — used
+    by the frontend to show users where each answer is grounded.
+
+    Logs loudly on every call so the operator can see per-request whether
+    RAG is active, how many chunks came back, and what sources they came
+    from. Silent-RAG-failure is the kind of bug that looks like
+    'the model is hallucinating' but is actually 'the grounding layer
+    never fired.'
+    """
+    if chroma_collection is None:
+        log.warning("RAG retrieve_context: chroma_collection is None — RAG is OFF. "
+                    "Responses are ungrounded.")
+        return "", []
+
+    try:
+        results = chroma_collection.query(
+            query_texts=[query],
+            n_results=n_results,
+        )
+    except Exception as e:
+        log.error("RAG retrieve_context: chromadb query failed (%s: %s)",
+                  type(e).__name__, str(e)[:200])
+        return "", []
 
     if not results["documents"] or not results["documents"][0]:
-        return ""
+        log.info("RAG retrieve_context: query=%r returned 0 chunks", query[:80])
+        return "", []
 
     chunks = results["documents"][0]
     sources = results["metadatas"][0] if results["metadatas"] else [{}] * len(chunks)
+
+    source_labels = [
+        f"{m.get('source', '?')}: {m.get('title', m.get('section', '?'))}"
+        for m in sources
+    ]
+    log.info("RAG retrieve_context: query=%r → %d chunks from [%s]",
+             query[:80], len(chunks), "; ".join(source_labels)[:300])
 
     context_parts = []
     for chunk, meta in zip(chunks, sources):
@@ -385,7 +416,7 @@ def retrieve_context(query: str, n_results: int = 5) -> str:
         header = f"[{source}: {section}]" if section else f"[{source}]"
         context_parts.append(f"{header}\n{chunk}")
 
-    return "\n\n---\n\n".join(context_parts)
+    return "\n\n---\n\n".join(context_parts), source_labels
 
 
 # ---------------------------------------------------------------------------
@@ -675,13 +706,14 @@ async def chat(req: ChatRequest):
             user_msg = msg.content
             break
 
-    # Retrieve context
-    rag_context = retrieve_context(user_msg)
+    # Retrieve context — rag_sources lets the response tell the frontend
+    # which rules/meta chunks grounded the answer.
+    rag_context, rag_sources = retrieve_context(user_msg)
 
     # Build messages with system prompt + RAG
     messages = build_messages(req.messages, rag_context)
 
-    # Stream mode (Ollama only)
+    # Stream mode (Ollama only) — streaming skips the response-model path
     if req.stream and INFERENCE_BACKEND == "ollama":
         return await generate(
             messages,
@@ -702,7 +734,12 @@ async def chat(req: ChatRequest):
 
     cards = resolve_cards(content)
 
-    return ChatResponse(content=content, cards=cards)
+    return ChatResponse(
+        content=content,
+        cards=cards,
+        rag_chunks=len(rag_sources),
+        rag_sources=rag_sources,
+    )
 
 
 @app.post("/build-deck", response_model=ChatResponse)
@@ -720,7 +757,7 @@ async def build_deck(req: ChatRequest):
             user_msg = msg.content
             break
 
-    rag_context = retrieve_context(user_msg)
+    rag_context, _rag_sources = retrieve_context(user_msg)
     enriched = list(req.messages) + [
         ChatMessage(role="system", content=deck_prompt)
     ]
@@ -747,7 +784,7 @@ async def analyze_deck(req: ChatRequest):
             user_msg = msg.content
             break
 
-    rag_context = retrieve_context(user_msg)
+    rag_context, _rag_sources = retrieve_context(user_msg)
     enriched = list(req.messages) + [
         ChatMessage(role="system", content=analysis_prompt)
     ]
@@ -774,7 +811,7 @@ async def evaluate_board(req: ChatRequest):
             user_msg = msg.content
             break
 
-    rag_context = retrieve_context(user_msg)
+    rag_context, _rag_sources = retrieve_context(user_msg)
     enriched = list(req.messages) + [
         ChatMessage(role="system", content=board_prompt)
     ]
@@ -802,7 +839,7 @@ async def goldfish(req: ChatRequest):
             user_msg = msg.content
             break
 
-    rag_context = retrieve_context(user_msg)
+    rag_context, _rag_sources = retrieve_context(user_msg)
     enriched = list(req.messages) + [
         ChatMessage(role="system", content=goldfish_prompt)
     ]
@@ -1059,7 +1096,7 @@ async def budget_sub(req: ChatRequest):
             user_msg = msg.content
             break
 
-    rag_context = retrieve_context(user_msg)
+    rag_context, _rag_sources = retrieve_context(user_msg)
     enriched = list(req.messages) + [
         ChatMessage(role="system", content=budget_prompt)
     ]
@@ -1204,7 +1241,8 @@ async def evaluate_card(req: ChatRequest):
                     f"— {card.get('type_line', '')} — {card.get('oracle_text', '')}"
                 )
 
-    rag_context = retrieve_context(user_msg) + card_context
+    rag_context, _rag_sources = retrieve_context(user_msg)
+    rag_context += card_context
     enriched = list(req.messages) + [
         ChatMessage(role="system", content=eval_prompt)
     ]

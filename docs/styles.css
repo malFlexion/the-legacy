@@ -255,6 +255,27 @@ button:disabled {
     word-wrap: break-word;
 }
 
+.rag-badge {
+    margin-top: 8px;
+    font-size: 11px;
+    font-family: "SF Mono", Menlo, monospace;
+    padding: 4px 8px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.rag-badge.rag-on {
+    color: var(--good);
+    background: rgba(93, 168, 112, 0.1);
+    border: 1px solid rgba(93, 168, 112, 0.3);
+}
+
+.rag-badge.rag-off {
+    color: var(--warn);
+    background: rgba(198, 122, 61, 0.1);
+    border: 1px solid rgba(198, 122, 61, 0.3);
+}
+
 .chat-form {
     display: grid;
     grid-template-columns: 1fr auto;

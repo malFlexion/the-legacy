@@ -188,6 +188,8 @@ document.getElementById("chat-form").addEventListener("submit", async (ev) => {
             role: "assistant",
             content: res.content,
             cards: res.cards || [],
+            ragChunks: res.rag_chunks || 0,
+            ragSources: res.rag_sources || [],
         });
     } catch (err) {
         chatState.messages.push({
@@ -213,6 +215,30 @@ function renderChat() {
         const block = el("div", { class: "chat-message" });
         block.appendChild(el("div", { class: `chat-role ${msg.role}` }, msg.role));
         block.appendChild(el("div", { class: "chat-content" }, msg.content));
+
+        // Show RAG grounding status on assistant messages — helps distinguish
+        // "answer came from the rules/meta corpus" (trustworthy) from
+        // "answer came purely from the model's weights" (may hallucinate).
+        if (msg.role === "assistant") {
+            if (msg.ragChunks > 0) {
+                const sourceList = msg.ragSources && msg.ragSources.length
+                    ? ": " + msg.ragSources.slice(0, 3).join(" · ")
+                    : "";
+                block.appendChild(el(
+                    "div",
+                    { class: "rag-badge rag-on" },
+                    `grounded in ${msg.ragChunks} source${msg.ragChunks === 1 ? "" : "s"}${sourceList}`
+                ));
+            } else if (msg.ragChunks === 0 && msg.ragSources !== undefined) {
+                // Response came back with RAG metadata but no chunks retrieved
+                block.appendChild(el(
+                    "div",
+                    { class: "rag-badge rag-off" },
+                    "no RAG grounding — response came from model weights only"
+                ));
+            }
+        }
+
         if (msg.cards && msg.cards.length > 0) {
             const grid = el("div", { class: "card-grid" });
             for (const card of msg.cards) {
