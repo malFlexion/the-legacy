@@ -174,6 +174,8 @@ Deployment infrastructure:
 - [x] `config.js` set to empty `API_BASE` for same-origin fetches (no CORS needed)
 - [x] Walkthrough at `notes/development/frontend-deployment.md`
 - [ ] Run `fly launch` + `fly secrets set` + `fly deploy` (external)
+- [x] `.github/workflows/fly-deploy.yml` — auto-deploys on push to master (requires FLY_API_TOKEN secret)
+- [x] `vectordb/` committed to repo so CD builds have RAG data available (13MB)
 
 ## Phase 6: Documentation & Demo
 

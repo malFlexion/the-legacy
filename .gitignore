@@ -2,8 +2,8 @@
 data/scryfall-cards.json
 data/card_index.pkl
 
-# Generated databases (rebuild with src/build_vectordb.py)
-vectordb/
+# vectordb/ is now committed — RAG needs it at runtime and it's only ~13MB.
+# Rebuild locally with `python src/build_vectordb.py` if source docs change.
 
 # Python
 __pycache__/

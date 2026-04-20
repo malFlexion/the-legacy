@@ -1,17 +1,37 @@
+# Continuous deployment to Fly.io on push to master.
 # See https://fly.io/docs/app-guides/continuous-deployment-with-github-actions/
+#
+# Requires FLY_API_TOKEN secret in repo Settings → Secrets and variables → Actions.
+# Generate with: fly tokens create deploy
 
 name: Fly Deploy
+
 on:
   push:
-    branches:
-      - main
+    branches: [master]
+    # Only trigger when files that actually end up in the image change.
+    # Skip doc-only and training-data commits so we don't burn build minutes.
+    paths:
+      - "src/**"
+      - "data/card_index.pkl"
+      - "vectordb/**"
+      - "docs/**"
+      - "Dockerfile"
+      - ".dockerignore"
+      - "fly.toml"
+      - ".github/workflows/fly-deploy.yml"
+  workflow_dispatch:  # allow manual triggers from the Actions tab
+
 jobs:
   deploy:
-    name: Deploy app
+    name: Deploy to Fly.io
     runs-on: ubuntu-latest
-    concurrency: deploy-group    # optional: ensure only one action runs at a time
+    concurrency: deploy-group
     steps:
       - uses: actions/checkout@v4
+        # vectordb files are git-LFS-style binary blobs; pull the full repo
+        with:
+          lfs: false
       - uses: superfly/flyctl-actions/setup-flyctl@master
       - run: flyctl deploy --remote-only
         env:

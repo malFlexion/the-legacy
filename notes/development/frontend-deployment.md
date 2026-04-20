@@ -43,6 +43,23 @@ fly deploy
 
 First deploy builds the Docker image (~2-3 minutes) and rolls it out. Fly prints the URL when it's done, e.g. `https://the-legacy-api.fly.dev`.
 
+### Optional: enable continuous deployment on push
+
+`.github/workflows/fly-deploy.yml` runs `flyctl deploy` whenever you push commits that change code, Docker config, or vectordb to `master`. Wire it up once:
+
+```
+fly tokens create deploy -a the-legacy-api
+```
+
+Copy the token, then in your GitHub repo:
+
+1. Settings → Secrets and variables → Actions → New repository secret
+2. Name: `FLY_API_TOKEN`
+3. Value: paste the token
+4. Save
+
+The next `git push` triggers an automatic deploy. You can watch it in the Actions tab, or trigger manually via "Run workflow" on the Fly Deploy action. The workflow skips deploys for doc-only / training-data commits so you don't burn build minutes on every README tweak.
+
 ## 4. Verify end-to-end
 
 Open `https://the-legacy-api.fly.dev/` in a browser — the UI should load immediately. In the header you should see something like:
