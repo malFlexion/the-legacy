@@ -37,6 +37,11 @@ main {
     flex: 1;
     display: flex;
     flex-direction: column;
+    padding: 24px 32px;
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    min-width: 0;   /* allow children to shrink inside flex column */
 }
 
 header {
@@ -122,17 +127,13 @@ header h1 {
     text-shadow: 0 0 12px rgba(212, 175, 92, 0.35);
 }
 
-main {
-    padding: 24px 32px;
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
 .tab-panel {
     display: none;
     flex: 1;
     flex-direction: column;
+    width: 100%;
     min-height: 0;   /* allow child flex items to shrink properly */
+    min-width: 0;
 }
 
 .tab-panel.active {
