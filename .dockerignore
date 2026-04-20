@@ -14,6 +14,7 @@ data/*.txt
 data/training/
 notebooks/
 scripts/
+!scripts/docker_entrypoint.sh   # exception: boot script IS copied into the image
 tests/
 # vectordb/ IS copied — RAG retrieval uses it at inference time
 

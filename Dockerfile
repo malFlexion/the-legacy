@@ -1,78 +1,75 @@
-# FastAPI backend for The Legacy — single-container deploy on Fly.io running
-# the finetuned GGUF locally via llama-cpp-python. No external model service.
+# All-in-one Fly GPU container: Ollama + FastAPI + static frontend.
 #
-# Configure at runtime via Fly secrets / env:
-#   INFERENCE_BACKEND=llamacpp      (picked up by src/server.py)
-#   LLAMACPP_MODEL_PATH=./the-legacy.gguf   (default)
-#   LLAMACPP_N_THREADS=2            (match VM dedicated cores)
-#   LLAMACPP_N_CTX=2048             (context window)
+# At runtime the container starts `ollama serve` in the background, loads the
+# finetuned `the-legacy` model into the local Ollama registry (the GGUF is
+# baked into the image and copied into /root/.ollama on first boot — that
+# path is mounted as a Fly Volume so subsequent boots hit the cache), then
+# starts uvicorn. One container, one URL.
 #
-# Local build + run:
-#   docker build -t the-legacy-api .
-#   docker run -p 8000:8000 -e INFERENCE_BACKEND=llamacpp the-legacy-api
-#
-# Fly deploy (first time):
-#   fly launch --no-deploy
-#   fly secrets set INFERENCE_BACKEND=llamacpp
+# Deploy:
+#   fly volumes create ollama_data --size 10 -r iad   # one time
 #   fly deploy
+#
+# Scale down to stop billing:
+#   fly scale count 0 -a the-legacy-api
+# Scale back up (takes ~60-90s first time while volume warms):
+#   fly scale count 1 -a the-legacy-api
 
 FROM python:3.11-slim
 
 WORKDIR /app
 
-# System deps. libgomp1 is needed by rapidfuzz and sentence-transformers.
-# build-essential + cmake are needed for llama-cpp-python's from-source build
-# (there are no pre-built CPU wheels for every Python minor version).
+# System deps:
+#  - libgomp1: used by rapidfuzz / sentence-transformers (OpenMP)
+#  - curl: fetches the Ollama install script and health-checks Ollama at boot
+#  - ca-certificates: HTTPS trust store (Ollama install + pip occasionally need it)
 RUN apt-get update && apt-get install -y --no-install-recommends \
     libgomp1 \
-    build-essential \
-    cmake \
+    curl \
+    ca-certificates \
     && rm -rf /var/lib/apt/lists/*
 
-# Pin to CPU torch so we don't pull the 2GB CUDA variant.
+# Install Ollama. The install script detects linux-amd64 and drops
+# /usr/bin/ollama. It also tries to set up a systemd service, which is a
+# no-op in Docker — harmless.
+RUN curl -fsSL https://ollama.com/install.sh | sh
+
+# CPU-only torch so sentence-transformers embeddings don't pull the 2GB
+# CUDA variant (we use Ollama for LLM inference on GPU; embeddings stay
+# on CPU).
 RUN pip install --no-cache-dir \
     --index-url https://download.pytorch.org/whl/cpu \
     torch
 
-# Core runtime dependencies.
 RUN pip install --no-cache-dir \
     fastapi==0.115.0 \
     uvicorn[standard]==0.31.0 \
     httpx==0.27.2 \
     pydantic==2.9.2 \
-    boto3==1.35.33 \
     rapidfuzz==3.10.0 \
     chromadb==0.5.11 \
     sentence-transformers==3.1.1
 
-# llama-cpp-python for in-process GGUF inference. Built from source (~2-3
-# minutes); the compiled extension is ~10MB so it doesn't bloat the image.
-RUN pip install --no-cache-dir llama-cpp-python==0.3.2
-
-# Pre-download the RAG embedding model (~80MB) during build so cold starts
-# don't re-download it every time the Fly machine wakes from scale-to-zero.
+# Pre-cache the RAG embedding model (~80MB) so the FastAPI server doesn't
+# download it on every cold start.
 RUN python -c "from sentence_transformers import SentenceTransformer; SentenceTransformer('all-MiniLM-L6-v2')"
 
-# Copy what the server needs at runtime.
-# card_index.pkl powers fuzzy card name resolution.
-# vectordb/ is the ChromaDB store built by src/build_vectordb.py — enables
-# RAG retrieval over the comprehensive rules, meta analysis, and archetype docs.
-# scryfall-cards.json (508MB raw data) is NOT copied — card_index.pkl is the
-# compiled form that gets used at runtime.
+# App code + deterministic runtime assets.
 COPY src/ /app/src/
 COPY data/card_index.pkl /app/data/card_index.pkl
 COPY vectordb/ /app/vectordb/
-
-# GGUF model for in-process inference. 1.3GB at Q8_0 — dominates the image
-# size but avoids needing an external model service at runtime.
-COPY the-legacy.gguf /app/the-legacy.gguf
-
-# Static frontend served from the same FastAPI process — no separate hosting
 COPY docs/ /app/docs/
 
-EXPOSE 8000
+# Ollama model artifacts. The Modelfile references ./the-legacy.gguf, so
+# we cd to /app before `ollama create` in the entrypoint script.
+COPY the-legacy.gguf /app/the-legacy.gguf
+COPY Modelfile /app/Modelfile
 
-# HF Spaces expects the app on port 7860; allow override via PORT env.
+# Startup orchestration: boot Ollama, register model (once), exec uvicorn.
+COPY scripts/docker_entrypoint.sh /app/entrypoint.sh
+RUN chmod +x /app/entrypoint.sh
+
+EXPOSE 8000
 ENV PORT=8000
 
-CMD uvicorn src.server:app --host 0.0.0.0 --port ${PORT}
+CMD ["/app/entrypoint.sh"]
