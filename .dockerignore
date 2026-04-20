@@ -13,8 +13,11 @@ data/*.txt
 # Training + notebooks not needed at inference time
 data/training/
 notebooks/
-scripts/
-!scripts/docker_entrypoint.sh   # exception: boot script IS copied into the image
+# Use scripts/* (not scripts/) so Docker still walks into the directory
+# and our !exception for docker_entrypoint.sh can take effect. A bare
+# `scripts/` stops traversal entirely, making the exception a no-op.
+scripts/*
+!scripts/docker_entrypoint.sh
 tests/
 # vectordb/ IS copied — RAG retrieval uses it at inference time
 
