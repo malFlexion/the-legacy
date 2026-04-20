@@ -37,40 +37,83 @@ body {
 }
 
 header {
-    padding: 20px 32px 0;
+    padding: 24px 32px 0;
     border-bottom: 1px solid var(--border);
     background: var(--panel);
 }
 
-.header-row {
+.header-top {
     display: flex;
-    align-items: baseline;
+    align-items: flex-start;
     justify-content: space-between;
-    gap: 16px;
-    margin-bottom: 14px;
+    gap: 24px;
+    margin-bottom: 20px;
 }
 
-header h1 {
+.brand h1 {
     margin: 0;
-    font-size: 24px;
+    font-size: 26px;
     font-weight: 700;
     letter-spacing: -0.01em;
+    color: var(--accent);
+    text-shadow: 0 0 20px rgba(212, 175, 92, 0.2);
 }
+
+.tagline {
+    margin: 4px 0 0;
+    color: var(--text-dim);
+    font-size: 14px;
+}
+
+/* API health — compact pill with a status dot, tucked in the corner */
+.api-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    font-size: 11px;
+    color: var(--text-dim);
+    font-family: "SF Mono", Menlo, monospace;
+    white-space: nowrap;
+}
+
+.status-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--warn);
+    box-shadow: 0 0 6px currentColor;
+}
+
+.api-status.ok .status-dot   { background: var(--good); color: var(--good); }
+.api-status.fail .status-dot { background: var(--bad);  color: var(--bad); }
+.api-status.warn .status-dot { background: var(--warn); color: var(--warn); }
+
+.health-ok      { color: var(--good); }
+.health-fail    { color: var(--bad); }
+.health-unknown { color: var(--warn); }
 
 .tabs {
     display: flex;
-    gap: 4px;
+    gap: 2px;
 }
 
 .tab-btn {
     background: transparent;
     color: var(--text-dim);
     border: none;
-    padding: 12px 20px;
+    padding: 14px 28px;
     font-size: 15px;
+    font-weight: 500;
     cursor: pointer;
     border-bottom: 2px solid transparent;
+    margin-bottom: -1px;   /* overlap header border so underline sits flush */
     transition: all 0.15s;
+    letter-spacing: 0.02em;
 }
 
 .tab-btn:hover {
@@ -81,25 +124,6 @@ header h1 {
     color: var(--accent);
     border-bottom-color: var(--accent);
     text-shadow: 0 0 12px rgba(212, 175, 92, 0.35);
-}
-
-.api-status {
-    font-size: 11px;
-    color: var(--text-dim);
-    font-family: "SF Mono", Menlo, monospace;
-    text-align: right;
-}
-
-.health-ok {
-    color: var(--good);
-}
-
-.health-fail {
-    color: var(--bad);
-}
-
-.health-unknown {
-    color: var(--warn);
 }
 
 main {

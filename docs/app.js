@@ -110,28 +110,35 @@ function cardThumb(card, count = null) {
 // ---------- API health check ----------
 
 async function checkHealth() {
+    const pill = document.querySelector(".api-status");
     const healthSpan = document.getElementById("api-health");
+
+    function setState(state) {
+        pill.classList.remove("ok", "fail", "warn");
+        pill.classList.add(state);
+    }
+
     try {
         const h = await api("/health");
         const llm = h.llm || {};
         const parts = [];
 
-        // LLM status is the most important signal
         if (llm.reachable) {
-            parts.push(`✓ LLM ${h.model} (${llm.detail})`);
+            parts.push(`LLM ${llm.detail}`);
+            setState("ok");
             healthSpan.className = "health-ok";
         } else {
-            parts.push(`✗ LLM ${h.model || "unknown"}: ${llm.detail || "unreachable"}`);
+            parts.push(`LLM ${llm.detail || "unreachable"}`);
+            setState("fail");
             healthSpan.className = "health-fail";
         }
 
-        // RAG / card index — informational, doesn't change color
-        if (h.vector_db) parts.push(`RAG ${h.vector_chunks} chunks`);
-        if (h.card_index) parts.push(`card index ${h.card_count.toLocaleString()}`);
+        if (h.vector_db) parts.push(`RAG ${h.vector_chunks}`);
 
-        healthSpan.innerHTML = parts.join(" · ");
+        healthSpan.textContent = parts.join(" · ");
     } catch (err) {
-        healthSpan.textContent = `✗ ${err.message}`;
+        setState("fail");
+        healthSpan.textContent = err.message;
         healthSpan.className = "health-fail";
     }
 }
