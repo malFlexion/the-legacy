@@ -38,9 +38,8 @@ primary_region = 'iad'  # GPU availability; 'ord' and 'sjc' also work
   initial_size = '10gb'
 
 [[vm]]
-  # a10 is the same A10 GPU chip SageMaker's ml.g5.xlarge uses.
-  # Alternatives:
-  #   'l40s'        — newer/faster, ~$2.50/hr
-  #   'a100-40gb'   — ~$3.50/hr, overkill for a 1B model
-  size = 'a10'
-  memory = '16gb'
+  # CPU inference via Ollama — ~5-10s per response on Q8_0 at this size.
+  # When Fly approves GPU access for the org, swap to `size = 'a10'` +
+  # `memory = '16gb'` for ~1-3s responses. Everything else stays the same.
+  size = 'performance-2x'
+  memory = '4gb'
