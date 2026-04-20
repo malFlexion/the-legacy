@@ -7,20 +7,21 @@
 name: Fly Deploy
 
 on:
-  push:
-    branches: [master]
-    # Only trigger when files that actually end up in the image change.
-    # Skip doc-only and training-data commits so we don't burn build minutes.
-    paths:
-      - "src/**"
-      - "data/card_index.pkl"
-      - "vectordb/**"
-      - "docs/**"
-      - "Dockerfile"
-      - ".dockerignore"
-      - "fly.toml"
-      - ".github/workflows/fly-deploy.yml"
-  workflow_dispatch:  # allow manual triggers from the Actions tab
+  # Manual-only for now — run from the Actions tab when you're ready to deploy.
+  # To re-enable auto-deploy on push, uncomment the push: block below.
+  workflow_dispatch:
+
+  # push:
+  #   branches: [master]
+  #   paths:
+  #     - "src/**"
+  #     - "data/card_index.pkl"
+  #     - "vectordb/**"
+  #     - "docs/**"
+  #     - "Dockerfile"
+  #     - ".dockerignore"
+  #     - "fly.toml"
+  #     - ".github/workflows/fly-deploy.yml"
 
 jobs:
   deploy:
