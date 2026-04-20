@@ -110,9 +110,7 @@ function cardThumb(card, count = null) {
 // ---------- API health check ----------
 
 async function checkHealth() {
-    const urlSpan = document.getElementById("api-url");
     const healthSpan = document.getElementById("api-health");
-    urlSpan.textContent = API === "" ? "(same origin)" : API;
     try {
         const h = await api("/health");
         const llm = h.llm || {};
