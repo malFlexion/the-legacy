@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(git commit -m ' *)",
-      "Bash(git commit -m 'Drop orphaned api-url span reference in checkHealth *)"
+      "Bash(git commit -m 'Drop orphaned api-url span reference in checkHealth *)",
+      "WebFetch(domain:static.wikia.nocookie.net)"
     ]
   }
 }

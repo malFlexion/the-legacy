@@ -1,27 +1,21 @@
-/* The Legacy frontend — palette derived from the whole Legacy Weapon card
-   (Tenth Edition, Terese Nielsen art). Colors come from every part of the
-   card as printed:
-     - outer black card border
-     - silver/steel artifact frame (legendary artifact styling)
-     - cream parchment rules box
-     - gold set symbol + the weapon's metal in the art
-     - the art's dark cosmic teal/purple ground
-     - prismatic energy swirls in five colors */
+/* The Legacy frontend — palette from the Weatherlight saga "The Legacy"
+   illustration (Karn holding Urza's head surrounded by the relic artifacts
+   of the Legacy). Illuminated-manuscript aesthetic: warm sepia parchment
+   ground, burnished gold trim, jewel-tone accents from the inset gems. */
 
 :root {
-    --bg: #0a0f1a;           /* card's outer black border, slight cosmic tint */
-    --panel: #1e2838;         /* art background — dark cosmic teal/navy */
-    --panel-alt: #2a3547;     /* slightly lighter art-ground variant */
-    --border: #8a8d92;        /* silver artifact frame — the card's own border */
-    --text: #f0e8d0;          /* cream parchment from the rules text box */
-    --text-dim: #a89e84;      /* muted parchment */
-    --accent: #d4af5c;        /* gold — the weapon's metal and the set symbol */
-    --accent-hover: #eac878;  /* brighter gold on hover */
-    --good: #5db98a;          /* leaf green from the weapon's green energy */
-    --warn: #c88f4f;          /* warm copper — the red/orange plasma swirl */
-    --bad: #c16384;           /* rose/magenta — the purple-pink plasma swirl */
+    --bg: #1a130c;            /* deepest shadow — tooled-leather book cover */
+    --panel: #2b2116;          /* warm dark sepia — parchment in candlelight */
+    --panel-alt: #3a2d1f;      /* lifted sepia for hover / alt surfaces */
+    --border: #7a5f30;         /* burnished bronze — illuminated manuscript trim */
+    --text: #ede0c0;           /* parchment cream */
+    --text-dim: #a89878;       /* faded-ink parchment */
+    --accent: #d4af5c;         /* burnished gold — the metallic relics */
+    --accent-hover: #eac878;   /* brighter gilt on hover */
+    --good: #5da870;           /* emerald gem inset in the manuscript */
+    --warn: #c67a3d;           /* ruby-gold — the crown's red stones */
+    --bad: #a85a8a;            /* amethyst — the large crystal in the scene */
     --card-w: 140px;
-
 }
 
 * {
@@ -37,22 +31,14 @@ body {
 }
 
 header {
-    padding: 24px 32px 0;
+    padding: 28px 32px 0;
     border-bottom: 1px solid var(--border);
     background: var(--panel);
 }
 
-.header-top {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 24px;
-    margin-bottom: 20px;
-}
-
-.brand h1 {
+header h1 {
     margin: 0;
-    font-size: 26px;
+    font-size: 28px;
     font-weight: 700;
     letter-spacing: -0.01em;
     color: var(--accent);
@@ -65,11 +51,12 @@ header {
     font-size: 14px;
 }
 
-/* API health — compact pill with a status dot, tucked in the corner */
+/* API health — compact pill with a status dot, just below the tagline */
 .api-status {
     display: inline-flex;
     align-items: center;
     gap: 8px;
+    margin-top: 14px;
     padding: 6px 12px;
     background: var(--bg);
     border: 1px solid var(--border);
@@ -100,6 +87,7 @@ header {
 .tabs {
     display: flex;
     gap: 2px;
+    margin-top: 18px;
 }
 
 .tab-btn {
