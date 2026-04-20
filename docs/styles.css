@@ -51,12 +51,11 @@ header h1 {
     font-size: 14px;
 }
 
-/* API health — compact pill with a status dot, just below the tagline */
+/* API health — compact pill with a status dot, shown in the footer */
 .api-status {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    margin-top: 14px;
     padding: 6px 12px;
     background: var(--bg);
     border: 1px solid var(--border);
@@ -87,7 +86,7 @@ header h1 {
 .tabs {
     display: flex;
     gap: 2px;
-    margin-top: 18px;
+    margin-top: 20px;
 }
 
 .tab-btn {
@@ -461,11 +460,21 @@ button:disabled {
 
 footer {
     margin-top: 40px;
-    padding: 16px 32px;
+    padding: 14px 32px;
     border-top: 1px solid var(--border);
+    background: var(--panel);
     color: var(--text-dim);
     font-size: 11px;
-    text-align: center;
+    font-family: "SF Mono", Menlo, monospace;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.footer-info {
+    line-height: 1.6;
 }
 
 footer a {

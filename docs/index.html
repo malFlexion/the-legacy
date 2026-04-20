@@ -10,10 +10,6 @@
     <header>
         <h1>The Legacy</h1>
         <p class="tagline">An AI assistant for Magic: The Gathering Legacy</p>
-        <div class="api-status" title="Backend health">
-            <span class="status-dot" id="api-dot"></span>
-            <span id="api-health" class="health-unknown">checking…</span>
-        </div>
         <nav class="tabs">
             <button class="tab-btn active" data-tab="chat">Chat</button>
             <button class="tab-btn" data-tab="import">Import</button>
@@ -77,8 +73,19 @@
     </main>
 
     <footer>
-        <a href="https://github.com/malFlexion/the-legacy" target="_blank">Source</a>
-        · Llama 3.2 1B + LoRA · Fly.io → SageMaker
+        <div class="footer-info">
+            <a href="https://github.com/malFlexion/the-legacy" target="_blank">Source</a>
+            · Llama 3.2 1B + LoRA
+            · 1,549 training pairs
+            · 28.9% → 61.6% eval
+            · RAG over 719 rules chunks
+            · 36,670 cards indexed
+            · Fly.io → SageMaker
+        </div>
+        <div class="api-status" title="Backend health">
+            <span class="status-dot" id="api-dot"></span>
+            <span id="api-health" class="health-unknown">checking…</span>
+        </div>
     </footer>
 
     <script src="config.js"></script>
