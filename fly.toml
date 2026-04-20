@@ -21,6 +21,15 @@ primary_region = 'iad'  # GPU availability; 'ord' and 'sjc' also work
   # Ollama stores models under OLLAMA_MODELS (defaults to ~/.ollama/models);
   # the Fly Volume below mounts /root/.ollama so the model cache persists
   # across deploys and restarts.
+  #
+  # Ollama runtime tuning for single-user demo workload:
+  #  - NUM_PARALLEL=1: don't allocate 4 concurrent inference slots (default),
+  #    saves ~800MB of KV cache memory
+  #  - MAX_LOADED_MODELS=1: only ever keep `the-legacy` resident
+  #  - KEEP_ALIVE=24h: never unload the model mid-demo
+  OLLAMA_NUM_PARALLEL = '1'
+  OLLAMA_MAX_LOADED_MODELS = '1'
+  OLLAMA_KEEP_ALIVE = '24h'
 
 [http_service]
   internal_port = 8000
@@ -38,8 +47,12 @@ primary_region = 'iad'  # GPU availability; 'ord' and 'sjc' also work
   initial_size = '10gb'
 
 [[vm]]
-  # CPU inference via Ollama — ~5-10s per response on Q8_0 at this size.
-  # When Fly approves GPU access for the org, swap to `size = 'a10'` +
-  # `memory = '16gb'` for ~1-3s responses. Everything else stays the same.
-  size = 'performance-2x'
-  memory = '4gb'
+  # 8 dedicated CPU cores — the sweet spot for Q8_0 inference on Llama 3.2 1B.
+  # Going higher (16x) hits diminishing returns because memory bandwidth
+  # caps throughput, not core count.
+  # Demo cost: ~$0.20/hr. Stop between sessions with `fly scale count 0`.
+  #
+  # When Fly approves GPU access, swap to `size = 'a10'` + `memory = '16gb'`
+  # (region must become 'ord' since a10 isn't in iad per Fly's GPU docs).
+  size = 'performance-8x'
+  memory = '8gb'
