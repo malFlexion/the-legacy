@@ -1,6 +1,6 @@
-// Point the frontend at your deployed FastAPI backend.
-// Change this to match your actual Fly.io app URL after `fly deploy`.
+// API base URL. Empty string = same origin (recommended when the FastAPI
+// server also serves this static frontend, e.g. on Fly.io).
 //
-// For local development:
+// For local development when the server is on a different port:
 //   window.API_BASE = "http://localhost:8000";
-window.API_BASE = "https://the-legacy-api.fly.dev";
+window.API_BASE = "";

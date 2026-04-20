@@ -51,8 +51,8 @@ RUN pip install --no-cache-dir \
 COPY src/ /app/src/
 COPY data/card_index.pkl /app/data/card_index.pkl
 
-# Documentation folder for development notes (harmless to include).
-COPY notes/development/ /app/notes/development/
+# Static frontend served from the same FastAPI process — no separate hosting
+COPY docs/ /app/docs/
 
 EXPOSE 8000
 

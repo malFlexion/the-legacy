@@ -141,9 +141,9 @@
 - [x] Two new endpoints: `POST /goldfish/simulate` (single game log), `POST /goldfish/simulate-many` (aggregate)
 - [x] 21 tests in `tests/test_turn_engine.py` (154 total now passing)
 
-## Phase 5: Frontend (static, GitHub Pages → Fly.io → SageMaker)
+## Phase 5: Frontend (static files served by FastAPI on Fly.io → SageMaker)
 
-Architecture: static HTML/CSS/JS in `docs/` served by GitHub Pages, calling a FastAPI backend on Fly.io that proxies to the SageMaker endpoint. No Gradio — vanilla JS, no build step.
+Architecture: single Fly.io deployment serves both the JSON API and the static frontend (`docs/`). FastAPI mounts `docs/` at `/` via `StaticFiles(html=True)` after all API routes, so `GET /` returns the UI and `POST /chat` etc. hit the API. One URL, no CORS. No Gradio — vanilla JS, no build step.
 
 - [x] Chat tab
   - [x] Conversation with deck-building bot (POST /chat)
@@ -168,12 +168,12 @@ Architecture: static HTML/CSS/JS in `docs/` served by GitHub Pages, calling a Fa
 - [x] API health check in header (calls /health on load)
 
 Deployment infrastructure:
-- [x] `Dockerfile` + `.dockerignore` for Fly.io build
+- [x] `Dockerfile` + `.dockerignore` for Fly.io build (copies `src/`, `data/card_index.pkl`, `docs/`)
 - [x] `fly.toml` with scale-to-zero and us-east-1 region (co-located with SageMaker)
-- [x] CORS middleware already open in `src/server.py` (allow_origins=["*"])
+- [x] Static mount at `/` in `src/server.py` via `StaticFiles(html=True)` — same process serves UI + API
+- [x] `config.js` set to empty `API_BASE` for same-origin fetches (no CORS needed)
 - [x] Walkthrough at `notes/development/frontend-deployment.md`
 - [ ] Run `fly launch` + `fly secrets set` + `fly deploy` (external)
-- [ ] Enable GitHub Pages from repo Settings → Pages, source `/docs`
 
 ## Phase 6: Documentation & Demo
 

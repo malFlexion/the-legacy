@@ -1113,3 +1113,15 @@ async def health():
         "vector_db": chroma_collection is not None,
         "vector_chunks": chroma_collection.count() if chroma_collection else 0,
     }
+
+
+# ---------------------------------------------------------------------------
+# Static frontend (mount LAST so API routes above take precedence)
+# ---------------------------------------------------------------------------
+
+from fastapi.staticfiles import StaticFiles
+
+_DOCS_DIR = os.path.join(os.path.dirname(__file__), "..", "docs")
+if os.path.isdir(_DOCS_DIR):
+    # html=True serves index.html on GET / and 404s fall back to it too
+    app.mount("/", StaticFiles(directory=_DOCS_DIR, html=True), name="frontend")
