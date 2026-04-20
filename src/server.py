@@ -1235,28 +1235,81 @@ async def build_deck(req: ChatRequest):
 
 @app.post("/analyze-deck", response_model=ChatResponse)
 async def analyze_deck(req: ChatRequest):
-    """Import and analyze a decklist."""
-    analysis_prompt = (
-        "Analyze this decklist. Identify the archetype, explain its game plan, "
-        "assess the mana base, evaluate sideboard choices, identify strengths "
-        "and weaknesses in the current metagame, and suggest improvements."
-    )
+    """Import and analyze a decklist.
 
+    The user message is expected to contain a literal decklist (usually
+    pasted from the Import tab). We extract as many card names as possible
+    from that decklist and inject their ground-truth data so the model
+    analyzes THIS deck, not an imagined one. Previously the endpoint only
+    added a RAG context — at 1B size the model would confabulate entirely
+    different decks ("This is an Eldrazi Leyline deck" for a Boros Energy
+    list).
+    """
     user_msg = ""
     for msg in reversed(req.messages):
         if msg.role == "user":
             user_msg = msg.content
             break
 
-    rag_context, _rag_sources = retrieve_context(user_msg)
-    enriched = list(req.messages) + [
-        ChatMessage(role="system", content=analysis_prompt)
-    ]
-    messages = build_messages(enriched, rag_context)
+    # Ground truth for every Legacy-pool card named in the decklist.
+    # Budget-capped at 12 cards to stay under the 8k context ceiling
+    # (each card sheet is ~100-200 tokens; the prompt also carries RAG
+    # chunks and the analysis instructions).
+    deck_cards: list[dict] = []
+    if card_index and user_msg:
+        import re as _re
+        # The decklist lines are "N CardName" — strip the leading quantity
+        # and pass each name to the existing extractor.
+        seen_names: set[str] = set()
+        for line in user_msg.splitlines():
+            stripped = _re.sub(r"^\s*\d+\s+", "", line).strip()
+            if not stripped:
+                continue
+            extracted = extract_query_cards(stripped, max_cards=1)
+            for c in extracted:
+                if c["name"] in seen_names:
+                    continue
+                deck_cards.append(c)
+                seen_names.add(c["name"])
+                if len(deck_cards) >= 12:
+                    break
+            if len(deck_cards) >= 12:
+                break
+
+    card_block = format_card_context(deck_cards)
+    rag_context, _rag_sources = retrieve_context(user_msg, exclude_cards=bool(deck_cards))
+
+    combined_context = card_block
+    if rag_context:
+        combined_context = (combined_context + "\n\n" + rag_context) if card_block else rag_context
+
+    # Strong grounding instructions go into the system position (before
+    # the user message), not appended after it. The Modelfile's
+    # v5-strict-grounding system prompt handles the don't-invent rules
+    # in general; these are analysis-specific additions.
+    analysis_instructions = (
+        "You are analyzing a specific Legacy decklist the user pasted. "
+        "Work ONLY from the cards that appear in their list. Do NOT "
+        "introduce cards that aren't listed (no Leyline of the Void, no "
+        "Eldrazi, no Chalice unless those cards are literally in the "
+        "decklist the user pasted). "
+        "Your analysis should: (1) identify the archetype based on the "
+        "actual cards, (2) describe the game plan those specific cards "
+        "enable, (3) assess the mana base from the actual lands listed, "
+        "(4) evaluate the actual sideboard, (5) identify real strengths "
+        "and weaknesses against the current Legacy meta, (6) suggest "
+        "concrete improvements. "
+        "If you don't recognize the archetype from the cards listed, "
+        "say so honestly — do not invent one."
+    )
+
+    messages_with_instructions = [ChatMessage(role="system", content=analysis_instructions)] + list(req.messages)
+    messages = build_messages(messages_with_instructions, combined_context)
 
     content = await generate(
         messages, temperature=0.2, top_p=0.9, max_tokens=req.max_tokens,
     )
+    content = auto_bracket_cards(content)
     return ChatResponse(content=content, cards=resolve_cards(content))
 
 

@@ -168,13 +168,33 @@ header h1 {
     }
 }
 
-/* Full-width analysis container below the Import & Analyze split.
-   LLM prose needs room — don't squeeze it into the narrow right column. */
+/* Import & Analyze layout: narrow left column (input + analyze + LLM
+   prose all stacked), wide right column (parsed-deck grid gets most of
+   the page). Collapses to a single column on narrow viewports. */
+.import-layout {
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    gap: 24px;
+    align-items: start;
+}
+
+@media (max-width: 900px) {
+    .import-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+.import-left {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
 .import-analysis {
-    margin-top: 32px;
+    margin-top: 12px;
 }
 .import-analysis:not(:empty) {
-    padding-top: 20px;
+    padding-top: 16px;
     border-top: 1px solid var(--border);
 }
 

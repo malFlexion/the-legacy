@@ -20,7 +20,26 @@ Usage:
 import json
 import os
 import pickle
+import re
 from rapidfuzz import fuzz, process
+
+
+def _collector_number_key(cn: str) -> tuple:
+    """Natural-order sort key for Scryfall collector numbers.
+
+    A card's "released_at" ties across printings in the same set, so within
+    that set we prefer the lowest collector number — that's the "main"
+    printing, with showcase / borderless / etched variants numbered higher
+    (e.g. OTJ #15 High Noon vs. #314 borderless showcase).
+
+    Pure lexicographic sort breaks on multi-digit numbers ("10" < "2"),
+    so we split the leading integer out. Returns a tuple so non-numeric
+    prefixes (Alchemy "A-1", promo "★") sort after numeric ones.
+    """
+    m = re.match(r"^(\d+)(.*)$", cn or "")
+    if m:
+        return (0, int(m.group(1)), m.group(2))
+    return (1, 0, cn or "")
 
 DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "data")
 INDEX_PATH = os.path.join(DATA_DIR, "card_index.pkl")
@@ -57,9 +76,17 @@ class CardIndex:
         # might be a Japanese or Russian printing with the native name.
         english = [c for c in cards_raw if c.get("lang", "en") == "en"]
 
-        # Sort ascending by released_at so the oldest printing wins the dedup.
-        # Missing released_at sorts last (use a far-future sentinel).
-        english.sort(key=lambda c: c.get("released_at", "9999-99-99"))
+        # Sort ascending by (released_at, collector_number). Oldest set wins;
+        # within a set, the lowest collector number wins so the "main"
+        # printing beats borderless/showcase/etched variants (OTJ #15 High
+        # Noon wins over the #314 borderless variant). Missing released_at
+        # sorts last via a far-future sentinel.
+        english.sort(
+            key=lambda c: (
+                c.get("released_at", "9999-99-99"),
+                _collector_number_key(c.get("collector_number", "")),
+            )
+        )
 
         seen_names = set()
 
