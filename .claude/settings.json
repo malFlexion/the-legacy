@@ -15,7 +15,8 @@
       "Bash(python -m pytest tests/test_server.py tests/test_deck_parser.py -q)",
       "Bash(python -m pytest tests/ --cov=src --cov-report=term --tb=no -q)",
       "Bash(git rm *)",
-      "Bash(git commit -m 'Gitignore .coverage + .pytest_cache test artifacts *)"
+      "Bash(git commit -m 'Gitignore .coverage + .pytest_cache test artifacts *)",
+      "Bash(python -m pytest tests/test_build_vectordb.py -q)"
     ]
   }
 }

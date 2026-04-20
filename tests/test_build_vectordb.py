@@ -371,3 +371,139 @@ class TestVectorDB:
         assert expected_sources.issubset(sources), (
             f"Missing sources: {expected_sources - sources}"
         )
+
+
+# --- Edge cases for the chunking helpers ---
+
+
+class TestChunkingEdgeCases:
+    def test_rules_without_game_concepts_header_raises(self, tmp_path):
+        """Line 37 guard — file missing '1. Game Concepts' header is malformed."""
+        bad = tmp_path / "bad_rules.txt"
+        bad.write_text("Just some text with no rules start marker.\n", encoding="utf-8")
+        with pytest.raises(ValueError, match="Could not find start of rules"):
+            chunk_comprehensive_rules(str(bad))
+
+    def test_rules_without_glossary_section(self, tmp_path):
+        """Line 46 path — rules file with no Glossary still chunks normally."""
+        content = (
+            "Contents\n\n"
+            "1. Game Concepts\n\n"
+            "100. General\n\n"
+            "100.1. These rules apply to Magic games.\n\n"
+            "100.2. To play, each player needs a deck.\n\n"
+        )
+        f = tmp_path / "no_glossary.txt"
+        f.write_text(content, encoding="utf-8")
+        chunks = chunk_comprehensive_rules(str(f))
+        assert len(chunks) > 0
+        # No glossary chunks should exist
+        assert not any(c["metadata"].get("type") == "rules-glossary" for c in chunks)
+
+    def test_markdown_empty_file(self, tmp_path):
+        """Empty markdown shouldn't crash or produce chunks."""
+        f = tmp_path / "empty.md"
+        f.write_text("", encoding="utf-8")
+        chunks = chunk_markdown_file(str(f), "empty")
+        assert chunks == []
+
+    def test_markdown_without_headers(self, tmp_path):
+        """A markdown file with no ## headers uses 'Introduction' as title."""
+        f = tmp_path / "flat.md"
+        f.write_text("Just a paragraph, no headers.\n", encoding="utf-8")
+        chunks = chunk_markdown_file(str(f), "flat")
+        assert len(chunks) == 1
+        assert chunks[0]["metadata"]["title"] == "Introduction"
+
+
+# --- build_database end-to-end ---
+
+
+class TestBuildDatabaseEndToEnd:
+    """Exercises the full build_database() orchestration against a tiny
+    temporary data directory so all 6 expected strategy files exist and
+    the real Chroma + sentence-transformers pipeline runs end-to-end."""
+
+    @pytest.fixture
+    def fake_data_dir(self, tmp_path):
+        """Write minimal but realistic data files that build_database reads."""
+        data_dir = tmp_path / "data"
+        data_dir.mkdir()
+
+        # Minimal comprehensive rules — must have '1. Game Concepts' marker
+        # and at least one section with subrules so the chunker actually
+        # produces chunks (exercising the grouping path too).
+        (data_dir / "comprehensive-rules.txt").write_text(
+            "Contents\n\n"
+            "1. Game Concepts\n\n"
+            "100. General\n\n"
+            "100.1. These rules apply to any Magic game with two or more players.\n\n"
+            "100.2. Each player needs their own deck of traditional Magic cards.\n\n"
+            "101. The Magic Golden Rules\n\n"
+            "101.1. Whenever a card's text contradicts these rules, the card wins.\n\n"
+            "Glossary\n\n"
+            "Artifact\nA card type. An artifact is a permanent.\n\n",
+            encoding="utf-8",
+        )
+
+        # Minimal markdown files — build_database iterates a fixed dict of
+        # six strategy files, so every one of them must exist on disk.
+        for name in [
+            "legacy-basics.md",
+            "deckbuilding-guide.md",
+            "legacy-analysis.md",
+            "archetype-guide.md",
+            "legacy-deck-history.md",
+            "mtg-slang.md",
+        ]:
+            (data_dir / name).write_text(
+                f"# {name}\n\n## Overview\n\nSample content for {name}.\n",
+                encoding="utf-8",
+            )
+
+        return data_dir
+
+    def test_build_database_creates_collection(self, monkeypatch, fake_data_dir, tmp_path):
+        """Full pipeline: chunks all 7 sources, creates a Chroma collection,
+        embeds every chunk, and reports a sensible count."""
+        import src.build_vectordb as bvdb
+
+        db_dir = tmp_path / "vectordb"
+        monkeypatch.setattr(bvdb, "DATA_DIR", str(fake_data_dir))
+        monkeypatch.setattr(bvdb, "DB_DIR", str(db_dir))
+
+        bvdb.build_database()
+
+        # Verify Chroma persisted the collection and it's non-empty
+        client = chromadb.PersistentClient(path=str(db_dir))
+        collection = client.get_collection("legacy_knowledge")
+        assert collection.count() > 0
+
+        # All 7 sources should be represented in the stored metadata
+        stored = collection.get(include=["metadatas"])
+        sources = {m["source"] for m in stored["metadatas"]}
+        assert "comprehensive-rules" in sources
+        assert {"legacy-basics", "deckbuilding-guide", "legacy-analysis",
+                "archetype-guide", "legacy-deck-history", "mtg-slang"} <= sources
+
+    def test_build_database_is_idempotent(self, monkeypatch, fake_data_dir, tmp_path):
+        """Running build twice should delete+recreate the collection cleanly
+        (exercises the try/except NotFoundError cleanup path)."""
+        import src.build_vectordb as bvdb
+
+        db_dir = tmp_path / "vectordb"
+        monkeypatch.setattr(bvdb, "DATA_DIR", str(fake_data_dir))
+        monkeypatch.setattr(bvdb, "DB_DIR", str(db_dir))
+
+        bvdb.build_database()
+        first_count = chromadb.PersistentClient(path=str(db_dir)).get_collection(
+            "legacy_knowledge"
+        ).count()
+
+        # Second build should succeed without errors and produce the same count
+        bvdb.build_database()
+        second_count = chromadb.PersistentClient(path=str(db_dir)).get_collection(
+            "legacy_knowledge"
+        ).count()
+
+        assert first_count == second_count > 0
