@@ -24,6 +24,7 @@ Requires:
 
 import os
 import json
+import logging
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI, HTTPException
@@ -40,6 +41,17 @@ from .deck_parser import parse_decklist, import_from_url, Decklist
 from .budget_engine import BudgetEngine
 from .goldfish_engine import Deck, aggregate_stats, london_mulligan, sample_hands
 from .turn_engine import aggregate_game_stats, simulate_game
+
+# ---------------------------------------------------------------------------
+# Logging — configured at import time so startup banners appear in Fly logs.
+# ---------------------------------------------------------------------------
+
+logging.basicConfig(
+    level=os.environ.get("LOG_LEVEL", "INFO").upper(),
+    format="%(asctime)s [%(levelname)s] %(name)s: %(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S",
+)
+log = logging.getLogger("the-legacy")
 
 # ---------------------------------------------------------------------------
 # Config
@@ -76,25 +88,95 @@ sagemaker_runtime = None
 budget_engine: BudgetEngine | None = None
 
 
+def _validate_config() -> list[str]:
+    """Check required environment variables for the chosen backend.
+
+    Returns a list of human-readable warnings. Empty list = all good.
+    Does not raise — the server should start even with config issues so
+    that /health can report what's wrong to the frontend.
+    """
+    warnings: list[str] = []
+
+    if INFERENCE_BACKEND not in ("ollama", "sagemaker"):
+        warnings.append(
+            f"INFERENCE_BACKEND='{INFERENCE_BACKEND}' is not recognized "
+            f"(expected 'ollama' or 'sagemaker'). Defaulting to Ollama path."
+        )
+
+    if INFERENCE_BACKEND == "sagemaker":
+        # boto3 reads credentials from env, shared config, or instance role.
+        # We only check the obvious env-var path here; missing creds from
+        # the chain will surface as a clear error on the first invoke.
+        if not os.environ.get("AWS_ACCESS_KEY_ID") and not os.environ.get("AWS_PROFILE"):
+            warnings.append(
+                "Neither AWS_ACCESS_KEY_ID nor AWS_PROFILE is set. "
+                "boto3 will try other sources (instance role, ~/.aws/credentials). "
+                "If running on Fly, set AWS_ACCESS_KEY_ID + AWS_SECRET_ACCESS_KEY "
+                "via `fly secrets set`."
+            )
+        if SAGEMAKER_ENDPOINT == "the-legacy-llm":
+            log.debug("SAGEMAKER_ENDPOINT using default name 'the-legacy-llm'")
+        if not AWS_REGION:
+            warnings.append("AWS_REGION is empty — SageMaker calls will fail.")
+
+    if INFERENCE_BACKEND == "ollama":
+        if not OLLAMA_BASE.startswith(("http://", "https://")):
+            warnings.append(
+                f"OLLAMA_BASE='{OLLAMA_BASE}' must include the scheme (http:// or https://)"
+            )
+
+    return warnings
+
+
+def _log_banner(title: str) -> None:
+    log.info("=" * 60)
+    log.info(title)
+    log.info("=" * 60)
+
+
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    """Load card index, vector DB, and inference backend at startup."""
+    """Load card index, vector DB, and inference backend at startup.
+
+    Emits a structured startup report so any config problem is obvious
+    in the Fly logs / local console before the first request arrives.
+    """
     global card_index, chroma_collection, sagemaker_runtime, budget_engine
+
+    _log_banner("The Legacy — startup")
+    log.info("INFERENCE_BACKEND = %s", INFERENCE_BACKEND)
+    if INFERENCE_BACKEND == "sagemaker":
+        log.info("SAGEMAKER_ENDPOINT = %s", SAGEMAKER_ENDPOINT)
+        log.info("AWS_REGION        = %s", AWS_REGION)
+        log.info("AWS_ACCESS_KEY_ID = %s", "set" if os.environ.get("AWS_ACCESS_KEY_ID") else "NOT SET")
+    else:
+        log.info("OLLAMA_BASE = %s", OLLAMA_BASE)
+        log.info("MODEL_NAME  = %s", MODEL_NAME)
+
+    # Config validation — log but don't fail startup
+    for warning in _validate_config():
+        log.warning("CONFIG: %s", warning)
 
     # Card index
     card_index = CardIndex()
     try:
         card_index.load()
+        log.info("✓ Card index loaded (%d cards)", len(card_index.cards))
     except FileNotFoundError:
-        print(
-            "WARNING: card_index.pkl not found. "
-            "Card resolution disabled. Run: python src/card_index.py"
+        log.warning(
+            "✗ card_index.pkl not found at %s — card resolution disabled. "
+            "Rebuild with: python src/card_index.py",
+            os.path.join(DATA_DIR, "card_index.pkl"),
         )
+        card_index = None
+    except Exception:
+        log.exception("✗ Unexpected error loading card index — disabling")
         card_index = None
 
     # Budget engine (depends on card index for prices)
     if card_index is not None:
         budget_engine = BudgetEngine(card_index)
+        log.info("✓ Budget engine ready")
 
     # Vector DB
     try:
@@ -106,22 +188,64 @@ async def lifespan(app: FastAPI):
             name="legacy_knowledge",
             embedding_function=embed_fn,
         )
-        print(f"Loaded vector DB: {chroma_collection.count()} chunks")
+        log.info("✓ Vector DB loaded (%d chunks) — RAG enabled", chroma_collection.count())
     except Exception as e:
-        print(f"WARNING: Vector DB not available ({e}). RAG disabled.")
+        log.warning("✗ Vector DB unavailable (%s: %s) — RAG disabled", type(e).__name__, e)
         chroma_collection = None
 
-    # SageMaker client
+    # Inference backend connectivity check
     if INFERENCE_BACKEND == "sagemaker":
-        import boto3
-        sagemaker_runtime = boto3.client(
-            "sagemaker-runtime", region_name=AWS_REGION
-        )
-        print(f"Using SageMaker endpoint: {SAGEMAKER_ENDPOINT} ({AWS_REGION})")
+        try:
+            import boto3
+            sagemaker_runtime = boto3.client("sagemaker-runtime", region_name=AWS_REGION)
+            # Active connectivity + auth check via the control plane
+            sm = boto3.client("sagemaker", region_name=AWS_REGION)
+            resp = sm.describe_endpoint(EndpointName=SAGEMAKER_ENDPOINT)
+            status = resp["EndpointStatus"]
+            if status == "InService":
+                log.info("✓ SageMaker endpoint '%s' is InService", SAGEMAKER_ENDPOINT)
+            else:
+                log.warning(
+                    "✗ SageMaker endpoint '%s' status: %s — chat requests will fail "
+                    "until it's InService", SAGEMAKER_ENDPOINT, status,
+                )
+        except Exception as e:
+            # Most common: NoCredentialsError, AccessDenied, endpoint not found,
+            # region typo. Keep the message actionable.
+            log.error(
+                "✗ Cannot reach SageMaker (%s: %s). Check AWS creds, region, and "
+                "that endpoint '%s' exists. Run: aws sagemaker describe-endpoint "
+                "--endpoint-name %s --region %s",
+                type(e).__name__, str(e)[:200], SAGEMAKER_ENDPOINT,
+                SAGEMAKER_ENDPOINT, AWS_REGION,
+            )
+            sagemaker_runtime = None
     else:
-        print(f"Using Ollama: {OLLAMA_BASE} (model: {MODEL_NAME})")
+        # Ollama connectivity check
+        try:
+            async with httpx.AsyncClient(timeout=3.0) as client:
+                r = await client.get(f"{OLLAMA_BASE}/api/tags")
+            if r.status_code == 200:
+                names = [m.get("name", "").split(":")[0] for m in r.json().get("models", [])]
+                if MODEL_NAME in names:
+                    log.info("✓ Ollama reachable at %s — model '%s' is registered", OLLAMA_BASE, MODEL_NAME)
+                else:
+                    log.warning(
+                        "✗ Ollama reachable but model '%s' is not registered. "
+                        "Available: %s. Register with: ollama create %s -f Modelfile",
+                        MODEL_NAME, names or "(none)", MODEL_NAME,
+                    )
+            else:
+                log.warning("✗ Ollama at %s returned HTTP %d", OLLAMA_BASE, r.status_code)
+        except Exception as e:
+            log.error(
+                "✗ Cannot reach Ollama at %s (%s: %s). Is `ollama serve` running?",
+                OLLAMA_BASE, type(e).__name__, str(e)[:200],
+            )
 
+    _log_banner("Startup complete")
     yield
+    log.info("Shutting down")
 
 
 app = FastAPI(
@@ -316,7 +440,11 @@ async def sagemaker_generate(
 ) -> str:
     """Call SageMaker endpoint for inference."""
     if sagemaker_runtime is None:
-        raise HTTPException(status_code=503, detail="SageMaker not configured")
+        log.error("sagemaker_generate called but sagemaker_runtime is None — startup failed to initialize it")
+        raise HTTPException(
+            status_code=503,
+            detail="SageMaker client not initialized — check server startup logs for config errors",
+        )
 
     prompt = format_llama_prompt(messages)
 
@@ -330,11 +458,24 @@ async def sagemaker_generate(
         },
     }
 
-    response = sagemaker_runtime.invoke_endpoint(
-        EndpointName=SAGEMAKER_ENDPOINT,
-        ContentType="application/json",
-        Body=json.dumps(payload),
-    )
+    try:
+        response = sagemaker_runtime.invoke_endpoint(
+            EndpointName=SAGEMAKER_ENDPOINT,
+            ContentType="application/json",
+            Body=json.dumps(payload),
+        )
+    except Exception as e:
+        # Common error classes: EndpointNotInServiceException, ValidationError,
+        # AccessDeniedException, ThrottlingException, ModelError. Include
+        # the error class + message so Fly logs tell us exactly what broke.
+        log.error(
+            "SageMaker invoke failed: %s: %s (endpoint=%s, region=%s)",
+            type(e).__name__, str(e)[:300], SAGEMAKER_ENDPOINT, AWS_REGION,
+        )
+        raise HTTPException(
+            status_code=502,
+            detail=f"SageMaker invoke failed ({type(e).__name__}): {str(e)[:200]}",
+        )
 
     result = json.loads(response["Body"].read().decode())
     if isinstance(result, list):
@@ -372,21 +513,35 @@ async def ollama_generate(
         },
     }
 
-    async with httpx.AsyncClient(timeout=120.0) as client:
-        if stream:
-            return await _stream_response(client, payload)
+    try:
+        async with httpx.AsyncClient(timeout=120.0) as client:
+            if stream:
+                return await _stream_response(client, payload)
 
-        resp = await client.post(
-            f"{OLLAMA_BASE}/api/chat",
-            json=payload,
-        )
-        if resp.status_code != 200:
-            raise HTTPException(
-                status_code=resp.status_code,
-                detail=f"Ollama error: {resp.text}",
+            resp = await client.post(
+                f"{OLLAMA_BASE}/api/chat",
+                json=payload,
             )
-        data = resp.json()
-        return data.get("message", {}).get("content", "")
+            if resp.status_code != 200:
+                log.error(
+                    "Ollama returned HTTP %d for model '%s': %s",
+                    resp.status_code, MODEL_NAME, resp.text[:300],
+                )
+                raise HTTPException(
+                    status_code=resp.status_code,
+                    detail=f"Ollama error: {resp.text}",
+                )
+            data = resp.json()
+            return data.get("message", {}).get("content", "")
+    except httpx.ConnectError as e:
+        log.error("Cannot connect to Ollama at %s: %s", OLLAMA_BASE, e)
+        raise HTTPException(
+            status_code=503,
+            detail=f"Cannot connect to Ollama at {OLLAMA_BASE} — is `ollama serve` running?",
+        )
+    except httpx.TimeoutException:
+        log.error("Ollama request timed out after 120s (model=%s)", MODEL_NAME)
+        raise HTTPException(status_code=504, detail="Ollama request timed out")
 
 
 async def _stream_response(client: httpx.AsyncClient, payload: dict):
