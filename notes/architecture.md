@@ -215,7 +215,6 @@ Demo cost + the assignment encouraged working with constraints. Everything in th
 
 - [`README.md`](../README.md) — high-level project overview, deployment table, training-results table
 - [`checklist.md`](../checklist.md) — full checklist of what's implemented, tested, and shipped
-- [`notes/demo-checklist.md`](demo-checklist.md) — talking-points doc for the live demo, with shortcomings + future-work sections
 - [`notes/development/round1-analysis.md`](development/round1-analysis.md) — honest analysis of the first eval round
 - [`notes/development/frontend-deployment.md`](development/frontend-deployment.md) — step-by-step Fly.io walkthrough
 - [`src/server.py`](../src/server.py) — the inference pipeline, 6 stages described above

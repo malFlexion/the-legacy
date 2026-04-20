@@ -234,10 +234,10 @@ Deployment infrastructure:
   - [x] Sampling method explanation in README (temperature 0.1 + per-endpoint presets with rationale)
   - [x] Evaluation results and analysis (`round1-analysis.md` covers Round 1; Round 2 numbers in README + `eval_report.json`)
   - [x] README refresh: all-in-one Fly + Ollama architecture + inference pipeline walkthrough; SageMaker demoted to alternative path
-- [ ] Demo presentation
-  - [ ] Live walkthrough: play style → deck → view → goldfish
-  - [ ] Show meta awareness and rules knowledge
-  - [ ] Show deck import and analysis
-  - [ ] Explain architectural decisions and trade-offs (card injection path, RAG split, Modelfile/vectordb version markers, GGUF runtime download)
-  - [ ] Pre-record backup video in case of live issues
+- [x] Demo presentation — delivered
+  - [x] Live walkthrough: play style → deck → view → goldfish
+  - [x] Show meta awareness and rules knowledge
+  - [x] Show deck import and analysis
+  - [x] Explain architectural decisions and trade-offs (card injection path, RAG split, Modelfile/vectordb version markers, GGUF runtime download)
+  - [x] Pre-record backup video in case of live issues
 - [ ] Final eval run with polished model (end-to-end with RAG + card injection; raw-model number is 61.6%)
