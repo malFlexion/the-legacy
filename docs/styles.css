@@ -1,17 +1,20 @@
-/* The Legacy frontend — minimal vanilla CSS, dark theme. */
+/* The Legacy frontend — palette inspired by Terese Nielsen's Legacy Weapon
+   art (Tenth Edition): dark cosmic ground with a gold ceremonial weapon
+   radiating five-color energy. Gold is the primary accent; the status
+   colors (good/warn/bad) pull from the weapon's prismatic swirls. */
 
 :root {
-    --bg: #0f1115;
-    --panel: #1a1d25;
-    --panel-alt: #232732;
-    --border: #2d3240;
-    --text: #e4e7ee;
-    --text-dim: #9ba3b4;
-    --accent: #6ea8ff;
-    --accent-hover: #87b8ff;
-    --good: #3fbf78;
-    --warn: #e6b453;
-    --bad: #e86868;
+    --bg: #0c1016;           /* near-black with a cool purple undertone */
+    --panel: #161b26;        /* panel ground — slight teal/violet tint */
+    --panel-alt: #1f2532;
+    --border: #2e3545;
+    --text: #ecebe5;         /* parchment / radiant cream */
+    --text-dim: #9aa3b7;
+    --accent: #d4af5c;       /* gold — Legacy Weapon's metal */
+    --accent-hover: #eac878; /* brighter gold on hover */
+    --good: #5db98a;         /* leaf green from the weapon's green energy */
+    --warn: #d88f6a;         /* warm copper — the red/orange swirl */
+    --bad: #c16384;          /* rose/magenta — the purple-pink plasma */
     --card-w: 140px;
 }
 
@@ -69,6 +72,7 @@ header h1 {
 .tab-btn.active {
     color: var(--accent);
     border-bottom-color: var(--accent);
+    text-shadow: 0 0 12px rgba(212, 175, 92, 0.35);
 }
 
 .api-status {
