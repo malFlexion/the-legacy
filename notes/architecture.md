@@ -186,7 +186,7 @@ flowchart LR
     MERGE --> GGUF
     GGUF --> HFR
     LORA -. score .-> EVAL
-    EVAL -. 28.9% -> 61.6% .-> REPORT[eval_report.json]
+    EVAL -. "28.9% → 61.6%" .-> REPORT[eval_report.json]
 ```
 
 ---
