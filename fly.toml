@@ -9,7 +9,7 @@ primary_region = 'iad'
 [build]
 
 [env]
-  PORT = '8080'
+  PORT = '8000'
 
 [http_service]
   internal_port = 8000
@@ -21,4 +21,6 @@ primary_region = 'iad'
 
 [[vm]]
   size = 'shared-cpu-1x'
-  memory = '512mb'
+  # 1GB required: chromadb + sentence-transformers + card_index.pkl add up
+  # past 512MB once embeddings are loaded. OOM kills were observed at 512MB.
+  memory = '1gb'
