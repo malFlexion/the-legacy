@@ -5,7 +5,9 @@
 
 "use strict";
 
-const API = window.API_BASE || "http://localhost:8000";
+// window.API_BASE is set in config.js. Empty string = same origin.
+// Use `??` not `||` so an empty string isn't treated as "unset".
+const API = window.API_BASE ?? "http://localhost:8000";
 
 // ---------- Tab navigation ----------
 
@@ -110,7 +112,7 @@ function cardThumb(card, count = null) {
 async function checkHealth() {
     const urlSpan = document.getElementById("api-url");
     const healthSpan = document.getElementById("api-health");
-    urlSpan.textContent = API;
+    urlSpan.textContent = API === "" ? "(same origin)" : API;
     try {
         const h = await api("/health");
         healthSpan.textContent = `✓ ${h.status || "ok"} (${h.model || "unknown"})`;
