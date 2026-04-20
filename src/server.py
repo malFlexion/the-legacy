@@ -737,8 +737,14 @@ def auto_bracket_cards(text: str) -> str:
             wrapped_names.add(name)
 
     # Restore stashed content
+    # Restore every occurrence of each placeholder token — not just the
+    # first. `re.sub(pattern, token, working)` earlier replaced every
+    # instance of a card with the same token, so if the model mentioned
+    # the card twice, both spots need restoring. Using `.replace(.., .., 1)`
+    # left the second copy as a raw "\x00PLACEHOLDER3\x00" string which
+    # rendered as "PLACEHOLDER3" once the NULs got stripped by display.
     for i, original in enumerate(placeholders):
-        working = working.replace(f"\x00PLACEHOLDER{i}\x00", original, 1)
+        working = working.replace(f"\x00PLACEHOLDER{i}\x00", original)
 
     return working
 
