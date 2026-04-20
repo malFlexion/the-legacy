@@ -55,4 +55,4 @@ primary_region = 'iad'  # GPU availability; 'ord' and 'sjc' also work
   # When Fly approves GPU access, swap to `size = 'a10'` + `memory = '16gb'`
   # (region must become 'ord' since a10 isn't in iad per Fly's GPU docs).
   size = 'performance-8x'
-  memory = '8gb'
+  memory = '16gb'
