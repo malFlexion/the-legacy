@@ -1,6 +1,9 @@
-# Large data files (download separately)
+# Large raw data — download separately via scripts/... (508MB)
 data/scryfall-cards.json
-data/card_index.pkl
+
+# card_index.pkl (44MB) IS committed — CI/Docker build needs it, and
+# rebuilding it requires scryfall-cards.json (gitignored). Rebuild
+# locally with `python src/card_index.py` if Scryfall data changes.
 
 # vectordb/ is now committed — RAG needs it at runtime and it's only ~13MB.
 # Rebuild locally with `python src/build_vectordb.py` if source docs change.
