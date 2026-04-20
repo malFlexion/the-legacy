@@ -33,9 +33,20 @@ MODEL_NAME="${MODEL_NAME:-the-legacy}"
 GGUF_URL="${GGUF_URL:-https://huggingface.co/malFlexion/the-legacy-gguf/resolve/main/the-legacy.gguf}"
 GGUF_TMP="/tmp/the-legacy.gguf"
 
-if ollama list 2>/dev/null | grep -q "^${MODEL_NAME}"; then
-    echo "Model '${MODEL_NAME}' already in Ollama cache (volume hit) — skipping download + register."
+# Bump this when Modelfile params change so Ollama re-registers with the
+# new temperature / system prompt / num_predict. Otherwise the volume-
+# cached model keeps its old params forever.
+MODELFILE_VERSION="v2-lower-temp"
+VERSION_MARKER="/root/.ollama/.modelfile-version"
+CACHED_VERSION="$(cat "${VERSION_MARKER}" 2>/dev/null || echo "none")"
+
+if [ "${CACHED_VERSION}" = "${MODELFILE_VERSION}" ] && ollama list 2>/dev/null | grep -q "^${MODEL_NAME}"; then
+    echo "Model '${MODEL_NAME}' already in Ollama cache at version '${MODELFILE_VERSION}' — skipping."
 else
+    if ollama list 2>/dev/null | grep -q "^${MODEL_NAME}"; then
+        echo "Modelfile version changed (${CACHED_VERSION} -> ${MODELFILE_VERSION}); removing old registration."
+        ollama rm "${MODEL_NAME}" 2>/dev/null || true
+    fi
     echo "Model '${MODEL_NAME}' not in cache. Downloading GGUF from HuggingFace (~1.3GB, 1-2 min)..."
     curl -fL --retry 3 -o "${GGUF_TMP}" "${GGUF_URL}"
     echo "Download complete. Registering with Ollama..."
@@ -48,6 +59,7 @@ else
     ollama create "${MODEL_NAME}" -f /tmp/Modelfile
     echo "Model registered. Cleaning up temp GGUF (ollama has copied the blob into /root/.ollama)."
     rm -f "${GGUF_TMP}" /tmp/Modelfile
+    echo "${MODELFILE_VERSION}" > "${VERSION_MARKER}"
 fi
 
 # --- RAG vector DB ---
