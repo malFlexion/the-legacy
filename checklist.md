@@ -143,7 +143,7 @@
 - [x] Combo detection: `COMBOS` map with Marit Lage (Dark Depths + Thespian's Stage), Painter + Grindstone, Helm + Leyline, Thopter+Sword, Food Chain, Ideal+Dovescape
 - [x] Full statistical summary over N games: `POST /goldfish/simulate-many` (up to 10,000 games) with combo assembly rates, per-card cast rates, and avg mana efficiency
 - [x] Two new endpoints: `POST /goldfish/simulate` (single game log), `POST /goldfish/simulate-many` (aggregate)
-- [x] 21 tests in `tests/test_turn_engine.py` (154 total now passing)
+- [x] 21 tests in `tests/test_turn_engine.py` (see Testing section below for the full suite)
 
 ## Phase 5: Frontend (static files served by FastAPI on Fly.io → SageMaker)
 
@@ -182,6 +182,23 @@ Deployment infrastructure:
 - [x] `vectordb/` committed to repo (13MB) so CD builds have RAG data available
 - [x] `.github/workflows/fly-deploy.yml` — auto-deploys on push to master, triggers scoped to code paths that affect the image (skips doc-only commits)
 - [ ] Generate Fly deploy token (`fly tokens create deploy`) and add as `FLY_API_TOKEN` GitHub secret to activate CD
+
+## Testing
+
+- [x] **219 tests passing · 86% line coverage** (`pytest tests/ --cov=src`)
+- [x] Per-module coverage breakdown:
+  - `deck_parser.py` — **100%** (28 tests)
+  - `goldfish_engine.py` — **98%** (32 tests)
+  - `build_vectordb.py` — **95%** (53 tests: chunking + build pipeline + Chroma queries)
+  - `budget_engine.py` — **93%** (22 tests)
+  - `turn_engine.py` — **91%** (21 tests)
+  - `card_index.py` — **84%** (32 tests)
+  - `server.py` — **73%** (31 tests — all 14 FastAPI endpoints via TestClient with mocked LLM)
+- [x] Test isolation: `pytest.importorskip` guards on fastapi/chromadb so the suite gracefully degrades if deps aren't installed in the active Python
+- [x] URL imports (Moxfield / MTGGoldfish) tested with a monkey-patched `httpx.AsyncClient` — no network calls in CI
+- [x] LLM endpoints tested with `monkeypatch.setattr(server, "generate", ...)` — no model dependency in CI
+- [x] End-to-end build: synthetic data-dir fixture exercises the whole `build_database()` pipeline including Chroma delete+recreate idempotency
+- [x] `.coverage` and `.pytest_cache/` gitignored
 
 ## Phase 6: Documentation & Demo
 
