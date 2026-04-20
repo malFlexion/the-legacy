@@ -92,7 +92,19 @@ Start the endpoint if it's missing or failed.
 Edit `fly.toml` and change `app = "the-legacy-api"` to something unique (e.g., `the-legacy-api-malflexion`). Re-run `fly launch --no-deploy`, then `fly deploy`.
 
 ### Image too large / build timeout
-The image is ~1GB with `chromadb` + `sentence-transformers`. If builds time out, remove those from the Dockerfile's `pip install` — RAG will silently disable itself at runtime (the server already handles missing vectordb gracefully, and chromadb's import is in a try/except in the lifespan).
+The image is ~1.5GB with `chromadb`, `sentence-transformers`, the pre-downloaded embedding model (~80MB), and the vectordb snapshot (~13MB). If builds time out on a constrained CI runner, you can disable RAG by:
+1. Removing the `RUN python -c "...SentenceTransformer..."` warm-up line from `Dockerfile`
+2. Removing `COPY vectordb/` from `Dockerfile`
+3. Adding `vectordb/` back to `.dockerignore`
+
+The server handles missing vectordb gracefully — RAG just disables itself. The finetuned model still knows most of the rules (Round 2 rules_knowledge scored 83%), so you lose some recall but nothing catastrophic.
+
+### RAG not retrieving anything / empty context
+Check the health endpoint:
+```
+curl https://the-legacy-api.fly.dev/health
+```
+`vector_db: true` and `vector_chunks > 0` confirms RAG loaded. If `vector_chunks: 0`, the `vectordb/` directory was copied empty — rebuild with `python src/build_vectordb.py` locally, then redeploy.
 
 ## Cost
 

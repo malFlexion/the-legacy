@@ -44,12 +44,19 @@ RUN pip install --no-cache-dir \
     chromadb==0.5.11 \
     sentence-transformers==3.1.1
 
-# Copy only what the server needs at runtime.
-# card_index.pkl is committed (card lookup is core). vectordb/ and
-# scryfall-cards.json are gitignored — RAG will just be disabled if they're
-# absent, which the server handles gracefully.
+# Pre-download the RAG embedding model (~80MB) during build so cold starts
+# don't re-download it every time the Fly machine wakes from scale-to-zero.
+RUN python -c "from sentence_transformers import SentenceTransformer; SentenceTransformer('all-MiniLM-L6-v2')"
+
+# Copy what the server needs at runtime.
+# card_index.pkl powers fuzzy card name resolution.
+# vectordb/ is the ChromaDB store built by src/build_vectordb.py — enables
+# RAG retrieval over the comprehensive rules, meta analysis, and archetype docs.
+# scryfall-cards.json (508MB raw data) is NOT copied — card_index.pkl is the
+# compiled form that gets used at runtime.
 COPY src/ /app/src/
 COPY data/card_index.pkl /app/data/card_index.pkl
+COPY vectordb/ /app/vectordb/
 
 # Static frontend served from the same FastAPI process — no separate hosting
 COPY docs/ /app/docs/

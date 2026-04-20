@@ -15,7 +15,7 @@ data/training/
 notebooks/
 scripts/
 tests/
-vectordb/
+# vectordb/ IS copied — RAG retrieval uses it at inference time
 
 # Build / editor artifacts
 merged-model/
