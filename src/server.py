@@ -1065,8 +1065,13 @@ async def ollama_generate(
         },
     }
 
+    # CPU inference on Fly's performance-8x runs ~8 tok/s. A chat reply
+    # at 256 num_predict lands in ~30s; /analyze-deck at 768 tokens with
+    # 12 injected card sheets + RAG context regularly overshot the old
+    # 120s ceiling and 504'd. 300s gives analyze room to finish.
+    OLLAMA_TIMEOUT = 300.0
     try:
-        async with httpx.AsyncClient(timeout=120.0) as client:
+        async with httpx.AsyncClient(timeout=OLLAMA_TIMEOUT) as client:
             if stream:
                 return await _stream_response(client, payload)
 
@@ -1092,7 +1097,7 @@ async def ollama_generate(
             detail=f"Cannot connect to Ollama at {OLLAMA_BASE} — is `ollama serve` running?",
         )
     except httpx.TimeoutException:
-        log.error("Ollama request timed out after 120s (model=%s)", MODEL_NAME)
+        log.error("Ollama request timed out after %ds (model=%s)", int(OLLAMA_TIMEOUT), MODEL_NAME)
         raise HTTPException(status_code=504, detail="Ollama request timed out")
 
 

@@ -524,7 +524,7 @@ document.getElementById("import-analyze-btn").addEventListener("click", async ()
             body: JSON.stringify({
                 messages: [{ role: "user", content: `Analyze this Legacy deck:\n\n${decklist}` }],
                 temperature: 0.2,
-                max_tokens: 768,
+                max_tokens: 512,
             }),
         });
         analysis.innerHTML = "";
