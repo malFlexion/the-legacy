@@ -168,17 +168,32 @@ class CardIndex:
         """Find all card names mentioned in a block of text.
 
         Returns list of card data dicts for each unique card found.
-        Uses exact matching first, then fuzzy matching for unresolved names.
+        Uses word-boundary matching so short names don't false-match as
+        substrings of longer names (e.g. "Void" was matching inside
+        "Chalice of the Void"). Longest-first iteration also consumes
+        matched regions from the working text so a name like "Force"
+        won't match after "Force of Will" was already found.
         """
+        import re
+
         found = []
         found_names = set()
+        working = text
 
-        # First pass: exact matches (longest first to avoid partial matches)
         search_pool = self.legacy_legal if legacy_only else set(self.names)
         for name in sorted(search_pool, key=len, reverse=True):
-            if name in text and name not in found_names:
+            if name in found_names:
+                continue
+            # Escape regex specials in the card name (apostrophes, commas,
+            # parens, hyphens etc. are common) and require word boundaries
+            # on both sides so "Void" doesn't hit inside "Chalice of the Void".
+            pattern = r"(?<!\w)" + re.escape(name) + r"(?!\w)"
+            if re.search(pattern, working):
                 found.append(self.cards[name])
                 found_names.add(name)
+                # Blank out the match so shorter names can't match inside
+                # what we've already captured.
+                working = re.sub(pattern, " " * len(name), working)
 
         return found
 
