@@ -147,6 +147,14 @@ async function checkHealth() {
 
 const chatState = { messages: [] };
 
+// Enter submits; Shift+Enter inserts a newline.
+document.getElementById("chat-input").addEventListener("keydown", (ev) => {
+    if (ev.key === "Enter" && !ev.shiftKey) {
+        ev.preventDefault();
+        document.getElementById("chat-form").requestSubmit();
+    }
+});
+
 document.getElementById("chat-form").addEventListener("submit", async (ev) => {
     ev.preventDefault();
     const input = document.getElementById("chat-input");

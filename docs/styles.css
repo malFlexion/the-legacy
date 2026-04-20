@@ -213,12 +213,15 @@ button:disabled {
 
 /* Chat */
 .chat-messages {
-    flex: 1;                   /* fill available height in the flex column */
+    flex: 1;
     background: var(--panel);
     border: 1px solid var(--border);
     border-radius: 8px;
     padding: 16px;
-    min-height: 300px;         /* floor for very short viewports */
+    /* Explicit floor so we don't depend on the flex chain propagating
+       through main → tab-panel → chat-messages. Subtracts header
+       (~180px) + form (~70px) + footer (~80px) + padding (~30px). */
+    min-height: calc(100vh - 360px);
     overflow-y: auto;
     margin-bottom: 12px;
 }
