@@ -76,10 +76,21 @@ fi
 VECTORDB_PATH="/root/.ollama/vectordb"
 export VECTORDB_DIR="${VECTORDB_PATH}"
 
-if [ -f "${VECTORDB_PATH}/chroma.sqlite3" ]; then
-    echo "Vector DB already built at ${VECTORDB_PATH} — skipping rebuild."
+# Bump this when the vectordb schema or source docs change so the cached
+# DB on the Fly Volume gets rebuilt. Otherwise the old index persists
+# forever across deploys.
+VECTORDB_VERSION="v2-card-chunks"
+VECTORDB_VERSION_MARKER="/root/.ollama/.vectordb-version"
+CACHED_VECTORDB_VERSION="$(cat "${VECTORDB_VERSION_MARKER}" 2>/dev/null || echo "none")"
+
+if [ -f "${VECTORDB_PATH}/chroma.sqlite3" ] && [ "${CACHED_VECTORDB_VERSION}" = "${VECTORDB_VERSION}" ]; then
+    echo "Vector DB already built at ${VECTORDB_PATH} (version ${VECTORDB_VERSION}) — skipping rebuild."
 else
-    echo "Building RAG vector DB from source docs (~30-60s)..."
+    if [ -d "${VECTORDB_PATH}" ]; then
+        echo "Vector DB version changed (${CACHED_VECTORDB_VERSION} -> ${VECTORDB_VERSION}); removing old index."
+        rm -rf "${VECTORDB_PATH}"
+    fi
+    echo "Building RAG vector DB from source docs + card chunks (~2-3 min first time)..."
     # build_vectordb.py reads DB_DIR from its module-level constant; override
     # via env and a quick Python invocation rather than editing the file.
     python -c "
@@ -87,6 +98,7 @@ import os, src.build_vectordb as bv
 bv.DB_DIR = '${VECTORDB_PATH}'
 bv.build_database()
 "
+    echo "${VECTORDB_VERSION}" > "${VECTORDB_VERSION_MARKER}"
     echo "Vector DB built at ${VECTORDB_PATH}."
 fi
 
