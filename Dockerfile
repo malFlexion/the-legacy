@@ -63,17 +63,14 @@ COPY docs/ /app/docs/
 # Ollama model artifacts.
 #
 # The GGUF is too big for git (1.3GB vs GitHub's 100MB per-file limit),
-# so we fetch it from a GitHub Release asset during build. This keeps
-# both local (`fly deploy`) and CI (`workflow_dispatch`) deploys working
-# without needing the file in the source tree.
+# so we fetch it from HuggingFace Hub during build. HF's CDN is fast and
+# supports resumable LFS — more reliable than GitHub Releases for large
+# model files. Both local (`fly deploy`) and CI (`workflow_dispatch`)
+# deploys use this same URL.
 #
-# Override the release tag at build time if needed:
-#   fly deploy --build-arg MODEL_RELEASE_TAG=model-v2
-#
-# To bump: upload a new GGUF with `gh release create <tag> the-legacy.gguf ...`
-# and pass --build-arg MODEL_RELEASE_TAG=<tag>.
-ARG MODEL_RELEASE_TAG=model-v1
-ARG MODEL_URL=https://github.com/malFlexion/the-legacy/releases/download/${MODEL_RELEASE_TAG}/the-legacy.gguf
+# Override the repo at build time if needed:
+#   fly deploy --build-arg MODEL_URL=https://huggingface.co/.../resolve/main/the-legacy.gguf
+ARG MODEL_URL=https://huggingface.co/malFlexion/the-legacy-gguf/resolve/main/the-legacy.gguf
 ADD ${MODEL_URL} /app/the-legacy.gguf
 
 # Modelfile lives in the repo — references ./the-legacy.gguf, so we
