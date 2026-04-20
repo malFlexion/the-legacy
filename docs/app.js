@@ -115,8 +115,23 @@ async function checkHealth() {
     urlSpan.textContent = API === "" ? "(same origin)" : API;
     try {
         const h = await api("/health");
-        healthSpan.textContent = `✓ ${h.status || "ok"} (${h.model || "unknown"})`;
-        healthSpan.className = "health-ok";
+        const llm = h.llm || {};
+        const parts = [];
+
+        // LLM status is the most important signal
+        if (llm.reachable) {
+            parts.push(`✓ LLM ${h.model} (${llm.detail})`);
+            healthSpan.className = "health-ok";
+        } else {
+            parts.push(`✗ LLM ${h.model || "unknown"}: ${llm.detail || "unreachable"}`);
+            healthSpan.className = "health-fail";
+        }
+
+        // RAG / card index — informational, doesn't change color
+        if (h.vector_db) parts.push(`RAG ${h.vector_chunks} chunks`);
+        if (h.card_index) parts.push(`card index ${h.card_count.toLocaleString()}`);
+
+        healthSpan.innerHTML = parts.join(" · ");
     } catch (err) {
         healthSpan.textContent = `✗ ${err.message}`;
         healthSpan.className = "health-fail";

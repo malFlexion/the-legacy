@@ -1103,11 +1103,45 @@ async def search_cards(name: str, limit: int = 5, legacy_only: bool = True):
 
 @app.get("/health")
 async def health():
-    """Health check."""
+    """Health check.
+
+    Also reports the status of the LLM backend (Ollama model presence or
+    SageMaker endpoint state) so the frontend can distinguish "proxy is up
+    but the model isn't" from "everything is good."
+    """
+    llm = {"reachable": False, "detail": "unknown"}
+
+    try:
+        if INFERENCE_BACKEND == "sagemaker":
+            # Free control-plane call to describe_endpoint — reports InService,
+            # OutOfService, Updating, Creating, etc.
+            import boto3
+            sm = boto3.client("sagemaker", region_name=AWS_REGION)
+            resp = sm.describe_endpoint(EndpointName=SAGEMAKER_ENDPOINT)
+            llm = {
+                "reachable": resp["EndpointStatus"] == "InService",
+                "detail": resp["EndpointStatus"],
+            }
+        else:
+            # Ollama — GET /api/tags and check our model is registered
+            async with httpx.AsyncClient(timeout=3.0) as client:
+                r = await client.get(f"{OLLAMA_BASE}/api/tags")
+            if r.status_code == 200:
+                names = [m.get("name", "").split(":")[0] for m in r.json().get("models", [])]
+                llm = {
+                    "reachable": MODEL_NAME in names,
+                    "detail": f"registered ({len(names)} models)" if MODEL_NAME in names else "model not registered",
+                }
+            else:
+                llm = {"reachable": False, "detail": f"ollama responded {r.status_code}"}
+    except Exception as e:
+        llm = {"reachable": False, "detail": str(e)[:120]}
+
     return {
-        "status": "ok",
+        "status": "ok" if llm["reachable"] else "degraded",
         "backend": INFERENCE_BACKEND,
         "model": MODEL_NAME if INFERENCE_BACKEND == "ollama" else SAGEMAKER_ENDPOINT,
+        "llm": llm,
         "card_index": card_index is not None,
         "card_count": len(card_index.cards) if card_index else 0,
         "vector_db": chroma_collection is not None,
