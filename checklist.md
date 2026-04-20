@@ -222,8 +222,8 @@ Deployment infrastructure:
 
 ## Phase 6: Documentation & Demo
 
-- [ ] Technical documentation
-  - [ ] Architecture overview with diagram (all-in-one Fly + Ollama, RAG, card injection)
+- [x] Technical documentation
+  - [x] Architecture overview with diagrams — [`notes/architecture.md`](notes/architecture.md) covers deployment topology, build/runtime composition, `/chat` request sequence, training pipeline, and key design decisions (4 Mermaid diagrams, ~350 lines)
   - [x] Training data sources and preparation process (`notes/development/progress.md`, `round1-analysis.md`)
   - [x] LoRA training process and hyperparameters (documented in `finetune_legacy.ipynb`)
   - [x] API reference (in README: 14 endpoints, LLM-backed vs deterministic)

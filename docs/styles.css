@@ -379,6 +379,18 @@ button:disabled {
     margin-top: 16px;
 }
 
+/* Type-group heading inside the Import & Analyze grid */
+.type-group-heading {
+    margin: 20px 0 0;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 6px;
+}
+
 .card-thumb {
     display: block;
     position: relative;

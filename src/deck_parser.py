@@ -93,14 +93,24 @@ def parse_decklist(text: str) -> Decklist:
         - Comma-separated: "4 Brainstorm, 4 Ponder, 3 Force of Will"
         - Sideboard section after "Sideboard:" header
     """
-    # If comma-separated on a single line, split first
-    if "\n" not in text.strip() and "," in text:
+    # Card names legitimately contain commas: "Phlage, Titan of Fire's Fury",
+    # "Ragavan, Nimble Pilferer", "Ajani, Nacatl Pariah", etc. We can only
+    # treat a comma as a separator if EVERY comma-delimited part independently
+    # looks like a "N CardName" line. Otherwise the first card with a comma
+    # in its name gets truncated at the comma.
+    def _all_parts_look_like_cards(raw: str) -> bool:
+        parts = [p.strip() for p in raw.split(",")]
+        return len(parts) > 1 and all(_CARD_LINE.match(p) for p in parts)
+
+    # If comma-separated on a single line with no newlines, split only if
+    # every part is a valid card line ("4 Brainstorm, 4 Ponder, 3 FoW").
+    if "\n" not in text.strip() and "," in text and _all_parts_look_like_cards(text):
         text = text.replace(",", "\n")
 
-    # Also handle commas within multi-line (mixed format)
+    # Same guard for mixed-format input with newlines AND commas.
     lines = []
     for raw_line in text.strip().splitlines():
-        if "," in raw_line and _CARD_LINE.match(raw_line.split(",")[0].strip()):
+        if "," in raw_line and _all_parts_look_like_cards(raw_line):
             lines.extend(part.strip() for part in raw_line.split(","))
         else:
             lines.append(raw_line)

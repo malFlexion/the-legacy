@@ -365,13 +365,30 @@ document.getElementById("import-parse-btn").addEventListener("click", async () =
 });
 
 function copyToGoldfishAndBudget(deck) {
+    const qty = (e) => e.quantity ?? e.count ?? 0;
+    const main = deck.main || [];
+    const side = deck.sideboard || deck.side || [];
     const text = [
-        ...(deck.main || []).map((e) => `${e.count} ${e.name}`),
-        ...((deck.side || []).length > 0 ? ["", "Sideboard:"] : []),
-        ...(deck.side || []).map((e) => `${e.count} ${e.name}`),
+        ...main.map((e) => `${qty(e)} ${e.name}`),
+        ...(side.length > 0 ? ["", "Sideboard:"] : []),
+        ...side.map((e) => `${qty(e)} ${e.name}`),
     ].join("\n");
-    document.getElementById("goldfish-input").value = text;
-    document.getElementById("budget-input").value = text;
+    const goldfishInput = document.getElementById("goldfish-input");
+    const budgetInput = document.getElementById("budget-input");
+    if (goldfishInput) goldfishInput.value = text;
+    if (budgetInput) budgetInput.value = text;
+}
+
+// Classify a card's type_line into a high-level grouping for the render.
+// Order here is the display order — creatures first since they're usually
+// the bulk of a deck, lands last.
+const TYPE_GROUPS = ["Creature", "Planeswalker", "Instant", "Sorcery", "Artifact", "Enchantment", "Land"];
+function cardTypeGroup(card) {
+    const t = card?.type_line || "";
+    for (const group of TYPE_GROUPS) {
+        if (t.includes(group)) return group;
+    }
+    return "Other";
 }
 
 function renderImportedDeck(deck) {
@@ -379,21 +396,26 @@ function renderImportedDeck(deck) {
     output.innerHTML = "";
 
     const main = deck.main || [];
-    const side = deck.side || [];
+    // Server returns `sideboard`; keep `side` as a fallback for any older
+    // payload shape.
+    const side = deck.sideboard || deck.side || [];
 
-    // Summary stats
+    // Summary stats — server field is `quantity`; tolerate `count` for
+    // backward compat with older payloads.
+    const qty = (e) => e.quantity ?? e.count ?? 0;
+
     const stats = el("div", { class: "stats-grid" });
-    stats.appendChild(statCard("Main deck", main.reduce((s, e) => s + (e.count || 0), 0)));
-    stats.appendChild(statCard("Sideboard", side.reduce((s, e) => s + (e.count || 0), 0)));
+    stats.appendChild(statCard("Main deck", main.reduce((s, e) => s + qty(e), 0)));
+    stats.appendChild(statCard("Sideboard", side.reduce((s, e) => s + qty(e), 0)));
     output.appendChild(stats);
 
-    // Mana curve
+    // Mana curve — exclude lands
     const curve = {};
     for (const entry of main) {
         const card = entry.card;
         if (card && !card.type_line?.includes("Land")) {
             const cmc = Math.floor(card.cmc || 0);
-            curve[cmc] = (curve[cmc] || 0) + (entry.count || 1);
+            curve[cmc] = (curve[cmc] || 0) + qty(entry);
         }
     }
     if (Object.keys(curve).length > 0) {
@@ -411,23 +433,38 @@ function renderImportedDeck(deck) {
         output.appendChild(curveEl);
     }
 
-    // Card grid
-    output.appendChild(el("h3", { style: "margin-top: 20px;" }, "Cards"));
-    const grid = el("div", { class: "card-grid" });
-    for (const entry of main) {
-        const card = entry.card || { name: entry.name };
-        grid.appendChild(cardThumb(card, entry.count));
-    }
-    output.appendChild(grid);
+    // Card grid, grouped by type
+    output.appendChild(el("h3", { style: "margin-top: 20px;" }, "Main deck"));
+    renderGroupedCardGrid(output, main, qty);
 
     if (side.length > 0) {
         output.appendChild(el("h3", { style: "margin-top: 20px;" }, "Sideboard"));
-        const sideGrid = el("div", { class: "card-grid" });
-        for (const entry of side) {
+        renderGroupedCardGrid(output, side, qty);
+    }
+}
+
+function renderGroupedCardGrid(parent, entries, qty) {
+    // Bucket entries by display group
+    const groups = new Map();
+    for (const entry of entries) {
+        const card = entry.card || { name: entry.name };
+        const group = cardTypeGroup(card);
+        if (!groups.has(group)) groups.set(group, []);
+        groups.get(group).push(entry);
+    }
+    // Render in TYPE_GROUPS order, then "Other" last
+    const orderedGroups = [...TYPE_GROUPS, "Other"].filter((g) => groups.has(g));
+    for (const group of orderedGroups) {
+        const groupEntries = groups.get(group);
+        const groupCount = groupEntries.reduce((s, e) => s + qty(e), 0);
+        const heading = el("h4", { class: "type-group-heading" }, `${group}s (${groupCount})`);
+        parent.appendChild(heading);
+        const grid = el("div", { class: "card-grid" });
+        for (const entry of groupEntries) {
             const card = entry.card || { name: entry.name };
-            sideGrid.appendChild(cardThumb(card, entry.count));
+            grid.appendChild(cardThumb(card, qty(entry)));
         }
-        output.appendChild(sideGrid);
+        parent.appendChild(grid);
     }
 }
 
@@ -450,11 +487,18 @@ document.getElementById("import-analyze-btn").addEventListener("click", async ()
     output.appendChild(analysis);
 
     try {
-        const list = (parsedImportDeck.main || []).map((e) => `${e.count} ${e.name}`).join(", ");
+        const qty = (e) => e.quantity ?? e.count ?? 0;
+        const main = parsedImportDeck.main || [];
+        const side = parsedImportDeck.sideboard || parsedImportDeck.side || [];
+        const mainList = main.map((e) => `${qty(e)} ${e.name}`).join("\n");
+        const sideList = side.map((e) => `${qty(e)} ${e.name}`).join("\n");
+        const decklist = sideList
+            ? `Main deck:\n${mainList}\n\nSideboard:\n${sideList}`
+            : `Main deck:\n${mainList}`;
         const res = await api("/analyze-deck", {
             method: "POST",
             body: JSON.stringify({
-                messages: [{ role: "user", content: `Analyze this Legacy deck: ${list}` }],
+                messages: [{ role: "user", content: `Analyze this Legacy deck:\n\n${decklist}` }],
                 temperature: 0.2,
                 max_tokens: 768,
             }),

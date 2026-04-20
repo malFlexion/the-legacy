@@ -145,6 +145,8 @@ Browser ─HTTPS─> Fly machine ─┬─> FastAPI  (serves docs/, /chat, /heal
 
 One container serves the UI (`docs/`), the 14 JSON endpoints, and the model — no cross-service credentials. The entrypoint (`scripts/docker_entrypoint.sh`) starts Ollama, downloads the GGUF from HuggingFace on first boot into `/root/.ollama` (mounted as a Fly Volume so it survives restarts), rebuilds the vector DB, then execs uvicorn. Modelfile and vectordb version markers trigger re-registration / rebuilds when params or schemas change.
 
+> **For the full architecture reference** — deployment topology diagram, build/runtime composition, `/chat` request sequence diagram, training pipeline, and design-decision rationale — see [`notes/architecture.md`](notes/architecture.md).
+
 ### Inference pipeline (what happens on every `/chat` request)
 
 1. **Query card extraction** (`extract_query_cards`) — case-insensitive word-boundary pass against the Legacy card pool (legal / restricted / banned; `not_legal` junk like Un-set cards and oversized promos is excluded so obscure cards named after common English words can't hijack the injection). If a card is matched, the tokens it covers are dropped from the fuzzy pass — so "Is Blazing Shoal playable?" extracts only `Blazing Shoal` instead of `Blazing Shoal + Blazing Bomb + Shoal Kraken`. The token-level fuzzy pass (partial_ratio, case-insensitive, rank 2+ starts-with matches only) then catches short partials like "Akroma" → "Akroma, Angel of Wrath". A whole-query fuzzy fallback runs only when nothing else hit and requires a shared non-stopword token between query and card name.
