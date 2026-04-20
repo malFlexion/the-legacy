@@ -62,21 +62,14 @@ COPY data/card_index.pkl /app/data/card_index.pkl
 COPY vectordb/ /app/vectordb/
 COPY docs/ /app/docs/
 
-# Ollama model artifacts.
-#
-# The GGUF is too big for git (1.3GB vs GitHub's 100MB per-file limit),
-# so we fetch it from HuggingFace Hub during build. HF's CDN is fast and
-# supports resumable LFS — more reliable than GitHub Releases for large
-# model files. Both local (`fly deploy`) and CI (`workflow_dispatch`)
-# deploys use this same URL.
-#
-# Override the repo at build time if needed:
-#   fly deploy --build-arg MODEL_URL=https://huggingface.co/.../resolve/main/the-legacy.gguf
-ARG MODEL_URL=https://huggingface.co/malFlexion/the-legacy-gguf/resolve/main/the-legacy.gguf
-ADD ${MODEL_URL} /app/the-legacy.gguf
+# The 1.3GB GGUF is NOT baked into the image — it would push us past
+# Fly's 8GB uncompressed image limit. Instead the entrypoint script
+# downloads it on first boot and hands it to `ollama create`, which
+# copies the blob into /root/.ollama (mounted as a Fly Volume). Subsequent
+# boots find the cached model and skip the download entirely.
+ENV GGUF_URL=https://huggingface.co/malFlexion/the-legacy-gguf/resolve/main/the-legacy.gguf
 
-# Modelfile lives in the repo — references ./the-legacy.gguf, so we
-# cd to /app before `ollama create` in the entrypoint script.
+# Modelfile references /tmp/the-legacy.gguf at register time (see entrypoint).
 COPY Modelfile /app/Modelfile
 
 # Startup orchestration: boot Ollama, register model (once), exec uvicorn.
