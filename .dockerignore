@@ -20,8 +20,9 @@ tests/
 
 # Build / editor artifacts
 merged-model/
+# GGUF models are fetched by the Dockerfile via `ADD <release URL>`, not
+# copied from the build context — no need to upload the file every deploy.
 *.gguf
-!the-legacy.gguf          # exception: the inference GGUF IS copied into the image
 *.safetensors
 .vscode/
 .idea/
