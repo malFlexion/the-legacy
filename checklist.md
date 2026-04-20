@@ -40,7 +40,7 @@
 - [x] LoRA finetune on training set (1,546 pairs, 5 epochs, loss 1.30)
 - [x] Run eval against finetuned model, compare results (61.6%, +32.7%)
 - [x] Document honest analysis of improvements and remaining weaknesses
-- [ ] Round 2: Fix regressions and weak categories
+- [x] Round 2: Fix regressions and weak categories
   - [x] Add meta_awareness pairs (26 pairs from real meta data)
   - [x] Add board_state pairs (16 pairs with correct rulings incl. Blood Moon, Chalice, Karakas)
   - [x] Add budget_subs pairs (8 pairs with real prices and honest trade-offs)
@@ -65,21 +65,13 @@
   - [x] Merge + GGUF conversion completed (`the-legacy.gguf` at q8_0, ~1.3GB)
   - [x] `ollama create the-legacy -f Modelfile` succeeded; model reachable via `ollama run`
   - [x] Smoke test: 3/5 passed (phrasing-strict failures on 2; model produces sensible domain-aware responses — see round1-analysis for expected Round 2 eval behavior)
-- [ ] Deploy SageMaker endpoint for remote demo
+- [x] SageMaker endpoint path (kept as an alternative `INFERENCE_BACKEND`, not the deployed demo)
   - [x] `scripts/merge_and_convert.py --push-hf-repo ...` pushes merged model to HF
   - [x] `scripts/deploy_sagemaker.py` with --create/--delete/--status/--test actions
-  - [x] Cost warning in --create, ongoing cost estimate in --status
   - [x] Walkthrough at `notes/development/sagemaker-deployment.md`
   - [x] Interactive deployment notebook at `notebooks/deploy_sagemaker.ipynb`
-  - [x] Smoke-test script `scripts/test_deployment.py --sagemaker` (5 prompts with expect/reject patterns)
-  - [ ] External: AWS account, `aws configure`, SageMaker execution role
-  - [ ] Getting AWS access key + secret (needed for Fly secrets and local `$env:AWS_*`):
-    - **If already configured**: `Get-Content $env:USERPROFILE\.aws\credentials` — both values live under `[default]` as `aws_access_key_id` and `aws_secret_access_key`
-    - **If new user / fresh pair**: AWS Console → IAM → Users → your user → Security credentials → Create access key → "Application running outside AWS". Secret is shown **only once** — copy it immediately. Attach `AmazonSageMakerFullAccess` policy to the user if missing.
-    - **Shortcut**: if `aws sts get-caller-identity` already works, boto3 picks up creds from `~/.aws/credentials` automatically — no `$env:AWS_*` needed locally. Only Fly.io (`fly secrets set`) needs them explicitly since the container has no `~/.aws`.
-  - [x] Run merge + push to HF, then `scripts/deploy_sagemaker.py --create`
-  - [x] Verify with `scripts/deploy_sagemaker.py --test`
-  - [x] `scripts/deploy_sagemaker.py --delete` when done (stops billing!)
+  - [x] Smoke-test script `scripts/test_deployment.py --sagemaker`
+  - [x] End-to-end validated (create → test → delete) — AWS credentials path is a working alternative if the all-in-one Fly machine ever needs offloading
 - [x] Build FastAPI layer (`src/server.py`)
   - [x] `POST /chat` — main conversation, streaming + non-streaming
   - [x] `POST /build-deck` — generate 75-card decklist
@@ -93,10 +85,11 @@
   - [x] `GET /health` — health check (model, card index, vector DB status)
 - [x] Integrate RAG retrieval into chat pipeline
 - [x] Integrate deterministic Scryfall card resolution
-  - [x] Parse card names from model output (exact match via card_index.resolve)
+  - [x] Parse card names from model output via `[[Name]]` markup first (preserves text order), word-boundary fallback
   - [x] Resolve to Scryfall data (oracle text, mana cost, type, legality, image)
   - [x] Attach as structured metadata to response
   - [x] Flag invalid/non-Legacy-legal cards (legacy_legal field on each card)
+  - [x] Earliest-printing preference in card_index (English only, sort by released_at ascending so iconic art/frames win dedup)
 - [x] Build deck import parser (`src/deck_parser.py` + `POST /import-deck`)
   - [x] Plain text decklist (one-per-line, comma-separated, markdown bullets)
   - [x] Moxfield URL (via API: `api2.moxfield.com/v3/decks/all/{id}`)
@@ -108,10 +101,22 @@
   - [x] Price data from Scryfall (via card_index, supports USD + EUR fallback)
 - [x] Implement streaming on /chat (SSE via Ollama backend)
 - [x] Implement sampling presets (per-endpoint temperature tuning)
+  - [x] Global Modelfile default temp 0.1 — anti-hallucination anchor for a 1B model; trades creative variation for sticking to injected ground-truth card data
   - [x] Precise (temp 0.2) — /build-deck, /analyze-deck
-  - [x] Balanced (temp 0.3-0.4) — /chat, /budget-sub, /evaluate-card, /evaluate-board
-  - [x] Creative (temp 0.5) — /goldfish
+  - [x] Balanced (temp 0.3-0.4) — /budget-sub, /evaluate-card, /evaluate-board
+  - [x] Creative (temp 0.5) — /goldfish commentary
   - [x] Manual override via `temperature` field on all requests
+  - [x] `num_predict 256`, `num_ctx 2048` tuned for card-injection + RAG block + recent turns
+  - [x] Sampling method documented in README with rationale per endpoint
+- [x] Ground-truth card injection pipeline (anti-hallucination for named cards)
+  - [x] `extract_query_cards` — word-boundary + token-level fuzzy match (partial_ratio, rank-ordered so "Akroma" resolves "Akroma, Angel of Wrath" over "Akroma's Blessing")
+  - [x] `format_card_context` — injects resolved card sheets into the system prompt with "use verbatim" instructions
+  - [x] RAG filter: when card injection fired, retrieval excludes `source: scryfall-card` chunks (strategy/rules only — avoids redundant context and crowding)
+  - [x] `n_results=10` retrieval default so strategy chunks aren't crowded out
+- [x] Post-processing + card resolution
+  - [x] `auto_bracket_cards` wraps mentioned card names in `[[Name]]` markup (text-order preserved, placeholder-stashed to protect existing brackets)
+  - [x] `resolve_cards` parses `[[Name]]` first (text order), falls back to word-boundary match with consumed-region blanking so short names don't hit inside long ones
+  - [x] Legacy-only + no-basic-lands filter unless the response is specifically discussing bans
 
 ## Phase 4: Goldfish Engine
 
@@ -145,14 +150,18 @@
 - [x] Two new endpoints: `POST /goldfish/simulate` (single game log), `POST /goldfish/simulate-many` (aggregate)
 - [x] 21 tests in `tests/test_turn_engine.py` (see Testing section below for the full suite)
 
-## Phase 5: Frontend (static files served by FastAPI on Fly.io → SageMaker)
+## Phase 5: Frontend (static files served by FastAPI on Fly.io, all-in-one with Ollama)
 
-Architecture: single Fly.io deployment serves both the JSON API and the static frontend (`docs/`). FastAPI mounts `docs/` at `/` via `StaticFiles(html=True)` after all API routes, so `GET /` returns the UI and `POST /chat` etc. hit the API. One URL, no CORS. No Gradio — vanilla JS, no build step.
+Architecture: single Fly.io deployment serves the UI, JSON API, and the LLM. The Docker image ships FastAPI + Ollama + ChromaDB; the entrypoint boots Ollama, downloads the GGUF from HuggingFace on first start (persisted to a Fly Volume), rebuilds the vector DB, then execs uvicorn. FastAPI mounts `docs/` at `/` via `StaticFiles(html=True)` after all API routes. One URL, one process group, no CORS. No Gradio — vanilla JS, no build step. SageMaker is still supported as an `INFERENCE_BACKEND` option but the deployed demo is all-in-one Fly + Ollama (no AWS).
 
 - [x] Chat tab
   - [x] Conversation with deck-building bot (POST /chat)
-  - [x] Card images rendered inline from Scryfall metadata in response
+  - [x] Card images rendered in a left-side panel (cards accumulate across the session)
+  - [x] Inline `[[Name]]` refs in responses render as clickable Scryfall links
   - [x] Chat history maintained in-session
+  - [x] Per-message RAG badge shows whether retrieval + card injection fired
+  - [x] Ground-truth card injection: query cards resolved via token-level fuzzy match are injected into the system prompt before the LLM sees the query
+  - [x] RAG filters out card chunks when card injection fired (strategy/rules context only — plays to the generic embedding's strengths)
 - [x] Import & Analyze tab (supersedes separate Decklist tab)
   - [x] Paste decklist text or Moxfield/MTGGoldfish URL (POST /import-deck)
   - [x] Visual card grid with counts, Scryfall hover links
@@ -172,16 +181,23 @@ Architecture: single Fly.io deployment serves both the JSON API and the static f
 - [x] API health check in header (calls /health on load)
 
 Deployment infrastructure:
-- [x] `Dockerfile` + `.dockerignore` for Fly.io build (copies `src/`, `data/card_index.pkl`, `docs/`, `vectordb/`)
-- [x] Docker warm-up: pre-downloads `all-MiniLM-L6-v2` during build so cold starts don't re-fetch it (~80MB)
-- [x] `fly.toml` with scale-to-zero, us-east-1 region, 1GB RAM (512MB OOM-killed once chromadb + embeddings loaded)
-- [x] Fly `[env] PORT` matches `[http_service] internal_port` (both 8000) — earlier mismatch caused "refused connection" errors
+- [x] `Dockerfile` for Fly.io build — installs Ollama, FastAPI stack, chromadb, sentence-transformers; pre-downloads `all-MiniLM-L6-v2` so cold starts don't re-fetch it
+- [x] `scripts/docker_entrypoint.sh` orchestrates Ollama serve → GGUF download (if not cached) → `ollama create` → vectordb rebuild → uvicorn
+- [x] GGUF hosted on HuggingFace (`malFlexion/the-legacy-gguf`), downloaded at runtime into a Fly Volume so it survives restarts but doesn't bloat the image past Fly's 8 GB uncompressed limit
+- [x] Modelfile version marker (`v3-bracket-refs`) triggers `ollama rm` + re-register when params change, so volume-cached models don't drift
+- [x] Vector DB version marker (`v3-card-chunks-force`) triggers rebuild when schema or source docs change — avoids `KeyError('_type')` from chromadb version mismatch on the committed index
+- [x] Post-build sanity check: entrypoint asserts the rebuilt vectordb has >5000 chunks before writing the version marker (catches the v2 case where card chunks silently failed to embed and the volume was left stuck at 719 rules-only chunks)
+- [x] `.dockerignore` uses `scripts/*` + explicit `!scripts/docker_entrypoint.sh` so the entrypoint ships without pulling in dev scripts
+- [x] `fly.toml` with `performance-8x` (16 GB RAM minimum), `auto_stop_machines = off`, single persistent machine + Fly Volume for `/root/.ollama`
+- [x] Ollama env in `fly.toml`: `OLLAMA_NUM_PARALLEL=1`, `OLLAMA_MAX_LOADED_MODELS=1`, `OLLAMA_KEEP_ALIVE=24h` — tuned for single-tenant demo
+- [x] Fly `[env] PORT` matches `[http_service] internal_port` (both 8000)
 - [x] Static mount at `/` in `src/server.py` via `StaticFiles(html=True)` — same process serves UI + API
 - [x] `config.js` set to empty `API_BASE` for same-origin fetches (no CORS needed)
 - [x] Walkthrough at `notes/development/frontend-deployment.md`
-- [x] `vectordb/` committed to repo (13MB) so CD builds have RAG data available
-- [x] `.github/workflows/fly-deploy.yml` — auto-deploys on push to master, triggers scoped to code paths that affect the image (skips doc-only commits)
+- [x] `.github/workflows/fly-deploy.yml` — manual-only (`workflow_dispatch`) right now; push-triggered auto-deploy commented out at the top of the file
 - [ ] Generate Fly deploy token (`fly tokens create deploy`) and add as `FLY_API_TOKEN` GitHub secret to activate CD
+- [x] `/health` reports boot time, LLM reachability, card-index size, vector-DB chunk count
+- [x] Per-request `log_requests` middleware logs method, path, status, duration; RAG retrieval logs sources per request
 
 ## Testing
 
@@ -203,19 +219,21 @@ Deployment infrastructure:
 ## Phase 6: Documentation & Demo
 
 - [ ] Technical documentation
-  - [ ] Architecture overview with diagram
+  - [ ] Architecture overview with diagram (all-in-one Fly + Ollama, RAG, card injection)
   - [x] Training data sources and preparation process (`notes/development/progress.md`, `round1-analysis.md`)
   - [x] LoRA training process and hyperparameters (documented in `finetune_legacy.ipynb`)
   - [x] API reference (in README: 14 endpoints, LLM-backed vs deterministic)
   - [x] Deployment instructions — reproducible
     - [x] Ollama walkthrough (`notes/development/ollama-deployment.md`)
     - [x] SageMaker walkthrough (`notes/development/sagemaker-deployment.md`)
-  - [x] Sampling method explanation (temperature presets documented inline in `src/server.py`)
+    - [x] Fly.io all-in-one walkthrough (`notes/development/frontend-deployment.md`)
+  - [x] Sampling method explanation in README (temperature 0.1 + per-endpoint presets with rationale)
   - [x] Evaluation results and analysis (`round1-analysis.md` covers Round 1; Round 2 numbers in README + `eval_report.json`)
+  - [x] README refresh: all-in-one Fly + Ollama architecture + inference pipeline walkthrough; SageMaker demoted to alternative path
 - [ ] Demo presentation
   - [ ] Live walkthrough: play style → deck → view → goldfish
   - [ ] Show meta awareness and rules knowledge
   - [ ] Show deck import and analysis
-  - [ ] Explain architectural decisions and trade-offs
+  - [ ] Explain architectural decisions and trade-offs (card injection path, RAG split, Modelfile/vectordb version markers, GGUF runtime download)
   - [ ] Pre-record backup video in case of live issues
-- [ ] Final eval run with polished model
+- [ ] Final eval run with polished model (end-to-end with RAG + card injection; raw-model number is 61.6%)

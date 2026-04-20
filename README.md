@@ -133,15 +133,43 @@ Three deployment paths, all sharing the same merge step (`scripts/merge_and_conv
 | Path | What | Cost | Use when |
 |---|---|---|---|
 | **Ollama** (local GGUF) | Model runs on your laptop | Free | Dev, local demo |
-| **SageMaker** (TGI endpoint) | Model runs on A10G GPU in AWS | ~$1.41/hr | The public demo backend |
-| **Fly.io** (Docker FastAPI) | UI + API proxy, calls SageMaker | ~free (scale-to-zero) | Demo UI for anyone with a browser |
+| **Fly.io all-in-one** | Fly machine runs FastAPI **and** Ollama in the same container | ~$0.50/hr while running (always-on, `performance-8x`/16 GB) | **The public demo backend** |
+| **SageMaker** (TGI endpoint) | Model runs on A10G GPU in AWS | ~$1.41/hr | Alternative remote backend; set `INFERENCE_BACKEND=sagemaker` |
 
-**Architecture for the public demo:**
+**Architecture for the public demo (all-in-one Fly + Ollama):**
 ```
-Browser ─HTTPS─> Fly.io (FastAPI + static docs/) ─IAM─> SageMaker endpoint
+Browser ─HTTPS─> Fly machine ─┬─> FastAPI  (serves docs/, /chat, /health, etc.)
+                              ├─> Ollama   (localhost:11434, GGUF on a Fly Volume)
+                              └─> ChromaDB (RAG index rebuilt in-container)
 ```
 
-The Fly container serves both the static UI (`docs/`) and the JSON API (14 endpoints) from the same origin, holding AWS credentials so the browser doesn't need them.
+One container serves the UI (`docs/`), the 14 JSON endpoints, and the model — no cross-service credentials. The entrypoint (`scripts/docker_entrypoint.sh`) starts Ollama, downloads the GGUF from HuggingFace on first boot into `/root/.ollama` (mounted as a Fly Volume so it survives restarts), rebuilds the vector DB, then execs uvicorn. Modelfile and vectordb version markers trigger re-registration / rebuilds when params or schemas change.
+
+### Inference pipeline (what happens on every `/chat` request)
+
+1. **Query card extraction** (`extract_query_cards`) — exact word-boundary names from `card_index.resolve`, then a token-level fuzzy pass where each substantive query word is fuzzy-matched against all ~36k card names (rank 2+ starts-with matches only, Legacy-legal preferred). This catches short partials like "Akroma" → "Akroma, Angel of Wrath". A whole-query fuzzy fallback runs only when nothing else hit, so typos ("Emrakull") still resolve without polluting clean queries.
+2. **Card context injection** (`format_card_context`) — resolved card data (name, mana cost, type, P/T, oracle text, keywords) is written into the system prompt with instructions to use the data verbatim. Addresses the generic-embedding-doesn't-know-MTG problem by giving the LLM ground truth before it generates.
+3. **RAG retrieval** (`retrieve_context`) — ChromaDB query over ~31k chunks (strategy guides + rules + card data). When card injection fired, the RAG call passes `where={"source": {"$ne": "scryfall-card"}}` so retrieval returns *only* strategy/rules chunks — RAG's job becomes context, card data already has ground truth. `n_results=10` keeps strategy chunks from being crowded out.
+4. **Generation** — Ollama streams tokens back; temperature 0.1, `num_predict 256`, `num_ctx 2048` (see Sampling section below).
+5. **Card resolution + bracket wrapping** — response is scanned for card names; `auto_bracket_cards` wraps them in `[[Name]]` markup. Frontend renders those as clickable Scryfall links and populates the left-panel card grid in the order they appear in the response.
+6. **Filtering** — basic lands and non-Legacy-legal cards are hidden from the panel unless the response is specifically discussing bans.
+
+### Sampling method
+
+Rubric asks for an "appropriate sampling method"; this project uses deterministic-leaning temperature sampling tuned per endpoint. The 1B model hallucinates card stats at higher temperatures, so we trade some creative variation for factual stability.
+
+| Endpoint | Temperature | Rationale |
+|---|---|---|
+| `/chat` (Modelfile default) | **0.1** | Global anti-hallucination pass — low temperature keeps the model close to the ground-truth card data injected into the system prompt |
+| `/build-deck`, `/analyze-deck` | 0.2 ("precise") | Deck construction needs consistent 60+15 structure and Legacy-legal choices |
+| `/budget-sub`, `/evaluate-card`, `/evaluate-board` | 0.3–0.4 ("balanced") | Explanatory output where a bit more phrasing variation reads naturally |
+| `/goldfish` | 0.5 ("creative") | Keep-or-mull commentary benefits from variety; stats come from the deterministic engine anyway |
+
+Other Modelfile params: `num_predict 256` (chat responses run short to stay on-topic), `num_ctx 2048` (fits the system prompt + card-injection block + RAG block + recent turns). Callers can override `temperature` on any request. Sampling is pure top-k/top-p (Ollama defaults) — no beam search, no constrained decoding. Card validity is enforced *after* generation via the deterministic `card_index.resolve` pass, not by restricting the decoder.
+
+### Comparison against the SageMaker path
+
+The SageMaker path (legacy, kept for parity) runs the same merged LoRA model via TGI on an A10G. It supports identical endpoints via a thin `SAGEMAKER_ENDPOINT`-routed branch in `generate()`. For the public demo we switched away from SageMaker because it doubled operational cost without a quality win at 1B size — the Fly CPU path hits acceptable latency with `performance-8x`, and keeping AWS credentials out of the loop removed a whole class of deploy breakage.
 
 Walkthroughs:
 - **Ollama:** [`notes/development/ollama-checklist.md`](notes/development/ollama-checklist.md) (condensed) or [`ollama-deployment.md`](notes/development/ollama-deployment.md)
@@ -159,26 +187,26 @@ python scripts/test_deployment.py --ollama      # or --sagemaker or --all
 
 Before `fly deploy` (or hitting Run workflow) will succeed, you need:
 
-**Fly.io** — `flyctl` installed and authenticated, secrets set:
+**Fly.io (public demo, all-in-one)** — `flyctl` installed and authenticated, persistent volume attached:
 ```
 flyctl version                                    # install: https://fly.io/docs/hands-on/install-flyctl/
 fly auth whoami                                   # confirms you're logged in
-fly status -a the-legacy-api                      # confirms the app exists
-fly secrets list -a the-legacy-api                # confirms AWS creds + config are set
+fly status -a the-legacy-api                      # confirms the app exists, machine running
+fly volumes list -a the-legacy-api                # should show `ollama_data` mounted at /root/.ollama
 ```
-`fly secrets list` should show `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `AWS_REGION`, `SAGEMAKER_ENDPOINT`, and `INFERENCE_BACKEND`. If any are missing, set them with `fly secrets set NAME=value -a the-legacy-api`.
+No cloud secrets needed for the all-in-one path — Ollama runs inside the container, GGUF downloads at boot from HuggingFace. Deploy with:
+```
+fly deploy --strategy immediate -a the-legacy-api
+```
+`--strategy immediate` replaces the running machine in place (Fly's default blue/green needs two volumes, which costs double). First boot pulls the GGUF (~1.3 GB) from HuggingFace into the volume and rebuilds the vector DB; subsequent boots are fast because both are cached.
 
-**AWS / SageMaker** — credentials valid and endpoint InService:
+**SageMaker (alternative remote backend)** — only if running `INFERENCE_BACKEND=sagemaker`:
 ```
 aws sts get-caller-identity                       # confirms CLI is configured
-aws sagemaker describe-endpoint \
-    --endpoint-name the-legacy-llm                # confirms endpoint exists and is InService
-```
-The `EndpointStatus` field should be `InService`. If it's `Creating`, wait. If it's missing or `Failed`, recreate it:
-```
+aws sagemaker describe-endpoint --endpoint-name the-legacy-llm
 python scripts/deploy_sagemaker.py --create --role arn:aws:iam::ACCOUNT:role/ROLE
 ```
-The IAM user whose access keys are in Fly secrets needs `sagemaker:InvokeEndpoint` AND `sagemaker:DescribeEndpoint` (both covered by `AmazonSageMakerFullAccess`). The `/health` endpoint uses DescribeEndpoint to confirm LLM reachability on page load.
+Set `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `AWS_REGION`, `SAGEMAKER_ENDPOINT`, and `INFERENCE_BACKEND=sagemaker` as Fly secrets if you want Fly to proxy a SageMaker backend instead of running Ollama in-container. The IAM user needs `sagemaker:InvokeEndpoint` and `sagemaker:DescribeEndpoint`.
 
 **GitHub Actions (only if using push-triggered CD)** — the `FLY_API_TOKEN` secret:
 ```
@@ -190,7 +218,7 @@ Paste into repo Settings → Secrets and variables → Actions → new secret na
 ```
 curl https://the-legacy-api.fly.dev/health
 ```
-Expected `"status": "ok"` and `"llm": {"reachable": true, "detail": "InService"}`. If `reachable: false`, the detail field tells you what's wrong (bad credentials, endpoint OutOfService, wrong region, etc.).
+Expected `"status": "ok"`, `"llm": {"reachable": true}`, and `vector_chunks` around 31,000. If `reachable: false`, `detail` tells you what's wrong (Ollama still booting, model not yet registered, etc.).
 
 Note on GGUF quantization: `convert_hf_to_gguf.py` emits f16/bf16/q8_0 directly. Smaller quantizations (q4_k_m, q5_k_m) require compiling llama.cpp and running its `llama-quantize` binary on the f16 output. At 1B size, q8_0 is near-lossless and the size difference doesn't matter.
 
@@ -214,14 +242,14 @@ LoRA finetune of Llama 3.2 1B on 1,546 training pairs (5 epochs, rank 16, loss 1
 
 ## Technology Stack
 
-- **Model**: Llama 3.2 1B + LoRA adapter finetuned on 1,546 MTG domain pairs (SageMaker, Tesla T4)
-- **RAG**: Vector DB (Chroma) over comprehensive rules, meta data, and strategy content
-- **Inference**: Ollama (local GGUF) or SageMaker endpoint (TGI on ml.g5.xlarge)
-- **API**: FastAPI server with RAG retrieval, streaming, and deterministic card resolution
-- **Frontend**: Gradio with chat, decklist display, and goldfish simulator tabs (planned)
-- **Card Data**: Scryfall bulk data indexed locally (36,670 cards with fuzzy matching)
+- **Model**: Llama 3.2 1B + LoRA adapter (rank 16, 5 epochs, 1,546 training pairs). LoRA trained on SageMaker (Tesla T4), merged and converted to GGUF q8_0 (~1.3 GB) for Ollama serving
+- **RAG**: ChromaDB with `sentence-transformers/all-MiniLM-L6-v2` embeddings over ~31k chunks: comprehensive rules, archetype guides, meta analysis, and one chunk per Legacy-legal card. Card chunks are metadata-filtered out of retrieval when the query names specific cards (ground truth already injected)
+- **Inference**: Ollama in-container on Fly.io for the public demo (`performance-8x`, 16 GB, persistent machine). Local Ollama and SageMaker TGI remain supported via `INFERENCE_BACKEND`
+- **API**: FastAPI — 14 endpoints, SSE streaming on `/chat`, per-request logging, `/health` reports model reachability + card-index size + vector-DB chunk count
+- **Frontend**: Vanilla JS (no build step), 4 tabs (Chat / Import & Analyze / Goldfish / Budget), served by FastAPI from the same origin as the API. Inline `[[Name]]` card refs render as clickable Scryfall links; a left-side panel accumulates referenced cards across the session
+- **Card Data**: Scryfall bulk data indexed locally (36,670 cards, 30,538 Legacy-legal, earliest-printing preferred). Fuzzy + word-boundary matching via rapidfuzz
 - **Deterministic engines**: Budget substitution and goldfish sampling — pure Python modules that provide exact answers instead of relying on the LLM
-- **Evaluation**: Custom 22-case eval dataset across 9 categories
+- **Evaluation**: Custom 22-case eval dataset across 9 categories (baseline 28.9% → finetuned 61.6%, +32.7%)
 
 ## API Endpoints
 

@@ -41,7 +41,7 @@ GGUF_TMP="/tmp/the-legacy.gguf"
 # Bump this when Modelfile params change so Ollama re-registers with the
 # new temperature / system prompt / num_predict. Otherwise the volume-
 # cached model keeps its old params forever.
-MODELFILE_VERSION="v3-bracket-refs"
+MODELFILE_VERSION="v4-ctx8k"
 VERSION_MARKER="/root/.ollama/.modelfile-version"
 CACHED_VERSION="$(cat "${VERSION_MARKER}" 2>/dev/null || echo "none")"
 
@@ -79,7 +79,10 @@ export VECTORDB_DIR="${VECTORDB_PATH}"
 # Bump this when the vectordb schema or source docs change so the cached
 # DB on the Fly Volume gets rebuilt. Otherwise the old index persists
 # forever across deploys.
-VECTORDB_VERSION="v2-card-chunks"
+# v3-card-chunks-force: a v2 build landed on volumes with only 719 chunks
+# (card chunks silently empty). Bump + the sanity check below guarantees
+# we never write the marker again unless card chunks actually embedded.
+VECTORDB_VERSION="v3-card-chunks-force"
 VECTORDB_VERSION_MARKER="/root/.ollama/.vectordb-version"
 CACHED_VECTORDB_VERSION="$(cat "${VECTORDB_VERSION_MARKER}" 2>/dev/null || echo "none")"
 
@@ -93,10 +96,21 @@ else
     echo "Building RAG vector DB from source docs + card chunks (~2-3 min first time)..."
     # build_vectordb.py reads DB_DIR from its module-level constant; override
     # via env and a quick Python invocation rather than editing the file.
+    # Assert the final chunk count is > 5000 — strategy+rules alone is ~700,
+    # card chunks should push us to ~31k. If the build returns fewer, the
+    # card_index.pkl didn't load and we should NOT write the version marker
+    # (otherwise the bad DB gets cached forever on the volume).
     python -c "
-import os, src.build_vectordb as bv
+import sys, chromadb
+import src.build_vectordb as bv
 bv.DB_DIR = '${VECTORDB_PATH}'
 bv.build_database()
+client = chromadb.PersistentClient(path='${VECTORDB_PATH}')
+col = client.get_collection('legacy_knowledge')
+n = col.count()
+print(f'Built vectordb has {n} chunks')
+if n < 5000:
+    sys.exit(f'FATAL: only {n} chunks — card chunks failed to embed. Refusing to write version marker.')
 "
     echo "${VECTORDB_VERSION}" > "${VECTORDB_VERSION_MARKER}"
     echo "Vector DB built at ${VECTORDB_PATH}."

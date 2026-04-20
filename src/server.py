@@ -494,29 +494,80 @@ def extract_query_cards(query: str, max_cards: int = 3) -> list[dict]:
     result: list[dict] = []
     seen: set[str] = set()
 
+    # In-Legacy-card-pool = legal OR restricted OR banned (but NOT
+    # `not_legal`, which excludes Un-set cards, oversized promos, and
+    # other junk that happens to share names with English words like
+    # "Lands" or "Spells"). Banned cards are kept so "Is Mox Pearl
+    # legal?" and "Why is Psychic Frog banned?" still find real data.
+    def _in_legacy_pool(card: dict) -> bool:
+        return card.get("legalities", {}).get("legacy") in {
+            "legal", "restricted", "banned",
+        }
+
     # Exact word-boundary matches first (full names mentioned in the query).
-    for card in card_index.resolve(query, legacy_only=False):
-        if card["name"] not in seen:
-            result.append(card)
-            seen.add(card["name"])
+    # Case-insensitive: users type "mox pearl" as often as "Mox Pearl", and
+    # `card_index.resolve` is case-sensitive. Iterate longest names first
+    # and consume the match so shorter names don't hit inside captured
+    # regions — mirrors `card_index.resolve`'s longest-first logic.
+    import re as _re
+    working = query
+    pool_names = [n for n in card_index.names if _in_legacy_pool(card_index.cards[n])]
+    for name in sorted(pool_names, key=len, reverse=True):
+        if name in seen:
+            continue
+        pattern = r"(?<!\w)" + _re.escape(name) + r"(?!\w)"
+        if _re.search(pattern, working, _re.IGNORECASE):
+            result.append(card_index.cards[name])
+            seen.add(name)
+            working = _re.sub(pattern, " " * len(name), working, flags=_re.IGNORECASE)
             if len(result) >= max_cards:
                 return result
 
     # Token-level fuzzy match: for each substantive token in the query,
     # search the card index. Catches partial names ("Akroma" → "Akroma,
     # Angel of Wrath") that WRatio on the whole sentence misses.
-    import re as _re
     _stop = {
+        # Grammar / question words
         "is", "a", "an", "the", "in", "on", "of", "to", "for", "and",
         "or", "but", "any", "all", "some", "what", "how", "why", "who",
         "when", "where", "which", "that", "this", "these", "those",
         "do", "does", "did", "can", "will", "would", "should", "could",
         "be", "are", "was", "were", "been", "being", "have", "has",
-        "had", "playable", "good", "bad", "deck", "decks", "card",
-        "cards", "play", "against", "legacy", "format", "tier", "tiered",
-        "meta", "with", "without", "from",
+        "had", "about", "vs", "versus", "between", "than", "then",
+        "tell", "explain", "compare", "describe", "show", "make", "use",
+        "work", "works", "best", "worst", "better", "worse", "more",
+        "less", "most", "least", "many", "much", "other", "another",
+        # Common English contractions the regex emits as a single token
+        "what's", "it's", "that's", "there's", "here's", "don't",
+        "doesn't", "didn't", "won't", "can't", "couldn't", "wouldn't",
+        "shouldn't", "isn't", "aren't", "wasn't", "weren't", "haven't",
+        "hasn't", "hadn't",
+        # MTG meta vocabulary
+        "playable", "good", "bad", "deck", "decks", "card", "cards",
+        "play", "plays", "against", "legacy", "format", "tier", "tiered",
+        "meta", "with", "without", "from", "sideboard", "mainboard",
+        "matchup", "matchups", "match", "matches", "staple", "staples",
+        "combo", "archetype", "archetypes", "pieces", "piece",
+        # Words that ALSO prefix many unrelated card names. A user who
+        # typed "Death Shadow" as a real card reference will hit the
+        # whole-name word-boundary match in `resolve()`; the token-level
+        # pass only needs to catch partials like "Akroma", not common
+        # English words that coincidentally share a prefix with a card.
+        "death", "taxes", "life", "power", "time", "shadow", "light",
+        "storm", "lands", "reanimator", "tempo", "painter", "spell",
+        "spells", "control", "aggro", "midrange",
     }
     tokens = [t for t in _re.findall(r"[A-Za-z][A-Za-z'-]{2,}", query) if t.lower() not in _stop]
+
+    # Skip tokens that are already covered by a card we matched by exact
+    # word-boundary resolve. Prevents "Is Blazing Shoal playable?" from
+    # pulling "Blazing Bomb" + "Shoal Kraken" on top of the real card.
+    if result:
+        covered = []
+        for c in result:
+            covered.extend(_re.findall(r"[A-Za-z][A-Za-z'-]{2,}", c["name"]))
+        covered_lower = {t.lower() for t in covered}
+        tokens = [t for t in tokens if t.lower() not in covered_lower]
 
     # For each token, find all card names that contain it at a word
     # boundary, then rank so the "iconic" card wins:
@@ -544,13 +595,14 @@ def extract_query_cards(query: str, max_cards: int = 3) -> list[dict]:
             tok,
             card_index.names,
             scorer=_fuzz.partial_ratio,
+            processor=str.lower,
             limit=25,
             score_cutoff=90,
         )
         candidates: list[tuple[int, int, dict]] = []
         for name, _score, _idx in matches:
             card = card_index.get(name)
-            if not card or card["name"] in seen:
+            if not card or card["name"] in seen or not _in_legacy_pool(card):
                 continue
             # Require whole-word match so partial_ratio doesn't pair
             # "Akroma" with "Akron Relocation Program".
@@ -586,17 +638,27 @@ def extract_query_cards(query: str, max_cards: int = 3) -> list[dict]:
             break
 
     # Whole-query fuzzy fallback for typos ("Emrakull" → "Emrakul, the
-    # Aeons Torn") — only run when nothing else hit, because a loose
-    # threshold on the whole sentence matches random cards that share
-    # any keyword and would crowd out cleaner results.
-    if not result:
-        for name, _score in card_index.search(query, limit=max_cards, legacy_only=False, threshold=85):
+    # Aeons Torn") — only run when nothing else hit AND there was at
+    # least one substantive token to anchor the match. A query like
+    # "Reanimator vs Painter matchup?" has every token in the stoplist,
+    # meaning the user is asking about the archetype, not a specific
+    # card — we should return nothing rather than pulling random cards
+    # that happen to share a keyword. Also verify the matched card has
+    # at least one non-stopword token in common with the query so
+    # "Is Death Shadow good?" doesn't match "Certain Death".
+    if not result and tokens:
+        query_token_set = {t.lower() for t in tokens}
+        for name, _score in card_index.search(query, limit=max_cards * 2, legacy_only=False, threshold=85):
             card = card_index.get(name)
-            if card and card["name"] not in seen:
-                result.append(card)
-                seen.add(card["name"])
-                if len(result) >= max_cards:
-                    break
+            if not card or card["name"] in seen or not _in_legacy_pool(card):
+                continue
+            name_tokens = {t.lower() for t in _re.findall(r"[A-Za-z][A-Za-z'-]{2,}", card["name"])}
+            if not (name_tokens & query_token_set):
+                continue
+            result.append(card)
+            seen.add(card["name"])
+            if len(result) >= max_cards:
+                break
 
     return result
 
