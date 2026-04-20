@@ -35,6 +35,8 @@ body {
 
 main {
     flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -128,10 +130,13 @@ main {
 
 .tab-panel {
     display: none;
+    flex: 1;
+    flex-direction: column;
+    min-height: 0;   /* allow child flex items to shrink properly */
 }
 
 .tab-panel.active {
-    display: block;
+    display: flex;
 }
 
 
@@ -208,14 +213,14 @@ button:disabled {
 
 /* Chat */
 .chat-messages {
+    flex: 1;                   /* fill available height in the flex column */
     background: var(--panel);
     border: 1px solid var(--border);
     border-radius: 8px;
     padding: 16px;
-    min-height: 400px;
-    max-height: 600px;
+    min-height: 300px;         /* floor for very short viewports */
     overflow-y: auto;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
 }
 
 .chat-message {
