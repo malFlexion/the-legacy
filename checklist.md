@@ -141,30 +141,39 @@
 - [x] Two new endpoints: `POST /goldfish/simulate` (single game log), `POST /goldfish/simulate-many` (aggregate)
 - [x] 21 tests in `tests/test_turn_engine.py` (154 total now passing)
 
-## Phase 5: Frontend (Gradio)
+## Phase 5: Frontend (static, GitHub Pages → Fly.io → SageMaker)
 
-- [ ] Chat tab
-  - [ ] Streaming conversation with deck-building bot
-  - [ ] Card images rendered inline from Scryfall metadata
-  - [ ] Chat history maintained
-- [ ] Decklist tab
-  - [ ] Visual decklist with card images (grid or list)
-  - [ ] Mana curve chart
-  - [ ] Color distribution
-  - [ ] Card hover/click shows full Scryfall image + oracle text
-- [ ] Deck import tab
-  - [ ] Paste decklist text or URL
-  - [ ] Archetype classification + full analysis view
-  - [ ] Mana base audit, sideboard review, suggested improvements
-- [ ] Goldfish tab
-  - [ ] Hand display with card images
-  - [ ] Mulligan button
-  - [ ] Stats display
-  - [ ] LLM commentary
-- [ ] Budget mode toggle
-  - [ ] Switch between full/mid/budget versions of any deck
-  - [ ] Show trade-off explanations
-- [ ] Connect all tabs to API
+Architecture: static HTML/CSS/JS in `docs/` served by GitHub Pages, calling a FastAPI backend on Fly.io that proxies to the SageMaker endpoint. No Gradio — vanilla JS, no build step.
+
+- [x] Chat tab
+  - [x] Conversation with deck-building bot (POST /chat)
+  - [x] Card images rendered inline from Scryfall metadata in response
+  - [x] Chat history maintained in-session
+- [x] Import & Analyze tab (supersedes separate Decklist tab)
+  - [x] Paste decklist text or Moxfield/MTGGoldfish URL (POST /import-deck)
+  - [x] Visual card grid with counts, Scryfall hover links
+  - [x] Mana curve bar chart
+  - [x] Archetype classification + full analysis via POST /analyze-deck
+  - [x] Card click/hover opens full Scryfall page
+- [x] Goldfish tab
+  - [x] Opening hand display with card images (POST /goldfish/draw)
+  - [x] London Mulligan button (keep_count -= 1)
+  - [x] Single-game simulation (POST /goldfish/simulate) with turn log
+  - [x] 1000-game aggregate stats (POST /goldfish/simulate-many)
+- [x] Budget Tiers tab
+  - [x] Full/Mid/Budget three-column view (POST /budget-tiers)
+  - [x] Per-tier price + applied substitutions list + irreplaceables
+  - [x] Total savings shown
+- [x] Connect all tabs to API (centralized `api()` helper in app.js)
+- [x] API health check in header (calls /health on load)
+
+Deployment infrastructure:
+- [x] `Dockerfile` + `.dockerignore` for Fly.io build
+- [x] `fly.toml` with scale-to-zero and us-east-1 region (co-located with SageMaker)
+- [x] CORS middleware already open in `src/server.py` (allow_origins=["*"])
+- [x] Walkthrough at `notes/development/frontend-deployment.md`
+- [ ] Run `fly launch` + `fly secrets set` + `fly deploy` (external)
+- [ ] Enable GitHub Pages from repo Settings → Pages, source `/docs`
 
 ## Phase 6: Documentation & Demo
 

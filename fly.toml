@@ -1,0 +1,27 @@
+# Fly.io app config for The Legacy's FastAPI backend.
+#
+# Rename `app` below if the name is taken. Deploy with:
+#   fly launch --no-deploy        # first time
+#   fly secrets set AWS_ACCESS_KEY_ID=... AWS_SECRET_ACCESS_KEY=...
+#   fly secrets set INFERENCE_BACKEND=sagemaker SAGEMAKER_ENDPOINT=the-legacy-llm AWS_REGION=us-east-1
+#   fly deploy
+
+app = "the-legacy-api"
+primary_region = "iad"  # us-east-1 region to minimize SageMaker latency
+
+[build]
+
+[env]
+  PORT = "8080"
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = "stop"   # scale to zero when idle
+  auto_start_machines = true
+  min_machines_running = 0       # free when idle, spin up on first request
+  processes = ["app"]
+
+[[vm]]
+  size = "shared-cpu-1x"         # 256MB RAM — fine for a proxy that calls SageMaker
+  memory = "512mb"               # bump to 512MB for chromadb/sentence-transformers headroom

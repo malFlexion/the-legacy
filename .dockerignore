@@ -1,0 +1,26 @@
+# Speeds up docker build by excluding files the image doesn't need.
+.git/
+.venv/
+venv/
+__pycache__/
+**/__pycache__/
+*.pyc
+
+# Large data files — only card_index.pkl is explicitly copied by the Dockerfile
+data/scryfall-cards.json
+data/*.txt
+
+# Training + notebooks not needed at inference time
+data/training/
+notebooks/
+scripts/
+tests/
+vectordb/
+
+# Build / editor artifacts
+merged-model/
+*.gguf
+*.safetensors
+.vscode/
+.idea/
+.pytest_cache/
