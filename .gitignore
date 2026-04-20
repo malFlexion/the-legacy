@@ -40,3 +40,8 @@ merged-model/
 # Environment
 .env
 .env.local
+
+# Test artifacts
+.coverage
+.pytest_cache/
+htmlcov/
