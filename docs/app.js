@@ -142,6 +142,19 @@ async function checkHealth() {
         }
 
         healthSpan.textContent = parts.join(" · ");
+
+        // Footer deploy timestamp — shows when this container booted.
+        const bootSpan = document.getElementById("footer-boot-time");
+        if (bootSpan) {
+            if (h.boot_time && h.boot_time !== "unknown") {
+                const dt = new Date(h.boot_time);
+                // Compact local-time formatting: "Apr 20, 22:17 UTC"
+                bootSpan.textContent = `deployed ${dt.toUTCString().replace(" GMT", " UTC")}`;
+                bootSpan.title = `Container boot time: ${h.boot_time}`;
+            } else {
+                bootSpan.textContent = "deploy time unknown";
+            }
+        }
     } catch (err) {
         setState("fail");
         healthSpan.textContent = err.message;

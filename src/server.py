@@ -25,6 +25,7 @@ Requires:
 import os
 import json
 import logging
+import time
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI, HTTPException
@@ -312,6 +313,30 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+
+# Per-request logging: method, path, status code, wall-clock latency.
+# Noise filter: skip static file paths + /health polls to keep the log
+# signal high for actual API calls.
+_SKIP_PATHS_PREFIX = ("/styles.css", "/app.js", "/config.js", "/favicon")
+
+
+@app.middleware("http")
+async def log_requests(request, call_next):
+    start = time.monotonic()
+    response = await call_next(request)
+    duration_ms = (time.monotonic() - start) * 1000
+
+    path = request.url.path
+    if not path.startswith(_SKIP_PATHS_PREFIX):
+        log.info(
+            "%s %s → %d in %.0fms",
+            request.method,
+            path,
+            response.status_code,
+            duration_ms,
+        )
+    return response
 
 # ---------------------------------------------------------------------------
 # Request / response models
@@ -1441,6 +1466,15 @@ async def health():
     else:
         model_label = INFERENCE_BACKEND
 
+    # Boot time is written by the entrypoint script at container start;
+    # falls back to "unknown" for local dev without the entrypoint.
+    boot_time = "unknown"
+    try:
+        with open("/tmp/BOOT_TIME", "r", encoding="utf-8") as f:
+            boot_time = f.read().strip()
+    except FileNotFoundError:
+        pass
+
     return {
         "status": "ok" if llm["reachable"] else "degraded",
         "backend": INFERENCE_BACKEND,
@@ -1450,6 +1484,7 @@ async def health():
         "card_count": len(card_index.cards) if card_index else 0,
         "vector_db": chroma_collection is not None,
         "vector_chunks": chroma_collection.count() if chroma_collection else 0,
+        "boot_time": boot_time,
     }
 
 

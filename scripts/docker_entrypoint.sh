@@ -11,6 +11,11 @@
 #  4. Exec uvicorn as PID 1.
 set -e
 
+# Record the boot time so /health can report when this deploy went live.
+# Written to /tmp so it's regenerated on every container start.
+date -u +"%Y-%m-%dT%H:%M:%SZ" > /tmp/BOOT_TIME
+echo "Boot time: $(cat /tmp/BOOT_TIME)"
+
 echo "Starting Ollama server..."
 ollama serve &
 OLLAMA_PID=$!
