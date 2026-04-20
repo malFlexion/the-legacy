@@ -224,10 +224,27 @@ function renderChat() {
         container.appendChild(el("p", { class: "placeholder" }, "Start a conversation — ask about decks, cards, rules, or the meta."));
         return;
     }
+    // Accumulate unique cards across the entire conversation; we render
+    // them once in the side panel rather than inline per-message.
+    const cardsByName = new Map();
+
     for (const msg of chatState.messages) {
         const block = el("div", { class: "chat-message" });
         block.appendChild(el("div", { class: `chat-role ${msg.role}` }, msg.role));
-        block.appendChild(el("div", { class: "chat-content" }, msg.content));
+
+        // Render the message content with [[Card Name]] tokens converted to
+        // inline styled refs. Tokens that don't resolve to a real card fall
+        // through as plain text (with brackets stripped).
+        const contentEl = el("div", { class: "chat-content" });
+        renderContentWithCardRefs(contentEl, msg.content, msg.cards || []);
+        block.appendChild(contentEl);
+
+        // Collect cards from this message into the conversation-wide map
+        if (msg.cards) {
+            for (const card of msg.cards) {
+                if (!cardsByName.has(card.name)) cardsByName.set(card.name, card);
+            }
+        }
 
         // Show RAG grounding status on assistant messages — helps distinguish
         // "answer came from the rules/meta corpus" (trustworthy) from
@@ -243,7 +260,6 @@ function renderChat() {
                     `grounded in ${msg.ragChunks} source${msg.ragChunks === 1 ? "" : "s"}${sourceList}`
                 ));
             } else if (msg.ragChunks === 0 && msg.ragSources !== undefined) {
-                // Response came back with RAG metadata but no chunks retrieved
                 block.appendChild(el(
                     "div",
                     { class: "rag-badge rag-off" },
@@ -252,16 +268,58 @@ function renderChat() {
             }
         }
 
-        if (msg.cards && msg.cards.length > 0) {
-            const grid = el("div", { class: "card-grid" });
-            for (const card of msg.cards) {
-                grid.appendChild(cardThumb(card));
-            }
-            block.appendChild(grid);
-        }
         container.appendChild(block);
     }
     container.scrollTop = container.scrollHeight;
+
+    // Populate the side panel with all unique cards from the conversation
+    renderChatCardsPanel(Array.from(cardsByName.values()));
+}
+
+// Split the message content by [[Card Name]] tokens and append mixed text
+// + card-ref spans to the parent element. Keeps newlines visible because
+// the parent has white-space: pre-wrap in CSS.
+function renderContentWithCardRefs(parent, content, cards) {
+    // Build a lookup of bracketed-name → card so the span can carry a
+    // tooltip showing the mana cost + type line.
+    const cardByName = new Map();
+    for (const c of cards) cardByName.set(c.name.toLowerCase(), c);
+
+    const re = /\[\[([^\[\]]+?)\]\]/g;
+    let lastIdx = 0;
+    let match;
+    while ((match = re.exec(content)) !== null) {
+        if (match.index > lastIdx) {
+            parent.appendChild(document.createTextNode(content.slice(lastIdx, match.index)));
+        }
+        const rawName = match[1].trim();
+        const resolved = cardByName.get(rawName.toLowerCase());
+        const span = el("span", {
+            class: "card-ref",
+            title: resolved
+                ? `${resolved.name} — ${resolved.mana_cost || ""} ${resolved.type_line || ""}`.trim()
+                : rawName,
+        }, rawName);
+        parent.appendChild(span);
+        lastIdx = match.index + match[0].length;
+    }
+    if (lastIdx < content.length) {
+        parent.appendChild(document.createTextNode(content.slice(lastIdx)));
+    }
+}
+
+function renderChatCardsPanel(cards) {
+    const grid = document.getElementById("chat-cards-grid");
+    if (!grid) return;
+    grid.innerHTML = "";
+    if (cards.length === 0) {
+        grid.appendChild(el("p", { class: "chat-cards-empty" },
+            "Cards referenced in the conversation will appear here."));
+        return;
+    }
+    for (const card of cards) {
+        grid.appendChild(cardThumb(card));
+    }
 }
 
 // ---------- Deck import & analyze ----------

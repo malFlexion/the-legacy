@@ -212,6 +212,60 @@ button:disabled {
     font-style: italic;
 }
 
+/* Chat tab two-column layout: cards-mentioned panel left, conversation right. */
+.chat-layout {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 16px;
+    min-height: calc(100vh - 360px);
+}
+
+@media (max-width: 900px) {
+    .chat-layout {
+        grid-template-columns: 1fr;
+    }
+    .chat-cards-panel { max-height: 200px; }
+}
+
+.chat-cards-panel {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.chat-cards-header {
+    font-size: 12px;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--border);
+}
+
+.chat-cards-empty {
+    color: var(--text-dim);
+    font-style: italic;
+    font-size: 13px;
+    margin: 8px 0;
+}
+
+.chat-card-grid {
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    margin-top: 0;
+}
+
+.chat-main {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
 /* Chat */
 .chat-messages {
     flex: 1;
@@ -219,12 +273,23 @@ button:disabled {
     border: 1px solid var(--border);
     border-radius: 8px;
     padding: 16px;
-    /* Explicit floor so we don't depend on the flex chain propagating
-       through main → tab-panel → chat-messages. Subtracts header
-       (~180px) + form (~70px) + footer (~80px) + padding (~30px). */
-    min-height: calc(100vh - 360px);
     overflow-y: auto;
     margin-bottom: 12px;
+}
+
+/* Inline card references — the [[Brainstorm]] markup gets rendered as a
+   compact gold chip linked to the card in the side panel. */
+.card-ref {
+    display: inline;
+    color: var(--accent);
+    font-weight: 600;
+    cursor: help;
+    border-bottom: 1px dotted var(--accent);
+}
+
+.card-ref:hover {
+    color: var(--accent-hover);
+    border-bottom-style: solid;
 }
 
 .chat-message {

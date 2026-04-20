@@ -153,6 +153,78 @@ def chunk_comprehensive_rules(filepath: str) -> list[dict]:
     return sections
 
 
+def chunk_scryfall_cards(card_index_path: str | None = None) -> list[dict]:
+    """Emit one RAG chunk per Legacy-legal card.
+
+    Each chunk is a compact card-sheet style block with name, mana cost,
+    type line, oracle text, and (for creatures) P/T + keywords — what a
+    player would want to see when the model references that card. Metadata
+    marks the chunk as `source: 'scryfall-card'` so the frontend can
+    distinguish card hits from rules/meta hits in the "grounded in N
+    sources" badge.
+
+    Filters to Legacy-legal only (~30k cards). That's sufficient for any
+    deck / rules / evaluation question the finetune is targeting, and
+    keeps the vector DB lean enough for fast queries.
+    """
+    import pickle
+
+    if card_index_path is None:
+        card_index_path = os.path.join(DATA_DIR, "card_index.pkl")
+
+    # Gracefully skip if the card_index pickle isn't available — tests that
+    # exercise build_database() against a synthetic data dir shouldn't need
+    # 36k cards wired up. Production always has the file in the image.
+    if not os.path.exists(card_index_path):
+        print(f"  card_index not found at {card_index_path} — skipping card chunks")
+        return []
+
+    print(f"Loading card index from {card_index_path}...")
+    with open(card_index_path, "rb") as f:
+        data = pickle.load(f)
+
+    cards = data["cards"]
+    legacy_legal = data["legacy_legal"]
+
+    chunks = []
+    for name in sorted(legacy_legal):
+        card = cards.get(name)
+        if not card:
+            continue
+
+        # Build a compact, retrieval-friendly card sheet
+        lines = [f"# {name}"]
+        if card.get("mana_cost"):
+            lines.append(f"Mana cost: {card['mana_cost']}")
+        if card.get("type_line"):
+            lines.append(f"Type: {card['type_line']}")
+        if card.get("power") is not None and card.get("toughness") is not None:
+            lines.append(f"Power/Toughness: {card['power']}/{card['toughness']}")
+        if card.get("loyalty") is not None:
+            lines.append(f"Loyalty: {card['loyalty']}")
+        if card.get("keywords"):
+            lines.append(f"Keywords: {', '.join(card['keywords'])}")
+        if card.get("oracle_text"):
+            lines.append("")
+            lines.append(card["oracle_text"])
+
+        text = "\n".join(lines)
+        chunks.append({
+            "id": f"card-{name.replace(' ', '-').replace('//', '__')[:80]}",
+            "text": text,
+            "metadata": {
+                "source": "scryfall-card",
+                "name": name,
+                "title": name,  # used by the retrieval label
+                "type": "card",
+                "card_type": card.get("type_line", "").split("—")[0].strip(),
+            },
+        })
+
+    print(f"  Built {len(chunks)} card chunks")
+    return chunks
+
+
 def chunk_markdown_file(filepath: str, source_name: str) -> list[dict]:
     """Chunk a markdown file by ## and ### headers.
 
@@ -307,7 +379,15 @@ def build_database():
         all_chunks.extend(chunks)
         print(f"  -> {len(chunks)} chunks")
 
-    # 3. Add all chunks to ChromaDB
+    # 3. Scryfall cards — one chunk per Legacy-legal card, so queries like
+    #    "what does Force of Will do?" or "is Akroma playable?" retrieve
+    #    real card text instead of making the model fabricate oracle text.
+    print("Chunking Scryfall cards...")
+    card_chunks = chunk_scryfall_cards()
+    all_chunks.extend(card_chunks)
+    print(f"  -> {len(card_chunks)} chunks")
+
+    # 4. Add all chunks to ChromaDB
     print(f"\nEmbedding and storing {len(all_chunks)} total chunks...")
 
     # ChromaDB has a batch limit, process in batches of 100

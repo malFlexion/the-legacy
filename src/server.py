@@ -449,15 +449,112 @@ def retrieve_context(query: str, n_results: int = 5) -> tuple[str, list[str]]:
 # ---------------------------------------------------------------------------
 
 
+import re as _re
+
+_BRACKET_CARD_RE = _re.compile(r"\[\[([^\[\]]+?)\]\]")
+
+# Keywords that indicate the conversation is explicitly discussing a card's
+# ban status — when present alongside a banned card reference, we allow
+# the panel to display it. Otherwise banned cards are filtered out to
+# avoid recommending illegal cards by mistake.
+_BAN_DISCUSSION_KEYWORDS = (
+    "ban", "banned", "banning", "banlist", "ban list",
+    "unbanned", "restricted",
+)
+
+_BASIC_LAND_TYPES = {"Plains", "Island", "Swamp", "Mountain", "Forest", "Wastes", "Snow-Covered"}
+
+
+def _should_display_card(card: dict, mentioned_in_ban_context: bool) -> bool:
+    """Filter rules for the conversation's card panel:
+
+    1. Never show basic lands (Plains/Island/Swamp/Mountain/Forest + snow
+       variants). They add noise — every deck has them, their art varies
+       by set, and mentioning them explicitly is rarely the useful signal.
+    2. Show only Legacy-legal cards by default.
+    3. Banned cards are hidden UNLESS the conversation explicitly names
+       ban/banned/banlist — that's the case where we want to SHOW the
+       banned card for educational context (ban announcement
+       discussion, "why was X banned", etc.)
+    """
+    type_line = card.get("type_line", "")
+    # Basic land check — covers "Basic Land — Plains", "Basic Snow Land — Island", etc.
+    if "Basic" in type_line and any(bt in type_line for bt in _BASIC_LAND_TYPES):
+        return False
+
+    legalities = card.get("legalities", {})
+    legacy_status = legalities.get("legacy", "not_legal")
+
+    if legacy_status in ("legal", "restricted"):
+        return True
+
+    if legacy_status == "banned" and mentioned_in_ban_context:
+        return True
+
+    return False
+
+
 def resolve_cards(text: str) -> list[CardData]:
-    """Find and resolve all card names in model output."""
+    """Find and resolve card references in model output.
+
+    Primary path: extract names from [[Name]] markup. The Modelfile system
+    prompt instructs the model to wrap every card reference this way, so
+    in normal operation every card the user sees mentioned will be in
+    brackets.
+
+    Fallback path: if the response contains no bracket markup (older model,
+    prompt drift, direct user query), fall back to the substring-based
+    resolver so the panel still populates with something useful.
+
+    Filters applied post-resolution:
+      - Never show basic lands
+      - Show only Legacy-legal cards, EXCEPT banned cards are shown when
+        the surrounding text explicitly discusses bans (so we can educate
+        about the ban list without promoting illegal cards otherwise).
+    """
     if card_index is None:
         return []
 
-    raw_cards = card_index.resolve(text, legacy_only=False)
+    # Decide whether the text is about ban status — this gates whether
+    # banned cards surface in the panel at all.
+    text_lower = text.lower()
+    mentioned_in_ban_context = any(
+        kw in text_lower for kw in _BAN_DISCUSSION_KEYWORDS
+    )
+
+    raw_cards: list[dict] = []
+    seen_names: set[str] = set()
+
+    # Primary: bracket markup
+    for match in _BRACKET_CARD_RE.finditer(text):
+        raw = match.group(1).strip()
+        if not raw or raw in seen_names:
+            continue
+        card = card_index.get(raw)
+        if card is None:
+            # Try fuzzy — model might mis-capitalize or slightly misname
+            hits = card_index.search(raw, limit=1, legacy_only=False)
+            if hits:
+                card = card_index.get(hits[0][0])
+        if card and card["name"] not in seen_names:
+            raw_cards.append(card)
+            seen_names.add(card["name"])
+
+    # Fallback: no brackets in the response, scan full text
+    if not raw_cards:
+        for card in card_index.resolve(text, legacy_only=False):
+            if card["name"] not in seen_names:
+                raw_cards.append(card)
+                seen_names.add(card["name"])
+
+    # Apply display filters
+    filtered = [
+        c for c in raw_cards
+        if _should_display_card(c, mentioned_in_ban_context)
+    ]
 
     resolved = []
-    for card in raw_cards:
+    for card in filtered:
         name = card["name"]
         resolved.append(
             CardData(

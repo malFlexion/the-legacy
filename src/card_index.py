@@ -33,7 +33,17 @@ class CardIndex:
         self.legacy_legal: set[str] = set()  # names of Legacy-legal cards
 
     def build(self, scryfall_path: str | None = None):
-        """Build the index from Scryfall bulk data JSON."""
+        """Build the index from Scryfall bulk data JSON.
+
+        Preference order for dedup:
+         1. English printings only (skip translations — oracle text is identical
+            but names differ, which breaks name-based resolution)
+         2. For each card, keep the EARLIEST printing (original art/set).
+            Players expect iconic cards to show their classic frames —
+            Force of Will as the Alliances art, Brainstorm as Ice Age,
+            Bayou as Alpha, etc. The newest Secret Lair reprint with
+            minimal-art borderless treatment reads as "off" in a demo.
+        """
         if scryfall_path is None:
             scryfall_path = os.path.join(DATA_DIR, "scryfall-cards.json")
 
@@ -41,10 +51,19 @@ class CardIndex:
         with open(scryfall_path, "r", encoding="utf-8") as f:
             cards_raw = json.load(f)
 
-        print(f"Processing {len(cards_raw)} cards...")
+        print(f"Processing {len(cards_raw)} cards (filtering non-English + sorting by release)...")
+
+        # Filter English-only before dedup; otherwise the "first seen" entry
+        # might be a Japanese or Russian printing with the native name.
+        english = [c for c in cards_raw if c.get("lang", "en") == "en"]
+
+        # Sort ascending by released_at so the oldest printing wins the dedup.
+        # Missing released_at sorts last (use a far-future sentinel).
+        english.sort(key=lambda c: c.get("released_at", "9999-99-99"))
+
         seen_names = set()
 
-        for card in cards_raw:
+        for card in english:
             name = card.get("name", "")
 
             # Skip duplicates (same card from different sets)

@@ -9,7 +9,7 @@
 <body>
     <header>
         <h1>The Legacy</h1>
-        <p class="tagline">An AI assistant for Magic: The Gathering Legacy</p>
+        <p class="tagline">An AI assistant for Magic: The Gathering</p>
         <nav class="tabs">
             <button class="tab-btn active" data-tab="chat">Chat</button>
             <button class="tab-btn" data-tab="import">Import</button>
@@ -20,11 +20,21 @@
 
     <main>
         <section id="tab-chat" class="tab-panel active">
-            <div id="chat-messages" class="chat-messages"></div>
-            <form id="chat-form" class="chat-form">
-                <textarea id="chat-input" placeholder="Ask anything about Legacy — meta, cards, rules, deck ideas…" rows="2" required></textarea>
-                <button type="submit" id="chat-submit">Send</button>
-            </form>
+            <div class="chat-layout">
+                <aside class="chat-cards-panel">
+                    <div class="chat-cards-header">Cards mentioned</div>
+                    <div id="chat-cards-grid" class="card-grid chat-card-grid">
+                        <p class="chat-cards-empty">Cards referenced in the conversation will appear here.</p>
+                    </div>
+                </aside>
+                <div class="chat-main">
+                    <div id="chat-messages" class="chat-messages"></div>
+                    <form id="chat-form" class="chat-form">
+                        <textarea id="chat-input" placeholder="Ask anything about Legacy — meta, cards, rules, deck ideas…" rows="2" required></textarea>
+                        <button type="submit" id="chat-submit">Send</button>
+                    </form>
+                </div>
+            </div>
         </section>
 
         <section id="tab-import" class="tab-panel">
