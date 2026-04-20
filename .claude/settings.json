@@ -3,7 +3,17 @@
     "allow": [
       "Bash(git commit -m ' *)",
       "Bash(git commit -m 'Drop orphaned api-url span reference in checkHealth *)",
-      "WebFetch(domain:static.wikia.nocookie.net)"
+      "WebFetch(domain:static.wikia.nocookie.net)",
+      "Bash(git commit -m 'checklist: document how to get AWS access key + secret *)",
+      "Bash(python -m pytest tests/ --tb=no -q)",
+      "Bash(python -m pip install pytest-cov)",
+      "Bash(python -m pytest tests/ --cov=src --cov-report=term-missing --tb=no -q)",
+      "Bash(python -c \"import pytest_asyncio; print\\(pytest_asyncio.__version__\\)\")",
+      "Bash(python -m pytest tests/test_deck_parser.py -q)",
+      "Bash(python -m pytest tests/test_server.py -q)",
+      "Bash(python -m pip install fastapi \"uvicorn[standard]\" httpx pydantic rapidfuzz)",
+      "Bash(python -m pytest tests/test_server.py tests/test_deck_parser.py -q)",
+      "Bash(python -m pytest tests/ --cov=src --cov-report=term --tb=no -q)"
     ]
   }
 }

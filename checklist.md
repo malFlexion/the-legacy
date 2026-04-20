@@ -77,9 +77,9 @@
     - **If already configured**: `Get-Content $env:USERPROFILE\.aws\credentials` — both values live under `[default]` as `aws_access_key_id` and `aws_secret_access_key`
     - **If new user / fresh pair**: AWS Console → IAM → Users → your user → Security credentials → Create access key → "Application running outside AWS". Secret is shown **only once** — copy it immediately. Attach `AmazonSageMakerFullAccess` policy to the user if missing.
     - **Shortcut**: if `aws sts get-caller-identity` already works, boto3 picks up creds from `~/.aws/credentials` automatically — no `$env:AWS_*` needed locally. Only Fly.io (`fly secrets set`) needs them explicitly since the container has no `~/.aws`.
-  - [ ] Run merge + push to HF, then `scripts/deploy_sagemaker.py --create`
-  - [ ] Verify with `scripts/deploy_sagemaker.py --test`
-  - [ ] `scripts/deploy_sagemaker.py --delete` when done (stops billing!)
+  - [x] Run merge + push to HF, then `scripts/deploy_sagemaker.py --create`
+  - [x] Verify with `scripts/deploy_sagemaker.py --test`
+  - [x] `scripts/deploy_sagemaker.py --delete` when done (stops billing!)
 - [x] Build FastAPI layer (`src/server.py`)
   - [x] `POST /chat` — main conversation, streaming + non-streaming
   - [x] `POST /build-deck` — generate 75-card decklist
