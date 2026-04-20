@@ -168,6 +168,16 @@ header h1 {
     }
 }
 
+/* Full-width analysis container below the Import & Analyze split.
+   LLM prose needs room — don't squeeze it into the narrow right column. */
+.import-analysis {
+    margin-top: 32px;
+}
+.import-analysis:not(:empty) {
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+}
+
 label {
     display: block;
     font-size: 13px;

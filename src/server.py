@@ -1747,14 +1747,36 @@ async def import_deck(req: ImportRequest):
     resolved_main = []
     resolved_side = []
 
+    # Cache the front-face -> full-name lookup across all entries in this
+    # request. The card_index stores MDFC / split cards under their combined
+    # "Front // Back" name, so a decklist line like "4 Ajani, Nacatl Pariah"
+    # misses the exact lookup and lands on a noisy fuzzy fallback that
+    # picks the wrong card. Build the alias map once per import.
+    _mdfc_aliases: dict[str, str] = {}
+    if card_index:
+        for full_name in card_index.cards.keys():
+            if " // " in full_name:
+                front = full_name.split(" // ", 1)[0]
+                # First one wins (earliest printing's front face).
+                _mdfc_aliases.setdefault(front, full_name)
+
+    def _resolve_card(name: str):
+        """Try exact -> front-face alias -> fuzzy, in that order."""
+        if not card_index:
+            return None
+        hit = card_index.get(name)
+        if hit:
+            return hit
+        alias = _mdfc_aliases.get(name)
+        if alias:
+            return card_index.get(alias)
+        results = card_index.search(name, limit=1, legacy_only=False)
+        if results:
+            return card_index.get(results[0][0])
+        return None
+
     for entry in deck.main:
-        card_data = None
-        if card_index:
-            card_data = card_index.get(entry.name)
-            if not card_data:
-                results = card_index.search(entry.name, limit=1, legacy_only=False)
-                if results:
-                    card_data = card_index.get(results[0][0])
+        card_data = _resolve_card(entry.name) if card_index else None
 
         resolved_main.append({
             "quantity": entry.quantity,
@@ -1776,13 +1798,7 @@ async def import_deck(req: ImportRequest):
         })
 
     for entry in deck.sideboard:
-        card_data = None
-        if card_index:
-            card_data = card_index.get(entry.name)
-            if not card_data:
-                results = card_index.search(entry.name, limit=1, legacy_only=False)
-                if results:
-                    card_data = card_index.get(results[0][0])
+        card_data = _resolve_card(entry.name) if card_index else None
 
         resolved_side.append({
             "quantity": entry.quantity,

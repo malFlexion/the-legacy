@@ -82,23 +82,24 @@ function parseDecklist(text) {
 // ---------- Card thumb rendering ----------
 
 function cardThumb(card, count = null) {
-    const imgUrl = card.image_url;
     const name = card.name;
+    const displayName = cardDisplayName(card);
     const legal = card.legacy_legal !== false;
     const href = card.scryfall_uri || `https://scryfall.com/search?q=${encodeURIComponent(name)}`;
+    // Scryfall's `named?format=image` endpoint serves card images for any
+    // valid name, including MDFCs and split cards (returns the front face).
+    // Use the front-face name so the query matches what Scryfall indexes.
+    const scryfallImg = `https://api.scryfall.com/cards/named?format=image&version=normal&exact=${encodeURIComponent(displayName)}`;
+    const imgUrl = card.image_url || scryfallImg;
 
     const thumb = el("a", {
         class: `card-thumb ${legal ? "" : "illegal"}`,
         href,
         target: "_blank",
-        title: legal ? name : `${name} (not Legacy-legal)`,
+        title: legal ? displayName : `${displayName} (not Legacy-legal)`,
     });
 
-    if (imgUrl) {
-        thumb.appendChild(el("img", { src: imgUrl, alt: name, loading: "lazy" }));
-    } else {
-        thumb.appendChild(el("div", { class: "card-name-fallback" }, name));
-    }
+    thumb.appendChild(el("img", { src: imgUrl, alt: displayName, loading: "lazy" }));
 
     if (count != null && count > 1) {
         thumb.appendChild(el("div", { class: "card-count" }, `${count}×`));
@@ -383,12 +384,31 @@ function copyToGoldfishAndBudget(deck) {
 // Order here is the display order — creatures first since they're usually
 // the bulk of a deck, lands last.
 const TYPE_GROUPS = ["Creature", "Planeswalker", "Instant", "Sorcery", "Artifact", "Enchantment", "Land"];
+// Correct English plural for headings; naive "${group}s" would emit "Sorcerys".
+const TYPE_GROUP_PLURAL = {
+    Creature: "Creatures",
+    Planeswalker: "Planeswalkers",
+    Instant: "Instants",
+    Sorcery: "Sorceries",
+    Artifact: "Artifacts",
+    Enchantment: "Enchantments",
+    Land: "Lands",
+    Other: "Other",
+};
 function cardTypeGroup(card) {
     const t = card?.type_line || "";
     for (const group of TYPE_GROUPS) {
         if (t.includes(group)) return group;
     }
     return "Other";
+}
+
+// MDFCs and split cards come through the card_index as
+// "Front Face // Back Face". The grid reads cleaner if we show only the
+// front face — same card, less visual noise.
+function cardDisplayName(card) {
+    const raw = (card && card.name) || "";
+    return raw.split(" // ")[0] || raw;
 }
 
 function renderImportedDeck(deck) {
@@ -457,7 +477,8 @@ function renderGroupedCardGrid(parent, entries, qty) {
     for (const group of orderedGroups) {
         const groupEntries = groups.get(group);
         const groupCount = groupEntries.reduce((s, e) => s + qty(e), 0);
-        const heading = el("h4", { class: "type-group-heading" }, `${group}s (${groupCount})`);
+        const label = TYPE_GROUP_PLURAL[group] || `${group}s`;
+        const heading = el("h4", { class: "type-group-heading" }, `${label} (${groupCount})`);
         parent.appendChild(heading);
         const grid = el("div", { class: "card-grid" });
         for (const entry of groupEntries) {
@@ -478,13 +499,16 @@ function statCard(label, value) {
 }
 
 document.getElementById("import-analyze-btn").addEventListener("click", async () => {
-    const output = document.getElementById("import-output");
+    const analysisContainer = document.getElementById("import-analysis");
     if (!parsedImportDeck) return;
 
-    const analysis = el("div", { style: "margin-top: 20px;" });
+    // Render into the full-width container below the input/parse split so
+    // the LLM's prose isn't squeezed into a narrow right-hand column.
+    analysisContainer.innerHTML = "";
+    const analysis = el("div");
     analysis.appendChild(el("h3", {}, "AI analysis"));
     analysis.appendChild(el("p", { class: "placeholder" }, "Asking the model…"));
-    output.appendChild(analysis);
+    analysisContainer.appendChild(analysis);
 
     try {
         const qty = (e) => e.quantity ?? e.count ?? 0;
