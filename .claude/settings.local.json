@@ -3,7 +3,8 @@
     "allow": [
       "Bash(python -c \"import ast; ast.parse\\(open\\('src/server.py', encoding='utf-8'\\).read\\(\\)\\); print\\('OK'\\)\")",
       "Bash(git commit -m ' *)",
-      "Bash(git commit *)"
+      "Bash(git commit *)",
+      "Bash(python -m pytest tests/test_server.py -q --tb=line)"
     ]
   }
 }

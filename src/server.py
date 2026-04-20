@@ -57,7 +57,7 @@ log = logging.getLogger("the-legacy")
 # Config
 # ---------------------------------------------------------------------------
 
-INFERENCE_BACKEND = os.environ.get("INFERENCE_BACKEND", "ollama")  # "ollama" or "sagemaker"
+INFERENCE_BACKEND = os.environ.get("INFERENCE_BACKEND", "ollama")  # "ollama", "sagemaker", or "llamacpp"
 
 # Ollama config
 OLLAMA_BASE = os.environ.get("OLLAMA_BASE", "http://localhost:11434")
@@ -66,6 +66,12 @@ MODEL_NAME = os.environ.get("MODEL_NAME", "the-legacy")
 # SageMaker config
 SAGEMAKER_ENDPOINT = os.environ.get("SAGEMAKER_ENDPOINT", "the-legacy-llm")
 AWS_REGION = os.environ.get("AWS_REGION", "us-east-1")
+
+# llama-cpp-python config — loads a GGUF file in-process (no external service).
+# This is the "run everything in one Fly container" path.
+LLAMACPP_MODEL_PATH = os.environ.get("LLAMACPP_MODEL_PATH", "./the-legacy.gguf")
+LLAMACPP_N_THREADS = int(os.environ.get("LLAMACPP_N_THREADS", "2"))
+LLAMACPP_N_CTX = int(os.environ.get("LLAMACPP_N_CTX", "2048"))
 
 DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "data")
 VECTORDB_DIR = os.path.join(os.path.dirname(__file__), "..", "vectordb")
@@ -86,6 +92,7 @@ card_index: CardIndex | None = None
 chroma_collection = None
 sagemaker_runtime = None
 budget_engine: BudgetEngine | None = None
+llamacpp_model = None  # populated only when INFERENCE_BACKEND == "llamacpp"
 
 
 def _validate_config() -> list[str]:
@@ -97,10 +104,10 @@ def _validate_config() -> list[str]:
     """
     warnings: list[str] = []
 
-    if INFERENCE_BACKEND not in ("ollama", "sagemaker"):
+    if INFERENCE_BACKEND not in ("ollama", "sagemaker", "llamacpp"):
         warnings.append(
             f"INFERENCE_BACKEND='{INFERENCE_BACKEND}' is not recognized "
-            f"(expected 'ollama' or 'sagemaker'). Defaulting to Ollama path."
+            f"(expected 'ollama', 'sagemaker', or 'llamacpp'). Defaulting to Ollama path."
         )
 
     if INFERENCE_BACKEND == "sagemaker":
@@ -123,6 +130,14 @@ def _validate_config() -> list[str]:
         if not OLLAMA_BASE.startswith(("http://", "https://")):
             warnings.append(
                 f"OLLAMA_BASE='{OLLAMA_BASE}' must include the scheme (http:// or https://)"
+            )
+
+    if INFERENCE_BACKEND == "llamacpp":
+        if not os.path.exists(LLAMACPP_MODEL_PATH):
+            warnings.append(
+                f"LLAMACPP_MODEL_PATH='{LLAMACPP_MODEL_PATH}' does not exist. "
+                "Generate a GGUF via scripts/merge_and_convert.py and place it at "
+                "this path, or set LLAMACPP_MODEL_PATH env var."
             )
 
     return warnings
@@ -149,6 +164,10 @@ async def lifespan(app: FastAPI):
         log.info("SAGEMAKER_ENDPOINT = %s", SAGEMAKER_ENDPOINT)
         log.info("AWS_REGION        = %s", AWS_REGION)
         log.info("AWS_ACCESS_KEY_ID = %s", "set" if os.environ.get("AWS_ACCESS_KEY_ID") else "NOT SET")
+    elif INFERENCE_BACKEND == "llamacpp":
+        log.info("LLAMACPP_MODEL_PATH = %s", LLAMACPP_MODEL_PATH)
+        log.info("LLAMACPP_N_THREADS  = %d", LLAMACPP_N_THREADS)
+        log.info("LLAMACPP_N_CTX      = %d", LLAMACPP_N_CTX)
     else:
         log.info("OLLAMA_BASE = %s", OLLAMA_BASE)
         log.info("MODEL_NAME  = %s", MODEL_NAME)
@@ -193,8 +212,34 @@ async def lifespan(app: FastAPI):
         log.warning("✗ Vector DB unavailable (%s: %s) — RAG disabled", type(e).__name__, e)
         chroma_collection = None
 
-    # Inference backend connectivity check
-    if INFERENCE_BACKEND == "sagemaker":
+    # Inference backend setup + connectivity check
+    if INFERENCE_BACKEND == "llamacpp":
+        if not os.path.exists(LLAMACPP_MODEL_PATH):
+            log.error(
+                "✗ GGUF not found at %s — inference will return 503. "
+                "Build one with scripts/merge_and_convert.py or set LLAMACPP_MODEL_PATH.",
+                LLAMACPP_MODEL_PATH,
+            )
+        else:
+            try:
+                from llama_cpp import Llama
+                log.info(
+                    "Loading GGUF (this takes 30-60s on cold start)... path=%s, threads=%d, ctx=%d",
+                    LLAMACPP_MODEL_PATH, LLAMACPP_N_THREADS, LLAMACPP_N_CTX,
+                )
+                llamacpp_model = Llama(
+                    model_path=LLAMACPP_MODEL_PATH,
+                    n_ctx=LLAMACPP_N_CTX,
+                    n_threads=LLAMACPP_N_THREADS,
+                    n_batch=512,
+                    use_mlock=True,
+                    verbose=False,
+                )
+                log.info("✓ llama-cpp model loaded")
+            except Exception:
+                log.exception("✗ Failed to load GGUF via llama-cpp-python")
+                llamacpp_model = None
+    elif INFERENCE_BACKEND == "sagemaker":
         try:
             import boto3
             sagemaker_runtime = boto3.client("sagemaker-runtime", region_name=AWS_REGION)
@@ -426,10 +471,56 @@ async def generate(
         return await sagemaker_generate(
             messages, temperature=temperature, top_p=top_p, max_tokens=max_tokens
         )
+    if INFERENCE_BACKEND == "llamacpp":
+        return await llamacpp_generate(
+            messages, temperature=temperature, top_p=top_p, max_tokens=max_tokens
+        )
     return await ollama_generate(
         messages, stream=stream, temperature=temperature,
         top_p=top_p, max_tokens=max_tokens,
     )
+
+
+async def llamacpp_generate(
+    messages: list[dict],
+    temperature: float = 0.3,
+    top_p: float = 0.9,
+    max_tokens: int = 512,
+) -> str:
+    """In-process inference via llama-cpp-python on the Fly container itself.
+
+    No external service — the GGUF is loaded once at startup and each request
+    calls create_chat_completion. Because llama-cpp-python is synchronous,
+    we offload to a worker thread so we don't block the event loop.
+    """
+    import asyncio
+
+    if llamacpp_model is None:
+        log.error("llamacpp_generate called but model is not loaded — check startup logs")
+        raise HTTPException(
+            status_code=503,
+            detail="llama-cpp model not loaded — check server startup logs",
+        )
+
+    try:
+        resp = await asyncio.to_thread(
+            llamacpp_model.create_chat_completion,
+            messages=messages,
+            max_tokens=max_tokens,
+            temperature=temperature,
+            top_p=top_p,
+        )
+    except Exception as e:
+        log.error(
+            "llama-cpp inference failed: %s: %s",
+            type(e).__name__, str(e)[:300],
+        )
+        raise HTTPException(
+            status_code=502,
+            detail=f"llama-cpp inference failed ({type(e).__name__}): {str(e)[:200]}",
+        )
+
+    return resp["choices"][0]["message"]["content"]
 
 
 async def sagemaker_generate(
@@ -1267,7 +1358,12 @@ async def health():
     llm = {"reachable": False, "detail": "unknown"}
 
     try:
-        if INFERENCE_BACKEND == "sagemaker":
+        if INFERENCE_BACKEND == "llamacpp":
+            llm = {
+                "reachable": llamacpp_model is not None,
+                "detail": "loaded" if llamacpp_model else "GGUF not loaded — check startup logs",
+            }
+        elif INFERENCE_BACKEND == "sagemaker":
             # Free control-plane call to describe_endpoint — reports InService,
             # OutOfService, Updating, Creating, etc.
             import boto3
@@ -1292,10 +1388,19 @@ async def health():
     except Exception as e:
         llm = {"reachable": False, "detail": str(e)[:120]}
 
+    if INFERENCE_BACKEND == "ollama":
+        model_label = MODEL_NAME
+    elif INFERENCE_BACKEND == "sagemaker":
+        model_label = SAGEMAKER_ENDPOINT
+    elif INFERENCE_BACKEND == "llamacpp":
+        model_label = os.path.basename(LLAMACPP_MODEL_PATH)
+    else:
+        model_label = INFERENCE_BACKEND
+
     return {
         "status": "ok" if llm["reachable"] else "degraded",
         "backend": INFERENCE_BACKEND,
-        "model": MODEL_NAME if INFERENCE_BACKEND == "ollama" else SAGEMAKER_ENDPOINT,
+        "model": model_label,
         "llm": llm,
         "card_index": card_index is not None,
         "card_count": len(card_index.cards) if card_index else 0,

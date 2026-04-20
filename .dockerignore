@@ -20,6 +20,7 @@ tests/
 # Build / editor artifacts
 merged-model/
 *.gguf
+!the-legacy.gguf          # exception: the inference GGUF IS copied into the image
 *.safetensors
 .vscode/
 .idea/
